@@ -10,5 +10,6 @@ NVDA for Guidepup uses the [NVDA Remote Access](https://github.com/nvdaremote/nv
 
 ## License
 
-- [NVDA License](nvda/documentation/copying.txt)
+- [License](./LICENSE)
+- [NVDA License](./nvda/documentation/copying.txt)
 - [NVDA Remote Access License](https://github.com/NVDARemote/NVDARemote/blob/master/LICENSE)
