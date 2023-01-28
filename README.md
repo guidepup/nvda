@@ -4,7 +4,7 @@
 
 This repo hosts a built, portable copy of NVDA, configured for optimal use with Guidepup. This can be found in the [`./nvda`](./nvda) directory.
 
-## Plugins
+## NVDA Addons
 
 NVDA for Guidepup uses the [NVDA Remote Access](https://github.com/nvdaremote/nvdaremote) addon to enable Guidepup to directly connect to NVDA for issuing commands and processing messages.
 
