@@ -71,6 +71,8 @@ jobs:
             ) `
             -Wait
 
+          Remove-Item .\nvda.exe -Force -ErrorAction Ignore
+
       - name: Apply Guidepup custom configuration
         if: steps.current.outputs.skip != 'true'
         shell: pwsh
