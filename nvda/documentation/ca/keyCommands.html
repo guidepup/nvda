@@ -1,2385 +1,4857 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META NAME="generator" CONTENT="http://txt2tags.sf.net">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<LINK REL="stylesheet" TYPE="text/css" HREF="styles.css">
-<TITLE>NVDA 2021.3.1 Ordres Referència ràpida</TITLE>
-</HEAD><BODY BGCOLOR="white" TEXT="black">
-<P ALIGN="center"><CENTER><H1>NVDA 2021.3.1 Ordres Referència ràpida</H1>
-<FONT SIZE="4">
-</FONT></CENTER>
+<!DOCTYPE html>
+<html lang="ca" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Referència ràpida de les ordres de NVDA 2026.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="favicon.ico">
 
-<H2>Introducció a NVDA</H2>
-<H3>Gestos tàctils de NVDA</H3>
-<H4>Modes tàctils</H4>
-<P>
-Per canviar entre modes tàctils, fes un toc amb tres dits.
-</P>
-<H3>Ordres bàsiques NVDA</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Gest</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Parar veu</TD>
-<TD>Ctrl</TD>
-<TD>Ctrl</TD>
-<TD>Toc amb dos dits</TD>
-<TD>Para la veu instantàniament</TD>
-</TR>
-<TR>
-<TD>Pausar veu</TD>
-<TD>Maj</TD>
-<TD>Maj</TD>
-<TD>cap</TD>
-<TD>Para la veu instantàniament. En prémer-la de nou tornarà a parlar a partir del punt on s'ha aturat (si el sintetitzador de veu usat és compatible amb la pausa de veu)</TD>
-</TR>
-<TR>
-<TD>Menú NVDA</TD>
-<TD>NVDA+n</TD>
-<TD>NVDA+n</TD>
-<TD>Toc doble amb dos dits</TD>
-<TD>Fa aparèixer el menú NVDA que et permet accedir a les preferències, eines, ajuda etc</TD>
-</TR>
-<TR>
-<TD>Commutar Mode de so</TD>
-<TD>NVDA+s</TD>
-<TD>NVDA+s</TD>
-<TD>cap</TD>
-<TD>Canvia el mode de so entre parla, emissió de xiulets i desactivat</TD>
-</TR>
-<TR>
-<TD>Commuta el mode d'ajuda d'entrada</TD>
-<TD>NVDA+1</TD>
-<TD>NVDA+1</TD>
-<TD>cap</TD>
-<TD>En aquest mode prémer una tecla informarà sobre la tecla premuda i descriurà l'ordre de NVDA que té associada</TD>
-</TR>
-<TR>
-<TD>Sortir de NVDA</TD>
-<TD>NVDA+q</TD>
-<TD>NVDA+q</TD>
-<TD>cap</TD>
-<TD>Tanca NVDA</TD>
-</TR>
-<TR>
-<TD>Enviar la següent tecla directament</TD>
-<TD>NVDA+f2</TD>
-<TD>NVDA+f2</TD>
-<TD>Cap</TD>
-<TD>Indica a NVDA que la següent tecla s'ha d'enviar directament a l'aplicació activa, fins i tot si aquesta tecla s'entendria normalment com a una ordre NVDA</TD>
-</TR>
-<TR>
-<TD>Activa i desactiva el mode de suspensió</TD>
-<TD>NVDA+Maj+s</TD>
-<TD>NVDA+Maj+z</TD>
-<TD>cap</TD>
-<TD>El mode de suspensió desactiva totes les ordres de NVDA i la sortida de veu i/o braille per a l'aplicació actual. Aquesta funció és útil a les aplicacions que ja disposen de veu pròpia o de funcions de lector de pantalla. Per desactivar el mode de veu premeu de nou l'ordre</TD>
-</TR>
-</TABLE>
-
-<H3>Informació del sistema</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Informa del dia i hora</TD>
-<TD>NVDA+f12</TD>
-<TD>Prémer una vegada informa de l'hora, prémer dues vegades informa de la data</TD>
-</TR>
-<TR>
-<TD>Informar de l'estat de la bateria</TD>
-<TD>NVDA+Maj+b</TD>
-<TD>Informa de l'estat de la bateria, és a dir, si hi ha corrent elèctrica o el percentatge de càrrega actual</TD>
-</TR>
-<TR>
-<TD>Informa del text del porta-retalls</TD>
-<TD>NVDA+c</TD>
-<TD>Informa del text del porta-retalls si n'hi ha.</TD>
-</TR>
-</TABLE>
-
-<H2>Navegació amb NVDA</H2>
-<A NAME="SystemFocus"></A>
-<H3>Navegació amb el focus de sistema</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Informa del focus actual</TD>
-<TD>NVDA+Tab</TD>
-<TD>NVDA+Tab</TD>
-<TD>Anuncia l'objecte o control actual que rep el focus del sistema. Si prems dos cops lletreja el nom</TD>
-</TR>
-<TR>
-<TD>Informa del títol</TD>
-<TD>NVDA+t</TD>
-<TD>NVDA+t</TD>
-<TD>Informa del títol de la finestra activa actual. Si prems dos cops l'ordre lletreja el títol. Si prems tres cops l'ordre copiarà el títol al porta-retalls</TD>
-</TR>
-<TR>
-<TD>Llegeix la finestra activa</TD>
-<TD>NVDA+b</TD>
-<TD>NVDA+b</TD>
-<TD>Llegeix tots els controls de la finestra activa actualment (útil per a diàlegs)</TD>
-</TR>
-<TR>
-<TD>Informa de la barra d'estat</TD>
-<TD>NVDA+FI</TD>
-<TD>NVDA+Maj+FI</TD>
-<TD>Informa de la barra d'estat si NVDA n'ha trobat una. També mou l'objecte de navegació a aquesta ubicació. Si prems dos cops lletreja el nom</TD>
-</TR>
-</TABLE>
-
-<A NAME="SystemCaret"></A>
-<H3>Navegació amb el cursor del sistema</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Verbalitza-ho tot</TD>
-<TD>NVDA+fletxa avall</TD>
-<TD>NVDA+a</TD>
-<TD>Comença a llegir des de la posició actual del cursor del sistema, i es mou a mesura que avança</TD>
-</TR>
-<TR>
-<TD>Llegeix la línia actual</TD>
-<TD>NVDA+fletxa amunt</TD>
-<TD>NVDA+l</TD>
-<TD>Llegeix la línia en què es troba el cursor del sistema. Si prems dos cops lletreja la línia</TD>
-</TR>
-<TR>
-<TD>Llegeix la selecció de text actual</TD>
-<TD>NVDA+Majúscules+fletxa amunt</TD>
-<TD>NVDA+Maj+s</TD>
-<TD>Llegeix qualsevol text seleccionat en aquell moment</TD>
-</TR>
-<TR>
-<TD>Frase següent</TD>
-<TD>Alt+fletxa avall</TD>
-<TD>Alt+fletxa avall</TD>
-<TD>Mou el cursor del sistema a la frase següent i l'anuncia. (compatible només amb Microsoft Word i Outlook)</TD>
-</TR>
-<TR>
-<TD>Frase anterior</TD>
-<TD>Alt+fletxa amunt</TD>
-<TD>Alt+fletxa amunt</TD>
-<TD>Mou el cursor del sistema a la frase anterior i l'anuncia. (compatible només amb Microsoft Word i Outlook)</TD>
-</TR>
-</TABLE>
-
-<P>
-Quan et trobes dins d'una taula, les següents ordres de teclat també estan disponibles:
-</P>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Mou a la columna anterior</TD>
-<TD>Ctrl+Alt+fletxa esquerra</TD>
-<TD>Mou el cursor del sistema a la columna anterior (mantenint-se a la mateixa fila)</TD>
-</TR>
-<TR>
-<TD>Mou a la columna següent</TD>
-<TD>Ctrl+Alt+fletxa dreta</TD>
-<TD>Mou el cursor del sistema a la columna següent (mantenint-se a la mateixa fila)</TD>
-</TR>
-<TR>
-<TD>Mou a la fila anterior</TD>
-<TD>Ctrl+Alt+fletxa amunt</TD>
-<TD>Mou el cursor del sistema a la fila anterior (mantenint-se a la mateixa columna)</TD>
-</TR>
-<TR>
-<TD>Mou a la fila següent</TD>
-<TD>Ctrl+Alt+fletxa avall</TD>
-<TD>Mou el cursor del sistema a la fila següent (mantenint-se a la mateixa columna)</TD>
-</TR>
-</TABLE>
-
-<H3>Navegació d'objectes</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Gest</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Informa de l'objecte actual</TD>
-<TD>NVDA+ teclat numèric 5</TD>
-<TD>NVDA+Maj+o</TD>
-<TD>cap</TD>
-<TD>Informa de l'objecte de navegació actual. Si prems dos cops lletreja la informació, i si prems tres cops copia el nom i valor de l'objecte al porta-retalls</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte contenidor</TD>
-<TD>NVDA+teclat numèric 8</TD>
-<TD>NVDA+Maj+fletxa amunt</TD>
-<TD>moviment ràpid cap amunt (mode d'objecte)</TD>
-<TD>Et mou a l'objecte que conté l'actual objecte de navegació</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte anterior</TD>
-<TD>NVDA+teclat numèric4</TD>
-<TD>NVDA+Maj+fletxa esquerra</TD>
-<TD>moviment ràpid cap a l'esquerra (mode d'objecte)</TD>
-<TD>Et mou a l'objecte anterior a l'actual objecte de navegació</TD>
-</TR>
-<TR>
-<TD>Mou l'objecte següent</TD>
-<TD>NVDA+teclat numèric 6</TD>
-<TD>NVDA+Maj+fletxa dreta</TD>
-<TD>moviment ràpid cap a la dreta (mode d'objecte)</TD>
-<TD>Et mou a l'objecte següent a l'actual objecte de navegació</TD>
-</TR>
-<TR>
-<TD>Mou al primer objecte contingut</TD>
-<TD>NVDA+teclat numèric 2</TD>
-<TD>NVDA+Maj+fletxa avall</TD>
-<TD>moviment ràpid cap avall (mode d'objecte)</TD>
-<TD>Et mou al primer objecte inclòs en l'actual objecte de navegació</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte amb focus</TD>
-<TD>NVDA+Menys teclat numèric</TD>
-<TD>NVDA+Retrocés</TD>
-<TD>cap</TD>
-<TD>Et mou a l'objecte que actualment rep el focus del sistema, i desplaça el cursor de revisió a la posició del cursor del sistema, si aquesta es mostra</TD>
-</TR>
-<TR>
-<TD>Activa l'objecte de navegació actual</TD>
-<TD>NVDA+Retorn teclat numèric</TD>
-<TD>NVDA+retorn</TD>
-<TD>toc doble</TD>
-<TD>Activa l'actual objecte de navegació (fa la mateixa funció que clicar amb el ratolí o prémer la barra espaiadora quan l'objecte té el focus del sistema)</TD>
-</TR>
-<TR>
-<TD>Mou el focus del sistema o el cursor a la posició de revisió actual</TD>
-<TD>NVDA+Maj+Menys teclat numèric</TD>
-<TD>NVDA+Maj+Retrocés</TD>
-<TD>cap</TD>
-<TD>Si es prem un cop mou el focus del sistema a l'actual objecte de navegació, si es prem dos cops mou el cursor del sistema a la posició del cursor de revisió</TD>
-</TR>
-<TR>
-<TD>Informa de la posició del cursor de revisió</TD>
-<TD>NVDA+Supr teclat numèric</TD>
-<TD>NVDA+Supr</TD>
-<TD>cap</TD>
-<TD>Informa de la posició del text o objecte on es troba el cursor de revisió. La posició pot indicar-se, per exemple, com a percentatge dins el document, com a distància des del marge de la pàgina, o amb les coordenades exactes de la pantalla. Si es prem dos cops dóna més detalls</TD>
-</TR>
-</TABLE>
-
-<A NAME="ReviewingText"></A>
-<H3>Revisió de text</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Gest</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Mou a la línia en revisió superior</TD>
-<TD>Majúscules+teclat numèric 7</TD>
-<TD>NVDA+Ctrl+Inici</TD>
-<TD>cap</TD>
-<TD>Mou el cursor de revisió a la línia superior del text</TD>
-</TR>
-<TR>
-<TD>Mou a la línia en revisió anterior</TD>
-<TD>teclat numèric 7</TD>
-<TD>NVDA+fletxa amunt</TD>
-<TD>moviment ràpid cap amunt (mode de text)</TD>
-<TD>Mou el cursor de revisió a la línia de text anterior</TD>
-</TR>
-<TR>
-<TD>Informa de la línia en revisió actual</TD>
-<TD>teclat numèric 8</TD>
-<TD>NVDA+Maj+.</TD>
-<TD>cap</TD>
-<TD>Anuncia la línia de text on es troba actualment el cursor de revisió. Si prems dos cops lletreja la línia. Si prems tres cops lletreja la línia amb les descripcions dels caràcters</TD>
-</TR>
-<TR>
-<TD>Mou a la línia en revisió següent</TD>
-<TD>teclat numèric 9</TD>
-<TD>NVDA+fletxa avall</TD>
-<TD>moviment ràpid cap avall (mode de text)</TD>
-<TD>Mou el cursor de revisió a la següent línia de text</TD>
-</TR>
-<TR>
-<TD>Mou a la línia de revisió inferior</TD>
-<TD>Majúscules+teclat numèric 9</TD>
-<TD>NVDA+Ctrl+Fi</TD>
-<TD>cap</TD>
-<TD>Mou el cursor de revisió a la línia de text inferior</TD>
-</TR>
-<TR>
-<TD>Mou a la paraula en revisió anterior</TD>
-<TD>teclat numèric 4</TD>
-<TD>NVDA+Ctrl+fletxa esquerra</TD>
-<TD>moviment ràpid cap a l'esquerra amb dos dits (mode de text)</TD>
-<TD>Mou el cursor de revisió a la paraula anterior del text</TD>
-</TR>
-<TR>
-<TD>Informa de la paraula en revisió actual</TD>
-<TD>teclat numèric 5</TD>
-<TD>NVDA+Ctrl+.</TD>
-<TD>cap</TD>
-<TD>Anuncia la paraula en què es troba actualment el cursor de revisió. Si prems dos cops lletreja la paraula. Si prems tres cops lletreja la paraula amb les descripcions dels caràcters</TD>
-</TR>
-<TR>
-<TD>Mou a la següent paraula en revisió</TD>
-<TD>teclat numèric 6</TD>
-<TD>NVDA+Ctrl+fletxa dreta</TD>
-<TD>moviment ràpid cap a la dreta amb dos dits (mode de text)</TD>
-<TD>Mou el cursor de revisió a la següent paraula en el text</TD>
-</TR>
-<TR>
-<TD>Mou al principi de la línia en revisió</TD>
-<TD>Majúscules+teclat numèric 1</TD>
-<TD>NVDA+Inici</TD>
-<TD>cap</TD>
-<TD>Mou el cursor de revisió al principi de la línia de text actual</TD>
-</TR>
-<TR>
-<TD>Mou al caràcter anterior en revisió</TD>
-<TD>teclat numèric 1</TD>
-<TD>NVDA+fletxa esquerra</TD>
-<TD>moviment ràpid cap a l'esquerra (mode de text)</TD>
-<TD>Mou el cursor de revisió al caràcter anterior a la línia de text actual</TD>
-</TR>
-<TR>
-<TD>Informa del caràcter en revisió actual</TD>
-<TD>teclat numèric 2</TD>
-<TD>NVDA+.</TD>
-<TD>cap</TD>
-<TD>Anuncia el caràcter actual a la línia de text on es troba el cursor de revisió. Si prems dos cops et descriu o posa un exemple d'aquell caràcter. Si prems tres cops t'informa del valor numèric del caràcter en decimal o en hexadecimal</TD>
-</TR>
-<TR>
-<TD>Mou al següent caràcter en revisió</TD>
-<TD>teclat numèric 3</TD>
-<TD>NVDA+fletxa dreta</TD>
-<TD>moviment ràpid cap a la dreta (mode de text)</TD>
-<TD>Mou el cursor de revisió al següent caràcter en la línia de text actual</TD>
-</TR>
-<TR>
-<TD>Mou al final de la línia en revisió</TD>
-<TD>Majúscules+teclat numèric 3</TD>
-<TD>NVDA+Fi</TD>
-<TD>cap</TD>
-<TD>Mou el cursor de revisió al final de la línia de text actual</TD>
-</TR>
-<TR>
-<TD>Verbalitza-ho tot en revisió</TD>
-<TD>teclat numèric Més</TD>
-<TD>NVDA+Maj+a</TD>
-<TD>moviment ràpid cap avall amb tres dits (mode de text)</TD>
-<TD>Llegeix des de la posició actual del cursor de revisió, i el desplaça mentre avança</TD>
-</TR>
-<TR>
-<TD>Copia des del cursor de revisió</TD>
-<TD>NVDA+f9</TD>
-<TD>NVDA+f9</TD>
-<TD>cap</TD>
-<TD>Inicia el copiat de text des de la posició actual del cursor de revisió. La còpia no es farà efectiva fins que indiquis a NVDA a on copiar-ho</TD>
-</TR>
-<TR>
-<TD>Copia al cursor de revisió</TD>
-<TD>NVDA+f10</TD>
-<TD>NVDA+f10</TD>
-<TD>cap</TD>
-<TD>Copia des de la posició del cursor de revisió marcat com a Copia des del cursor de revisió, a la posició actual del cursor de revisió. Després de prémer aquestes tecles, el text es copiarà al porta-retalls de Windows</TD>
-</TR>
-<TR>
-<TD>Informa del format del text</TD>
-<TD>NVDA+f</TD>
-<TD>NVDA+f</TD>
-<TD>cap</TD>
-<TD>Informa del format del text en què es troba actualment el cursor de revisió</TD>
-</TR>
-</TABLE>
-
-<A NAME="ReviewModes"></A>
-<H3>Modes de revisió</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Gest</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Canvia al següent mode de revisió</TD>
-<TD>NVDA+teclat numèric 7</TD>
-<TD>NVDA+Re Pàg</TD>
-<TD>moviment ràpid cap amunt amb dos dits</TD>
-<TD>Canvia al següent mode de revisió disponible</TD>
-</TR>
-<TR>
-<TD>Canvia a l'anterior mode de revisió</TD>
-<TD>NVDA+teclat numèric 1</TD>
-<TD>NVDA+Av Pàg</TD>
-<TD>moviment ràpid cap avall amb dos dits</TD>
-<TD>Canvia a l'anterior mode de revisió disponible</TD>
-</TR>
-</TABLE>
-
-<H3>Navegació amb el ratolí</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Clica amb el botó esquerre del ratolí</TD>
-<TD>Divisió teclat numèric</TD>
-<TD>NVDA+[</TD>
-<TD>Fa un clic de botó esquerre de ratolí. El típic doble clic es pot aconseguir clicant aquesta combinació de tecles dues vegades ràpidament</TD>
-</TR>
-<TR>
-<TD>Bloqueja el botó esquerre del ratolí</TD>
-<TD>Majúscules+Divisió teclat numèric</TD>
-<TD>NVDA+Ctrl+[</TD>
-<TD>Bloqueja el botó esquerre del ratolí avall. Prem de nou per desbloquejar. Per arrossegar el ratolí, prem aquestes tecles per bloquejar el botó esquerre avall, i llavors mou el ratolí físicament o amb les ordres de moviment de ratolí</TD>
-</TR>
-<TR>
-<TD>Clica amb el botó dret de ratolí</TD>
-<TD>Multiplicació teclat numèric</TD>
-<TD>NVDA+]</TD>
-<TD>Fa un clic de botó dret de ratolí.</TD>
-</TR>
-<TR>
-<TD>bloqueig del botó dret del ratolí</TD>
-<TD>Majúscules+Multiplicació teclat numèric</TD>
-<TD>NVDA+Ctrl+]</TD>
-<TD>Bloqueja el botó dret del ratolí avall. Prem de nou per desbloquejar. Per arrossegar el ratolí, prem aquestes tecles per bloquejar el botó dret avall, i llavors mou el ratolí físicament o amb les ordres de moviment de ratolí</TD>
-</TR>
-<TR>
-<TD>Mou el cursor a l'objecte de navegació actual</TD>
-<TD>NVDA+Divisió teclat numèric</TD>
-<TD>NVDA+Maj+m</TD>
-<TD>Mou el ratolí a la posició de l'objecte de navegació actual, i del cursor de revisió</TD>
-</TR>
-<TR>
-<TD>Navega a l'objecte sota el ratolí</TD>
-<TD>NVDA+Multiplicació teclat numèric</TD>
-<TD>NVDA+Maj+n</TD>
-<TD>L'objecte de navegació passa a ser l'objecte ubicat a la posició del ratolí</TD>
-</TR>
-</TABLE>
-
-<H2>Mode de navegació</H2>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Canvia de modes entre navegació i focus</TD>
-<TD>NVDA+Barra espaiadora</TD>
-<TD>Canvia entre el mode de focus i el mode de navegació</TD>
-</TR>
-<TR>
-<TD>Surt del mode de focus</TD>
-<TD>Tecla d'escapada</TD>
-<TD>Retorna al mode de navegació si el mode de focus s'ha activat automàticament</TD>
-</TR>
-<TR>
-<TD>Actualitza el document en navegació</TD>
-<TD>NVDA+f5</TD>
-<TD>Recarrega el contingut del document actual (útil si sembla que falti part del contingut del document. No disponible a Microsoft Word i a Outlook.)</TD>
-</TR>
-<TR>
-<TD>Busca</TD>
-<TD>NVDA+Ctrl+f</TD>
-<TD>Obre un diàleg en el qual pots escriure un text per buscar-lo al document</TD>
-</TR>
-<TR>
-<TD>Busca següent</TD>
-<TD>NVDA+f3</TD>
-<TD>Troba l'ocurrència següent en el document del text que has buscat prèviament</TD>
-</TR>
-<TR>
-<TD>Busca anterior</TD>
-<TD>NVDA+Maj+f3</TD>
-<TD>Troba l'anterior ocurrència en el document del text que has buscat prèviament</TD>
-</TR>
-<TR>
-<TD>Obrir descripció llarga</TD>
-<TD>NVDA+d</TD>
-<TD>Obre una nova finestra que conté una descripció llarga de l'element actiu, si és que en té.</TD>
-</TR>
-</TABLE>
-
-<H3>Navegació amb una sola lletra</H3>
-<P>
-Les següents tecles, per sí soles, salten a l'element posterior disponible, i si hi afegeixes la tecla de Majúscules, salten a l'element anterior:
-</P>
-<UL>
-<LI>h: encapçalament
-<LI>l: llista
-<LI>i: element de llista
-<LI>t: taula
-<LI>k: enllaç
-<LI>n: text sense enllaços
-<LI>f: camp de formulari
-<LI>u: enllaç no visitat
-<LI>v: enllaç visitat
-<LI>e: camp editable
-<LI>b: botó
-<LI>x: casella de selecció
-<LI>c: quadre combinat
-<LI>r: botó d'opció
-<LI>q: cita en bloc
-<LI>s: separador
-<LI>m: marc
-<LI>g: gràfic
-<LI>d: marca estructural
-<LI>o: objecte incrustat
-<LI>1 to 6: encapçalaments de nivells 1 a 6 respectivament.
- -a: nota (comentari, revisió de l'editor, etc.)
-</UL>
-
-<P>
-Per moure's a l'inici o al final dels elements contenidors com les llistes o taules:
-</P>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Mou al principi del contenidor</TD>
-<TD>Majúscules+coma</TD>
-<TD>Mou al principi del contenidor (llista, taula, etc.) on està posicionat el cursor del sistema</TD>
-</TR>
-<TR>
-<TD>Mou més enllà del final del contenidor</TD>
-<TD>coma</TD>
-<TD>Mou més enllà del final del contenidor (llista, taula, etc.) on està posicionat el cursor del sistema</TD>
-</TR>
-</TABLE>
-
-<P>
-Per activar i desactivar la navegació per lletra en el document actual, prem NVDA+Maj+espai.
-</P>
-<H3>Llista d'elements</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Llista d'elements en mode de navegació</TD>
-<TD>NVDA+f7</TD>
-<TD>Mostra els diferents tipus d'elements existents en el document actual</TD>
-</TR>
-</TABLE>
-
-<H3>Objectes incrustats</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Mou al document contenidor en mode de navegació</TD>
-<TD>NVDA+Ctrl+Barra espaiadora</TD>
-<TD>Desplaça el focus fora de l'objecte incrustat actual i el mou al document que el conté</TD>
-</TR>
-</TABLE>
-
-<H2>Lectura de contingut matemàtic</H2>
-<H3>Navegació interactiva</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Interactúa amb contingut matemàtic</TD>
-<TD>NVDA+Alt+m</TD>
-<TD>Inicia la interacció amb el contingut matemàtic.</TD>
-</TR>
-</TABLE>
-
-<H2>ordres de NVDA específiques d'aplicacions</H2>
-<H3>Microsoft Word</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Informa del comentari actual</TD>
-<TD>NVDA+Alt+c</TD>
-<TD>Informa del text del comentari que es troba a la posició del cursor del sistema.</TD>
-</TR>
-<TR>
-<TD>Estableix com a encapçalament de columna</TD>
-<TD>NVDA+Maj+c</TD>
-<TD>Si prems aquestes tecles un cop, li estàs indicant a NVDA que aquesta és la primera cel·la d’encapçalament de la fila que conté encapçalaments de columna, i així ho hauria d'anunciar automàticament quan et mous entre les columnes sota aquesta fila. Si prems dos cops, deixa de ser l’encapçalament.</TD>
-</TR>
-<TR>
-<TD>Estableix com a encapçalament de fila</TD>
-<TD>NVDA+Maj+r</TD>
-<TD>Si prems aquestes tecles un cop, li estàs indicant a NVDA que aquesta és la primera cel·la d’encapçalament de la columna que conté encapçalaments de fila, i així ho hauria d'anunciar automàticament quan et mous entre les files sota aquesta columna. Si prems dos cops, deixa de ser l’encapçalament.</TD>
-</TR>
-</TABLE>
-
-<H4>Mode de navegació en el Microsoft Word</H4>
-<P>
-Per activar i desactivar el mode de navegació al Microsoft Word, prem NVDA+barra espaiadora.
-</P>
-<H5>La llista d'elements</H5>
-<P>
-Mentre estiguis en el mode de navegació en el Microsoft Word, pots accedir a la llista d'elements prement NVDA+f7.
-</P>
-<H4>Informar dels comentaris</H4>
-<P>
-Per informar sobre els comentaris en la posició actual del cursor, prem NVDA+alt+c.
-</P>
-<H3>Microsoft Excel</H3>
-<H4>Lectura automàtica dels encapçalaments de columnes i files</H4>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Estableix com a encapçalament de columna</TD>
-<TD>NVDA+Maj+c</TD>
-<TD>Si prems aquestes tecles un cop, li estàs indicant a NVDA que aquesta és la primera cel·la d’encapçalament de la fila que conté encapçalaments de columna, i així ho hauria d'anunciar automàticament quan et mous entre les columnes sota aquesta fila. Si prems dos cops, deixa de ser l’encapçalament.</TD>
-</TR>
-<TR>
-<TD>Estableix com a encapçalament de fila</TD>
-<TD>NVDA+Maj+r</TD>
-<TD>Si prems aquestes tecles un cop, li estàs indicant a NVDA que aquesta és la primera cel·la d’encapçalament de la columna que conté encapçalaments de fila, i així ho hauria d'anunciar automàticament quan et mous entre les files sota aquesta columna. Si prems dos cops, deixa de ser l’encapçalament.</TD>
-</TR>
-<TR>
-<TD>Informa del comentari actual</TD>
-<TD>NVDA+Alt+c</TD>
-<TD>Informa del text del comentari de la cel·la actual, si és que n'hi ha.</TD>
-</TR>
-<TR>
-<TD>Diàleg de llista d'elements</TD>
-<TD>NVDA+f7</TD>
-<TD>Obre el Diàleg de llista d'elements i mostra gràfics, cel·les amb comentaris, cel·les amb fòrmules, o fulls.</TD>
-</TR>
-</TABLE>
-
-<H4>La llista d'elements</H4>
-<P>
-Per accedir a la llista d'elements de l'Excel, prem NVDA+f7.
-</P>
-<H4>Informar dels comentaris</H4>
-<P>
-Per informar sobre els comentaris de la cel·la que té el focus, prem NVDA+alt+c.
-</P>
-<H4>Lectura de les cel·les protegides</H4>
-<P>
-Per poder moure't a cel·les bloquejades, canvia al mode de navegació prement NVDA+Barra espaiadora, i desprès utilitza les ordres de moviments estàndards de l'Excel com ara les fletxes de direcció, per moure't al voltant de totes les cel·les del full de càlcul actual.
-</P>
-<H3>Microsoft PowerPoint</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Notes de l'orador/Presentació</TD>
-<TD>Ctrl+Maj+s</TD>
-<TD>En mode presentació de diapositives, aquesta ordre saltarà entre les notes de l'orador d'una diapositiva i el contingut de la diapositiva. Això afecta només a allò que llegeix NVDA, no al que es mostra en pantalla.</TD>
-</TR>
-</TABLE>
-
-<H3>foobar2000</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Informa del temps restant</TD>
-<TD>Ctrl+Maj+r</TD>
-<TD>Informa del temps restant de la pista que està sonant actualment, si és que n'hi ha.</TD>
-</TR>
-</TABLE>
-
-<H3>Miranda IM</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Informa del missatge recent</TD>
-<TD>NVDA+Ctrl+1-4</TD>
-<TD>Informa d'un dels missatges recents, segons el número premut; per exemple NVDA+control+2 llegeix el segon missatge més recent.</TD>
-</TR>
-</TABLE>
-
-<H3>Poedit</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Informa de la finestra de comentaris</TD>
-<TD>Ctrl+Maj+c</TD>
-<TD>Informa dels comentaris existents a la finestra de comentaris.</TD>
-</TR>
-<TR>
-<TD>Informa de notes per als traductors</TD>
-<TD>Ctrl+Maj+a</TD>
-<TD>Informa de totes les notes per als traductors.</TD>
-</TR>
-</TABLE>
-
-<H3>Skype</H3>
-<P>
-Mentre converses:
-</P>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Revisa el missatge</TD>
-<TD>NVDA+control+1-0</TD>
-<TD>Mou el cursor de revisió a un missatge recent i n'informa, segons el número indicat; per exemple NVDA+control+2 llegeix el segon missatge més recent.</TD>
-</TR>
-</TABLE>
-
-<H2>Configuració de NVDA</H2>
-<H3>Preferències</H3>
-<A NAME="VoiceSettings"></A>
-<H4>Configuració de veu (NVDA+Ctrl+v)</H4>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD ALIGN="center">Nivell de puntuació i símbols</TD>
-<TD>NVDA+p</TD>
-<TD>NVDA+p</TD>
-<TD>Aquesta opció et permet escollir quanta puntuació i quants símbols es verbalitzaran com a paraules.</TD>
-</TR>
-</TABLE>
-
-<A NAME="SynthSettingsRing"></A>
-<H4>Configuració del sintetitzador</H4>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Mou a la següent opció de configuració del sintetitzador</TD>
-<TD>NVDA+Ctrl+fletxa dreta</TD>
-<TD>NVDA+Maj+Ctrl+fletxa dreta</TD>
-<TD>Et mou a la següent opció de configuració de veu disponible, tornant a la primera si et trobes a la darrera</TD>
-</TR>
-<TR>
-<TD>Mou a l'anterior opció de configuració del sintetitzador</TD>
-<TD>NVDA+Ctrl+fletxa esquerra</TD>
-<TD>NVDA+Maj+Ctrl+fletxa esquerra</TD>
-<TD>Et mou a l'anterior opció de configuració de veu disponible, tornant a la darrera si et trobes a la primera</TD>
-</TR>
-<TR>
-<TD>Incrementa el valor de l'opció de configuració del sintetitzador actual</TD>
-<TD>NVDA+Ctrl+fletxa amunt</TD>
-<TD>NVDA+Maj+Ctrl+fletxa amunt</TD>
-<TD>Incrementa el valor de l'opció de configuració en la qual et trobes, per exemple puja la velocitat, escull la següent veu o puja el volum</TD>
-</TR>
-<TR>
-<TD>Redueix el valor de l'opció de configuració del sintetitzador actual</TD>
-<TD>NVDA+Ctrl+fletxa avall</TD>
-<TD>NVDA+Maj+Ctrl+fletxa avall</TD>
-<TD>Redueix el valor de l'opció de configuració on et trobes, per exemple baixa la velocitat, escull la veu anterior, o baixa el volum</TD>
-</TR>
-</TABLE>
-
-<H4>Configuració de braille</H4>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD ALIGN="center">Seguiment de braille</TD>
-<TD>NVDA+Ctrl+t</TD>
-<TD>NVDA+Ctrl+t</TD>
-<TD>Aquesta opció et permet escollir si la línia braille seguirà el focus de sistema o bé l'objecte de navegació/cursor de revisió.</TD>
-</TR>
-</TABLE>
-
-<H4>Configuració de teclat (NVDA+Ctrl+k)</H4>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD ALIGN="center">Verbalitza els caràcters escrits</TD>
-<TD>NVDA+2</TD>
-<TD>NVDA+2</TD>
-<TD>Quan aquesta opció està activada, NVDA anunciarà tots els caràcters que escriguis amb el teclat.</TD>
-</TR>
-<TR>
-<TD ALIGN="center">Verbalitza les paraules escrites</TD>
-<TD>NVDA+3</TD>
-<TD>NVDA+3</TD>
-<TD>Quan aquesta opció està activada, NVDA anunciarà totes les paraules que escriguis en el teclat.</TD>
-</TR>
-<TR>
-<TD ALIGN="center">Verbalitza les tecles d'ordre</TD>
-<TD>NVDA+4</TD>
-<TD>NVDA+4</TD>
-<TD>Quan aquesta opció està activada, NVDA anunciarà totes les tecles escrites en el teclat que no corresponguin a lletres. Això inclou combinacions de tecles com Ctrl i una altra lletra.</TD>
-</TR>
-</TABLE>
-
-<A NAME="MouseSettings"></A>
-<H4>Configuració del ratolí (NVDA+Ctrl+m)</H4>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD ALIGN="center">Habilita el seguiment de ratolí</TD>
-<TD>NVDA+m</TD>
-<TD>NVDA+m</TD>
-<TD>Quan està activat, NVDA anunciarà el text que es troba sota el punter del ratolí mentre el desplaces amunt i avall de la pantalla. Això et permet trobar coses a la pantalla amb el moviment del ratolí, en comptes de trobar-les a través de la navegació d'objectes.</TD>
-</TR>
-</TABLE>
-
-<H4>Configuració del cursor de revisió</H4>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD ALIGN="center">Segueix el focus del sistema</TD>
-<TD>NVDA+7</TD>
-<TD>NVDA+7</TD>
-<TD>Quan aquesta opció està activada, si es canvia el focus, el cursor de revisió se situarà en el mateix objecte que el focus del sistema.</TD>
-</TR>
-<TR>
-<TD ALIGN="center">Segueix el cursor del sistema</TD>
-<TD>NVDA+6</TD>
-<TD>NVDA+6</TD>
-<TD>Quan aquesta opció està activada, cada cop que el cursor de sistema es mou, es desplaçarà automàticament el cursor de revisió a la posició del cursor del sistema.</TD>
-</TR>
-</TABLE>
-
-<H4>Configuració de la presentació d'objectes (NVDA+Ctrl+o)</H4>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD ALIGN="center">Sortida de la barra de progrés</TD>
-<TD>NVDA+u</TD>
-<TD>NVDA+u</TD>
-<TD>Aquesta opció controla com t'informarà NVDA de les actualitzacions de la barra de progrés.</TD>
-</TR>
-<TR>
-<TD ALIGN="center">Informa dels canvis dinàmics del contingut</TD>
-<TD>NVDA+5</TD>
-<TD>NVDA+5</TD>
-<TD>Commuta l'anunci de nou contingut en alguns objectes concrets com ara terminals o el control d'història en els programes de xat.</TD>
-</TR>
-</TABLE>
-
-<H4>Configuració del mode de navegació (NVDA+Ctrl+b)</H4>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD ALIGN="right">Utilitza la disposició de pantalla</TD>
-<TD>NVDA+v</TD>
-<TD>NVDA+v</TD>
-<TD>Aquesta opció et permet especificar si en mode de navegació els enllaços o altres camps han de situar-se en una línia pròpia, o si s'han de mantenir dins el flux del text tal i com es mostra visualment. Si l'opció està activada, el contingut romandrà tal i com es mostra visualment, però si està desactivada, els camps s'ubicaran a la seva pròpia línia.</TD>
-</TR>
-</TABLE>
-
-<H3>Desar i recuperar la configuració</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla en teclat de sobretaula</TH>
-<TH>Tecla en teclat de portàtil</TH>
-<TH>Descripció</TH>
-</TR>
-<TR>
-<TD>Desa la configuració</TD>
-<TD>NVDA+Ctrl+c</TD>
-<TD>NVDA+Ctrl+c</TD>
-<TD>Desa la teva configuració actual per tal que no es perdi quan surtis de NVDA</TD>
-</TR>
-<TR>
-<TD>Refés la configuració</TD>
-<TD>NVDA+Ctrl+r</TD>
-<TD>NVDA+Ctrl+r</TD>
-<TD>Si prems un cop recuperes la darrera configuració desada. Si prems tres cops recuperes la configuració de fàbrica.</TD>
-</TR>
-</TABLE>
-
-<H3>Perfils de configuració</H3>
-<H4>Gestió bàsica</H4>
-<UL>
-<LI>NVDA+Ctrl+p: Mostra el diàleg Perfils de configuració.
-</UL>
-
-<P></P>
-<A NAME="SupportedBrailleDisplays"></A>
-<H2>Línies braille compatibles</H2>
-<H3>Series Focus/PAC Mate de Freedom Scientific</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>sensorSuperior1 (primera cel·la a la pantalla)</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>sensorSuperior20/40/80 (darrera cel·la a la pantalla)</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>barra avançar esquerra</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>barra avançar esquerra</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>botó GDFB esquerre+botó GDFB dret</TD>
-</TR>
-<TR>
-<TD>Commuta a roda esquerra</TD>
-<TD>prémer roda esquerra</TD>
-</TR>
-<TR>
-<TD>Mou enrere fent servir la roda esquerra</TD>
-<TD>roda esquerra amunt</TD>
-</TR>
-<TR>
-<TD>Mou endavant fent servir la roda esquerra</TD>
-<TD>roda esquerra avall</TD>
-</TR>
-<TR>
-<TD>Commuta a roda dreta</TD>
-<TD>prémer roda dreta</TD>
-</TR>
-<TR>
-<TD>Mou enrere fent servir la roda dreta</TD>
-<TD>roda dreta amunt</TD>
-</TR>
-<TR>
-<TD>Mou endavant fent servir la roda dreta</TD>
-<TD>roda dreta avall</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Tecla Retrocés</TD>
-<TD>punt7</TD>
-</TR>
-<TR>
-<TD>Tecla Retorn</TD>
-<TD>punt8</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Tab</TD>
-<TD>BarraEspaiadoraBraille+punt1+punt2</TD>
-</TR>
-<TR>
-<TD>Tecla Tab</TD>
-<TD>BarraEspaiadoraBraille+punt4+punt5</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa amunt</TD>
-<TD>BarraEspaiadoraBraille+punt1</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa avall</TD>
-<TD>BarraEspaiadoraBraille+punt4</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Fletxa esquerra</TD>
-<TD>BarraEspaiadoraBraille+punt2</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Fletxa dreta</TD>
-<TD>BarraEspaiadoraBraille+punt5</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa esquerra</TD>
-<TD>BarraEspaiadoraBraille+punt3</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa dreta</TD>
-<TD>BarraEspaiadoraBraille+punt6</TD>
-</TR>
-<TR>
-<TD>Tecla Inici</TD>
-<TD>BarraEspaiadoraBraille+punt1+punt3</TD>
-</TR>
-<TR>
-<TD>Tecla Fi</TD>
-<TD>BarraEspaiadoraBraille+punt4+punt6</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Inici</TD>
-<TD>BarraEspaiadoraBraille+punt1+punt2+punt3</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Fi</TD>
-<TD>BarraEspaiadoraBraille+punt4+punt5+punt6</TD>
-</TR>
-<TR>
-<TD>Tecla Alt</TD>
-<TD>BarraEspaiadoraBraille+punt1+punt3+punt4</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Tab</TD>
-<TD>BarraEspaiadoraBraille+punt2+punt3+punt4+punt5</TD>
-</TR>
-<TR>
-<TD>Tecla d'escapada</TD>
-<TD>BarraEspaiadoraBraille+punt1+punt5</TD>
-</TR>
-<TR>
-<TD>Tecla Windows</TD>
-<TD>BarraEspaiadoraBraille+punt2+punt4+punt5+punt6</TD>
-</TR>
-<TR>
-<TD>Tecla Barra espaiadora</TD>
-<TD>BarraEspaiadoraBraille</TD>
-</TR>
-<TR>
-<TD>Tecla Windows+d (minimitza totes les aplicacions)</TD>
-<TD>BarraEspaiadoraBraille+punt1+punt2+punt3+punt4+punt5+punt6</TD>
-</TR>
-<TR>
-<TD>Informa de la línia actual</TD>
-<TD>BarraEspaiadoraBraille+punt1+punt4</TD>
-</TR>
-<TR>
-<TD>Menú NVDA</TD>
-<TD>BarraEspaiadoraBraille+punt1+punt3+punt4+punt5</TD>
-</TR>
-</TABLE>
-
-<P>
-Per a models de Focus més nous que contenen tecles de barra balancí (focus 40, focus 80 i focus blue):
-</P>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>balancí esquerra amunt, balancí dret amunt</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>balancí esquerra avall, balancí dret avall</TD>
-</TR>
-</TABLE>
-
-<P>
-Només per a Focus 80:
-</P>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>barra frontal esquerra amunt, barra frontal dreta amunt</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>barra frontal esquerra avall, barra frontal dreta avall</TD>
-</TR>
-</TABLE>
-
-<H3>Optelec ALVA BC640/680</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>t1</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>t2</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>t4</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>t5</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Majúscules+Tab tecla</TD>
-<TD>espai1</TD>
-</TR>
-<TR>
-<TD>Tecla Alt</TD>
-<TD>espai2</TD>
-</TR>
-<TR>
-<TD>Tecla d'escapada</TD>
-<TD>espai3</TD>
-</TR>
-<TR>
-<TD>Tecla tab</TD>
-<TD>espai4</TD>
-</TR>
-<TR>
-<TD>Tecla fletxa amunt</TD>
-<TD>espaiAmunt</TD>
-</TR>
-<TR>
-<TD>Tecla fletxa avall</TD>
-<TD>espaiAvall</TD>
-</TR>
-<TR>
-<TD>Tecla fletxa esquerra</TD>
-<TD>espaiEsquerra</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa dreta</TD>
-<TD>espaiDreta</TD>
-</TR>
-<TR>
-<TD>Tecla Retorn</TD>
-<TD>espaiRetorn</TD>
-</TR>
-<TR>
-<TD>Menú NVDA</TD>
-<TD>espai1+espai3</TD>
-</TR>
-<TR>
-<TD>Windows+d (minimitza totes les aplicacions)</TD>
-<TD>espai1+espai4</TD>
-</TR>
-<TR>
-<TD>Tecla Windows</TD>
-<TD>espai2+espai3</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Tab</TD>
-<TD>espai2+espai4</TD>
-</TR>
-</TABLE>
-
-<H3>Handy Tech Displays</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>esquerra, amunt</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>dreta, avall</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>b4</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>b5</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Tab</TD>
-<TD>Tecla d'escapada</TD>
-</TR>
-<TR>
-<TD>Tecla Alt</TD>
-<TD>b2+b4+b5</TD>
-</TR>
-<TR>
-<TD>Tecla d'escapada</TD>
-<TD>b4+b6</TD>
-</TR>
-<TR>
-<TD>Tecla Tab</TD>
-<TD>Retorn</TD>
-</TR>
-<TR>
-<TD>Tecla Retorn</TD>
-<TD>Tecla d'escapada+Retorn</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa amunt</TD>
-<TD>Espai esquerre</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa avall</TD>
-<TD>Espai dret</TD>
-</TR>
-<TR>
-<TD>Menú NVDA</TD>
-<TD>b2+b4+b5+b6</TD>
-</TR>
-<TR>
-<TD>Configuració de Handy Tech</TD>
-<TD>b4+b8</TD>
-</TR>
-</TABLE>
-
-<H3>MDV Lilli</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>LF</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>RG</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>UP</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>DN</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Tab</TD>
-<TD>SLF</TD>
-</TR>
-<TR>
-<TD>Tecla Tab</TD>
-<TD>SRG</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Tab</TD>
-<TD>SDN</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Maj+Tab</TD>
-<TD>SUP</TD>
-</TR>
-</TABLE>
-
-<H3>Baum/Humanware/APH Braille Displays</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>d2</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>d5</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>d1</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>d3</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-</TABLE>
-
-<P>
-Per a les línies que disposen d'un joystick:
-</P>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Tecla Fletxa amunt</TD>
-<TD>amunt</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa avall</TD>
-<TD>avall</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa esquerra</TD>
-<TD>esquerra</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa dreta</TD>
-<TD>dreta</TD>
-</TR>
-<TR>
-<TD>Tecla Retorn</TD>
-<TD>selecciona</TD>
-</TR>
-</TABLE>
-
-<H3>hedo ProfiLine USB</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>K1</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>K3</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>B2</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>B5</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>K2</TD>
-</TR>
-<TR>
-<TD>Verbalitza-ho tot</TD>
-<TD>B6</TD>
-</TR>
-</TABLE>
-
-<H3>hedo MobilLine USB</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>K1</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>K3</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>B2</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>B5</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>K2</TD>
-</TR>
-<TR>
-<TD>Verbalitza-ho tot</TD>
-<TD>B6</TD>
-</TR>
-</TABLE>
-
-<H3>HumanWare Brailliant BI/B Series</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>esquerra</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>dreta</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>amunt</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>avall</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>amunt+avall</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa amunt</TD>
-<TD>Espai+punt1</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa avall</TD>
-<TD>Espai+punt4</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa esquerra</TD>
-<TD>Espai+punt3</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa dreta</TD>
-<TD>Espai+punt6</TD>
-</TR>
-<TR>
-<TD>Menú NVDA</TD>
-<TD>c1+c3+c4+c5 (ordre n)</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Tab</TD>
-<TD>Espai+punt1+punt3</TD>
-</TR>
-<TR>
-<TD>Tecla Tab</TD>
-<TD>Espai+punt4+punt6</TD>
-</TR>
-<TR>
-<TD>Tecla Alt</TD>
-<TD>Espai+punt1+punt3+punt4 (Espai+m)</TD>
-</TR>
-<TR>
-<TD>Tecla d'escapada</TD>
-<TD>Espai+punt1+punt5 (Espai+e)</TD>
-</TR>
-<TR>
-<TD>Tecla Retorn</TD>
-<TD>punt8</TD>
-</TR>
-<TR>
-<TD>Tecla Windows+d (minimitza totes les aplicacions)</TD>
-<TD>c1+c4+c5 (ordre d)</TD>
-</TR>
-<TR>
-<TD>Tecla Windows</TD>
-<TD>Espai+punt3+punt4</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Tab</TD>
-<TD>Espai+punt2+punt3+punt4+punt5 (Espai+t)</TD>
-</TR>
-<TR>
-<TD>Verbalitza-ho tot</TD>
-<TD>c1+c2+c3+c4+c5+c6</TD>
-</TR>
-</TABLE>
-
-<H3>HIMS Braille Sense/Braille EDGE Series</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>barra de desplaçament esquerra avall</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>barra de desplaçament dreta avall</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>barra de desplaçament esquerra amunt</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>barra de desplaçament dreta amunt</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Majúscules+tecla Tab</TD>
-<TD>punt1+punt2+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Alt</TD>
-<TD>punt1+punt3+punt4+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla d'escapada</TD>
-<TD>punt1+punt5+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Tab</TD>
-<TD>punt4+punt5+Espai</TD>
-</TR>
-<TR>
-<TD>tecla Retorn</TD>
-<TD>punt8</TD>
-</TR>
-<TR>
-<TD>tecla Retrocés</TD>
-<TD>punt7</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa amunt</TD>
-<TD>punt1+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa avall</TD>
-<TD>punt4+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Bloqueig de majúscules</TD>
-<TD>punt1+punt3+punt6+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Alt+Tab</TD>
-<TD>avançament2+avançament3+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Tab</TD>
-<TD>avançament2+avançament3</TD>
-</TR>
-<TR>
-<TD>Tecla Fi</TD>
-<TD>punt4+punt6+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Fi</TD>
-<TD>punt4+punt5+punt6+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Inici</TD>
-<TD>punt1+punt3+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Inici</TD>
-<TD>punt1+punt2+punt3+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa esquerra</TD>
-<TD>punt3+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Maj+Fletxa esquerra</TD>
-<TD>punt2+punt8+Espai+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Fletxa esquerra</TD>
-<TD>punt2+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Alt+Fletxa esquerra</TD>
-<TD>punt2+punt7+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Fletxa esquerra</TD>
-<TD>punt2+punt7</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa dreta</TD>
-<TD>punt6+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Maj+Fletxa dreta</TD>
-<TD>punt5+punt8+Espai+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Fletxa dreta</TD>
-<TD>punt5+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Alt+Fletxa dreta</TD>
-<TD>punt5+punt7+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Fletxa dreta</TD>
-<TD>punt5+punt7</TD>
-</TR>
-<TR>
-<TD>Tecla Re Pàg</TD>
-<TD>punt1+punt2+punt6+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Re Pàg</TD>
-<TD>punt1+punt2+punt6+punt8+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Maj+Fletxa amunt</TD>
-<TD>punt2+punt3+punt8+Espai+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Fletxa amunt</TD>
-<TD>punt2+punt3+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Alt+Fletxa amunt</TD>
-<TD>punt2+punt3+punt7+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Fletxa amunt</TD>
-<TD>punt2+punt3+punt7</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Fletxa amunt</TD>
-<TD>barra de desplaçament esquerra avall+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Av Pàg</TD>
-<TD>punt3+punt4+punt5+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Av Pàg</TD>
-<TD>punt3+punt4+punt5+punt8+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Maj+Fletxa avall</TD>
-<TD>punt5+punt6+punt8+Espai+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Fletxa avall</TD>
-<TD>punt5+punt6+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Alt+Fletxa avall</TD>
-<TD>punt5+punt6+punt7+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Fletxa avall</TD>
-<TD>punt5+punt6+punt7</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Fletxa avall</TD>
-<TD>barra de desplaçament dreta avall+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Supr</TD>
-<TD>punt1+punt3+punt5+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla f1</TD>
-<TD>punt1+punt2+punt5+Espai</TD>
-</TR>
-<TR>
-<TD>Tecla f3</TD>
-<TD>punt1+punt2+punt4+punt8</TD>
-</TR>
-<TR>
-<TD>Tecla f4</TD>
-<TD>punt7+avançament3</TD>
-</TR>
-<TR>
-<TD>Tecla Windows+b</TD>
-<TD>punt1+punt2+avançament1</TD>
-</TR>
-<TR>
-<TD>Tecla Windows+d</TD>
-<TD>punt1+punt4+punt5+avançament1</TD>
-</TR>
-</TABLE>
-
-<H3>HIMS SyncBraille</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>barra de desplaçament esquerra avall</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>barra de desplaçament dreta avall</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-</TABLE>
-
-<H3>Seika Braille Displays</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>esquerra</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>dreta</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>b3</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>b4</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>b5</TD>
-</TR>
-<TR>
-<TD>Verbalitza-ho tot</TD>
-<TD>b6</TD>
-</TR>
-<TR>
-<TD>Tecla Tab</TD>
-<TD>b1</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Tab</TD>
-<TD>b2</TD>
-</TR>
-<TR>
-<TD>Tecla Alt+Tab</TD>
-<TD>b1+b2</TD>
-</TR>
-<TR>
-<TD>Menú NVDA</TD>
-<TD>esquerra+dreta</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-</TABLE>
-
-<H3>Models més actuals de Papenmeier BRAILLEX</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>esquerra</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>dreta</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>amunt</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>avall</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Informa del caràcter actual en revisió</TD>
-<TD>esquerra1</TD>
-</TR>
-<TR>
-<TD>Activa l'objecte de navegació actual</TD>
-<TD>esquerra2</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>dreta2</TD>
-</TR>
-<TR>
-<TD>Informa del títol</TD>
-<TD>esquerra1+amunt</TD>
-</TR>
-<TR>
-<TD>Informa de la Barra d'estat</TD>
-<TD>esquerra2+avall</TD>
-</TR>
-<TR>
-<TD>Mou a objecte contenidor</TD>
-<TD>amunt2</TD>
-</TR>
-<TR>
-<TD>Mou al primer objecte contingut</TD>
-<TD>avall2</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte anterior</TD>
-<TD>esquerra2</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte següent</TD>
-<TD>dreta2</TD>
-</TR>
-<TR>
-<TD>Informa del format de text</TD>
-<TD>fila de sensors superior</TD>
-</TR>
-</TABLE>
-
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Tecla Retrocés</TD>
-<TD>punt 7</TD>
-</TR>
-<TR>
-<TD>Tecla Retorn</TD>
-<TD>punt 8</TD>
-</TR>
-<TR>
-<TD>Tecla d'escapada</TD>
-<TD>Espai amb punt 7</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa amunt</TD>
-<TD>Espai amb punt 2</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa esquerra</TD>
-<TD>Espai amb punt 1</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa dreta</TD>
-<TD>Espai amb punt 4</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa avall</TD>
-<TD>Espai amb punt 5</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl</TD>
-<TD>polze esquerra+punt2</TD>
-</TR>
-<TR>
-<TD>Tecla Alt</TD>
-<TD>polze esquerra+punt3</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Tecla d'escapada</TD>
-<TD>Espai amb punt 1 2 3 4 5 6</TD>
-</TR>
-<TR>
-<TD>Tecla Tab</TD>
-<TD>Espai amb punt 3 7</TD>
-</TR>
-</TABLE>
-
-<H3>Models anteriors de Papenmeier Braille BRAILLEX</H3>
-<P>
-Dispositius amb EAB:
-</P>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>esquerra</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>dreta</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>amunt</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>avall</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Informa del caràcter actual en revisió</TD>
-<TD>esquerra1</TD>
-</TR>
-<TR>
-<TD>Activa l'objecte de navegació actual</TD>
-<TD>esquerra2</TD>
-</TR>
-<TR>
-<TD>Informa del títol</TD>
-<TD>esquerra1amunt</TD>
-</TR>
-<TR>
-<TD>Informa de la barra d'estat</TD>
-<TD>esquerra2avall</TD>
-</TR>
-<TR>
-<TD>Mou a objecte contenidor</TD>
-<TD>amunt2</TD>
-</TR>
-<TR>
-<TD>Mou al primer objecte contingut</TD>
-<TD>avall2</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte següent</TD>
-<TD>dreta2</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte anterior</TD>
-<TD>esquerra2</TD>
-</TR>
-<TR>
-<TD>Informa del format del text</TD>
-<TD>Tira d'enrutament superior</TD>
-</TR>
-</TABLE>
-
-<P>
-BRAILLEX Tiny:
-</P>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Informa del caràcter actual en revisió</TD>
-<TD>esquerra1</TD>
-</TR>
-<TR>
-<TD>Activa l'objecte de navegació actual</TD>
-<TD>esquerra2</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>esquerra</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>dreta</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>amunt</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>avall</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>dreta2</TD>
-</TR>
-<TR>
-<TD>Mou a objecte contenidor</TD>
-<TD>dreta1+amunt|</TD>
-</TR>
-<TR>
-<TD>Mou al primer objecte contingut</TD>
-<TD>dreta1+avall</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte anterior</TD>
-<TD>dreta1+esquerra</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte següent</TD>
-<TD>dreta1+dreta</TD>
-</TR>
-<TR>
-<TD>Informa del format del text</TD>
-<TD>reportf</TD>
-</TR>
-<TR>
-<TD>Informa del títol</TD>
-<TD>esquerra1+amunt</TD>
-</TR>
-<TR>
-<TD>Informa de la barra d'estat</TD>
-<TD>esquerra2+avall|</TD>
-</TR>
-</TABLE>
-
-<P>
-BRAILLEX 2D Screen:
-</P>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Informa del caràcter actual en revisió</TD>
-<TD>esquerra1</TD>
-</TR>
-<TR>
-<TD>Activa l'objecte de navegació actual</TD>
-<TD>esquerra2</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>dreta2</TD>
-</TR>
-<TR>
-<TD>Informa del format del text</TD>
-<TD>reportf</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>amunt</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>esquerra</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>dreta</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>avall</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte següent</TD>
-<TD>esquerra2</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte contenidor</TD>
-<TD>amunt2</TD>
-</TR>
-<TR>
-<TD>Mou al primer objecte contingut</TD>
-<TD>avall2</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte anterior</TD>
-<TD>dreta2</TD>
-</TR>
-</TABLE>
-
-<H3>HumanWare BrailleNote</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal Braille enrere</TD>
-<TD>enrere</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>avançament</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>anterior</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>següent</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>anterior+següent</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa amunt</TD>
-<TD>Espai+punt1</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa avall</TD>
-<TD>Espai+punt4</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa esquerra</TD>
-<TD>Espai+punt3</TD>
-</TR>
-<TR>
-<TD>Tecla Fletxa dreta</TD>
-<TD>Espai+punt6</TD>
-</TR>
-<TR>
-<TD>Tecla Re Pàg</TD>
-<TD>Espai+punt1+punt3</TD>
-</TR>
-<TR>
-<TD>Tecla Av Pàg</TD>
-<TD>Espai+punt4+punt6</TD>
-</TR>
-<TR>
-<TD>Tecla Inici</TD>
-<TD>Espai+punt1+punt2</TD>
-</TR>
-<TR>
-<TD>Tecla Fi</TD>
-<TD>Espai+punt4+punt5</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Inici</TD>
-<TD>Espai+punt1+punt2+punt3</TD>
-</TR>
-<TR>
-<TD>Tecla Ctrl+Fi</TD>
-<TD>Espai+punt4+punt5+punt6</TD>
-</TR>
-<TR>
-<TD>Tecla Espai</TD>
-<TD>Espai</TD>
-</TR>
-<TR>
-<TD>Tecla Retorn</TD>
-<TD>Espai+punt8</TD>
-</TR>
-<TR>
-<TD>Tecla Retrocés</TD>
-<TD>Espai+punt7</TD>
-</TR>
-<TR>
-<TD>Tecla Tab</TD>
-<TD>Espai+punt2+punt3+punt4+punt5 (Espai+t)</TD>
-</TR>
-<TR>
-<TD>Tecla Majúscules+Tab</TD>
-<TD>Espai+punt1+punt2+punt5+punt6</TD>
-</TR>
-<TR>
-<TD>Tecla Windows</TD>
-<TD>Espai+punt2+punt4+punt5+punt6 (Espai+w)</TD>
-</TR>
-<TR>
-<TD>Tecla Alt</TD>
-<TD>Espai+punt1+punt3+punt4 (Espai+m)</TD>
-</TR>
-<TR>
-<TD>Commuta ajuda d'entrada</TD>
-<TD>Espai+punt2+punt3+punt6 (Espai+h minúscula)</TD>
-</TR>
-</TABLE>
-
-<H3>EcoBraille</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>Tecla</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>T2</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>T4|</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>T1</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>T5</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor</TD>
-</TR>
-<TR>
-<TD>Activa l'objecte de navegació actual</TD>
-<TD>T3</TD>
-</TR>
-<TR>
-<TD>Canvia al mode de navegació següent</TD>
-<TD>F1</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte contenidor</TD>
-<TD>F2</TD>
-</TR>
-<TR>
-<TD>Canvia al mode de navegació anterior</TD>
-<TD>F3</TD>
-</TR>
-<TR>
-<TD>Canvia a l'objecte anterior</TD>
-<TD>F4</TD>
-</TR>
-<TR>
-<TD>Informa de l'objecte actual</TD>
-<TD>F5</TD>
-</TR>
-<TR>
-<TD>Mou al següent objecte</TD>
-<TD>F6</TD>
-</TR>
-<TR>
-<TD>Mou a l'objecte amb el focus</TD>
-<TD>F7</TD>
-</TR>
-<TR>
-<TD>Mou al primer objecte contingut</TD>
-<TD>F8</TD>
-</TR>
-<TR>
-<TD>Mou el focus del sistema o de cursor a la posició actual de revisió</TD>
-<TD>F9</TD>
-</TR>
-<TR>
-<TD>Informa de la posició actual del cursor</TD>
-<TD>F0</TD>
-</TR>
-<TR>
-<TD>Commuta el seguiment de braille a</TD>
-<TD>A</TD>
-</TR>
-</TABLE>
-
-<H3>BRLTTY</H3>
-<TABLE BORDER="1" CELLPADDING="4">
-<TR>
-<TH>Nom</TH>
-<TH>ordre BRLTTY</TH>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille enrere</TD>
-<TD>fwinlt (vés enrere una finestra)</TD>
-</TR>
-<TR>
-<TD>Desplaça el terminal braille endavant</TD>
-<TD>fwinrt (vés endavant una finestra)</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia anterior</TD>
-<TD>lnup (vés amunt una línia)</TD>
-</TR>
-<TR>
-<TD>Mou el terminal braille a la línia següent</TD>
-<TD>lndn (vés avall una línia)</TD>
-</TR>
-<TR>
-<TD>Guia fins a la cel·la braille</TD>
-<TD>sensor (porta el cursor al caràcter)</TD>
-</TR>
-</TABLE>
-
-
-<!-- html code generated by txt2tags 2.5 (http://txt2tags.sf.net) -->
-<!-- cmdline: txt2tags user_docs\ca\keyCommands.t2t -->
-</BODY></HTML>
+</head>
+<body><h1 id="referencia-rapida-de-les-ordres-de-nvda-202611">Referència ràpida de les ordres de NVDA 2026.1.1</h1>
+<div class="toc">
+<ul>
+<li><a href="#referencia-rapida-de-les-ordres-de-nvda-202611" title="Referència ràpida de les ordres de NVDA 2026.1.1">Referència ràpida de les ordres de NVDA 2026.1.1</a><ul>
+<li><a href="#GettingStartedWithNVDA" title="Utilitzant NVDA">Utilitzant NVDA</a><ul>
+<li><a href="#NVDATouchGestures" title="Gestos tàctils NVDA">Gestos tàctils NVDA</a><ul>
+<li><a href="#TouchModes" title="Modes tàctils">Modes tàctils</a></li>
+</ul>
+</li>
+<li><a href="#BasicNVDACommands" title="Ordres bàsiques de NVDA">Ordres bàsiques de NVDA</a></li>
+<li><a href="#ReportingSystemInformation" title="Anunciant la informació del sistema">Anunciant la informació del sistema</a></li>
+<li><a href="#SpeechModes" title="Modes de veu">Modes de veu</a></li>
+</ul>
+</li>
+<li><a href="#NavigatingWithNVDA" title="Navegant amb NVDA">Navegant amb NVDA</a><ul>
+<li><a href="#SystemFocus" title="Navegant pel Focus del Sistema">Navegant pel Focus del Sistema</a></li>
+<li><a href="#SystemCaret" title="Navegació amb el cursor del sistema">Navegació amb el cursor del sistema</a></li>
+<li><a href="#ObjectNavigation" title="Navegació d'objectes">Navegació d'objectes</a></li>
+<li><a href="#ReviewingText" title="Revisió de text">Revisió de text</a></li>
+<li><a href="#ReviewModes" title="Modes de revisió">Modes de revisió</a></li>
+<li><a href="#NavigatingWithTheMouse" title="Navegant amb el ratolí">Navegant amb el ratolí</a></li>
+</ul>
+</li>
+<li><a href="#BrowseMode" title="Mode de navegació">Mode de navegació</a><ul>
+<li><a href="#SingleLetterNavigation" title="Navegació amb una sola lletra">Navegació amb una sola lletra</a></li>
+<li><a href="#ElementsList" title="La Llista d'Elements">La Llista d'Elements</a></li>
+<li><a href="#SearchingForText" title="Cercar text">Cercar text</a></li>
+<li><a href="#ImbeddedObjects" title="Objectes incrustats">Objectes incrustats</a></li>
+<li><a href="#NativeSelectionMode" title="Mode de Selecció Nativa">Mode de Selecció Nativa</a></li>
+</ul>
+</li>
+<li><a href="#ReadingMath" title="Lectura de contingut matemàtic">Lectura de contingut matemàtic</a><ul>
+<li><a href="#InteractiveNavigation" title="Navegació interactiva">Navegació interactiva</a><ul>
+<li><a href="#MathNavigationModes" title="Modes de navegació">Modes de navegació</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Braille" title="Braille">Braille</a><ul>
+<li><a href="#BrailleInput" title="Entrada Braille">Entrada Braille</a></li>
+</ul>
+</li>
+<li><a href="#Vision" title="Visió">Visió</a><ul>
+<li><a href="#VisionScreenCurtain" title="Cortina de pantalla">Cortina de pantalla</a></li>
+</ul>
+</li>
+<li><a href="#ContentRecognition" title="Reconeixement de contingut">Reconeixement de contingut</a><ul>
+<li><a href="#Win10Ocr" title="OCR de Windows">OCR de Windows</a></li>
+</ul>
+</li>
+<li><a href="#ApplicationSpecificFeatures" title="Característiques específiques de aplicacions">Característiques específiques de aplicacions</a><ul>
+<li><a href="#MicrosoftWord" title="Microsoft Word">Microsoft Word</a><ul>
+<li><a href="#WordAutomaticColumnAndRowHeaderReading" title="Lectura automàtica d'encapçalaments de columnes i files">Lectura automàtica d'encapçalaments de columnes i files</a></li>
+<li><a href="#BrowseModeInMicrosoftWord" title="Mode de navegació a Microsoft Word">Mode de navegació a Microsoft Word</a><ul>
+<li><a href="#WordElementsList" title="La Llista d'Elements">La Llista d'Elements</a></li>
+</ul>
+</li>
+<li><a href="#WordReportingComments" title="Informant de comentaris">Informant de comentaris</a></li>
+</ul>
+</li>
+<li><a href="#MicrosoftExcel" title="Microsoft Excel">Microsoft Excel</a><ul>
+<li><a href="#ExcelAutomaticColumnAndRowHeaderReading" title="Lectura automàtica d'encapçalaments de columnes i files">Lectura automàtica d'encapçalaments de columnes i files</a></li>
+<li><a href="#ExcelElementsList" title="La Llista d'Elements">La Llista d'Elements</a></li>
+<li><a href="#ExcelReportingComments" title="Informació de notes">Informació de notes</a></li>
+<li><a href="#ExcelReadingProtectedCells" title="Lectura de cel·les protegides">Lectura de cel·les protegides</a></li>
+</ul>
+</li>
+<li><a href="#MicrosoftPowerPoint" title="Microsoft PowerPoint">Microsoft PowerPoint</a></li>
+<li><a href="#Foobar2000" title="foobar2000">foobar2000</a></li>
+<li><a href="#MirandaIM" title="Miranda IM">Miranda IM</a></li>
+<li><a href="#Poedit" title="Poedit">Poedit</a></li>
+<li><a href="#Kindle" title="Kindle per a PC">Kindle per a PC</a><ul>
+<li><a href="#KindleTextSelection" title="Selecció de text">Selecció de text</a></li>
+</ul>
+</li>
+<li><a href="#Azardi" title="Azardi">Azardi</a></li>
+<li><a href="#WinConsole" title="Consola de Windows">Consola de Windows</a></li>
+</ul>
+</li>
+<li><a href="#ConfiguringNVDA" title="Configuració de NVDA">Configuració de NVDA</a><ul>
+<li><a href="#NVDASettings" title="Configuració de NVDA">Configuració de NVDA</a><ul>
+<li><a href="#GeneralSettings" title="General">General</a></li>
+<li><a href="#SpeechSettings" title="Configuració de veu">Configuració de veu</a></li>
+<li><a href="#SelectSynthesizer" title="Seleccionar sintetitzador">Seleccionar sintetitzador</a></li>
+<li><a href="#SynthSettingsRing" title="Anell de configuració de sintetitzador">Anell de configuració de sintetitzador</a></li>
+<li><a href="#BrailleSettings" title="Braille">Braille</a></li>
+<li><a href="#SelectBrailleDisplay" title="Selecciona la Línia Braille">Selecciona la Línia Braille</a></li>
+<li><a href="#AudioSettings" title="Àudio">Àudio</a><ul>
+<li><a href="#SelectSoundSplitMode" title="Divisió del so">Divisió del so</a></li>
+</ul>
+</li>
+<li><a href="#KeyboardSettings" title="Teclat">Teclat</a></li>
+<li><a href="#MouseSettings" title="Ratolí">Ratolí</a></li>
+<li><a href="#ReviewCursorSettings" title="Cursor de revisió">Cursor de revisió</a></li>
+<li><a href="#ObjectPresentationSettings" title="Presentació d'objectes">Presentació d'objectes</a></li>
+<li><a href="#BrowseModeSettings" title="Mode de navegació">Mode de navegació</a></li>
+<li><a href="#DocumentFormattingSettings" title="Formatació del document">Formatació del document</a></li>
+<li><a href="#AdvancedSettings" title="Configuracions Avançades">Configuracions Avançades</a><ul>
+<li><a href="#Annotations" title="Anotacions">Anotacions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#SavingAndReloading" title="Desar i recarregar la configuració">Desar i recarregar la configuració</a></li>
+<li><a href="#ConfigurationProfiles" title="Perfils de configuració">Perfils de configuració</a><ul>
+<li><a href="#ProfilesBasicManagement" title="Gestió Bàsica">Gestió Bàsica</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#RemoteAccess" title="Accés remot">Accés remot</a><ul>
+<li><a href="#RemoteAccessGestures" title="Resum de les tecles d'ordres de l'accés remot">Resum de les tecles d'ordres de l'accés remot</a></li>
+</ul>
+</li>
+<li><a href="#ExtraTools" title="Eines addicionals">Eines addicionals</a><ul>
+<li><a href="#LogViewer" title="Visor de registres">Visor de registres</a></li>
+<li><a href="#ReloadPlugins" title="Recarregar plugins">Recarregar plugins</a></li>
+</ul>
+</li>
+<li><a href="#SupportedBrailleDisplays" title="Línies braille suportades">Línies braille suportades</a><ul>
+<li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/Sèrie PAC Mate">Freedom Scientific Focus/Sèrie PAC Mate</a></li>
+<li><a href="#OptelecALVA" title="Sèrie Optelec ALVA 6/protocol converter">Sèrie Optelec ALVA 6/protocol converter</a></li>
+<li><a href="#HandyTech" title="Línies Handy Tech">Línies Handy Tech</a></li>
+<li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
+<li><a href="#Baum" title="Línies Baum/Humanware/APH/Orbit Braille">Línies Baum/Humanware/APH/Orbit Braille</a></li>
+<li><a href="#HedoProfiLine" title="hedo ProfiLine USB">hedo ProfiLine USB</a></li>
+<li><a href="#HedoMobilLine" title="hedo MobilLine USB">hedo MobilLine USB</a></li>
+<li><a href="#HumanWareBrailliant" title="HumanWare Brailliant Sèries BI/B / BrailleNote Touch">HumanWare Brailliant Sèries BI/B / BrailleNote Touch</a><ul>
+<li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="Assignacions de tecles per a tots els models">Assignacions de tecles per a tots els models</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Assignacions de tecles per a Brailliant BI 32, BI 40 i B 80">Assignacions de tecles per a Brailliant BI 32, BI 40 i B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Assignacions de tecles per a Brailliant BI 14">Assignacions de tecles per a Brailliant BI 14</a></li>
+</ul>
+</li>
+<li><a href="#Hims" title="Sèries HIMS Braille Sense/Braille EDGE/Smart Beetle/Sync Braille">Sèries HIMS Braille Sense/Braille EDGE/Smart Beetle/Sync Braille</a></li>
+<li><a href="#Seika" title="Línies braille Seika">Línies braille Seika</a><ul>
+<li><a href="#SeikaBrailleDisplays" title="Seika Versió 3, 4, i 5 (40 cel·les), Seika80 (80 cel·les)">Seika Versió 3, 4, i 5 (40 cel·les), Seika80 (80 cel·les)</a></li>
+<li><a href="#SeikaNotetaker" title="MiniSeika (16, 24 cel·les), V6, i V6Pro (40 cel·les)">MiniSeika (16, 24 cel·les), V6, i V6Pro (40 cel·les)</a></li>
+</ul>
+</li>
+<li><a href="#Papenmeier" title="Papenmeier BRAILLEX Models més nous">Papenmeier BRAILLEX Models més nous</a></li>
+<li><a href="#PapenmeierOld" title="Models més antics de Braille Papenmeier BRAILLEX">Models més antics de Braille Papenmeier BRAILLEX</a></li>
+<li><a href="#HumanWareBrailleNote" title="HumanWare BrailleNote">HumanWare BrailleNote</a></li>
+<li><a href="#EcoBraille" title="EcoBraille">EcoBraille</a></li>
+<li><a href="#SuperBraille" title="SuperBraille">SuperBraille</a></li>
+<li><a href="#Eurobraille" title="Línies Eurobraille">Línies Eurobraille</a><ul>
+<li><a href="#EurobrailleBraille" title="Funcions del teclat braille">Funcions del teclat braille</a></li>
+<li><a href="#Eurobraillebbook" title="tecles d'ordres del b.book">tecles d'ordres del b.book</a></li>
+<li><a href="#Eurobraillebnote" title="tecles d'ordres del b.note">tecles d'ordres del b.note</a></li>
+<li><a href="#Eurobrailleesys" title="Ordres de eclat de Esys">Ordres de eclat de Esys</a></li>
+<li><a href="#EurobrailleEsytime" title="Comandes de teclat de Esytime">Comandes de teclat de Esytime</a></li>
+</ul>
+</li>
+<li><a href="#NattiqTechnologies" title="Línies braille Nattiq n">Línies braille Nattiq n</a></li>
+<li><a href="#BRLTTY" title="BRLTTY">BRLTTY</a></li>
+<li><a href="#Albatross" title="Tivomatic Caiku Albatross 46/80">Tivomatic Caiku Albatross 46/80</a></li>
+<li><a href="#Zoomax" title="Lector electrònic NLS Zoomax">Lector electrònic NLS Zoomax</a></li>
+<li><a href="#HIDBraille" title="Línies Braille estàndard HID">Línies Braille estàndard HID</a></li>
+<li><a href="#dotPad" title="Dot Pad">Dot Pad</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="GettingStartedWithNVDA">Utilitzant NVDA</h2>
+<h3 id="NVDATouchGestures">Gestos tàctils NVDA</h3>
+<p>Per alternar la compatibilitat amb la interacció tàctil, prem NVDA+control+alt+t.</p>
+<h4 id="TouchModes">Modes tàctils</h4>
+<p>Per alternar els modes tàctils, fes un toc amb 3 dits.</p>
+<h3 id="BasicNVDACommands">Ordres bàsiques de NVDA</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Toc en pantalla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inicia o reinicia NVDA</td>
+<td>Control+alt+n</td>
+<td>Control+alt+n</td>
+<td>cap</td>
+<td>Inicia o reinicia NVDA des de l'escriptori, si aquesta drecera de Windows està activada durant el procés d'instal·lació de NVDA. Aquesta és una drecera específica de Windows i, per tant, no es pot reassignar al diàleg de gestos d'entrada.</td>
+</tr>
+<tr>
+<td>Aturar la parla</td>
+<td>Control</td>
+<td>control</td>
+<td>toc amb 2 dits</td>
+<td>Deixa de parlar a l'instant</td>
+</tr>
+<tr>
+<td>Posa en pausa la veu</td>
+<td>majúscules</td>
+<td>majúscules</td>
+<td>cap</td>
+<td>Pausa instantàniament la parla. En premer-lo de nou es continuarà parlant on ho va deixar (si la pausa és compatible amb el sintetitzador actual)</td>
+</tr>
+<tr>
+<td>Menú NVDA</td>
+<td>NVDA+n</td>
+<td>NVDA+n</td>
+<td>Doble toc amb 2 dits</td>
+<td>Apareix el menú de NVDA per permetre't accedir a les preferències, les eines, l'ajuda, etc.</td>
+</tr>
+<tr>
+<td>Activa o desactiva el mode d'ajuda d'entrada</td>
+<td>NVDA+1</td>
+<td>NVDA+1</td>
+<td>cap</td>
+<td>Si premeu qualsevol tecla en aquest mode, s'informarà de la tecla i de la descripció de qualsevol ordre de NVDA associada amb ella</td>
+</tr>
+<tr>
+<td>Sortir de NVDA</td>
+<td>NVDA+q</td>
+<td>NVDA+q</td>
+<td>cap</td>
+<td>Surt de NVDA</td>
+</tr>
+<tr>
+<td>Passa la següent tecla</td>
+<td>NVDA+f2</td>
+<td>NVDA+f2</td>
+<td>cap</td>
+<td>Li diu a NVDA que passi la següent tecla directament a l'aplicació activa, fins i tot si normalment es tracta com una ordre de NVDA</td>
+</tr>
+<tr>
+<td>Activa i desactiva el mode de repòs de l'aplicació</td>
+<td>NVDA+shift+s</td>
+<td>NVDA+shift+z</td>
+<td>cap</td>
+<td>el mode de repòs desactiva totes les ordres de NVDA i la sortida de veu/braille per a l'aplicació actual. Això és més útil en aplicacions que proporcionen les seves pròpies funcions de lectura de veu o pantalla. Premeu aquesta ordre de nou per desactivar el mode de repòs: tingueu en compte que NVDA només conservarà la configuració del mode de repòs fins que es reiniciï.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ReportingSystemInformation">Anunciant la informació del sistema</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anunci de la data i l'hora</td>
+<td>NVDA+f12</td>
+<td>Prement una vegada s'informa de l'hora actual, prement dues vegades s'informa de la data</td>
+</tr>
+<tr>
+<td>Informa de l'estat de la bateria</td>
+<td>NVDA+shift+b</td>
+<td>Informa de l'estat de la bateria, és a dir, si s'utilitza l'alimentació de corrent o el percentatge de càrrega actual.</td>
+</tr>
+<tr>
+<td>Informar del text del porta-retalls</td>
+<td>NVDA+c</td>
+<td>Informa del text al porta-retalls, si n'hi ha.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="SpeechModes">Modes de veu</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cicla entre modes de veu</td>
+<td>'NVDA+s'</td>
+<td>Cicla entre els distints modes de veu.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="NavigatingWithNVDA">Navegant amb NVDA</h2>
+<h3 id="SystemFocus">Navegant pel Focus del Sistema</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla del portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informa del focus de sistema actual</td>
+<td>NVDA+tab</td>
+<td>NVDA+tab</td>
+<td>anuncia l'objecte o control actual que té el focus del Sistema. Si premeu dues vegades, lletrejarà la informació</td>
+</tr>
+<tr>
+<td>Informa del títol</td>
+<td>NVDA+t</td>
+<td>NVDA+t</td>
+<td>Informa del títol de la finestra activa actualment. Prement dues vegades lletrejarà la informació. Prement tres vegades es copiarà al porta-retalls</td>
+</tr>
+<tr>
+<td>Llegeix la finestra activa</td>
+<td>NVDA+b</td>
+<td>NVDA+b</td>
+<td>llegeix tots els controls de la finestra activa actualment (útil per als diàlegs)</td>
+</tr>
+<tr>
+<td>Informa de la barra d'estat</td>
+<td>NVDA+final</td>
+<td>NVDA+shift+final</td>
+<td>Informa de la barra d'estat si NVDA en troba una. Prement dues vegades lletrejarà la informació. Prement tres vegades es copiarà al porta-retalls</td>
+</tr>
+<tr>
+<td>Informa de la tecla de drecera</td>
+<td>'shift+2 del teclat numèric'</td>
+<td>'NVDA+control+shift+.'</td>
+<td>Informa de la tecla de drecera (accelerador) de l'objecte enfocat actualment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="SystemCaret">Navegació amb el cursor del sistema</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla del portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DiR-ho tot</td>
+<td>NVDA+fletxa avall</td>
+<td>NVDA+a</td>
+<td>Comença a llegir des de la posició actual del cursor del sistema, movent-lo a mesura que avança</td>
+</tr>
+<tr>
+<td>Llegir línia actual</td>
+<td>NVDA+fletxa amunt</td>
+<td>NVDA+l</td>
+<td>Llegeix la línia on es troba actualment el cursor del sistema. Prémer dues vegades LLETREJA la línia. Prement tres vegades LLETREJA la línia utilitzant descripcions deLS CARÀCTERS.</td>
+</tr>
+<tr>
+<td>Llegir la selecció de text actual</td>
+<td>NVDA+SHIFT+fletxa amunt</td>
+<td>NVDA+SHIFT+s</td>
+<td>Llegeix qualsevol text seleccionat actualment</td>
+</tr>
+<tr>
+<td>Informa del format del text</td>
+<td>NVDA+f</td>
+<td>NVDA+f</td>
+<td>Informa del format del text on es troba actualment el cursor. Prement dues vegades mostra la informació en mode de navegació</td>
+</tr>
+<tr>
+<td>Informa de l'idioma</td>
+<td>cap</td>
+<td>cap</td>
+<td>Informa de l'idioma del text. Prémer dues vegades mostra la informació en una finestra</td>
+</tr>
+<tr>
+<td>Informa de la destinació de l'enllaç</td>
+<td>'NVDA+k'</td>
+<td>'NVDA+k'</td>
+<td>Si premeu una vegada, l'URL de destinació de l'enllaç es pronuncia a la posició actual del cursor o del focus. Prement dues vegades el mostra en una finestra per a una revisió més acurada</td>
+</tr>
+<tr>
+<td>Informa de la ubicació del cursor</td>
+<td>NVDA+Suprimeix del teclat numèric</td>
+<td>NVDA+suprimir</td>
+<td>Informa d'informació sobre la ubicació del text o l'objecte a la posició del cursor del sistema. Per exemple, això pot incloure el percentatge al llarg del document, la distància des de la vora de la pàgina o la posició exacta de la pantalla. Prement dues vegades pot proporcionar més detalls.</td>
+</tr>
+<tr>
+<td>Frase següent</td>
+<td>alt+fletxa avall</td>
+<td>alt+fletxa avall</td>
+<td>Mou el cursor a la frase següent i l'anuncia. (només compatible amb Microsoft Word i Outlook)</td>
+</tr>
+<tr>
+<td>Frase anterior</td>
+<td>alt+fletxa amunt</td>
+<td>alt+fletxa amunt</td>
+<td>Mou el cursor a la frase anterior i l'anuncia. (només compatible amb Microsoft Word i Outlook)</td>
+</tr>
+</tbody>
+</table>
+<p>Quan et trobes dins d'una taula, també hi ha disponibles les ordres de teclat següents:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moure a la columna anterior</td>
+<td>control+alt+fletxaEsquerra</td>
+<td>Mou el cursor del sistema a la columna anterior (quedant-se a la mateixa fila)</td>
+</tr>
+<tr>
+<td>Moure a la següent columna</td>
+<td>control+alt+fletxa dreta</td>
+<td>Mou el cursor del sistema a la següent columna (mantenint-se a la mateixa fila)</td>
+</tr>
+<tr>
+<td>Moure a la fila anterior</td>
+<td>control+alt+Fletxa cap amunt</td>
+<td>Mou el cursor del sistema a la fila anterior (mantenint-se a la mateixa columna)</td>
+</tr>
+<tr>
+<td>Moure a la següent fila</td>
+<td>control+alt+fletxa cap avall</td>
+<td>Mou el cursor del sistema a la següent fila (mantenint-se a la mateixa columna)</td>
+</tr>
+<tr>
+<td>Moure a la primera columna</td>
+<td>control+alt+inici</td>
+<td>Mou el cursor del sistema a la primera columna (mantenint-se a la mateixa fila)</td>
+</tr>
+<tr>
+<td>Moure a l'última columna</td>
+<td>control+alt+fi</td>
+<td>Mou el cursor del sistema a l'última columna (quedant-se a la mateixa fila)</td>
+</tr>
+<tr>
+<td>Moure a la primera fila</td>
+<td>control+alt+pàginaAmunt</td>
+<td>Mou el cursor del sistema a la primera fila (quedant-se a la mateixa columna)</td>
+</tr>
+<tr>
+<td>Moure a l'última fila</td>
+<td>control+alt+pàginaAvall</td>
+<td>Mou el cursor del sistema a l'última fila (quedant-se a la mateixa columna)</td>
+</tr>
+<tr>
+<td>Dir-ho tot a la columna</td>
+<td>'NVDA+control+alt+fletxa avall'</td>
+<td>Llegeix la columna verticalment des de la cel·la actual cap avall fins a l'última cel·la de la columna.</td>
+</tr>
+<tr>
+<td>Dir-ho tot a la fila</td>
+<td>'NVDA+control+alt+fletxa dreta'</td>
+<td>Llegeix la fila horitzontalment des de la cel·la actual cap a la dreta fins a l'última cel·la de la fila.</td>
+</tr>
+<tr>
+<td>Llegir la columna sencera</td>
+<td>'NVDA+control+alt+fletxa amunt'</td>
+<td>Llegeix la columna actual verticalment de dalt a baix sense moure el cursor del sistema.</td>
+</tr>
+<tr>
+<td>Llegir tota la fila</td>
+<td>'NVDA+control+alt+fletxa esquerra'</td>
+<td>Llegeix la fila actual horitzontalment d'esquerra a dreta sense moure el cursor del sistema.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ObjectNavigation">Navegació d'objectes</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Toc en pantalla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informa de l'objecte actual</td>
+<td>NVDA+5 del teclat numèric</td>
+<td>NVDA+shift+o</td>
+<td>cap</td>
+<td>Informa del navegador d'objectes actual. Prement dues vegades lletreja la informació, i prement 3 vegades es copia el nom i el valor d'aquest objecte al porta-retalls.</td>
+</tr>
+<tr>
+<td>Moure a l'objecte contenidor</td>
+<td>NVDA+8 del teclat numèric</td>
+<td>NVDA+shift+Fletxa cap amunt</td>
+<td>flick amunt (mode objecte)</td>
+<td>Es mou a l'objecte contenidor del navegador d'objectes actual</td>
+</tr>
+<tr>
+<td>Moure a l'objecte anterior</td>
+<td>NVDA+4 del teclat numèric</td>
+<td>NVDA+shift+fletxaEsquerra</td>
+<td>cap</td>
+<td>Es mou cap a l'objecte anterior al navegador d'objectes actual</td>
+</tr>
+<tr>
+<td>Mou a l'objecte anterior en vista plana</td>
+<td>NVDA+9 del teclat numèric</td>
+<td>NVDA+shift+[</td>
+<td>gira a l'esquerra (mode objecte)</td>
+<td>Es mou a l'objecte anterior en una vista aplanada de la jerarquia del navegador d'objectes</td>
+</tr>
+<tr>
+<td>Mou al següent objecte</td>
+<td>NVDA+6 del teclat numèric</td>
+<td>NVDA+shift+fletxa dreta</td>
+<td>cap</td>
+<td>Es mou al següent objecte del navegador d'objectes actual</td>
+</tr>
+<tr>
+<td>Mou al següent objecte en vista plana</td>
+<td>NVDA+3 del teclat numèric</td>
+<td>NVDA+shift+]</td>
+<td>desplaça a la dreta (mode objecte)</td>
+<td>Passa al següent objecte en una vista aplanada de la jerarquia del navegador d'objectes</td>
+</tr>
+<tr>
+<td>Mou al primer objecte contenidor</td>
+<td>NVDA+2 del teclat numèric</td>
+<td>NVDA+shift+Fletxa avall</td>
+<td>desplaça cap avall (mode objecte)</td>
+<td>Es mou al primer objecte contenidor del navegador d'objectes actual</td>
+</tr>
+<tr>
+<td>Mou a l'objecte que té el focus</td>
+<td>NVDA+- del teclat numèric</td>
+<td>NVDA+retrocés</td>
+<td>cap</td>
+<td>Es mou a l'objecte que actualment té el focus del sistema, i també col·loca el cursor de revisió a la posició del cursor del sistema, si es mostra</td>
+</tr>
+<tr>
+<td>Activa el navegador d'objectes actual</td>
+<td>NVDA+Enter del teclat numèric</td>
+<td>NVDA+enter</td>
+<td>doble toc</td>
+<td>Activa el navegador d'objectes actual (similar a fer clic amb el ratolí o prémer espai quan té el focus del sistema)</td>
+</tr>
+<tr>
+<td>Mou el focus del sistema o el cursor a la posició actual de revisió</td>
+<td>NVDA+shift+- del teclat numèric</td>
+<td>NVDA+shift+retrocés</td>
+<td>cap</td>
+<td>premut una vegada Mou el focus del sistema al navegador d'objectes actual, premut dues vegades mou el cursor del sistema a la posició del cursor de revisió</td>
+</tr>
+<tr>
+<td>Informa de la ubicació del cursor de revisió</td>
+<td>NVDA+shift+Suprimeix del teclat numèric</td>
+<td>NVDA+shift+suprimir</td>
+<td>cap</td>
+<td>dona informació sobre la ubicació del text o l'objecte al cursor de revisió. Per exemple, això pot incloure el percentatge al llarg del document, la distància des de la vora de la pàgina o la posició exacta de la pantalla. Prement dues vegades pot proporcionar més detalls.</td>
+</tr>
+<tr>
+<td>Mou el cursor de revisió a la barra d'estat</td>
+<td>cap</td>
+<td>cap</td>
+<td>cap</td>
+<td>Informa de la barra d'estat si NVDA en troba una. També mou el navegador d'objectes a aquesta ubicació.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ReviewingText">Revisió de text</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Toc en pantalla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passar a la línia superior en revisió</td>
+<td>shift+7 del teclat numèric</td>
+<td>NVDA+control+inici</td>
+<td>cap</td>
+<td>Mou el cursor de revisió a la línia superior del text</td>
+</tr>
+<tr>
+<td>Passar a la línia anterior en revisió</td>
+<td>7 del teclat numèric</td>
+<td>NVDA+Fletxa cap amunt</td>
+<td>flick amunt (mode text)</td>
+<td>Mou el cursor de revisió a la línia de text anterior</td>
+</tr>
+<tr>
+<td>Informa de la línia actual en revisió</td>
+<td>8 del teclat numèric</td>
+<td>NVDA+shift+.</td>
+<td>cap</td>
+<td>Anuncia la línia de text actual on es col·loca el cursor de revisió. Prement dues vegades lletreja la línia. Prement tres vegades lletreja la línia utilitzant descripcions fonètiques.</td>
+</tr>
+<tr>
+<td>Passar a la següent línia en revisió</td>
+<td>9 del teclat numèric</td>
+<td>NVDA+fletxa avall</td>
+<td>desplaça cap avall (mode text)</td>
+<td>Mou el cursor de revisió a la següent línia de text</td>
+</tr>
+<tr>
+<td>Mou a la última línia en revisió</td>
+<td>shift+9 del teclat numèric</td>
+<td>NVDA+control+fi</td>
+<td>cap</td>
+<td>Mou el cursor de revisió a la línia inferior del text</td>
+</tr>
+<tr>
+<td>Passar a la paraula anterior en revisió</td>
+<td>4 del teclat numèric</td>
+<td>NVDA+control+fletxa esquerra</td>
+<td>Moviment de 2 dits cap a l'esquerra (mode text)</td>
+<td>Mou el cursor de revisió a la paraula anterior del text</td>
+</tr>
+<tr>
+<td>Informa de la paraula actual en revisió</td>
+<td>5 del teclat numèric</td>
+<td>NVDA+control+.</td>
+<td>cap</td>
+<td>Anuncia la paraula actual al text on es col·loca el cursor de revisió. Prement dues vegades lletreja la paraula. Prement tres vegades lletreja la paraula mitjançant descripció de caràcters.</td>
+</tr>
+<tr>
+<td>Passa a la següent paraula en revisió</td>
+<td>6 del teclat numèric</td>
+<td>NVDA+control+fletxa dreta</td>
+<td>gir de 2 dits cap a la dreta (mode text)</td>
+<td>Mou el cursor de revisió a la següent paraula del text</td>
+</tr>
+<tr>
+<td>Passar a l'inici de la línia en revisió</td>
+<td>shift+1 del teclat numèric</td>
+<td>NVDA+inici</td>
+<td>cap</td>
+<td>Mou el cursor de revisió a l'inici de la línia actual del text</td>
+</tr>
+<tr>
+<td>Passar al carácter anterior en revisió</td>
+<td>1 del teclat numèric</td>
+<td>NVDA+fletxa esquerra</td>
+<td>desplaça a l'esquerra (mode text)</td>
+<td>Mou el cursor de revisió al caràcter anterior de la línia actual del text</td>
+</tr>
+<tr>
+<td>Informa del caràcter actual en revisió</td>
+<td>2 del teclat numèric</td>
+<td>NVDA+.</td>
+<td>cap</td>
+<td>Anuncia el caràcter actual de la línia de text on es col·loca el cursor de revisió. En prémer dues vegades s'informa d'una descripció o exemple d'aquest caràcter. Prement tres vegades s'informa del valor numèric del caràcter en decimal i hexadecimal.</td>
+</tr>
+<tr>
+<td>Passar al següent carácter en revisió</td>
+<td>3 del teclat numèric</td>
+<td>NVDA+fletxa dreta</td>
+<td>desplaça cap a la dreta (mode de text)</td>
+<td>Mou el cursor de revisió al següent caràcter de la línia de text actual</td>
+</tr>
+<tr>
+<td>Mou al final de la línia en revisió</td>
+<td>shift+3 del teclat numèric</td>
+<td>NVDA+fi</td>
+<td>cap</td>
+<td>Mou el cursor de revisió al final de la línia de text actual</td>
+</tr>
+<tr>
+<td>Mou a la pàgina anterior en revisió</td>
+<td>'NVDA+pàgina amunt'</td>
+<td>'NVDA+shift+pàgina amunt'</td>
+<td>cap</td>
+<td>Mou el cursor de revisió a la pàgina anterior de text si l'aplicació ho suporta</td>
+</tr>
+<tr>
+<td>Mou a la següent pàgina en revisió</td>
+<td>'NVDA+pàgina avall'</td>
+<td>'NVDA+shift+pàgina avall'</td>
+<td>cap</td>
+<td>Mou el cursor de revisió a la següent pàgina de text si l'aplicació ho suporta</td>
+</tr>
+<tr>
+<td>Mou a l'inici de la selecció en revisió</td>
+<td>'NVDA+alt+inici'</td>
+<td>'NVDA+alt+inici'</td>
+<td>Cap</td>
+<td>Mou el cursor de revisió al primer caràcter del text seleccionat</td>
+</tr>
+<tr>
+<td>Mou al final de la selecció en revisió</td>
+<td>'NVDA+alt+fi'</td>
+<td>'NVDA+alt+fi'</td>
+<td>Cap</td>
+<td>Mou el cursor de revisió a l'últim caràcter del text seleccionat</td>
+</tr>
+<tr>
+<td>Dir-ho tot en revisió</td>
+<td>més del teclat numèric</td>
+<td>NVDA+shift+a</td>
+<td>3 dits cap avall (mode text)</td>
+<td>Llegeix des de la posició actual del cursor de revisió, movent-lo mentre avança</td>
+</tr>
+<tr>
+<td>Selecciona i després Copia des del cursor de revisió</td>
+<td>NVDA+f9</td>
+<td>NVDA+f9</td>
+<td>cap</td>
+<td>Inicia el procés de selecció i després còpia des de la posició actual del cursor de revisió. L'acció real no es realitza fins que no li digues a NVDA on és el final del rang de text</td>
+</tr>
+<tr>
+<td>Selecciona i després Copia al cursor de revisió</td>
+<td>NVDA+f10</td>
+<td>NVDA+f10</td>
+<td>cap</td>
+<td>En la primera pulsació, el text es selecciona de la posició prèviament establerta com a marcador d'inici fins a i incloent la posició actual del cursor de revisió. Si el cursor del sistema pot arribar al text, aquest es mourà al text seleccionat. Després de prémer aquesta tecla una segona vegada, el text es copiarà al portapapers de Windows</td>
+</tr>
+<tr>
+<td>Passar a l'inici marcat per a la còpia en revisió</td>
+<td>NVDA+shift+f9</td>
+<td>NVDA+shift+f9</td>
+<td>cap</td>
+<td>Mou el cursor de revisió a la posició prèviament establerta com a marcador d'inici per a la còpia</td>
+</tr>
+<tr>
+<td>Informa del ormat del text</td>
+<td>NVDA+shift+f</td>
+<td>NVDA+shift+f</td>
+<td>cap</td>
+<td>Informa del format del text on es troba actualment el cursor de revisió. Prement dues vegades mostra la informació en mode de navegació</td>
+</tr>
+<tr>
+<td>Informa de la substitució del símbol actual</td>
+<td>Cap</td>
+<td>Cap</td>
+<td>cap</td>
+<td>Llegeix el símbol on es col·loca el cursor de revisió. Premut dues vegades, mostra el símbol i el text utilitzat per pronunciar-lo en mode de navegació.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ReviewModes">Modes de revisió</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Toc en pantalla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canvia al mode de revisió següent</td>
+<td>NVDA+7 del teclat numèric</td>
+<td>NVDA+Pàgina amunt</td>
+<td>Lliscar 2 dits cap amunt</td>
+<td>canvia al següent mode de revisió disponible</td>
+</tr>
+<tr>
+<td>Canvia al mode de revisió anterior</td>
+<td>NVDA+1 del teclat numèric</td>
+<td>NVDA+Pàgina avall</td>
+<td>Lliscar 2 dits cap avall</td>
+<td>Canvia al mode de revisió anterior disponible</td>
+</tr>
+</tbody>
+</table>
+<h3 id="NavigatingWithTheMouse">Navegant amb el ratolí</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Toc en pantalla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Botó esquerre del ratolí clic</td>
+<td>Dividir del teclat numèric</td>
+<td>NVDA+accent tancat</td>
+<td>cap</td>
+<td>Fa clic al botó esquerre del ratolí una vegada. El doble clic comú es pot fer prement aquesta tecla dues vegades en ràpida successió</td>
+</tr>
+<tr>
+<td>Bloqueig del botó esquerre del ratolí</td>
+<td>shift+Dividir del teclat numèric</td>
+<td>NVDA+control+accent tancat</td>
+<td>cap</td>
+<td>Bloqueja el botó esquerre del ratolí. Prem de nou per alliberar-lo. Per arrossegar el ratolí, prem aquesta tecla per bloquejar el botó esquerre i després mou el ratolí, ja sigui físicament o utilitzant alguna de les altres ordres d'encaminament del ratolí</td>
+</tr>
+<tr>
+<td>Botó dret del ratolí</td>
+<td>Multiplicar del teclat numèric</td>
+<td>NVDA+signe més</td>
+<td>manté premut</td>
+<td>Fa clic amb el botó dret del ratolí una vegada, principalment per obrir el menú contextual a la ubicació del ratolí.</td>
+</tr>
+<tr>
+<td>Bloqueig del botó dret del ratolí</td>
+<td>shift+Multiplicar del teclat numèric</td>
+<td>NVDA+control+signe més</td>
+<td>cap</td>
+<td>Bloqueja el botó dret del ratolí. Prem de nou per alliberar-lo. Per arrossegar el ratolí, prem aquesta tecla per bloquejar el botó dret i després mou el ratolí físicament o utilitza una de les altres ordres d'encaminament</td>
+</tr>
+<tr>
+<td>Desplaça't cap amunt a la posició del ratolí</td>
+<td>cap</td>
+<td>cap</td>
+<td>cap</td>
+<td>Desplaça la roda del ratolí cap amunt fins a la posició actual</td>
+</tr>
+<tr>
+<td>Desplaça't cap avall a la posició del ratolí</td>
+<td>cap</td>
+<td>cap</td>
+<td>cap</td>
+<td>Desplaça la roda del ratolí cap avall a la posició actual</td>
+</tr>
+<tr>
+<td>Desplaça't cap a l'esquerra a la posició del ratolí</td>
+<td>cap</td>
+<td>cap</td>
+<td>cap</td>
+<td>Desplaça la roda del ratolí cap a l'esquerra a la posició actual</td>
+</tr>
+<tr>
+<td>Desplaça't cap a la dreta a la posició del ratolí</td>
+<td>cap</td>
+<td>cap</td>
+<td>cap</td>
+<td>Desplaça la roda del ratolí fins a la posició actual</td>
+</tr>
+<tr>
+<td>Mou el ratolí al navegador d'objectes actual</td>
+<td>NVDA+Dividir del teclat numèric</td>
+<td>NVDA+shift+m</td>
+<td>cap</td>
+<td>Mou el ratolí a la ubicació del navegador d'objectes actual i el cursor de revisió</td>
+</tr>
+<tr>
+<td>Navega fins a l'objecte sota el ratolí</td>
+<td>NVDA+Multiplicar del teclat numèric</td>
+<td>NVDA+shift+n</td>
+<td>cap</td>
+<td>Mou el navegador d'objectes a l'objecte situat a la posició del ratolí</td>
+</tr>
+<tr>
+<td>Canvia les coordenades d'àudio del ratolí</td>
+<td>cap</td>
+<td>cap</td>
+<td>Activa o desactiva  si NVDA reprodueix bips d'àudio que informen de la posició del ratolí mentre es mou.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="BrowseMode">Mode de navegació</h2>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alternar els modes de navegació/enfocament</td>
+<td>NVDA+espai</td>
+<td>Canvia entre mode d'enfocament i mode de navegació</td>
+</tr>
+<tr>
+<td>Surt del mode d'enfocament</td>
+<td>escape</td>
+<td>Torna al mode de navegació si el mode d'enfocament estava canviat a automàticament</td>
+</tr>
+<tr>
+<td>Actualitza el document al mode de navegació</td>
+<td>NVDA+f5</td>
+<td>Recarrega el contingut actual del document (útil si sembla que falta cert contingut al document). No està disponible a Microsoft Word i Outlook.)</td>
+</tr>
+<tr>
+<td>Cerca</td>
+<td>NVDA+control+f</td>
+<td>Obre un diàleg en el qual podeu escriure text per cercar al document actual. Vegeu <a href="#SearchingForText" title="cerca de text">cerca de text</a> per a més informació.</td>
+</tr>
+<tr>
+<td>Trobar el següent</td>
+<td>NVDA+f3</td>
+<td>Troba la següent aparició del text al document que havies buscat abans</td>
+</tr>
+<tr>
+<td>Troba el</td>
+<td>anteriorNVDA+shift+f3</td>
+<td>Troba l'aparició anterior del text al document que vas buscar prèviament</td>
+</tr>
+</tbody>
+</table>
+<h3 id="SingleLetterNavigation">Navegació amb una sola lletra</h3>
+<p>Les següents tecles per si soles salten al següent element disponible, mentre que afegir la tecla Shift fa que saltin a l'element anterior:</p>
+<ul>
+<li>h: Encapçalament</li>
+<li>l: llista</li>
+<li>i: element de la llista</li>
+<li>t: Taula</li>
+<li>k: Enllaç</li>
+<li>n: text no enllaçat</li>
+<li>f: camp de formulari</li>
+<li>u: enllaç no visitat</li>
+<li>v: enllaç visitat</li>
+<li>e: camp d'edició</li>
+<li>b: Botó</li>
+<li>x: casella de marcar</li>
+<li>c: caixa combinada</li>
+<li>r: botó de ràdio</li>
+<li>q: cita</li>
+<li>s: separador</li>
+<li>m: Marc</li>
+<li>g: Gràfic</li>
+<li>d: Punt de referència</li>
+<li>o: Objecte incrustat (reproductor d'àudio i vídeo, aplicació, diàleg, etc.)</li>
+<li>1 a 9: encapçalaments als nivells 1 a 9 respectivament</li>
+<li>a: Anotació (comentari, revisió de l'editor, etc.)</li>
+<li>'p': paràgraf de text</li>
+<li>w: error ortogràfic</li>
+</ul>
+<p>Per desplaçar-se al principi o al final d'elements que contenen, com ara llistes i taules:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mou-te a l'inici del contenidor</td>
+<td>shift+coma</td>
+<td>Es mou a l'inici del contenidor (llista, taula, etc.) on es troba el cursor</td>
+</tr>
+<tr>
+<td>Passar més enllà del final del contenidor</td>
+<td>coma</td>
+<td>Es mou més enllà de l'extrem del contenidor (llista, taula, etc.) on es col·loca el cursor</td>
+</tr>
+</tbody>
+</table>
+<p>Per activar i desactivar la navegació d'una sola lletra per al document actual, prem NVDA+shift+espai.</p>
+<h3 id="ElementsList">La Llista d'Elements</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Llista d'elements del mode de navegació</td>
+<td>NVDA+f7</td>
+<td>Llista diversos tipus d'elements en el document actual</td>
+</tr>
+</tbody>
+</table>
+<h3 id="SearchingForText">Cercar text</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trobar text</td>
+<td>NVDA+control+f</td>
+<td>S'obre el diàleg de cerca</td>
+</tr>
+<tr>
+<td>Cerca el següent</td>
+<td>NVDA+f3</td>
+<td>cerca la següent aparició del terme de cerca actual</td>
+</tr>
+<tr>
+<td>Cerca l'anterior</td>
+<td>NVDA+shift+f3</td>
+<td>cerca l'aparició anterior del terme de cerca actual</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ImbeddedObjects">Objectes incrustats</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moure al document contenidor en el mode de navegació</td>
+<td>NVDA+control+espai</td>
+<td>Trasllada el focus fora de l'objecte incrustat actualment i cap al document que el conté</td>
+</tr>
+</tbody>
+</table>
+<h3 id="NativeSelectionMode">Mode de Selecció Nativa</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activa i desactiva el mode de selecció nativa</td>
+<td>'NVDA+shift+f10'</td>
+<td>Activa o desactiva el mode de selecció nativa</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ReadingMath">Lectura de contingut matemàtic</h2>
+<h3 id="InteractiveNavigation">Navegació interactiva</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interactuar amb contingut matemàtic</td>
+<td>NVDA+alt+m</td>
+<td>Comença la interacció amb el contingut matemàtic.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="MathNavigationModes">Modes de navegació</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passar a l'anterior</td>
+<td>'Fletxa esquerra'</td>
+</tr>
+<tr>
+<td>Mou-te a la cel·la anterior d'una taula, o al dígit anterior si és en matemàtiques columnars</td>
+<td>'control+fletxa esquerra' o 'control+alt+fletxa esquerra'</td>
+</tr>
+<tr>
+<td>Llegeix l'anterior</td>
+<td>'shift+fletxa esquerra'</td>
+</tr>
+<tr>
+<td>Descriu el control anterior</td>
+<td>'control+shift+fletxa esquerra'</td>
+</tr>
+<tr>
+<td>Passar al següent</td>
+<td>'Fletxa Dreta'</td>
+</tr>
+<tr>
+<td>Mou-te a la següent cel·la d'una taula, o al següent dígit si fas matemàtiques columnars</td>
+<td>'control+fletxa dreta' o 'control+alt+fletxa dreta'</td>
+</tr>
+<tr>
+<td>Llegeix el següent</td>
+<td>'shift+fletxa dreta'</td>
+</tr>
+<tr>
+<td>Descriu el següent</td>
+<td>'control+shift+fletxa dreta'</td>
+</tr>
+<tr>
+<td>Ampliació</td>
+<td>'Fletxa amunt'</td>
+</tr>
+<tr>
+<td>Mou-te a la cel·la superior d'una taula, o al dígit superior en matemàtiques columnars</td>
+<td>'control+fletxaAmunt' o 'control+alt+fletxaAmunt'</td>
+</tr>
+<tr>
+<td>Canvia el mode de navegació (Millorat/Simple/Caràcter) a més gran</td>
+<td>'shift+Fletxa amunt'</td>
+</tr>
+<tr>
+<td>Fes zoom cap enrere del tot</td>
+<td>'control+shift+fletxaAmunt'</td>
+</tr>
+<tr>
+<td>Apropa</td>
+<td>'Fletxa avall'</td>
+</tr>
+<tr>
+<td>Mou-te a la cel·la inferior d'una taula, o al dígit inferior en matemàtiques columnars</td>
+<td>'control+fletxa avall' o 'control+alt+fletxa avall'</td>
+</tr>
+<tr>
+<td>Canvia el mode de navegació (Millorat/Simple/Caràcter) a més petit</td>
+<td>'shift+Fletxa avall'</td>
+</tr>
+<tr>
+<td>Fes zoom al màxim</td>
+<td>'control+shift+Fletxa avall'</td>
+</tr>
+<tr>
+<td>On sóc</td>
+<td>'enter'</td>
+</tr>
+<tr>
+<td>On sóc global</td>
+<td>'control+enter'</td>
+</tr>
+<tr>
+<td>Saltar al marcador</td>
+<td>'1' a '0' ('0' és 10)</td>
+</tr>
+<tr>
+<td>Configurar marcador</td>
+<td>'control+1' fins a 'control+0'</td>
+</tr>
+<tr>
+<td>Llegir el marcador</td>
+<td>'shift+1' fins a 'shift+0'</td>
+</tr>
+<tr>
+<td>Descriu el marcador</td>
+<td>'control+shift+1' fins a 'control+shift+0'</td>
+</tr>
+<tr>
+<td>Llegir l'actual</td>
+<td>'espai'</td>
+</tr>
+<tr>
+<td>Llegir la cel·la actual</td>
+<td>'control+espai'</td>
+</tr>
+<tr>
+<td>Canvia el "mode de parla" a Llegir o Descriure</td>
+<td>'shift+espai'</td>
+</tr>
+<tr>
+<td>Descriure l'actual</td>
+<td>'control+shift+espai'</td>
+</tr>
+<tr>
+<td>Passar a l'inici de l'expressió</td>
+<td>'inici'</td>
+</tr>
+<tr>
+<td>Moure a l'inici de la línia</td>
+<td>'control+inici'</td>
+</tr>
+<tr>
+<td>Moure a l'inici de la columna a la taula, o moure al dígit a la part superior en matemàtiques columnars</td>
+<td>'shift+inici'</td>
+</tr>
+<tr>
+<td>Passar al final de l'expressió</td>
+<td>'fi'</td>
+</tr>
+<tr>
+<td>Traslladar-se al final de la línia</td>
+<td>'control+fi'</td>
+</tr>
+<tr>
+<td>Mou-te al final de la columna a la taula, o mou-te al dígit inferior en matemàtiques columnars</td>
+<td>'shift+fi'</td>
+</tr>
+<tr>
+<td>Torna a l'última posició</td>
+<td>'retrocés'</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Braille">Braille</h2>
+<h3 id="BrailleInput">Entrada Braille</h3>
+<p>Si premeu el punt 7, s'esborra l'última cel·la o caràcter braille introduït.
+El punt 8 tradueix qualsevol entrada braille i prem la tecla Retorn.
+Prement el punt 7 + el punt 8 tradueix qualsevol entrada braille, però sense afegir un espai ni prémer enter.</p>
+<h2 id="Vision">Visió</h2>
+<h3 id="VisionScreenCurtain">Cortina de pantalla</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commuta l'estat de la cortina de pantalla</td>
+<td>'NVDA+control+escape'</td>
+<td>Activa per fer que la pantalla sigui negra o desactiva per mostrar el contingut de la pantalla. Si premeu una vegada, la cortina de pantalla s'activa fins que reinicieu NVDA. Premeu dues vegades, la cortina de pantalla s'habilita fins que la desactiveu.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ContentRecognition">Reconeixement de contingut</h2>
+<h3 id="Win10Ocr">OCR de Windows</h3>
+<p>Per reconèixer el text del navegador d'objectes actual mitjançant l'OCR de Windows, premeu NVDA+r.</p>
+<h2 id="ApplicationSpecificFeatures">Característiques específiques de aplicacions</h2>
+<h3 id="MicrosoftWord">Microsoft Word</h3>
+<h4 id="WordAutomaticColumnAndRowHeaderReading">Lectura automàtica d'encapçalaments de columnes i files</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Establir capçaleres de columna</td>
+<td>'NVDA+shift+c'</td>
+<td>Si premeu aquesta opció una vegada, s'indica a NVDA que aquesta és la primera cel·la de capçalera de la fila que conté capçaleres de columna, que s'han d'anunciar automàticament quan es mou entre columnes per sota d'aquesta fila. Prement dues vegades esborrarà la configuració.</td>
+</tr>
+<tr>
+<td>Defineix les capçaleres de fila</td>
+<td>'NVDA+shift+r'</td>
+<td>Si premeu aquesta una vegada, NVDA és la primera cel·la de capçalera de la columna que conté capçaleres de fila, que s'han d'anunciar automàticament quan es mou entre files després d'aquesta columna. Prement dues vegades esborrarà la configuració.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="BrowseModeInMicrosoftWord">Mode de navegació a Microsoft Word</h4>
+<p>Per activar i desactivar el mode de navegació a Microsoft Word, premeu NVDA+espai.</p>
+<h5 id="WordElementsList">La Llista d'Elements</h5>
+<p>En mode de Navegació a Microsoft Word, pots accedir a la llista d'elements prement NVDA+f7.</p>
+<h4 id="WordReportingComments">Informant de comentaris</h4>
+<p>Per informar de qualsevol comentari a la posició actual del cursor, prem "NVDA+alt+c".
+En prémer dues vegades es mostra la informació en un missatge navegable.</p>
+<h3 id="MicrosoftExcel">Microsoft Excel</h3>
+<h4 id="ExcelAutomaticColumnAndRowHeaderReading">Lectura automàtica d'encapçalaments de columnes i files</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Establir capçaleres de columna</td>
+<td>'NVDA+maj+c'</td>
+<td>Si premeu aquesta opció una vegada, s'indica a NVDA que aquesta és la primera cel·la de capçalera de la fila que conté capçaleres de columna, que s'han d'anunciar automàticament quan es mou entre columnes per sota d'aquesta fila. Prement dues vegades esborrarà la configuració.</td>
+</tr>
+<tr>
+<td>Defineix les capçaleres de fila</td>
+<td>'NVDA+shift+r'</td>
+<td>Si premeu aquesta una vegada, NVDA és la primera cel·la de capçalera de la columna que conté capçaleres de fila, que s'han d'anunciar automàticament quan es mou entre files després d'aquesta columna. Prement dues vegades esborrarà la configuració.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ExcelElementsList">La Llista d'Elements</h4>
+<p>Per accedir a la llista d'elements a l'Excel, premeu NVDA+f7.</p>
+<h4 id="ExcelReportingComments">Informació de notes</h4>
+<p>Per informar de les notes de la cel·la enfocada actualment, premeu "NVDA+alt+c".
+En prémer dues vegades es mostra la informació en un missatge navegable.
+Al Microsoft 2016, 365 i posteriors, els comentaris clàssics del Microsoft Excel s'han reanomenat a "notes".</p>
+<p>Per afegir o editar una nota determinada, en una cel·la enfocada, premeu Maj+f2.</p>
+<h4 id="ExcelReadingProtectedCells">Lectura de cel·les protegides</h4>
+<p>Per permetre moure's a cel·les bloquejades, canvia al mode de navegació prement NVDA+espai i, a continuació, utilitza les ordres de moviment estàndard de l'Excel, com ara les tecles de fletxa, per moure't per totes les cel·les del full de càlcul actual.</p>
+<h3 id="MicrosoftPowerPoint">Microsoft PowerPoint</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commuta entre les notes de l'orador i el contingut de la diapositiva</td>
+<td>control+shift+s</td>
+<td>Quan es troba en una presentació de diapositives en execució, aquesta ordre canviarà entre les notes de l'orador de la diapositiva i el contingut de la diapositiva. Això només afecta el que llegeix NVDA, no el que es mostra a la pantalla.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Foobar2000">foobar2000</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informa del temps restant</td>
+<td>control+shift+r</td>
+<td>Informa del temps restant de la pista que s'està reproduint, si n'hi ha.</td>
+</tr>
+<tr>
+<td>Informa del temps transcorregut</td>
+<td>control+shift+e</td>
+<td>Informa del temps transcorregut de la pista que s'està reproduint, si n'hi ha.</td>
+</tr>
+<tr>
+<td>Informa de la longitud de la pista</td>
+<td>control+shift+t</td>
+<td>Informa de la durada de la pista que s'està reproduint, si n'hi ha.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="MirandaIM">Miranda IM</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informa d'un missatge recent</td>
+<td>NVDA+control+1-4</td>
+<td>Informa d'un dels missatges recents, en funció del número premut; Per exemple, NVDA+control+2 llegeix el segon missatge més recent.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Poedit">Poedit</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informació de notes per als traductors</td>
+<td>'control+shift+a'</td>
+<td>Informes de qualsevol nota per als traductors. Si es prem dues vegades, les notes es presenten en mode de navegació</td>
+</tr>
+<tr>
+<td>Informació de comentari</td>
+<td>'control+shift+c'</td>
+<td>Reporta qualsevol comentari a la finestra de comentaris. Si es prem dues vegades, el comentari es mostra en mode de navegació</td>
+</tr>
+<tr>
+<td>Informa de text font antic</td>
+<td>'control+shift+o'</td>
+<td>Informa del text original antic, si n'hi ha. Si es prem dues vegades, el text es mostra en mode de navegació</td>
+</tr>
+<tr>
+<td>Informa d'avís de traducció</td>
+<td>'control+shift+w'</td>
+<td>Informa d'un avís de traducció, si n'hi ha. Si es prem dues vegades, apareix l'avís en mode de navegació</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Kindle">Kindle per a PC</h3>
+<p>Podeu passar manualment a la pàgina següent amb la tecla página avall i a la pàgina anterior amb la tecla página amunt.</p>
+<h4 id="KindleTextSelection">Selecció de text</h4>
+<p>Un cop hàgiu seleccionat el text, premeu la tecla aplicacions o shift+f10 per mostrar les opcions disponibles per treballar amb la selecció.</p>
+<h3 id="Azardi">Azardi</h3>
+<p>Quan estigueu a la vista de taula dels llibres afegits:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter</td>
+<td>enter</td>
+<td>Obre el llibre seleccionat.</td>
+</tr>
+<tr>
+<td>Menú contextual</td>
+<td>aplicacions</td>
+<td>Obre el menú contextual del llibre seleccionat.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="WinConsole">Consola de Windows</h3>
+<p>Les següents dreceres de teclat integrades a la consola de Windows poden ser útils quan <a href="#ReviewingText" title="reviseu text">reviseu text</a> amb NVDA en versions anteriors de la consola de Windows:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaçar cap amunt</td>
+<td>control+fletxa amunt</td>
+<td>Desplaça la finestra de la consola cap amunt, de manera que es pot llegir el text anterior.</td>
+</tr>
+<tr>
+<td>Desplaçar cap avall</td>
+<td>control+fletxa avall</td>
+<td>Desplaça la finestra de la consola cap avall, de manera que es pot llegir el text posterior.</td>
+</tr>
+<tr>
+<td>Desplaçar fins al inici</td>
+<td>control+inici</td>
+<td>Desplaça la finestra de la consola fins al començament de la memòria intermèdia.</td>
+</tr>
+<tr>
+<td>Desplaçar fins al final</td>
+<td>control+fi</td>
+<td>Desplaça la finestra de la consola fins al final de la memòria intermèdia.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ConfiguringNVDA">Configuració de NVDA</h2>
+<p>Quan esteu en un diàleg, prement 'f1' obre la Guia de l'usuari al paràgraf relacionat amb la configuració enfocada o el diàleg actual.</p>
+<h3 id="NVDASettings">Configuració de NVDA</h3>
+<h4 id="GeneralSettings">General</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenGeneralSettings">Obre la configuració general</td>
+<td>'NVDA+control+g'</td>
+<td>'NVDA+control+g'</td>
+<td>La categoria General del diàleg Configuració de NVDA estableix el comportament general de NVDA, com ara l'idioma de la interfície i si ha de comprovar si hi ha actualitzacions o no.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="SpeechSettings">Configuració de veu</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenSpeechSettings">Obrir la configuració de veu</td>
+<td>'NVDA+control+v'</td>
+<td>'NVDA+control+v'</td>
+<td>La categoria Veu del diàleg Configuració de NVDA conté opcions que et permeten canviar el sintetitzador de veu, així com les característiques de veu del sintetitzador escollit.</td>
+</tr>
+<tr>
+<td id="SpeechSettingsSymbolLevel">Nivell de puntuació/símbol</td>
+<td>NVDA+p</td>
+<td>NVDA+p</td>
+<td>Això us permet triar la quantitat de puntuació i altres símbols que s'han de pronunciar com a paraules.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="SelectSynthesizer">Seleccionar sintetitzador</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenSelectSynthesizer">Diàleg per obrir la selecció de sintetitzador</td>
+<td>'NVDA+control+s'</td>
+<td>'NVDA+control+s'</td>
+<td>El diàleg del sintetitzador, que es pot obrir activant l'opció Canvia... de la categoria de veu del diàleg de configuració de NVDA, et permet seleccionar quin sintetitzador NVDA hauria d'utilitzar per parlar.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="SynthSettingsRing">Anell de configuració de sintetitzador</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla del portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passar a la següent configuració del sintetitzador</td>
+<td>NVDA+control+fletxa dreta</td>
+<td>NVDA+shift+control+fletxa dreta</td>
+<td>Passa a la següent configuració de veu disponible després de l'actual, tornant a la primera configuració després de l'última</td>
+</tr>
+<tr>
+<td>Passar a la configuració anterior del sintetitzador</td>
+<td>NVDA+control+fletxa esquerra</td>
+<td>NVDA+shift+control+fletxaEsquerra</td>
+<td>Passa a l'anterior configuració de veu disponible, i s'enrotlla fins a l'última configuració després de la primera</td>
+</tr>
+<tr>
+<td>Incrementar la configuració actual del sintetitzador</td>
+<td>NVDA+control+Fletxa amunt</td>
+<td>NVDA+shift+control+Fletxa amunt</td>
+<td>augmenta la configuració actual de veu en què estàs. Per exemple, augmenta la velocitat, tria la següent veu, augmenta el volum</td>
+</tr>
+<tr>
+<td>Incrementa la configuració actual del sintetitzador en un pas més gran</td>
+<td>'NVDA+control+pageUp'</td>
+<td>'NVDA+shift+control+pageUp'</td>
+<td>Augmenta el valor de la configuració de veu actual en passos més grans. per exemple, quan tens una configuració de veu, aquesta avançarà cada 20 veus; Quan estàs amb la configuració del control lliscant (velocitat, to, etc.) el valor avança fins a un 20%</td>
+</tr>
+<tr>
+<td>Disminueix l'ajust actual del sintetitzador</td>
+<td>NVDA+control+fletxa cap avall</td>
+<td>NVDA+shift+control+Fletxa avall</td>
+<td>disminueix la configuració actual de veu en què estàs. Per exemple, disminueix la velocitat, tria la veu anterior, disminueix el volum</td>
+</tr>
+<tr>
+<td>Redueix la configuració actual del sintetitzador en un pas més gran</td>
+<td>'NVDA+control+pageDown'</td>
+<td>'NVDA+shift+control+pageDown'</td>
+<td>Disminueix el valor de la configuració de veu actual en què estàs en passos més grans. per exemple, quan estàs en una configuració de veu, aquest salta enrere cada 20 veus; Quan tens un ajust de control lliscant, el valor pujarà enrere fins a un 20%</td>
+</tr>
+<tr>
+<td>Estableix el primer valor de la configuració actual del sintetitzador</td>
+<td>cap</td>
+<td>cap</td>
+<td>Selecciona el primer valor de la configuració actual de la veu, per exemple, posa la velocitat a 0 o selecciona la primera veu disponible</td>
+</tr>
+<tr>
+<td>Estableix l'últim valor de la configuració actual del sintetitzador</td>
+<td>cap</td>
+<td>cap</td>
+<td>Selecciona l'últim valor de la configuració actual de veu, per exemple, posa la velocitat a 100 o selecciona l'última veu disponible</td>
+</tr>
+</tbody>
+</table>
+<h4 id="BrailleSettings">Braille</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="BrailleMode">Mode Braille</td>
+<td>'NVDA+alt+t'</td>
+<td>'NVDA+alt+t'</td>
+<td>Aquesta opció us permet seleccionar entre els modes braille disponibles.</td>
+</tr>
+<tr>
+<td id="BrailleTether">Seguiment del Braille</td>
+<td>NVDA+control+t</td>
+<td>NVDA+control+t</td>
+<td>Aquesta opció us permet triar si la línia braille seguirà el focus / cursor del sistema, el navegador d'objectes/ cursor de revisió, o tots dos.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="SelectBrailleDisplay">Selecciona la Línia Braille</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenSelectBrailleDisplay">Obre el diàleg Selecciona la línia Braille</td>
+<td>'NVDA+control+a'</td>
+<td>'NVDA+control+a'</td>
+<td>El diàleg Selecciona la líia braille, que es pot obrir activant l'opció Canvia... de la categoria Braille del diàleg de configuració de NVDA, et permet seleccionar quina línia braille ha d'utilitzar NVDA per a la sortida braille.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="AudioSettings">Àudio</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenAudioSettings">Obrir configuració d'àudio</td>
+<td>'NVDA+control+u'</td>
+<td>'NVDA+control+u'</td>
+<td>La categoria Àudio del diàleg de configuració de NVDA conté opcions que et permeten canviar diversos aspectes de la sortida d'àudio.</td>
+</tr>
+<tr>
+<td id="SelectSynthesizerDuckingMode">Mode d'atenuació d'Àudio</td>
+<td>'NVDA+shift+d'</td>
+<td>'NVDA+shift+d'</td>
+<td>Aquesta opció et permet triar si NVDA ha de reduir el volum d'altres aplicacions mentre NVDA parla o tot el temps mentre NVDA s'està executant.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="SelectSoundSplitMode">Divisió del so</h5>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cicle del mode de divisió del so</td>
+<td>'NVDA+alt+s'</td>
+<td>Cicles entre modes de divisió de so.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="KeyboardSettings">Teclat</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenKeyboardSettings">Obrir la configuració de teclat</td>
+<td>'NVDA+control+k'</td>
+<td>'NVDA+control+k'</td>
+<td>La categoria Teclat del diàleg Configuració de NVDA conté opcions que estableixen com es comporta NVDA mentre utilitzes i escrius al teclat.</td>
+</tr>
+<tr>
+<td id="KeyboardSettingsSpeakTypedCharacters">Dir caràcters escrits</td>
+<td>'NVDA+2'</td>
+<td>'NVDA+2'</td>
+<td>Aquesta opció controla quan NVDA anuncia els caràcters que escrius al teclat.</td>
+</tr>
+<tr>
+<td id="KeyboardSettingsSpeakTypedWords">Dir les paraules escrites</td>
+<td>'NVDA+3'</td>
+<td>'NVDA+3'</td>
+<td>Aquesta opció controla quan NVDA anuncia les paraules que escrius al teclat.</td>
+</tr>
+<tr>
+<td id="KeyboardSettingsSpeakCommandKeys">Dir les tecles d'ordre</td>
+<td>NVDA+4</td>
+<td>NVDA+4</td>
+<td>Quan està activat, NVDA anunciarà totes les tecles que no siguin caràcters que escriguis al teclat. Això inclou combinacions de tecles com ara control més una altra lletra.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="MouseSettings">Ratolí</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMouseSettings">Obrir la configuració del ratolí</td>
+<td>'NVDA+control+m'</td>
+<td>'NVDA+control+m'</td>
+<td>La categoria Ratolí del diàleg Configuració de NVDA permet a NVDA fer un seguiment del ratolí, reproduir xiulats de coordenades del ratolí i establir altres opcions d'ús del ratolí.</td>
+</tr>
+<tr>
+<td id="MouseSettingsTracking">Activar el seguiment del ratolí</td>
+<td>NVDA+m</td>
+<td>NVDA+m</td>
+<td>Quan està activat, NVDA anunciarà el text que hi ha sota el punter del ratolí, a mesura que el mous per la pantalla. Això us permet trobar coses a la pantalla, movent físicament el ratolí, en lloc d'intentar trobar-les mitjançant la navegació d'objectes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ReviewCursorSettings">Cursor de revisió</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="ReviewCursorFollowFocus">Segueix el focus del sistema</td>
+<td>NVDA+7</td>
+<td>NVDA+7</td>
+<td>Quan està habilitat, el cursor de revisió sempre es col·locarà al mateix objecte que el focus actual del sistema cada vegada que canviï el focus.</td>
+</tr>
+<tr>
+<td id="ReviewCursorFollowCaret">Segueix el Cursor del Sistema</td>
+<td>NVDA+6</td>
+<td>NVDA+6</td>
+<td>Quan està activat, el cursor de revisió es mourà automàticament a la posició del cursor del sistema cada vegada que es mogui.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ObjectPresentationSettings">Presentació d'objectes</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenObjectPresentationSettings">Obrir la Configuració de presentació d'objectes</td>
+<td>'NVDA+control+o'</td>
+<td>'NVDA+control+o'</td>
+<td>La categoria Presentació d'objectes del diàleg de configuració de NVDA s'utilitza per establir quanta informació presentarà NVDA sobre controls com ara descripció, informació de posició, etc.</td>
+</tr>
+<tr>
+<td id="ObjectPresentationProgressBarOutput">Sortida de la barra de progrés</td>
+<td>NVDA+u</td>
+<td>NVDA+u</td>
+<td>Aquesta opció controla com NVDA t'informa de les actualitzacions de la barra de progrés.</td>
+</tr>
+<tr>
+<td id="ObjectPresentationReportDynamicContent">Informar de canvis de contingut dinàmic</td>
+<td>NVDA+5</td>
+<td>NVDA+5</td>
+<td>Commuta l'anunci de contingut nou en objectes particulars com ara terminals i el control de l'historial en programes de xat.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="BrowseModeSettings">Mode de navegació</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenBrowseModeSettings">Obrir la configuració del mode de navegació</td>
+<td>'NVDA+control+b'</td>
+<td>'NVDA+control+b'</td>
+<td>La categoria Mode de navegació del diàleg de configuració de NVDA s'utilitza per configurar el comportament de NVDA quan llegeixes i navegues per documents complexos com ara pàgines web.</td>
+</tr>
+<tr>
+<td id="BrowseModeSettingsScreenLayout">Utilitza la disposició de la pantalla</td>
+<td>NVDA+v</td>
+<td>NVDA+v</td>
+<td>Aquesta opció permet especificar si el mode de navegació ha de col·locar contingut clicable (enllaços, botons i camps) en la seva pròpia línia, o si ha de mantenir-lo en el flux de text tal com es mostra visualment.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="DocumentFormattingSettings">Formatació del document</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenDocumentFormattingSettings">Obrir configuració de format de document</td>
+<td>'NVDA+control+d'</td>
+<td>'NVDA+control+d'</td>
+<td>La majoria de les opcions d'aquesta categoria són per configurar quin tipus de format voleu que s'informi a mesura que moveu el cursor pels documents.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="AdvancedSettings">Configuracions Avançades</h4>
+<h5 id="Annotations">Anotacions</h5>
+<p>Per "Informar del resum de qualsevol detall de l'anotació al cursor del sistema", premeu NVDA+d.</p>
+<h3 id="SavingAndReloading">Desar i recarregar la configuració</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla del portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guarda la configuració</td>
+<td>'NVDA+control+c'</td>
+<td>'NVDA+control+c'</td>
+<td>Desa la configuració actual perquè no es perdi quan surts de NVDA</td>
+</tr>
+<tr>
+<td>Reverteix la configuració</td>
+<td>'NVDA+control+r'</td>
+<td>'NVDA+control+r'</td>
+<td>Prement una vegada restableix la configuració a l'última vegada que la vau desar. Si premeu tres vegades, es restablirà als valors predeterminats de fàbrica.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ConfigurationProfiles">Perfils de configuració</h3>
+<h4 id="ProfilesBasicManagement">Gestió Bàsica</h4>
+<ul>
+<li>NVDA+control+p: Mostra el diàleg Perfils de configuració.</li>
+</ul>
+<h2 id="RemoteAccess">Accés remot</h2>
+<h3 id="RemoteAccessGestures">Resum de les tecles d'ordres de l'accés remot</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commutar connexió remota</td>
+<td>'NVDA+alt+r'</td>
+<td>Inicia una nova sessió d'accés remot o, si una sessió ja està en curs, es desconnecta d'aquesta.</td>
+</tr>
+<tr>
+<td>Activa o desactiva el control</td>
+<td>'NVDA+alt+tab'</td>
+<td>Canvia entre controlar l'ordinador remot i local.</td>
+</tr>
+<tr>
+<td>Connecta</td>
+<td>Cap</td>
+<td>Inicia una nova sessió d'Accés Remot. No disponible en <a href="#SecureMode" title="mode segur">mode segur</a>.</td>
+</tr>
+<tr>
+<td>Copiar enllaç</td>
+<td>Cap</td>
+<td>Copia un enllaç a la sessió remota al porta-papers.</td>
+</tr>
+<tr>
+<td>Desconnecta</td>
+<td>Cap</td>
+<td>Finalitza una sessió d'Accés Remot existent.</td>
+</tr>
+<tr>
+<td>Silenciar el remot</td>
+<td>Cap</td>
+<td>Silencia o reactiva la veu que prové de l'ordinador remot.</td>
+</tr>
+<tr>
+<td>Envia el porta retalls</td>
+<td>Cap</td>
+<td>Envia el contingut del porta retalls a l'ordinador remot.</td>
+</tr>
+<tr>
+<td>Enviar 'control+alt+delete'</td>
+<td>Cap</td>
+<td>Envia 'control+alt+delete' a l'ordinador controlat.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ExtraTools">Eines addicionals</h2>
+<h3 id="LogViewer">Visor de registres</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Obre el visor de registre</td>
+<td>'NVDA+f1'</td>
+<td>Obre el visor de registre i mostra informació de desenvolupador sobre el navegador d'objectes actual.</td>
+</tr>
+<tr>
+<td>Copia un fragment del registre a la carpeta</td>
+<td>'NVDA+control+shift+f1'</td>
+<td>Quan es prem aquesta comanda una vegada, estableix un punt de inici per al contingut del registre que s'hauria de capturar. Quan es prem una segona vegada, copia el contingut del registre des del punt d'inici a la teva carpeta.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ReloadPlugins">Recarregar plugins</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>tecla</th>
+<th>descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carregar plugins</td>
+<td>'NVDA+control+f3'</td>
+<td>Recarrega els plugins globals i els mòduls de l'aplicació de NVDA.</td>
+</tr>
+<tr>
+<td>Informa el mòdul d'aplicació i executable carregat</td>
+<td>'NVDA+control+f1'</td>
+<td>Informa del nom del mòdul de l'aplicació, si n'hi ha, i el nom de l'executable associat a l'aplicació que té el focus del teclat.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="SupportedBrailleDisplays">Línies braille suportades</h2>
+<h3 id="FreedomScientificFocus">Freedom Scientific Focus/Sèrie PAC Mate</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>sensor superior1 (primera cel·la a la línia)</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>Sensor superior20/40/80 (última cel·la a la pantalla)</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>BarraEsquerraPerAvançar</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>BarraDretaPerAvançar</td>
+</tr>
+<tr>
+<td>Conmutar seguiment del braille</td>
+<td>leftGDFButton+rightGDFButton</td>
+</tr>
+<tr>
+<td>Acció de la roda esquerra</td>
+<td>Polsar roda esquerra</td>
+</tr>
+<tr>
+<td>Moure-t enrere utilitzant l'acció de la roda esquerra</td>
+<td>roda Esquerra cap amunt</td>
+</tr>
+<tr>
+<td>Avança utilitzant l'acció de la roda esquerra</td>
+<td>roda Esquerra cap avall</td>
+</tr>
+<tr>
+<td>Conmutar l'acció de la roda dreta</td>
+<td>Polsar la roda dreta</td>
+</tr>
+<tr>
+<td>Moure-t enrere utilitzant l'acció de la roda dreta</td>
+<td>roda dreta cap amunt</td>
+</tr>
+<tr>
+<td>Avança utilitzant l'acció de la roda dreta</td>
+<td>roda dreta cap avall</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>tecla shift+tab</td>
+<td>barra d'espai braille+punt1+punt2</td>
+</tr>
+<tr>
+<td>tecla tab</td>
+<td>barra d'espai braille+punt4+punt5</td>
+</tr>
+<tr>
+<td>tecla fletxa amunt</td>
+<td>barra d'espai braille+punt1</td>
+</tr>
+<tr>
+<td>tecla fletxa avall</td>
+<td>barra d'espai braille+punt4</td>
+</tr>
+<tr>
+<td>tecla control+fletxa esquerra</td>
+<td>barra d'espai braille+puunt2</td>
+</tr>
+<tr>
+<td>tecla control+fletxa dreta</td>
+<td>barra d'espai braille+punt5</td>
+</tr>
+<tr>
+<td>fletxa esquerra</td>
+<td>barra d'espai braille+punt3</td>
+</tr>
+<tr>
+<td>tecla fletxa dreta</td>
+<td>barra d'espai braille+punt6</td>
+</tr>
+<tr>
+<td>tecla inici</td>
+<td>barra d'espai braille+punt1+punt3</td>
+</tr>
+<tr>
+<td>tecla fi</td>
+<td>barra d'espai braille+punt4+puunt6</td>
+</tr>
+<tr>
+<td>tecla control+inici</td>
+<td>barra d'espai braille+punt1+punt2+punt3</td>
+</tr>
+<tr>
+<td>tecla control+fi</td>
+<td>barra d'espai braille+punt4+punt5+punt6</td>
+</tr>
+<tr>
+<td>tecla alt</td>
+<td>barra d'espai braille+punt1+punt3+punt4</td>
+</tr>
+<tr>
+<td>tecla alt+tab</td>
+<td>barra d'espai braille+punt2+punt3+punt4+punt5</td>
+</tr>
+<tr>
+<td>tecla alt+shift+tab</td>
+<td>barra d'espai braille+punt1+punt2+punt5+punt6</td>
+</tr>
+<tr>
+<td>tecla windows+tab</td>
+<td>barra d'espai braille+punt2+punt3+punt4</td>
+</tr>
+<tr>
+<td>tecla escapament</td>
+<td>barra d'espai braille+punt1+punt5</td>
+</tr>
+<tr>
+<td>tecla windows</td>
+<td>barra d'espai braille+punt2+punt4+punt5+punt6</td>
+</tr>
+<tr>
+<td>tecla espai</td>
+<td>barra d'espai braille</td>
+</tr>
+<tr>
+<td>Polsar la tecla control</td>
+<td>barra d'espai braille+punt3+punt8</td>
+</tr>
+<tr>
+<td>Polsar la tecla alt</td>
+<td>barra d'espai braille+punt6+punt8</td>
+</tr>
+<tr>
+<td>Polsar la tecla Windows</td>
+<td>barra d'espai braille+punt4+punt8</td>
+</tr>
+<tr>
+<td>Polsar la tecla NVDA</td>
+<td>barra d'espai braille+punt5+punt8</td>
+</tr>
+<tr>
+<td>Polsar la tecla shift</td>
+<td>barra d'espai braille+punt7+punt8</td>
+</tr>
+<tr>
+<td>Polsar les tecles control i shift</td>
+<td>barra d'espai braille+punt3+punt7+punt8</td>
+</tr>
+<tr>
+<td>Polsar les tecles alt i shift</td>
+<td>barra d'espai braille+punt6+punt7+punt8</td>
+</tr>
+<tr>
+<td>Polsar les tecles Windows i shift</td>
+<td>barra d'espai braille+punt4+punt7+punt8</td>
+</tr>
+<tr>
+<td>Polsar les tecles NVDA i shift</td>
+<td>barra d'espai braille+punt5+punt7+punt8</td>
+</tr>
+<tr>
+<td>Polsar les tecles control i alt</td>
+<td>barra d'espai braille+punt3+punt6+punt8</td>
+</tr>
+<tr>
+<td>Polsar les tecles control, alt i shift</td>
+<td>barra d'espai braille+punt3+punt6+punt7+punt8</td>
+</tr>
+<tr>
+<td>tecla windows+d (minimitzar totes les aplicacions)</td>
+<td>barra d'espai braille+punt1+punt2+punt3+punt4+punt5+punt6</td>
+</tr>
+<tr>
+<td>Dir la línia actual</td>
+<td>barra d'espai braille+punt1+punt4</td>
+</tr>
+<tr>
+<td>Menú de NVDA</td>
+<td>barra d'espai braille+punt1+punt3+punt4+punt5</td>
+</tr>
+</tbody>
+</table>
+<p>Per als models de la Focus més nous que inclouen tecles de barra de balancí (focus 40, focus 80 i focus blue):</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>tecla de balancí Esquerra amunt, tecla de balancí dreta amunt</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>tecla de balancí Esquerra avall, tecla de balancí dreta avall</td>
+</tr>
+</tbody>
+</table>
+<p>Només per a Focus 80:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>barra frontal Esquerra amunt, barra frontal dtreta amunt</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>barra frontal Esquerra avall, barra frontal dreta avall</td>
+</tr>
+</tbody>
+</table>
+<h3 id="OptelecALVA">Sèrie Optelec ALVA 6/protocol converter</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>t1, etouch1</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>t2</td>
+</tr>
+<tr>
+<td>Passar al focus actual</td>
+<td>t3</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>t4</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>t5, etouch3</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>Informa del format del text sota la cel·la braille</td>
+<td>sensor braille secundari</td>
+</tr>
+<tr>
+<td>Commuta la simulació de teclat HID</td>
+<td>t1+spEnter</td>
+</tr>
+<tr>
+<td>Passar a la primera línia en revisió</td>
+<td>t1+t2</td>
+</tr>
+<tr>
+<td>Passar a la darrera línia en revisió</td>
+<td>t4+t5</td>
+</tr>
+<tr>
+<td>Commuta el seguiment braille</td>
+<td>t1+t3</td>
+</tr>
+<tr>
+<td>Informa del títol</td>
+<td>etouch2</td>
+</tr>
+<tr>
+<td>Informa de la barra d'estat</td>
+<td>etouch4</td>
+</tr>
+<tr>
+<td>tecla shift+tab</td>
+<td>sp1</td>
+</tr>
+<tr>
+<td>tecla alt</td>
+<td>sp2, alt</td>
+</tr>
+<tr>
+<td>tecla escapament</td>
+<td>sp3</td>
+</tr>
+<tr>
+<td>tecla tab</td>
+<td>sp4</td>
+</tr>
+<tr>
+<td>tecla de fletxa cap amunt</td>
+<td>spUp</td>
+</tr>
+<tr>
+<td>tecla de fletxa cap avall</td>
+<td>spDown</td>
+</tr>
+<tr>
+<td>tecla de fletxa Esquerra</td>
+<td>spLeft</td>
+</tr>
+<tr>
+<td>tecla de fletxa dreta</td>
+<td>spRight</td>
+</tr>
+<tr>
+<td>tecla enter</td>
+<td>spEnter, enter</td>
+</tr>
+<tr>
+<td>Informa de la data/hora</td>
+<td>sp2+sp3</td>
+</tr>
+<tr>
+<td>Menú NVDA</td>
+<td>sp1+sp3</td>
+</tr>
+<tr>
+<td>tecla Windows+D (minimitzar totes les aplicacions)</td>
+<td>sp1+SP4</td>
+</tr>
+<tr>
+<td>tecla Windows+B (Focus a la Safata de Sistema)</td>
+<td>SP3+SP4</td>
+</tr>
+<tr>
+<td>tecla Windows</td>
+<td>SP1+SP2, Windows</td>
+</tr>
+<tr>
+<td>tecla alt+tab</td>
+<td>sp2+sp4</td>
+</tr>
+<tr>
+<td>tecla control+inici</td>
+<td>t3+spUp</td>
+</tr>
+<tr>
+<td>tecla control+fi</td>
+<td>t3+spDown</td>
+</tr>
+<tr>
+<td>tecla inici</td>
+<td>t3+spLeft</td>
+</tr>
+<tr>
+<td>tecla fi</td>
+<td>t3+spRight</td>
+</tr>
+<tr>
+<td>tecla control</td>
+<td>control</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HandyTech">Línies Handy Tech</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille enrere</td>
+<td>esquerra, amunt, b3</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>dreta, avall, b6</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>b4</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>b5</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>tecla shift+tab</td>
+<td>esc, tecla d'acció triple esquerra amunt + avall</td>
+</tr>
+<tr>
+<td>tecla alt</td>
+<td>b2+b4+b5</td>
+</tr>
+<tr>
+<td>tecla Escapament</td>
+<td>B4+B6</td>
+</tr>
+<tr>
+<td>tecla tab</td>
+<td>enter, tecla dreta de triple acció amunt + avall</td>
+</tr>
+<tr>
+<td>tecla enter</td>
+<td>esc+enter, esquerra+dreta tecla triple acció amunt + avall, joystick Acció</td>
+</tr>
+<tr>
+<td>tecla de fletxa cap amunt</td>
+<td>joystickAmunt</td>
+</tr>
+<tr>
+<td>tecla de fletxa avall</td>
+<td>joystickAvall</td>
+</tr>
+<tr>
+<td>tecla de fletxa esquerra</td>
+<td>joystickEsquerra</td>
+</tr>
+<tr>
+<td>tecla de fletxa dreta</td>
+<td>joystickDreta</td>
+</tr>
+<tr>
+<td>Menú de NVDA</td>
+<td>b2+b4+b5+b6</td>
+</tr>
+<tr>
+<td>Commutar el seguiment braille</td>
+<td>b2</td>
+</tr>
+<tr>
+<td>Activa o desactiva el cursor braille</td>
+<td>b1</td>
+</tr>
+<tr>
+<td>Commuta la presentació del context del focus</td>
+<td>b7</td>
+</tr>
+<tr>
+<td>Commuta l'entrada braille</td>
+<td>espai+b1+b3+b4 (espai+B majúscula)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="MDVLilli">MDV Lilli</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>LF</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>RG</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>AMUNT</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>DN</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>route</td>
+</tr>
+<tr>
+<td>tecla Shift+tab</td>
+<td>SLF</td>
+</tr>
+<tr>
+<td>tecla tab</td>
+<td>SRG</td>
+</tr>
+<tr>
+<td>tecla alt+tab</td>
+<td>SDN</td>
+</tr>
+<tr>
+<td>tecla alt+shift+tab</td>
+<td>SUP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Baum">Línies Baum/Humanware/APH/Orbit Braille</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaçar la línia braille cap enrere</td>
+<td>'d2'</td>
+</tr>
+<tr>
+<td>Desplaçar la línia braille cap endavant</td>
+<td>'d5'</td>
+</tr>
+<tr>
+<td>Moure la línia braille a la línia anterior</td>
+<td>'d1'</td>
+</tr>
+<tr>
+<td>Moure la línia braille a la següent línia</td>
+<td>'d3'</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>'sensor braille'</td>
+</tr>
+<tr>
+<td>tecla 'shift+tab'</td>
+<td>'espai+punt1+punt3'</td>
+</tr>
+<tr>
+<td>tecla 'tab'</td>
+<td>'espai+punt4+punt6'</td>
+</tr>
+<tr>
+<td>tecla 'alt'</td>
+<td>'espai+punt1+punt3+punt4' ('espai+m')</td>
+</tr>
+<tr>
+<td>tecla 'escapament'</td>
+<td>'espai+punt1+punt5' ('espai+e')</td>
+</tr>
+<tr>
+<td>tecla 'windows'</td>
+<td>'espai+punt3+punt4'</td>
+</tr>
+<tr>
+<td>tecla 'alt+tab'</td>
+<td>'espai+punt2+punt3+punt4+punt5' ('espai+t')</td>
+</tr>
+<tr>
+<td>Menú NVDA</td>
+<td>'espai+punt1+punt3+punt4+punt5' ('espai+n')</td>
+</tr>
+<tr>
+<td>tecla 'Windows+D' (minimitzar totes les aplicacions)</td>
+<td>'espai+punt1+punt4+punt5' ('espai+d')</td>
+</tr>
+<tr>
+<td>Dir-ho tot</td>
+<td>'espai+punt1+punt2+punt3+punt4+punt5+punt6'</td>
+</tr>
+</tbody>
+</table>
+<p>Per a línies que tenen joystick:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tecla de fletxa cap amunt</td>
+<td>amunt</td>
+</tr>
+<tr>
+<td>tecla de fletxa cap avall</td>
+<td>avall</td>
+</tr>
+<tr>
+<td>tecla de fletxa esquerra</td>
+<td>esquerra</td>
+</tr>
+<tr>
+<td>tecla de fletxa dreta</td>
+<td>dreta</td>
+</tr>
+<tr>
+<td>tecla enter</td>
+<td>seleccionar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HedoProfiLine">hedo ProfiLine USB</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>K1</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>K3</td>
+</tr>
+<tr>
+<td>Mou la pantalla braille a la línia anterior</td>
+<td>B2</td>
+</tr>
+<tr>
+<td>Mou la pantalla braille a la següent línia</td>
+<td>B5</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>Commuta el seguiment braille</td>
+<td>K2</td>
+</tr>
+<tr>
+<td>Dir-ho tot</td>
+<td>B6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HedoMobilLine">hedo MobilLine USB</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>K1</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>K3</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>B2</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>B5</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>Commuta el seguiment braille</td>
+<td>K2</td>
+</tr>
+<tr>
+<td>Dir-ho tot</td>
+<td>B6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HumanWareBrailliant">HumanWare Brailliant Sèries BI/B / BrailleNote Touch</h3>
+<h4 id="HumanWareBrailliantKeyAssignmentForAllModels">Assignacions de tecles per a tots els models</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>esquerra</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>dreta</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>amunt</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>avall</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>Commuta el seguiment braille</td>
+<td>amunt+avall</td>
+</tr>
+<tr>
+<td>tecla de fletxa cap amunt</td>
+<td>espai+punt1</td>
+</tr>
+<tr>
+<td>tecla de fletxa cap avall</td>
+<td>espai+punt4</td>
+</tr>
+<tr>
+<td>tecla de fletxa Esquerra</td>
+<td>espai+punt3</td>
+</tr>
+<tr>
+<td>tecla de fletxa dreta</td>
+<td>espai+punt6</td>
+</tr>
+<tr>
+<td>tecla shift+tab</td>
+<td>espai+punt1+punt3</td>
+</tr>
+<tr>
+<td>tecla tab</td>
+<td>espai+punt4+punt6</td>
+</tr>
+<tr>
+<td>tecla alt</td>
+<td>espai+punt1+punt3+punt4 (espai+m)</td>
+</tr>
+<tr>
+<td>tecla escapament</td>
+<td>espai+punt1+punt5 (espai+e)</td>
+</tr>
+<tr>
+<td>tecla enter</td>
+<td>punt8</td>
+</tr>
+<tr>
+<td>tecla Windows</td>
+<td>espai+punt3+punt4</td>
+</tr>
+<tr>
+<td>tecla alt+tab</td>
+<td>espai+punt2+punt3+punt4+punt5 (espai+t)</td>
+</tr>
+<tr>
+<td>Menú de NVDA</td>
+<td>espai+punt1+punt3+punt4+punt5 (espai+n)</td>
+</tr>
+<tr>
+<td>tecla Windows+D (Minimitzar totes les aplicacions)</td>
+<td>espai+punt1+punt4+punt5 (espai+d)</td>
+</tr>
+<tr>
+<td>Dir-ho tot</td>
+<td>espai+punt1+punt2+punt3+punt4+punt5+punt6</td>
+</tr>
+</tbody>
+</table>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Assignacions de tecles per a Brailliant BI 32, BI 40 i B 80</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Menú de NVDA</td>
+<td>c1+c3+c4+c5 (command n)</td>
+</tr>
+<tr>
+<td>tecla Windows+D (minimitzar totes les aplicacions)</td>
+<td>c1+c4+c5 (command d)</td>
+</tr>
+<tr>
+<td>Dir-ho tot</td>
+<td>c1+c2+c3+c4+c5+c6</td>
+</tr>
+</tbody>
+</table>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI14">Assignacions de tecles per a Brailliant BI 14</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tecla de fletxa amunt</td>
+<td>joystick cap amunt</td>
+</tr>
+<tr>
+<td>tecla de fletxa cap avall</td>
+<td>joystick cap avall</td>
+</tr>
+<tr>
+<td>tecla de fletxa esquerra</td>
+<td>joystick esquerra</td>
+</tr>
+<tr>
+<td>tecla de fletxa dreta</td>
+<td>joystick dreta</td>
+</tr>
+<tr>
+<td>tecla enter</td>
+<td>acció del joystick</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Hims">Sèries HIMS Braille Sense/Braille EDGE/Smart Beetle/Sync Braille</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille enrere</td>
+<td>desplaçament Esquerra amunt, desplaçament dreta amunt, desplaçament esquerra</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>desplaçament Esquerra avall, desplaçament dreta avall, desplaçament dreta</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>desplaçament Esquerra amunt+desplaçament dreta amunt</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>desplaçament Esquerra avall+despaçament dreta avall</td>
+</tr>
+<tr>
+<td>Mou a la línia anterior en revisió</td>
+<td>rightSideUpArrow</td>
+</tr>
+<tr>
+<td>Mou a la següent línia en la revisió</td>
+<td>rightSideDownArrow</td>
+</tr>
+<tr>
+<td>Passar al carácter anterior en revisió</td>
+<td>rightSideLeftArrow</td>
+</tr>
+<tr>
+<td>Passar al següent carácter en revisió</td>
+<td>rightSideRightArrow</td>
+</tr>
+<tr>
+<td>Moure al focus actual</td>
+<td>Desplaçament EsquerreAmunt+DesplaçamentEsquerraAvall, DesplaçamentDretAmunt+DesplaçamentDret Avall, DesplaçamentEsquerre+DesplaçamenDret</td>
+</tr>
+<tr>
+<td>tecla de control</td>
+<td>smartbeetle:f1, brailleedge:f3</td>
+</tr>
+<tr>
+<td>tecla Windows</td>
+<td>f7, Smartbeetle:F2</td>
+</tr>
+<tr>
+<td>tecla alt</td>
+<td>punt1+punt3+punt4+espai, f2, smartbeetle:f3, brailleedge:f4</td>
+</tr>
+<tr>
+<td>tecla shift:</td>
+<td>f5</td>
+</tr>
+<tr>
+<td>tecla insert</td>
+<td>punt2+punt4+espai, f6</td>
+</tr>
+<tr>
+<td>tecla aplicacions</td>
+<td>punt1+punt2+punt3+punt4+espai, f8</td>
+</tr>
+<tr>
+<td>Tecla bloqueig de majúscules</td>
+<td>punt1+punt3+punt6+espai</td>
+</tr>
+<tr>
+<td>tecla tab</td>
+<td>punt4+punt5+espai, f3, brailleedge:f2</td>
+</tr>
+<tr>
+<td>tecla shift+alt+tab</td>
+<td>f2+f3+f1</td>
+</tr>
+<tr>
+<td>tecla alt+tab</td>
+<td>f2+f3</td>
+</tr>
+<tr>
+<td>tecla shift+tab</td>
+<td>punt1+punt2+espai</td>
+</tr>
+<tr>
+<td>tecla fi</td>
+<td>punt4+punt6+espai</td>
+</tr>
+<tr>
+<td>tecla control+fi</td>
+<td>punt4+punt5+punt6+espai</td>
+</tr>
+<tr>
+<td>tecla inici</td>
+<td>punt1+punt3+espai, smartbeetle:f4</td>
+</tr>
+<tr>
+<td>tecla control+inici</td>
+<td>punt1+punt2+punt3+espai</td>
+</tr>
+<tr>
+<td>tecla alt+f4</td>
+<td>punt1+punt3+punt5+punt6+espai</td>
+</tr>
+<tr>
+<td>tecla fletxa Esquerra</td>
+<td>punt3+espai, leftSideLeftArrow</td>
+</tr>
+<tr>
+<td>tecla control+shift+fletxa Esquerra</td>
+<td>punt2+punt8+espai+f1</td>
+</tr>
+<tr>
+<td>tecla control+fletxa esquerra</td>
+<td>puunt2+espai</td>
+</tr>
+<tr>
+<td>tecla shift+alt+fletxa Esquerra</td>
+<td>punt2+punt7+f1</td>
+</tr>
+<tr>
+<td>'alt+fletxa Esquerra'</td>
+<td>'punt2+punt7+espai'</td>
+</tr>
+<tr>
+<td>tecla fletxa dreta</td>
+<td>punt6+espai, leftSideRightArrow</td>
+</tr>
+<tr>
+<td>tecla control+shift+fletxa  dreta</td>
+<td>punt5+punt8+espai+f1</td>
+</tr>
+<tr>
+<td>tecla control+fletxa dreta</td>
+<td>punt5+espai</td>
+</tr>
+<tr>
+<td>tecla shift+alt+fletxa dreta</td>
+<td>punt5+punt7+f1</td>
+</tr>
+<tr>
+<td>'alt+fletxa Dreta'</td>
+<td>'punt5+punt7+espai'</td>
+</tr>
+<tr>
+<td>tecla pàgina Amunt</td>
+<td>punt1+punt2+punt6+espai</td>
+</tr>
+<tr>
+<td>tecla control+pàgina Amunt</td>
+<td>punt1+punt2+punt6+punt8+espai</td>
+</tr>
+<tr>
+<td>tecla fletxa amunt</td>
+<td>punt1+espai, leftSideUpArrow</td>
+</tr>
+<tr>
+<td>tecla control+shift+fletxa Amunt</td>
+<td>punt2+punt3+punt8+espai+f1</td>
+</tr>
+<tr>
+<td>tecla control+fletxa Amunt</td>
+<td>punt2+punt3+espai</td>
+</tr>
+<tr>
+<td>tecla shift+alt+fletxa Amunt</td>
+<td>punt2+punt3+punt7+f1</td>
+</tr>
+<tr>
+<td>'alt+Fletxa Amunt'</td>
+<td>'punt2+punt3+punt7+espai'</td>
+</tr>
+<tr>
+<td>tecla shift+fletxa cap amunt</td>
+<td>tecla de desplaçament Esquerra cap avall+espai</td>
+</tr>
+<tr>
+<td>tecla página avall</td>
+<td>punt3+punt4+punt5+espai</td>
+</tr>
+<tr>
+<td>tecla control+página avall</td>
+<td>punt3+punt4+punt5+punt8+espai</td>
+</tr>
+<tr>
+<td>tecla fletxa avall</td>
+<td>punt4+espai, leftSideDownArrow</td>
+</tr>
+<tr>
+<td>tecla control+shift+fletxa avall</td>
+<td>punt5+punt6+punt8+espai+f1</td>
+</tr>
+<tr>
+<td>tecla control+fletxa avall</td>
+<td>punt5+punt6++espai</td>
+</tr>
+<tr>
+<td>tecla shift+alt+fletxa avall</td>
+<td>punt5+punt6+punt7+espai+f1</td>
+</tr>
+<tr>
+<td>'alt+fletxa avall'</td>
+<td>'punt5+punt6+punt7+espai'</td>
+</tr>
+<tr>
+<td>tecla shift+fletxa avall</td>
+<td>space+tecla de desplaçament dreta avall</td>
+</tr>
+<tr>
+<td>tecla escapament</td>
+<td>punt1+punt5+espai, f4, brailleedge:f1</td>
+</tr>
+<tr>
+<td>tecla esborrar</td>
+<td>punt1+punt3+punt5+espai, punt1+punt4+punt5+espai</td>
+</tr>
+<tr>
+<td>tecla f1</td>
+<td>punt1+punt2+punt5+espai</td>
+</tr>
+<tr>
+<td>tecla f3</td>
+<td>punt1+punt4+punt8+espai</td>
+</tr>
+<tr>
+<td>tecla f4</td>
+<td>punt7+f3</td>
+</tr>
+<tr>
+<td>tecla windows+b</td>
+<td>punt1+punt2+f1</td>
+</tr>
+<tr>
+<td>tecla windows+d</td>
+<td>punt1+punt4+punt5+f1</td>
+</tr>
+<tr>
+<td>tecla control+insert</td>
+<td>smartbeetle:f1+desplaçament dret</td>
+</tr>
+<tr>
+<td>tecla alt+insert</td>
+<td>smartbeetle:f3+desplaçament dret</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Seika">Línies braille Seika</h3>
+<h4 id="SeikaBrailleDisplays">Seika Versió 3, 4, i 5 (40 cel·les), Seika80 (80 cel·les)</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la pantalla braille cap enrere</td>
+<td>esquerra</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>dreta</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>b3</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia següent</td>
+<td>b4</td>
+</tr>
+<tr>
+<td>Commutar el seguiment braille</td>
+<td>b5</td>
+</tr>
+<tr>
+<td>Dir-ho tot</td>
+<td>b6</td>
+</tr>
+<tr>
+<td>tab</td>
+<td>b1</td>
+</tr>
+<tr>
+<td>shift+tab</td>
+<td>b2</td>
+</tr>
+<tr>
+<td>alt+tab</td>
+<td>b1+b2</td>
+</tr>
+<tr>
+<td>Menú de NVDA</td>
+<td>Esquerra+dreta</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+</tbody>
+</table>
+<h4 id="SeikaNotetaker">MiniSeika (16, 24 cel·les), V6, i V6Pro (40 cel·les)</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la pantalla braille cap enrere</td>
+<td>esquerra</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>dreta</td>
+</tr>
+<tr>
+<td>Dir-ho tot</td>
+<td>espai+retrocés</td>
+</tr>
+<tr>
+<td>Menú de NVDA</td>
+<td>Esquerra+dreta</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>LJ amunt</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia següent</td>
+<td>LJ avall</td>
+</tr>
+<tr>
+<td>Commutar el seguiment braille</td>
+<td>LJ center</td>
+</tr>
+<tr>
+<td>tab</td>
+<td>LJ dreta</td>
+</tr>
+<tr>
+<td>shift+tab</td>
+<td>LJ esquerra</td>
+</tr>
+<tr>
+<td>tecla fletxa amunt</td>
+<td>LJ amunt</td>
+</tr>
+<tr>
+<td>tecla fletxa avall</td>
+<td>LJ avall</td>
+</tr>
+<tr>
+<td>tecla fletxa Esquerra</td>
+<td>LJ esquerra</td>
+</tr>
+<tr>
+<td>tecla fletxa dreta</td>
+<td>LJ dreta</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>tecla shift+fletxa Amunt</td>
+<td>Espai+RJ amunt, Retrocés+RJ amunt</td>
+</tr>
+<tr>
+<td>tecla shift+fletxa avall</td>
+<td>Espai+RJ avall, Retrocés+RJ avall</td>
+</tr>
+<tr>
+<td>tecla shift+fletxa esquerra</td>
+<td>Espai+RJ esquerra, Retrocés+RJ esquerra</td>
+</tr>
+<tr>
+<td>tecla shift+fletxa dreta</td>
+<td>Espai+RJ dreta, Retrocés+RJ dreta</td>
+</tr>
+<tr>
+<td>tecla enter</td>
+<td>RJ center, punt8</td>
+</tr>
+<tr>
+<td>tecla escapament</td>
+<td>Espai+RJ center</td>
+</tr>
+<tr>
+<td>tecla Windows</td>
+<td>Retrocés+RJ center</td>
+</tr>
+<tr>
+<td>tecla espai</td>
+<td>Espai, retrocés</td>
+</tr>
+<tr>
+<td>tecla retrocés</td>
+<td>punt7</td>
+</tr>
+<tr>
+<td>tecla pàgina Amunt</td>
+<td>espai+LJ dret</td>
+</tr>
+<tr>
+<td>tecla pàgina avall</td>
+<td>espai+LJ esquerre</td>
+</tr>
+<tr>
+<td>tecla inici</td>
+<td>espai+LJ amunt</td>
+</tr>
+<tr>
+<td>tecla fi</td>
+<td>espai+LJ avall</td>
+</tr>
+<tr>
+<td>tecla control+inici</td>
+<td>retrocés+LJ amunt</td>
+</tr>
+<tr>
+<td>tecla control+fi</td>
+<td>retrocés+LJ avall</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Papenmeier">Papenmeier BRAILLEX Models més nous</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la pantalla braille cap enrere</td>
+<td>esquerra</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>dreta</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>amunt</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>dn</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>Informar del carácter actual en revisió</td>
+<td>l1</td>
+</tr>
+<tr>
+<td>Activar el navegador d'objectes actual</td>
+<td>l2</td>
+</tr>
+<tr>
+<td>Commutar el seguiment braille a</td>
+<td>r2</td>
+</tr>
+<tr>
+<td>Informar del títol</td>
+<td>l1+amunt</td>
+</tr>
+<tr>
+<td>Informa de la barra d'estat</td>
+<td>l2+avall</td>
+</tr>
+<tr>
+<td>Mou al objecte contenidor</td>
+<td>amunt2</td>
+</tr>
+<tr>
+<td>Mou al primer objecte contingut</td>
+<td>dn2</td>
+</tr>
+<tr>
+<td>Mou al objecte anterior</td>
+<td>esquerra2</td>
+</tr>
+<tr>
+<td>Mou al objecte següent</td>
+<td>dreta2</td>
+</tr>
+<tr>
+<td>Informa del format del text sota la cel·la braille</td>
+<td>sensor braille de la fila superior</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tecla escapament</td>
+<td>espai amb el punt 7</td>
+</tr>
+<tr>
+<td>tecla fletxa amunt</td>
+<td>espai amb el punt 2</td>
+</tr>
+<tr>
+<td>tecla fletxa Esquerra</td>
+<td>espai amb el punt 1</td>
+</tr>
+<tr>
+<td>tecla fletxa dreta</td>
+<td>espai amb el punt 4</td>
+</tr>
+<tr>
+<td>fletxa avall</td>
+<td>espai amb el punt 5</td>
+</tr>
+<tr>
+<td>tecla control</td>
+<td>lt+punt2</td>
+</tr>
+<tr>
+<td>tecla alt</td>
+<td>lt+punt3</td>
+</tr>
+<tr>
+<td>tecla control+escapament</td>
+<td>espai amb els punts 1 2 3 4 5 6</td>
+</tr>
+<tr>
+<td>tecla tab</td>
+<td>espai amb els punts 3 7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="PapenmeierOld">Models més antics de Braille Papenmeier BRAILLEX</h3>
+<p>Dispositius amb EAB:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>esquerra</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>dreta</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>amunt</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>dn</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>Informar del carácter actual en revisió</td>
+<td>l1</td>
+</tr>
+<tr>
+<td>Activar el navegador d'objectes actual</td>
+<td>l2</td>
+</tr>
+<tr>
+<td>Informar del títol</td>
+<td>l1amunt</td>
+</tr>
+<tr>
+<td>Anunciar la barra d'estat</td>
+<td>l2avall</td>
+</tr>
+<tr>
+<td>Mou al objecte contenidor</td>
+<td>amunt2</td>
+</tr>
+<tr>
+<td>Mou al primer objecte contingut</td>
+<td>dn2</td>
+</tr>
+<tr>
+<td>Mou al objecte següent</td>
+<td>dreta2</td>
+</tr>
+<tr>
+<td>Mou al objecte anterior</td>
+<td>esquerra2</td>
+</tr>
+<tr>
+<td>Informa del format del text sota la cel·la braille</td>
+<td>sensor braille de la franja superior</td>
+</tr>
+</tbody>
+</table>
+<p>BRAILLEX Tiny:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informar del carácter actual en revisió</td>
+<td>l1</td>
+</tr>
+<tr>
+<td>Activar el navegador d'objectes actual</td>
+<td>l2</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>esquerra</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>dreta</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>amunt</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>dn</td>
+</tr>
+<tr>
+<td>Commutar el seguiment braille a</td>
+<td>r2</td>
+</tr>
+<tr>
+<td>Mou al objecte contenidor</td>
+<td>r1+amunt</td>
+</tr>
+<tr>
+<td>Mou al primer objecte contingut</td>
+<td>r1+dn</td>
+</tr>
+<tr>
+<td>Mou al objecte anterior</td>
+<td>r1+esquerra</td>
+</tr>
+<tr>
+<td>Mou al objecte següent</td>
+<td>r1+dreta</td>
+</tr>
+<tr>
+<td>Informa del format del text sota la cel·la braille</td>
+<td>sensor braille de la franja superior</td>
+</tr>
+<tr>
+<td>Informar del títol</td>
+<td>l1+amunt</td>
+</tr>
+<tr>
+<td>Anunciar la barra d'estat</td>
+<td>l2+avall</td>
+</tr>
+</tbody>
+</table>
+<p>BRAILLEX 2D Screen:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informar del carácter actual en revisió</td>
+<td>l1</td>
+</tr>
+<tr>
+<td>Activar el navegador d'objectes actual</td>
+<td>l2</td>
+</tr>
+<tr>
+<td>Commutar el seguiment braille a</td>
+<td>r2</td>
+</tr>
+<tr>
+<td>Informa del format del text sota la cel·la braille</td>
+<td>sensor braille de la franja superior</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>amunt</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>esquerra</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>dreta</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>dn</td>
+</tr>
+<tr>
+<td>Mou al objecte següent</td>
+<td>esquerra2</td>
+</tr>
+<tr>
+<td>Mou al objecte contenidor</td>
+<td>amunt2</td>
+</tr>
+<tr>
+<td>Mou al primer objecte contingut</td>
+<td>dn2</td>
+</tr>
+<tr>
+<td>Mou al objecte anterior</td>
+<td>dreta2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HumanWareBrailleNote">HumanWare BrailleNote</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>enrere</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>avançar</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>anterior</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>següent</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>Menú de NVDA</td>
+<td>espai+punt1+punt3+punt4+punt5 (espai+n)</td>
+</tr>
+<tr>
+<td>Commutar el seguiment braille</td>
+<td>anterior+següent</td>
+</tr>
+<tr>
+<td>Tecla fletxa amunt</td>
+<td>punt1+espai</td>
+</tr>
+<tr>
+<td>Tecla fletxa avall</td>
+<td>espai+punt4</td>
+</tr>
+<tr>
+<td>Tecla fletxa esquerra</td>
+<td>espai+punt3</td>
+</tr>
+<tr>
+<td>Tecla fletxa dreta</td>
+<td>espai+punt6</td>
+</tr>
+<tr>
+<td>Tecla pàgina Amunt</td>
+<td>espai+punt1+punt3</td>
+</tr>
+<tr>
+<td>Tecla pàgina avall</td>
+<td>espai+punt4+punt6</td>
+</tr>
+<tr>
+<td>Tecla inici</td>
+<td>espai+punt1+punt2</td>
+</tr>
+<tr>
+<td>Tecla fi</td>
+<td>espai+punt4+punt5</td>
+</tr>
+<tr>
+<td>Tecles control+inici</td>
+<td>espai+punt1+punt2+punt3</td>
+</tr>
+<tr>
+<td>Tecles control+fi</td>
+<td>espai+punt4+punt5+punt6</td>
+</tr>
+<tr>
+<td>Tecla espai</td>
+<td>espai</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>espai+punt8</td>
+</tr>
+<tr>
+<td>Retrocés</td>
+<td>espai+punt7</td>
+</tr>
+<tr>
+<td>Tecla tab</td>
+<td>espai+punt2+punt3+punt4+punt5 (espai+t)</td>
+</tr>
+<tr>
+<td>Tecles shift+tab</td>
+<td>espai+punt1+punt2+punt5+punt6</td>
+</tr>
+<tr>
+<td>Tecla Windows</td>
+<td>espai+punt2+punt4+punt5+punt6 (espai+w)</td>
+</tr>
+<tr>
+<td>Tecla alt</td>
+<td>espai+punt1+punt3+punt4 (espai+m)</td>
+</tr>
+<tr>
+<td>Commuta l'ajuda d'entrada</td>
+<td>espai+punt2+punt3+punt6 (espai+h baixa)</td>
+</tr>
+</tbody>
+</table>
+<p>Les següents són les ordres assignades al BrailleNote QT quan no està en mode d'entrada braille.</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Menú de nVDA</td>
+<td>read+n</td>
+</tr>
+<tr>
+<td>Tecla fletxa amunt</td>
+<td>fletxaAmunt</td>
+</tr>
+<tr>
+<td>Tecla fletxa avall</td>
+<td>fletxaAvall</td>
+</tr>
+<tr>
+<td>Tecla fletxa Esquerra</td>
+<td>fletxaEsquerra</td>
+</tr>
+<tr>
+<td>Tecla fletxa dreta</td>
+<td>fletxaDreta</td>
+</tr>
+<tr>
+<td>Tecla pàgina Amunt</td>
+<td>funció+fletxaAmunt</td>
+</tr>
+<tr>
+<td>Tecla pàgina avall</td>
+<td>funció+fletxaAvall</td>
+</tr>
+<tr>
+<td>Tecla inici</td>
+<td>funció+fletxaEsquerra</td>
+</tr>
+<tr>
+<td>Tecla fi</td>
+<td>funció+fletxaDreta</td>
+</tr>
+<tr>
+<td>Tecles control+inici</td>
+<td>read+t</td>
+</tr>
+<tr>
+<td>Tecles control+fi</td>
+<td>read+b</td>
+</tr>
+<tr>
+<td>Tecla enter</td>
+<td>enter</td>
+</tr>
+<tr>
+<td>Tecla retrocés</td>
+<td>retrocés</td>
+</tr>
+<tr>
+<td>Tecla tab</td>
+<td>tab</td>
+</tr>
+<tr>
+<td>Tecles shift+tab</td>
+<td>shift+tab</td>
+</tr>
+<tr>
+<td>Tecla Windows</td>
+<td>read+w</td>
+</tr>
+<tr>
+<td>Tecla alt</td>
+<td>read+m</td>
+</tr>
+<tr>
+<td>Commutar l'ajuda d'entrada</td>
+<td>read+1</td>
+</tr>
+</tbody>
+</table>
+<p>Les següents són les ordres assignades a la roda de desplaçament:</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tecla fletxa Amunt</td>
+<td>fletxaAmunt</td>
+</tr>
+<tr>
+<td>Tecla fletxa avall</td>
+<td>fletxaAvall</td>
+</tr>
+<tr>
+<td>Tecla fletxa esquerra</td>
+<td>fletxaEsquerra</td>
+</tr>
+<tr>
+<td>Tecla fletxa dreta</td>
+<td>fletxaDreta</td>
+</tr>
+<tr>
+<td>Tecla enter</td>
+<td>botó central</td>
+</tr>
+<tr>
+<td>Tecla de tabulació</td>
+<td>roda de desplaçament en sentit horari</td>
+</tr>
+<tr>
+<td>Tecles shift+tabulació</td>
+<td>roda de desplaçament en sentit antihorari</td>
+</tr>
+</tbody>
+</table>
+<h3 id="EcoBraille">EcoBraille</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>T2</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>T4</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>T1</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>T5</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+<tr>
+<td>Activar el navegador d'objectes actual</td>
+<td>T3</td>
+</tr>
+<tr>
+<td>Canvia al mode de revisió següent</td>
+<td>F1</td>
+</tr>
+<tr>
+<td>Mou al objecte contenidor</td>
+<td>F2</td>
+</tr>
+<tr>
+<td>Canvia al mode de revisió anterior</td>
+<td>F3</td>
+</tr>
+<tr>
+<td>Mou al objecte anterior</td>
+<td>F4</td>
+</tr>
+<tr>
+<td>Informa de l'objecte actual</td>
+<td>F5</td>
+</tr>
+<tr>
+<td>Mou al objecte següent</td>
+<td>F6</td>
+</tr>
+<tr>
+<td>Mou al objecte del focus</td>
+<td>F7</td>
+</tr>
+<tr>
+<td>Mou al primer objecte contingut</td>
+<td>F8</td>
+</tr>
+<tr>
+<td>Mou el focus o el cursor del sistema a la posició de revisió actual</td>
+<td>F9</td>
+</tr>
+<tr>
+<td>Informa de la ubicació del cursor de revisió</td>
+<td>F0</td>
+</tr>
+<tr>
+<td>Commutar el seguiment braille a</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="SuperBraille">SuperBraille</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>signe menys del teclat numèric</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>Signe més del teclat numèric</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Eurobraille">Línies Eurobraille</h3>
+<h4 id="EurobrailleBraille">Funcions del teclat braille</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esborra l'última cel·la braille introduïda o el caràcter</td>
+<td>'retrocés'</td>
+</tr>
+<tr>
+<td>Transcriu qualsevol entrada braille i polsa la tecla enter</td>
+<td>'retrocés+espai'</td>
+</tr>
+<tr>
+<td>Activa o desactiva la tecla NVDA</td>
+<td>'punt3+punt5+espai'</td>
+</tr>
+<tr>
+<td>tecla 'insert'</td>
+<td>'punt1+punt3+punt5+espai', 'punt3+punt4+punt5+espai'</td>
+</tr>
+<tr>
+<td>tecla 'esborrar'</td>
+<td>'punt3+punt6+espai</td>
+</tr>
+<tr>
+<td>tecla 'inici'</td>
+<td>'punt1+punt2+punt3+espai'</td>
+</tr>
+<tr>
+<td>tecla 'fi'</td>
+<td>'punt4+punt5+punt6+espai'</td>
+</tr>
+<tr>
+<td>tecla 'fletxa esquerra'</td>
+<td>'punt2+espai'</td>
+</tr>
+<tr>
+<td>tecla 'fletxa dreta'</td>
+<td>'punt5+espai'</td>
+</tr>
+<tr>
+<td>tecla 'fletxa amunt'</td>
+<td>'punt1+espai'</td>
+</tr>
+<tr>
+<td>tecla 'fletxa avall'</td>
+<td>'punt6+espai'</td>
+</tr>
+<tr>
+<td>tecla 'pàgina amunt'</td>
+<td>'punt1+punt3+espai'</td>
+</tr>
+<tr>
+<td>tecla 'pàgina avall'</td>
+<td>'punt4+punt6+espai'</td>
+</tr>
+<tr>
+<td>tecla '1 del teclat numèric'</td>
+<td>'punt1+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla '2 del teclat numèric'</td>
+<td>'punt1+punt2+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla '3 del teclat numèric'</td>
+<td>'punt1+punt4+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla '4 del teclat numèric'</td>
+<td>'punt1+punt4+punt5+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla '5 del teclat numèric'</td>
+<td>'punt1+punt5+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla '6 del teclat numèric'</td>
+<td>'punt1+punt2+punt4+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla '7 del teclat numèric'</td>
+<td>'punt1+punt2+punt4+punt5+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla '8 del teclat numèric'</td>
+<td>'punt1+punt2+punt5+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla '9 del teclat numèric'</td>
+<td>'punt2+punt4+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'insert del teclat numèric'</td>
+<td>'punt3+punt4+punt5+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'Decimal del teclat numèric'</td>
+<td>'punt2+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'dividir del teclat numèric'</td>
+<td>'punt3+punt4+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'multiplicar del teclat numèric'</td>
+<td>'punt3+punt5+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'menys del teclat numèric'</td>
+<td>'punt3+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'més del teclat numèric'</td>
+<td>'punt2+punt3+punt5+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'enter del teclat numèric'</td>
+<td>'punt3+punt4+punt5+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'escapament'</td>
+<td>'punt1+punt2+punt4+punt5+espai', 'l2'</td>
+</tr>
+<tr>
+<td>tecla 'tab'</td>
+<td>'punt2+punt5+punt6+espai, 'l3'</td>
+</tr>
+<tr>
+<td>tecles 'shift+tab'</td>
+<td>'punt2+punt3+punt5+espai'</td>
+</tr>
+<tr>
+<td>tecla 'imprimir pantalla'</td>
+<td>'punt1+punt3+punt4+punt6+espai'</td>
+</tr>
+<tr>
+<td>tecla 'pausa'</td>
+<td>'punt1+punt4+espai'</td>
+</tr>
+<tr>
+<td>tecla 'aplicasions'</td>
+<td>'punt5+punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f1'</td>
+<td>'punt1+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f2'</td>
+<td>'punt1+punt2+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f3'</td>
+<td>'punt1+punt4+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f4'</td>
+<td>'punt1+punt4+punt5+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f5'</td>
+<td>'punt1+punt5+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f6'</td>
+<td>'punt1+punt2+punt4+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f7'</td>
+<td>'punt1+punt2+punt4+punt5+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f8'</td>
+<td>'punt1+punt2+punt5+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f9'</td>
+<td>'punt2+punt4+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f10'</td>
+<td>'punt2+punt4+punt5+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f11'</td>
+<td>'punt1+punt3+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'f12'</td>
+<td>'punt1+punt2+punt3+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'windows'</td>
+<td>'punt1+punt2+punt4+punt5+punt6+espai'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'windows'</td>
+<td>'punt1+punt2+punt3+punt4+retrocés', 'punt2+punt4+punt5+punt6+espai'</td>
+</tr>
+<tr>
+<td>tecla 'bloqueig de majúscules'</td>
+<td>'punt7+retrocés', 'punt8+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'bloqueig del teclat numèric'</td>
+<td>'punt3+retrocés', 'punt6+retrocés'</td>
+</tr>
+<tr>
+<td>tecla 'shift'</td>
+<td>'punt7+espai'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'shift'</td>
+<td>'punt1+punt7+espai', 'punt4+punt7+espai'</td>
+</tr>
+<tr>
+<td>tecla 'control'</td>
+<td>'punt7+punt8+espai'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'control'</td>
+<td>'punt1+punt7+punt8+espai', 'punt4+punt7+punt8+espai'</td>
+</tr>
+<tr>
+<td>tecla 'alt'</td>
+<td>'punt8+espai'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'alt'</td>
+<td>'punt1+punt8+espai', 'punt4+punt8+espai'</td>
+</tr>
+<tr>
+<td>Activar o desactivar la simulació de teclat HID</td>
+<td>'switch1Esquerre+joystick1Avall', 'switch1Dret+joystick1Avall'</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Eurobraillebbook">tecles d'ordres del b.book</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la pantalla braille cap enrere</td>
+<td>'cap enrere'</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>'endavant'</td>
+</tr>
+<tr>
+<td>Mou-te al focus actual</td>
+<td>'enrere+endavant'</td>
+</tr>
+<tr>
+<td>Dur el cursor cap a la cel·la braille</td>
+<td>'sensor braille'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaEsquerra'</td>
+<td>'joystick2Esquerra'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaDreta'</td>
+<td>'joystick2Dreta'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaAmunt'</td>
+<td>'joystick2Amunt'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaAvall'</td>
+<td>'joystick2Avall'</td>
+</tr>
+<tr>
+<td>tecla 'enter'</td>
+<td>'joystick2Center'</td>
+</tr>
+<tr>
+<td>tecla 'escapament'</td>
+<td>'c1'</td>
+</tr>
+<tr>
+<td>tecla 'tab'</td>
+<td>'c2'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'Shift'</td>
+<td>'c3'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'control'</td>
+<td>'c4'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'alt'</td>
+<td>'c5'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'NVDA'</td>
+<td>'c6'</td>
+</tr>
+<tr>
+<td>tecla 'control+Inici'</td>
+<td>'c1+c2+c3'</td>
+</tr>
+<tr>
+<td>tecla 'control+Fi'</td>
+<td>'c4+c5+c6'</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Eurobraillebnote">tecles d'ordres del b.note</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la pantalla braille cap enrere</td>
+<td>'leftKeypadLeft'</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>'leftKeypadRight'</td>
+</tr>
+<tr>
+<td>Dur el cursor cap a la cel·la braille</td>
+<td>'sensor braille'</td>
+</tr>
+<tr>
+<td>Informa del format de text sota la cel·la braille</td>
+<td>'polsar dues vegades el sensor braille'</td>
+</tr>
+<tr>
+<td>Passar a la següent línia en revisió</td>
+<td>'leftKeypadDown'</td>
+</tr>
+<tr>
+<td>Canvia al mode de revisió anterior</td>
+<td>'leftKeypadLeft+leftPadUp'</td>
+</tr>
+<tr>
+<td>Canvia al següent mode de revisió</td>
+<td>'leftKeypadRight+leftKeypadDown'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaEsquerra'</td>
+<td>'rightKeypadLeft'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaDreta'</td>
+<td>'rightKeypadRight'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaAmunt'</td>
+<td>'rightKeypadUp'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaAvall'</td>
+<td>'rightKeypadDown'</td>
+</tr>
+<tr>
+<td>tecla 'control+inici'</td>
+<td>'rightKeypadLeft+rightKeypadUp'</td>
+</tr>
+<tr>
+<td>tecla ¡control+fi`</td>
+<td>'rightKeypadRight+rightKeypadDown'</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Eurobrailleesys">Ordres de eclat de Esys</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la pantalla braille cap enrere</td>
+<td>'switch1Left'</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>'switch1Right'</td>
+</tr>
+<tr>
+<td>Passar al focus actual</td>
+<td>'switch1Center'</td>
+</tr>
+<tr>
+<td>Dur el cursor cap a la cel·la braille</td>
+<td>'sensor braille'</td>
+</tr>
+<tr>
+<td>Informa del format de text sota la cel·la braille</td>
+<td>'polsar dues vegades el sensor braille'</td>
+</tr>
+<tr>
+<td>Passar a la línia anterior en revisió</td>
+<td>'joystick1Amunt'</td>
+</tr>
+<tr>
+<td>Passar a la següent línia en revisió</td>
+<td>'joystick1Avall'</td>
+</tr>
+<tr>
+<td>Moure al carácter anterior en revisió</td>
+<td>'joystick1Esquerrra'</td>
+</tr>
+<tr>
+<td>Moure al següent carácter en revisió</td>
+<td>'joystick1Dreta'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaEsquerra'</td>
+<td>'joystick2Esquerra'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaDreta'</td>
+<td>'joystick2Dreta'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaAmunt'</td>
+<td>'joystick2Amunt'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaAvall'</td>
+<td>'joystick2Avall'</td>
+</tr>
+<tr>
+<td>tecla 'enter'</td>
+<td>'joystick2Center'</td>
+</tr>
+</tbody>
+</table>
+<h4 id="EurobrailleEsytime">Comandes de teclat de Esytime</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la pantalla braille cap enrere</td>
+<td>'l1'</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>'l8'</td>
+</tr>
+<tr>
+<td>Passar al focus actual</td>
+<td>'l1+l8'</td>
+</tr>
+<tr>
+<td>Dur el cursor cap a la cel·la braille</td>
+<td>'sensor braille'</td>
+</tr>
+<tr>
+<td>Informa del format de text sota la cel·la braille</td>
+<td>'polsar dues vegades el sensor braille'</td>
+</tr>
+<tr>
+<td>Passar a la línia anterior en revisió</td>
+<td>'joystick1Amunt'</td>
+</tr>
+<tr>
+<td>Passar a la següent línia en revisió</td>
+<td>'joystick1Avall'</td>
+</tr>
+<tr>
+<td>Moure al carácter anterior en revisió</td>
+<td>'joystick1Esquerrra'</td>
+</tr>
+<tr>
+<td>Moure al següent carácter en revisió</td>
+<td>'joystick1Dreta'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaEsquerra'</td>
+<td>'joystick2Esquerra'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaDreta'</td>
+<td>'joystick2Dreta'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaAmunt'</td>
+<td>'joystick2Amunt'</td>
+</tr>
+<tr>
+<td>tecla 'fletxaAvall'</td>
+<td>'joystick2Avall'</td>
+</tr>
+<tr>
+<td>tecla 'enter'</td>
+<td>'joystick2Center'</td>
+</tr>
+<tr>
+<td>tecla 'escapament'</td>
+<td>'l2'</td>
+</tr>
+<tr>
+<td>tecla 'tab'</td>
+<td>'l3'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'shift'</td>
+<td>'l4'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'control'</td>
+<td>'l5'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'alt'</td>
+<td>'l6'</td>
+</tr>
+<tr>
+<td>Polsar o soltar la tecla 'NVDA'</td>
+<td>'l7'</td>
+</tr>
+<tr>
+<td>tecla 'control+inici'</td>
+<td>'l1+l2+l3', 'l2+l3+l4'</td>
+</tr>
+<tr>
+<td>tecla 'control+fi'</td>
+<td>'l6+l7+l8', 'l5+l6+l7'</td>
+</tr>
+<tr>
+<td>Commuta la simulació del teclat HID</td>
+<td>'l1+joystick1Down', 'l8+joystick1Down'</td>
+</tr>
+</tbody>
+</table>
+<h3 id="NattiqTechnologies">Línies braille Nattiq n</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>amunt</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>avall</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>esquerra</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>dreta</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>tecla de guiat del cursor o sensor braille</td>
+</tr>
+</tbody>
+</table>
+<h3 id="BRLTTY">BRLTTY</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Comandament de BRLTTY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la pantalla braille cap enrere</td>
+<td>'fwinlt' (ves una finestra a l'esquerra)</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>'fwinrt' (ves a la dreta una finestra)</td>
+</tr>
+<tr>
+<td>Mou la pantalla braille a la línia anterior</td>
+<td>'lnup' (puja una línia)</td>
+</tr>
+<tr>
+<td>Mou la pantalla braille a la següent línia</td>
+<td>'lndn' (baixa una línia)</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>'sensor braille' (portar el cursor al caràcter)</td>
+</tr>
+<tr>
+<td>Ajuda per activar l'entrada</td>
+<td>'aprendre' (ordres d'entrada/sortida mode aprenentatge)</td>
+</tr>
+<tr>
+<td>Obre el menú NVDA</td>
+<td>'prefmenu' (menú d'entrada/sortida de preferències)</td>
+</tr>
+<tr>
+<td>Revertir configuració</td>
+<td>'prefload' (restaurar preferències des del disc)</td>
+</tr>
+<tr>
+<td>Desar configuració</td>
+<td>'prefsave' (desar preferències al disc)</td>
+</tr>
+<tr>
+<td>Informa de l'hora</td>
+<td>'time' (mostra la data i hora actuals)</td>
+</tr>
+<tr>
+<td>Diu la línia on es troba el cursor de revisió</td>
+<td>'say_line' (diu la línia actual)</td>
+</tr>
+<tr>
+<td>Dir-ho tot utilitzant el cursor de revisió</td>
+<td>'say_below' (llegeig des de la línia actual fins a la part inferior de la pantalla)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Albatross">Tivomatic Caiku Albatross 46/80</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moure a la línia superior en revisió</td>
+<td>'home1', 'home2'</td>
+</tr>
+<tr>
+<td>Passar a la línia final en revisió</td>
+<td>'end1', 'end2'</td>
+</tr>
+<tr>
+<td>Mou el navegador d'objectes al focus actual</td>
+<td>'eCursor1', 'eCursor2'</td>
+</tr>
+<tr>
+<td>Moure al focus actual</td>
+<td>'cursor1', 'cursor2'</td>
+</tr>
+<tr>
+<td>Mou el punter del ratolí al navegador d'objectes actual</td>
+<td>'home1+home2'</td>
+</tr>
+<tr>
+<td>Mou el navegador d'objectes a l'objecte actual sota el punter del ratolí i el parla</td>
+<td>'end1+end2'</td>
+</tr>
+<tr>
+<td>Canvia el focus al navegador d'objectes actual</td>
+<td>'eCursor1+eCursor2'</td>
+</tr>
+<tr>
+<td>Commuta el seguiment del braille</td>
+<td>'cursor1+cursor2'</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>'up1', 'up2', 'up3'</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>'down1', 'down2', 'down3'</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille enrere</td>
+<td>'left', 'lWheelLeft', 'rWheelLeft'</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>'right', 'lWheelRight', 'rWheelRight'</td>
+</tr>
+<tr>
+<td>Dur el cursor cap a la cel·la braille</td>
+<td>'sensor braille'</td>
+</tr>
+<tr>
+<td>Informa del format del text sota la cel·la braille</td>
+<td>' sensor braille secundari'</td>
+</tr>
+<tr>
+<td>Commuta la manera com es presenta la informació contextual en braille</td>
+<td>'attribute1+attribute3'</td>
+</tr>
+<tr>
+<td>Cicles entre modes de parla</td>
+<td>'attribute2+attribute4'</td>
+</tr>
+<tr>
+<td>Canvia al mode de revisió anterior (per exemple, objecte, document o pantalla)</td>
+<td>'f1'</td>
+</tr>
+<tr>
+<td>Canvia al següent mode de revisió (per exemple, objecte, document o pantalla)</td>
+<td>'f2'</td>
+</tr>
+<tr>
+<td>Mou el navegador d'objectes a l'objecte que el conté</td>
+<td>'f3'</td>
+</tr>
+<tr>
+<td>Mou el navegador d'objectes al primer objecte dins seu</td>
+<td>'f4'</td>
+</tr>
+<tr>
+<td>Mou el navegador d'objectes a l'objecte anterior</td>
+<td>'f5'</td>
+</tr>
+<tr>
+<td>Mou el navegador d'objectes al següent objecte</td>
+<td>'f6'</td>
+</tr>
+<tr>
+<td>Informa del navegador d'objectes actual</td>
+<td>'f7'</td>
+</tr>
+<tr>
+<td>Informa sobre la ubicació del text o del objecte al cursor de revisió</td>
+<td>'f8'</td>
+</tr>
+<tr>
+<td>Mostra la configuració del braille</td>
+<td>'f1+home1', 'f9+home2'</td>
+</tr>
+<tr>
+<td>Llegeix la barra d'estat i hi mou el navegador d'objectes dins d'ella</td>
+<td>'f1+end1', 'f9+end2'</td>
+</tr>
+<tr>
+<td>Cicla la forma del cursor braille</td>
+<td>'f1+eCursor1', 'f9+eCursor2'</td>
+</tr>
+<tr>
+<td>Commuta el cursor braille</td>
+<td>'f1+cursor1', 'f9+cursor2'</td>
+</tr>
+<tr>
+<td>Cicla el mode de mostra de missatges en braille</td>
+<td>'f1+f2', 'f9+f10'</td>
+</tr>
+<tr>
+<td>Cicla l'estat de la mostra de selecció en braille</td>
+<td>'f1+f5', 'f9+f14'</td>
+</tr>
+<tr>
+<td>Cicla els estats del "braille mou el cursor del sistema quan mous el cursor de revisió amb els sensors braille"</td>
+<td>'f1+f3', 'f9+f11'</td>
+</tr>
+<tr>
+<td>Realitza l'acció per defecte sobre el navegador d'objectes actual</td>
+<td>'f7+f8'</td>
+</tr>
+<tr>
+<td>Informa de la data i hora</td>
+<td>'f9'</td>
+</tr>
+<tr>
+<td>Informa de l'estat de la bateria i del temps restant si l'adaptador de corrent  no està connectat</td>
+<td>'f10'</td>
+</tr>
+<tr>
+<td>Informa del títol</td>
+<td>'f11'</td>
+</tr>
+<tr>
+<td>Informa de la barra d'estat</td>
+<td>'f12'</td>
+</tr>
+<tr>
+<td>Informa de la línia actual sota el cursor d'aplicació</td>
+<td>'f13'</td>
+</tr>
+<tr>
+<td>Dir-ho tot</td>
+<td>'f14'</td>
+</tr>
+<tr>
+<td>Informa del carácter actual sota el cursor de revisió</td>
+<td>'f15'</td>
+</tr>
+<tr>
+<td>Informa de la línia del navegador d'objectes actual on es troba el cursor de revisió</td>
+<td>'f16'</td>
+</tr>
+<tr>
+<td>Diu la paraula del navegador d'objectes actual on es troba el cursor de revisió</td>
+<td>'f15+f16'</td>
+</tr>
+<tr>
+<td>Mou el cursor de revisió a la línia anterior del navegador d'objectes actual i la diu</td>
+<td>'lWheelUp', 'rWheelUp'</td>
+</tr>
+<tr>
+<td>Mou el cursor de revisió a la següent línia del navegador d'objectes actual i la diu</td>
+<td>'lWheelDown', 'rWheelDown'</td>
+</tr>
+<tr>
+<td>Tecla 'Windows+d' (minimitzar totes les aplicacions)</td>
+<td>'attribute1'</td>
+</tr>
+<tr>
+<td>Tecla 'Windows+e' (aquest ordinador)</td>
+<td>'attribute2'</td>
+</tr>
+<tr>
+<td>tecla 'Windows+b' (focus a la safata de sistema)</td>
+<td>'attribute3'</td>
+</tr>
+<tr>
+<td>Tecla 'Windows+i' (configuració de Windows)</td>
+<td>'attribute4'</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Zoomax">Lector electrònic NLS Zoomax</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>'d2'</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>'d5'</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la línia anterior</td>
+<td>'d1'</td>
+</tr>
+<tr>
+<td>Mou la línia braille a la següent línia</td>
+<td>'d3'</td>
+</tr>
+<tr>
+<td>Dur el cursor cap a la cel·la braille</td>
+<td>'sensor braille'</td>
+</tr>
+<tr>
+<td>Tecla de fletxa amunt</td>
+<td>'amunt'</td>
+</tr>
+<tr>
+<td>Tecla de fletxa cap avall</td>
+<td>'avall'</td>
+</tr>
+<tr>
+<td>Tecla de fletxa esquerra</td>
+<td>'esquerra'</td>
+</tr>
+<tr>
+<td>Tecla de fletxa dreta</td>
+<td>'dreta'</td>
+</tr>
+<tr>
+<td>Tecla enter</td>
+<td>'select'</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HIDBraille">Línies Braille estàndard HID</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>tecla de desplaçament a l'esquerra o balancí cap amunt</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>tecla de desplaçament a la dreta o balancí cap avall</td>
+</tr>
+<tr>
+<td>Dur el cursor a la cel·la braille</td>
+<td>qualsevol dels sensors braille de la fila 1</td>
+</tr>
+<tr>
+<td>Commuta el seguiment braille a</td>
+<td>amunt+avall</td>
+</tr>
+<tr>
+<td>tecla de fletxa cap amunt</td>
+<td>joystick amunt, dpad amunt o espai+punt1</td>
+</tr>
+<tr>
+<td>tecla de fletxa avall</td>
+<td>joystick avall, dpad cap avall o espai+punt4</td>
+</tr>
+<tr>
+<td>tecla de fletxa esquerra</td>
+<td>espai+punt3, joystick esquerra o dpad esquerra</td>
+</tr>
+<tr>
+<td>tecla de fletxa dreta</td>
+<td>espai+punt6, joystick dreta o dpad dreta</td>
+</tr>
+<tr>
+<td>tecla shift+tab</td>
+<td>espai+punt1+punt3</td>
+</tr>
+<tr>
+<td>tecla tab</td>
+<td>espai+punt4+punt6</td>
+</tr>
+<tr>
+<td>tecla alt</td>
+<td>espai+punt1+punt3+punt4 (espai+m)</td>
+</tr>
+<tr>
+<td>tecla escapament</td>
+<td>espai+punt1+punt5 (espai+e)</td>
+</tr>
+<tr>
+<td>tecla enter</td>
+<td>punt8, joystick center o dpad center</td>
+</tr>
+<tr>
+<td>tecla Windows</td>
+<td>espai+punt3+punt4</td>
+</tr>
+<tr>
+<td>tecla alt+tab</td>
+<td>espai+punt2+punt3+punt4+punt5 (espai+t)</td>
+</tr>
+<tr>
+<td>Menú de NVDA</td>
+<td>espai+punt1+punt3+punt4+punt5 (espai+n)</td>
+</tr>
+<tr>
+<td>tecla Windows+D (Minimitzar totes les aplicacions)</td>
+<td>espai+punt1+punt4+punt5 (espai+d)</td>
+</tr>
+<tr>
+<td>Dir-ho tot</td>
+<td>espai+punt1+punt2+punt3+punt4+punt5+punt6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dotPad">Dot Pad</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desplaça la pantalla braille cap enrere</td>
+<td>'desplaçament_esquerre'</td>
+</tr>
+<tr>
+<td>Desplaça la pantalla braille cap endavant</td>
+<td>'desplaçament_dret'</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

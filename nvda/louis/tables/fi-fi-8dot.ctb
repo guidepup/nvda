@@ -4,7 +4,8 @@
 #-index-name: Finnish, computer
 #-display-name: Finnish computer braille
 #
-#+locale:fi
+#+language:fi
+#+language:sv-FI
 #+type:computer
 #+dots:8
 # Marked as "direction:both" by Bue Vester-Andersen
