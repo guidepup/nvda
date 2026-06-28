@@ -71,6 +71,16 @@ jobs:
             ) `
             -Wait
 
+      - name: Apply Guidepup custom configuration
+        if: steps.current.outputs.skip != 'true'
+        shell: pwsh
+        run: |
+          Copy-Item `
+            overrides\* `
+            nvda\ `
+            -Recurse `
+            -Force
+
       - name: Record version
         if: steps.current.outputs.skip != 'true'
         shell: pwsh
