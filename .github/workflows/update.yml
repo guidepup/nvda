@@ -1,4 +1,4 @@
-name: Update NVDA CRON
+name: Update NVDA
 
 on:
   schedule:
