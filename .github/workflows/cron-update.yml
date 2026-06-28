@@ -1,0 +1,108 @@
+name: Update NVDA CRON
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Get the latest NVDA release
+        id: release
+        shell: pwsh
+        run: |
+          $release = Invoke-RestMethod `
+            https://api.github.com/repos/nvaccess/nvda/releases/latest
+
+          $asset = $release.assets |
+            Where-Object { $_.name -match "^nvda_.*\.exe$" } |
+            Select-Object -First 1
+
+          if (-not $asset) {
+            throw "Installer asset not found"
+          }
+
+          echo "tag=$($release.tag_name)" >> $env:GITHUB_OUTPUT
+          echo "version=$($release.tag_name -replace '^release-','')" >> $env:GITHUB_OUTPUT
+          echo "url=$($asset.browser_download_url)" >> $env:GITHUB_OUTPUT
+
+      - name: Skip if already current
+        id: current
+        shell: pwsh
+        run: |
+          if (Test-Path version.txt) {
+            $current = Get-Content version.txt -Raw
+          } else {
+            $current = ""
+          }
+
+          if ($current.Trim() -eq "${{ steps.release.outputs.version }}") {
+            echo "skip=true" >> $env:GITHUB_OUTPUT
+          }
+
+      - name: Download installer
+        if: steps.current.outputs.skip != 'true'
+        shell: pwsh
+        run: |
+          Invoke-WebRequest `
+            "${{ steps.release.outputs.url }}" `
+            -OutFile nvda.exe
+
+      - name: Create portable copy
+        if: steps.current.outputs.skip != 'true'
+        shell: pwsh
+        run: |
+          Remove-Item nvda -Recurse -Force -ErrorAction Ignore
+
+          Start-Process `
+            -FilePath .\nvda.exe `
+            -ArgumentList @(
+              "--create-portable-silent",
+              "--portable-path=`"$pwd\nvda`""
+            ) `
+            -Wait
+
+      - name: Apply Guidepup custom configuration
+        if: steps.current.outputs.skip != 'true'
+        shell: pwsh
+        run: |
+          Copy-Item `
+            overrides\* `
+            nvda\ `
+            -Recurse `
+            -Force
+
+      - name: Record version
+        if: steps.current.outputs.skip != 'true'
+        shell: pwsh
+        run: |
+          "${{ steps.release.outputs.version }}" |
+            Set-Content version.txt
+
+      - name: Commit and create PR
+        if: steps.current.outputs.skip != 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: "feat: update nvda to ${{ steps.release.outputs.version }}"
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+          branch: nvda-${{ steps.release.outputs.version }}
+          delete-branch: true
+          title: Update NVDA to ${{ steps.release.outputs.version }}
+          body: |
+            Automated update.
+
+            Upstream release:
+            https://github.com/nvaccess/nvda/releases/tag/${{ steps.release.outputs.tag }}
+          assignees: cmorten
+          reviewers: cmorten
+          draft: false
