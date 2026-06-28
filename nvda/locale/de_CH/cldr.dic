@@ -1,169 +1,173 @@
 ﻿symbols:
-{	eckige Klammer	none
-”	schliessendes doppeltes Anführungszeichen	none
-)	schliessende Klammer	none
-]	schliessende eckige Klammer	none
-}	schliessende geschwungene Klammer	none
-〉	schliessende spitze Klammer	none
-》	schliessende doppelte spitze Klammer	none
-」	schliessende rechtwinklige Klammer	none
-『	öffnende weisse Eckklammer	none
-』	schliessende rechtwinklige Klammer hohl	none
-】	schliessende schwarze konkave Klammer	none
-〕	schliessende Klammer mit stumpfen Winkeln	none
-〗	schliessende linsenförmige Klammer hohl	none
-§	Paragraph	none
-`	Accent grave	none
-´	Accent aigu	none
-=	gleich	none
->	grösser als	none
-|	Längsstrich	none
-≈	fast gleich wie	none
-≥	grösser als oder gleich	none
-◯	grosser hohler Kreis	none
-♪	Achtelsnote	none
-😃	grinsendes Gesicht mit grossen Augen	none
-😅	Lachender Smiley mit kaltem Schweiss	none
-🤐	Smiley mit Reissverschlussmund	none
-😶‍🌫	Kopf in den Wolken	none
-😮‍💨	ausatmendes Gesicht	none
-😵‍💫	Gesicht mit Spiralaugen	none
-🥸	Gesicht mit Maske	none
-😳	Erröteter Smiley mit grossen Augen	none
-😰	Smiley mit offenem Mund und kaltem Schweiss	none
-😓	Smiley mit kaltem Schweiss	none
-👽	Ausserirdisches Wesen	none
-❤‍🔥	brennendes Herz	none
-❤‍🩹	Herz mit Pflaster	none
-🤍	weisses Herz	none
-💥	Zusammenstoss	none
-💦	Schweisstropfen	none
-🖖	Vulkanischer Gruss	none
-🤘	Teufelsgruss	none
-🦶	Fuss	none
-🧟‍♂	Zombiemann	none
-🚶	Fussgänger(in)	none
-🚶‍♂	Fussgänger	none
-🚶‍♀	Fussgängerin	none
-🧑‍🦯	Person mit Langstock	none
-👣	Fussabdrücke	none
-🦳	weisses Haar	none
-💐	Blumenstrauss	none
-🌶	Chili	none
-🫑	Peperoni	none
-🍗	Pouletschenkel	none
-🍠	Geröstete Süsskartoffel	none
-☕	Heissgetränk	none
-🫖	Teekrug	none
-♨	Heisse Quellen	none
-🚊	Strassenbahn	none
-🚋	Tramwagen	none
-⭐	weisser mittelgrosser Stern	none
-🌌	Milchstrasse	none
-🌥	Sonne hinter grosser Wolke	none
-⚽	Fussball	none
-🩴	Flipflops	none
-⛑	Helm mit weissem Kreuz	none
-📆	Abreisskalender	none
-📌	Reisszwecke	none
-📍	runde Reisszwecke	none
-🛗	Lift	none
-🚼	Baby-Symbol	none
-🚸	Kinder-queren-die-Strasse-Schild	none
-🚷	Fussgänger-verboten-Schild	none
-☢	radioaktiv	none
-➕	Plus	none
-➖	Minus	none
-❔	weisses Fragezeichen	none
-❕	weisses Ausrufezeichen	none
-💲	fettes Dollarzeichen	none
-⭕	Grosser Kreis	none
-✅	Weisses Häkchen	none
-🔠	Eingabesymbol lateinische Grossbuchstaben	none
-🅰	Grossbuchstabe A in Quadrat	none
-🆎	Grossbuchstaben AB in rotem Quadrat	none
-🅱	Grossbuchstabe B in Quadrat	none
-🆑	Grossbuchstaben CL in rotem Quadrat	none
-🆔	Grossbuchstaben ID in lila Quadrat	none
-🆖	Grossbuchstaben NG in blauem Quadrat	none
-🅾	Grossbuchstabe O in Quadrat	none
-🆗	Grossbuchstaben OK in blauem Quadrat	none
-🅿	Grossbuchstabe P in Quadrat	none
-🆚	Grossbuchstaben VS in orangefarbenem Quadrat	none
-🔴	Grosser roter Kreis	none
-🔵	Grosser blauer Kreis	none
-⚫	Grosser schwarzer Kreis	none
-⚪	Grosser weisser Kreis	none
-⬛	Grosses schwarzes Quadrat	none
-⬜	Grosses weisses Quadrat	none
-◼	Mittelgrosses schwarzes Quadrat	none
-◻	Mittelgrosses weisses Quadrat	none
-◽	Mittelkleines weisses Quadrat	none
-▫	Kleines weisses Quadrat	none
-🔶	Grosse orangefarbene Raute	none
-🔷	Grosse blaue Raute	none
-🔳	Weisse quadratische Schaltfläche	none
-🏳	Wehende weisse Fahne	none
-🏳‍⚧	Transgenderflagge	none
-$	Dollarzeichen	none
-₿	Bitcoin	none
-🖖🏻	Vulkanischer Gruss helle Hautfarbe	none
-🖖🏼	Vulkanischer Gruss mittelhelle Hautfarbe	none
-🖖🏽	Vulkanischer Gruss mittlere Hautfarbe	none
-🖖🏾	Vulkanischer Gruss mitteldunkle Hautfarbe	none
-🖖🏿	Vulkanischer Gruss dunkle Hautfarbe	none
-🤘🏻	Teufelsgruss helle Hautfarbe	none
-🤘🏼	Teufelsgruss mittelhelle Hautfarbe	none
-🤘🏽	Teufelsgruss mittlere Hautfarbe	none
-🤘🏾	Teufelsgruss mitteldunkle Hautfarbe	none
-🤘🏿	Teufelsgruss dunkle Hautfarbe	none
-🦶🏻	Fuss helle Hautfarbe	none
-🦶🏼	Fuss mittelhelle Hautfarbe	none
-🦶🏽	Fuss mittlere Hautfarbe	none
-🦶🏾	Fuss mitteldunkle Hautfarbe	none
-🦶🏿	Fuss dunkle Hautfarbe	none
-🧑‍🦳	Erwachsener weisses Haar	none
-🧑🏻‍🦳	Erwachsener helle Hautfarbe, weisses Haar	none
-🧑🏼‍🦳	Erwachsener mittelhelle Hautfarbe, weisses Haar	none
-🧑🏽‍🦳	Erwachsener mittlere Hautfarbe, weisses Haar	none
-🧑🏾‍🦳	Erwachsener mitteldunkle Hautfarbe, weisses Haar	none
-🧑🏿‍🦳	Erwachsener dunkle Hautfarbe, weisses Haar	none
-👨‍🦳	Mann weisses Haar	none
-👨🏻‍🦳	Mann helle Hautfarbe, weisses Haar	none
-👨🏼‍🦳	Mann mittelhelle Hautfarbe, weisses Haar	none
-👨🏽‍🦳	Mann mittlere Hautfarbe, weisses Haar	none
-👨🏾‍🦳	Mann mitteldunkle Hautfarbe, weisses Haar	none
-👨🏿‍🦳	Mann dunkle Hautfarbe, weisses Haar	none
-👩‍🦳	Frau weisses Haar	none
-👩🏻‍🦳	Frau helle Hautfarbe, weisses Haar	none
-👩🏼‍🦳	Frau mittelhelle Hautfarbe, weisses Haar	none
-👩🏽‍🦳	Frau mittlere Hautfarbe, weisses Haar	none
-👩🏾‍🦳	Frau mitteldunkle Hautfarbe, weisses Haar	none
-👩🏿‍🦳	Frau dunkle Hautfarbe, weisses Haar	none
-🚶🏻	Fussgänger(in) helle Hautfarbe	none
-🚶🏼	Fussgänger(in) mittelhelle Hautfarbe	none
-🚶🏽	Fussgänger(in) mittlere Hautfarbe	none
-🚶🏾	Fussgänger(in) mitteldunkle Hautfarbe	none
-🚶🏿	Fussgänger(in) dunkle Hautfarbe	none
-🚶🏻‍♂	Fussgänger helle Hautfarbe	none
-🚶🏼‍♂	Fussgänger mittelhelle Hautfarbe	none
-🚶🏽‍♂	Fussgänger mittlere Hautfarbe	none
-🚶🏾‍♂	Fussgänger mitteldunkle Hautfarbe	none
-🚶🏿‍♂	Fussgänger dunkle Hautfarbe	none
-🚶🏻‍♀	Fussgängerin helle Hautfarbe	none
-🚶🏼‍♀	Fussgängerin mittelhelle Hautfarbe	none
-🚶🏽‍♀	Fussgängerin mittlere Hautfarbe	none
-🚶🏾‍♀	Fussgängerin mitteldunkle Hautfarbe	none
-🚶🏿‍♀	Fussgängerin dunkle Hautfarbe	none
-🧑🏻‍🦯	Person mit Langstock helle Hautfarbe	none
-🧑🏼‍🦯	Person mit Langstock mittelhelle Hautfarbe	none
-🧑🏽‍🦯	Person mit Langstock mittlere Hautfarbe	none
-🧑🏾‍🦯	Person mit Langstock mitteldunkle Hautfarbe	none
-🧑🏿‍🦯	Person mit Langstock dunkle Hautfarbe	none
-🇧🇳	Flagge Brunei	none
-🇧🇼	Flagge Botswana	none
-🇨🇻	Flagge Kapverden	none
-🇬🇧	Flagge Grossbritannien	none
-🇸🇧	Flagge Salomon-Inseln	none
-🇹🇱	Flagge Osttimor	none
-🇿🇼	Flagge Zimbabwe	none
+”	schliessendes doppeltes Anführungszeichen oben	-
+)	schliessende runde Klammer	-
+]	schliessende eckige Klammer	-
+}	schliessende geschweifte Klammer	-
+〉	schliessende spitze Klammer	-
+》	schliessende doppelte spitze Klammer	-
+」	schliessende Eckklammer	-
+』	schliessende hohle Eckklammer	-
+】	schliessende schwarze konkave Klammer	-
+〕	schliessende stumpfe Klammer	-
+〗	schliessende hohle konkave Klammer	-
+⇦	weisser Pfeil nach links	-
+⇧	weisser Pfeil nach oben	-
+⇨	weisser Pfeil nach rechts	-
+⇩	weisser Pfeil nach unten	-
+⇪	weisser Pfeil nach oben von Strich weglaufend	-
+>	grösser als	-
+≯	nicht grösser als	-
+≥	grösser als oder gleich	-
+≧	grösser als über gleich	-
+≫	viel grösser als	-
+≳	grösser als oder äquivalent	-
+⋙	sehr viel grösser als	-
+□	weisses Quadrat	-
+▢	weisses Quadrat mit abgerundeten Ecken	-
+▣	schwarzes Quadrat in weissem Quadrat	-
+▭	weisses Rechteck	-
+△	weisses nach oben weisendes Dreieck	-
+▵	weisses nach oben weisendes kleines Dreieck	-
+▷	weisses nach rechts weisendes Dreieck	-
+▹	weisses nach rechts weisendes kleines Dreieck	-
+▻	weisser nach rechts weisender Zeiger	-
+▽	weisses nach unten weisendes Dreieck	-
+▿	weisses nach unten weisendes kleines Dreieck	-
+◁	weisses nach links weisendes Dreieck	-
+◃	weisses nach links weisendes kleines Dreieck	-
+◅	weisser nach links weisender Zeiger	-
+◇	weisses Karo	-
+◈	weisses Karo mit kleinem schwarzem Karo	-
+◉	weisser Kreis mit kleinem schwarzem Kreis	-
+◕	schwarzer Kreis mit weissem Viertel oben links	-
+◙	schwarzes Quadrat mit weissem Kreis	-
+◦	weisses Aufzählungszeichen	-
+◯	grosser hohler Kreis	-
+◳	weisses Quadrat mit Viertel oben rechts	-
+◷	weisser Kreis mit Viertel oben rechts	-
+◿	weisses Dreieck unten rechts	-
+⪚	gleich über grösser als	-
+😃	grinsendes Gesicht mit grossen Augen	-
+😅	grinsendes Gesicht mit Schweisstropfen	-
+🤐	Gesicht mit Reissverschlussmund	-
+😳	errötetes Gesicht mit grossen Augen	-
+😰	besorgtes Gesicht mit Schweisstropfen	-
+😓	bedrücktes Gesicht mit Schweiss	-
+👽	Ausserirdischer	-
+🤍	weisses Herz	-
+💥	Zusammenstoss	-
+💦	Schweisstropfen	-
+🖖	vulkanischer Gruss	-
+🤘	Teufelsgruss	-
+🦶	Fuss	-
+🫦	auf Lippe beissen	-
+🚶	Fussgänger(in)	-
+🚶‍♂	Fussgänger	-
+🚶‍♀	Fussgängerin	-
+👣	Fussabdrücke	-
+🦳	weisses Haar	-
+💐	Blumenstrauss	-
+🍠	geröstete Süsskartoffel	-
+☕	Heissgetränk	-
+🫗	Flüssigkeit ausgiessen	-
+♨	heisse Quellen	-
+🚊	Strassenbahn	-
+🚋	Strassenbahnwagen	-
+⭐	weisser mittelgrosser Stern	-
+🌌	Milchstrasse	-
+🌥	Sonne hinter grosser Wolke	-
+⚽	Fussball	-
+📆	Abreisskalender	-
+📌	Reisszwecke	-
+🚸	Kinder überqueren die Strasse	-
+🚷	Fussgänger verboten	-
+❔	weisses Fragezeichen	-
+❕	weisses Ausrufezeichen	-
+✅	weisses Häkchen	-
+🔠	Eingabesymbol lateinische Grossbuchstaben	-
+🅰	Grossbuchstabe A in rotem Quadrat	-
+🆎	Grossbuchstaben AB in rotem Quadrat	-
+🅱	Grossbuchstabe B in rotem Quadrat	-
+🆑	Grossbuchstaben CL in rotem Quadrat	-
+🆔	Grossbuchstaben ID in lila Quadrat	-
+🆖	Grossbuchstaben NG in blauem Quadrat	-
+🅾	Grossbuchstabe O in rotem Quadrat	-
+🆗	Grossbuchstaben OK in blauem Quadrat	-
+🅿	Grossbuchstabe P in blauem Quadrat	-
+⚪	weisser Punkt	-
+⬛	grosses schwarzes Quadrat	-
+⬜	grosses weisses Quadrat	-
+◼	mittelgrosses schwarzes Quadrat	-
+◻	mittelgrosses weisses Quadrat	-
+◽	mittelkleines weisses Quadrat	-
+▫	kleines weisses Quadrat	-
+🔶	grosse orangefarbene Raute	-
+🔷	grosse blaue Raute	-
+🔳	weisse quadratische Schaltfläche	-
+🏳	weisse Flagge	-
+🖖🏻	vulkanischer Gruss helle Hautfarbe	-
+🖖🏼	vulkanischer Gruss mittelhelle Hautfarbe	-
+🖖🏽	vulkanischer Gruss mittlere Hautfarbe	-
+🖖🏾	vulkanischer Gruss mitteldunkle Hautfarbe	-
+🖖🏿	vulkanischer Gruss dunkle Hautfarbe	-
+🤘🏻	Teufelsgruss helle Hautfarbe	-
+🤘🏼	Teufelsgruss mittelhelle Hautfarbe	-
+🤘🏽	Teufelsgruss mittlere Hautfarbe	-
+🤘🏾	Teufelsgruss mitteldunkle Hautfarbe	-
+🤘🏿	Teufelsgruss dunkle Hautfarbe	-
+🦶🏻	Fuss helle Hautfarbe	-
+🦶🏼	Fuss mittelhelle Hautfarbe	-
+🦶🏽	Fuss mittlere Hautfarbe	-
+🦶🏾	Fuss mitteldunkle Hautfarbe	-
+🦶🏿	Fuss dunkle Hautfarbe	-
+🧑‍🦳	Person weisses Haar	-
+🧑🏻‍🦳	Person helle Hautfarbe, weisses Haar	-
+🧑🏼‍🦳	Person mittelhelle Hautfarbe, weisses Haar	-
+🧑🏽‍🦳	Person mittlere Hautfarbe, weisses Haar	-
+🧑🏾‍🦳	Person mitteldunkle Hautfarbe, weisses Haar	-
+🧑🏿‍🦳	Person dunkle Hautfarbe, weisses Haar	-
+👨‍🦳	Mann weisses Haar	-
+👨🏻‍🦳	Mann helle Hautfarbe, weisses Haar	-
+👨🏼‍🦳	Mann mittelhelle Hautfarbe, weisses Haar	-
+👨🏽‍🦳	Mann mittlere Hautfarbe, weisses Haar	-
+👨🏾‍🦳	Mann mitteldunkle Hautfarbe, weisses Haar	-
+👨🏿‍🦳	Mann dunkle Hautfarbe, weisses Haar	-
+👩‍🦳	Frau weisses Haar	-
+👩🏻‍🦳	Frau helle Hautfarbe, weisses Haar	-
+👩🏼‍🦳	Frau mittelhelle Hautfarbe, weisses Haar	-
+👩🏽‍🦳	Frau mittlere Hautfarbe, weisses Haar	-
+👩🏾‍🦳	Frau mitteldunkle Hautfarbe, weisses Haar	-
+👩🏿‍🦳	Frau dunkle Hautfarbe, weisses Haar	-
+🚶🏻	Fussgänger(in) helle Hautfarbe	-
+🚶🏼	Fussgänger(in) mittelhelle Hautfarbe	-
+🚶🏽	Fussgänger(in) mittlere Hautfarbe	-
+🚶🏾	Fussgänger(in) mitteldunkle Hautfarbe	-
+🚶🏿	Fussgänger(in) dunkle Hautfarbe	-
+🚶🏻‍♂	Fussgänger helle Hautfarbe	-
+🚶🏼‍♂	Fussgänger mittelhelle Hautfarbe	-
+🚶🏽‍♂	Fussgänger mittlere Hautfarbe	-
+🚶🏾‍♂	Fussgänger mitteldunkle Hautfarbe	-
+🚶🏿‍♂	Fussgänger dunkle Hautfarbe	-
+🚶🏻‍♀	Fussgängerin helle Hautfarbe	-
+🚶🏼‍♀	Fussgängerin mittelhelle Hautfarbe	-
+🚶🏽‍♀	Fussgängerin mittlere Hautfarbe	-
+🚶🏾‍♀	Fussgängerin mitteldunkle Hautfarbe	-
+🚶🏿‍♀	Fussgängerin dunkle Hautfarbe	-
+🚶‍➡	Fussgänger(in) nach rechts	-
+🚶🏻‍➡	Fussgänger(in) helle Hautfarbe, nach rechts	-
+🚶🏼‍➡	Fussgänger(in) mittelhelle Hautfarbe, nach rechts	-
+🚶🏽‍➡	Fussgänger(in) mittlere Hautfarbe, nach rechts	-
+🚶🏾‍➡	Fussgänger(in) mitteldunkle Hautfarbe, nach rechts	-
+🚶🏿‍➡	Fussgänger(in) dunkle Hautfarbe, nach rechts	-
+🚶‍♀‍➡	Fussgängerin nach rechts	-
+🚶🏻‍♀‍➡	Fussgängerin helle Hautfarbe, nach rechts	-
+🚶🏼‍♀‍➡	Fussgängerin mittelhelle Hautfarbe, nach rechts	-
+🚶🏽‍♀‍➡	Fussgängerin mittlere Hautfarbe, nach rechts	-
+🚶🏾‍♀‍➡	Fussgängerin mitteldunkle Hautfarbe, nach rechts	-
+🚶🏿‍♀‍➡	Fussgängerin dunkle Hautfarbe, nach rechts	-
+🚶‍♂‍➡	Fussgänger nach rechts	-
+🚶🏻‍♂‍➡	Fussgänger helle Hautfarbe, nach rechts	-
+🚶🏼‍♂‍➡	Fussgänger mittelhelle Hautfarbe, nach rechts	-
+🚶🏽‍♂‍➡	Fussgänger mittlere Hautfarbe, nach rechts	-
+🚶🏾‍♂‍➡	Fussgänger mitteldunkle Hautfarbe, nach rechts	-
+🚶🏿‍♂‍➡	Fussgänger dunkle Hautfarbe, nach rechts	-

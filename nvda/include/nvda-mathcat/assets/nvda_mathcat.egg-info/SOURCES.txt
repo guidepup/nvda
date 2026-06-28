@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+assets/nvda_mathcat.egg-info/PKG-INFO
+assets/nvda_mathcat.egg-info/SOURCES.txt
+assets/nvda_mathcat.egg-info/dependency_links.txt
+assets/nvda_mathcat.egg-info/top_level.txt

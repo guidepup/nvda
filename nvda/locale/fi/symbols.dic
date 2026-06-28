@@ -1,7 +1,6 @@
-﻿#locale/fi/symbols.dic
-#A part of NonVisual Desktop Access (NVDA)
-#Copyright (c) 2011-2021 NVDA Contributors
-#This file is covered by the GNU General Public License.
+# A part of NonVisual Desktop Access (NVDA)
+# Copyright (c) 2011-2024 NVDA Contributors
+# This file is covered by the GNU General Public License.
 
 complexSymbols:
 # identifier	regexp
@@ -12,12 +11,13 @@ complexSymbols:
 # Phrase endings
 ; phrase ending	(?<=[^\s;]);(?=\s|$)
 : phrase ending	(?<=[^\s:]):(?=\s|$)
+# Series of dots used for visual presentation, e.g. in table of contents
+multiple .	\.{4,}
 # Others
 decimal comma	(?<![^\d -])\,(?=\d)
 negative number	(?<!\w)[-−]{1}(?=[$£€¥,]?\d)
-percent	(?<=\d)\ ?\%(?!\w)
+percent	(?<=[\d,.]\d|[^\d\w][02-9])\ ?\%(?!\:?\w)
 dates	(((0?[1-9]|[12]\d|3[01])[\.](0?[13578]|1[02])[\.]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|[12]\d|30)[\.](0?[13456789]|1[012])[\.]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|1\d|2[0-8])[\.]0?2[\.]((1[6-9]|[2-9]\d)?\d{2}))|(29[\.]0?2[\.]((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00)))
-euro	^(0|(([1-9]{1}|[1-9]{1}[0-9]{1}|[1-9]{1}[0-9]{2}){1}(\ [0-9]{3}){0,})),(([0-9]{2})|\-\-)([\ ]{1})(€){1}$
 thousand separators	(^(((\d)|(\d\d)|(\d\d\d))(\xA0|\x20))*((\d)|(\d\d)|(\d\d\d))([,.]\d*)?$)
 between-words -	(?<=\s)[-](?=\s)
 degrees	(?<=\d)°(?!\w)
@@ -35,13 +35,12 @@ symbols:
 … sentence ending	piste piste piste	all	always
 ; phrase ending	puolipiste	most	always
 : phrase ending	kaksoispiste	most	always
-
+multiple .	useita pisteitä	all	always
 decimal comma		none	always
 in-word '	heitto	all	norep
 negative number	miinus	none	norep
 percent	prosenttia	none	norep
 dates	 	all	always
-euro	euroa	all	norep
 thousand separators	 	all	always
 between-words -	viiva	all	norep
 degrees	astetta	none	norep
@@ -51,19 +50,20 @@ degrees-fahrenheit	astetta faarenhaittia	none	norep
 # Whitespace
 \0	tyhjä	char	# nollamerkki
 \t	sisennys
-\n	rivinvaihto	char
+\n	rivinvaihto	char	always
 \f	sivunvaihto	none
-\r	rivinvaihto	char
+\r	uusi rivi	char	always
  	väli	char
- 	väli	char	# sitova välilyönti
+ 	väli	char	# non-breaking space
 
 # Standard punctuation/symbols
 !	huuto	all
+！	huuto	all
 "	lainaus	most
 \#	risu	some
 $	dollari	all	norep
 £	punta	all	norep
-€	euro	all	norep
+€	euroa	all	norep
 ¢	sentti	all	norep
 ¥	jeni	all	norep
 ₹	rupia	some	norep
@@ -77,18 +77,25 @@ $	dollari	all	norep
 )	loppusulku	most	always
 *	tähti	some
 ,	pilkku	all	always
--	viiva	most
+、	ideografinen pilkku	all	always
+،	arabialainen pilkku	all	always
+-	viiva	most	always
 .	piste	some
+．	piste	some
 /	kautta	some
-:	kaksoispiste	most	norep
+：	kaksoispiste	most	norep
 ;	puolipiste	most
+؛	arabialainen puolipiste	most
+；	puolipiste	most
 ?	kysymys	all
+؟	arabialainen kysymys	all
+？	kysymys	all
 @	ät	some
 [	alkuhaka	most
 ]	loppuhaka	most
 \\	keno	some
 ^	hattu	most
-_	alaviiva	most
+_	alaviiva	most	norep
 `	gravis	all
 {	alkuaalto	most
 }	loppuaalto	most
@@ -103,17 +110,18 @@ _	alaviiva	most
 ′	yläpuolinen indeksointipilkku	some
 ″	kaksinkertainen yläpuolinen indeksointipilkku	some
 ‴	kolminkertainen yläpuolinen indeksointipilkku	some
+‐	yhdysviiva	most	always
 
 # Other characters
 •	luetelmapallo	some
 …	piste piste piste	all	always
 ...	piste piste piste	all	always
-“	käänteinen alkulainaus	most
-”	käänteinen loppulainaus	most
-‘	vasen lainaus	most
-’	oikea lainaus	most
+“	vasen lainaus	most
+”	lainaus	most
+‘	vasen heitto	most
+’	heitto	most
 –	lyhyt ajatusviiva	most	always
-—	pitkä ajatusviiva	most
+—	pitkä ajatusviiva	most	always
 ­	pehmeä tavuviiva	most
 ⁃	luetteloviiva	none
 ●	tähti	some
@@ -126,7 +134,7 @@ _	alaviiva	most
 ‏	nuoli oikealta vasemmalle	char
 ¶	kappale	most
 ■	musta neliö	most
-▪	pieni musta neliö	some
+▪	pieni musta neliö	most
 ◾	musta neliö	most
 □	valkoinen neliö	most
 ◦	valkoinen luettelomerkki	some
@@ -139,8 +147,8 @@ _	alaviiva	most
 ◆	musta timantti	some
 §	pykälä	some
 °	aste	some
-«	vasen kulmalainaus	most
-»	oikea kulmalainaus	most
+«	vasen kulmalainaus	most	always
+»	oikea kulmalainaus	most	always
 µ	mikro	some
 ⁰	yläindeksi 0	some
 ¹	yläindeksi 1	some
@@ -297,7 +305,7 @@ _	alaviiva	most
 ⊥	ylös osoittava nupi	none
 ⟂	kohtisuora	none
 ‖	vektorin normi	none
-̂	normalisoi	none
+̂	hattu	none
 ∿	siniaalto	none
 ∡	mitattu kulma	none
 ∢	kaarellinen kulma	none
@@ -358,7 +366,7 @@ _	alaviiva	most
 ⊀	ei edellä	none
 ⊁	ei seuraa	none
 
-# Vulgur Fractions U+2150 to U+215E
+# Vulgar Fractions U+2150 to U+215E
 ¼	yksi neljäsosaa	none
 ½	puolikas	none
 ¾	kolme neljäsosaa	none
@@ -393,7 +401,268 @@ _	alaviiva	most
 ℶ	bet-luku	none
 
 # Miscellaneous technical
-⌘	Macin komentonäppäin	none
+⌘	Macin Komento-näppäin	none
+⌥	Macin Optio-näppäin	none
+
+# 6-dot cell
+# note: the character on the next line is U+2800 (braille space), not U+0020 (ASCII space)
+⠀	väli
+⠁	pistekirjoitus 1
+⠂	pistekirjoitus 2
+⠃	pistekirjoitus 1 2
+⠄	pistekirjoitus 3
+⠅	pistekirjoitus 1 3
+⠆	pistekirjoitus 2 3
+⠇	pistekirjoitus 1 2 3
+⠈	pistekirjoitus 4
+⠉	pistekirjoitus 1 4
+⠊	pistekirjoitus 2 4
+⠋	pistekirjoitus 1 2 4
+⠌	pistekirjoitus 3 4
+⠍	pistekirjoitus 1 3 4
+⠎	pistekirjoitus 2 3 4
+⠏	pistekirjoitus 1 2 3 4
+⠐	pistekirjoitus 5
+⠑	pistekirjoitus 1 5
+⠒	pistekirjoitus 2 5
+⠓	pistekirjoitus 1 2 5
+⠔	pistekirjoitus 3 5
+⠕	pistekirjoitus 1 3 5
+⠖	pistekirjoitus 2 3 5
+⠗	pistekirjoitus 1 2 3 5
+⠘	pistekirjoitus 4 5
+⠙	pistekirjoitus 1 4 5
+⠚	pistekirjoitus 2 4 5
+⠛	pistekirjoitus 1 2 4 5
+⠜	pistekirjoitus 3 4 5
+⠝	pistekirjoitus 1 3 4 5
+⠞	pistekirjoitus 2 3 4 5
+⠟	pistekirjoitus 1 2 3 4 5
+⠠	pistekirjoitus 6
+⠡	pistekirjoitus 1 6
+⠢	pistekirjoitus 2 6
+⠣	pistekirjoitus 1 2 6
+⠤	pistekirjoitus 3 6
+⠥	pistekirjoitus 1 3 6
+⠦	pistekirjoitus 2 3 6
+⠧	pistekirjoitus 1 2 3 6
+⠨	pistekirjoitus 4 6
+⠩	pistekirjoitus 1 4 6
+⠪	pistekirjoitus 2 4 6
+⠫	pistekirjoitus 1 2 4 6
+⠬	pistekirjoitus 3 4 6
+⠭	pistekirjoitus 1 3 4 6
+⠮	pistekirjoitus 2 3 4 6
+⠯	pistekirjoitus 1 2 3 4 6
+⠰	pistekirjoitus 5 6
+⠱	pistekirjoitus 1 5 6
+⠲	pistekirjoitus 2 5 6
+⠳	pistekirjoitus 1 2 5 6
+⠴	pistekirjoitus 3 5 6
+⠵	pistekirjoitus 1 3 5 6
+⠶	pistekirjoitus 2 3 5 6
+⠷	pistekirjoitus 1 2 3 5 6
+⠸	pistekirjoitus 4 5 6
+⠹	pistekirjoitus 1 4 5 6
+⠺	pistekirjoitus 2 4 5 6
+⠻	pistekirjoitus 1 2 4 5 6
+⠼	pistekirjoitus 3 4 5 6
+⠽	pistekirjoitus 1 3 4 5 6
+⠾	pistekirjoitus 2 3 4 5 6
+⠿	pistekirjoitus 1 2 3 4 5 6
+# 8-braille cell
+⡀	pistekirjoitus 7
+⡁	pistekirjoitus 1 7
+⡂	pistekirjoitus 2 7
+⡃	pistekirjoitus 1 2 7
+⡄	pistekirjoitus 3 7
+⡅	pistekirjoitus 1 3 7
+⡆	pistekirjoitus 2 3 7
+⡇	pistekirjoitus 1 2 3 7
+⡈	pistekirjoitus 4 7
+⡉	pistekirjoitus 1 4 7
+⡊	pistekirjoitus 2 4 7
+⡋	pistekirjoitus 1 2 4 7
+⡌	pistekirjoitus 3 4 7
+⡍	pistekirjoitus 1 3 4 7
+⡎	pistekirjoitus 2 3 4 7
+⡏	pistekirjoitus 1 2 3 4 7
+⡐	pistekirjoitus 5 7
+⡑	pistekirjoitus 1 5 7
+⡒	pistekirjoitus 2 5 7
+⡓	pistekirjoitus 1 2 5 7
+⡔	pistekirjoitus 3 5 7
+⡕	pistekirjoitus 1 3 5 7
+⡖	pistekirjoitus 2 3 5 7
+⡗	pistekirjoitus 1 2 3 5 7
+⡘	pistekirjoitus 4 5 7
+⡙	pistekirjoitus 1 4 5 7
+⡚	pistekirjoitus 2 4 5 7
+⡛	pistekirjoitus 1 2 4 5 7
+⡜	pistekirjoitus 3 4 5 7
+⡝	pistekirjoitus 1 3 4 5 7
+⡞	pistekirjoitus 2 3 4 5 7
+⡟	pistekirjoitus 1 2 3 4 5 7
+⡠	pistekirjoitus 6 7
+⡡	pistekirjoitus 1 6 7
+⡢	pistekirjoitus 2 6 7
+⡣	pistekirjoitus 1 2 6 7
+⡤	pistekirjoitus 3 6 7
+⡥	pistekirjoitus 1 3 6 7
+⡦	pistekirjoitus 2 3 6 7
+⡧	pistekirjoitus 1 2 3 6 7
+⡨	pistekirjoitus 4 6 7
+⡩	pistekirjoitus 1 4 6 7
+⡪	pistekirjoitus 2 4 6 7
+⡫	pistekirjoitus 1 2 4 6 7
+⡬	pistekirjoitus 3 4 6 7
+⡭	pistekirjoitus 1 3 4 6 7
+⡮	pistekirjoitus 2 3 4 6 7
+⡯	pistekirjoitus 1 2 3 4 6 7
+⡰	pistekirjoitus 5 6 7
+⡱	pistekirjoitus 1 5 6 7
+⡲	pistekirjoitus 2 5 6 7
+⡳	pistekirjoitus 1 2 5 6 7
+⡴	pistekirjoitus 3 5 6 7
+⡵	pistekirjoitus 1 3 5 6 7
+⡶	pistekirjoitus 2 3 5 6 7
+⡷	pistekirjoitus 1 2 3 5 6 7
+⡸	pistekirjoitus 1 2 3 7
+⡹	pistekirjoitus 1 4 5 6 7
+⡺	pistekirjoitus 2 4 5 6 7
+⡻	pistekirjoitus 1 2 4 5 6 7
+⡼	pistekirjoitus 3 4 5 6 7
+⡽	pistekirjoitus 1 3 4 5 6 7
+⡾	pistekirjoitus 2 3 4 5 6 7
+⡿	pistekirjoitus 1 2 3 4 5 6 7
+⢀	pistekirjoitus 8
+⢁	pistekirjoitus 1 8
+⢂	pistekirjoitus 2 8
+⢃	pistekirjoitus 1 2 8
+⢄	pistekirjoitus 3 8
+⢅	pistekirjoitus 1 3 8
+⢆	pistekirjoitus 2 3 8
+⢇	pistekirjoitus 1 2 3 8
+⢈	pistekirjoitus 4 8
+⢉	pistekirjoitus 1 4 8
+⢊	pistekirjoitus 2 4 8
+⢋	pistekirjoitus 1 2 4 8
+⢌	pistekirjoitus 3 4 8
+⢍	pistekirjoitus 1 3 4 8
+⢎	pistekirjoitus 2 3 4 8
+⢏	pistekirjoitus 1 2 3 4 8
+⢐	pistekirjoitus 5 8
+⢑	pistekirjoitus 1 5 8
+⢒	pistekirjoitus 2 5 8
+⢓	pistekirjoitus 1 2 5 8
+⢔	pistekirjoitus 3 5 8
+⢕	pistekirjoitus 1 3 5 8
+⢖	pistekirjoitus 2 3 5 8
+⢗	pistekirjoitus 1 2 3 5 8
+⢘	pistekirjoitus 4 5 8
+⢙	pistekirjoitus 1 4 5 8
+⢚	pistekirjoitus 2 4 5 8
+⢛	pistekirjoitus 1 2 4 5 8
+⢜	pistekirjoitus 3 4 5 8
+⢝	pistekirjoitus 1 3 4 5 8
+⢞	pistekirjoitus 2 3 4 5 8
+⢟	pistekirjoitus 1 2 3 4 5 8
+⢠	pistekirjoitus 6 8
+⢡	pistekirjoitus 1 6 8
+⢢	pistekirjoitus 2 6 8
+⢣	pistekirjoitus 1 2 6 8
+⢤	pistekirjoitus 3 6 8
+⢥	pistekirjoitus 1 3 6 8
+⢦	pistekirjoitus 2 3 6 8
+⢧	pistekirjoitus 1 2 3 6 8
+⢨	pistekirjoitus 4 6 8
+⢩	pistekirjoitus 1 4 6 8
+⢪	pistekirjoitus 2 4 6 8
+⢫	pistekirjoitus 1 2 4 6 8
+⢬	pistekirjoitus 3 4 6 8
+⢭	pistekirjoitus 1 3 4 6 8
+⢮	pistekirjoitus 2 3 4 6 8
+⢯	pistekirjoitus 1 2 3 4 6 8
+⢰	pistekirjoitus 5 6 8
+⢱	pistekirjoitus 1 5 6 8
+⢲	pistekirjoitus 2 5 6 8
+⢳	pistekirjoitus 1 2 5 6 8
+⢴	pistekirjoitus 3 5 6 8
+⢵	pistekirjoitus 1 3 5 6 8
+⢶	pistekirjoitus 2 3 5 6 8
+⢷	pistekirjoitus 1 2 3 5 6 8
+⢸	pistekirjoitus 1 2 3 8
+⢹	pistekirjoitus 1 4 5 6 8
+⢺	pistekirjoitus 2 4 5 6 8
+⢻	pistekirjoitus 1 2 4 5 6 8
+⢼	pistekirjoitus 3 4 5 6 8
+⢽	pistekirjoitus 1 3 4 5 6 8
+⢾	pistekirjoitus 2 3 4 5 6 8
+⢿	pistekirjoitus 1 2 3 4 5 6 8
+⣀	pistekirjoitus 7 8
+⣁	pistekirjoitus 1 7 8
+⣂	pistekirjoitus 2 7 8
+⣃	pistekirjoitus 1 2 7 8
+⣄	pistekirjoitus 3 7 8
+⣅	pistekirjoitus 1 3 7 8
+⣆	pistekirjoitus 2 3 7 8
+⣇	pistekirjoitus 1 2 3 7 8
+⣈	pistekirjoitus 4 7 8
+⣉	pistekirjoitus 1 4 7 8
+⣊	pistekirjoitus 2 4 7 8
+⣋	pistekirjoitus 1 2 4 7 8
+⣌	pistekirjoitus 3 4 7 8
+⣍	pistekirjoitus 1 3 4 7 8
+⣎	pistekirjoitus 2 3 4 7 8
+⣏	pistekirjoitus 1 2 3 4 7 8
+⣐	pistekirjoitus 5 7 8
+⣑	pistekirjoitus 1 5 7 8
+⣒	pistekirjoitus 2 5 7 8
+⣓	pistekirjoitus 1 2 5 7 8
+⣔	pistekirjoitus 3 5 7 8
+⣕	pistekirjoitus 1 3 5 7 8
+⣖	pistekirjoitus 2 3 5 7 8
+⣗	pistekirjoitus 1 2 3 5 7 8
+⣘	pistekirjoitus 4 5 7 8
+⣙	pistekirjoitus 1 4 5 7 8
+⣚	pistekirjoitus 2 4 5 7 8
+⣛	pistekirjoitus 1 2 4 5 7 8
+⣜	pistekirjoitus 3 4 5 7 8
+⣝	pistekirjoitus 1 3 4 5 7 8
+⣞	pistekirjoitus 2 3 4 5 7 8
+⣟	pistekirjoitus 1 2 3 4 5 7 8
+⣠	pistekirjoitus 6 7 8
+⣡	pistekirjoitus 1 6 7 8
+⣢	pistekirjoitus 2 6 7 8
+⣣	pistekirjoitus 1 2 6 7 8
+⣤	pistekirjoitus 3 6 7 8
+⣥	pistekirjoitus 1 3 6 7 8
+⣦	pistekirjoitus 2 3 6 7 8
+⣧	pistekirjoitus 1 2 3 6 7 8
+⣨	pistekirjoitus 4 6 7 8
+⣩	pistekirjoitus 1 4 6 7 8
+⣪	pistekirjoitus 2 4 6 7 8
+⣫	pistekirjoitus 1 2 4 6 7 8
+⣬	pistekirjoitus 3 4 6 7 8
+⣭	pistekirjoitus 1 3 4 6 7 8
+⣮	pistekirjoitus 2 3 4 6 7 8
+⣯	pistekirjoitus 1 2 3 4 6 7 8
+⣰	pistekirjoitus 5 6 7 8
+⣱	pistekirjoitus 1 5 6 7 8
+⣲	pistekirjoitus 2 5 6 7 8
+⣳	pistekirjoitus 1 2 5 6 7 8
+⣴	pistekirjoitus 3 5 6 7 8
+⣵	pistekirjoitus 1 3 5 6 7 8
+⣶	pistekirjoitus 2 3 5 6 7 8
+⣷	pistekirjoitus 1 2 3 5 6 7 8
+⣸	pistekirjoitus 1 2 3 7 8
+⣹	pistekirjoitus 1 4 5 6 7 8
+⣺	pistekirjoitus 2 4 5 6 7 8
+⣻	pistekirjoitus 1 2 4 5 6 7 8
+⣼	pistekirjoitus 3 4 5 6 7 8
+⣽	pistekirjoitus 1 3 4 5 6 7 8
+⣾	pistekirjoitus 2 3 4 5 6 7 8
+⣿	pistekirjoitus 1 2 3 4 5 6 7 8
 
 # Greek alphabet
 Α	iso alfa	most

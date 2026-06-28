@@ -21,7 +21,7 @@
 #-index-name: Bulgarian
 #-display-name: Bulgarian braille
 #
-#+locale: bg
+#+language: bg
 #+type: literary
 #+dots: 6
 #+contraction: no
@@ -57,7 +57,7 @@ sign \x00C0 46 Capital letter sign
 sign \x00C1 3456 Digit sign
 sign \x00C5 6-36 Long dash
 sign \x00d2 12346
-uplow  \x040D\x045d 12346
+lowercase \x045d 12346
 sign \x00b8 156
 sign \x00be 1256
 sign \x00d3 456
@@ -242,12 +242,12 @@ noback always . 256
 noback always , 2
 
 # Symbol classes for special rules below:
-class upperlatin ABCDEFGHIJKLMNOPQRSTUVWXYZĈĜĤĴŜŬ
-class lowerlatin abcdefghijklmnopqrstuvwxyzĉĝĥŝĵŭ
-class uppercyrillic \x0401\x0410\x0411\x0412\x0413\x0414\x0415\x0416\x0417\x0418\x0419\x041A\x041B\x041C\x041D\x041E\x041F\x0420\x0421\x0422\x0423\x0424\x0425\x0426\x0427\x0428\x0429\x042A\x042B\x042C\x042D\x042E\x042F
-class lowercyrillic \x0430\x0431\x0432\x0433\x0434\x0435\x0436\x0437\x0438\x0439\x043A\x043B\x043C\x043D\x043E\x043F\x0440\x0441\x0442\x0443\x0444\x0445\x0446\x0447\x0448\x0449\x044A\x044B\x044C\x044D\x044E\x044F\x0451
-class latin ABCDEFGHIJKLMNOPQRSTUVWXYZĈĜĤŜĴŬabcdefghijklmnopqrstuvwxyzĉĝĥŝĵŭ
-class cyrillic \x0401\x0410\x0411\x0412\x0413\x0414\x0415\x0416\x0417\x0418\x0419\x041A\x041B\x041C\x041D\x041E\x041F\x0420\x0421\x0422\x0423\x0424\x0425\x0426\x0427\x0428\x0429\x042A\x042B\x042C\x042D\x042E\x042F\x0430\x0431\x0432\x0433\x0434\x0435\x0436\x0437\x0438\x0439\x043A\x043B\x043C\x043D\x043E\x043F\x0440\x0441\x0442\x0443\x0444\x0445\x0446\x0447\x0448\x0449\x044A\x044B\x044C\x044D\x044E\x044F\x0451
+attribute upperlatin ABCDEFGHIJKLMNOPQRSTUVWXYZĈĜĤĴŜŬ
+attribute lowerlatin abcdefghijklmnopqrstuvwxyzĉĝĥŝĵŭ
+attribute uppercyrillic \x0401\x0410\x0411\x0412\x0413\x0414\x0415\x0416\x0417\x0418\x0419\x041A\x041B\x041C\x041D\x041E\x041F\x0420\x0421\x0422\x0423\x0424\x0425\x0426\x0427\x0428\x0429\x042A\x042B\x042C\x042D\x042E\x042F
+attribute lowercyrillic \x0430\x0431\x0432\x0433\x0434\x0435\x0436\x0437\x0438\x0439\x043A\x043B\x043C\x043D\x043E\x043F\x0440\x0441\x0442\x0443\x0444\x0445\x0446\x0447\x0448\x0449\x044A\x044B\x044C\x044D\x044E\x044F\x0451
+attribute latin ABCDEFGHIJKLMNOPQRSTUVWXYZĈĜĤŜĴŬabcdefghijklmnopqrstuvwxyzĉĝĥŝĵŭ
+attribute cyrillic \x0401\x0410\x0411\x0412\x0413\x0414\x0415\x0416\x0417\x0418\x0419\x041A\x041B\x041C\x041D\x041E\x041F\x0420\x0421\x0422\x0423\x0424\x0425\x0426\x0427\x0428\x0429\x042A\x042B\x042C\x042D\x042E\x042F\x0430\x0431\x0432\x0433\x0434\x0435\x0436\x0437\x0438\x0439\x043A\x043B\x043C\x043D\x043E\x043F\x0440\x0441\x0442\x0443\x0444\x0445\x0446\x0447\x0448\x0449\x044A\x044B\x044C\x044D\x044E\x044F\x0451
 
 swapcd updigit 1234567890 1,12,14,145,15,124,1245,125,24,245
 
@@ -291,9 +291,18 @@ hyphen - 36
 noback pass2 [@46-236] @236
 
 # additional letters for Esperanto
-uplow Ĉĉ 146		LATIN LETTER C WITH CIRCUMFLEX
-uplow Ĝĝ 12456		LATIN LETTER G WITH CIRCUMFLEX
-uplow Ĥĥ 1256		LATIN LETTER H WITH CIRCUMFLEX
-uplow Ĵĵ 2456		LATIN LETTER J WITH CIRCUMFLEX
-uplow Ŝŝ 2346		LATIN LETTER S WITH CIRCUMFLEX
-uplow Ŭŭ 346		LATIN LETTER U WITH BREVE
+lowercase ĉ 146		LATIN LETTER C WITH CIRCUMFLEX
+lowercase ĝ 12456		LATIN LETTER G WITH CIRCUMFLEX
+lowercase ĥ 1256		LATIN LETTER H WITH CIRCUMFLEX
+lowercase ĵ 2456		LATIN LETTER J WITH CIRCUMFLEX
+lowercase ŝ 2346		LATIN LETTER S WITH CIRCUMFLEX
+lowercase ŭ 346		LATIN LETTER U WITH BREVE
+
+# Uppercase letters
+base uppercase \x040D \x045d
+base uppercase Ĉ ĉ	LATIN LETTER C WITH CIRCUMFLEX
+base uppercase Ĝ ĝ	LATIN LETTER G WITH CIRCUMFLEX
+base uppercase Ĥ ĥ	LATIN LETTER H WITH CIRCUMFLEX
+base uppercase Ĵ ĵ	LATIN LETTER J WITH CIRCUMFLEX
+base uppercase Ŝ ŝ	LATIN LETTER S WITH CIRCUMFLEX
+base uppercase Ŭ ŭ	LATIN LETTER U WITH BREVE
