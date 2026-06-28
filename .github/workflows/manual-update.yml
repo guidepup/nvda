@@ -1,0 +1,8 @@
+name: Update NVDA Manually
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    uses: ./.github/workflows/cron-update.yml
