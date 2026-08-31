@@ -2,16 +2,16 @@
 <html lang="ca" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>Referència ràpida de les ordres de NVDA 2026.1.1</title>
+<title>Referència ràpida de les ordres de NVDA 2026.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="referencia-rapida-de-les-ordres-de-nvda-202611">Referència ràpida de les ordres de NVDA 2026.1.1</h1>
+<body><h1 id="referencia-rapida-de-les-ordres-de-nvda-20262">Referència ràpida de les ordres de NVDA 2026.2</h1>
 <div class="toc">
 <ul>
-<li><a href="#referencia-rapida-de-les-ordres-de-nvda-202611" title="Referència ràpida de les ordres de NVDA 2026.1.1">Referència ràpida de les ordres de NVDA 2026.1.1</a><ul>
+<li><a href="#referencia-rapida-de-les-ordres-de-nvda-20262" title="Referència ràpida de les ordres de NVDA 2026.2">Referència ràpida de les ordres de NVDA 2026.2</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Utilitzant NVDA">Utilitzant NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="Gestos tàctils NVDA">Gestos tàctils NVDA</a><ul>
 <li><a href="#TouchModes" title="Modes tàctils">Modes tàctils</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Mode de navegació">Mode de navegació</a><ul>
-<li><a href="#SingleLetterNavigation" title="Navegació amb una sola lletra">Navegació amb una sola lletra</a></li>
+<li><a href="#SingleLetterNavigation" title="Navegació amb una sola lletra">Navegació amb una sola lletra</a><ul>
+<li><a href="#BrowseModeTouch" title="Navegació tàctil en mode de navegació">Navegació tàctil en mode de navegació</a><ul>
+<li><a href="#gestos-tactils-en-mode-de-navegacio" title="Gestos tàctils en mode de navegació">Gestos tàctils en mode de navegació</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="La Llista d'Elements">La Llista d'Elements</a></li>
 <li><a href="#SearchingForText" title="Cercar text">Cercar text</a></li>
 <li><a href="#ImbeddedObjects" title="Objectes incrustats">Objectes incrustats</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Braille">Braille</a><ul>
-<li><a href="#BrailleInput" title="Entrada Braille">Entrada Braille</a></li>
+<li><a href="#BrailleReading" title="Llegint en Braille">Llegint en Braille</a><ul>
+<li><a href="#BrailleReadingGestures" title="Gestos de lectura en braille">Gestos de lectura en braille</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Entrada Braille">Entrada Braille</a><ul>
+<li><a href="#BrailleInputGestures" title="Gestos d'entrada en braille">Gestos d'entrada en braille</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Visió">Visió</a><ul>
 <li><a href="#VisionScreenCurtain" title="Cortina de pantalla">Cortina de pantalla</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Lupa">Lupa</a><ul>
+<li><a href="#MagnifierCommands" title="Comandes de Lupa">Comandes de Lupa</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Reconeixement de contingut">Reconeixement de contingut</a><ul>
@@ -99,12 +116,13 @@
 <li><a href="#SelectSoundSplitMode" title="Divisió del so">Divisió del so</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Lupa">Lupa</a></li>
 <li><a href="#KeyboardSettings" title="Teclat">Teclat</a></li>
 <li><a href="#MouseSettings" title="Ratolí">Ratolí</a></li>
 <li><a href="#ReviewCursorSettings" title="Cursor de revisió">Cursor de revisió</a></li>
 <li><a href="#ObjectPresentationSettings" title="Presentació d'objectes">Presentació d'objectes</a></li>
 <li><a href="#BrowseModeSettings" title="Mode de navegació">Mode de navegació</a></li>
-<li><a href="#DocumentFormattingSettings" title="Formatació del document">Formatació del document</a></li>
+<li><a href="#DocumentFormattingSettings" title="Format del document">Format del document</a></li>
 <li><a href="#AdvancedSettings" title="Configuracions Avançades">Configuracions Avançades</a><ul>
 <li><a href="#Annotations" title="Anotacions">Anotacions</a></li>
 </ul>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">Gestos tàctils NVDA</h3>
 <p>Per alternar la compatibilitat amb la interacció tàctil, prem NVDA+control+alt+t.</p>
 <h4 id="TouchModes">Modes tàctils</h4>
-<p>Per alternar els modes tàctils, fes un toc amb 3 dits.</p>
+<p>Per canviar entre modes tàctils, fes un toc de 3 dits.</p>
 <h3 id="BasicNVDACommands">Ordres bàsiques de NVDA</h3>
 <table>
 <thead>
@@ -208,7 +226,14 @@
 <td>majúscules</td>
 <td>majúscules</td>
 <td>cap</td>
-<td>Pausa instantàniament la parla. En premer-lo de nou es continuarà parlant on ho va deixar (si la pausa és compatible amb el sintetitzador actual)</td>
+<td>Pausa instantàniament la veu. En premer-lo de nou es continuarà parlant on ho va deixar (si la pausa és compatible amb el sintetitzador actual)</td>
+</tr>
+<tr>
+<td>Repeteix l'última informació parlada</td>
+<td>'NVDA+x'</td>
+<td>'NVDA+x'</td>
+<td>Cap</td>
+<td>Repeteix l'última informació donada per NVDA. Si prems dues vegades, apareix en una finestra de consulta</td>
 </tr>
 <tr>
 <td>Menú NVDA</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Per activar i desactivar la navegació d'una sola lletra per al document actual, prem NVDA+shift+espai.</p>
+<h4 id="BrowseModeTouch">Navegació tàctil en mode de navegació</h4>
+<h5 id="gestos-tactils-en-mode-de-navegacio">Gestos tàctils en mode de navegació</h5>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Toc</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selecciona el següent tipus d'element</td>
+<td>Fes un moviment cap avall</td>
+<td>Canvia al següent tipus d'element de navegació en mode de navegació</td>
+</tr>
+<tr>
+<td>Selecciona el tipus d'element anterior</td>
+<td>fes un moviment cap amunt</td>
+<td>Canvia al tipus d'element de navegació anterior del mode de navegació</td>
+</tr>
+<tr>
+<td>Passar al següent element</td>
+<td>Fes un moviment cap a la dreta</td>
+<td>Passa al següent element de mode de navegació del tipus seleccionat</td>
+</tr>
+<tr>
+<td>Passar a l'element anterior</td>
+<td>Fes un moviment cap a l'esquerra</td>
+<td>Es mou a l'element anterior de mode de navegació del tipus seleccionat</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">La Llista d'Elements</h3>
 <table>
 <thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">Braille</h2>
+<h3 id="BrailleReading">Llegint en Braille</h3>
+<h4 id="BrailleReadingGestures">Gestos de lectura en braille</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canvia el mode braille</td>
+<td>'NVDA+alt+t'</td>
+<td>Permet alternar entre modes braille disponibles: "seguir cursors" i "mostrar sortida de veu"</td>
+</tr>
+<tr>
+<td>Seguiment braille</td>
+<td>'NVDA+control+t'</td>
+<td>Aquesta opció et permet triar si la línia braille seguirà el focus del sistema / cursor, el navegador d'objectes / cursor de revisió, o ambdós</td>
+</tr>
+<tr>
+<td>Canvia el desplaçament automàtic</td>
+<td>'NVDA+alt+k'</td>
+<td>Canvia si NVDA desplaça periòdicament la pantalla braille per presentar informació massa llarga per mostrar-la d'una sola vegada</td>
+</tr>
+<tr>
+<td>Augmentar la velocitat automàtica de desplaçament</td>
+<td>'NVDA+alt+l'</td>
+<td>Fa que el desplaçament automàtic sigui més ràpid (quan està activat)</td>
+</tr>
+<tr>
+<td>Disminuir la velocitat automàtica de desplaçament</td>
+<td>'NVDA+alt+j'</td>
+<td>Fa que el desplaçament automàtic sigui més lent (quan està activat)</td>
+</tr>
+<tr>
+<td>Alterna entre les formes de cursor braille</td>
+<td>Cap</td>
+<td>Passa per les opcions de forma (patró de punts) del cursor braille</td>
+</tr>
+<tr>
+<td>Alterna entre moviments del cursor del sistema quan enruta el cursor de revisió</td>
+<td>Cap</td>
+<td>alterna pel moviment del cursor braille del sistema quan repassis els estats del cursor de revisió mijansant les tecles d'encaminament del cursor o sensors braille</td>
+</tr>
+<tr>
+<td>Alterna entre mostrar els modes de missatges</td>
+<td>Cap</td>
+<td>Passa per les opcions de mostrar els modes de missatges braille</td>
+</tr>
+<tr>
+<td>Alterna mostrar en braille estats de selecció</td>
+<td>cap</td>
+<td>alterna pels estats de selecció en braille</td>
+</tr>
+<tr>
+<td>Cicle entre els estats de normalització Unicode en braille</td>
+<td>Cap</td>
+<td>Alterna els estats de normalització Unicode en braille</td>
+</tr>
+<tr>
+<td>Mou el braille al enfocament</td>
+<td>Cap</td>
+<td>Trasllada la pantalla braille al focus actual</td>
+</tr>
+<tr>
+<td>Mou el braille a la següent línia</td>
+<td>Cap</td>
+<td>Trasllada la línia braille a la següent línia</td>
+</tr>
+<tr>
+<td>Mou el braille a la línia anterior</td>
+<td>Cap</td>
+<td>Trasllada la línia braille a la línia anterior</td>
+</tr>
+<tr>
+<td>Informació del format en braille</td>
+<td>Cap</td>
+<td>Mostra la informació de format del text sota la cel·la braille</td>
+</tr>
+<tr>
+<td>Dur el cursor cap a o activar l'objecte braille</td>
+<td>Cap</td>
+<td>Encamina el cursor cap a o activa l'objecte sota aquesta cel·la braille</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>Cap</td>
+<td>Desplaça la línia braille enrere</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>Cap</td>
+<td>Desplaça la línia braille cap endavant</td>
+</tr>
+<tr>
+<td>Conmuta el cursor braille</td>
+<td>Cap</td>
+<td>Activa i desactiva el cursor braille</td>
+</tr>
+<tr>
+<td>Conmuta la informació de context en braille</td>
+<td>Cap</td>
+<td>Canvia la manera com es presenta la informació de context en braille</td>
+</tr>
+<tr>
+<td>Conmuta la veu quan navegues en braille</td>
+<td>Cap</td>
+<td>Activa o desactiva la veu quan navegues per línies o paràgrafs amb braille</td>
+</tr>
+<tr>
+<td>Conmuta el caràcter parlat quan polses el sensor braille</td>
+<td>Cap</td>
+<td>Activa o desactiva la parla del caràcter sota el cursor quan polses el sensor braille sobre un carácter en el text</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Entrada Braille</h3>
 <p>Si premeu el punt 7, s'esborra l'última cel·la o caràcter braille introduït.
 El punt 8 tradueix qualsevol entrada braille i prem la tecla Retorn.
 Prement el punt 7 + el punt 8 tradueix qualsevol entrada braille, però sense afegir un espai ni prémer enter.</p>
+<h4 id="BrailleInputGestures">Gestos d'entrada en braille</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entrada via línia braille</td>
+<td>qualsevol punt</td>
+<td>Entrades dels punts braille mitjançant el teclat braille</td>
+</tr>
+<tr>
+<td>Esborrar el darrer carácter escrit</td>
+<td>'punt7'</td>
+<td>Esborra l'última cel·la o caràcter braille introduït</td>
+</tr>
+<tr>
+<td>Tradueix l'entrada braille</td>
+<td>'punt7+punt8'</td>
+<td>Tradueix qualsevol entrada en braille</td>
+</tr>
+<tr>
+<td>Tradueix i prem enter</td>
+<td>'punt8'</td>
+<td>Tradueix qualsevol entrada braille i prem la tecla enter</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Visió</h2>
 <h3 id="VisionScreenCurtain">Cortina de pantalla</h3>
 <table>
@@ -1218,6 +1426,94 @@ Prement el punt 7 + el punt 8 tradueix qualsevol entrada braille, però sense af
 <td>Commuta l'estat de la cortina de pantalla</td>
 <td>'NVDA+control+escape'</td>
 <td>Activa per fer que la pantalla sigui negra o desactiva per mostrar el contingut de la pantalla. Si premeu una vegada, la cortina de pantalla s'activa fins que reinicieu NVDA. Premeu dues vegades, la cortina de pantalla s'habilita fins que la desactiveu.</td>
+</tr>
+<tr>
+<td>Informa sobre l'estat de la cortina de pantalla</td>
+<td>Cap</td>
+<td>Anuncia l'estat actual de la cortina de pantalla, si està desactivada, activada o en mode temporal.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Lupa</h2>
+<h3 id="MagnifierCommands">Comandes de Lupa</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activa i desactiva la lupa</td>
+<td>'NVDA+shift+w'</td>
+<td>Activa o desactiva la lupa</td>
+</tr>
+<tr>
+<td>Augmenta el nivell d'ampliació</td>
+<td>'NVDA+guió'</td>
+<td>Augmenta el nivell de zoom. Engega la lupa si encara no està en funcionament.</td>
+</tr>
+<tr>
+<td>Disminueix el nivell d'ampliació</td>
+<td>'NVDA+shift+guió'</td>
+<td>Disminueix el nivell de zoom</td>
+</tr>
+<tr>
+<td>Alterna entre els filtres de color</td>
+<td>'NVDA+shift+i'</td>
+<td>Passa pels filtres de color disponibles (normal, escala de grisos, invertit)</td>
+</tr>
+<tr>
+<td>Alterna entre els modes de seguiment</td>
+<td>Cap</td>
+<td>Alterna a través dels modes de seguiment (centre, relatiu)</td>
+</tr>
+<tr>
+<td>Mostra la visió general de tota la pantalla</td>
+<td>'NVDA+shift+l'</td>
+<td>Temporalment mostra una visió general de tota la pantalla</td>
+</tr>
+<tr>
+<td>Desplaça a l'esquerra</td>
+<td>'NVDA+alt+fletxa esquerra'</td>
+<td>Mou la vista ampliada a l'esquerra per la mida de pas de desplaçament configurada</td>
+</tr>
+<tr>
+<td>Desplaça cap a la dreta</td>
+<td>'NVDA+alt+fletxa dreta'</td>
+<td>Mou la vista ampliada a la dreta per la mida de pas de desplaçament configurada</td>
+</tr>
+<tr>
+<td>Desplaçament cap amunt</td>
+<td>'NVDA+alt+fletxaAmunt'</td>
+<td>Mou la vista ampliada cap amunt segons la mida del pas de desplaçament configurat</td>
+</tr>
+<tr>
+<td>Desplaçament cap avall</td>
+<td>'NVDA+alt+FletxaAvall'</td>
+<td>Desplaça la vista ampliada cap avall segons la mida del pas de desplaçament configurat</td>
+</tr>
+<tr>
+<td>Desplaça cap a la vora esquerra</td>
+<td>'NVDA+shift+alt+FletxaEsquerra'</td>
+<td>Mou la vista ampliada directament a la vora esquerra de la pantalla</td>
+</tr>
+<tr>
+<td>Desplaça cap a la vora dreta</td>
+<td>'NVDA+shift+alt+fletxa dreta'</td>
+<td>Mou la vista ampliada directament a la vora dreta de la pantalla</td>
+</tr>
+<tr>
+<td>Desplaça cap a la vora superior</td>
+<td>'NVDA+shift+alt+fletxaAmunt'</td>
+<td>Mou la vista ampliada directament a la vora superior de la pantalla</td>
+</tr>
+<tr>
+<td>Desplaça cap a la vora inferior</td>
+<td>'NVDA+shift+alt+FletxaAvall'</td>
+<td>Mou la vista ampliada directament a la vora inferior de la pantalla</td>
 </tr>
 </tbody>
 </table>
@@ -1653,6 +1949,37 @@ Al Microsoft 2016, 365 i posteriors, els comentaris clàssics del Microsoft Exce
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Lupa</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla d'escriptori</th>
+<th>Tecla de portàtil</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Obrir la configuració de la Lupa</td>
+<td>'NVDA+control+w'</td>
+<td>'NVDA+control+w'</td>
+<td>La categoria Lupa al diàleg de Configuració de NVDA et permet configurar el comportament per defecte de la funció <a href="#Magnifier" title="Lupa">Lupa</a> integrada de NVDA.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Activar la Lupa</td>
+<td>'NVDA+shift+w'</td>
+<td>'NVDA+shift+w'</td>
+<td>Aquesta opció activa o atura la Lupa.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Filtre de color</td>
+<td>'NVDA+shift+i'</td>
+<td>'NVDA+shift+i'</td>
+<td>Aquesta opció et permet seleccionar el filtre que vols aplicar quan utilitzis la lupa.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Teclat</h4>
 <table>
 <thead>
@@ -1796,7 +2123,7 @@ Al Microsoft 2016, 365 i posteriors, els comentaris clàssics del Microsoft Exce
 </tr>
 </tbody>
 </table>
-<h4 id="DocumentFormattingSettings">Formatació del document</h4>
+<h4 id="DocumentFormattingSettings">Format del document</h4>
 <table>
 <thead>
 <tr>
@@ -1822,24 +2149,21 @@ Al Microsoft 2016, 365 i posteriors, els comentaris clàssics del Microsoft Exce
 <table>
 <thead>
 <tr>
-<th>Nom</th>
-<th>Tecla d'escriptori</th>
-<th>Tecla del portàtil</th>
-<th>Descripció</th>
+<th>Name</th>
+<th>Key</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Guarda la configuració</td>
-<td>'NVDA+control+c'</td>
-<td>'NVDA+control+c'</td>
-<td>Desa la configuració actual perquè no es perdi quan surts de NVDA</td>
+<td>Save configuration</td>
+<td><code>NVDA+control+c</code></td>
+<td>Saves your current configuration so that it is not lost when you exit NVDA</td>
 </tr>
 <tr>
-<td>Reverteix la configuració</td>
-<td>'NVDA+control+r'</td>
-<td>'NVDA+control+r'</td>
-<td>Prement una vegada restableix la configuració a l'última vegada que la vau desar. Si premeu tres vegades, es restablirà als valors predeterminats de fàbrica.</td>
+<td>Revert configuration</td>
+<td><code>NVDA+control+r</code></td>
+<td>Pressing once resets your configuration to when you last saved it. Pressing three times will reset it back to factory defaults without showing the undo dialog.</td>
 </tr>
 </tbody>
 </table>
@@ -4838,18 +5162,18 @@ Al Microsoft 2016, 365 i posteriors, els comentaris clàssics del Microsoft Exce
 <table>
 <thead>
 <tr>
-<th>Nom</th>
-<th>Tecla</th>
+<th>Name</th>
+<th>Key</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Desplaça la pantalla braille cap enrere</td>
-<td>'desplaçament_esquerre'</td>
+<td>'tecla de desplaçament Esquerra'</td>
 </tr>
 <tr>
 <td>Desplaça la pantalla braille cap endavant</td>
-<td>'desplaçament_dret'</td>
+<td>'tecla de desplaçament Dreta'</td>
 </tr>
 </tbody>
 </table>

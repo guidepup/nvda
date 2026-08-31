@@ -2,16 +2,16 @@
 <html lang="pt_PT" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>Referência rápida dos comandos NVDA 2026.1.1</title>
+<title>Referência rápida dos comandos NVDA 2026.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="referencia-rapida-dos-comandos-nvda-202611">Referência rápida dos comandos NVDA 2026.1.1</h1>
+<body><h1 id="referencia-rapida-dos-comandos-nvda-20262">Referência rápida dos comandos NVDA 2026.2</h1>
 <div class="toc">
 <ul>
-<li><a href="#referencia-rapida-dos-comandos-nvda-202611" title="Referência rápida dos comandos NVDA 2026.1.1">Referência rápida dos comandos NVDA 2026.1.1</a><ul>
+<li><a href="#referencia-rapida-dos-comandos-nvda-20262" title="Referência rápida dos comandos NVDA 2026.2">Referência rápida dos comandos NVDA 2026.2</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Começar Com O NVDA">Começar Com O NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="Gestos de Toque do NVDA">Gestos de Toque do NVDA</a><ul>
 <li><a href="#TouchModes" title="Modos de Toque">Modos de Toque</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Modo de Navegação">Modo de Navegação</a><ul>
-<li><a href="#SingleLetterNavigation" title="Navegação por Carater">Navegação por Carater</a></li>
+<li><a href="#SingleLetterNavigation" title="Navegação por Carater">Navegação por Carater</a><ul>
+<li><a href="#BrowseModeTouch" title="Navegação Tátil no Modo Navegação">Navegação Tátil no Modo Navegação</a><ul>
+<li><a href="#gestos-de-toque-no-modo-de-navegacao" title="Gestos de toque no modo de navegação">Gestos de toque no modo de navegação</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="A Lista de Elementos">A Lista de Elementos</a></li>
 <li><a href="#SearchingForText" title="Localizar texto">Localizar texto</a></li>
 <li><a href="#ImbeddedObjects" title="Objetos Embutidos">Objetos Embutidos</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Braille">Braille</a><ul>
-<li><a href="#BrailleInput" title="Escrita Braille">Escrita Braille</a></li>
+<li><a href="#BrailleReading" title="Ler Braille">Ler Braille</a><ul>
+<li><a href="#BrailleReadingGestures" title="Gestos de leitura em braille">Gestos de leitura em braille</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Escrita Braille">Escrita Braille</a><ul>
+<li><a href="#BrailleInputGestures" title="Gestos de entrada em braille">Gestos de entrada em braille</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Visão">Visão</a><ul>
 <li><a href="#VisionScreenCurtain" title="Cortina de ecrã">Cortina de ecrã</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Lupa">Lupa</a><ul>
+<li><a href="#MagnifierCommands" title="Comandos de Lupa">Comandos de Lupa</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Reconhecimento de Conteúdo">Reconhecimento de Conteúdo</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Divisão de som">Divisão de som</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Lupa">Lupa</a></li>
 <li><a href="#KeyboardSettings" title="Configurações de teclado">Configurações de teclado</a></li>
 <li><a href="#MouseSettings" title="Configurações do rato">Configurações do rato</a></li>
 <li><a href="#ReviewCursorSettings" title="Cursor de Revisão">Cursor de Revisão</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">Gestos de Toque do NVDA</h3>
 <p>Para alternar o suporte à Interação tátil pressione NVDA+control+alt+t.</p>
 <h4 id="TouchModes">Modos de Toque</h4>
-<p>Para alternar entre modos de toque, realize um toque com três dedos.</p>
+<p>Para alternar entre os modos de toque, execute um toque de 3 dedos.</p>
 <h3 id="BasicNVDACommands">Comandos Básicos do NVDA</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>shift</td>
 <td>Nenhum</td>
 <td>Pausa instantaneamente a voz. Se pressionar novamente, recomeçará a falar, desde onde parou (se a pausa for suportada pelo sintetizador atual)</td>
+</tr>
+<tr>
+<td>Repetir a última informação falada</td>
+<td>'NVDA+x'</td>
+<td>'NVDA+x'</td>
+<td>Nenhum</td>
+<td>Repete a última informação falada pelo NVDA. pressionar duas vezes mostra que está numa janela navegável</td>
 </tr>
 <tr>
 <td>Menu do NVDA</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Para ativar e desativar a navegação por carater para o documento atual, pressione NVDA+shift+espaço.</p>
+<h4 id="BrowseModeTouch">Navegação Tátil no Modo Navegação</h4>
+<h5 id="gestos-de-toque-no-modo-de-navegacao">Gestos de toque no modo de navegação</h5>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Toque</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selecionar o próximo tipo de elemento</td>
+<td>varrer para baixo</td>
+<td>Muda para o próximo modo de navegação com o tipo de navegação</td>
+</tr>
+<tr>
+<td>Selecionar o tipo de elemento anterior</td>
+<td>varrer para cima</td>
+<td>Muda para o tipo de elemento de navegação do modo de navegação anterior</td>
+</tr>
+<tr>
+<td>Mover para o próximo elemento</td>
+<td>varrer para a direita</td>
+<td>Passa para o próximo elemento do modo de navegação do tipo selecionado</td>
+</tr>
+<tr>
+<td>Mover para o elemento anterior</td>
+<td>varrer à esquerda</td>
+<td>Move para o elemento de modo de navegação anterior do tipo selecionado</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">A Lista de Elementos</h3>
 <table>
 <thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">Braille</h2>
+<h3 id="BrailleReading">Ler Braille</h3>
+<h4 id="BrailleReadingGestures">Gestos de leitura em braille</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alterna o modo braille</td>
+<td>'NVDA+alt+t'</td>
+<td>Permite alternar entre modos braille disponíveis: "seguir cursores" e "exibir saída de voz"</td>
+</tr>
+<tr>
+<td>Esta opção permite-lhe escolher se o Braille seguirá o foco do sistema,/cursor de inserção, o objeto de navegação / cursor de revisão ou ambos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alterna a rolagem automática,<code>NVDA+alt+k</code>. Alterna se o NVDA rola periodicamente a exibição braille para apresentar informações que são muito longas ao mesmo tempo</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Aumenta a taxa de rolagem automática,<code>NVDA+alt+l</code>. Fornece rolagem automática rapidamente (quando ativado)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Aumenta a taxa de rolagem automática,<code>NVDA+alt+l</code>. Fornece rolagem automática rapidamente (quando ativado)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ciclar formas de cursor em braille</td>
+<td>Nenhum</td>
+<td>Alterne pelas opções de formato (padrão de pontos) do cursor braille</td>
+</tr>
+<tr>
+<td>Cursor de revisão do sistema de movimento de ciclo ao roteamento</td>
+<td>Nenhum</td>
+<td>Alterne pelo caret do sistema de movimento braille ao revisar o roteamento dos estados do cursor</td>
+</tr>
+<tr>
+<td>Modos de exibição de mensagens de ciclo</td>
+<td>Nenhum</td>
+<td>Alterne pelos modos de mostrar mensagens em braille</td>
+</tr>
+<tr>
+<td>Ciclo braille mostrar estados de seleção</td>
+<td>Nenhum</td>
+<td>Alterne pelos estados de seleção em braille</td>
+</tr>
+<tr>
+<td>Ciclar os estados de normalização Unicode em braille</td>
+<td>Nenhum</td>
+<td>Alterne pelos estados de normalização do Unicode em braille</td>
+</tr>
+<tr>
+<td>Mover braille para foco</td>
+<td>Nenhum</td>
+<td>Move a linha braille para o foco atual</td>
+</tr>
+<tr>
+<td>Mover o braille para a próxima linha</td>
+<td>Nenhum</td>
+<td>Move a linha braille para a próxima linha</td>
+</tr>
+<tr>
+<td>Mover braille para a linha anterior</td>
+<td>Nenhum</td>
+<td>Move a linha braille para a linha anterior</td>
+</tr>
+<tr>
+<td>Formatação de relatório em braille</td>
+<td>Nenhum</td>
+<td>Informações de formatação dos relatos para o texto sob esta célula braille</td>
+</tr>
+<tr>
+<td>Rotear ou ativar objeto braille</td>
+<td>Nenhum</td>
+<td>Roteia o cursor para ou ativa o objeto sob essa célula braille</td>
+</tr>
+<tr>
+<td>Linha braille rolar para trás</td>
+<td>Nenhum</td>
+<td>Volta a linha braille</td>
+</tr>
+<tr>
+<td>linha braille para a frente</td>
+<td>Nenhum</td>
+<td>Faz a linha braille rolar para a frente</td>
+</tr>
+<tr>
+<td>Alternar cursor braille</td>
+<td>Nenhum</td>
+<td>Ligue e desligue o cursor braille</td>
+</tr>
+<tr>
+<td>Alternar informações de contexto em braille</td>
+<td>Nenhum</td>
+<td>Alterne a forma como as informações de contexto são apresentadas em braille</td>
+</tr>
+<tr>
+<td>Alternar a fala ao navegar em braille</td>
+<td>Nenhum</td>
+<td>Ativa e desativa a fala ao navegar por linhas ou parágrafos com braille</td>
+</tr>
+<tr>
+<td>Alternar o caractere falante ao rotear</td>
+<td>Nenhum</td>
+<td>Alterna a fala do caractere sob o cursor ao rotear o cursor no texto</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Escrita Braille</h3>
 <p>Pressionando o ponto 7 apagará a última célula Braille ou carater introduzido.
 Pressionando o  ponto 8 converte o Braille abreviado e pressiona a tecla Enter.
 Pressionando os pontos 7 + 8 converte o Braille abreviado, mas sem introduzir um espaço ou simular a tecla Enter.</p>
+<h4 id="BrailleInputGestures">Gestos de entrada em braille</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entrada via linha braille</td>
+<td>qualquer ponto</td>
+<td>Entradas de pontos braille via teclado braille</td>
+</tr>
+<tr>
+<td>Apagar a última entrada</td>
+<td>'dot7'</td>
+<td>Apaga a última célula ou caractere em braille inserido</td>
+</tr>
+<tr>
+<td>Traduzir entrada em braille</td>
+<td>'dot7+dot8'</td>
+<td>Traduz qualquer entrada em braille</td>
+</tr>
+<tr>
+<td>Traduza e pressione enter</td>
+<td>'dot8'</td>
+<td>Traduz qualquer entrada em braille e pressiona a tecla enter</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Visão</h2>
 <h3 id="VisionScreenCurtain">Cortina de ecrã</h3>
 <table>
@@ -1218,6 +1426,94 @@ Pressionando os pontos 7 + 8 converte o Braille abreviado, mas sem introduzir um
 <td>Alterna o estado da cortina de ecrã</td>
 <td><code>NVDA+control+escape</code></td>
 <td>Ativa para tornar o ecrã preto ou desativa para mostrar o conteúdo do ecrã. Pressionado uma vez ativa a cortina de ecrã até reiniciar o NVDA. Pressionado duas vezes a cortina de ecrã ficará ativa até a desativar.</td>
+</tr>
+<tr>
+<td>Relata o estado da cortina de tela</td>
+<td>Nenhum</td>
+<td>Anuncia o status atual da cortina de tela, se está desativada, ativada ou em modo temporário.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Lupa</h2>
+<h3 id="MagnifierCommands">Comandos de Lupa</h3>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>tecla</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ativar ou desativar a lupa</td>
+<td>'NVDA+shift+w'</td>
+<td>Ativa ou desativa a lupa</td>
+</tr>
+<tr>
+<td>Aumentar o nível de ampliação</td>
+<td>'NVDA+shift+igual'</td>
+<td>Aumenta o nível de zoom. Inicia a lupa se ainda não estiver ativada.</td>
+</tr>
+<tr>
+<td>Diminuir o nível de ampliação</td>
+<td>'NVDA+shift+menos'</td>
+<td>Diminui o nível de zoom</td>
+</tr>
+<tr>
+<td>Filtros de cor do ciclo</td>
+<td>'NVDA+shift+i'</td>
+<td>Cicla pelos filtros de cor disponíveis (normal, escala de cinza, invertida)</td>
+</tr>
+<tr>
+<td>Modo de acompanhamento de ciclo</td>
+<td>Nenhum</td>
+<td>Ciclos através dos modos de rastreamento (centro, relativo)</td>
+</tr>
+<tr>
+<td>Mostrar visão geral do ecrã inteiro</td>
+<td>'NVDA+shift+l'</td>
+<td>Mostra temporariamente uma visão geral de todo o ecrã</td>
+</tr>
+<tr>
+<td>Panorâmica à esquerda</td>
+<td>'NVDA+alt+Seta Esquerda'</td>
+<td>Move a vista ampliada à esquerda pelo tamanho do passo de panorâmica configurado</td>
+</tr>
+<tr>
+<td>Panorâmica à direita</td>
+<td>'NVDA+alt+seta direita'</td>
+<td>Move a visão ampliada para a direita pelo tamanho do passo de panorâmica configurado</td>
+</tr>
+<tr>
+<td>Pan up</td>
+<td>'NVDA+alt+Seta para cima'</td>
+<td>Move a vista ampliada para cima pelo tamanho do passo de panorâmica configurado</td>
+</tr>
+<tr>
+<td>Pan para baixo</td>
+<td>'NVDA+alt+seta para baixo'</td>
+<td>Move a visão ampliada para baixo pelo tamanho do passo de panorâmica configurado</td>
+</tr>
+<tr>
+<td>Panorâmica para a margem esquerda</td>
+<td>'NVDA+shift+alt+seta esquerda'</td>
+<td>Move a visão ampliada diretamente para a margem esquerda do ecrã</td>
+</tr>
+<tr>
+<td>Panorâmica para a margem direita</td>
+<td>'NVDA+shift+alt+seta direita'</td>
+<td>Move a visão ampliada diretamente para a margem direita do ecrã</td>
+</tr>
+<tr>
+<td>Pan para a margem superior</td>
+<td>'NVDA+shift+alt+setaCima'</td>
+<td>Move a visão ampliada diretamente para a margem superior do ecrã</td>
+</tr>
+<tr>
+<td>panorâmica para a margem inferior</td>
+<td>'NVDA+shift+alt+seta para baixo'</td>
+<td>Move a visão ampliada diretamente para a margem inferior do ecrã</td>
 </tr>
 </tbody>
 </table>
@@ -1653,6 +1949,37 @@ No Microsoft Excel 2016, 365 ou mais recente, os comentários foram renomeados p
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Lupa</h4>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Tecla de Atalho de Desktop</th>
+<th>Tecla de Atalho de Laptop</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Abrir as configurações da Lupa</td>
+<td><code>NVDA+Control+W</code></td>
+<td><code>NVDA+Control+W</code></td>
+<td>A categoria Ampliador na caixa de diálogo Configurações do NVDA permite configurar o comportamento padrão do recurso <a href="#Magnifier" title="Ampliador">Ampliador</a> embutido do NVDA.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Ativar a Lupa</td>
+<td><code>NVDA+Shift+w</code></td>
+<td><code>NVDA+Shift+w</code></td>
+<td>Essa opção inicia ou para o Lupa.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Filtro de cor</td>
+<td><code>NVDA+Shift+i</code></td>
+<td><code>NVDA+Shift+i</code></td>
+<td>Esta opção permite selecionar o filtro a ser aplicado ao usar a lupa.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Configurações de teclado</h4>
 <table>
 <thead>
@@ -1823,23 +2150,20 @@ No Microsoft Excel 2016, 365 ou mais recente, os comentários foram renomeados p
 <thead>
 <tr>
 <th>Nome</th>
-<th>Comando de Teclado Desktop</th>
-<th>Comando de Teclado Laptop</th>
+<th>tecla</th>
 <th>Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Guardar configuração</td>
-<td><code>NVDA+control+c</code></td>
-<td><code>NVDA+control+c</code></td>
-<td>Guarda a configuração atual para que não seja perdida ao sair do NVDA</td>
+<td>Salvar configuração</td>
+<td><code>NVDA+Control+C</code></td>
+<td>Salva sua configuração atual para que ela não seja perdida ao sair do NVDA</td>
 </tr>
 <tr>
-<td>Restaurar configuração</td>
-<td><code>NVDA+control+r</code></td>
-<td><code>NVDA+control+r</code></td>
-<td>Pressionar uma vez volta para a configuração guardada. Se pressionar três vezes, volta para a configuração padrão original.</td>
+<td>Reverter configuração</td>
+<td><code>NVDA+Control+r</code></td>
+<td>Ao pressionar uma vez, sua configuração será revertida para o estado em que estava na última vez em que foi salva. Ao pressionar três vezes, ela será revertida para os padrões de fábrica sem exibir a caixa de diálogo de desfazer.</td>
 </tr>
 </tbody>
 </table>
@@ -4839,17 +5163,17 @@ No Microsoft Excel 2016, 365 ou mais recente, os comentários foram renomeados p
 <thead>
 <tr>
 <th>Nome</th>
-<th>Comando</th>
+<th>Chave</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Deslocar o ecrã braille para trás</td>
-<td><code>pan_left</code></td>
+<td>Rolar o visor braille para trás</td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
-<td>Deslocar o ecrã braille para a frente</td>
-<td><code>pan_right</code></td>
+<td>Avançar na tela braille</td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

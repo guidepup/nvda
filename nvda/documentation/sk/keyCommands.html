@@ -2,16 +2,16 @@
 <html lang="sk" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 Zoznam príkazov</title>
+<title>NVDA 2026.2 Zoznam príkazov</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611-zoznam-prikazov">NVDA 2026.1.1 Zoznam príkazov</h1>
+<body><h1 id="nvda-20262-zoznam-prikazov">NVDA 2026.2 Zoznam príkazov</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611-zoznam-prikazov" title="NVDA 2026.1.1 Zoznam príkazov">NVDA 2026.1.1 Zoznam príkazov</a><ul>
+<li><a href="#nvda-20262-zoznam-prikazov" title="NVDA 2026.2 Zoznam príkazov">NVDA 2026.2 Zoznam príkazov</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Používanie NVDA">Používanie NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="Dotykové gestá NVDA">Dotykové gestá NVDA</a><ul>
 <li><a href="#TouchModes" title="Režim dotyku">Režim dotyku</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Režim prehliadania">Režim prehliadania</a><ul>
-<li><a href="#SingleLetterNavigation" title="Príkazy rýchlej navigácie">Príkazy rýchlej navigácie</a></li>
+<li><a href="#SingleLetterNavigation" title="Príkazy rýchlej navigácie">Príkazy rýchlej navigácie</a><ul>
+<li><a href="#BrowseModeTouch" title="Dotykové gestá v režime prehliadania">Dotykové gestá v režime prehliadania</a><ul>
+<li><a href="#dotykove-gesta-v-rezime-prehliadania" title="Dotykové gestá v režime prehliadania">Dotykové gestá v režime prehliadania</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="Zoznam prvkov">Zoznam prvkov</a></li>
 <li><a href="#SearchingForText" title="Hľadanie textu">Hľadanie textu</a></li>
 <li><a href="#ImbeddedObjects" title="Vnorené objekty">Vnorené objekty</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Brailovo písmo">Brailovo písmo</a><ul>
-<li><a href="#BrailleInput" title="brailový zápis">brailový zápis</a></li>
+<li><a href="#BrailleReading" title="Čítanie na brailovom riadku">Čítanie na brailovom riadku</a><ul>
+<li><a href="#BrailleReadingGestures" title="Gestá na čítanie brailu">Gestá na čítanie brailu</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="brailový zápis">brailový zápis</a><ul>
+<li><a href="#BrailleInputGestures" title="Gestá na písanie v braily">Gestá na písanie v braily</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Zrak">Zrak</a><ul>
 <li><a href="#VisionScreenCurtain" title="Tienenie obrazovky">Tienenie obrazovky</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Zväčšovač">Zväčšovač</a><ul>
+<li><a href="#MagnifierCommands" title="Príkazy zväčšovača">Príkazy zväčšovača</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Optické rozpoznávanie textu Windows">Optické rozpoznávanie textu Windows</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Oddelenie zvuku">Oddelenie zvuku</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Zväčšovač">Zväčšovač</a></li>
 <li><a href="#KeyboardSettings" title="Klávesnica">Klávesnica</a></li>
 <li><a href="#MouseSettings" title="Myš">Myš</a></li>
 <li><a href="#ReviewCursorSettings" title="Prezerací kurzor">Prezerací kurzor</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">Dotykové gestá NVDA</h3>
 <p>Podporu pre dotykové gestá zapnete a vypnete skratkou NVDA+ctrl+alt+t.</p>
 <h4 id="TouchModes">Režim dotyku</h4>
-<p>Prepínať režimy dotyku je možné klepnutím troma prstami.</p>
+<p>Režimi môžete prepínať klepnutím troma prstami.</p>
 <h3 id="BasicNVDACommands">Všeobecné príkazy NVDA</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>shift</td>
 <td>Nie je</td>
 <td>Okamžite pozastaví reč. Po nasledujúcom stlačení bude reč pokračovať na prerušenom mieste ak to práve používaný hlasový výstup podporuje</td>
+</tr>
+<tr>
+<td>Zopakovať posledné hlásenie</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>nie je</td>
+<td>Zopakuje naposledy vyslovené hlásenie NVDA. Stlačené dvakrátzobrazí text v režime prehliadania</td>
 </tr>
 <tr>
 <td>Ponuka NVDA</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Na zapnutie a vypnutie rýchlej navigácie v režime prehliadania, použite skratku NVDA+shift+medzera.</p>
+<h4 id="BrowseModeTouch">Dotykové gestá v režime prehliadania</h4>
+<h5 id="dotykove-gesta-v-rezime-prehliadania">Dotykové gestá v režime prehliadania</h5>
+<table>
+<thead>
+<tr>
+<th>Názov</th>
+<th>gesto</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prejdi na nasledujúci typ prvku</td>
+<td>švihnutie dole</td>
+<td>Prejde na nasledujúci typ prvku</td>
+</tr>
+<tr>
+<td>Prejdi na predchádzajúci typ prvku</td>
+<td>švihnutie hore</td>
+<td>Prejde na predchádzajúci typ prvku</td>
+</tr>
+<tr>
+<td>Prejdi na nasledujúci prvok</td>
+<td>švihnutie doprava</td>
+<td>Prejde na nasledujúci prvok podľa zvoleného typu</td>
+</tr>
+<tr>
+<td>Prejdi na predchádzajúci prvok</td>
+<td>švihnutie doľava</td>
+<td>Prejde na predchádzajúci prvok podľa zvoleného typu</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">Zoznam prvkov</h3>
 <table>
 <thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">Brailovo písmo</h2>
+<h3 id="BrailleReading">Čítanie na brailovom riadku</h3>
+<h4 id="BrailleReadingGestures">Gestá na čítanie brailu</h4>
+<table>
+<thead>
+<tr>
+<th>Názov</th>
+<th>klávesová skratka</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prepnúť režim brailu</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Prepína medzi dostupnými režimami brailu: "Sledovanie kurzora" a "sledovanie reči"</td>
+</tr>
+<tr>
+<td>Zviazanie brailového kurzora</td>
+<td><code>NVDA+ctrl+t</code></td>
+<td>Určuje, či bude brailový kurzor zviazaný na fokus alebo textový kurzor, prezerací kurzor alebo navigačný objekt, alebo na oboje</td>
+</tr>
+<tr>
+<td>Prepnúť automatické posúvanie</td>
+<td><code>NVDA+alt+k</code></td>
+<td>zapína a vypína automatické posúvanie, ktoré sa použije, ak je potrebné zobraziť na riadku pridlhý text</td>
+</tr>
+<tr>
+<td>Zvýšiť rýchlosť automatického posúvania</td>
+<td><code>NVDA+alt+l</code></td>
+<td>zrýchly automatické posúvanie (ak je zapnuté)</td>
+</tr>
+<tr>
+<td>Znížiť rýchlosť automatického posúvania</td>
+<td><code>NVDA+alt+j</code></td>
+<td>spomalý automatické posúvanie (ak je zapnuté)</td>
+</tr>
+<tr>
+<td>Prepnúť tvar kurzora</td>
+<td>nie je</td>
+<td>Prepína medzi dostupnými tvarmi (kombináciami bodov) kurzora</td>
+</tr>
+<tr>
+<td>Prepnúť automatické polohovanie brailového kurzora na základe pozície systémového alebo prezeracieho kurzora</td>
+<td>nie je</td>
+<td>Prepína medzi dostupnými režimami polohovania brailového kurzora</td>
+</tr>
+<tr>
+<td>Prepnúť nastavenie zobrazenia správ</td>
+<td>nie je</td>
+<td>prepína medzi dostupnými režimami zobrazovania správ na brailovom riadku</td>
+</tr>
+<tr>
+<td>Prepnúť ukazovanie výberu</td>
+<td>nie je</td>
+<td>prepína medzi dostupnými režimami zobrazovania výberu na brailovom riadku</td>
+</tr>
+<tr>
+<td>Prepnúť režim normalizovania znakov</td>
+<td>nie je</td>
+<td>prepína medzi režimami normalizovania Unicode znakov na brailovom riadku</td>
+</tr>
+<tr>
+<td>Prejsť v braily na fokus</td>
+<td>nie je</td>
+<td>Presunie zobrazenie na brailovom riadku na fokus</td>
+</tr>
+<tr>
+<td>Prejsť v braily na nasledujúci riadok</td>
+<td>nie je</td>
+<td>posunie zobrazenie v braily na nasledujúci riadok</td>
+</tr>
+<tr>
+<td>Prejsť v braily na predchádzajúci riadok</td>
+<td>nie je</td>
+<td>posunie zobrazenie v braily na predchádzajúci riadok</td>
+</tr>
+<tr>
+<td>Oznámiť formátovanie</td>
+<td>nie je</td>
+<td>oznámi formátovanie pod zameranou bunkou v braily</td>
+</tr>
+<tr>
+<td>Premiestniť systémový kurzor alebo aktivovať prvok</td>
+<td>nie je</td>
+<td>Premiestni kurzor alebo aktivuje prvok pod zameranou brailovou bunkou v braily</td>
+</tr>
+<tr>
+<td>Posunúť riadok späť</td>
+<td>nie je</td>
+<td>posunie riadok späť</td>
+</tr>
+<tr>
+<td>Posunúť riadok vpred</td>
+<td>nie je</td>
+<td>posunie riadok vpred</td>
+</tr>
+<tr>
+<td>Prepnúť zobrazenie brailového kurzora</td>
+<td>nie je</td>
+<td>zapína a vypína zobrazenie brailového kurzora</td>
+</tr>
+<tr>
+<td>Prepnúť prezentáciu kontexTu</td>
+<td>nie je</td>
+<td>prepína spôsob oznamovania kontextu na brailovom riadku</td>
+</tr>
+<tr>
+<td>Prepnúť oznamovanie textu</td>
+<td>nie je</td>
+<td>zapína a vypína čítanie textu pomocou hlasového výstupu pri pohybe cez brailový riadok</td>
+</tr>
+<tr>
+<td>Prepnúť vyslovovanie znakov pod kurzorom</td>
+<td>nie je</td>
+<td>zapína a vypína oznamovanie znakov zameraných pomocou privolávacích tlačidiel na brailovom riadku</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">brailový zápis</h3>
 <p>Bod 7 odstráni posledne zadaný znak alebo kombináciu bodov.
 Bod 8 preloží zadaný text a stlačí kláves Enter.
 Body 7+8: preloží zadaný text, ale nevloží medzeru ani nový riadok.</p>
+<h4 id="BrailleInputGestures">Gestá na písanie v braily</h4>
+<table>
+<thead>
+<tr>
+<th>Názov</th>
+<th>klávesová skratka</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vstup cez brailový riadok</td>
+<td>akákoľvek kombinácia bodov</td>
+<td>vloží znaky cez brailový riadok</td>
+</tr>
+<tr>
+<td>Odstrániť posledné</td>
+<td><code>bod7</code></td>
+<td>odstráni posledný zadaný brailový znak alebo bunku</td>
+</tr>
+<tr>
+<td>Preložiť brailový vstup</td>
+<td><code>bod7+bod8</code></td>
+<td>preloží zadaný brailový vstup</td>
+</tr>
+<tr>
+<td>Preložiť a stlačiť enter</td>
+<td><code>bod8</code></td>
+<td>preložý zadaný brailový vstup a odošle príkaz enter</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Zrak</h2>
 <h3 id="VisionScreenCurtain">Tienenie obrazovky</h3>
 <table>
@@ -1218,6 +1426,94 @@ Body 7+8: preloží zadaný text, ale nevloží medzeru ani nový riadok.</p>
 <td>Zapína a vypína tienenie obrazovky</td>
 <td><code>NVDA+ctrl+escape</code></td>
 <td>Zapína a vypína tienenie obrazovky. Stlačené raz zapne tienenie do najbližšieho reštartu. Stlačené dvakrát zapne tienenie obrazovky natrvalo.</td>
+</tr>
+<tr>
+<td>Oznámiť stav tienenia obrazovky</td>
+<td>nie je</td>
+<td>Oznámi aktuálny stav tienenia obrazovky, ktoré môže byť zapnuté, vypnuté alebo dočasne zapnuté.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Zväčšovač</h2>
+<h3 id="MagnifierCommands">Príkazy zväčšovača</h3>
+<table>
+<thead>
+<tr>
+<th>Názov</th>
+<th>klávesová skratka</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zapnúť alebo vypnúť zväčšovač</td>
+<td><code>NVDA+shift+w</code></td>
+<td>zapína a vypína zväčšovač obrazovky</td>
+</tr>
+<tr>
+<td>Zvýšiť úroveň zväčšenia</td>
+<td><code>NVDA+shift+rovná sa</code></td>
+<td>Zvýši úroveň zväčšenia. Spustí zväčšovač, ak ešte nie je aktívny.</td>
+</tr>
+<tr>
+<td>Znížiť úroveň zväčšenia</td>
+<td><code>NVDA+shift+mínus</code></td>
+<td>Zmenšuje úroveň zväčšenia</td>
+</tr>
+<tr>
+<td>Prepnúť farebný filter</td>
+<td><code>NVDA+shift+i</code></td>
+<td>prepína dostupné režimi farebného filtra (normálny, invertovaný, odtiene sivej)</td>
+</tr>
+<tr>
+<td>Prepnúť režim sledovania</td>
+<td>nie je</td>
+<td>Prepína medzi režimami sledovania (na stred a relatívne)</td>
+</tr>
+<tr>
+<td>Zobraziť náhľad obrazovky</td>
+<td><code>NVDA+shift+l</code></td>
+<td>dočasne zobrazí náhľad na celú obrazovku</td>
+</tr>
+<tr>
+<td>Posunúť doľava</td>
+<td><code>NVDA+alt+šípka vľavo</code></td>
+<td>posunie zväčšené zobrazenie doľava o zadaný počet krokov</td>
+</tr>
+<tr>
+<td>Posunúť doprava</td>
+<td><code>NVDA+alt+šípka vpravo</code></td>
+<td>posunie zväčšené zobrazenie doprava o zadaný počet krokov</td>
+</tr>
+<tr>
+<td>Posunúť hore</td>
+<td><code>NVDA+alt+šípka hore</code></td>
+<td>posunie zväčšené zobrazenie hore o zadaný počet krokov</td>
+</tr>
+<tr>
+<td>Posunúť dole</td>
+<td><code>NVDA+alt+šípka dole</code></td>
+<td>posunie zväčšené zobrazenie dole o zadaný počet krokov</td>
+</tr>
+<tr>
+<td>Posunúť k ľavému okraju</td>
+<td><code>NVDA+shift+alt+šípka vľavo</code></td>
+<td>Posunie zväčšenie k ľavému okraju obrazovky</td>
+</tr>
+<tr>
+<td>Posunúť k pravému okraju</td>
+<td><code>NVDA+shift+alt+šípka vpravo</code></td>
+<td>Posunie zväčšenie k pravému okraju obrazovky</td>
+</tr>
+<tr>
+<td>Posunúť k hornému okraju</td>
+<td><code>NVDA+shift+alt+šípka hore</code></td>
+<td>Posunie zväčšenie k hornému okraju obrazovky</td>
+</tr>
+<tr>
+<td>Posunúť k dolnému okraju</td>
+<td><code>NVDA+shift+alt+šípka dole</code></td>
+<td>Posunie zväčšenie k dolnému okraju obrazovky</td>
 </tr>
 </tbody>
 </table>
@@ -1653,6 +1949,37 @@ V aplikáciách Microsoft Office 2016, 365 a novších boli komentáre nahraden�
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Zväčšovač</h4>
+<table>
+<thead>
+<tr>
+<th>názov</th>
+<th>klávesová skratka pre desktop</th>
+<th>klávesová skratka pre laptop</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Otvoriť nastavenia zväčšovača</td>
+<td><code>NVDA+control+w</code></td>
+<td><code>NVDA+control+w</code></td>
+<td>Kategória Zväčšovač v dialógu nastavení NVDA umožňuje ovplyvniť správanie <a href="#Magnifier" title="Zväčšovača obrazovky">Zväčšovača obrazovky</a>.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Zapnúť zväčšovač</td>
+<td><code>NVDA+shift+w</code></td>
+<td><code>NVDA+shift+w</code></td>
+<td>Zapína alebo vypína zväčšovač.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Farebný filter</td>
+<td><code>NVDA+shift+i</code></td>
+<td><code>NVDA+shift+i</code></td>
+<td>Umožňuje zvoliť farebný filter, ktorý sa použije pri zapnutom zväčšovači obrazovky.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Klávesnica</h4>
 <table>
 <thead>
@@ -1823,23 +2150,20 @@ V aplikáciách Microsoft Office 2016, 365 a novších boli komentáre nahraden�
 <thead>
 <tr>
 <th>Názov</th>
-<th>Klávesová skratka pre desktop</th>
-<th>Klávesová skratka pre laptop</th>
-<th>Popis</th>
+<th>klávesová skratka</th>
+<th>popis</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Uložiť nastavenia</td>
 <td><code>NVDA+ctrl+c</code></td>
-<td><code>NVDA+ctrl+c</code></td>
-<td>Uloží aktuálne nastavenia NVDA tak, aby sa pri ukončení nestratili</td>
+<td>`</td>
 </tr>
 <tr>
 <td>Návrat k uloženým nastaveniam</td>
-<td><code>NVDA+ctrl+r |</code>NVDA+ctrl+r</td>
+<td>`NVDA+ctrl+r</td>
 <td>Obnoví nastavenia z času, čo Ste naposledy konfiguráciu uložili. Stlačené trikrát obnoví predvolené nastavenia.</td>
-<td></td>
 </tr>
 </tbody>
 </table>

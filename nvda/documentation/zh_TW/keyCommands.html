@@ -2,16 +2,16 @@
 <html lang="zh_TW" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 指令快速參考</title>
+<title>NVDA 2026.2 指令快速參考</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611">NVDA 2026.1.1 指令快速參考</h1>
+<body><h1 id="nvda-20262">NVDA 2026.2 指令快速參考</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611" title="NVDA 2026.1.1 指令快速參考">NVDA 2026.1.1 指令快速參考</a><ul>
+<li><a href="#nvda-20262" title="NVDA 2026.2 指令快速參考">NVDA 2026.2 指令快速參考</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="使用 NVDA">使用 NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA 觸控手勢">NVDA 觸控手勢</a><ul>
 <li><a href="#TouchModes" title="觸控模式">觸控模式</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="瀏覽模式">瀏覽模式</a><ul>
-<li><a href="#SingleLetterNavigation" title="單鍵導覽">單鍵導覽</a></li>
+<li><a href="#SingleLetterNavigation" title="單鍵導覽">單鍵導覽</a><ul>
+<li><a href="#BrowseModeTouch" title="瀏覽模式下的觸控導覽">瀏覽模式下的觸控導覽</a><ul>
+<li><a href="#_1" title="瀏覽模式下的觸控手勢">瀏覽模式下的觸控手勢</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="項目清單">項目清單</a></li>
 <li><a href="#SearchingForText" title="尋找文字">尋找文字</a></li>
 <li><a href="#ImbeddedObjects" title="嵌入式物件">嵌入式物件</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="點字">點字</a><ul>
-<li><a href="#BrailleInput" title="點字輸入">點字輸入</a></li>
+<li><a href="#BrailleReading" title="摸讀點字">摸讀點字</a><ul>
+<li><a href="#BrailleReadingGestures" title="點字摸讀手勢">點字摸讀手勢</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="點字輸入">點字輸入</a><ul>
+<li><a href="#BrailleInputGestures" title="點字輸入手勢">點字輸入手勢</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="視覺">視覺</a><ul>
 <li><a href="#VisionScreenCurtain" title="螢幕簾幕">螢幕簾幕</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="放大鏡">放大鏡</a><ul>
+<li><a href="#MagnifierCommands" title="放大鏡指令">放大鏡指令</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="內容辨識">內容辨識</a><ul>
@@ -79,7 +96,7 @@
 <li><a href="#Foobar2000" title="foobar2000">foobar2000</a></li>
 <li><a href="#MirandaIM" title="Miranda IM">Miranda IM</a></li>
 <li><a href="#Poedit" title="Poedit">Poedit</a></li>
-<li><a href="#Kindle" title="Kindle PC 版">Kindle PC 版</a><ul>
+<li><a href="#Kindle" title="Kindle for PC">Kindle for PC</a><ul>
 <li><a href="#KindleTextSelection" title="選取文字">選取文字</a></li>
 </ul>
 </li>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="聲音分割">聲音分割</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="放大鏡">放大鏡</a></li>
 <li><a href="#KeyboardSettings" title="鍵盤">鍵盤</a></li>
 <li><a href="#MouseSettings" title="滑鼠">滑鼠</a></li>
 <li><a href="#ReviewCursorSettings" title="檢閱游標">檢閱游標</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">NVDA 觸控手勢</h3>
 <p>要切換觸控互動支援，按 NVDA+Ctrl+Alt+T。</p>
 <h4 id="TouchModes">觸控模式</h4>
-<p>要切換觸控模式，使用三指點一下。</p>
+<p>要在觸控模式之間切換，使用三指點一下。</p>
 <h3 id="BasicNVDACommands">基本 NVDA 指令</h3>
 <table>
 <thead>
@@ -211,6 +229,13 @@
 <td>立即暫停語音，再按一次會從中斷的地方繼續朗讀 (若使用的合成器有支援)。</td>
 </tr>
 <tr>
+<td>重覆最後讀出的資訊</td>
+<td>NVDA+x</td>
+<td>NVDA+x</td>
+<td>無</td>
+<td>重複 NVDA 最後讀出的資訊，連按兩下顯示在可瀏覽視窗中</td>
+</tr>
+<tr>
 <td>NVDA 功能表</td>
 <td>NVDA+n</td>
 <td>NVDA+n</td>
@@ -239,11 +264,11 @@
 <td>告知 NVDA 將下一個按鍵動作直接傳到作用中的憗用程式，即使此按鍵通常是 NVDA 的快速鍵。</td>
 </tr>
 <tr>
-<td>切換應用程式睡眠模式的開與關</td>
+<td>切換應用程式睡眠模式的開或關</td>
 <td>NVDA+Shift+S</td>
 <td>NVDA+Shift+Z</td>
 <td>無</td>
-<td>睡眠模式會停用目前應用程式的所有 NVDA 指令、語音及點字輸出。此功能可用於某些本身即具備語音功能的應用程式，再按一次這個指令則關閉睡眠模式，NVDA 的睡眠模式設定僅會保留至重新啟動為止。</td>
+<td>睡眠模式會停用目前應用程式的所有 NVDA 指令、語音及點字輸出。此功能可用於某些本身即具備語音功能的應用程式，再按一次快速鍵則關閉睡眠模式，NVDA 的睡眠模式設定僅會保留至重新啟動為止。</td>
 </tr>
 </tbody>
 </table>
@@ -909,7 +934,7 @@
 </tbody>
 </table>
 <h3 id="SingleLetterNavigation">單鍵導覽</h3>
-<p>下列的按鍵僅按該單一按鍵會跳至對應的下一個元素，同時按 Shift+該單一按鍵則會跳至上一個對應的元素。</p>
+<p>下列的按鍵僅按該單一按鍵會跳到對應的下一個元素，同時按 Shift+該單一按鍵則會跳到上一個對應的元素。</p>
 <ul>
 <li>h: 標題 (heading)</li>
 <li>l: 清單 (list)</li>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>要在目前文件中切換開啟或關閉 NVDA 單鍵導覽，按 NVDA+Shift+空白鍵。</p>
+<h4 id="BrowseModeTouch">瀏覽模式下的觸控導覽</h4>
+<h5 id="_1">瀏覽模式下的觸控手勢</h5>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>觸控手勢</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>選取下一個元素類型</td>
+<td>向下滑動</td>
+<td>切換到下一個瀏覽模式導覽元素類型</td>
+</tr>
+<tr>
+<td>選取上一個元素類型</td>
+<td>向上滑動</td>
+<td>切換到上一個瀏覽模式導覽元素類型</td>
+</tr>
+<tr>
+<td>移到下一個元素</td>
+<td>向右滑動</td>
+<td>移到所選類型的下一個瀏覽模式元素</td>
+</tr>
+<tr>
+<td>移到上一個元素</td>
+<td>向左滑動</td>
+<td>移到所選類型的上一個瀏覽模式元素</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">項目清單</h3>
 <table>
 <thead>
@@ -999,7 +1057,7 @@
 <tr>
 <td>尋找上一個</td>
 <td>NVDA+Shift+F3</td>
-<td>在目前文件中向上尋找前次搜尋的文字</td>
+<td>尋找上一個目前搜尋的文字</td>
 </tr>
 </tbody>
 </table>
@@ -1065,35 +1123,35 @@
 </thead>
 <tbody>
 <tr>
-<td>移至上一個</td>
+<td>移到上一項</td>
 <td>向左鍵</td>
 </tr>
 <tr>
-<td>移至表格中的左方儲存格，或直式運算中的上一位數</td>
+<td>移到表格中的左方儲存格，或直式運算中的上一位數</td>
 <td>control+向左鍵 或 control+alt+向左鍵</td>
 </tr>
 <tr>
-<td>讀出上一個</td>
+<td>讀出上一項</td>
 <td>shift+向左鍵</td>
 </tr>
 <tr>
-<td>描述上一個</td>
+<td>描述上一項</td>
 <td>control+shift+向左鍵</td>
 </tr>
 <tr>
-<td>移至下一個</td>
+<td>移到下一項</td>
 <td>向右鍵</td>
 </tr>
 <tr>
-<td>移至表格中的右方儲存格，或直式運算中的下一位數</td>
+<td>移到表格中的右方儲存格，或直式運算中的下一位數</td>
 <td>control+向右鍵 或 control+alt+向右鍵</td>
 </tr>
 <tr>
-<td>讀出下一個</td>
+<td>讀出下一項</td>
 <td>shift+向右鍵</td>
 </tr>
 <tr>
-<td>描述下一個</td>
+<td>描述下一項</td>
 <td>control+shift+向右鍵</td>
 </tr>
 <tr>
@@ -1101,11 +1159,11 @@
 <td>向上鍵</td>
 </tr>
 <tr>
-<td>移至表格中的上方儲存格，或直式運算中的上方數字</td>
+<td>移到表格中的上方儲存格，或直式運算中的上方數字</td>
 <td>control+向上鍵 或 control+alt+向上鍵</td>
 </tr>
 <tr>
-<td>變更導覽模式 (增強/簡易/字元) 至較大單位</td>
+<td>變更導覽模式 (增強/簡易/字元) 為較大單位</td>
 <td>shift+向上鍵</td>
 </tr>
 <tr>
@@ -1117,11 +1175,11 @@
 <td>向下鍵</td>
 </tr>
 <tr>
-<td>移至表格中的下方儲存格，或直式運算中的下方數字</td>
+<td>移到表格中的下方儲存格，或直式運算中的下方數字</td>
 <td>control+向下鍵 或 control+alt+向下鍵</td>
 </tr>
 <tr>
-<td>變更導覽模式 (增強/簡易/字元) 至較小單位</td>
+<td>變更導覽模式 (增強/簡易/字元) 為較小單位</td>
 <td>shift+向下鍵</td>
 </tr>
 <tr>
@@ -1137,7 +1195,7 @@
 <td>control+enter</td>
 </tr>
 <tr>
-<td>跳至書籤</td>
+<td>跳到書籤</td>
 <td>1 到 0 (0 代表 10)</td>
 </tr>
 <tr>
@@ -1153,7 +1211,7 @@
 <td>control+shift+1 到 control+shift+0</td>
 </tr>
 <tr>
-<td>讀出目前位置</td>
+<td>讀出目前項目</td>
 <td>空白鍵</td>
 </tr>
 <tr>
@@ -1165,31 +1223,31 @@
 <td>shift+空白鍵</td>
 </tr>
 <tr>
-<td>描述目前位置</td>
+<td>描述目前項目</td>
 <td>control+shift+空白鍵</td>
 </tr>
 <tr>
-<td>移至算式開頭</td>
+<td>移到算式開頭</td>
 <td>home</td>
 </tr>
 <tr>
-<td>移至行首</td>
+<td>移到行首</td>
 <td>control+home</td>
 </tr>
 <tr>
-<td>移至表格的第一欄，或直式運算中的頂端數字</td>
+<td>移到表格的第一欄，或直式運算中的頂端數字</td>
 <td>shift+home</td>
 </tr>
 <tr>
-<td>移至算式結尾</td>
+<td>移到算式結尾</td>
 <td>end</td>
 </tr>
 <tr>
-<td>移至行尾</td>
+<td>移到行尾</td>
 <td>control+end</td>
 </tr>
 <tr>
-<td>移至表格的最後一欄，或直式運算中的底部數字</td>
+<td>移到表格的最後一欄，或直式運算中的底部數字</td>
 <td>shift+end</td>
 </tr>
 <tr>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">點字</h2>
+<h3 id="BrailleReading">摸讀點字</h3>
+<h4 id="BrailleReadingGestures">點字摸讀手勢</h4>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>快速鍵</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>切換點字模式</td>
+<td>NVDA+Alt+T</td>
+<td>在可用的點字模式之間循環切換：「跟隨遊標」或「顯示語音輸出」</td>
+</tr>
+<tr>
+<td>點字跟隨</td>
+<td>NVDA+Ctrl+T</td>
+<td>此選項允許您選擇點顯器呈現的內容是要跟隨系統焦點 / 游標，或是導覽物件 / 檢閱游標，或是兩者均有。</td>
+</tr>
+<tr>
+<td>切換自動捲動</td>
+<td>NVDA+Alt+K</td>
+<td>切換 NVDA 是否定時捲動點顯器以呈現太長而無法一次顯示的訊息</td>
+</tr>
+<tr>
+<td>增加自動捲動速度</td>
+<td>NVDA+Alt+L</td>
+<td>使自動捲動的速度變快 (啟用時)</td>
+</tr>
+<tr>
+<td>減少自動捲動速度</td>
+<td>NVDA+Alt+J</td>
+<td>使自動捲動的速度變慢 (啟用時)</td>
+</tr>
+<tr>
+<td>循環切換點字遊標形狀</td>
+<td>無</td>
+<td>循環切換點字遊標的點位形狀</td>
+</tr>
+<tr>
+<td>循環切換定位檢閱游標時移動系統游標</td>
+<td>無</td>
+<td>循環切換定位檢閱游標時移動系統游標的狀態</td>
+</tr>
+<tr>
+<td>循環切換訊息顯示模式</td>
+<td>無</td>
+<td>循環切換點字顯示訊息的模式</td>
+</tr>
+<tr>
+<td>循環切換點字顯示選取範圍的狀態</td>
+<td>無</td>
+<td>循環切換點字顯示選取範圍的狀態</td>
+</tr>
+<tr>
+<td>循環切換點字 Unicode 正規化的狀態</td>
+<td>無</td>
+<td>循環切換點字 Unicode 正規化的狀態</td>
+</tr>
+<tr>
+<td>點字移到焦點</td>
+<td>無</td>
+<td>將點顯器移到目前焦點</td>
+</tr>
+<tr>
+<td>點字移到下一行</td>
+<td>無</td>
+<td>將點顯器移到下一行</td>
+</tr>
+<tr>
+<td>點字移到上一行</td>
+<td>無</td>
+<td>將點顯器移到上一行</td>
+</tr>
+<tr>
+<td>顯示點字格式</td>
+<td>無</td>
+<td>顯示這個點字方上的文字格式資訊</td>
+</tr>
+<tr>
+<td>游標定位或啟動點字所在物件</td>
+<td>無</td>
+<td>游標定位到這個點字方或啟動點字方上的物件</td>
+</tr>
+<tr>
+<td>點顯器向上捲動</td>
+<td>無</td>
+<td>點顯器向上捲動</td>
+</tr>
+<tr>
+<td>點顯器向下捲動</td>
+<td>無</td>
+<td>點顯器向下捲動</td>
+</tr>
+<tr>
+<td>切換點字游標</td>
+<td>無</td>
+<td>切換點字游標的開或關</td>
+</tr>
+<tr>
+<td>切換點字脈絡資訊</td>
+<td>無</td>
+<td>切換脈絡資訊的點字呈現方式</td>
+</tr>
+<tr>
+<td>切換導覽點字時朗讀</td>
+<td>無</td>
+<td>切換點字逐行或逐段導覽時朗讀的開或關</td>
+</tr>
+<tr>
+<td>切換在定位遊標時讀出字元</td>
+<td>無</td>
+<td>在文字中定位遊標時讀出游標所在的字元</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">點字輸入</h3>
-<p>按點字鍵 7 清除最後鍵入的點字方或字元。
-按點字鍵 8 轉譯任何點字輸入並按 Enter。
-按點字鍵 7 與 8 轉譯任何點字的輸入，但沒有加空格或按 Enter。</p>
+<p>按點字鍵第7點清除最後鍵入的點字方或字元。
+按點字鍵第8點轉譯任何點字輸入並按 Enter 鍵。
+按點字鍵第7和第8點轉譯任何點字輸入，但沒有加空格或按 Enter。</p>
+<h4 id="BrailleInputGestures">點字輸入手勢</h4>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>點字鍵</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>透過點顯器輸入</td>
+<td>任何點</td>
+<td>透過點字鍵盤輸入點字</td>
+</tr>
+<tr>
+<td>清除最後的輸入</td>
+<td>第七點</td>
+<td>清除最後輸入的點字方或字元</td>
+</tr>
+<tr>
+<td>轉譯點字輸入</td>
+<td>第七和第八點</td>
+<td>轉譯任何點字輸入</td>
+</tr>
+<tr>
+<td>轉譯並按 Enter</td>
+<td>第八點</td>
+<td>轉譯任何點字輸入並按 Enter 鍵</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">視覺</h2>
 <h3 id="VisionScreenCurtain">螢幕簾幕</h3>
 <table>
@@ -1218,6 +1426,94 @@
 <td>切換螢幕簾幕的狀態</td>
 <td>NVDA+Ctrl+Esc</td>
 <td>啟用使螢幕全黑或停用以顯示螢幕內容。按一下啟用螢幕簾幕直到您重新啟動 NVDA，連按兩下啟用螢幕簾幕直到您將其停用。</td>
+</tr>
+<tr>
+<td>讀出螢幕簾幕的狀態</td>
+<td>無</td>
+<td>讀出目前螢幕簾幕的狀態，停用、啟用或暫時模式。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">放大鏡</h2>
+<h3 id="MagnifierCommands">放大鏡指令</h3>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>快速鍵</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>切換放大鏡的開或關</td>
+<td>NVDA+Shift+w</td>
+<td>啟用或停用放大鏡</td>
+</tr>
+<tr>
+<td>增加放大倍率</td>
+<td>NVDA+Shift+Equals</td>
+<td>增加放大倍率，如果放大鏡尚未執行則會啟動。</td>
+</tr>
+<tr>
+<td>減少放大倍率</td>
+<td>NVDA+Shift+Dash</td>
+<td>減少放大倍率</td>
+</tr>
+<tr>
+<td>循環切換色彩濾鏡</td>
+<td>NVDA+Shift+i</td>
+<td>循環切換可用的色彩濾鏡 (正常、灰階、反轉)</td>
+</tr>
+<tr>
+<td>循環切換追蹤模式</td>
+<td>無</td>
+<td>循環切換追蹤模式 (中心、相對)</td>
+</tr>
+<tr>
+<td>顯示整個螢幕全貌</td>
+<td>NVDA+Shift+l</td>
+<td>暫時顯示整個螢幕全貌</td>
+</tr>
+<tr>
+<td>向左平移</td>
+<td>NVDA+Alt+向左鍵</td>
+<td>將放大視窗依指定的平移步長向左平移</td>
+</tr>
+<tr>
+<td>向右平移</td>
+<td>NVDA+Alt+向右鍵</td>
+<td>將放大視窗依指定的平移步長向右平移</td>
+</tr>
+<tr>
+<td>向上平移</td>
+<td>NVDA+Alt+向上鍵</td>
+<td>將放大視窗依指定的平移步長向上平移</td>
+</tr>
+<tr>
+<td>向下平移</td>
+<td>NVDA+Alt+向下鍵</td>
+<td>將放大視窗依指定的平移步長向下平移</td>
+</tr>
+<tr>
+<td>平移到左邊緣</td>
+<td>NVDA+Shift+Alt+向左鍵</td>
+<td>將放大視窗直接平移到螢幕左邊緣</td>
+</tr>
+<tr>
+<td>平移到右邊緣</td>
+<td>NVDA+Shift+Alt+向右鍵</td>
+<td>將放大視窗直接平移到螢幕右邊緣</td>
+</tr>
+<tr>
+<td>平移到上邊緣</td>
+<td>NVDA+Shift+Alt+向上鍵</td>
+<td>將放大視窗直接平移到螢幕上邊緣</td>
+</tr>
+<tr>
+<td>平移到下邊緣</td>
+<td>NVDA+Shift+Alt+向下鍵</td>
+<td>將放大視窗直接平移到螢幕下邊緣</td>
 </tr>
 </tbody>
 </table>
@@ -1251,10 +1547,10 @@
 <h4 id="BrowseModeInMicrosoftWord">Microsoft Word 中的瀏覽模式</h4>
 <p>要在 Microsoft Word 切換瀏覽模式的開啟或關閉，按 NVDA+空白鍵。</p>
 <h5 id="WordElementsList">項目清單</h5>
-<p>當 Microsoft Word 處於瀏覽模式，您可按 NVDA+F7 使用「項目清單」的對話框，</p>
+<p>當 Microsoft Word 處於瀏覽模式，您可按 NVDA+F7 使用「項目清單」的對話框。</p>
 <h4 id="WordReportingComments">讀出註解</h4>
 <p>要在目前游標位置讀出註解按 NVDA+Alt+C，
-連按兩下在瀏覽模式顯示資訊。</p>
+連按兩下顯示在可瀏覽的訊息中。</p>
 <h3 id="MicrosoftExcel">Microsoft Excel</h3>
 <h4 id="ExcelAutomaticColumnAndRowHeaderReading">欄及列標題自動讀出</h4>
 <table>
@@ -1282,7 +1578,7 @@
 <p>要在 Excel 使用「項目清單」按 NVDA+f7。</p>
 <h4 id="ExcelReportingComments">讀出附註</h4>
 <p>要讀出目前焦點儲存格的附註按 NVDA+Alt+C，
-連按兩下在瀏覽模式顯示資訊。
+連按兩下顯示在可瀏覽的訊息中。
 在 Microsoft 2016、365 及之後版本的 Microsoft Excel 已將傳統所稱的「註解」更名為「附註」。</p>
 <p>要在焦點儲存格新增或編輯附註按 Shift+F2。</p>
 <h4 id="ExcelReadingProtectedCells">讀出受保護的儲存格</h4>
@@ -1380,10 +1676,10 @@
 </tr>
 </tbody>
 </table>
-<h3 id="Kindle">Kindle PC 版</h3>
+<h3 id="Kindle">Kindle for PC</h3>
 <p>您可手動翻頁，按 PageDown 鍵可以翻到下一頁，PageUp 鍵可以翻到上一頁。</p>
 <h4 id="KindleTextSelection">選取文字</h4>
-<p>當選取文字後按快顯鍵或 Shift+F10 會顯示可使用的選項，</p>
+<p>當選取文字後按快顯鍵或 Shift+F10 會顯示可使用的選項。</p>
 <h3 id="Azardi">Azardi</h3>
 <p>當以「Table View」方式呈現書籍時：</p>
 <table>
@@ -1441,7 +1737,7 @@
 </tbody>
 </table>
 <h2 id="ConfiguringNVDA">設定 NVDA</h2>
-<p>當在對話框中，按 F1 可開啟使用者指南中與焦點所在設定或目前對話框相關的段落，</p>
+<p>當在對話框中，按 F1 可開啟使用者指南中與焦點所在設定或目前對話框相關的段落。</p>
 <h3 id="NVDASettings">NVDA 設定</h3>
 <h4 id="GeneralSettings">一般</h4>
 <table>
@@ -1585,10 +1881,10 @@
 <td>此選項允許您在可用的點字模式之間進行選擇。</td>
 </tr>
 <tr>
-<td id="BrailleTether">點字游標跟隨</td>
+<td id="BrailleTether">點字跟隨</td>
 <td><code>NVDA+Ctrl+T</code></td>
 <td><code>NVDA+Ctrl+T</code></td>
-<td>此選項允許您選擇點字游標是要跟隨系統焦點 / 游標，或是導覽物件 / 檢閱游標，或是兩者均有。</td>
+<td>此選項允許您選擇點顯器呈現的內容是要跟隨系統焦點 / 游標，或是導覽物件 / 檢閱游標，或是兩者均有。</td>
 </tr>
 </tbody>
 </table>
@@ -1650,6 +1946,37 @@
 <td>循環切換聲音分割模式</td>
 <td>NVDA+Alt+S</td>
 <td>在聲音分割模式之間循環切換</td>
+</tr>
+</tbody>
+</table>
+<h4 id="MagnifierSettingsCategory">放大鏡</h4>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>桌電快速鍵</th>
+<th>筆電快速鍵</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">開啟放大鏡設定</td>
+<td>NVDA+Ctrl+w</td>
+<td>NVDA+Ctrl+w</td>
+<td>NVDA 設定對話框中的放大鏡類別可讓您設定 NVDA 內建<a href="#Magnifier" title="放大鏡">放大鏡</a>功能的預設行為，</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">啟用放大鏡</td>
+<td>NVDA+Shift+w</td>
+<td>NVDA+Shift+w</td>
+<td>此選項用來啟動或停止放大鏡。</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">色彩濾鏡</td>
+<td>NVDA+Shift+i</td>
+<td>NVDA+Shift+i</td>
+<td>此選項可讓您選擇使用放大鏡時要套用的濾鏡。</td>
 </tr>
 </tbody>
 </table>
@@ -1761,7 +2088,7 @@
 <td id="ObjectPresentationProgressBarOutput">進度列輸出</td>
 <td>NVDA+u</td>
 <td>NVDA+u</td>
-<td>此選項控制 NVDA 如何讀出進度列的更新進度，</td>
+<td>此選項控制 NVDA 如何讀出進度列的更新進度。</td>
 </tr>
 <tr>
 <td id="ObjectPresentationReportDynamicContent">讀出動態內容變化</td>
@@ -1823,8 +2150,7 @@
 <thead>
 <tr>
 <th>名稱</th>
-<th>桌電快速鍵</th>
-<th>筆電快速鍵</th>
+<th>快速鍵</th>
 <th>說明</th>
 </tr>
 </thead>
@@ -1832,14 +2158,12 @@
 <tr>
 <td>儲存組態</td>
 <td>NVDA+Ctrl+C</td>
-<td>NVDA+Ctrl+C</td>
 <td>儲存目前的組態，當結束 NVDA 時設定不會遺失</td>
 </tr>
 <tr>
 <td>還原組態</td>
-<td><code>NVDA+control+r</code></td>
-<td><code>NVDA+control+r</code></td>
-<td>按一下回復到上次儲存的組態，連按三下重設回原始預設值。</td>
+<td>NVDA+Ctrl+r</td>
+<td>按一下重設回上次儲存的組態，連按三下重設回原始預設值而不顯示還原對話框。</td>
 </tr>
 </tbody>
 </table>
@@ -1973,7 +2297,7 @@
 <td>右邊 AdvanceBar</td>
 </tr>
 <tr>
-<td>切換點字游標跟隨</td>
+<td>切換點字跟隨</td>
 <td>左邊 GDFButton 加右邊 GDFButton</td>
 </tr>
 <tr>
@@ -4849,11 +5173,11 @@
 <tbody>
 <tr>
 <td>Scroll braille display back</td>
-<td><code>pan_left</code></td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
 <td>Scroll braille display forward</td>
-<td><code>pan_right</code></td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

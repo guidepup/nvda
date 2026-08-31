@@ -2,16 +2,16 @@
 <html lang="zh_CN" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 用户指南</title>
+<title>NVDA 2026.2 用户指南</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="nvda-202611">NVDA 2026.1.1 用户指南</h1>
+<body><h1 id="nvda-20262">NVDA 2026.2 用户指南</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611" title="NVDA 2026.1.1 用户指南">NVDA 2026.1.1 用户指南</a><ul>
+<li><a href="#nvda-20262" title="NVDA 2026.2 用户指南">NVDA 2026.2 用户指南</a><ul>
 <li><a href="#Introduction" title="前言">前言</a><ul>
 <li><a href="#GeneralFeatures" title="主要功能">主要功能</a></li>
 <li><a href="#SystemRequirements" title="系统要求">系统要求</a><ul>
@@ -65,6 +65,7 @@
 <li><a href="#StartAtWindowsLogon" title="进入 Windows 欢迎界面时启用 NVDA">进入 Windows 欢迎界面时启用 NVDA</a></li>
 <li><a href="#CreateDesktopShortcut" title="创建桌面快捷方式（Ctrl+Alt+N）">创建桌面快捷方式（Ctrl+Alt+N）</a></li>
 <li><a href="#CopyPortableConfigurationToCurrentUserAccount" title="拷贝便携版的设置到当前用户的配置文件夹">拷贝便携版的设置到当前用户的配置文件夹</a></li>
+<li><a href="#RestartWindowsAfterInstall" title="安装后重启 Windows">安装后重启 Windows</a></li>
 </ul>
 </li>
 <li><a href="#CreatingAPortableCopy" title="创建一个便携版">创建一个便携版</a></li>
@@ -87,6 +88,7 @@
 <li><a href="#TouchGestures" title="触摸手势">触摸手势</a><ul>
 <li><a href="#Taps" title="点击">点击</a></li>
 <li><a href="#Flicks" title="滑动">滑动</a></li>
+<li><a href="#PinchGestures" title="捏合">捏合</a></li>
 </ul>
 </li>
 <li><a href="#TouchModes" title="触摸模式">触摸模式</a></li>
@@ -117,6 +119,10 @@
 </li>
 <li><a href="#BrowseMode" title="浏览模式">浏览模式</a><ul>
 <li><a href="#SingleLetterNavigation" title="单键导航">单键导航</a><ul>
+<li><a href="#BrowseModeTouch" title="浏览模式下的触摸导航">浏览模式下的触摸导航</a><ul>
+<li><a href="#_1" title="浏览模式中的触摸手势">浏览模式中的触摸手势</a></li>
+</ul>
+</li>
 <li><a href="#TextNavigationCommand" title="文本段落导航命令">文本段落导航命令</a></li>
 <li><a href="#OtherNavigationCommands" title="其他导航命令">其他导航命令</a></li>
 </ul>
@@ -129,7 +135,7 @@
 </li>
 <li><a href="#ReadingMath" title="阅读数学内容">阅读数学内容</a><ul>
 <li><a href="#SupportedMathContent" title="支持的数学内容">支持的数学内容</a></li>
-<li><a href="#InteractiveNavigation" title="交互式浏览">交互式浏览</a><ul>
+<li><a href="#InteractiveNavigation" title="交互式导航">交互式导航</a><ul>
 <li><a href="#MathNavigationModes" title="导航模式">导航模式</a></li>
 <li><a href="#MathTypicalUse" title="典型用法">典型用法</a></li>
 </ul>
@@ -137,9 +143,15 @@
 </ul>
 </li>
 <li><a href="#Braille" title="盲文">盲文</a><ul>
+<li><a href="#BrailleReading" title="阅读盲文">阅读盲文</a><ul>
+<li><a href="#AutomaticBrailleScrolling" title="自动滚动盲文显示">自动滚动盲文显示</a></li>
+<li><a href="#BrailleReadingGestures" title="盲文阅读命令">盲文阅读命令</a></li>
+</ul>
+</li>
 <li><a href="#BrailleAbbreviations" title="控件类型/状态和路标缩写">控件类型/状态和路标缩写</a></li>
 <li><a href="#BrailleInput" title="盲文输入">盲文输入</a><ul>
 <li><a href="#BrailleKeyboardShortcuts" title="按下键盘快捷键">按下键盘快捷键</a></li>
+<li><a href="#BrailleInputGestures" title="盲文输入命令">盲文输入命令</a></li>
 </ul>
 </li>
 </ul>
@@ -147,6 +159,16 @@
 <li><a href="#Vision" title="视觉功能">视觉功能</a><ul>
 <li><a href="#VisionFocusHighlight" title="高亮显示">高亮显示</a></li>
 <li><a href="#VisionScreenCurtain" title="黑屏">黑屏</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="放大镜">放大镜</a><ul>
+<li><a href="#MagnifierToggle" title="开启或关闭放大镜">开启或关闭放大镜</a></li>
+<li><a href="#MagnifierCommands" title="放大镜命令">放大镜命令</a></li>
+<li><a href="#MagnifierZoomLevels" title="放大级别">放大级别</a></li>
+<li><a href="#MagnifierColorFilters" title="颜色滤镜">颜色滤镜</a></li>
+<li><a href="#MagnifierTrackingMode" title="跟踪模式">跟踪模式</a></li>
+<li><a href="#MagnifierScreenOverview" title="显示全屏概览">显示全屏概览</a></li>
+<li><a href="#MagnifierSettings" title="放大镜设置">放大镜设置</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="图像内容识别">图像内容识别</a><ul>
@@ -211,6 +233,7 @@
 <li><a href="#SpeechSettingsPitch" title="音调">音调</a></li>
 <li><a href="#SpeechSettingsVolume" title="音量">音量</a></li>
 <li><a href="#SpeechSettingsInflection" title="声调">声调</a></li>
+<li><a href="#SpeechSettingPunctuationSilence" title="标点后自然停顿">标点后自然停顿</a></li>
 <li><a href="#SpeechSettingsUseWasapi" title="使用现代音频输出系统（WASAPI）">使用现代音频输出系统（WASAPI）</a></li>
 <li><a href="#SpeechSettingsLanguageSwitching" title="自动语言切换">自动语言切换</a></li>
 <li><a href="#SpeechSettingsDialectSwitching" title="自动方言切换">自动方言切换</a></li>
@@ -260,6 +283,7 @@
 </li>
 <li><a href="#BrailleSpeakOnRouting" title="定位文本光标后读出光标所在处的字符">定位文本光标后读出光标所在处的字符</a></li>
 <li><a href="#BrailleSpeakOnNavigating" title="按行或段落导航时读出内容">按行或段落导航时读出内容</a></li>
+<li><a href="#BrailleAutoScrollRate" title="自动滚动的速度">自动滚动的速度</a></li>
 <li><a href="#BrailleSettingsWordWrap" title="尽可能避免拆分单词">尽可能避免拆分单词</a></li>
 <li><a href="#BrailleUnicodeNormalization" title="Unicode 规范化">Unicode 规范化</a></li>
 <li><a href="#BrailleSettingsInterruptSpeech" title="滚动时打断语音">滚动时打断语音</a></li>
@@ -294,6 +318,19 @@
 <li><a href="#VisionSettings" title="视觉">视觉</a><ul>
 <li><a href="#VisionSettingsFocusHighlight" title="焦点高亮显示">焦点高亮显示</a></li>
 <li><a href="#VisionSettingsThirdPartyVisualAids" title="第三方视觉辅助功能设置">第三方视觉辅助功能设置</a></li>
+</ul>
+</li>
+<li><a href="#MagnifierSettingsCategory" title="放大镜">放大镜</a><ul>
+<li><a href="#OpenMagnifierSettings" title="打开放大镜设置">打开放大镜设置</a></li>
+<li><a href="#MagnifierEnable" title="开启放大镜">开启放大镜</a></li>
+<li><a href="#MagnifierZoom" title="放大级别">放大级别</a></li>
+<li><a href="#MagnifierFilter" title="颜色滤镜">颜色滤镜</a></li>
+<li><a href="#MagnifierPanningStepSize" title="平移步长">平移步长</a></li>
+<li><a href="#MagnifierFollowMouse" title="跟踪鼠标">跟踪鼠标</a></li>
+<li><a href="#MagnifierFollowSystemFocus" title="跟踪系统焦点">跟踪系统焦点</a></li>
+<li><a href="#MagnifierFollowReviewCursor" title="跟踪查看光标">跟踪查看光标</a></li>
+<li><a href="#MagnifierFollowNavigatorObject" title="跟踪导航对象">跟踪导航对象</a></li>
+<li><a href="#MagnifierTrackingModeSetting" title="跟踪模式">跟踪模式</a></li>
 </ul>
 </li>
 <li><a href="#KeyboardSettings" title="键盘">键盘</a><ul>
@@ -371,6 +408,7 @@
 <li><a href="#BrowseModeSettingsAutoPassThroughOnCaretMove" title="光标移动时的自动焦点模式">光标移动时的自动焦点模式</a></li>
 <li><a href="#BrowseModeSettingsPassThroughAudioIndication" title="用音效提示焦点模式或浏览模式">用音效提示焦点模式或浏览模式</a></li>
 <li><a href="#BrowseModeSettingsTrapNonCommandGestures" title="拦截所有非命令手势，以防止意外的文档写入">拦截所有非命令手势，以防止意外的文档写入</a></li>
+<li><a href="#BrowseModeSettingsBrowseModeNavigationElements" title="触摸导航元素">触摸导航元素</a></li>
 </ul>
 </li>
 <li><a href="#DocumentFormattingSettings" title="文档格式">文档格式</a><ul>
@@ -389,6 +427,7 @@
 <li><a href="#MathCATSpeechOptions" title="语音选项">语音选项</a><ul>
 <li><a href="#MathSpeechImpairment" title="障碍类型">障碍类型</a></li>
 <li><a href="#MathSpeechLanguage" title="语言">语言</a></li>
+<li><a href="#MathSpeechDecimalSeparator" title="数字的小数分隔符">数字的小数分隔符</a></li>
 <li><a href="#MathSpeechStyle" title="语音风格">语音风格</a></li>
 <li><a href="#MathSpeechVerbosity" title="语音详细程度">语音详细程度</a></li>
 <li><a href="#MathRelativeSpeed" title="相对语速">相对语速</a></li>
@@ -469,6 +508,7 @@
 <li><a href="#CancelExpiredFocusSpeech" title="取消无效焦点事件的朗读">取消无效焦点事件的朗读</a></li>
 <li><a href="#TrimLeadingSilenceSpeech" title="去除语音开头的静音">去除语音开头的静音</a></li>
 <li><a href="#UseWASAPIForSAPI4" title="SAPI 4 使用 WASAPI 输出音频">SAPI 4 使用 WASAPI 输出音频</a></li>
+<li><a href="#SpeechDictsUseModernRegex" title="使用现代正则表达式引擎处理语音字典条目">使用现代正则表达式引擎处理语音字典条目</a></li>
 <li><a href="#AdvancedSettingsCaretMoveTimeout" title="光标移动超时（毫秒）">光标移动超时（毫秒）</a></li>
 <li><a href="#ReportTransparentColors" title="读出透明色值">读出透明色值</a></li>
 <li><a href="#AdvancedSettingsDebugLoggingCategories" title="调试日志">调试日志</a></li>
@@ -541,7 +581,7 @@
 <li><a href="#PythonConsole" title="Python 控制台">Python 控制台</a></li>
 <li><a href="#AddonStoreMenuItem" title="插件商店">插件商店</a></li>
 <li><a href="#CreatePortableCopy" title="创建便携版">创建便携版</a></li>
-<li><a href="#RunCOMRegistrationFixingTool" title="运行 COM 注册修复工具...">运行 COM 注册修复工具...</a></li>
+<li><a href="#RunCOMRegistrationFixingTool" title="运行系统辅助功能修复工具...">运行系统辅助功能修复工具...</a></li>
 <li><a href="#ReloadPlugins" title="重新加载插件">重新加载插件</a></li>
 </ul>
 </li>
@@ -608,7 +648,7 @@
 </li>
 </ul>
 </div>
-<!-- KC:title: NVDA 2026.1.1 按键和手势快速参考 -->
+<!-- KC:title: NVDA 2026.2 按键和手势快速参考 -->
 
 <h2 id="Introduction">前言</h2>
 <p>欢迎使用 NVDA！</p>
@@ -635,6 +675,7 @@ NVDA 由 <a href="https://www.nvaccess.org/" rel="noopener" target="_blank" titl
 <li>支持常见的辅助功能接口，如 Microsoft Active Accessibility（MSAA）、Java Access Bridge、IAccessible2 和 UI automation</li>
 <li>支持 Windows 命令提示符和其他控制台程序</li>
 <li>能够高亮显示各种焦点</li>
+<li>内置屏幕放大镜和颜色滤镜功能</li>
 </ul>
 <h3 id="SystemRequirements">系统要求</h3>
 <h4 id="MinimumSystemRequirements">最低系统要求</h4>
@@ -739,7 +780,7 @@ NVDA 平均每年更新四次。
 <li>“取消”：这个选项会关闭 NVDA 并不执行任何操作。</li>
 </ul>
 <p>如果您想一直在此计算机上使用 NVDA，您需要选择安装 NVDA。
-安装了 NVDA 就可以使用更多功能，如在 Windows 登录时自动启动 NVDA ，朗读 Windows 的欢迎界面和<a href="#SecureScreens" title="安全界面">安全界面</a>。
+安装 NVDA 后可以使用更多功能，例如登录 Windows 后自动启动 NVDA，以及朗读 Windows 的欢迎界面和<a href="#SecureScreens" title="安全界面">安全界面</a>。
 这些功能无法在便携版本和临时副本中使用。
 请参阅<a href="#PortableAndTemporaryCopyRestrictions" title="便携版本和临时副本的限制">便携版本和临时副本的限制</a>以获取运行便携版本或临时副本的限制的所有详细信息。</p>
 <p>安装版本还提供创建开始菜单和桌面快捷方式功能，并允许按 <code>Ctrl+Alt+N</code> 启动 NVDA。</p>
@@ -762,14 +803,14 @@ NVDA 平均每年更新四次。
 其中的消息提示“点击确定以启动安装好的副本。”。
 按<code>回车</code>启动安装好的副本。</li>
 <li>随着 NVDA 朗读出表示欢迎的消息，“欢迎使用 NVDA”的对话框出现了。
-此时的焦点位于“键盘配置”组合框。
+此时的焦点位于“键盘布局”组合框。
 默认采用“台式机”键盘配置，执行一些功能要用到数字键盘（小键盘）。
-如果愿意，可以按<code>下光标</code>选择“笔记本”键盘配置，将数字键盘的功能分配到其他按键上。</li>
+如果愿意，可以按<code>下光标</code>选择“笔记本”键盘布局，将数字键盘的功能分配到其他按键上。</li>
 <li>按 <code>Tab</code> 切换到“用大小写锁定（<code>capsLock</code>）作为 NVDA 键”。
 插入键（<code>Insert</code>）默认被设置为 NVDA 键。
 按<code>空格</code>选择<code>大小写锁定</code>键作为另一个 NVDA 键。
-注意：键盘配置和 NVDA 键的设置不会相互影响。
-此后，NVDA 键和键盘配置还可以在键盘设置中被修改。</li>
+注意：键盘布局和 NVDA 键的设置不会相互影响。
+此后，NVDA 键和键盘布局还可以在键盘设置中被修改。</li>
 <li>用 <code>Tab</code> 和<code>空格</code>对屏幕上的其他选项进行调整。
 这些选项用来设置 NVDA 是否自动启动。</li>
 <li>按<code>回车</code>关闭对话框，NVDA 现在就运行了。</li>
@@ -902,6 +943,12 @@ NVDA 键也可以设定为<code>大小写锁定</code>键。</p>
 <td><code>NVDA+f12</code></td>
 <td><code>NVDA+f12</code></td>
 <td>按一次读出当前时间。连按两次读出日期。时间与日期将以 Windows 设置中为系统托盘时钟设置的格式读出。</td>
+</tr>
+<tr>
+<td>重复最后朗读的信息</td>
+<td><code>NVDA+X</code></td>
+<td><code>NVDA+X</code></td>
+<td>重复最后朗读的内容。连按两次在浏览模式下显示该信息</td>
 </tr>
 <tr>
 <td>读出文本格式</td>
@@ -1157,7 +1204,7 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 <li><a href="https://www.nvaccess.org/product/basic-training-for-nvda-braille-hard-copy/" rel="noopener" target="_blank" title="纸质 UEB 盲文">纸质 UEB 盲文</a>可以邮寄到世界各地。</li>
 </ul>
 <p>其他模块和优惠活动：<a href="https://www.nvaccess.org/product/nvda-productivity-bundle/" rel="noopener" target="_blank" title="NVDA Productivity Bundle">NVDA Productivity Bundle</a>，<a href="https://www.nvaccess.org/shop" rel="noopener" target="_blank" title="NV Access Shop">NV Access Shop</a>。</p>
-<p>NV Access 还出售<a href="https://www.nvaccess.org/product/nvda-telephone-support/" rel="noopener" target="_blank" title="电话支持">电话支持</a>，既可以批量出售，也可以作为 <a href="https://www.nvaccess.org/product/nvda-productivity-bundle/" rel="noopener" target="_blank" title="NVDA Productivity Bundle">NVDA Productivity Bundle</a> 的一部分销售。。
+<p>NV Access 还出售<a href="https://www.nvaccess.org/product/nvda-telephone-support/" rel="noopener" target="_blank" title="电话支持">电话支持</a>，既可以批量出售，也可以作为 <a href="https://www.nvaccess.org/product/nvda-productivity-bundle/" rel="noopener" target="_blank" title="NVDA Productivity Bundle">NVDA Productivity Bundle</a> 的一部分销售。
 电话支持包含澳大利亚和美国的电话区号。</p>
 <p>还有一个<a href="https://github.com/nvaccess/nvda/wiki/Connect" rel="noopener" target="_blank" title="电子邮件用户组">电子邮件用户组</a>是寻求社区帮助的重要来源，<a href="https://certification.nvaccess.org/" rel="noopener" target="_blank" title="经过认证的 NVDA 专家">经过认证的 NVDA 专家</a>也是如此。</p>
 <p>您可以通过 <a href="https://github.com/nvaccess/nvda/blob/master/projectDocs/issues/readme.md" rel="noopener" target="_blank" title="GitHub">GitHub</a> 提交错误报告或功能请求。
@@ -1169,8 +1216,8 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 <p>弹出的安装对话框会让您确认是否要安装 NVDA，并提示您先前版本的 NVDA 将被此安装程序更新。
 点击继续按钮会开始安装 NVDA。
 这个对话框中还有一些选项会在下面讲解。
-一旦安装完成，会出现一个消息框，告知您安装成功。
-此时点击确定就会重新启动新安装的 NVDA。</p>
+安装完成后，将出现一个对话框，其中包含后续操作的选项。
+有关更多信息，请查看<a href="#RestartWindowsAfterInstall" title="安装后重启 Windows">安装后重启 Windows</a>章节。</p>
 <h4 id="InstallWithIncompatibleAddons">插件不兼容的警告</h4>
 <p>如果您已经安装了插件，可能会出现一个警告，告知不兼容的插件将被禁用。
 您必须使用复选框确认您了解这些插件将被禁用之后才可以点击继续按钮。
@@ -1188,6 +1235,18 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 <p>这个选项允许您选择是否将用户配置从正在运行的 NVDA 拷贝到当前登录用户使用的安装版 NVDA。
 此选项不会为此系统上的其他用户拷贝配置，也不会将配置应用于 Windows 欢迎界面和<a href="#SecureScreens" title="其他安全界面">其他安全界面</a>。
 该选项只在由便携版安装时可用，使用下载的安装程序包直接安装时不可用。</p>
+<h4 id="RestartWindowsAfterInstall">安装后重启 Windows</h4>
+<p>在 NVDA 安装或更新成功后，会弹出一个对话框，建议您重启 Windows。
+重启可确保 NVDA 在系统中完全注册，并能在所有应用程序中正常工作。</p>
+<p>该对话框提供以下选项：</p>
+<ul>
+<li>重启 Windows：立即重新启动 Windows。</li>
+<li>启动 NVDA：启动新安装的 NVDA 而不重启。<ul>
+<li>注意：当以管理员权限运行安装程序时，此选项不可用。</li>
+</ul>
+</li>
+<li>退出 NVDA：关闭安装程序，不启动 NVDA，也不重启 Windows。</li>
+</ul>
 <h3 id="CreatingAPortableCopy">创建一个便携版</h3>
 <p>如果直接从下载的 NVDA 安装程序包创建便携版，则点击创建便携版按钮。
 如果您已经关闭了此对话框或者您正运行安装版的 NVDA，可在 NVDA 菜单中找到工具，选择下面的创建便携版菜单项。</p>
@@ -1221,13 +1280,14 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 </ul>
 </li>
 <li>尝试启动具有管理权限的应用程序时无法读取用户账户控制（UAC）界面。</li>
-<li>无法支持使用触摸屏进行输入。</li>
+<li>无法支持使用触摸屏进行输入。
+若开启了 NVDA 放大镜，触摸屏输入将无法正常工作。</li>
 <li>无法在 Windows 商店应用中提供诸如浏览模式和朗读输入字符等功能。</li>
 <li>无法支持音频闪避功能。</li>
 </ul>
 <h2 id="GettingStartedWithNVDA">使用 NVDA</h2>
 <h3 id="LaunchingNVDA">运行 NVDA</h3>
-<p>如果您已安装了 NVDA 安装版，最简单的打开方式是按下快捷键 <code>Ctrl+Alt+N</code>，或从“开始菜单”中的“程序中找到 NVDA。
+<p>如果您已安装了 NVDA 安装版，最简单的打开方式是按下快捷键 <code>Ctrl+Alt+N</code>，或从“开始菜单”中的“程序”中找到 NVDA。
 您也可以在“开始菜单”中的“运行”对话框中输入 NVDA，然后按回车启动 NVDA。
 如果 NVDA 已在运行，它将重新启动。
 您也可以使用一些<a href="#CommandLineOptions" title="命令行选项">命令行选项</a>，使用这些命令行选项可以退出 NVDA（-q）、停用插件（--disable-addons）等。</p>
@@ -1247,7 +1307,7 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 此对话框包含一个组合框和三个复选框。
 组合框用于选择键盘布局。
 第一个复选框允许您选择是否使用（大小写锁定键）作为 NVDA 键。
-第二个选择是否允许在 Windows 启动时自动启动 NVDA，且只适用于已安装的 NVDA。
+第二个复选框用于设置 NVDA 是否在您登录 Windows 后自动启动，且仅适用于安装版 NVDA。
 第三个允许您选择是否希望在每次启动 NVDA 时显示此对话框。</p>
 <h4 id="UsageStatsDialog">使用情况统计数据对话框</h4>
 <p>首次启动 NVDA 时，会出现一个对话框，询问您是否愿意在使用 NVDA 时同意发送数据给 NV Access，以帮助改进 NVDA 的未来版本。
@@ -1257,19 +1317,19 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 <h3 id="AboutNVDAKeyboardCommands">关于 NVDA 的键盘命令</h3>
 <h4 id="TheNVDAModifierKey">NVDA 键</h4>
 <p>大多数 NVDA 键盘命令都是由一个被称之为 NVDA 组合键的特殊按键和另外的一个或者多个其他的按键组成。
-需要注意的是，NVDA 的台式机键盘方案中，进行文本查看仅需使用数字键盘（小键盘）的按键，但也有一些例外。</p>
+需要注意的是，NVDA 的台式机键盘布局中，进行文本查看仅需使用数字键盘（小键盘）的按键，但也有一些例外。</p>
 <p>NVDA 可以配置为使用<code>插入</code>键、<code>数字键盘插入</code>键或<code>大写锁定</code>键作为 <code>NVDA</code> 键。
 默认情况下，主键盘和数字键盘的<code>插入</code>键都被设置为 NVDA 键。</p>
 <p>假如您想在运行 NVDA 时执行该按键的其中一个原有动作（举例来说，如果您设置了大小写锁定键作为 NVDA 键，但又需要用它来切换大写锁定状态），您可以快速连按两次该键。</p>
 <h4 id="KeyboardLayouts">键盘布局</h4>
 <p>NVDA 目前共有两套被称为键盘布局的快捷键配置：一套是台式机按键布局，另一套是笔记本按键布局。
 默认情况下，NVDA 使用的是台式机键盘布局，如果您希望切换到笔记本键盘布局，只需要在“NVDA 菜单”中的“选项”子菜单下打开 <a href="#NVDASettings" title="NVDA 设置">NVDA 设置</a>找到“键盘设置”即可进行切换。</p>
-<p>大量台式机键盘的快捷键依靠关闭状态下的数字键盘。
+<p>大量台式机键盘布局的快捷键依靠关闭状态下的数字键盘。
 虽然大多数笔记本电脑都没有实体数字键盘，但有些电脑可以通过按下 FN 键加上键盘右边的字母和数字来模拟（例如 7、8、9、U、I、O、J、K、L 等等）。
 如果您的笔记本不能这样做或者不允许关闭数字键盘，您或许会希望切换到笔记本键盘布局来代替。</p>
 <h3 id="NVDATouchGestures">NVDA 触摸手势</h3>
 <p>如果您正在使用的设备带有触摸屏，您也可以通过触摸屏来控制 NVDA。
-当 NVDA 正在运行时，所有触摸动作都将直接被 NVDA 接管。
+NVDA 运行时，除非禁用了触摸交互支持，否则所有触摸输入都会直接传给 NVDA。
 因而，所有在运行 NVDA 之前通常能使用的动作/手势都将暂时不可用。</p>
 <!-- KC:beginInclude -->
 <p>要切换触摸屏支持，请按 <code>NVDA+Ctrl+Alt+t</code>。</p>
@@ -1289,15 +1349,18 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 <p>如果相同的点击动作再次被执行一次或者更多的次数，NVDA 将把这个动作视为多重手势。
 快速点击两次将被识别为一个双击动作。
 点击三次将被识别为一个三击动作。
-当然，多次点击的手势也会判断手指的数目。所以，像两指双击、四指单击这样的动作也是可以识别的。</p>
+当然，多次点击手势还能区分手指数量，因此可以使用双指三击、四指单击等手势。</p>
 <h5 id="Flicks">滑动</h5>
 <p>用您的手指，快速滑动屏幕。</p>
 <p>根据方向的不同，有四种可能的滑动手势：向左滑动、向右滑动、向上滑动和向下滑动。</p>
 <p>就像点击一样，超过一个的手指可以用来执行手势。
 因而，如双指上滑和四指左滑这样的动作都是可行的。</p>
+<h5 id="PinchGestures">捏合</h5>
+<p>将两根手指放在屏幕上并向彼此靠拢，可做出捏合手势。
+将两根手指向彼此远离的方向移动，可做出张开手势。</p>
 <h4 id="TouchModes">触摸模式</h4>
 <p>因为 NVDA 拥有的命令比可能的触摸手势还要多，NVDA 拥有可切换的专用模式，每个模式各自拥有自己的一小套命令。
-两个模式分别为对象模式和文本模式。
+这三种模式分别是文本模式、对象模式和浏览模式。
 列举在这个文档中的、NVDA 包含的命令所使用的触摸手势到底属于哪个模式，将被罗列在其后的方括号内。
 例如，向上滑动（文本模式）的意思是仅在当前处于文本模式时向上滑动才能执行此命令。
 如果一个命令没有罗列它属于哪个模式，那它就可在任意模式下使用。</p>
@@ -1364,6 +1427,13 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 <td>Shift</td>
 <td>无</td>
 <td>立即暂停朗读，再次按下便会从刚刚停止的地方继续朗读（如果当前合成器可以支持暂停的话）。</td>
+</tr>
+<tr>
+<td>重复最后朗读的信息</td>
+<td><code>NVDA+X</code></td>
+<td><code>NVDA+X</code></td>
+<td>无</td>
+<td>重复最后朗读的内容。连按两次在浏览模式下显示该信息</td>
 </tr>
 <tr>
 <td>NVDA 菜单</td>
@@ -1479,7 +1549,7 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 <h3 id="SystemFocus">使用系统焦点进行导航</h3>
 <p>系统焦点，或被简单地称之为焦点，就是一个用来接收键盘输入的<a href="#Objects" title="对象">对象</a>。
 例如，如果您正在一个可编辑文本框中进行输入，那么，这个可编辑文本框就有了焦点。</p>
-<p>使用 NVDA 在 Windows 系统中导航的最常用方法是使用标准的系统键盘命令简单的移动系统焦点，如使用 <code>Tab</code> 或者 <code>Shift+Tab</code> 在控件之间前后移动、按下 <code>Alt</code> 转到菜单栏后使用光标键在菜单中导航和使用 <code>Alt+Tab</code> 在正在运行的程序之间切换。
+<p>使用 NVDA 在 Windows 系统中导航的最常用方法是使用标准的系统键盘命令简单地移动系统焦点，如使用 <code>Tab</code> 或者 <code>Shift+Tab</code> 在控件之间前后移动、按下 <code>Alt</code> 转到菜单栏后使用光标键在菜单中导航和使用 <code>Alt+Tab</code> 在正在运行的程序之间切换。
 当您这样操作时，NVDA 通常会读出焦点所在对象的相关信息，包括：名称、类型、值、状态、描述、快捷键及位置信息等等。
 当<a href="#VisionFocusHighlight" title="高亮显示系统焦点">高亮显示系统焦点</a>开启时，当前系统焦点的位置也将以视觉方式高亮显示。</p>
 <p>下面是一些在移动系统焦点时很有用的键盘命令：</p>
@@ -1515,7 +1585,7 @@ NV Access 还有一个定期的 <a href="https://www.nvaccess.org/category/in-pr
 </tr>
 <tr>
 <td>读出状态栏</td>
-<td><code>NVDA+行</code>尾</td>
+<td><code>NVDA+行尾</code></td>
 <td><code>NVDA+Shift+行尾</code></td>
 <td>读出当前应用程序的状态栏，连按两次逐字朗读，连按三次复制该信息到剪贴板</td>
 </tr>
@@ -1683,13 +1753,13 @@ NVDA 将在您进行逐字、逐词甚至逐行移动时提示，也会对文本
 您可能也希望访问那些通常不能使用键盘进行浏览的<a href="#Objects" title="对象">对象</a>。
 在这些情况下，您可以使用对象导航。</p>
 <p>对象导航允许您在<a href="#Objects" title="对象">对象</a>之间进行移动并获取每个对象的信息。
-当您移动到一个对象时，NVDA 将语系统焦点相似的方式进行朗读。
+当您移动到一个对象时，NVDA 会像朗读系统焦点一样朗读该对象。
 要查看屏幕上显示的所有文本，您可以使用<a href="#ScreenReview" title="屏幕查看">屏幕查看</a>。</p>
 <p>为了避免在系统创建的众多对象之间移动，对象被分成不同层级。
 这就意味着，有些对象内可以包含其他对象，您必须先进入它们才能访问这些包含在其父对象内的子对象。
 例如，一个列表包含列表项目，您必须先移动到列表的内部才能访问列表项目。
 如果您已经移动到了列表内的列表项，使用移动到此层级的上一个对象/下一个对象可以让您在此列表内的其他列表项之间移动。
-使用移动到父对象可以让您退出这个列表。
+移动到列表项的父对象会返回该列表。
 您也可以越过这个列表来访问其他您所希望访问的对象。
 同样的，又比如工具栏包含控件，所以您必须进入工具栏才能访问包含在这个工具栏的控件。</p>
 <p>如果您希望在系统上的每一个对象之间来回移动，则可以使用基于线性浏览的移动到上一个/下一个对象命令。
@@ -1982,18 +2052,18 @@ NVDA 将在您进行逐字、逐词甚至逐行移动时提示，也会对文本
 <td>读出查看光标所在处文本的格式信息，连按两次可使用浏览模式显示该信息</td>
 </tr>
 <tr>
-<td>读出符号极其发音替换文本</td>
+<td>读出符号及其发音替换文本</td>
 <td>无</td>
 <td>无</td>
 <td>无</td>
-<td>按一次读出当前查看光标处的符号。连按两次，在浏览模式下显示该符号极其对应的发音替换文本。</td>
+<td>按一次读出当前查看光标处的符号。连按两次，在浏览模式下显示该符号及其对应的发音替换文本。</td>
 </tr>
 </tbody>
 </table>
 <!-- KC:endInclude -->
 
 <p>请注意，数字键盘必须处于关闭状态下按键才能正常工作。</p>
-<p>使用台式机布局时一个用来记住基本的文本查看命令的好方法就是把它们想象成一个三乘三的格子，从上到下依次是行、词、字，从左道右是上一个、当前、下一个。
+<p>使用台式机布局时一个用来记住基本的文本查看命令的好方法就是把它们想象成一个三乘三的格子，从上到下依次是行、词、字，从左到右是上一个、当前、下一个。
 下面是布局的说明：</p>
 <table>
 <thead>
@@ -2058,7 +2128,7 @@ NVDA 将在您进行逐字、逐词甚至逐行移动时提示，也会对文本
 <h4 id="ObjectReview">对象查看</h4>
 <p>当处于对象查看模式时，您只能查看当前<a href="#ObjectNavigation" title="导航对象">导航对象</a>的内容。
 对于那些如可编辑区域或其他基本的编辑控件对象来说，内容通常是文本。
-对于其他对象，内容可能是他的名称和值。</p>
+对于其他对象，内容可能是它的名称和值。</p>
 <h4 id="DocumentReview">文档查看</h4>
 <p>当<a href="#ObjectNavigation" title="导航对象">导航对象</a>处于一个浏览模式文档时（例如 web 页面）或其他复杂文档（例如一个 Lotus 交响乐文档），可能会切换到文档查看模式。
 文档查看模式允许您查看整个文档的内容。</p>
@@ -2073,7 +2143,7 @@ NVDA 将在您进行逐字、逐词甚至逐行移动时提示，也会对文本
 <p>请注意，在某些较新的应用程序中，由于使用了目前暂时无法支持的较新屏幕绘制技术，NVDA 可能无法识别屏幕上显示的部分或全部文本。</p>
 <h3 id="NavigatingWithTheMouse">使用鼠标导航</h3>
 <p>当您移动鼠标，默认情况下 NVDA 将读出指针经过时鼠标指针下的文本。
-在支持的地方，NVDA 将朗读附近的一段文本，，有些控件可能会按行朗读。</p>
+在支持的地方，NVDA 将朗读附近的一段文本，有些控件可能会按行朗读。</p>
 <p>NVDA 也可以配置读出鼠标经过时的<a href="#Objects" title="对象">对象</a>类型（例如列表、按钮等等）
 此功能可能对于完全失明的用户非常实用，有些时候，只有文本显示是不够的。</p>
 <p>NVDA 提供了一个方式让用户了解鼠标所在的位置，即结合屏幕的尺寸，通过播放提示音来表示当前鼠标所在位置的坐标。
@@ -2192,7 +2262,7 @@ NVDA 支持以下应用中的文档：</p>
 </ul>
 <p>浏览模式在阅读 Microsoft Word 文档时也可用。</p>
 <p>在浏览模式中，文档的内容将以平面的形式提供，可使用光标键进行导航，就像普通文本文档一样。
-所有 NVDA 的<a href="#SystemCaret" title="系统光标">系统光标</a>快捷键都可以正常的在此模式下工作，例如全文朗读、朗读格式、表格导航快捷键等等。
+所有 NVDA 的<a href="#SystemCaret" title="系统光标">系统光标</a>快捷键都可以正常地在此模式下工作，例如全文朗读、朗读格式、表格导航快捷键等等。
 当<a href="#VisionFocusHighlight" title="高亮显示浏览光标">高亮显示浏览光标</a>开启时，浏览模式虚拟光标的位置也会以视觉方式显示。
 关于这些文本是否属于链接、标题等信息，会随着移动而被读出。</p>
 <p>有时，您可能需要与文档上的这些控件进行直接交互。
@@ -2309,6 +2379,53 @@ NVDA 支持以下应用中的文档：</p>
 <p>要想在当前文档中切换单键导航功能的开关，请使用 <code>NVDA+Shift+空格</code>键。</p>
 <!-- KC:endInclude -->
 
+<h4 id="BrowseModeTouch">浏览模式下的触摸导航</h4>
+<p>使用支持触摸的设备时，NVDA 提供了一种额外的触摸导航模式，用于在浏览模式下浏览内容。</p>
+<p>当浏览模式在支持的文档（如网页或 Word 文档）中处于活动状态时，NVDA 可以启用浏览触摸模式。
+该模式允许用户使用触摸手势在文档的结构元素间导航，类似于使用键盘进行浏览模式导航。</p>
+<p>在浏览触摸模式下，可使用滑动手势在常见的文档元素（如链接、按钮、标题、表单字段、路标以及其他文档结构）之间移动。</p>
+<h5 id="_1">浏览模式中的触摸手势</h5>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>触摸</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选择下一个元素类型</td>
+<td>向下滑动</td>
+<td>切换到下一个浏览模式导航元素类型</td>
+</tr>
+<tr>
+<td>选择上一个元素类型</td>
+<td>向上滑动</td>
+<td>切换到上一个浏览模式导航元素类型</td>
+</tr>
+<tr>
+<td>移动到下一个元素</td>
+<td>向右滑动</td>
+<td>移动到所选类型的下一个浏览模式元素</td>
+</tr>
+<tr>
+<td>移动到上一个元素</td>
+<td>向左滑动</td>
+<td>移动到所选类型的上一个浏览模式元素</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>当选择“默认”元素类型时，向左或向右滑动会在文档中的所有元素之间移动。
+当选择其他元素类型时，向左或向右滑动会移动到该类型的上一个或下一个元素。
+向上或向下滑动可在可用的元素类型之间循环切换。</p>
+<p>会记住每个打开的文档所选的元素类型。
+请注意，浏览触摸模式手势仅在文档的浏览模式处于激活状态时生效。
+若焦点移到文档外（例如移到浏览器地址栏或任务栏），浏览触摸模式手势将无法导航文档，直到焦点返回到浏览模式文档。</p>
 <h4 id="TextNavigationCommand">文本段落导航命令</h4>
 <p>您可以按 <code>P</code> 或 <code>Shift+P</code> 跳到下一个或上一个文本段落。
 文本段落由一组完整句子组成。
@@ -2339,6 +2456,7 @@ NVDA 支持以下应用中的文档：</p>
 <li>菜单项目</li>
 <li>切换按钮</li>
 <li>进度条</li>
+<li>滑块</li>
 <li>引用标记</li>
 <li>数学公式</li>
 <li>垂直对齐的段落</li>
@@ -2349,10 +2467,10 @@ NVDA 支持以下应用中的文档：</p>
 例如，若您想使用 <code>Y</code>/<code>Shift+Y</code> 键快速导航选项卡，您可以执行以下操作：</p>
 <ol>
 <li>在浏览模式下打开按键与手势对话框。</li>
-<li>在浏览模式类别找到“移到上一个选项卡”。</li>
-<li>为该命令分配快捷键 <code>Shift+Y</code>。</li>
-<li>找到“移到下一个选项卡”。</li>
+<li>在浏览模式类别找到“移到下一个选项卡”。</li>
 <li>为该命令分配快捷键 <code>y</code>。</li>
+<li>找到“移到上一个选项卡”。</li>
+<li>为该命令分配快捷键 <code>shift+y</code>。</li>
 </ol>
 <h3 id="ElementsList">元素列表</h3>
 <p>元素列表依照不同的程序文档来显示多种类型元素的列表。
@@ -2421,7 +2539,7 @@ NVDA 支持以下应用中的文档：</p>
 当您在浏览模式下遇到“嵌入式对象”、“应用程序”或者“对话框”时，NVDA 都会作出相应的提示。
 使用单键导航，按 O 或者 Shift+O 可以把焦点快速移动到这些对象上。
 您可以在此对象上按下“回车键”与之进行交互。
-如果它有无障碍支持，您就可以象使用其他应用程序一样在其所包含的对象中切换和交互。
+如果它有无障碍支持，您就可以像使用其他应用程序一样在其所包含的对象中切换和交互。
 下面提供的键盘命令，允许您返回到包含此嵌入式对象的页面：</p>
 <!-- KC:beginInclude -->
 
@@ -2507,7 +2625,7 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 </ul>
 <p>在阅读文档时，NVDA 将会读出所有支持的数学内容。
 如果您正在使用点显器，数学内容也将以盲文显示。</p>
-<h3 id="InteractiveNavigation">交互式浏览</h3>
+<h3 id="InteractiveNavigation">交互式导航</h3>
 <p>如果您主要使用语音进行工作，在大多数情况下，您或许希望可以采用更小的浏览单位检查表达式，而不是马上读出整个表达式。</p>
 <p>如果您处于浏览模式，可以通过将光标移动到数学内容并按回车键来执行此操作。</p>
 <p>如果您未处于浏览模式：</p>
@@ -2537,7 +2655,7 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 <!-- KC:endInclude -->
 
 <p>此时，NVDA 将进入数学模式，您可以使用光标键等命令来浏览表达式。
-举例来说，您可以使用左右光标键在表达式中移动，使用下光标键缩放到表达式的其中一个部分，如分数等。</p>
+例如，您可以用左右光标键在表达式中移动，用下光标键进入分数等组成部分。</p>
 <p>当您希望返回到文档时，只需按下 <code>Esc</code> 键即可。</p>
 <p>有时，数学内容可能显示为按钮或其他类型的元素，这些元素被激活时可以显示对话框或与公式有关的更多信息。
 要激活按钮或包含公式的元素，请按 <code>Ctrl+回车</code>。</p>
@@ -2576,67 +2694,67 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 </thead>
 <tbody>
 <tr>
-<td>移到上一个</td>
+<td>移到上一项</td>
 <td><code>左光标</code></td>
 </tr>
 <tr>
-<td>移到表格中的上一个单元格；若位于竖式数学中，则移到上一位数字</td>
+<td>移到表格中的上一个单元格；若位于竖式运算中，则移到前一位数字</td>
 <td><code>Ctrl+左光标</code> 或 <code>Ctrl+Alt+左光标</code></td>
 </tr>
 <tr>
-<td>朗读上一个</td>
+<td>朗读上一项</td>
 <td><code>Shift+左光标</code></td>
 </tr>
 <tr>
-<td>描述上一个</td>
+<td>概述上一项</td>
 <td><code>Ctrl+Shift+左光标</code></td>
 </tr>
 <tr>
-<td>移到下一个</td>
+<td>移到下一项</td>
 <td><code>右光标</code></td>
 </tr>
 <tr>
-<td>移到表格中的下一个单元格；若位于竖式数学中，则移到下一位数字</td>
+<td>移到表格中的下一个单元格；若位于竖式运算中，则移到后一位数字</td>
 <td><code>Ctrl+右光标</code> 或 <code>Ctrl+Alt+右光标</code></td>
 </tr>
 <tr>
-<td>朗读下一个</td>
+<td>朗读下一项</td>
 <td><code>Shift+右光标</code></td>
 </tr>
 <tr>
-<td>描述下一个</td>
+<td>概述下一项</td>
 <td><code>Ctrl+Shift+右光标</code></td>
 </tr>
 <tr>
-<td>退出内层</td>
+<td>返回上一层</td>
 <td><code>上光标</code></td>
 </tr>
 <tr>
-<td>移到表格中的上方单元格；若位于竖式数学中，则移到上方数字</td>
+<td>移到表格中的上方单元格；若位于竖式运算中，则移到上方数字</td>
 <td><code>Ctrl+上光标</code> 或 <code>Ctrl+Alt+上光标</code></td>
 </tr>
 <tr>
-<td>将导航模式（增强/简单/字符）切换到更大粒度</td>
+<td>增大导航粒度（增强、简单、字符）</td>
 <td><code>Shift+上光标</code></td>
 </tr>
 <tr>
-<td>退出到最外层</td>
+<td>返回最外层</td>
 <td><code>Ctrl+Shift+上光标</code></td>
 </tr>
 <tr>
-<td>进入内层</td>
+<td>进入下一层</td>
 <td><code>下光标</code></td>
 </tr>
 <tr>
-<td>移到表格中的下方单元格；若位于竖式数学中，则移到下方数字</td>
+<td>移到表格中的下方单元格；若位于竖式运算中，则移到下方数字</td>
 <td><code>Ctrl+下光标</code> 或 <code>Ctrl+Alt+下光标</code></td>
 </tr>
 <tr>
-<td>将导航模式（增强/简单/字符）切换到更小粒度</td>
+<td>减小导航粒度（增强、简单、字符）</td>
 <td><code>Shift+下光标</code></td>
 </tr>
 <tr>
-<td>进入到最内层</td>
+<td>进入最内层</td>
 <td><code>Ctrl+Shift+下光标</code></td>
 </tr>
 <tr>
@@ -2660,7 +2778,7 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 <td><code>Shift+1</code> 到 <code>Shift+0</code></td>
 </tr>
 <tr>
-<td>描述位置标记</td>
+<td>概述位置标记</td>
 <td><code>Ctrl+Shift+1</code> 到 <code>Ctrl+Shift+0</code></td>
 </tr>
 <tr>
@@ -2672,11 +2790,11 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 <td><code>Ctrl+空格</code></td>
 </tr>
 <tr>
-<td>将“语音模式”切换为朗读或描述</td>
+<td>在“朗读”和“概述”模式之间切换</td>
 <td><code>Shift+空格</code></td>
 </tr>
 <tr>
-<td>描述当前项</td>
+<td>概述当前项</td>
 <td><code>Ctrl+Shift+空格</code></td>
 </tr>
 <tr>
@@ -2688,7 +2806,7 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 <td><code>Ctrl+行首</code></td>
 </tr>
 <tr>
-<td>移到表格列首；若位于竖式数学中，则移到顶部数字</td>
+<td>移到表格列首；若位于竖式运算中，则移到顶部数字</td>
 <td><code>Shift+行首</code></td>
 </tr>
 <tr>
@@ -2700,7 +2818,7 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 <td><code>Ctrl+行尾</code></td>
 </tr>
 <tr>
-<td>移到表格列尾；若位于竖式数学中，则移到底部数字</td>
+<td>移到表格列尾；若位于竖式运算中，则移到底部数字</td>
 <td><code>Shift+行尾</code></td>
 </tr>
 <tr>
@@ -2722,12 +2840,154 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 可以在<a href="#MathSettings" title="数学设置面板">数学设置面板</a>中设置默认模式。
 不过，在导航过程中，您随时可以使用 <code>Shift+上光标</code>/<code>Shift+下光标</code> 切换导航模式，以利用不同导航模式的各自优势。</p>
 <h2 id="Braille">盲文</h2>
-<p>如果您拥有点显器，NVDA 可以以盲文的形式显示屏幕上的信息。
+<p>如果您拥有点显器，NVDA 可以以盲文形式显示信息。
 如果您的点显器有 Perkins 键盘，您还可以键入简写或非简写盲文。
 您也可以使用<a href="#BrailleViewer" title="盲文查看器">盲文查看器</a>在屏幕上显示图形化的盲文，如果您愿意也可以同时使用实体的盲文点显器来显示盲文。</p>
 <p>有关支持的点显器的信息，请参阅<a href="#SupportedBrailleDisplays" title="支持的点显器">支持的点显器</a>部分。
 本节还包含有关支持 NVDA 自动检测功能的点显器的信息。
 您可以使用 <a href="#NVDASettings" title="NVDA 设置">NVDA 设置</a>对话框的<a href="#BrailleSettings" title="盲文类别">盲文类别</a>配置盲文。</p>
+<h3 id="BrailleReading">阅读盲文</h3>
+<p>在可刷新点显器上阅读盲文时，文本会以当前的<a href="#BrailleSettingsOutputTable" title="输出表">输出表</a>和<a href="#BrailleMode" title="盲文模式">盲文模式</a>呈现。
+当文本长度超过点显器可显示的范围时，可使用滚动键或设备上的其他按键进行导航，而无需移动焦点或文本光标。</p>
+<h4 id="AutomaticBrailleScrolling">自动滚动盲文显示</h4>
+<p>可启用自动滚动盲文显示，使点显器以指定的速度滚动。
+使用此功能时，盲文点显器会滚动以呈现一次性无法完整显示的信息。
+该功能默认禁用。
+您可在使用前，通过 NVDA 的<a href="#InputGestures" title="按键与手势对话框">按键与手势对话框</a>更改自动滚动盲文显示功能的默认快捷键。
+此外，还有用于加快或减慢自动滚动速度的快捷键。
+或者，您也可在<a href="#BrailleAutoScrollRate" title="盲文设置中设置自动滚动速度">盲文设置中设置自动滚动速度</a>。</p>
+<p>在盲文滚动期间，您仍可使用向后滚动和向前滚动命令，而无需停止自动滚动。
+向后滚动可用于重新阅读之前的内容。
+向前滚动可用于跳过空行或当前行较短的情况。</p>
+<p>在阅读过程中，当发生以下任一情况时，自动滚动将停止：</p>
+<ul>
+<li>按下切换自动滚动盲文显示的按键</li>
+<li>用户按下会显示新消息的按键或手势</li>
+<li>焦点发生移动（包括使用盲文点显器的滚动键）</li>
+<li>到达文档末尾</li>
+<li>锁定或安全界面的状态发生变化（例如计算机被锁定）</li>
+</ul>
+<h4 id="BrailleReadingGestures">盲文阅读命令</h4>
+<!-- KC:beginInclude -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>按键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>切换盲文模式</td>
+<td><code>NVDA+Alt+T</code></td>
+<td>在可用的盲文模式间循环切换：“跟随光标”和“显示语音输出”</td>
+</tr>
+<tr>
+<td>切换盲文光标跟随</td>
+<td><code>NVDA+Ctrl+T</code></td>
+<td>此选项允许您选择是否希望点显器跟随系统焦点/系统光标、导航对象/查看光标或自动</td>
+</tr>
+<tr>
+<td>切换自动滚动</td>
+<td><code>NVDA+Alt+K</code></td>
+<td>切换 NVDA 是否定期滚动点显器以呈现一次性无法完整显示的信息</td>
+</tr>
+<tr>
+<td>提高自动滚动速度</td>
+<td><code>NVDA+Alt+L</code></td>
+<td>使自动滚动更快（启用时）</td>
+</tr>
+<tr>
+<td>降低自动滚动速度</td>
+<td><code>NVDA+Alt+J</code></td>
+<td>使自动滚动更慢（启用时）</td>
+</tr>
+<tr>
+<td>循环切换光标形状</td>
+<td>无</td>
+<td>在盲文光标形状之间循环切换</td>
+</tr>
+<tr>
+<td>循环切换移动查看光标时移动系统光标</td>
+<td>无</td>
+<td>在移动查看光标时移动系统光标的选项之间循环切换</td>
+</tr>
+<tr>
+<td>循环切换消息模式</td>
+<td>无</td>
+<td>在盲文消息模式之间循环切换</td>
+</tr>
+<tr>
+<td>循环切换盲文选中指示光标</td>
+<td>无</td>
+<td>在盲文选中指示光标之间循环切换</td>
+</tr>
+<tr>
+<td>循环切换盲文 Unicode 规范化状态</td>
+<td>无</td>
+<td>在盲文 Unicode 规范化状态之间循环切换</td>
+</tr>
+<tr>
+<td>移动到焦点</td>
+<td>无</td>
+<td>移动点显器到当前焦点所在处</td>
+</tr>
+<tr>
+<td>移动到下一行</td>
+<td>无</td>
+<td>移动点显器到下一行</td>
+</tr>
+<tr>
+<td>移动到上一行</td>
+<td>无</td>
+<td>移动点显器到上一行</td>
+</tr>
+<tr>
+<td>读出格式</td>
+<td>无</td>
+<td>读出当前盲文单元所在文本的格式信息</td>
+</tr>
+<tr>
+<td>定位或激活对象</td>
+<td>无</td>
+<td>将光标移至或激活该盲文单元所在的对象</td>
+</tr>
+<tr>
+<td>向后滚动</td>
+<td>无</td>
+<td>向后滚动盲文显示</td>
+</tr>
+<tr>
+<td>向前滚动</td>
+<td>无</td>
+<td>向前滚动盲文显示</td>
+</tr>
+<tr>
+<td>切换盲文光标</td>
+<td>无</td>
+<td>打开或关闭盲文光标</td>
+</tr>
+<tr>
+<td>切换盲文上下文</td>
+<td>无</td>
+<td>切换是否使用盲文显示上下文</td>
+</tr>
+<tr>
+<td>切换导航时读出内容</td>
+<td>无</td>
+<td>切换按行或段落导航时是否读出内容</td>
+</tr>
+<tr>
+<td>切换定位文本光标后读出字符</td>
+<td>无</td>
+<td>切换定位文本光标后是否读出光标所在处的字符</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>有关可用于调整盲文阅读的所有选项，请参阅<a href="#BrailleSettings" title="盲文设置">盲文设置</a>章节。</p>
 <h3 id="BrailleAbbreviations">控件类型/状态和路标缩写</h3>
 <p>为了在点显器上显示尽可能多的信息，定义了以下缩写来表示控件类型和状态以及路标。</p>
 <table>
@@ -3127,6 +3387,42 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 <p>键入简写盲文时，使用模拟修饰键也会翻译您的盲文输入，就像按点 7+8 一样。
 另外，模拟按键无法处理按修饰键之前键入的盲文。
 这意味着，要按下带有盲文数字符号的快捷键，如 <code>Alt+2</code>，您必须首先模拟按下 <code>Alt</code>，然后键入数字符号。</p>
+<h4 id="BrailleInputGestures">盲文输入命令</h4>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>按键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通过点显器输入</td>
+<td>任意点位</td>
+<td>在盲文键盘上输入盲文</td>
+</tr>
+<tr>
+<td>擦除最后输入的内容</td>
+<td><code>7 点</code></td>
+<td>擦除最后输入的字符或盲文单元</td>
+</tr>
+<tr>
+<td>翻译盲文输入</td>
+<td><code>7 点 +8 点</code></td>
+<td>翻译任何盲文输入</td>
+</tr>
+<tr>
+<td>翻译并按回车键</td>
+<td><code>8 点</code></td>
+<td>翻译任何盲文输入并按下回车键</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
 <h2 id="Vision">视觉功能</h2>
 <p>虽然 NVDA 主要针对使用语音或盲文操作计算机的盲人或视力受损用户，但其还提供内置功能来更改屏幕内容。
 在 NVDA 中，这类视觉辅助工具称为视觉增强提供程序。</p>
@@ -3140,7 +3436,7 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 <li>蓝色实线表示导航对象和系统焦点重合（通常是开启了<a href="#ReviewCursorFollowFocus" title="导航对象跟随系统焦点移动">导航对象跟随系统焦点移动</a>才会呈现这种视觉效果）。</li>
 <li>蓝色虚线表示系统焦点。</li>
 <li>粉色实线表示导航对象。</li>
-<li>黄色虚线表示浏览模式的虚拟光标（常见于浏览器等环境）。</li>
+<li>黄色实线表示浏览模式的虚拟光标（常见于浏览器等环境）。</li>
 </ul>
 <p>在 <a href="#NVDASettings" title="NVDA 设置对话框">NVDA 设置对话框</a>的<a href="#VisionSettings" title="视觉">视觉</a>类别下，您可以在启用<a href="#VisionSettingsFocusHighlight" title="高亮显示">高亮显示</a>后更改是否高亮显示系统焦点、导航对象以及浏览模式光标。</p>
 <h3 id="VisionScreenCurtain">黑屏</h3>
@@ -3164,14 +3460,155 @@ NVDA 支持在 Kindle for PC 中阅读和导航包含可访问性数学内容的
 <td><code>NVDA+Ctrl+Esc</code></td>
 <td>开启可使屏幕变黑，关闭则正常显示屏幕内容。按一次，临时开启黑屏，重启 NVDA 后将自动恢复。连按两次，开启黑屏，若想恢复屏幕显示，需手动关闭。</td>
 </tr>
+<tr>
+<td>读出黑屏的状态</td>
+<td>无</td>
+<td>读出当前的黑屏状态（临时开启、开启或关闭）。</td>
+</tr>
 </tbody>
 </table>
 <!-- KC:endInclude -->
 
 <p>如果启用黑屏，所有依靠屏幕显示内容而执行的动作均不可用。
-如<a href="#Win10Ocr" title="执行 OCR">执行 OCR</a>。
+例如，您无法<a href="#Win10Ocr" title="执行 OCR">执行 OCR</a>。
 某些截图工具也可能无法正常工作。</p>
 <p>请注意，当启用 Windows 放大镜且使用“反色”功能时，无法启用黑屏。</p>
+<h2 id="Magnifier">放大镜</h2>
+<p>NVDA 包含一个内置的放大镜功能，可让您放大屏幕的任意部分。
+此功能对于需要放大屏幕内容的低视力用户，或希望应用颜色滤镜以减轻视疲劳或提高可读性的用户尤其有用。</p>
+<p>NVDA 放大镜作为全屏放大镜运行，即在跟随系统焦点或鼠标指针的同时放大整个屏幕。
+还提供了多项配置选项，可根据您的需求自定义放大体验。</p>
+<h3 id="MagnifierToggle">开启或关闭放大镜</h3>
+<p>要开启或关闭放大镜，请按 <code>NVDA+Shift+W</code>。
+“提高放大级别”快捷键 <code>NVDA+Shift+等于</code> 可在放大镜未运行时将其开启。
+关闭放大镜后，屏幕将恢复正常大小。
+与其他 NVDA 设置一样，放大镜的状态会在会话间保留。</p>
+<h3 id="MagnifierCommands">放大镜命令</h3>
+<p>开启放大镜后，您可使用下列键盘命令来控制它：</p>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>按键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>切换放大镜的开关</td>
+<td><code>NVDA+Shift+W</code></td>
+<td>开启或关闭放大镜</td>
+</tr>
+<tr>
+<td>提高放大级别</td>
+<td><code>NVDA+Shift+等于</code></td>
+<td>增加放大级别。若放大镜尚未运行，则将其开启。</td>
+</tr>
+<tr>
+<td>降低放大级别</td>
+<td><code>NVDA+Shift+减号</code></td>
+<td>减小放大级别</td>
+</tr>
+<tr>
+<td>循环切换颜色滤镜</td>
+<td><code>NVDA+Shift+I</code></td>
+<td>在可用的颜色滤镜之间循环切换（正常、灰度、反转）</td>
+</tr>
+<tr>
+<td>循环切换跟踪模式</td>
+<td>无</td>
+<td>在可用的跟踪模式之间循环切换（居中、相对）</td>
+</tr>
+<tr>
+<td>显示全屏概览</td>
+<td><code>NVDA+Shift+L</code></td>
+<td>临时显示全屏概览</td>
+</tr>
+<tr>
+<td>向左平移</td>
+<td><code>NVDA+Alt+左光标</code></td>
+<td>按配置的平移步长将放大视图向左移动</td>
+</tr>
+<tr>
+<td>向右平移</td>
+<td><code>NVDA+Alt+右光标</code></td>
+<td>按配置的平移步长将放大视图向右移动</td>
+</tr>
+<tr>
+<td>向上平移</td>
+<td><code>NVDA+Alt+上光标</code></td>
+<td>按配置的平移步长将放大视图向上移动</td>
+</tr>
+<tr>
+<td>向下平移</td>
+<td><code>NVDA+Alt+下光标</code></td>
+<td>按配置的平移步长将放大视图向下移动</td>
+</tr>
+<tr>
+<td>平移到左边</td>
+<td><code>NVDA+Shift+Alt+左光标</code></td>
+<td>将放大视图直接移动到屏幕左边缘</td>
+</tr>
+<tr>
+<td>平移到右边</td>
+<td><code>NVDA+Shift+Alt+右光标</code></td>
+<td>将放大视图直接移动到屏幕右边缘</td>
+</tr>
+<tr>
+<td>平移到顶边</td>
+<td><code>NVDA+Shift+Alt+上光标</code></td>
+<td>将放大视图直接移动到屏幕上边缘</td>
+</tr>
+<tr>
+<td>平移到底边</td>
+<td><code>NVDA+Shift+Alt+下光标</code></td>
+<td>将放大视图直接移动到屏幕下边缘</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<h3 id="MagnifierZoomLevels">放大级别</h3>
+<p>放大镜支持从 1.0 倍（不放大）到 50.0 倍（最大放大）的放大级别。
+您可使用放大（<code>NVDA+Shift+等于</code>）和缩小（<code>NVDA+Shift+减号</code>）命令来调整放大级别。
+每次按键会按固定增量提高或降低放大级别。</p>
+<h3 id="MagnifierColorFilters">颜色滤镜</h3>
+<p>颜色滤镜可通过修改屏幕上显示的颜色来帮助患有某些视力障碍或光敏感的用户。
+放大镜提供三种颜色滤镜选项：</p>
+<ul>
+<li>正常：不进行颜色修改。这是默认设置。</li>
+<li>灰度：将所有颜色转换为灰度色调，这有助于减轻某些用户的视疲劳并提高对比度。</li>
+<li>反转：反转屏幕上的所有颜色（黑色变为白色，白色变为黑色等），这对于喜欢深色背景上的浅色文本或有畏光症的用户很有帮助。</li>
+</ul>
+<p>要循环切换可用的颜色滤镜，请按 <code>NVDA+Shift+I</code>。</p>
+<h3 id="MagnifierTrackingMode">跟踪模式</h3>
+<p>放大镜提供了不同的模式来跟踪鼠标、系统焦点、查看光标和导航对象，并确定放大屏幕的哪个部分：</p>
+<ul>
+<li>居中：放大区域以当前跟踪位置为中心。
+此模式将跟踪的元素保持在屏幕中心，并限制在屏幕边缘内。</li>
+<li>相对：放大区域根据跟踪元素在屏幕上的位置保持其相对位置。</li>
+</ul>
+<p>要循环切换跟踪模式，请使用<a href="#InputGestures" title="按键与手势对话框">按键与手势对话框</a>分配自定义快捷键。</p>
+<h3 id="MagnifierScreenOverview">显示全屏概览</h3>
+<p>放大镜可临时显示整个屏幕的概览，这在演示或当您需要快速了解整体屏幕布局时非常有用。</p>
+<p>以下情况此功能很有用：</p>
+<ul>
+<li>演示期间，在放大具体细节之前向观众显示上下文</li>
+<li>在放大的同时临时查看全屏布局</li>
+</ul>
+<p>要显示全屏概览，请按 <code>NVDA+Shift+L</code>。
+放大镜将：</p>
+<ol>
+<li>平滑缩小以显示全屏（放大级别 1.0 倍）</li>
+<li>监测鼠标移动</li>
+<li>当鼠标保持静止约 2 秒时，自动在新鼠标位置恢复到先前的放大级别</li>
+</ol>
+<p>在自动放大恢复之前移动鼠标，您可获得更多查看全屏内容的时间。</p>
+<h3 id="MagnifierSettings">放大镜设置</h3>
+<p>放大镜可在 NVDA 设置对话框的“放大镜”类别中进行配置（<code>NVDA+Ctrl+W</code>）。
+有关可用选项的详细信息，请参阅<a href="#MagnifierSettingsCategory" title="放大镜设置">放大镜设置</a>章节。</p>
 <h2 id="ContentRecognition">图像内容识别</h2>
 <p>当开发者没有为屏幕阅读器用户提供足够的信息来确认内容时，可以使用各种工具来尝试从图像中识别其内容。
 NVDA 支持 Windows 10 及更高版本中内置的光学字符识别（OCR）功能，以识别图像中的文本。
@@ -3197,7 +3634,7 @@ NVDA 可以借助该技术来识别图像中或无障碍支持不佳的应用程
 <!-- KC:endInclude -->
 
 <h2 id="ApplicationSpecificFeatures">特定应用程序的 NVDA 命令</h2>
-<p>NVDA 为一些特定的应用程序提供了独有的额外特性，让您可以更加便捷更加高效的完成某些任务，还令某些其他屏幕阅读器用户无法访问的功能可用。</p>
+<p>NVDA 为一些特定的应用程序提供了独有的额外特性，让您可以更加便捷、更加高效地完成某些任务，还令某些其他屏幕阅读器用户无法访问的功能可用。</p>
 <h3 id="MicrosoftWord">Microsoft Word</h3>
 <h4 id="WordAutomaticColumnAndRowHeaderReading">自动读出行列标题</h4>
 <p>NVDA 可在您使用 Microsoft Word 浏览表格时自动读出恰当的行列标题。
@@ -3295,9 +3732,9 @@ NVDA 可以借助该技术来识别图像中或无障碍支持不佳的应用程
 <li>公式：这里列举了工作表中所有包含公式的单元格。
 单元格地址和其所属的公式都会被显示在这里。
 按下“回车键”或点击“移动到”按钮可以直接移动到所选公式的单元格内。</li>
-<li>表格：这里列举了工作表中所有的表格。
-在所列表格中按下“F2”可重命名该表格。
-按下“回车键”或点击“移动到”按钮可以直接移动到所选的表格中。</li>
+<li>工作表：列出工作簿中的所有工作表。
+在列表中选中工作表后，按下“F2”可重命名该工作表。
+在列表中选中工作表后，按下“回车键”或点击“移动到”按钮可切换到该工作表。</li>
 <li>表单：这里将列举所有工作表内所包含的表单。
 对于每一个表单，元素列表将显示每一个地址所覆盖的单元格的替代文本。
 选择一个表单项目之后按下“回车”或点击“移动到”按钮即可跳转到该表单项目。</li>
@@ -3308,7 +3745,7 @@ NVDA 可以借助该技术来识别图像中或无障碍支持不佳的应用程
 连按两次，可在浏览模式下显示该信息。
 在英文版 Microsoft 2016、365 和更高版本中，Microsoft Excel 中的注释“Comment”已重命名为“Notes”，与新的批注区分（中文版该术语保持不变）。</p>
 <!-- KC:endInclude -->
-<p>按 NVDA+F7 在元素列表中访问当前工作簿的所有注释。</p>
+<p>按 NVDA+F7 后，还可以在 NVDA 元素列表中列出当前工作表的所有注释。</p>
 <p>NVDA 还可以显示用于添加或编辑特定注释的特定对话框。
 由于无障碍 API 的限制，NVDA 覆盖了 Excel 注释编辑区域，但是用于显示对话框的按键是 Excel 自带的，即使未运行 NVDA 也可以使用。</p>
 <!-- KC:beginInclude -->
@@ -3329,7 +3766,7 @@ NVDA 可以借助该技术来识别图像中或无障碍支持不佳的应用程
 <!-- KC:endInclude -->
 
 <h4 id="ExcelFormFields">表单</h4>
-<p>Excel 工作簿可包含表单。
+<p>Excel 工作表可包含表单字段。
 您可以使用“元素列表”对话框查看它们，或使用字母 F 和 Shift+F 进行跳转。
 当您使用浏览模式移动到某个表单项后，您可以使用“回车”键或“空格”键切换到焦点模式以便与之交互，方法取决于当前所在处的控件。
 更多有关于浏览模式或单键导航使用方面的信息，请查阅<a href="#BrowseMode" title="浏览模式">浏览模式</a>章节。</p>
@@ -3469,7 +3906,7 @@ NVDA 可以借助该技术来识别图像中或无障碍支持不佳的应用程
 <p>您可以为单词或段落添加注释。
 要执行此操作，请首先选择相关文本并访问上述选择选项。
 然后，选择添加注释。</p>
-<p>在浏览模式下阅读时，NVDA 将把这些笔记做为注释处理。</p>
+<p>在浏览模式下阅读时，NVDA 将把这些笔记作为注释处理。</p>
 <p>查看，编辑或删除笔记的流程：</p>
 <ol>
 <li>将光标移动到包含笔记的文本。</li>
@@ -3552,7 +3989,7 @@ NVDA 可以借助该技术来识别图像中或无障碍支持不佳的应用程
 某些对话框包含应用按钮，点击该按钮可在不关闭对话框的情况下应用设置。
 大多数 NVDA 对话框支持上下文帮助。</p>
 <!-- KC:beginInclude -->
-<p>在对话框中，按 <code>f1</code> 键可打开与当前交点选项或当前对话框相关的用户指南对应章节。</p>
+<p>在对话框中，按 <code>f1</code> 键可打开与当前焦点选项或当前对话框相关的用户指南对应章节。</p>
 <!-- KC:endInclude -->
 <p>某些设置可以用快捷键更改，这些快捷键会在相应章节进行说明。</p>
 <h3 id="NVDASettings">NVDA 设置对话框</h3>
@@ -3604,9 +4041,10 @@ NVDA 可以借助该技术来识别图像中或无障碍支持不佳的应用程
 <p>如果您通过使用密码和用户登录 Windows，此选项将使 NVDA 在 Windows 启动时自动运行。
 此选项仅可用于 NVDA 的安装版。</p>
 <h5 id="GeneralSettingsCopySettings">应用当前配置到欢迎界面和其他安全界面（需要管理员权限）</h5>
-<p>按下此按钮，NVDA 会将您当前保存的用户配置拷贝到 NVDA 的系统配置目录，这将应用于 Windows 欢迎屏幕以及用户账户控制（UAC）和其他<a href="#SecureScreens" title="安全界面">安全界面</a>。
+<p>按下此按钮，即可将当前保存的 NVDA 用户配置拷贝到 NVDA 的系统配置目录，以便 NVDA 在登录期间以及用户帐户控制（UAC）和其他<a href="#SecureScreens" title="安全界面">安全界面</a>运行时使用。
 要确保您所有的配置都会被传送，请先使用“NVDA+Ctrl+c”或者 NVDA 菜单下的“保存设置”事先保存您的当前配置。
-此选项仅可用于 NVDA 的安装版。</p>
+按下此按钮后，首先会打开<a href="#CopyAddonsToSystemProfileDialog" title="拷贝设置到系统配置">拷贝设置到系统配置</a>对话框，您可在其中选择要拷贝到系统配置的插件。</p>
+<p>此选项仅可用于 NVDA 的安装版。</p>
 <h5 id="GeneralSettingsCheckForUpdates">自动检查更新</h5>
 <p>如果此选项被启用，NVDA 将自动检查新版本的 NVDA，在新版本可用时向您作出通知。
 您也可以通过点击“帮助”菜单下的“检查更新”手动获取更新。
@@ -3667,6 +4105,10 @@ ESpeak NG 的“变声”跟“语音”很像，您可以使用此组合框来�
 <p>这是一个从 0 到 100 的滑块，0 音量最小，100 音量最大。</p>
 <h5 id="SpeechSettingsInflection">声调</h5>
 <p>此选项是一个滑块，允许您选择合成器进行语音输出时使用的语调的变化（最高和最低音调之差的大小）。</p>
+<h5 id="SpeechSettingPunctuationSilence">标点后自然停顿</h5>
+<p>禁用此选项将删除标点符号后的停顿。
+此选项默认启用。
+此选项仅适用于 Windows OneCore 语音，并且在 Windows 10 1803 或更高版本上才受支持。</p>
 <h5 id="SpeechSettingsUseWasapi">使用现代音频输出系统（WASAPI）</h5>
 <p>此选项控制是否启用通过 Windows 音频会话 API (WASAPI) 输出音频的功能。
 此选项仅适用于 Microsoft Speech API version 5（SAPI 5）语音。
@@ -3725,7 +4167,8 @@ ESpeak NG 的“变声”跟“语音”很像，您可以使用此组合框来�
 <h5 id="SpeechUnicodeNormalization">Unicode 规范化</h5>
 <p>启用此选项后，NVDA 会对朗读的文本进行 Unicode 规范化。
 当发音的字符可以有多种表示形式时，这个选项非常有用。
-NVDA 使用 NFKC（Normalization Form Compatibility Composition）算法，该算法有以下优势：</p>
+NVDA 使用 NFKC（Normalization Form Compatibility Composition）算法，并应用了额外的规范化处理。
+NFKC 算法有以下优势：</p>
 <ol>
 <li>
 <p>对属于 Unicode 标准的字符的粗体和斜体版本进行规范化，这些字符通常在社交媒体上使用，会被规范化为它们最常见的兼容等效形式。
@@ -3748,6 +4191,10 @@ NVDA 使用 NFKC（Normalization Form Compatibility Composition）算法，该�
 <p>稳定复合字符中修饰符的顺序，例如在古希伯来语中。</p>
 </li>
 </ol>
+<p>NVDA 中的额外规范化处理了标准 NFKC 算法未分解的装饰性字母变体。
+某些 Unicode 字符，例如带圈反白拉丁大写字母（🅐–🅩）和方框反白拉丁大写字母（🅲–🆉），被 Unicode 标准视为独立符号，没有兼容性分解。
+NVDA 通过将这些字符映射为其对应的普通拉丁字母等效形式（A–Z）来扩展 NFKC。
+请注意，少数具有表情符号语义的方框反白字母（🅰、🅱、🅾、🅿）不在此映射范围内，以保留其独特含义。</p>
 <p>如需随时切换 Unicode 规范化，请在<a href="#InputGestures" title="按键与手势对话框">按键与手势对话框</a>为该功能分配自定义手势。</p>
 <table>
 <thead>
@@ -3947,7 +4394,7 @@ NVDA 使用 NFKC（Normalization Form Compatibility Composition）算法，该�
 <p>此选项是一个数字区域，允许您以毫秒为单位更改光标的闪烁速度。</p>
 <h5 id="BrailleSettingsCursorShapeForFocus">光标形状</h5>
 <p>此选项允许您选择盲文光标的形状（即盲文点位）。
-此选项对选择指示器无效。</p>
+选择指示器不受此选项影响，始终以不闪烁的 7、8 点显示。</p>
 <h5 id="BrailleSettingsCursorShapeForReview">跟随查看光标时盲文光标的形状</h5>
 <p>此选项允许您在盲文光标跟随查看光标时，选择盲文光标的形状（哪些点位）。
 选择指示光标不受影响，它一直位于 7 点和 8 点，而且不会闪烁。</p>
@@ -4180,10 +4627,16 @@ NVDA 使用 NFKC（Normalization Form Compatibility Composition）算法，该�
 <h5 id="BrailleSpeakOnNavigating">按行或段落导航时读出内容</h5>
 <p>启用该选项后，NVDA 会读出通过盲文点显器导航控件浏览到的行或段落。</p>
 <p>如需随时切换按行或段落导航时读出内容，请在<a href="#InputGestures" title="按键与手势对话框">按键与手势对话框</a>为该功能分配自定义手势。</p>
+<h5 id="BrailleAutoScrollRate">自动滚动的速度</h5>
+<p>此滑块用于控制启用<a href="#AutomaticBrailleScrolling" title="自动滚动盲文显示">自动滚动盲文显示</a>时点显器的自动滚动速度，以每秒显示的方数进行衡量。</p>
+<p>要随时提高或降低滚动速度，请使用<a href="#InputGestures" title="按键与手势对话框">按键与手势对话框</a>分配自定义快捷键。</p>
+<p>最小值（0%）对应每秒 1 方，最大值（100%）对应每秒 20 方。
+例如，使用默认值 10 方/秒时，若使用 40 方的点显器，其将每 4 秒自动滚动一次。
+如果点显器为 20 方，则每行盲文将显示 2 秒。</p>
 <h5 id="BrailleSettingsWordWrap">尽可能避免拆分单词</h5>
 <p>如果启用此功能，则不会拆分无法完整显示在剩余盲文单元中的单词。
 但点显器的行尾会有一些空白单元格。
-通过滚动盲文显示，您可以阅读道完整的单词。
+通过滚动盲文显示，您可以阅读到完整的单词。
 有时也称为“自动换行”。
 注，如果单词太长甚至无法完整显示为一行，则仍会拆分该单词。</p>
 <p>如果禁用此功能，将显示尽可能多的单词，但可能导致同一个单词被拆分为两行显示。
@@ -4265,7 +4718,7 @@ NVDA 使用 NFKC（Normalization Form Compatibility Composition）算法，该�
 或许，对于一些点显器，您可能可以明确选择需要使用的端口。
 通常的选项是“自动”（告诉 NVDA 执行默认的自动端口选择过程）、“USB”、“蓝牙”或者老式的串行端口，前提是您的设备支持此种类型的通讯。</p>
 <p>如果您的设备只支持自动端口检测，这些选项将不可用。</p>
-<p>您可在<a href="#SupportedBrailleDisplays" title="支持的点显器">支持的点显器</a>章节中查阅您的点显器设备的文档，已了解支持的可用端口的通讯类型的更多信息。</p>
+<p>您可在<a href="#SupportedBrailleDisplays" title="支持的点显器">支持的点显器</a>章节中查阅您的点显器设备的文档，以了解支持的可用端口的通讯类型的更多信息。</p>
 <p>请注意：如果您同时将多个盲文点显器连接到您的计算机，使用相同的驱动程序（例如连接两个 Seika 点显器），
 目前 NVDA 无法选择使用哪个点显器输出。
 因此，建议依次只连接一个类型/制造商的点显器。</p>
@@ -4403,6 +4856,8 @@ NVDA 使用 NFKC（Normalization Form Compatibility Composition）算法，该�
 这些日志可能包含您的个人隐私，如果您希望保护隐私请不要把日志级别设为输入/输出。</li>
 <li>调试（DEBUG）：包括上面几个级别的日志以及对调试有用的信息。
 这些日志同样可能包含您的个人隐私，如果您希望保护隐私请不要把日志级别设为调试。</li>
+<li>调试（未脱敏）（DEBUG_UNREDACTED）：除了调试日志记录外，NVDA 不会对日志中的密码、API 密钥等机密信息进行脱敏处理。
+仅在重要的调试信息被脱敏屏蔽时，临时启用此选项。</li>
 </ul>
 <h5 id="GeneralSettingsGatherUsageStats">允许 NV Access 收集 NVDA 使用统计信息</h5>
 <p>如果此选项被启用，NV Access 会在检查更新时获取您的信息，以便统计 NVDA 的用户数量。包括特定的统计数据，如操作系统版本和所在国家/地区。
@@ -4436,6 +4891,254 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 <p>如果您安装了其他提供视觉辅助功能的 <a href="#AddonsManager" title="NVDA 插件">NVDA 插件</a>，而且它们有可以调整的设置。
 这里就会出现相应的设置。
 具体设置项目的意义请参考相应插件的文档。</p>
+<h4 id="MagnifierSettingsCategory">放大镜</h4>
+<!-- KC:setting -->
+
+<h5 id="OpenMagnifierSettings">打开放大镜设置</h5>
+<p>按键：<code>NVDA+Ctrl+W</code></p>
+<p>“放大镜”类别允许您配置 NVDA 内置<a href="#Magnifier" title="放大镜">放大镜</a>功能的默认行为。
+该类别中的所有选项更改后立即生效，但选择“取消”（或按 <code>Esc</code> 键）将放弃所有更改。</p>
+<p>该类别包含以下选项：</p>
+<!-- KC:setting -->
+
+<h5 id="MagnifierEnable">开启放大镜</h5>
+<p>按键：<code>NVDA+Shift+W</code></p>
+<p>此选项可启动或停止放大镜。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>已禁用、已启用</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>已禁用</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierZoom">放大级别</h5>
+<p>此选项允许您设置使用放大镜时的放大级别。
+放大级别范围从 100%（不放大）到 5000%（最大放大）。
+默认值为 200%。</p>
+<p>您始终可在放大镜开启时使用放大（<code>NVDA+Shift+等于</code>）和缩小（<code>NVDA+Shift+减号</code>）命令即时调整放大级别。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>100% 到 5000%</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>200%</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:setting -->
+
+<h5 id="MagnifierFilter">颜色滤镜</h5>
+<p>按键：<code>NVDA+Shift+I</code></p>
+<p>此选项允许您选择使用放大镜时要应用的颜色滤镜。</p>
+<p>可用选项如下：</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>正常、灰度、反转</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>正常</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正常</td>
+<td>不进行颜色修改。</td>
+</tr>
+<tr>
+<td>灰度</td>
+<td>将所有颜色转换为灰度色调，这有助于减轻视疲劳并提高对比度。</td>
+</tr>
+<tr>
+<td>反转</td>
+<td>反转屏幕上的所有颜色，这对于喜欢深色背景上的浅色文本或有畏光症的用户很有帮助。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierPanningStepSize">平移步长</h5>
+<p>此选项允许您将平移步长设置为可见放大窗口的百分比。
+这意味着当您使用手动平移命令时，放大视图将按当前可见窗口大小的指定百分比移动。
+较高的百分比会导致较大范围的移动，使您可以更快地在屏幕上导航，而较低的百分比则提供更精细的控制以实现精确定位。
+实际像素距离将根据您当前的放大级别自动调整。</p>
+<p>注意：平移命令允许您手动将放大视图向任意方向移动，与跟踪模式无关。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>1 到 100</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowMouse">跟踪鼠标</h5>
+<p>此复选框控制放大镜是否应跟踪鼠标指针。
+启用后，放大区域将自动移动以跟踪鼠标指针，这对于主要使用鼠标而非键盘导航的用户很有帮助。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>已禁用、已启用</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>已启用</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowSystemFocus">跟踪系统焦点</h5>
+<p>此复选框控制放大镜是否应跟踪系统焦点。
+启用后，放大区域将自动移动以跟踪系统焦点，这对于主要使用键盘导航并希望放大镜跟踪其导航的用户很有帮助。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>已禁用、已启用</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>已启用</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowReviewCursor">跟踪查看光标</h5>
+<p>此复选框控制放大镜是否应跟踪查看光标。
+启用后，放大区域将自动移动以跟踪查看光标，这对于使用查看光标浏览内容并希望放大镜跟踪其导航的用户很有帮助。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>已禁用、已启用</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>已启用</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowNavigatorObject">跟踪导航对象</h5>
+<p>此复选框控制放大镜是否应跟踪导航对象。
+启用后，放大区域将自动移动以跟踪导航对象，这对于使用对象导航浏览内容并希望放大镜跟踪其导航的用户很有帮助。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>已禁用、已启用</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>已启用</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierTrackingModeSetting">跟踪模式</h5>
+<p>此组合框允许您选择使用放大镜时的跟踪模式。
+要循环切换跟踪模式，请使用<a href="#InputGestures" title="按键与手势对话框">按键与手势对话框</a>分配自定义快捷键。
+可用选项如下：</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>居中、相对</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>居中</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>居中</td>
+<td>放大区域始终以当前跟踪位置为中心。</td>
+</tr>
+<tr>
+<td>相对</td>
+<td>放大区域根据跟踪元素在屏幕上的位置保持其相对位置。</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">键盘</h4>
 <!-- KC:setting -->
 
@@ -4549,7 +5252,7 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 可以使用 NVDA+Ctrl+Alt+t 切换此设置。</p>
 <h5 id="TouchTypingMode">触摸输入模式</h5>
 <p>使用此复选框可以指定使用触摸键盘输入文本时要使用的方法。
-如果选中此复选框，当您在触摸键盘上找到某个键​​时，抬起手指即可按下所选键。
+如果选中此复选框，当您在触摸键盘上找到某个键时，抬起手指即可按下所选键。
 如果未选中此选项，则需要双击触摸键盘的按键才能按下该键。</p>
 <h4 id="ReviewCursorSettings">查看光标</h4>
 <p>该类别用于配置 NVDA 的查看光标行为。
@@ -4606,14 +5309,14 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 <p>此选项控制 NVDA 如何提示进度栏的更新。</p>
 <p>包含下列选项：</p>
 <ul>
-<li>无：不提示进度栏更新，即使他已经刷新。</li>
+<li>无：不提示进度栏更新，即使它已经刷新。</li>
 <li>朗读进度栏更新：此选项告诉 NVDA 以百分比为单位读出进度栏更新。每次更新，NVDA 都会读出其更新后的值。</li>
 <li>用提示音表示进度栏更新：告诉 NVDA 在每次进度栏更新时发出提示音。提示音越高，越接近进度栏的完成。</li>
 <li>朗读并以提示音表示进度栏更新：此选项告诉 NVDA，在进度栏更新时发出提示音并朗读。</li>
 </ul>
 <h5 id="ObjectPresentationReportBackgroundProgressBars">读出后台进度栏</h5>
 <p>此选项如果选中则告诉 NVDA，保持进度栏更新的提示，即使它并未完全处于前台。
-即使您最小化或者离开了包含进度栏的窗口，，NVDA 仍然会继续跟踪它，并允许您继续完成其他事情。</p>
+即使您最小化或者离开了包含进度栏的窗口，NVDA 仍然会继续跟踪它，并允许您继续完成其他事情。</p>
 <!-- KC:setting -->
 
 <h5 id="ObjectPresentationReportDynamicContent">读出动态内容更新</h5>
@@ -4702,6 +5405,12 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 <p>默认启用，此选项允许您选择键盘按键和触屏手势，是否作为 NVDA 命令或其他快捷键，启用该选项命令将被拦截，以防止其键入到所聚焦的文档。
 举一个例子，如果启用，当您按下字母“j”后，它会被拦截，也就是这一按键既不会作为 NVDA 的跳转热键，也不会作为程序自身的命令（译者注：就上面的例子来说，假设我们现在聚焦在 word 文档里，当按 j 的时候，它不会跳转文档，也不会当成字母 j 输入到文档）。
 此时 NVDA 会通知 Windows 发出默认提示音。</p>
+<h5 id="BrowseModeSettingsBrowseModeNavigationElements">触摸导航元素</h5>
+<p>通过此列表，可选择在浏览触摸模式下循环切换元素时包含的元素类型。
+使用复选框来启用或禁用单个元素类型。
+在浏览模式导航元素中上下滑动切换时，只会出现已选中的元素类型。
+此设置仅影响触摸导航，对键盘的浏览模式导航没有影响。</p>
+<p>可用的元素类型与<a href="#SingleLetterNavigation" title="单键导航">单键导航</a>中提供的元素类型一致。</p>
 <h4 id="DocumentFormattingSettings">文档格式</h4>
 <!-- KC:setting -->
 
@@ -4801,7 +5510,7 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 <li>关闭：NVDA 不提示行首缩进。</li>
 <li>语音：若选择该选项，当缩进个数发生变化时，NVDA 就会给出诸如“12 个空格”或“4 个制表符”这样的提示。</li>
 <li>提示音：若选择该选项，当缩进数量发生改变时，会以声音反馈缩进变化的量。
-每增加一个空格或一个制表符，音调升高一个半音，也会为四个连续的空格升高伴音。</li>
+每增加一个空格，提示音的音调就会升高；一个制表符对应的音调升幅相当于 4 个空格。</li>
 <li>语音和提示音：此选项将同时使用上述两种方式来提示缩进。</li>
 </ul>
 <p>如果勾选了“忽略空白行的行缩进”复选框则不会读出空白行的缩进变化。
@@ -4884,6 +5593,27 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 </tr>
 </tbody>
 </table>
+<h6 id="MathSpeechDecimalSeparator">数字的小数分隔符</h6>
+<p>此选项决定在阅读数学内容中的数字时，使用哪个字符作为小数分隔符。
+设置为“自动”时，将根据数学内容的语言选择相应的分隔符。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>自动、“.”、“,”</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>自动</td>
+</tr>
+</tbody>
+</table>
 <h6 id="MathSpeechStyle">语音风格</h6>
 <p>可以使用不同风格朗读数学内容。
 每种<a href="#MathSpeechLanguage" title="数学语音语言">数学语音语言</a>都有不同的可用语音风格。</p>
@@ -4891,8 +5621,8 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 <ul>
 <li>ClearSpeak 由 Educational Testing Service 开发，用于美国大学入学考试及其他重要考试。
 有关 ClearSpeak 规范的详细信息，请参阅<a href="https://daisy.github.io/MathCAT/ClearSpeakRulesAndPreferences.docx" rel="noopener" target="_blank" title="此 Word 文档">此 Word 文档</a>。</li>
-<li>SimpleSpeak 会尽量精简朗读内容，例如快速朗读 <math><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac></mrow></math> 这类简单表达式，而不加入表示范围的提示词（“a over b”）。
-这不同于 <math><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math> 等更复杂的表达式；后者始终会带有表示范围的提示词（“fraction a over b plus 1 end fraction”）。</li>
+<li>SimpleSpeak 尽量精简朗读，例如将 <math><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></mfrac></mrow></math> 这类简单表达式直接读作“b 分之 a”，省略范围提示词。
+对于 <math><mrow><mfrac><mrow><mi>a</mi></mrow><mrow><mi>b</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math> 等复杂表达式，则始终加入范围提示词（“分数，b 加 1 分之 a，结束分数”）。</li>
 <li>LiteralSpeak 会让 MathCAT 几乎按书写形式朗读数学表达式，而不解释符号或含义。
 它优先按字面朗读（逐字符或逐符号），而不是朗读数学含义。</li>
 </ul>
@@ -4909,15 +5639,15 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 <tbody>
 <tr>
 <td>1/2</td>
-<td>1 slash 2</td>
-<td>1 divided by 2</td>
-<td>one half</td>
+<td>2 分之 1</td>
+<td>2 分之 1</td>
+<td>2 分之 1</td>
 </tr>
 <tr>
 <td>√x</td>
-<td>radical x</td>
-<td>square root x</td>
-<td>square root of x</td>
+<td>根号 x，结束根号</td>
+<td>根号 x</td>
+<td>根号 x</td>
 </tr>
 </tbody>
 </table>
@@ -4941,7 +5671,7 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 </table>
 <h6 id="MathSpeechVerbosity">语音详细程度</h6>
 <p>此选项控制额外语音提示的多少。
-例如，详细朗读时，平方根会读作“the square root of x”；简略朗读时则读作“square root x”。</p>
+例如，详细模式会将平方根读作“根号 x，结束根号”，简略模式则读作“根号 x”。</p>
 <table>
 <thead>
 <tr>
@@ -5050,7 +5780,7 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 </tbody>
 </table>
 <h6 id="MathNavSpeech">进入公式时</h6>
-<p>移动到表达式后，是朗读表达式本身还是给出概览。</p>
+<p>选择移动后朗读表达式，还是概述其结构。</p>
 <table>
 <thead>
 <tr>
@@ -5061,7 +5791,7 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 <tbody>
 <tr>
 <td>选项</td>
-<td>朗读、描述概览</td>
+<td>朗读、概述</td>
 </tr>
 <tr>
 <td>默认</td>
@@ -5136,7 +5866,7 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 </tbody>
 </table>
 <h6 id="MathNavSpeechAmount">导航详细程度</h6>
-<p>此选项指定 NVDA 在导航期间应以简略还是详细方式朗读数学表达式。</p>
+<p>此选项控制导航时数学表达式的朗读详细程度。</p>
 <table>
 <thead>
 <tr>
@@ -5339,7 +6069,7 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 <td>插件将自动更新到稳定通道的新版本</td>
 </tr>
 <tr>
-<td>测试版或开发板</td>
+<td>测试版或开发版</td>
 <td>插件将自动更新到测试或开发通道的新版本</td>
 </tr>
 <tr>
@@ -5347,7 +6077,7 @@ NVDA 更新服务器只根据您的 IP 地址判断用户所在的国家/地区�
 <td>插件将自动更新到测试通道的新版本</td>
 </tr>
 <tr>
-<td>开发板</td>
+<td>开发版</td>
 <td>插件将自动更新到开发通道的新版本</td>
 </tr>
 </tbody>
@@ -5510,7 +6240,7 @@ NVDA 在安全界面会以系统用户的身份运行，其权限甚至高于管
 <h5 id="AdvancedSettingsEnableScratchpad">允许从开发者实验目录加载代码</h5>
 <p>在为 NVDA 开发插件时，能够边写边测试会给开发者带来很大便利。
 启用此选项后，NVDA 允许从 NVDA 用户配置目录中特殊的开发者实验目录加载自定义 appModules、globalPlugins、brailleDisplayDrivers、synthDrivers 和 vision enhancement。
-作为插件的等效模块，这些插件在 NVDA 启动时加载。对于 appModules 和 globalPlugins，<a href="#ReloadPlugins" title="重新加载插件">重新加载插件</a>时也会被加载。。
+作为插件的等效模块，这些插件在 NVDA 启动时加载。对于 appModules 和 globalPlugins，<a href="#ReloadPlugins" title="重新加载插件">重新加载插件</a>时也会被加载。
 默认情况下，此选项处于关闭状态，可以确保用户仅仅在明确了解的情况下，NVDA 才会运行未经测试的代码。
 如果您希望将代码分发给其他人，则应将其打包为 NVDA 插件。</p>
 <h5 id="AdvancedSettingsOpenScratchpadDir">打开开发者实验目录</h5>
@@ -5558,7 +6288,7 @@ NVDA 在安全界面会以系统用户的身份运行，其权限甚至高于管
 <h5 id="UseUiaForExcel">在 Excel 中启用 UIA 接口（如果可用）</h5>
 <p>启用该选项后，NVDA 将尝试使用 Microsoft UI Automation 接口从 Excel 表格中获取信息。
 这是一项实验性功能，在此模式下可能无法使用 Excel 的某些功能。
-例如，用于列出公式和批注的元素列表，以及用于在浏览模式下跳转到表单的快速导航功能。
+例如，无法使用 NVDA 的元素列表列出公式和批注，也无法使用浏览模式下的快速导航跳转到电子表格中的表单字段。
 但对于基础的导航和编辑功能，启用该选项可能会带来明显的性能改进。
 尽管如此，我们仍然不推荐大多数用户启用该功能，但我们也欢迎使用 Microsoft Excel 内部版本 16.0.13522.10000 或更高版本的用户测试此功能并提供反馈。
 Microsoft Excel 的 UI Automation 接口实现不断变化，早于 16.0.13522.10000 版本的 Office 可能无法提供足够多的信息来支持此功能。</p>
@@ -5604,7 +6334,7 @@ Microsoft Excel 的 UI Automation 接口实现不断变化，早于 16.0.13522.1
 </table>
 <p>该选项用于选择如何与命令提示符，PowerShell 以及 Linux 子系统的 Windows 控制台进行交互。
 这个选项不会影响新的 Windows 终端应用。
-在 Windows 10 版本 1709 中，Microsoft<a href="https://devblogs.microsoft.com/commandline/whats-new-in-windows-console-in-windows-10-fall-creators-update/" rel="noopener" target="_blank" title="向控制台添加了 UIA 接口的支持">向控制台添加了 UIA 接口的支持</a>，这一举措显著的改善了屏幕阅读器的性能和稳定性。
+在 Windows 10 版本 1709 中，Microsoft<a href="https://devblogs.microsoft.com/commandline/whats-new-in-windows-console-in-windows-10-fall-creators-update/" rel="noopener" target="_blank" title="向控制台添加了 UIA 接口的支持">向控制台添加了 UIA 接口的支持</a>，这一举措显著地改善了屏幕阅读器的性能和稳定性。
 在 UIA 接口不可用，或者已知存在影响用户体验的问题时，NVDA 旧版控制台的支持方式可作为备用。
 该选项的组合框中包含三个选项：</p>
 <ul>
@@ -5684,7 +6414,7 @@ Diff 算法组合框内有三个选项：</p>
 <ul>
 <li>自动：此选项可以让 NVDA 在大多数情况下首选 Diff Match Patch，但在某些应用程序中遇到问题时则回退到 Difflib，例如旧版本的 Windows 控制台和 Mintty。</li>
 <li>Diff Match Patch：此选项让 NVDA 强制按字符计算终端文本的变化。
-当控制台中包含大量文本时，该选项可以提高性能，并能够更加准确的读出行中间的字符变化。
+当控制台中包含大量文本时，该选项可以提高性能，并能够更加准确地读出行中间的字符变化。
 但是，在某些终端程序中，可能会导致文本的读取断断续续或不一致。</li>
 <li>Difflib：此选项让 NVDA 强制逐行计算终端文本的变化。
 这与 NVDA 2020.4 及更早版本中的行为一致。
@@ -5754,6 +6484,27 @@ Diff 算法组合框内有三个选项：</p>
 </tr>
 </tbody>
 </table>
+<h5 id="SpeechDictsUseModernRegex">使用现代正则表达式引擎处理语音字典条目</h5>
+<p>此设置用于控制<a href="#SpeechDictionaries" title="语音字典">语音字典</a>中正则表达式条目的匹配方式。
+<a href="https://pypi.org/project/regex/" rel="noopener" target="_blank" title="现代引擎">现代引擎</a>对非拉丁文字（如希伯来语和阿拉伯语）提供了更好的支持，并提供了更强大的匹配选项。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项</td>
+<td>默认（已禁用）、已禁用、已启用</td>
+</tr>
+<tr>
+<td>默认</td>
+<td>已禁用</td>
+</tr>
+</tbody>
+</table>
 <h5 id="AdvancedSettingsCaretMoveTimeout">光标移动超时（毫秒）</h5>
 <p>此选项允许您配置 NVDA 等待多长时间之后才从编辑框获取光标位置。
 如果您发现 NVDA 光标朗读有问题，比如位置不对，那么您可以尝试增加此值。</p>
@@ -5768,8 +6519,9 @@ Diff 算法组合框内有三个选项：</p>
 例如调试点显器驱动程序时，NVDA 开发者会让你打开其中一个，请不要同时开启多个。</p>
 <h5 id="PlayErrorSound">日志记录后播放错误提示音</h5>
 <p>此选项允许您选择 NVDA 是否在捕捉到错误时播放错误提示音。
-选择“仅测试版”（默认）仅当 NVDA 版本是测试版本（alpha、beta 或从源代码运行）时 NVDA 会播放错误提示音。
-选择“是”，启用错误声音，无论您当前的 NVDA 是什么版本。</p>
+选择“仅测试版”（默认）仅当 NVDA 版本是测试版本（alpha、beta 或从源代码运行）时 NVDA 才会播放错误提示音。
+选择“是”，无论您当前的 NVDA 是什么版本，都会播放错误提示音。
+选择“否”，无论您当前的 NVDA 是什么版本，都不会播放错误提示音，即使是测试版本也是如此。</p>
 <h5 id="TextParagraphRegexEdit">文本段落导航的正则表达式</h5>
 <p>此编辑框可以让用户自定义在浏览模式下检测文本段落的正则表达式。
 <a href="#TextNavigationCommand" title="文本段落导航命令">文本段落导航命令</a>会查找匹配该正则表达式的文本段落。</p>
@@ -5797,17 +6549,39 @@ Diff 算法组合框内有三个选项：</p>
 <p>NVDA 的语音字典比之单词替换更为强大。
 “添加规则”对话框还包含一个区分大小写复选框（这意味着 NVDA 应该区分字符是大写还是小写）。
 默认情况下，NVDA 忽略大小写)。</p>
-<p>最后的一组单选按钮告诉 NVDA 您的来源文本到底应该匹配任何地方、匹配整个单词或为“正则表达式”。
-设置模式以匹配整个单词意味着仅当模式不作为较大单词的一部分出现时才进行替换。
+<p>一组单选按钮允许您告诉 NVDA 应如何匹配您的原文本。
+可用类型包括：</p>
+<ul>
+<li>不限：原文本可以匹配文本中的任何位置。</li>
+<li>整词匹配：仅当原文本作为一个完整的单词出现时才进行替换。
+这意味着若为大型单词的一部分，那么其将不会被匹配。
 如果单词前后的字符不是字母，数字或下划线，或者根本没有字符，则满足此条件。
-因此，使用前面的示例将“ bird”替换为“ frog”的示例，如果您将其替换为整个单词，则它将与“ birds”或“ bluebird”不匹配。</p>
-<p>“正则表达式”是一个包含特殊符号的匹配模板，允许您同时匹配多个字符，仅匹配数字或仅匹配字母等等。
+例如，如果您使用整词匹配把“bird”替换为“frog”，其将不会匹配“birds”或“bluebird”。</li>
+<li>部分匹配：文本的前面或后面必须有字母数字字符或下划线才会被替换。
+这对于匹配复合词的一部分很有用。
+例如，如果您使用部分匹配把“bird”替换为“frog”，其将匹配“birds”、“bluebird”、“bluebirds”和“birdsong”，但不会匹配单独的单词“bird”（因为其前后都没有字母数字字符）。</li>
+<li>匹配词首：文本的开头必须是单词边界，结尾必须是字母数字字符或下划线才会被替换。
+例如，如果您使用匹配词首把“bird”替换为“frog”，其将匹配“birds”和“birdsong”，但不会匹配“bluebird”或单独的单词“bird”。</li>
+<li>匹配词尾：文本的开头必须是字母数字字符或下划线，结尾必须是单词边界才会被替换。
+例如，如果您使用匹配词尾把“bird”替换为“frog”，其将匹配“bluebird”和“songbird”，但不会匹配“birds”或单独的单词“bird”。</li>
+<li>正则表达式：原文本被视为正则表达式。这是一种包含特殊符号的文本，允许您一次匹配多个字符，或者仅匹配数字、仅匹配字母等。
 本指南不会教你如何使用正则表达式。
-您可以参考 <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="Python 的正则表达式文档">Python 的正则表达式文档</a>来学习。</p>
+您可以参考 <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="Python 的正则表达式文档">Python 的正则表达式文档</a>来学习。
+同时请考虑<a href="#SpeechDictsUseModernRegex" title="启用使用现代正则表达式引擎的高级设置">启用使用现代正则表达式引擎的高级设置</a>，尤其是在处理非拉丁文字（如希伯来语和阿拉伯语）时。</li>
+<li>Unix shell 风格通配符：使用 Unix Shell 风格的通配符进行匹配。
+例如：<ul>
+<li><code>*</code> 匹配任意字符序列。</li>
+<li><code>?</code> 匹配单个字符。</li>
+<li><code>[az]</code> 匹配 a 或 z。</li>
+<li><code>[a-z]</code> 匹配从 a 到 z 的任何小写字母。</li>
+<li><code>[!a-z]</code> 匹配除小写字母 a 到 z 以外的任何字符。</li>
+</ul>
+</li>
+</ul>
 <h4 id="SymbolPronunciation">标点符号读音</h4>
 <p>此对话框允许您修改标点符号的发音，并指定语音输出标点符号的级别。</p>
 <p>正在编辑的标点发音所属的语言会被显示在对话框的标题上。
-请注意，此对话框依照位于 <a href="#NVDASettings" title="NVDA 设置">NVDA 设置</a>中的<a href="#SpeechSettings" title="语音设置类别">语音设置类别</a>下的“处理字符和标点时信任语音的语言”选项而定，极如果此选项被选中，将使用语音的语言代替 NVDA 本地语言设置。</p>
+请注意，此对话框依照位于 <a href="#NVDASettings" title="NVDA 设置">NVDA 设置</a>中的<a href="#SpeechSettings" title="语音设置类别">语音设置类别</a>下的“处理字符和标点时信任语音的语言”选项而定，即，如果此选项被选中，将使用语音的语言代替 NVDA 本地语言设置。</p>
 <p>要想修改某个标点，请在标点列表选择它。
 您可以通过在“查找”编辑框中输入符号或符号替换的一部分来寻找符号。</p>
 <ul>
@@ -5818,7 +6592,7 @@ Diff 算法组合框内有三个选项：</p>
 <li>当 NVDA 拼读包含该符号的文本时。</li>
 </ul>
 </li>
-<li>“发送实际标点到合成器”区域定义核实把标点自身而不是替换文本传送到合成器。
+<li>“发送实际标点到合成器”区域定义何时把标点自身而不是替换文本传送到合成器。
 这对于让合成器读取该标点时的语调或停顿发生改变非常有用。
 例如，一个逗号可以让合成器暂停。
 这里有三个选项：<ul>
@@ -5866,7 +6640,8 @@ Diff 算法组合框内有三个选项：</p>
 请注意，此设置可以在“选项”菜单下的“常规设置”修改。
 任何时候想手动保存配置，可选择 NVDA 菜单的“保存配置”项目。</p>
 <p>如果您做了一个错误的修改，希望恢复到上次保存的设置，在 NVDA 菜单选择“重新应用已保存的配置”菜单项目。
-您也可重置您的设置到初始的默认状态，可使用“重置设置为默认值”，它也可在 NVDA 菜单中找到。</p>
+您也可重置您的设置到初始的默认状态，可使用“重置设置为默认值”，它也可在 NVDA 菜单中找到。
+重置后，将出现一个对话框，允许您撤销重置并恢复之前的配置。</p>
 <p>下面的 NVDA 按键命令也很实用：</p>
 <!-- KC:beginInclude -->
 
@@ -5874,23 +6649,20 @@ Diff 算法组合框内有三个选项：</p>
 <thead>
 <tr>
 <th>名称</th>
-<th>台式机键盘</th>
-<th>笔记本键盘</th>
+<th>按键</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>保存设置</td>
-<td>NVDA+Ctrl+c</td>
-<td>NVDA+Ctrl+c</td>
+<td><code>NVDA+Ctrl+C</code></td>
 <td>保存您的当前配置，当您退出 NVDA 时也不会丢失</td>
 </tr>
 <tr>
 <td>恢复配置</td>
-<td>NVDA+Ctrl+r</td>
-<td>NVDA+Ctrl+r</td>
-<td>按一次重置您的设置到上一次保存的状态，连按三次恢复到默认的出厂设置。</td>
+<td><code>NVDA+Ctrl+R</code></td>
+<td>按一次重置您的设置到上一次保存的状态，连按三次恢复到默认的出厂设置且不显示撤销对话框。</td>
 </tr>
 </tbody>
 </table>
@@ -5968,7 +6740,7 @@ Diff 算法组合框内有三个选项：</p>
 <p>安装版本的 NVDA 的所有插件和配置文件都放在您的 Windows 用户配置的文件的 NVDA 目录下。
 系统内的每个用户都可以拥有自己的配置。
 如果想随时访问 NVDA 配置目录可以在“<a href="#InputGestures" title="按键与手势">按键与手势</a>”对话框内为“浏览当前的 NVDA 用户配置目录”命令分配一个快捷键。
-此外，对于安装板的 NVDA 您还可以从开始菜单的 NVDA 文件夹找到“浏览 NVDA 用户配置目录”入口。</p>
+此外，对于安装版的 NVDA 您还可以从开始菜单的 NVDA 文件夹找到“浏览 NVDA 用户配置目录”入口。</p>
 <p>运行在欢迎屏幕或 UAC 屏幕时的 NVDA 设置都被存放在 NVDA 安装目录下的 SystemConfig 目录中。
 通常情况下，不要接触这些配置文件。
 要想更改 NVDA 在欢迎屏幕和 UAC 屏幕上的配置，您需要在登录 Windows 后保存配置，然后转到 “<a href="#NVDASettings" title="NVDA 设置">NVDA 设置</a>”中的“常规”设置对话框，点击“应用已保存的配置到欢迎界面和其他安全界面”按钮。</p>
@@ -6185,7 +6957,7 @@ Diff 算法组合框内有三个选项：</p>
 您也可能会因为插件与插件或与应用程序之间存在冲突而选择禁用某个插件。
 如果在 NVDA 升级过程中发现某些插件不兼容，NVDA 也可能会禁用这些插件；但在这种情况下，您会收到警告。
 如果您长时间用不到某些插件，又想保留它们以备不时之需，您也可以选择禁用插件。</p>
-<p>已安装和不兼容的插件列表可以按其启用​​或禁用状态进行过滤。
+<p>已安装和不兼容的插件列表可以按其启用或禁用状态进行过滤。
 默认会显示已启用和已禁用的插件。</p>
 <h4 id="AddonStoreFilterIncompatible">包含不兼容插件</h4>
 <p>在“可更新的插件”和“可安装的插件”中可以选择包含<a href="#incompatibleAddonsManager" title="不兼容的插件">不兼容的插件</a>进行安装。</p>
@@ -6195,8 +6967,8 @@ Diff 算法组合框内有三个选项：</p>
 <li>稳定版：开发者使用 NVDA 的稳定版对其进行了测试后发布。</li>
 <li>测试版：插件可能需要进一步测试，公开发布以便收集用户反馈。
 建议尝鲜用户选用。</li>
-<li>开发板：建议插件开发者使用此通道来测试未发布的 API 变更。
-使用 NVDA alpha 版的测试用户可能需要使用此开发板插件。</li>
+<li>开发版：建议插件开发者使用此通道来测试未发布的 API 变更。
+使用 NVDA alpha 版的测试用户可能需要使用此开发版插件。</li>
 <li>外部：从插件商店的外部源安装的插件。</li>
 </ul>
 <p>如需仅列出来自特定通道的插件，请在“通道”组合框内选择相应的通道。</p>
@@ -6288,7 +7060,7 @@ NVDA 将询问您是否确认移除。
 <td>插件将自动更新到稳定通道的新版本</td>
 </tr>
 <tr>
-<td>测试版或开发板</td>
+<td>测试版或开发版</td>
 <td>插件将自动更新到测试或开发通道的新版本</td>
 </tr>
 <tr>
@@ -6296,7 +7068,7 @@ NVDA 将询问您是否确认移除。
 <td>插件将自动更新到测试通道的新版本</td>
 </tr>
 <tr>
-<td>开发板</td>
+<td>开发版</td>
 <td>插件将自动更新到开发通道的新版本</td>
 </tr>
 </tbody>
@@ -6360,16 +7132,16 @@ NVDA 将询问您是否确认移除。
 如果选中，NVDA 会在启动时打开朗读查看器。
 此窗口若被关闭，重新打开时也将以相同的尺寸出现在相同的位置。</p>
 <p>当朗读查看器启用时，它会不断地更新，从而向您显示最近朗读的文本。
-然而，当您将鼠标移动到查看器上或把焦点放在查看器内，NVDA 就会暂停文本的更新，您可以轻松的选择或者复制已有的文本。</p>
+然而，当您将鼠标移动到查看器上或把焦点放在查看器内，NVDA 就会暂停文本的更新，您可以轻松地选择或者复制已有的文本。</p>
 <p>要想随时切换朗读查看器的开关，请在<a href="#InputGestures" title="按键与手势对话框">按键与手势对话框</a>分配一个自定义快捷键。</p>
 <h3 id="BrailleViewer">盲文查看器</h3>
 <p>在视障者向明眼人演示 NVDA 时，显示一个悬浮窗口，其中显示盲文信息，以及每个盲文单元的对应文本。
 盲文查看器可以與实体点显器同時使用，并显示与实体设备相同数量的盲文单元。
-打开盲文查看器后，其会实时同步点显器上的信息。</p>
-<p>要想使用盲文查看器，可以再 NVDA 的“工具”菜单选中“盲文查看器”。
+启用盲文查看器后，它会不断更新，显示本应输出到实体点显器的盲文。</p>
+<p>要想使用盲文查看器，可以在 NVDA 的“工具”菜单选中“盲文查看器”。
 取消选中菜单即可关闭。</p>
 <p>实体点显器通常有“向前（或向后）滚动”的按钮，如需使用该功能可在<a href="#InputGestures" title="按键与手势对话框">按键与手势对话框</a>指定“向前滚动盲文显示”和“向后滚动盲文显示”的快捷键，用以向前或向后滚动点显器所显示的内容。</p>
-<p>盲文查看器窗口包含一个 “启动时显示盲文查看器"的复选框。
+<p>盲文查看器窗口包含一个 “启动时显示盲文查看器”的复选框。
 如果选中此复选框，当 NVDA 启动时，盲文查看器将自动启用。
 盲文查看器会记忆上次打开时的尺寸和位置。</p>
 <p>盲文查看器窗口包含一个“鼠标停留跟踪盲文光标位置”的复选框，默认是未选中的。
@@ -6389,10 +7161,10 @@ NVDA 将询问您是否确认移除。
 <h3 id="CreatePortableCopy">创建便携版</h3>
 <p>显示一个对话框，可以让您从已安装的版本中创建 NVDA 的便携版。</p>
 <p>有关更多信息，请参阅<a href="#CreatingAPortableCopy" title="创建一个便携版">创建一个便携版</a>。</p>
-<h3 id="RunCOMRegistrationFixingTool">运行 COM 注册修复工具...</h3>
+<h3 id="RunCOMRegistrationFixingTool">运行系统辅助功能修复工具...</h3>
 <p>有时，Windows 注册表可能出现问题，导致 NVDA 运行异常。
 这些问题可能由安装或卸载某些程序（如 Adobe Reader 或 Math Player）、Windows 更新以及其他事件引发。
-COM 注册修复工具会尝试通过修复注册表中的无障碍访问条目来解决这些问题。</p>
+系统辅助功能修复工具会尝试通过修复注册表中的辅助功能条目来解决这些问题。</p>
 <p>该工具可修复的问题类型包括：</p>
 <ul>
 <li>在 Firefox 或 Edge 等浏览器、Thunderbird 等邮件程序、Windows 资源管理器、任务栏及其他程序中导航时，NVDA 提示"未知"或"窗格"。</li>
@@ -7067,14 +7839,12 @@ NVDA 的点显器自动检测将识别通过 USB 或蓝牙连接的点显器。<
 <li>Baum: SuperVario, PocketVario, VarioUltra, Pronto!, SuperVario2, Vario 340</li>
 <li>HumanWare: Brailliant, BrailleConnect, Brailliant2</li>
 <li>APH: Refreshabraille</li>
-<li>Orbit: Orbit Reader 20</li>
+<li>Orbit: Orbit Reader 20, Orbit Reader 40</li>
 </ul>
 <p>Baum 制造的其他点显器也可使用，但尚未经过测试。</p>
 <p>如果通过 USB 连接到不使用 HID 的点显器，则必须首先安装制造商提供的 USB 驱动程序。
 VarioUltra 和 Pronto 使用 HID。
-如果配置适当，Refreshabraille 和 Orbit Reader 20 可以使用 HID。</p>
-<p>Orbit Reader 20 的 USB 串行模式目前仅在 Windows 10 及更高版本中受支持。
-通常应使用 USB HID 代替。</p>
+如果配置得当，Refreshabraille、Orbit Reader 20 和 Orbit Reader 40 可以使用 HID。</p>
 <p>以下是这些点显器使用 NVDA 时的按键分配。
 具体按键位置请参阅点显器随附的文档。</p>
 <!-- KC:beginInclude -->
@@ -9764,7 +10534,7 @@ Windows 10 和 Windows 11 操作系统将自动检测并安装该点显器所需
 
 <h3 id="HIDBraille">HID 标准盲文点显器</h3>
 <p>这是新标准 HID 盲文规范的实验性驱动，由 Microsoft、Google、Apple 和包括 NV Access 在内的几家辅助技术公司于 2018 年达成一致。
-希望未来所有制造商推出的盲文点显器设备都可以使用此标准协议，以消除设备驱动之间的差异性。</p>
+希望未来所有制造商推出的盲文点显器都采用此标准协议，从而无需厂商专用的盲文驱动程序。</p>
 <p>NVDA 的点显器自动检测功能也可以识别任何使用该协议的点显器并自动连接。</p>
 <p>这些盲文点显器的按键分配如下。</p>
 <!-- KC:beginInclude -->
@@ -9858,7 +10628,9 @@ Windows 10 和 Windows 11 操作系统将自动检测并安装该点显器所需
 NVDA 既可以在设备专用盲文显示行显示单行盲文，也可以在触觉图形区域显示多行盲文。
 A300 型号的触觉图形区域为 120×80 点阵规格，最多可容纳 8 行盲文（每行 20 个单元）。</p>
 <p>您可通过 NVDA 盲文设置中该驱动的盲文输出目标选项，配置 NVDA 是在专用盲文行显示内容，还是在触觉图形区域显示。</p>
-<p>支持按键滚动盲文显示，但由于设备物理按键有限，目前暂不支持其他命令及定位盲文单元功能。</p>
+<p>Dot Pad 有左右平移键和四个功能键（f1 到 f4）。
+可同时按下多个按键来创建组合手势（如<code>f1+panLeft</code>），可通过按键与手势对话框进行分配。
+除滚动盲文显示外，默认情况下不分配其他命令。</p>
 <p>Dot Pad 驱动程序支持自动检测通过 USB 连接的设备。
 但由于该设备使用可能与其他设备冲突的通用 USB 标识符，默认情况下自动检测功能处于禁用状态。
 如需启用自动检测，请在选择盲文点显器对话框的自动检测列表中选中“DotPad 盲文/触觉图形显示”。
@@ -9878,11 +10650,11 @@ A300 型号的触觉图形区域为 120×80 点阵规格，最多可容纳 8 行
 <tbody>
 <tr>
 <td>向后滚动盲文显示</td>
-<td><code>pan_left</code></td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
 <td>向前滚动盲文显示</td>
-<td><code>pan_right</code></td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>
@@ -10019,7 +10791,7 @@ NVDA 还可以使用 <code>-s</code> <a href="#CommandLineOptions" title="命令
 <tr>
 <td><code>-l LOGLEVEL</code></td>
 <td><code>--log-level=LOGLEVEL</code></td>
-<td>日志消息记录的最低级别（调试 10、输入/输出 12、调试警告 15、信息 20、停用 100）。如果启用了安全模式，则始终禁用日志记录。</td>
+<td>日志消息记录的最低级别（调试（未脱敏） 5、调试 10、输入/输出 12、调试警告 15、信息 20、禁用 100）。如果启用了安全模式，则始终禁用日志记录。</td>
 </tr>
 <tr>
 <td><code>-c CONFIGPATH</code></td>
@@ -10160,5 +10932,6 @@ NVDA 的卸载程序不会删除这些文件。</p>
 <p>如果您希望获得更多信息或关于 NVDA 的帮助，可访问 <a href="https://www.nvaccess.org" rel="noopener" target="_blank" title="NVDA 官方网站">NVDA 官方网站</a>。
 在这里，您可以找到更多的文档、技术支持及社区资源。
 该网站还提供了 NVDA 开发的相关信息和资源。</p>
+<!-- markdownlint-disable-file MD060 -->
 </body>
 </html>

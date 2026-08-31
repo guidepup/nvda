@@ -9,6 +9,218 @@
 
 </head>
 <body><h1 id="nvda">Що нового в NVDA</h1>
+<h2 id="20262">2026.2</h2>
+<p>Цей випуск містить нову вбудовану функцію «Лупа», вдосконалення сенсорних жестів та навігації, а також розширені можливості для мовлення та брайля.</p>
+<p>Лупа надає параметри масштабування й фільтрації кольорів, щоб допомогти користувачам з порушеннями зору.
+Наразі лупа підтримує лише повноекранний режим, а режими прикріплення планується додати в майбутньому випуску.</p>
+<p>Підтримку сенсорного керування було значно розширено новими жестами «зведення-розведення» й сенсорною навігацією у вебвмісті в режимі огляду.
+Тепер ви можете переходити між посиланнями, заголовками, полями форм та іншими елементами за допомогою сенсорних жестів.</p>
+<p>Функції мовлення було вдосконалено завдяки підтримці користувацьких словників, які можуть надаватися додатками, а також завдяки новим типам записів у словниках, що забезпечують детальніше керування.
+До голосів OneCore додано нове налаштування для керування паузами після розділових знаків.
+Нова команда дозволяє повторити останню промовлену інформацію, а також показати її у вигляді повідомлення, доступного для перегляду.
+Стандартний жест для повторення останньої промовленої інформації — <code>NVDA+x</code>, але його можна змінити в діалозі «Жести вводу».</p>
+<p>Брайлівський дисплей тепер може прокручуватись автоматично, а пристрої DotPad підтримують мультикнопкові комбінації.
+Стандартний жест для увімкнення або вимкнення автоматичної прокрутки — <code>NVDA+alt+k</code>.</p>
+<p>Liblouis оновлено з новими італійськими й естонськими брайлівськими таблицями.</p>
+<p>Під час скидання NVDA до заводських налаштувань доступна кнопка «Скасувати» для відновлення попередньої конфігурації.</p>
+<h3 id="_1">Виправлення безпеки</h3>
+<p>Будь ласка, відповідально розкривайте проблеми безпеки, дотримуючись <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="Політики безпеки NVDA">Політики безпеки NVDA</a>.</p>
+<ul>
+<li>Запобігає показу потенційно чутливої інформації на брайлівських дисплеях, коли комп’ютер вимикається або перезавантажується. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-qhjv-3xf4-9c66" rel="noopener" target="_blank" title="GHSA-qhjv-3xf4-9c66">GHSA-qhjv-3xf4-9c66</a>)</li>
+</ul>
+<h3 id="_2">Нові можливості</h3>
+<ul>
+<li>Лупа:<ul>
+<li>NVDA тепер містить вбудовану лупу, яка дозволяє масштабувати або збільшувати частини екрана. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19228" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19228">#19228</a>, <a class="gh-link gh-mention" href="https://github.com/Boumtchack" rel="noopener" target="_blank" title="GitHub User: @Boumtchack">@Boumtchack</a>)</li>
+<li>Лупа підтримує низку рівнів масштабування, фільтрів кольорів (звичайний, відтінки сірого, інвертований) та різні режими відстежування фокуса.</li>
+<li>Фільтри кольорів можуть допомогти користувачам з порушеннями зору або підвищеною чутливістю до світла, інвертуючи або зменшуючи насиченість кольорів на екрані.</li>
+<li>Наявна команда, яка дозволяє тимчасово показати огляд усього екрана.</li>
+<li>Усі параметри лупи можна налаштувати у новій категорії «Лупа» на панелі налаштувань NVDA.</li>
+<li>Лупу не можна використовувати разом з екранною завісою з безпекових причин.</li>
+</ul>
+</li>
+<li>Мовлення:<ul>
+<li>Для голосів OneCore додано новий параметр «Природна пауза після розділових знаків», який дозволяє користувачам вмикати або вимикати паузи після розділових знаків. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11876" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11876">#11876</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
+<li>Запроваджено нову команду, призначену на комбінацію клавіш <code>NVDA+x</code>, яка дозволяє повторити останню інформацію, яку промовила NVDA; при подвійному натисканні ця інформація показується у вікні, яке можна переглянути. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/625" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #625">#625</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+</ul>
+</li>
+<li>Брайль:<ul>
+<li>Додано можливість автоматичної прокрутки брайлівського дисплея. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18573" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18573">#18573</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)<ul>
+<li>Для увімкнення або вимкнення автоматичної прокрутки, збільшення швидкості прокрутки або зменшення швидкості прокрутки використовуються жести <code>NVDA+alt+k</code>, <code>NVDA+alt+l</code> та <code>NVDA+alt+j</code> відповідно.</li>
+</ul>
+</li>
+<li>Дисплеї DotPad тепер підтримують жести з мультикнопкових комбінацій. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19565" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19565">#19565</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)<ul>
+<li>Тепер ви можете натискати кілька кнопок одночасно, щоб створювати власні жести (наприклад, <code>f1+ліва клавіша панорамування</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Сенсорне керування:<ul>
+<li>Додано сенсорні жести «зведення» й «розведення», що дозволяє прив’язувати жести зведення двох пальців до скриптів. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19963" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19963">#19963</a>, <a class="gh-link gh-mention" href="https://github.com/kefaslungu" rel="noopener" target="_blank" title="GitHub User: @kefaslungu">@kefaslungu</a>)</li>
+<li>Додано сенсорну навігацію по елементах у режимі огляду, що дозволяє користувачам сенсорних екранів переміщатися між посиланнями, заголовками, полями форм, списками, таблицями та іншими елементами швидкої навігації. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3424" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3424">#3424</a>, <a class="gh-link gh-mention" href="https://github.com/kefaslungu" rel="noopener" target="_blank" title="GitHub User: @kefaslungu">@kefaslungu</a>)<ul>
+<li>Змахніть вниз або вгору для перемикання між типами елементів; змахніть вправо або вліво для переміщення між елементами вибраного типу.</li>
+<li>Типи елементів, які показуються під час перемикання, можна налаштувати в панелі «Режим огляду».</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Мовленнєві словники:<ul>
+<li>Додано підтримку користувацьких мовленнєвих словників. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19558" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19558">#19558</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17468" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17468">#17468</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)<ul>
+<li>Словники можна розмістити у папці <code>speechDicts</code> у пакеті додатка.</li>
+<li>Метадані словника можна додати в необов’язкову секцію <code>speechDictionaries</code> у manifest додатка.</li>
+<li>Будь ласка, зверніться до розділу <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#AddonSpeechDictionaries" rel="noopener" target="_blank" title="Custom speech dictionaries у Посібнику розробника">Custom speech dictionaries у Посібнику розробника</a> щоб отримати більше подробиць.</li>
+</ul>
+</li>
+<li>Для записів мовленнєвих словників додано нові типи, такі як частина слова або початок слова.
+Зверніться до розділу «Мовленнєві словники» у Посібнику користувача, щоб дізнатися більше подробиць. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19506" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19506">#19506</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+</ul>
+</li>
+<li>Після встановлення або оновлення NVDA з’являється діалог з пропозиціями перезапустити Windows, запустити встановлену програму або закрити встановлювач. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19268" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19268">#19268</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19718" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19718">#19718</a>, <a class="gh-link gh-mention" href="https://github.com/kefaslungu" rel="noopener" target="_blank" title="GitHub User: @kefaslungu">@kefaslungu</a>)</li>
+<li>Додано непризначену команду для перемикання розкладки клавіатури. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19211" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19211">#19211</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+<li>Додано непризначену команду швидкої навігації для переходу до наступного/попереднього повзунка в режимі огляду. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17005" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17005">#17005</a>, <a class="gh-link gh-mention" href="https://github.com/tareh7z" rel="noopener" target="_blank" title="GitHub User: @tareh7z">@tareh7z</a>)</li>
+<li>Тепер у разі скидання конфігурації до заводських значень із меню NVDA з’являється діалог з кнопкою «Скасувати», яка дозволяє відновити попередню конфігурацію.
+Потрійне натискання комбінації клавіш (<code>NVDA+Control+R</code>) не зазнає змін, оскільки воно призначене для сценаріїв відновлення. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19575" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19575">#19575</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Додано непризначену команду, яка повідомляє про поточний стан екранної завіси. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19759" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19759">#19759</a>)</li>
+</ul>
+<h3 id="_3">Зміни</h3>
+<ul>
+<li>Бібліотеку брайлівського введення й виведення Liblouis  оновлено до <a href="https://github.com/liblouis/liblouis/releases/tag/v3.37.0" rel="noopener" target="_blank" title="3.37.0">3.37.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19758" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19758">#19758</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)<ul>
+<li>Додано нові італійські й естонські 6-крапкові таблиці.</li>
+</ul>
+</li>
+<li>Брайль:<ul>
+<li>Повідомлення, яке показується брайлем під час запуску NVDA, оновлено: тепер у ньому згадується екранна завіса, якщо її увімкнено. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19441" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19441">#19441</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
+<li>NVDA тепер підтримує Orbit Reader 40 у його власному режимі HID. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19756" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19756">#19756</a>, <a class="gh-link gh-mention" href="https://github.com/trypsynth" rel="noopener" target="_blank" title="GitHub User: @trypsynth">@trypsynth</a>)</li>
+</ul>
+</li>
+<li>Переглядач журналу тепер можна відкрити комбінацією клавіш <code>NVDA+f1</code> навіть тоді, коли рівень запису в журнал встановлений на «Вимкнено». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19318" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19318">#19318</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+<li>Поліпшено пошуковий алгоритм для фільтрування додатків у Магазині додатків. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19309" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19309">#19309</a>)</li>
+<li>Тепер NVDA можна налаштувати так, щоб програма не відтворювала звукові сигнали про помилки, навіть у тестових версіях. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13021" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13021">#13021</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+<li>NVDA стандартно запускатиметься в режимі фокуса під час використання WhatsApp 2.2584.3.0 або новішої версії. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19655" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19655">#19655</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
+<li>Поліпшено режим допомоги при введенні: (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6621" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6621">#6621</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>, <a class="gh-link gh-mention" href="https://github.com/Emil-18" rel="noopener" target="_blank" title="GitHub User: @Emil-18">@Emil-18</a>)<ul>
+<li>Якщо у звичайному режимі введення комбінація клавіш призводить до введення символу, спочатку передається ця комбінація, а потім — сам символ.</li>
+<li>Якщо комбінація клавіш відповідає команді NVDA, поведінка залишається такою ж, як і раніше, тобто озвучується опис команди.</li>
+</ul>
+</li>
+<li>У версії продукту для Файлового провідника буде вказано фактичну версію Windows, включаючи правильні номери збірки та редакції.
+Це особливо помітно у версіях Windows, які є пакетами розширення на базі попередньої версії, наприклад, оновлення Windows 11 2025, створене на основі оновлення Windows 11 2024. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19802" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19802">#19802</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
+<li>Команди навігації в математичному вмісті тепер підтримують режим допомоги при введенні, режим мовлення на вимогу й можуть бути перепризначені. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19871" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19871">#19871</a>, <a class="gh-link gh-mention" href="https://github.com/RyanMcCleary" rel="noopener" target="_blank" title="GitHub User: @RyanMcCleary">@RyanMcCleary</a>)</li>
+<li>«Інструмент виправлення реєстрації COM» перейменовано на «Інструмент виправлення доступності системи» для чіткості. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19622" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19622">#19622</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Додано розширене налаштування, яке дозволяє перенести записи мовленнєвого словника на основі регулярних виразів у сучасніший механізм <a href="https://pypi.org/project/regex/" rel="noopener" target="_blank" title="regex"><code>regex</code></a>.
+Це забезпечує підтримку юнікоду у символах <code>\w</code> та <code>\b</code>, а також додаткові можливості регулярних виразів.
+Цей параметр початково вимкнено. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20013" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20013">#20013</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li>Радіокнопки «Тип» в діалозі «Додати словникову статтю» тепер розташовані вертикально, а не горизонтально. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19657" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19657">#19657</a>)</li>
+<li>Видалено нефункціональний параметр «Власний» з налаштувань десяткового роздільника для читання математичного вмісту. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20425" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20425">#20425</a>)</li>
+</ul>
+<h3 id="_4">Виправлення</h3>
+<ul>
+<li>Магазин додатків:<ul>
+<li>NVDA більше не зазнає збою, коли папка завантажень Магазину додатків не може бути очищена через помилки у дозволах файлу. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19202" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19202">#19202</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
+<li>Після скасування завантаження додатка й повторного відкриття Магазину додатків, завантаження іншого додатка більше не призводить до помилок. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20015" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20015">#20015</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Автоперемикачі конфігураційних профілів тепер активуються, коли відкрито магазин додатків. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19583" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19583">#19583</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+</ul>
+</li>
+<li>Виправлено помилку, яка могла виникати під час перевірки NVDA, чи підтримується певна мова синтезатором із недійсними мовами. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20080" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20080">#20080</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
+<li>NVDA намагатиметься швидше відновлювати роботу після зависань у деяких програмах, особливо в тих, що написані на Java. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14396">#14396</a>, <a class="gh-link gh-mention" href="https://github.com/thgcode" rel="noopener" target="_blank" title="GitHub User: @thgcode">@thgcode</a>)</li>
+<li>У режимі огляду в Firefox тепер правильно озвучуються назви елементів форми (як-от прапорців та радіокнопок), якщо елемент має <code>aria-label</code>, а відповідний тег <code>&lt;label&gt;</code> містить тільки контент з атрибутом <code>aria-hidden</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19409" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19409">#19409</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>NVDA знову може переглядати PDF-документи у Foxit PDF Editor. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20440" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20440">#20440</a>, <a class="gh-link gh-mention" href="https://github.com/cary-rowen" rel="noopener" target="_blank" title="GitHub User: @cary-rowen">@cary-rowen</a>)</li>
+<li>Елемент «Перемикає збереження екранного представлення під час відтворення вмісту документа» в категорії «Режим огляду» діалогу «Жести вводу» відтепер працює коректно. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18378" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18378">#18378</a>)</li>
+<li>У програмі Microsoft Word з увімкненим інтерфейсом UIA тепер правильно оголошуються зміни сторінок під час переходу між рядками таблиці, що охоплюють кілька сторінок. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19386" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19386">#19386</a>, <a class="gh-link gh-mention" href="https://github.com/akj" rel="noopener" target="_blank" title="GitHub User: @akj">@akj</a>)</li>
+<li>Виправлено надмірне споживання ресурсів та мерехтіння підсвічування під час використання функції підсвічування. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17434" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17434">#17434</a>, <a class="gh-link gh-mention" href="https://github.com/hwf1324" rel="noopener" target="_blank" title="GitHub User: @hwf1324">@hwf1324</a>)</li>
+<li>У програмі Excel, коли увімкнено візуальне підсвічування, комірка, на якій перебуває курсор, тепер підсвічується правильно. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19641" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19641">#19641</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+<li>Брайль більше не повинен втрачати відстежування фокуса під час навігації в застосунку Microsoft Copilot. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19646" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19646">#19646</a>, <a class="gh-link gh-mention" href="https://github.com/Emil-18" rel="noopener" target="_blank" title="GitHub User: @Emil-18">@Emil-18</a>)</li>
+<li>Команда <code>NVDA+k</code> тепер коректно повідомляє призначення посилань, які містять форматований текст, такий як жирний шрифт чи курсив. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19428" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19428">#19428</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Індикатори великих літер тепер коректно оголошуються під час виділення одного символу. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19505" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19505">#19505</a>, <a class="gh-link gh-mention" href="https://github.com/cary-rowen" rel="noopener" target="_blank" title="GitHub User: @cary-rowen">@cary-rowen</a>)</li>
+<li>MathML у Chromium зчитується надійніше після запуску або перезапуску NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20049" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20049">#20049</a>, <a class="gh-link gh-mention" href="https://github.com/RyanMcCleary" rel="noopener" target="_blank" title="GitHub User: @RyanMcCleary">@RyanMcCleary</a>)</li>
+<li>Декоративні символи юнікоду, такі як квадрат зі знаком «мінус», коло зі знаком «мінус» та символи регіональних індикаторів, тепер нормалізуються до відповідних базових латинських літер, якщо увімкнено нормалізацію юнікоду. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19608" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19608">#19608</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Виправлено зависання NVDA під час навігації в інтегрованих середовищах розробки JetBrains. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16741" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16741">#16741</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
+<li>Записи в мовленнєвому словнику типу «Ціле слово» тепер коректно обробляють слова, що містять комбіновані знаки юнікоду (наприклад, ніккуд в івриті, харакат в арабській мові). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20013" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20013">#20013</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)<ul>
+<li>Зокрема, цілі слова більше не впізнаються помилково як частини більших слів, якщо ці слова містять сполучні знаки.</li>
+</ul>
+</li>
+<li>Виправлено ситуацію, яка могла призводити до зависання NVDA під час читання математичного вмісту шрифтом Брайля. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20319" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20319">#20319</a>, <a class="gh-link gh-mention" href="https://github.com/AAClause" rel="noopener" target="_blank" title="GitHub User: @AAClause">@AAClause</a>)</li>
+<li>NVDA більше не видає помилку під час завантаження голосів sapi4, які не підтримують висоту, швидкість або гучність. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20302" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20302">#20302</a>)</li>
+</ul>
+<h3 id="_5">Зміни для розробників</h3>
+<p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
+<ul>
+<li>Clarified NV Access's policy on API breaking changes in the <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="Developer Guide">Developer Guide</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19599" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19599">#19599</a>)</li>
+<li>Updated components:<ul>
+<li>Ruff to 0.15.9. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19736">#19736</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19908" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19908">#19908</a>)</li>
+<li>uv to 0.11.29. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19736">#19736</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19908" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19908">#19908</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19968" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19968">#19968</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20142" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20142">#20142</a>)</li>
+<li>Requests to 2.33.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19877" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19877">#19877</a>)</li>
+<li>cryptography to 48.0.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19877" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19877">#19877</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19968" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19968">#19968</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20142" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20142">#20142</a>)</li>
+<li>Python to 3.13.13. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20231" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20231">#20231</a>, <a class="gh-link gh-mention" href="https://github.com/dpy013" rel="noopener" target="_blank" title="GitHub User: @dpy013">@dpy013</a>)</li>
+<li>lxml to 6.1.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20142" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20142">#20142</a>)</li>
+<li>PyMdown Extensions to 10.21.3. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20142" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20142">#20142</a>)</li>
+</ul>
+</li>
+<li>A new parameter <code>redactSecrets</code> has been added to logging functions e.g. <code>log.debug</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19966" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19966">#19966</a>)<ul>
+<li>When set to <code>True</code>, logging output will be sanitized to replace detected secrets with asterisks.</li>
+<li>This is set to <code>False</code> by default for performance purposes.</li>
+<li>It is encouraged to enable this when logging anything particularly sensitive e.g. clipboard content.</li>
+<li>Added a <code>DEBUG_UNREDACTED</code> logging level for cases where developers explicitly need debug logging without <code>redactSecrets</code> masking.</li>
+</ul>
+</li>
+<li>NVDA libraries built by the build system are now linked with the <a href="https://learn.microsoft.com/en-us/cpp/build/reference/cetcompat" rel="noopener" target="_blank" title="/CETCOMPAT">/CETCOMPAT</a> flag, improving protection against certain malware attacks. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19435" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19435">#19435</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li>Subclasses of <code>browseMode.BrowseModeDocumentTreeInterceptor</code> that support screen layout being on and off should override the <code>_toggleScreenLayout</code> method, rather than implementing <code>script_toggleScreenLayout</code> directly. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19487" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19487">#19487</a>)</li>
+<li>A new method has been added to the UIA.UIA class, called <code>_getUIACacheablePropertyValue_handlesCOMErrors</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19713" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19713">#19713</a>, <a class="gh-link gh-mention" href="https://github.com/Emil-18" rel="noopener" target="_blank" title="GitHub User: @Emil-18">@Emil-18</a>)<ul>
+<li>This method calls <code>_getUIACacheablePropertyValue</code>, and takes an extra argument (<code>onError</code>) that specifies the value that should be returned if a <code>COMError</code> is raised.</li>
+</ul>
+</li>
+<li>The <code>scons tests</code> build target has been removed, as it was misleadingly named.
+It only ran the translation string comment check, which is equivalent to <code>scons checkPot</code>.
+The <code>scons checkPot</code> target has also been replaced with <code>runcheckpot.bat</code>.
+Use the individual test commands instead: <code>runcheckpot.bat</code>, <code>rununittests.bat</code>, <code>runsystemtests.bat</code>, <code>runlint.bat</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19606" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19606">#19606</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19676" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19676">#19676</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Added a private <code>_asyncioEventLoop</code> module that provides an asyncio event loop running on a background thread for use by NVDA components. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19816" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19816">#19816</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Added several functions related to the braille auto-scroll feature. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19126" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19126">#19126</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>):<ul>
+<li>Added an <code>autoScroll</code> method to <code>braille.handler</code>.</li>
+<li>Added several functions for handling configuration value conversions and updates in <code>config.conf</code>:<ul>
+<li>Added a <code>getConfigValue</code> function to get the value for a provided configuration key path.</li>
+<li>Added a <code>setConfigValue</code> function to set a value for a provided configuration key path.</li>
+<li>Added a <code>valueToPercentage</code> function to calculate the percentage representation of a configuration value within its range.</li>
+<li>Added a <code>percentageToValue</code> function to convert a percentage to the corresponding configuration value.</li>
+<li>Added a <code>clampedIncrementAndUpdateConfig</code> function to update a configuration value by applying a step, constrained within its valid range.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>NVDA is now built with Visual Studio 2026. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20203" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20203">#20203</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li>Fixed a race condition in <code>nvdaController_speakSsml</code> with <code>asynchronous=False</code> where a <code>speechCanceled</code> signal fired between <code>queueFunction</code> returning and the synth thread executing the <code>CallbackCommand</code> would not be caught, causing the call to block indefinitely. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20220" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20220">#20220</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+</ul>
+<h4 id="deprecations">Deprecations</h4>
+<ul>
+<li>The <code>speechDictHandler.ENTRY_TYPE_*</code> constants are deprecated.
+Use the <code>speechDictHandler.types.EntryType</code> enumeration instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19430" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19430">#19430</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li><code>speechDictHandler.SpeechDictEntry</code> and <code>speechDictHandler.SpeechDict</code> have been moved to <code>speechDictHandler.types</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19430" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19430">#19430</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li><code>speechDictHandler.dictionaries</code> and <code>speechDictHandler.dictTypes</code> are deprecated without replacement. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19558" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19558">#19558</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+</ul>
+<h2 id="202611">2026.1.1</h2>
+<p>Це виправлення випущено для усунення проблем безпеки.
+Також виправлено помилку, що виникла у версії 2026.1 і стосувалася обробки комбінації клавіш <code>Ctrl+F</code> у Файловому провіднику.
+Було скасовано зміну, введену у версії 2026.1, що стосувалася способу обробки NVDA проблем із підключенням до Віддаленого керування.</p>
+<h3 id="_6">Виправлення безпеки</h3>
+<p>Будь ласка, відповідально розкривайте проблеми безпеки, дотримуючись <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="Політики безпеки NVDA">Політики безпеки NVDA</a>.</p>
+<ul>
+<li>Виправлено проблему, через яку NVDA могла підключатися до ненадійного сервера віддаленого керування. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-m268-mc77-j2cr" rel="noopener" target="_blank" title="GHSA-m268-mc77-j2cr">GHSA-m268-mc77-j2cr</a>)</li>
+<li>Запобігає ситуації, яка може призвести до копіювання невибраних додатків до загальносистемної конфігурації. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-669f-7gpr-5vqm" rel="noopener" target="_blank" title="GHSA-669f-7gpr-5vqm">GHSA-669f-7gpr-5vqm</a>)</li>
+</ul>
+<h3 id="_7">Виправлення</h3>
+<ul>
+<li>У Файловому провіднику натискання комбінації клавіш <code>Ctrl+F</code> знову активує поле пошуку, не відкриваючи при цьому окрему панель. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20021" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20021">#20021</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+</ul>
+<h3 id="_8">Зміни</h3>
+<ul>
+<li>Віддалений доступ знову робить спробу автоматичного повторного підключення після невдалого першого підключення як керований комп'ютер, замість того щоб одразу завершуватися помилкою.».
+Це означає, що «бездисплейні» або інші фізично недоступні машини, налаштовані на автоматичне підключення під час запуску, стануть доступними, щойно з’явиться мережа. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20122">#20122</a>)</li>
+</ul>
+<h3 id="_9">Зміни для розробників</h3>
+<ul>
+<li>The <code>winBindings.cfgmgr32</code> module is now included in NVDA binary builds. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20089" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20089">#20089</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+</ul>
+<!-- Beyond this point, Markdown should not be linted, as we don't modify old change log sections. -->
+<!-- markdownlint-disable -->
+
 <h2 id="20261">2026.1</h2>
 <p>Цей випуск містить підтримку читання математичного вмісту за допомогою MathCAT, яка зараз вбудована в NVDA.</p>
 <p>Було внесено кілька вдосконалень, які стосуються мовлення.
@@ -40,7 +252,7 @@ NVDA тепер підтримує 64-розрядні голоси SAPI 5.</p>
 Оновлено біблійний іврит, а також таблиці для уніфікованого англійського, грецького міжнародного, угорського, норвезького, португальського 8-крапкового та словацького брайля.
 Додано локалізовані емодзі для люксембурзької мови.</p>
 <p>Також було виправлено багато інших помилок та внесено низку поліпшень.</p>
-<h3 id="_1">Важливі примітки</h3>
+<h3 id="_10">Важливі примітки</h3>
 <ul>
 <li>Цей випуск порушує сумісність з наявними додатками.</li>
 <li>Windows 8.1 більше не підтримується.
@@ -50,7 +262,7 @@ NVDA тепер підтримує 64-розрядні голоси SAPI 5.</p>
 Windows 10 на ARM також більше не підтримується.</li>
 <li>Wiris MathPlayer більше не підтримується.</li>
 </ul>
-<h3 id="_2">Нові можливості</h3>
+<h3 id="_11">Нові можливості</h3>
 <ul>
 <li>В Магазині додатків:<ul>
 <li>У подробицях про додаток тепер доступні результати сканування VirusTotal.
@@ -73,7 +285,7 @@ Windows 10 на ARM також більше не підтримується.</li
 <li>Поліпшено продуктивність на системах ARM64, наприклад, з процесорами Qualcomm. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18570" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18570">#18570</a>, <a class="gh-link gh-mention" href="https://github.com/leonarddeR" rel="noopener" target="_blank" title="GitHub User: @leonarddeR">@leonarddeR</a>)</li>
 <li>Додано непризначену глобальну команду для перемикання параметра «Відтворювати аудіо під час зміни координат миші». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19026" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19026">#19026</a>, <a class="gh-link gh-mention" href="https://github.com/rlawnsrl123" rel="noopener" target="_blank" title="GitHub User: @rlawnsrl123">@rlawnsrl123</a>)</li>
 </ul>
-<h3 id="_3">Зміни</h3>
+<h3 id="_12">Зміни</h3>
 <ul>
 <li>NVDA більше не підтримує Windows 8.1.
 Мінімальною версією Windows, яка підтримується, є Windows 10 (версія 1507).
@@ -111,7 +323,7 @@ Windows 10 на ARM також більше не підтримується.</li
 <li>Інтерфейс NVDA перекладено кхмерською мовою, якою спілкуються в Камбоджі. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19450" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19450">#19450</a>)</li>
 <li>NVDA більше початково не вмикатиме параметр «Запускати NVDA разом з Windows» під час першого встановлення. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19631" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19631">#19631</a>)</li>
 </ul>
-<h3 id="_4">Виправлення</h3>
+<h3 id="_13">Виправлення</h3>
 <ul>
 <li>Віддалене керування:<ul>
 <li>Поліпшено сповіщення користувачів у разі збою з’єднання з керованим комп’ютером. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19103" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19103">#19103</a>, <a class="gh-link gh-mention" href="https://github.com/tareh7z" rel="noopener" target="_blank" title="GitHub User: @tareh7z">@tareh7z</a>)</li>
@@ -129,7 +341,7 @@ Windows 10 на ARM також більше не підтримується.</li
 <li>У класичних версіях Блокнота й інших елементах керування редагування Win32 позиція тексту тепер показується точніше. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18767" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18767">#18767</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 <li>NVDA більше не видає помилку під час читання вмісту елементів керування wx Web View. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17273" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17273">#17273</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 <li>Якщо NVDA налаштовано на автоматичне оновлення додатків у фоновому режимі, додатки можуть оновлюватися належним чином. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18965" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18965">#18965</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
-<li>Спроба встановити з Провідника файлів додаток, який вимагає новішу версію NVDA, більше не завершується без повідомлення про помилку й не супроводжується появою діалогу про несумісні додатки. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19260" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19260">#19260</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19261" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19261">#19261</a>)</li>
+<li>Спроба встановити з Файлового провідника додаток, який вимагає новішу версію NVDA, більше не завершується без повідомлення про помилку й не супроводжується появою діалогу про несумісні додатки. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19260" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19260">#19260</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19261" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19261">#19261</a>)</li>
 <li>Після встановлення додатка Магазин додатків більше не виходить з ладу при спробі знову відкритися. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19900" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19900">#19900</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 <li>Виправлено випадок, коли брайлівське виведення завершувалося з помилкою. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19025" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19025">#19025</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 <li>Тепер у повідомленнях про час роботи акумулятора не вказуються зайві «0 годин» та «0 хвилин», а використовуються відповідні форми однини та множини. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9003" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9003">#9003</a>, <a class="gh-link gh-mention" href="https://github.com/tareh7z" rel="noopener" target="_blank" title="GitHub User: @tareh7z">@tareh7z</a>)</li>
@@ -144,7 +356,7 @@ Windows 10 на ARM також більше не підтримується.</li
 <li>У браузерах Chromium, якщо документ містить посилання з неправильно сформованим URL, його можна буде знову прочитати. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19125" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19125">#19125</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>NVDA більше не відтворює звук для орфографічних помилок під час введення тексту, якщо режим мовлення встановлено на вимогу або вимкнено. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19323" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19323">#19323</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="_5">Зміни для розробників</h3>
+<h3 id="_14">Зміни для розробників</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -293,7 +505,7 @@ Only add-ons with the given IDs will be copied. (<a class="gh-link gh-issue" hre
 <li><code>browseMode.ElementsListDialog.filterTimer</code> has been removed. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19702" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19702">#19702</a>)</li>
 <li>The type of the <code>installDate</code> property of <code>addonStore.models.addon.AddonManifestModel</code> and <code>addonStore.models.addon.InstalledAddonStoreModel</code> is now <code>datetime | None</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19901" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19901">#19901</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h4 id="deprecations">Deprecations</h4>
+<h4 id="deprecations_1">Deprecations</h4>
 <ul>
 <li><code>winVersion.WIN81</code> is deprecated. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18684" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18684">#18684</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li><code>NVDAHelper.versionedLibPath</code> is deprecated.
@@ -381,30 +593,28 @@ Use <code>AddonsState.fromDict</code> instead.</li>
 </ul>
 </li>
 </ul>
-<!-- Beyond this point, Markdown should not be linted, as we don't modify old change log sections. -->
-
 <h2 id="202533">2025.3.3</h2>
 <p>Це виправлення випущено для усунення проблеми безпеки.</p>
-<h3 id="_6">Виправлення безпеки</h3>
+<h3 id="_15">Виправлення безпеки</h3>
 <p>Будь ласка, відповідально розкривайте проблеми безпеки, дотримуючись <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="Політики безпеки NVDA">Політики безпеки NVDA</a>.</p>
 <ul>
 <li>Запобігає ситуації, коли NVDA може раптово запускатися від імені адміністратора. <a href="https://github.com/nvaccess/nvda/security/advisories/ghsa-cq78-fjp7-3rp5" rel="noopener" target="_blank" title="GHSA-cq78-fjp7-3rp5">GHSA-cq78-fjp7-3rp5</a></li>
 </ul>
 <h2 id="202532">2025.3.2</h2>
 <p>Це виправлення випущено для усунення проблеми безпеки.</p>
-<h3 id="_7">Виправлення безпеки</h3>
+<h3 id="_16">Виправлення безпеки</h3>
 <p>Будь ласка, відповідально розкривайте проблеми безпеки, дотримуючись <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="Політики безпеки NVDA">Політики безпеки NVDA</a>.</p>
 <ul>
 <li>Виправлено уразливість, яка могла перешкоджати доступу до захищених екранів через Віддалене керування. (<a href="https://github.com/nvaccess/nvda/security/advisories/ghsa-42v6-wjv6-h3jj" rel="noopener" target="_blank" title="GHSA-42v6-wjv6-h3jj">GHSA-42v6-wjv6-h3jj</a>)</li>
 </ul>
 <h2 id="202531">2025.3.1</h2>
 <p>Це виправлення випущено для усунення проблеми безпеки та помилки.</p>
-<h3 id="_8">Виправлення безпеки</h3>
+<h3 id="_17">Виправлення безпеки</h3>
 <p>Будь ласка, відповідально розкривайте проблеми безпеки, дотримуючись <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="Політики безпеки NVDA">Політики безпеки NVDA</a>.</p>
 <ul>
 <li>Виправлено вразливість, яка могла перешкоджати доступу до захищених екранів через віддалене керування. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-vr27-g5ph-xvq2" rel="noopener" target="_blank" title="GHSA-vr27-g5ph-xvq2">GHSA-vr27-g5ph-xvq2</a>)</li>
 </ul>
-<h3 id="_9">Виправлення помилок</h3>
+<h3 id="_18">Виправлення помилок</h3>
 <ul>
 <li>Тепер функція «Віддалений доступ» повертає управління на локальний комп’ютер, якщо він блокується під час керування віддаленим комп’ютером. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18951" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18951">#18951</a>)</li>
 </ul>
@@ -417,7 +627,7 @@ Use <code>AddonsState.fromDict</code> instead.</li>
 <p>У голосах SAPI5 виправлено кілька помилок, зокрема — надмірне обрізання початкової тиші, проблеми з зависанням і розривами звуку.</p>
 <p>Оновлено eSpeak NG та Загальний репозиторій мовних даних юнікоду.
 Для білоруської та боснійської мови додано локалізовані емодзі.</p>
-<h3 id="_10">Нові можливості</h3>
+<h3 id="_19">Нові можливості</h3>
 <ul>
 <li>Магазин додатків:<ul>
 <li>Додатки можуть бути відсортовані за мінімальною та останньою перевіреною версією NVDA, а також за датою встановлення. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18440" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18440">#18440</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18560" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18560">#18560</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
@@ -428,7 +638,7 @@ Use <code>AddonsState.fromDict</code> instead.</li>
 <li>Додано непризначену команду для надсилання <code>control+alt+delete</code> під час керування іншим комп’ютером за допомогою Віддаленого керування NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18105" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18105">#18105</a>)</li>
 <li>Додано нове налаштування для автоматичного вимкнення звуку Віддаленого доступу під час керування локальним комп’ютером. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18630" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18630">#18630</a>)</li>
 </ul>
-<h3 id="_11">Зміни</h3>
+<h3 id="_20">Зміни</h3>
 <ul>
 <li>Оновлення компонентів:<ul>
 <li>eSpeak NG оновлено до <a href="https://github.com/espeak-ng/espeak-ng/commit/3b8ef3d310f380e9ab4c6b19bf8367d8f99ac285" rel="noopener" target="_blank" title="commit 3b8ef3d">commit <code>3b8ef3d</code></a>.
@@ -449,7 +659,7 @@ Use <code>AddonsState.fromDict</code> instead.</li>
 <li>У термінальних програмах на Windows 10 версії 1607 і новіших обчислення зміненого тексту тепер виконується всередині NVDA, а не через зовнішній процес, що може підвищити продуктивність і надійність. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18480" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18480">#18480</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)</li>
 <li>Діалог з’єднання Віддаленого керування NVDA тепер запам'ятовує останній режим з’єднання, тип сервера й локально розміщений порт у разі ручного підключення. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18512" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18512">#18512</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18701" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18701">#18701</a>)</li>
 </ul>
-<h3 id="_12">Виправлення</h3>
+<h3 id="_21">Виправлення</h3>
 <ul>
 <li>Мовлення:<ul>
 <li>Виправлено надмірне обрізання початкової тиші, яке обрізало частину мовлення під час використання деяких голосів. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18003" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18003">#18003</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
@@ -468,7 +678,7 @@ Use <code>AddonsState.fromDict</code> instead.</li>
 <li>Виправлено помилку, через яку маркер не працював зі списками автозаповнення контактів Outlook. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18483" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18483">#18483</a>, <a class="gh-link gh-mention" href="https://github.com/Nerlant" rel="noopener" target="_blank" title="GitHub User: @Nerlant">@Nerlant</a>)</li>
 <li>Переносна копія, запущена одразу після створення, тепер коректно використовує власну конфігурацію замість іншої. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18442" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18442">#18442</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="_13">Зміни для розробників (англ.)</h3>
+<h3 id="_22">Зміни для розробників (англ.)</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Оновлення компонентів:<ul>
@@ -485,7 +695,7 @@ Use <code>AddonsState.fromDict</code> instead.</li>
 <li><code>comInterfaces_sconscript</code> has been updated to make the generated files in <code>comInterfaces</code> work better with IDEs. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17608" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17608">#17608</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
 <li>NVDA now configures <code>wx.lib.agw.persist.PersistenceManager</code> on GUI initialisation. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18601" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18601">#18601</a>)</li>
 </ul>
-<h4 id="deprecations_1">Deprecations</h4>
+<h4 id="deprecations_2">Deprecations</h4>
 <ul>
 <li>The following symbols in <code>synthDrivers.sapi5</code> are deprecated with no replacement: (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18300" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18300">#18300</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)<ul>
 <li><code>LP_c_ubyte</code></li>
@@ -515,7 +725,7 @@ Importing from <code>md2html</code> is discouraged. (<a class="gh-link gh-issue"
 <p>Оновлено LibLouis, додано таблиці біблійного івриту, російського 6-крапкового комп’ютерного брайля й тайського брайля рівня 2.
 Оновлено eSpeak NG, додано підтримку арумунської, кримськотатарської, монгольської й пушту.</p>
 <p>Також було внесено низку інших виправлень і поліпшень, зокрема щодо взаємодії з мишею та сенсорним екраном, блокнотом у Windows 11 та Google Chrome.</p>
-<h3 id="_14">Нові можливості</h3>
+<h3 id="_23">Нові можливості</h3>
 <ul>
 <li>NVDA тепер може повідомляти мову тексту, що читається. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17664" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17664">#17664</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>):<ul>
 <li>Доступні такі нові параметри:<ul>
@@ -534,7 +744,7 @@ Importing from <code>md2html</code> is discouraged. (<a class="gh-link gh-issue"
 <li>Додано підтримку брайлівського дисплея NLS eReader Zoomax. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15863" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15863">#15863</a>, <a class="gh-link gh-mention" href="https://github.com/florin-trutiu" rel="noopener" target="_blank" title="GitHub User: @florin-trutiu">@florin-trutiu</a>)</li>
 <li>До налаштувань мовлення додано прапорець, який дозволяє користувачам вимикати WASAPI для голосів SAPI5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18309" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18309">#18309</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
 </ul>
-<h3 id="_15">Зміни</h3>
+<h3 id="_24">Зміни</h3>
 <ul>
 <li>Оновлення компонентів:<ul>
 <li>Бібліотеку брайлівського введення/виведення LibLouis оновлено до <a href="https://github.com/liblouis/liblouis/releases/tag/v3.34.0" rel="noopener" target="_blank" title="3.34.0">3.34.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18227" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18227">#18227</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)<ul>
@@ -554,7 +764,7 @@ Importing from <code>md2html</code> is discouraged. (<a class="gh-link gh-issue"
 <li>У Microsoft Edge NVDA більше не скасовує читання за командою «читати все», під час оголошення сповіщень на зразок «завантаження завершено». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17986" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17986">#17986</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li>Тепер NVDA попереджатиме перед оновленням, якщо комп’ютер підключено як керований за допомогою Віддаленого керування NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18455" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18455">#18455</a>)</li>
 </ul>
-<h3 id="_16">Виправлення</h3>
+<h3 id="_25">Виправлення</h3>
 <ul>
 <li>В застосунках WinUI 3, включно з Microsoft Copilot та частинами Файлового провідника у Windows 11, NVDA більше не завершуватиме роботу аварійно під час оголошення елементів керування при використанні миші й сенсорної взаємодії. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17407" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17407">#17407</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17771" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17771">#17771</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li>Виправлено кілька рідкісних випадків, коли відтворення звуків NVDA могло призводити до несподіваних помилок. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17918" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17918">#17918</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -573,7 +783,7 @@ Importing from <code>md2html</code> is discouraged. (<a class="gh-link gh-issue"
 <li>Під час введення даних у комірку в Microsoft Excel брайлівський дисплей тепер правильно оновлюється, щоб показати новий вміст. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18391" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18391">#18391</a>)</li>
 <li>При використанні Віддаленого керування NVDA, мовлення з екранів Служби захисту користувачів на віддаленому комп'ютері тепер працює стабільніше. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18101" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18101">#18101</a>, <a class="gh-link gh-mention" href="https://github.com/jcsteh" rel="noopener" target="_blank" title="GitHub User: @jcsteh">@jcsteh</a>)</li>
 </ul>
-<h3 id="_17">Зміни для розробників (англ.)</h3>
+<h3 id="_26">Зміни для розробників (англ.)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -602,13 +812,13 @@ The several built-in table definitions are moved to the <code>__tables</code> mo
 </ul>
 <h2 id="202512">2025.1.2</h2>
 <p>Цей випуск є виправленням для усунення помилки.</p>
-<h3 id="_18">Виправлення</h3>
+<h3 id="_27">Виправлення</h3>
 <ul>
 <li>Деякі версії Microsoft Word, випущені до версії 16.0.18226, більше не будуть виходити з ладу під час відкриття. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18280" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18280">#18280</a>)</li>
 </ul>
 <h2 id="202511">2025.1.1</h2>
 <p>Цей випуск є виправленням для усунення помилки.</p>
-<h3 id="_19">Виправлення</h3>
+<h3 id="_28">Виправлення</h3>
 <ul>
 <li>Виправлено помилку, через яку магазин додатків не відкривався при використанні корейської мови для інтерфейсу NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18250" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18250">#18250</a>)</li>
 </ul>
@@ -626,11 +836,11 @@ The several built-in table definitions are moved to the <code>__tables</code> mo
 Було внесено інші незначні виправлення для брайлівських дисплеїв, зокрема ті, що стосуються підключення.</p>
 <p>Оновлено бібліотеку брайлівського введення/виведення LibLouis, синтезатор eSpeak-NG та Unicode CLDR.
 Доступні нові таблиці коптського, компактного клинописного та португальського 6-крапкового комп'ютерного брайля.</p>
-<h3 id="_20">Важливі примітки</h3>
+<h3 id="_29">Важливі примітки</h3>
 <ul>
 <li>Цей випуск порушує сумісність з наявними додатками.</li>
 </ul>
-<h3 id="_21">Виправлення безпеки</h3>
+<h3 id="_30">Виправлення безпеки</h3>
 <p>Будь ласка, відповідально розкривайте проблеми безпеки, дотримуючись <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="Політики безпеки NVDA">Політики безпеки NVDA</a>.</p>
 <ul>
 <li>Запобігає показу потенційно конфіденційної інформації на брайлівських дисплеях, коли пристрій заблоковано.
@@ -638,7 +848,7 @@ The several built-in table definitions are moved to the <code>__tables</code> mo
 <li>Забороняє програмі встановлення завантажувати небажані DLL зі свого каталогу.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-qf5h-qw92-rx2f" rel="noopener" target="_blank" title="GHSA-qf5h-qw92-rx2f">GHSA-qf5h-qw92-rx2f</a>)</li>
 </ul>
-<h3 id="_22">Нові можливості</h3>
+<h3 id="_31">Нові можливості</h3>
 <ul>
 <li>Магазин додатків:<ul>
 <li>Автоматичні оновлення (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3208" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3208">#3208</a>):<ul>
@@ -713,7 +923,7 @@ The several built-in table definitions are moved to the <code>__tables</code> mo
 <li>Тепер NVDA перекладено боснійською мовою. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17953" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17953">#17953</a>)</li>
 <li>В Adobe Acrobat NVDA тепер може читати математичні рівняння у PDF-документах, створених у останніх версіях Microsoft Word, та взаємодіяти з ними. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18056" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18056">#18056</a>)</li>
 </ul>
-<h3 id="_23">Зміни</h3>
+<h3 id="_32">Зміни</h3>
 <ul>
 <li>Оновлення компонентів:<ul>
 <li>Оновлено бібліотеку брайлівського введення/виведення LibLouis до версії <a href="https://github.com/liblouis/liblouis/releases/tag/v3.33.0" rel="noopener" target="_blank" title="3.33.0">3.33.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17469" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17469">#17469</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17768" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17768">#17768</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)<ul>
@@ -761,7 +971,7 @@ The several built-in table definitions are moved to the <code>__tables</code> mo
 </li>
 <li>Тепер визначення основних брайлівських таблиць введення та виведення залежить від мови NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17306" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17306">#17306</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16390" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16390">#16390</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/290" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #290">#290</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 </ul>
-<h3 id="_24">Виправлення</h3>
+<h3 id="_33">Виправлення</h3>
 <ul>
 <li>Мовлення:<ul>
 <li>Виправлено проблему, через яку безперервне читання («Читати все») зупинялося після першого речення при використанні деяких синтезаторів SAPI5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16691" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16691">#16691</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
@@ -830,7 +1040,7 @@ The several built-in table definitions are moved to the <code>__tables</code> mo
 <li>Коли якірні посилання вказують на той самий об’єкт, де розміщено віртуальний курсор, NVDA більше не зазнає збою при прокручуванні до місця призначення посилання. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17669" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17669">#17669</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>Піктограма вікна NVDA Highlighter більше не залишається закріпленою на панелі завдань після перезапуску Провідника. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17696" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17696">#17696</a>, <a class="gh-link gh-mention" href="https://github.com/hwf1324" rel="noopener" target="_blank" title="GitHub User: @hwf1324">@hwf1324</a>)</li>
 </ul>
-<h3 id="_25">Зміни для розробників (Англ.)</h3>
+<h3 id="_34">Зміни для розробників (Англ.)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -970,7 +1180,7 @@ Instead, a <code>callback</code> property has been added, which returns a functi
 <li><code>config.conf["documentFormatting"]["reportFontAttributes"]</code> has been removed, use <code>config.conf["documentFormatting"]["fontAttributeReporting"]</code> instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18066" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18066">#18066</a>)</li>
 <li><code>config.conf["speech"]["includeCLDR"]</code> has been removed, check/modify whether <code>config.conf["speech"]["symbolDictionaries"]</code> contains <code>"cldr"</code> instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18066" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18066">#18066</a>)</li>
 </ul>
-<h4 id="deprecations_2">Deprecations</h4>
+<h4 id="deprecations_3">Deprecations</h4>
 <ul>
 <li>The <code>braille.filter_displaySize</code> extension point is deprecated.
 Please use <code>braille.filter_displayDimensions</code> instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17011" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17011">#17011</a>)</li>
@@ -985,14 +1195,14 @@ Use <code>gui.message.MessageDialog</code> instead. (<a class="gh-link gh-issue"
 </ul>
 <h2 id="202442">2024.4.2</h2>
 <p>Цей випуск містить патч, який виправляє помилки з пристроями Брайля та читанням математичних виразів у Chromium.</p>
-<h3 id="_26">Виправлення</h3>
+<h3 id="_35">Виправлення</h3>
 <ul>
 <li>Виправлено помилку з читанням математичних виразів у браузерах на базі Chromium (Chrome, Edge). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17421" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17421">#17421</a>, <a class="gh-link gh-mention" href="https://github.com/NSoiffer" rel="noopener" target="_blank" title="GitHub User: @NSoiffer">@NSoiffer</a>)</li>
 <li>Пристрої Brailliant BI 40X з прошивкою версії 2.4 тепер працюють як очікувалося. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17518" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17518">#17518</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
 </ul>
 <h2 id="202441">2024.4.1</h2>
 <p>Це випуск виправлення, що виправляє помилку при збереженні словників мовленнєвих символів.</p>
-<h3 id="_27">Виправлення</h3>
+<h3 id="_36">Виправлення</h3>
 <ul>
 <li>Виправлено помилку, коли мовленнєві словники символів не зберігаються, а діалог не закривається. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17344" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17344">#17344</a>)</li>
 </ul>
@@ -1012,7 +1222,7 @@ NVDA більше не працює нестабільно після перез
 <p>Оновлено eSpeak NG, додано підтримку фарерської мови та мови Xextan.</p>
 <p>Оновлено LibLouis, додано нові брайлівські таблиці для тайського та грецького міжнародного брайля з 1-клітинковими наголошеними літерами.</p>
 <p>Також було зроблено низку виправлень, які, зокрема, стосуютьсязокрема відстеження миші у Firefox та режиму озвучення на вимогу.</p>
-<h3 id="_28">Нові можливості</h3>
+<h3 id="_37">Нові можливості</h3>
 <ul>
 <li>Нові можливості для брайля:<ul>
 <li>Тепер можна змінити спосіб того, як NVDA показує брайлем певні атрибути форматування тексту.
@@ -1033,7 +1243,7 @@ NVDA більше не працює нестабільно після перез
 <li>NVDA тепер можна налаштувати на оголошення атрибутів шрифту окремо для мовлення й окремо для брайля. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16755" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16755">#16755</a>)</li>
 <li>Час затримки при виконанні множинного натискання клавіші тепер можна налаштувати; це може бути особливо корисно для людей з обмеженою рухливістю. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11929" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11929">#11929</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="_29">Зміни</h3>
+<h3 id="_38">Зміни</h3>
 <ul>
 <li>Параметри командного рядка <code>-c</code>/<code>--config-path</code> і <code>--disable-addons</code> тепер враховуються під час запуску оновлення з NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16937" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16937">#16937</a>)</li>
 <li>Оновлення компонентів:<ul>
@@ -1060,7 +1270,7 @@ NVDA більше не працює нестабільно після перез
 <li>Під час використання брайлівських дисплеїв з кількома рядками через стандартний драйвер HID braille, будуть використовуватись усі клітинки в усіх рядках. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16993" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16993">#16993</a>, <a class="gh-link gh-mention" href="https://github.com/alexmoon" rel="noopener" target="_blank" title="GitHub User: @alexmoon">@alexmoon</a>)</li>
 <li>Стабільність підтримки Poedit у NVDA було поліпшено унаслідок того, що мінімально необхідною версією Poedit тепер є версія 3.5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16889" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16889">#16889</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 </ul>
-<h3 id="_30">Виправлення</h3>
+<h3 id="_39">Виправлення</h3>
 <ul>
 <li>Виправлення, що стосуються брайля:<ul>
 <li>Тепер можна використовувати клавіші маршрутизації брайлівського дисплея для переміщення текстового курсора в Microsoft PowerPoint. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9101" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9101">#9101</a>)</li>
@@ -1081,7 +1291,7 @@ NVDA більше не працює нестабільно після перез
 <li>NVDA більше не припиняє реагувати на тривале утримування клавіші зі стрілкою в режимі огляду, особливо в Microsoft Word і Microsoft Outlook. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16812" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16812">#16812</a>)</li>
 <li>NVDA більше не читає останній рядок, коли курсор перебуває на передостанньому рядку багаторядкового елемента керування редагуванням у Java-застосунках. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17027" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17027">#17027</a>)</li>
 </ul>
-<h3 id="_31">Зміни для розробників (англ.)</h3>
+<h3 id="_40">Зміни для розробників (англ.)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -1102,7 +1312,7 @@ NVDA більше не працює нестабільно після перез
 <li>Running SCons with the parameter <code>--all-cores</code> will automatically pick the maximum number of available CPU cores. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16943" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16943">#16943</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16868" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16868">#16868</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 <li>Developer info now includes information on app architecture (such as AMD64) for the navigator object. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16488" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16488">#16488</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 </ul>
-<h4 id="deprecations_3">Deprecations</h4>
+<h4 id="deprecations_4">Deprecations</h4>
 <ul>
 <li>The <code>bool</code> configuration key <code>[documentFormatting][reportFontAttributes]</code> is deprecated for removal in 2025.1, instead use <code>[fontAttributeReporting]</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16748" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16748">#16748</a>)<ul>
 <li>The new key has an <code>int</code> value matching an <code>OutputMode</code> <code>enum</code> with options for speech, braille, speech and braille and off.</li>
@@ -1114,7 +1324,7 @@ NVDA більше не працює нестабільно після перез
 </ul>
 <h2 id="202431">2024.3.1</h2>
 <p>Це патч для виправлення помилки з автоматичним сповіщенням про оновлення додатків.</p>
-<h3 id="_32">Виправлення</h3>
+<h3 id="_41">Виправлення</h3>
 <ul>
 <li>Під час автоматичної перевірки оновлень додатків NVDA більше не зависає на поганих з'єднаннях. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17036">#17036</a>)</li>
 </ul>
@@ -1130,7 +1340,7 @@ NVDA більше не працює нестабільно після перез
 <p>Оновлено LibLouis, додано нові таблиці Брайля для сербської кирилиці, їдишу, кількох давніх мов, турецької та Міжнародної фонетичної абетки.
 Оновлено eSpeak, додано підтримку каракалпацької мови.
 Також оновлено Unicode CLDR.</p>
-<h3 id="_33">Нові можливості</h3>
+<h3 id="_42">Нові можливості</h3>
 <ul>
 <li>Нові клавіатурні команди:<ul>
 <li>Додано непризначені команди для вертикальної й горизонтальної прокрутки коліщатка миші, щоб поліпшити навігацію на вебсторінках та в застосунках з динамічним вмістом, таких як Dism++. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16462" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16462">#16462</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-Rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-Rowen">@Cary-Rowen</a>)</li>
@@ -1150,7 +1360,7 @@ NVDA більше не працює нестабільно після перез
 </li>
 <li>Додано підтримку брайлівських дисплеїв Help Tech Activator Pro. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16668" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16668">#16668</a>)</li>
 </ul>
-<h3 id="_34">Зміни</h3>
+<h3 id="_43">Зміни</h3>
 <ul>
 <li>Оновлення компонентів:<ul>
 <li>eSpeak NG оновлено до 1.52-dev commit <code>54ee11a79</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16495" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16495">#16495</a>)<ul>
@@ -1183,7 +1393,7 @@ NVDA більше не працює нестабільно після перез
 <li>Стандартно під час створення переносної копії буде створено нову папку.
 Якщо ви спробуєте записати переносну версію NVDA до непорожнього каталогу, з’явиться попереджувальне повідомлення. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16686" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16686">#16686</a>)</li>
 </ul>
-<h3 id="_35">Виправлення</h3>
+<h3 id="_44">Виправлення</h3>
 <ul>
 <li>Виправлення для Windows 11:<ul>
 <li>NVDA більше не зависатиме під час закриття історії буфера обміну й панелі емодзі. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16346" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16346">#16346</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16347" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16347">#16347</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
@@ -1215,7 +1425,7 @@ NVDA більше не працює нестабільно після перез
 <li>NVDA повідомлятиме адреси, коли ви наведете стрілку на поля Кому/Копія/Прихована копія в outlook.com / новій версії Outlook. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16856" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16856">#16856</a>)</li>
 <li>NVDA тепер витонченіше опрацьовує помилки встановлення додатків. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16704" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16704">#16704</a>)</li>
 </ul>
-<h3 id="_36">Зміни для розробників (англ.)</h3>
+<h3 id="_45">Зміни для розробників (англ.)</h3>
 <ul>
 <li>NVDA now uses Ruff instead of flake8 for linting. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14817" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14817">#14817</a>)</li>
 <li>Fixed NVDA's build system to work properly when using Visual Studio 2022 version 17.10 and above. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16480" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16480">#16480</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -1250,7 +1460,7 @@ Jobs are scheduled with a delay to avoid conflicts.</li>
 Оновлено LibLouis, додано нові докладні (з великими літерами) білоруські та українські брайлівські таблиці, лаоську таблицю, а також іспанську таблицю для читання грецьких текстів.</p>
 <p>Оновлено eSpeak, додано нову мову тигринья.</p>
 <p>Виправлено багато дрібних помилок для застосунків, таких як Thunderbird, Adobe Reader, браузери, Nudi та Geekbench.</p>
-<h3 id="_37">Нові можливості</h3>
+<h3 id="_46">Нові можливості</h3>
 <ul>
 <li>Нові клавіатурні команди:<ul>
 <li>Нова команда швидкої навігації <code>p</code> для переходу до наступного/попереднього текстового абзацу в режимі огляду. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15998" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15998">#15998</a>, <a class="gh-link gh-mention" href="https://github.com/mltony" rel="noopener" target="_blank" title="GitHub User: @mltony">@mltony</a>)</li>
@@ -1297,7 +1507,7 @@ Jobs are scheduled with a delay to avoid conflicts.</li>
 <li>NVDA триматиме аудіопристрій увімкненим після зупинки мовлення, щоб запобігти перериванню початку наступного мовлення деякими аудіопристроями, наприклад, Bluetooth-навушниками. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14386" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14386">#14386</a>, <a class="gh-link gh-mention" href="https://github.com/jcsteh" rel="noopener" target="_blank" title="GitHub User: @jcsteh">@jcsteh</a>, <a class="gh-link gh-mention" href="https://github.com/mltony" rel="noopener" target="_blank" title="GitHub User: @mltony">@mltony</a>)</li>
 <li>Підтримується HP Secure Browser. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16377" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16377">#16377</a>)</li>
 </ul>
-<h3 id="_38">Зміни</h3>
+<h3 id="_47">Зміни</h3>
 <ul>
 <li>Магазин додатків:<ul>
 <li>Мінімальна та остання протестована версія NVDA для додатка тепер показується в області «інші подробиці». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15776" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15776">#15776</a>, <a class="gh-link gh-mention" href="https://github.com/Nael-Sayegh" rel="noopener" target="_blank" title="GitHub User: @Nael-Sayegh">@Nael-Sayegh</a>)</li>
@@ -1326,7 +1536,7 @@ Jobs are scheduled with a delay to avoid conflicts.</li>
 </li>
 <li>Множинні крапки, які зазвичай використовуються у змісті, більше не повідомляються на низьких рівнях пунктуації. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15845" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15845">#15845</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="_39">Виправлення</h3>
+<h3 id="_48">Виправлення</h3>
 <ul>
 <li>Fixed math attributes being read in Adobe Reader, this resulted in poor or wrong speech and braille. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17980" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17980">#17980</a>)</li>
 <li>Виправлення у Windows 11:<ul>
@@ -1354,7 +1564,7 @@ Jobs are scheduled with a delay to avoid conflicts.</li>
 <li>Перемикач командного рядка <code>-h</code>/<code>--help</code> знову працює належним чином. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16522" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16522">#16522</a>, <a class="gh-link gh-mention" href="https://github.com/XLTechie" rel="noopener" target="_blank" title="GitHub User: @XLTechie">@XLTechie</a>)</li>
 <li>Підтримка NVDA для програми перекладу Poedit версії 3.4 або вище коректно функціонує при перекладі мов з однією або більше ніж двома формами множини (наприклад, китайська, польська). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16318" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16318">#16318</a>)</li>
 </ul>
-<h3 id="_40">Зміни для розробників (англ.)</h3>
+<h3 id="_49">Зміни для розробників (англ.)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Instantiating <code>winVersion.WinVersion</code> objects with unknown Windows versions above 10.0.22000 such as 10.0.25398 returns "Windows 11 unknown" instead of "Windows 10 unknown" for release name. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15992" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15992">#15992</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
@@ -1375,13 +1585,13 @@ Jobs are scheduled with a delay to avoid conflicts.</li>
 <p>Оновлено eSpeak-NG, бібліотеку брайлівського введення/виведення LibLouis та Unicode CLDR.
 Доступні нові брайлівські тайські, філіппінські та румунські таблиці.</p>
 <p>Виправлено багато помилок, зокрема, для магазину додатків, шрифту Брайля, Libre Office, Microsoft Office та аудіо.</p>
-<h3 id="_41">Важливі примітки</h3>
+<h3 id="_50">Важливі примітки</h3>
 <ul>
 <li>Цей випуск розриває сумісність з наявними додатками.</li>
 <li>Windows 7 і Windows 8 більше не підтримуються.
 Тепер мінімальною підтримуваною версією є Windows 8.1.</li>
 </ul>
-<h3 id="_42">Нові можливості</h3>
+<h3 id="_51">Нові можливості</h3>
 <ul>
 <li>Магазин додатків:<ul>
 <li>Магазин додатків тепер підтримує множинні дії (наприклад, встановлення, увімкнення додатків) шляхом вибору декількох додатків. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15350" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15350">#15350</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15623" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15623">#15623</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
@@ -1402,7 +1612,7 @@ Jobs are scheduled with a delay to avoid conflicts.</li>
 </ul>
 </li>
 </ul>
-<h3 id="_43">Зміни</h3>
+<h3 id="_52">Зміни</h3>
 <ul>
 <li>NVDA більше не підтримує Windows 7 та Windows 8.
 Мінімально підтримуваною версією є Windows 8.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15544" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15544">#15544</a>)</li>
@@ -1438,7 +1648,7 @@ Jobs are scheduled with a delay to avoid conflicts.</li>
 <li>Під час об’єктної навігації вимкнені (недоступні) об’єкти більше не ігноруватимуться. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15477" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15477">#15477</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 <li>До документа «Список команд» додано зміст. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16106" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16106">#16106</a>)</li>
 </ul>
-<h3 id="_44">Виправлення</h3>
+<h3 id="_53">Виправлення</h3>
 <ul>
 <li>Магазин додатків:<ul>
 <li>Коли статус додатка у фокусі змінюється, наприклад, з «завантажується» на «завантажено», оновлений елемент тепер буде оголошено коректно. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15859" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15859">#15859</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -1499,7 +1709,7 @@ Jobs are scheduled with a delay to avoid conflicts.</li>
 <li>NVDA знову перемикається в режим огляду при закритті комбінованих списків за допомогою клавіш <code>escape</code> або <code>alt+стрілка вгору</code> у Firefox або Chrome. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15653" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15653">#15653</a>)</li>
 <li>Стрілки вгору і вниз у комбінованих списках в iTunes більше не перемикатимуть вас назад у режим огляду. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15653" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15653">#15653</a>)</li>
 </ul>
-<h3 id="_45">Зміни для розробників (англ)</h3>
+<h3 id="_54">Зміни для розробників (англ)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -1645,7 +1855,7 @@ Code which imports from one of them, should instead import from the replacement 
 |<code>winmail</code> |<code>msimn</code>|
 |<code>zend-eclipse-php</code> |<code>eclipse</code>|
 |<code>zendstudio</code> |<code>eclipse</code>|</p>
-<h4 id="deprecations_4">Deprecations</h4>
+<h4 id="deprecations_5">Deprecations</h4>
 <ul>
 <li>Using <code>watchdog.getFormattedStacksForAllThreads</code> is deprecated - please use <code>logHandler.getFormattedStacksForAllThreads</code> instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15616" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15616">#15616</a>, <a class="gh-link gh-mention" href="https://github.com/lukaszgo1" rel="noopener" target="_blank" title="GitHub User: @lukaszgo1">@lukaszgo1</a>)</li>
 <li><code>easeOfAccess.canConfigTerminateOnDesktopSwitch</code> has been deprecated, as it became obsolete since Windows 7 is no longer supported. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15644" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15644">#15644</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -1664,12 +1874,12 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 <h2 id="202334">2023.3.4</h2>
 <p>Це випуск патчу для виправлення проблеми з безпекою і проблеми зі встановлювачем.
 Будь ласка, відповідально повідомляйте про проблеми безпеки відповідно до <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="політики безпеки NVDA">політики безпеки NVDA</a>.</p>
-<h3 id="_46">Виправлення безпеки</h3>
+<h3 id="_55">Виправлення безпеки</h3>
 <ul>
 <li>Запобігає завантаженню користувацької конфігурації, коли примусово ввімкнено захищений режим.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-727q-h8j2-6p45" rel="noopener" target="_blank" title="GHSA-727q-h8j2-6p45">GHSA-727q-h8j2-6p45</a>)</li>
 </ul>
-<h3 id="_47">Виправлення</h3>
+<h3 id="_56">Виправлення</h3>
 <ul>
 <li>Виправлено помилку, яка призводила до некоректного завершення процесу NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16123" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16123">#16123</a>)</li>
 <li>Виправлено помилку, яка призводила до того, що якщо попередній процес NVDA не завершувався коректно, то встановлення NVDA могло завершитися з неможливістю відновлення. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16122">#16122</a>)</li>
@@ -1677,7 +1887,7 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 <h2 id="202333">2023.3.3</h2>
 <p>Це випуск патчу, який виправляє проблему безпеки.
 Будь ласка, відповідально повідомляйте про проблеми безпеки відповідно до <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="політики безпеки NVDA">політики безпеки NVDA</a>.</p>
-<h3 id="_48">Виправлення безпеки</h3>
+<h3 id="_57">Виправлення безпеки</h3>
 <ul>
 <li>Запобігає можливій відображеній XSS-атаці через підроблений вміст, яка може призвести до виконання довільного коду.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8" rel="noopener" target="_blank" title="GHSA-xg6w-23rw-39r8">GHSA-xg6w-23rw-39r8</a>)</li>
@@ -1686,7 +1896,7 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 <p>Це випуск патчу, який виправляє проблему безпеки.
 Патч безпеки у 2023.3.1 не був вирішений коректно.
 Будь ласка, відповідально повідомляйте про проблеми безпеки відповідно до <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="політики безпеки NVDA">політики безпеки NVDA</a>.</p>
-<h3 id="_49">Виправлення безпеки</h3>
+<h3 id="_58">Виправлення безпеки</h3>
 <ul>
 <li>Виправлення безпеки у версії 2023.3.1 було вирішено некоректно.
 Запобігає можливому доступу до системи та довільному виконанню коду з системними привілеями для неавторизованих користувачів.
@@ -1709,7 +1919,7 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 З’явилася можливість вимкнути небажані драйвери з автоматичного виявлення, щоб покращити його продуктивність.
 Крім того, з’явилися нові команди BRLTTY.</p>
 <p>Також виправлено помилки в Магазині додатків, контекстному меню Microsoft Office, Microsoft Edge й Калькуляторі Windows.</p>
-<h3 id="_50">Нові можливості</h3>
+<h3 id="_59">Нові можливості</h3>
 <ul>
 <li>Поліпшене керування звуком:<ul>
 <li>Нова панель налаштувань аудіо:<ul>
@@ -1739,7 +1949,7 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 <li>Новий параметр у налаштуваннях форматування документа — «Ігнорувати порожні рядки під час повідомлень про відступ рядка». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13394" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13394">#13394</a>)</li>
 <li>Додано непризначений жест для переміщення між вкладками та групуваннями в режимі огляду. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15046" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15046">#15046</a>)</li>
 </ul>
-<h3 id="_51">Зміни</h3>
+<h3 id="_60">Зміни</h3>
 <ul>
 <li>Брайль:<ul>
 <li>Коли текст у терміналі змінюється без оновлення каретки, текст на брайлівському дисплеї тепер буде належним чином оновлюватися, коли він буде розміщений на зміненому рядку.
@@ -1761,7 +1971,7 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 <li>Магазин додатків: Встановлені додатки тепер будуть перераховані на вкладці Доступні додатки, якщо вони доступні в магазині. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15374" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15374">#15374</a>)</li>
 <li>В меню NVDA оновлено низку гарячих клавіш. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15364" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15364">#15364</a>)</li>
 </ul>
-<h3 id="_52">Виправлення</h3>
+<h3 id="_61">Виправлення</h3>
 <ul>
 <li>Microsoft Office:<ul>
 <li>Виправлено збій у Microsoft Word, коли параметри «Повідомляти заголовки» та «Повідомляти нотатки й коментарі» були вимкнені. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15019" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15019">#15019</a>)</li>
@@ -1792,7 +2002,7 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 <li>NVDA більше не ігнорує зміну фокуса, коли вкладені вікна (дочірні вікна) отримують фокус. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15432" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15432">#15432</a>)</li>
 <li>Виправлено потенційну причину аварійного завершення роботи під час запуску NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15517" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15517">#15517</a>)</li>
 </ul>
-<h3 id="_53">Зміни для розробників (англ)</h3>
+<h3 id="_62">Зміни для розробників (англ)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li><code>braille.handler.handleUpdate</code> and <code>braille.handler.handleReviewMove</code> have been changed in order not to update instantly.
@@ -1803,7 +2013,7 @@ They should also be thread safe, making it possible to call them from background
 Consult the <code>braille.BrailleDisplayDriver</code> class documentation for more details.
 Most notably, the <code>supportsAutomaticDetection</code> attribute must be set to <code>True</code> and the <code>registerAutomaticDetection</code> <code>classmethod</code> must be implemented.  (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15196" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15196">#15196</a>)</li>
 </ul>
-<h4 id="deprecations_5">Deprecations</h4>
+<h4 id="deprecations_6">Deprecations</h4>
 <ul>
 <li><code>braille.BrailleHandler.handlePendingCaretUpdate</code> is now deprecated with no public replacement.
 It will be removed in 2024.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15163" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15163">#15163</a>)</li>
@@ -1826,7 +2036,7 @@ Starting from NVDA 2024.1, in order for the base method to use <code>bdDetect.dr
 Поліпшено навігацію й повідомлення про форматування у Microsoft Office.</p>
 <p>Виправлено багато помилок, зокрема для брайля, Microsoft Office, веб-браузерів і Windows 11.</p>
 <p>Оновлено eSpeak-NG, бібліотеку брайлівського введення/виведення LibLouis та Загальний репозиторій мовних даних Юнікоду.</p>
-<h3 id="_54">Нові можливості</h3>
+<h3 id="_63">Нові можливості</h3>
 <ul>
 <li>До NVDA додано Магазин додатків. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13985" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13985">#13985</a>)<ul>
 <li>Огляд, пошук, встановлення й оновлення додатків від спільноти.</li>
@@ -1893,7 +2103,7 @@ Starting from NVDA 2024.1, in order for the base method to use <code>bdDetect.dr
 <li>У Windows 10 May 2019 Update і пізніших, NVDA може оголошувати імена віртуальних робочих столів під час їх відкриття, зміни й закриття. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5641" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5641">#5641</a>)</li>
 <li>Додано загальносистемний параметр, який дозволяє користувачам і адміністраторам примусово запускати NVDA у захищеному режимі. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10018" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10018">#10018</a>)</li>
 </ul>
-<h3 id="_55">Зміни</h3>
+<h3 id="_64">Зміни</h3>
 <ul>
 <li>Оновлення компонентів:<ul>
 <li>eSpeak NG оновлено до 1.52-dev commit <code>ed9a7bcf</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15036">#15036</a>)</li>
@@ -1922,7 +2132,7 @@ Starting from NVDA 2024.1, in order for the base method to use <code>bdDetect.dr
 <li>Якщо Windows налаштовано на показ секунд у годиннику системного лотка, використання <code>NVDA+f12</code> для повідомлення про поточний час відповідає цим налаштуванням. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14742" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14742">#14742</a>)</li>
 <li>NVDA тепер повідомлятиме про групування без мітки, які містять корисну інформацію про позиції, наприклад, в останніх версіях меню Microsoft Office 365. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14878" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14878">#14878</a>)</li>
 </ul>
-<h3 id="_56">Виправлення</h3>
+<h3 id="_65">Виправлення</h3>
 <ul>
 <li>Брайль:<ul>
 <li>Кілька виправлень стабільності вводу/виводу для брайлівських дисплеїв, які зменшили кількість помилок і збоїв NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14627" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14627">#14627</a>)</li>
@@ -1971,7 +2181,7 @@ Starting from NVDA 2024.1, in order for the base method to use <code>bdDetect.dr
 <li>Виправлено помилку збереження й завантаження конфігурації NVDA, зокрема перемикання синтезаторів. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14760" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14760">#14760</a>)</li>
 <li>Виправлено помилку, яка призводила до того, що при перегляді тексту жест «пролистати вгору» перегортав сторінки, а не переходив на попередній рядок. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15127" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15127">#15127</a>)</li>
 </ul>
-<h3 id="_57">Зміни для розробників (англ)</h3>
+<h3 id="_66">Зміни для розробників (англ)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Suggested conventions have been added to the add-on manifest specification.
@@ -2000,7 +2210,7 @@ Similarly, the new <code>getCompletionRoutine</code> method allows you to conver
 <li><code>scons checkpot</code> will no longer check the <code>userConfig</code> subfolder anymore. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14820" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14820">#14820</a>)</li>
 <li>Translatable strings can now be defined with a singular and a plural form using <code>ngettext</code> and <code>npgettext</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12445" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12445">#12445</a>)</li>
 </ul>
-<h4 id="deprecations_6">Deprecations</h4>
+<h4 id="deprecations_7">Deprecations</h4>
 <ul>
 <li>Passing lambda functions to <code>hwIo.ioThread.IoThread.queueAsApc</code> is deprecated.
 Instead, functions should be weakly referenceable. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14627" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14627">#14627</a>)</li>
@@ -2031,7 +2241,7 @@ Instead use <code>config.RegistryKey.CONFIG_IN_LOCAL_APPDATA_SUBKEY</code>. (<a 
 <ul>
 <li>У цій версії розірвано сумісність з наявними додатками.</li>
 </ul>
-<h3 id="_58">Нові можливості</h3>
+<h3 id="_67">Нові можливості</h3>
 <ul>
 <li>Microsoft Excel через UI Automation: Автоматичне промовляння про заголовки стовпців і рядків у таблицях. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14228" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14228">#14228</a>)<ul>
 <li>Примітка: Це стосується таблиць, відформатованих за допомогою кнопки «Таблиця» на панелі «Вставка» у стрічці.
@@ -2058,7 +2268,7 @@ Instead use <code>config.RegistryKey.CONFIG_IN_LOCAL_APPDATA_SUBKEY</code>. (<a 
 <li>Нова глобальна команда без жесту (категорія «Інструменти»): повідомити призначення URL у посиланні у вікні.
 Це те саме, що й подвійне натискання <code>NVDA+k</code>, але може бути кориснішим для користувачів шрифту Брайля. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14583" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14583">#14583</a>)</li>
 </ul>
-<h3 id="_59">Зміни</h3>
+<h3 id="_68">Зміни</h3>
 <ul>
 <li>Оновлено бібліотеку брайлівського введення/виведення LibLouis до версії <a href="https://github.com/liblouis/liblouis/releases/tag/v3.24.0" rel="noopener" target="_blank" title="3.24.0">3.24.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14436" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14436">#14436</a>)<ul>
 <li>Основні оновлення стосуються угорського, UEB та китайського бопомофо брайля.</li>
@@ -2074,7 +2284,7 @@ Instead use <code>config.RegistryKey.CONFIG_IN_LOCAL_APPDATA_SUBKEY</code>. (<a 
 </li>
 <li>Java-застосунки з елементами керування, що використовують стан вибору, тепер повідомлятимуть про те, що елемент не вибрано, а не про те, що його вибрано. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14336" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14336">#14336</a>)</li>
 </ul>
-<h3 id="_60">Виправлення</h3>
+<h3 id="_69">Виправлення</h3>
 <ul>
 <li>Виправлення у Windows 11:<ul>
 <li>NVDA повідомляє про результати пошуку під час відкриття меню «Пуск». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13841" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13841">#13841</a>)</li>
@@ -2116,7 +2326,7 @@ Instead use <code>config.RegistryKey.CONFIG_IN_LOCAL_APPDATA_SUBKEY</code>. (<a 
 <li>При запуску NVDA з параметром <code>--lang=Windows</code> знову можна відкрити діалог загальних налаштувань NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14407" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14407">#14407</a>)</li>
 <li>NVDA більше не зависає під час продовження читання в Kindle для ПК після перегортання сторінки. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14390" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14390">#14390</a>)</li>
 </ul>
-<h3 id="_61">Зміни для розробників (англ)</h3>
+<h3 id="_70">Зміни для розробників (англ)</h3>
 <p>Note: this is an Add-on API compatibility breaking release.
 Add-ons will need to be re-tested and have their manifest updated.
 Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
@@ -2213,7 +2423,7 @@ Usage of <code>Example.get()</code> is now <code>Example()</code>. (<a class="gh
 </ul>
 </li>
 </ul>
-<h4 id="deprecations_7">Deprecations</h4>
+<h4 id="deprecations_8">Deprecations</h4>
 <ul>
 <li><code>NVDAObjects.UIA.winConsoleUIA.WinTerminalUIA</code> is deprecated and usage is discouraged. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14047" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14047">#14047</a>)</li>
 <li><code>config.addConfigDirsToPythonPackagePath</code> has been moved.
@@ -2235,7 +2445,7 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 Також виправлено кілька помилок.</p>
 <p>Оновлено eSpeak та LibLouis.
 Додано нові брайлівські таблиці: китайську, шведську, Луганда і кіняруанда.</p>
-<h3 id="_62">Нові функції</h3>
+<h3 id="_71">Нові функції</h3>
 <ul>
 <li>До Посібника користувача додано розділ «Короткий посібник користувача». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13934" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13934">#13934</a>)</li>
 <li>Введено нову команду, яка дозволяє дізнатись гарячу клавішу поточного об’єкта у фокусі. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13960" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13960">#13960</a>)<ul>
@@ -2266,7 +2476,7 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <li>Microsoft Excel з UI Automation: NVDA тепер оголошує про вихід за межі таблиці всередині електронної таблиці. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14165" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14165">#14165</a>)</li>
 <li>Читання заголовків таблиці тепер можна налаштувати окремо для рядків і окремо для стовпців. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14075" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14075">#14075</a>)</li>
 </ul>
-<h3 id="_63">Зміни</h3>
+<h3 id="_72">Зміни</h3>
 <ul>
 <li>eSpeak NG оновлено до 1.52-dev commit <code>735ecdb8</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14060" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14060">#14060</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14079" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14079">#14079</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14118" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14118">#14118</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14203" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14203">#14203</a>)<ul>
 <li>Виправлено промовляння латинських символів під час використання мандаринської мови. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12952" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12952">#12952</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13572" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13572">#13572</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14197" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14197">#14197</a>)</li>
@@ -2287,7 +2497,7 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 </li>
 <li>NVDA тепер включає архітектуру операційної системи як частину відстеження статистики користувачів. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14019" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14019">#14019</a>)</li>
 </ul>
-<h3 id="_64">Виправлення</h3>
+<h3 id="_73">Виправлення</h3>
 <ul>
 <li>В разі оновлення NVDA за допомогою Windows Package Manager CLI (він же winget), випущена версія NVDA більше не завжди розглядається як новіша за будь-яку встановлену альфа-версію. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12469" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12469">#12469</a>)</li>
 <li>NVDA тепер коректно оголошує групування в Java-застосунках. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13962" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13962">#13962</a>)</li>
@@ -2315,13 +2525,13 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <li>NVDA тепер може виділяти текст із використанням комбінації <code>NVDA+f10</code> у Java-застосунках. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14163" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14163">#14163</a>)</li>
 <li>NVDA більше не застряватиме в меню при переміщенні стрілками вгору і вниз між гілками розмов у Microsoft Teams. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14355" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14355">#14355</a>)</li>
 </ul>
-<h3 id="_65">Зміни для розробників (англ)</h3>
+<h3 id="_74">Зміни для розробників (англ)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>The <a href="https://groups.google.com/a/nvaccess.org/g/nvda-api/about" rel="noopener" target="_blank" title="NVDA API Announcement mailing list">NVDA API Announcement mailing list</a> was created. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13999" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13999">#13999</a>)</li>
 <li>NVDA no longer processes <code>textChange</code> events for most UI Automation applications due to their extreme negative performance impact. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11002" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11002">#11002</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14067">#14067</a>)</li>
 </ul>
-<h4 id="deprecations_8">Deprecations</h4>
+<h4 id="deprecations_9">Deprecations</h4>
 <ul>
 <li><code>core.post_windowMessageReceipt</code> is deprecated, use <code>winAPI.messageWindow.pre_handleWindowMessage</code> instead.</li>
 <li><code>winKernel.SYSTEM_POWER_STATUS</code> is deprecated and usage is discouraged, this has been moved to <code>winAPI._powerTracking.SystemPowerStatus</code>.</li>
@@ -2330,20 +2540,20 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <h2 id="202233">2022.3.3</h2>
 <p>Це незначний реліз, який виправляє проблеми з 2022.3.2, 2022.3.1 і 2022.3.
 Це також вирішує проблему безпеки.</p>
-<h3 id="_66">Виправлення безпеки</h3>
+<h3 id="_75">Виправлення безпеки</h3>
 <ul>
 <li>Запобігає можливому доступу до системи (наприклад, до консолі NVDA Python) для неавторизованих користувачів.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-fpwc-2gxx-j9v7" rel="noopener" target="_blank" title="GHSA-fpwc-2gxx-j9v7">GHSA-fpwc-2gxx-j9v7</a>)</li>
 </ul>
-<h3 id="_67">Виправлення</h3>
+<h3 id="_76">Виправлення</h3>
 <ul>
 <li>Виправлено помилку, через яку, якщо NVDA зависала під час блокування, NVDA дозволяла доступ до робочого столу користувача, перебуваючи на екрані блокування Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
 <li>Виправлено помилку, за якої, якщо NVDA зависала під час блокування, NVDA поводилася некоректно, так наче  пристрій все ще заблоковано. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
 <li>Виправлено проблему доступності процесу «забув свій PIN-код» у Windows, а також з процесом оновлення/встановлення Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14368" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14368">#14368</a>)</li>
 <li>Виправлено помилку при спробі встановлення NVDA в деяких середовищах Windows, наприклад, Windows Server. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14379" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14379">#14379</a>)</li>
 </ul>
-<h3 id="_68">Зміни для розробників (англ)</h3>
-<h4 id="deprecations_9">Deprecations</h4>
+<h3 id="_77">Зміни для розробників (англ)</h3>
+<h4 id="deprecations_10">Deprecations</h4>
 <ul>
 <li><code>utils.security.isObjectAboveLockScreen(obj)</code> is deprecated, instead use <code>obj.isBelowLockScreen</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
 <li>The following functions in <code>winAPI.sessionTracking</code> are deprecated for removal in 2023.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)<ul>
@@ -2357,12 +2567,12 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 </ul>
 <h2 id="202232">2022.3.2</h2>
 <p>Це незначний реліз, який виправляє регресії з 2022.3.1 та вирішує проблему безпеки.</p>
-<h3 id="_69">Виправлення безпеки</h3>
+<h3 id="_78">Виправлення безпеки</h3>
 <ul>
 <li>Запобігає можливому доступу на системному рівні неавторизованих користувачів.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3jj9-295f-h69w" rel="noopener" target="_blank" title="GHSA-3jj9-295f-h69w">GHSA-3jj9-295f-h69w</a>)</li>
 </ul>
-<h3 id="_70">Виправлення</h3>
+<h3 id="_79">Виправлення</h3>
 <ul>
 <li>Виправлено регрес від 2022.3.1, коли деякий функціонал було відключено на захищених екранах. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14286" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14286">#14286</a>)</li>
 <li>Виправлено регрес від 2022.3.1, коли певний функціонал відключався після входу в систему, якщо NVDA запускалась на екрані блокування. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14301" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14301">#14301</a>)</li>
@@ -2370,7 +2580,7 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <h2 id="202231">2022.3.1</h2>
 <p>Це незначний реліз для виправлення кількох проблем безпеки.
 Будь ласка, відповідально повідомляйте про проблеми безпеки на <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="_71">Виправлення безпеки</h3>
+<h3 id="_80">Виправлення безпеки</h3>
 <ul>
 <li>Виправлено вразливість, яка дозволяла підвищити права з користувацьких до системних.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-q7c2-pgqm-vvw5" rel="noopener" target="_blank" title="GHSA-q7c2-pgqm-vvw5">GHSA-q7c2-pgqm-vvw5</a>)</li>
@@ -2379,7 +2589,7 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <li>Виправлено проблему, коли при блокуванні Windows кешувався текст переглядача журналу мовлення.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-grvr-j2h8-3qm4" rel="noopener" target="_blank" title="GHSA-grvr-j2h8-3qm4">GHSA-grvr-j2h8-3qm4</a>)</li>
 </ul>
-<h3 id="_72">Виправлення</h3>
+<h3 id="_81">Виправлення</h3>
 <ul>
 <li>Неавторизованим користувачам на екрані блокування заборонено оновлювати налаштування мовлення й переглядача брайля. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-grvr-j2h8-3qm4" rel="noopener" target="_blank" title="GHSA-grvr-j2h8-3qm4">GHSA-grvr-j2h8-3qm4</a>)</li>
 </ul>
@@ -2389,7 +2599,7 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <p>Ця версія також містить кілька виправлень помилок.
 Зокрема, тепер найновіші версії Adobe Acrobat/Reader більше не завершують роботу аварійно під час читання PDF-документа.</p>
 <p>Оновлено eSpeak, до якого додано 3 нові мови: білоруську, люксембурзьку та Totontepec Mixe.</p>
-<h3 id="_73">Нові можливості</h3>
+<h3 id="_82">Нові можливості</h3>
 <ul>
 <li>У хості консолі Windows, який використовують командний рядок, PowerShell і підсистема Windows для Linux у Windows 11 версії 22H2 (Sun Valley 2) і новіших версіях:<ul>
 <li>Значно поліпшено продуктивність і стабільність. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10964" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10964">#10964</a>)</li>
@@ -2403,7 +2613,7 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <li>У налаштування мовлення додано новий параметр для читання описів символів після затримки. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13509" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13509">#13509</a>)</li>
 <li>У налаштування брайля додано новий параметр, який дозволяє вказати, чи повинно перериватися мовлення  прокруткою дисплея вперед/назад. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2124" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2124">#2124</a>)</li>
 </ul>
-<h3 id="_74">Зміни</h3>
+<h3 id="_83">Зміни</h3>
 <ul>
 <li>eSpeak NG оновлено до 1.52-dev commit <code>9de65fcb</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13295" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13295">#13295</a>)<ul>
 <li>Додано мови:<ul>
@@ -2418,7 +2628,7 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <li>Замість повідомлення «містить подробиці» вказується призначення подробиць, де це можливо, наприклад «містить коментар». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13649" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13649">#13649</a>)</li>
 <li>Розмір встановленої NVDA тепер відображається в розділі програм і засобів Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13909">#13909</a>)</li>
 </ul>
-<h3 id="_75">Виправлення помилок</h3>
+<h3 id="_84">Виправлення помилок</h3>
 <ul>
 <li>Adobe Acrobat / Reader 64 bit більше не завершує роботу аварійно під час читання PDF-документа. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12920" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12920">#12920</a>)<ul>
 <li>Зауважте, що для уникнення збою також потрібна найновіша версія Adobe Acrobat / Reader.</li>
@@ -2432,7 +2642,7 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <li>Коли додаткове прискорення вимкнено, швидкість eSpeak більше не падає між 99% і 100%. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13876" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13876">#13876</a>)</li>
 <li>Виправлено помилку, через яку відкривалися 2 діалоги жестів вводу. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13854" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13854">#13854</a>)</li>
 </ul>
-<h3 id="_76">Зміни для розробників (англ)</h3>
+<h3 id="_85">Зміни для розробників (англ)</h3>
 <ul>
 <li>Updated Comtypes to version 1.1.11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12953" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12953">#12953</a>)</li>
 <li>In builds of Windows Console (<code>conhost.exe</code>) with an NVDA API level of 2 (<code>FORMATTED</code>) or greater, such as those included with Windows 11 version 22H2 (Sun Valley 2), UI Automation is now used by default. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10964" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10964">#10964</a>)<ul>
@@ -2443,38 +2653,38 @@ Use <code>gui.MainFrame.SysTrayIcon.evaluateUpdatePendingUpdateMenuItemCommand</
 <li>The Chromium virtual buffer is now loaded even when the document object has the MSAA <code>STATE_SYSTEM_BUSY</code> exposed via IA2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13306" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13306">#13306</a>)</li>
 <li>A config spec type <code>featureFlag</code> has been created for use with experimental features in NVDA. See <code>devDocs/featureFlag.md</code> for more information. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13859" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13859">#13859</a>)</li>
 </ul>
-<h4 id="deprecations_10">Deprecations</h4>
+<h4 id="deprecations_11">Deprecations</h4>
 <p>There are no deprecations proposed in 2022.3.</p>
 <h2 id="202224">2022.2.4</h2>
 <p>Це виправлення випущено для усунення проблеми безпеки.</p>
-<h3 id="_77">Виправлення</h3>
+<h3 id="_86">Виправлення</h3>
 <ul>
 <li>Виправлено експлойт, через який можна було відкрити консоль NVDA python через переглядач журналу на екрані блокування.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-585m-rpvv-93qg" rel="noopener" target="_blank" title="GHSA-585m-rpvv-93qg">GHSA-585m-rpvv-93qg</a>)</li>
 </ul>
 <h2 id="202223">2022.2.3</h2>
 <p>Це патч для виправлення випадкової поломки API, яка виникла в 2022.2.1.</p>
-<h3 id="_78">Виправлення помилок</h3>
+<h3 id="_87">Виправлення помилок</h3>
 <ul>
 <li>Виправлено помилку, коли NVDA не оголошувала «Захищений робочий стіл» при вході в захищений робочий стіл.
 Це призводило до того, що NVDA remote не розпізнавав захищених робочих столів. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14094" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14094">#14094</a>)</li>
 </ul>
 <h2 id="202222">2022.2.2</h2>
 <p>Ця версія містить виправлення помилки, яка виникла у 2022.2.1 із жестами вводу.</p>
-<h3 id="_79">Виправлення помилок</h3>
+<h3 id="_88">Виправлення помилок</h3>
 <ul>
 <li>Виправлено помилку, через яку жести вводу працювали не завжди. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14065" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14065">#14065</a>)</li>
 </ul>
 <h2 id="202221">2022.2.1</h2>
 <p>Це незначний випуск для вирішення проблеми безпеки.
 Будь ласка, відповідально повідомляйте про проблеми безпеки на адресу <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="_80">Виправлення безпеки</h3>
+<h3 id="_89">Виправлення безпеки</h3>
 <ul>
 <li>Виправлено експлойт, через який можна було запустити консоль Python із екрана блокування. (GHSA-rmq3-vvhq-gp32)</li>
 <li>Виправлено експлойт, через який можна було вийти з екрану блокування за допомогою об’єктної навігації. (GHSA-rmq3-vvhq-gp32)</li>
 </ul>
-<h3 id="_81">Зміни для розробників (англ)</h3>
-<h4 id="deprecations_11">Deprecations</h4>
+<h3 id="_90">Зміни для розробників (англ)</h3>
+<h4 id="deprecations_12">Deprecations</h4>
 <p>These deprecations are currently not scheduled for removal.
 The deprecated aliases will remain until further notice.
 Please test the new API and provide feedback.
@@ -2489,7 +2699,7 @@ For add-on authors, please open a GitHub issue if these changes stop the API fro
 <p>Додано нові команди для навігації в таблицях.
 Оновлено Загальний репозиторій мовних даних Юнікоду (CLDR).
 LibLouis також оновлено, він включає нову німецьку брайлівську таблицю.</p>
-<h3 id="_82">Нові можливості</h3>
+<h3 id="_91">Нові можливості</h3>
 <ul>
 <li>Підтримка взаємодії з компонентами Microsoft Loop у продуктах Microsoft Office. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13617" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13617">#13617</a>)</li>
 <li>Додано нові команди навігації в таблицях. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/957" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #957">#957</a>)<ul>
@@ -2499,7 +2709,7 @@ LibLouis також оновлено, він включає нову німец�
 </li>
 <li>Додано скрипт без призначеного жесту для циклічного перемикання режимів автоматичного перемикання між мовами й діалектами. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10253" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10253">#10253</a>)</li>
 </ul>
-<h3 id="_83">Зміни</h3>
+<h3 id="_92">Зміни</h3>
 <ul>
 <li>NSIS оновлено до версії 3.08. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9134" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9134">#9134</a>)</li>
 <li>CLDR оновлено до версії 41.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13582" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13582">#13582</a>)</li>
@@ -2518,7 +2728,7 @@ LibLouis також оновлено, він включає нову німец�
 </ul>
 </li>
 </ul>
-<h3 id="_84">Виправлення</h3>
+<h3 id="_93">Виправлення</h3>
 <ul>
 <li>Виправлення для застосунків на базі Java:<ul>
 <li>NVDA тепер промовляє стан лише читання. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13692" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13692">#13692</a>)</li>
@@ -2560,7 +2770,7 @@ NVDA оголосить результати, коли буде натиснут
 <li>Виправлено автоматичне перемикання мов eSpeak для англійської та французької мов на британську англійську і французьку (Франція). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13727" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13727">#13727</a>)</li>
 <li>Виправлено автоматичне перемикання мови OneCore під час спроби перейти на раніше встановлену мову. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13732" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13732">#13732</a>)</li>
 </ul>
-<h3 id="_85">Зміни для розробників (англ)</h3>
+<h3 id="_94">Зміни для розробників (англ)</h3>
 <ul>
 <li>Compiling NVDA dependencies with Visual Studio 2022 (17.0) is now supported.
 For development and release builds, Visual Studio 2019 is still used. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13033" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13033">#13033</a>)</li>
@@ -2569,7 +2779,7 @@ the case where a negative child ID or an IDispatch is returned by <code>IAccessi
 <li>New convenience functions <code>registerExecutableWithAppModule</code> and <code>unregisterExecutable</code> were added to the <code>appModuleHandler</code> module.
 They can be used to use a single App Module with multiple executables. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13366" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13366">#13366</a>)</li>
 </ul>
-<h4 id="deprecations_12">Deprecations</h4>
+<h4 id="deprecations_13">Deprecations</h4>
 <p>These are proposed API breaking changes.
 The deprecated part of the API will continue to be available until the specified release.
 If no release is specified, the plan for removal has not been determined.
@@ -2620,7 +2830,7 @@ Code which imports from one of them, should instead import from the replacement 
 <ul>
 <li>This release breaks compatibility with existing add-ons.</li>
 </ul>
-<h3 id="_86">Нові можливості</h3>
+<h3 id="_95">Нові можливості</h3>
 <ul>
 <li>Підтримка промовляння нотаток в MS Excel із увімкненим UI Automation у Windows 11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12861" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12861">#12861</a>)</li>
 <li>В останніх збірках Microsoft Word з UI Automation у Windows 11, наявність закладок, чернеток коментарів і вирішених коментарів повідомляються як за допомогою мовлення, так і брайля. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12861" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12861">#12861</a>)</li>
@@ -2647,7 +2857,7 @@ Code which imports from one of them, should instead import from the replacement 
 </ul>
 </li>
 </ul>
-<h3 id="_87">Зміни</h3>
+<h3 id="_96">Зміни</h3>
 <ul>
 <li>Espeak-ng оновлено до 1.51-dev commit <code>7e5457f91e10</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12950" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12950">#12950</a>)</li>
 <li>Бібліотеку брайлівського введення/виведення liblouis оновлено до <a href="https://github.com/liblouis/liblouis/releases/tag/v3.20.0" rel="noopener" target="_blank" title="3.20.0">3.20.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13141" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13141">#13141</a>)<ul>
@@ -2666,7 +2876,7 @@ Code which imports from one of them, should instead import from the replacement 
 <li>Промовляння зведення подробиць тепер має початково призначений жест (<code>NVDA+d</code>). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13380" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13380">#13380</a>)</li>
 <li>NVDA потребує перезавантаження після встановлення MathPlayer. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13486" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13486">#13486</a>)</li>
 </ul>
-<h3 id="_88">Виправлення</h3>
+<h3 id="_97">Виправлення</h3>
 <ul>
 <li>Панель менеджера буфера обміну більше не буде неправильно перехоплювати фокус під час відкриття деяких программ Office. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12736">#12736</a>)</li>
 <li>В системі, де користувач вирішив поміняти основну кнопку мышки з лівої на праву, NVDA більше не буде випадково викликати контекстне меню замість активації елемента в таких застосунках, як веб-браузери.. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12642" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12642">#12642</a>)</li>
@@ -2698,7 +2908,7 @@ Code which imports from one of them, should instead import from the replacement 
 <li>Під час завантаження сторінки в Google chrome 100 NVDA більше не буде автоматично виводити заголовок сторінки й автоматично розпочинати читання. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13571" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13571">#13571</a>)</li>
 <li>NVDA більше не завершує роботу аварійно під час скидання конфігурації NVDA до заводських налаштувань, якщо увімкнено промовляння командних клавіш. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13634" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13634">#13634</a>)</li>
 </ul>
-<h3 id="_89">Зміни для розробників (англ)</h3>
+<h3 id="_98">Зміни для розробників (англ)</h3>
 <ul>
 <li>Note: this is a Add-on API compatibility breaking release. Add-ons will need to be re-tested and have their manifest updated.</li>
 <li>Compiling NVDA dependencies with Visual Studio 2022 (17.0) is now supported. For development and release builds, Visual Studio 2019 is still used. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13033" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13033">#13033</a>)</li>
@@ -2790,7 +3000,7 @@ This can dramatically decrease build times on multi core systems. (<a class="gh-
 <h2 id="202135">2021.3.5</h2>
 <p>Це дрібний випуск для виправлення проблеми безпеки.
 Будь ласка, відповідально повідомляйте про проблеми безпеки на <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="_90">Виправлення безпеки</h3>
+<h3 id="_99">Виправлення безпеки</h3>
 <ul>
 <li>Виправлено рекомендацію з безпеки <code>GHSA-xc5m-v23f-pgr7</code>.<ul>
 <li>У безпечному режимі вимкнено діалог вимови символів.</li>
@@ -2800,7 +3010,7 @@ This can dramatically decrease build times on multi core systems. (<a class="gh-
 <h2 id="202134">2021.3.4</h2>
 <p>Це незначний випуск, у якому виправлено кілька порушених проблем безпеки.
 Будь ласка, відповідально повідомляйте про проблеми безпеки на <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="_91">Виправлення безпеки</h3>
+<h3 id="_100">Виправлення безпеки</h3>
 <ul>
 <li>Виправлено рекомендацію з безпеки <code>GHSA-354r-wr4v-cx28</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13488" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13488">#13488</a>)<ul>
 <li>Вилучено можливість запуску NVDA з увімкненим журналюванням налагодження, коли NVDA працює у безпечному режимі.</li>
@@ -2824,7 +3034,7 @@ This can dramatically decrease build times on multi core systems. (<a class="gh-
 <h2 id="202132">2021.3.2</h2>
 <p>Це незначний випуск, у якому виправлено кілька порушених проблем безпеки.
 Будь ласка, відповідально повідомляйте про проблеми безпеки на <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="_92">Виправлення помилок</h3>
+<h3 id="_101">Виправлення помилок</h3>
 <ul>
 <li>Виправлення безпеки: Запобігання навігації по об'єктах за межами екрана блокування у Windows 10 та Windows 11 (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13328" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13328">#13328</a>).</li>
 <li>Виправлення безпеки: діалог менеджера додатків тепер вимкнено на захищених екранах. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13059" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13059">#13059</a>)</li>
@@ -2832,12 +3042,12 @@ This can dramatically decrease build times on multi core systems. (<a class="gh-
 </ul>
 <h2 id="202131">2021.3.1</h2>
 <p>Це дрібний реліз із виправленням кількох проблем, виявлених в 2021.3.</p>
-<h3 id="_93">Зміни</h3>
+<h3 id="_102">Зміни</h3>
 <ul>
 <li>Новий протокол HID Braille більше не є переважним, коли можна використовувати інший драйвер брайлівського дисплея. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13153">#13153</a>)</li>
 <li>Новий протокол HID Braille можна вимкнути у панелі додаткових налаштувань, яка розташована в діалозі налаштувань. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13180" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13180">#13180</a>)</li>
 </ul>
-<h3 id="_94">Виправлення</h3>
+<h3 id="_103">Виправлення</h3>
 <ul>
 <li>Орієнтири знову скорочуються шрифтом Брайля. <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13158" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13158">#13158</a></li>
 <li>Виправлено нестабільність автоматичного виявлення брайлівських дисплеїв Humanware Brailliant і APH Mantis Q40 braille під час використання Bluetooth. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13153">#13153</a>)</li>
@@ -2854,7 +3064,7 @@ This can dramatically decrease build times on multi core systems. (<a class="gh-
 <p>Через оновлення нашого сертифіката безпеки невелика кількість користувачів отримує помилку, коли NVDA 2021.2 перевіряє наявність оновлень.
 Тепер NVDA просить Windows оновити сертифікати безпеки, що запобігатиме цій помилці в майбутньому.
 Постраждалим від цього користувачам потрібно буде завантажити це оновлення вручну.</p>
-<h3 id="_95">Нові можливості</h3>
+<h3 id="_104">Нові можливості</h3>
 <ul>
 <li>Додано жест вводу для перемикання налаштувань промовляння стилю рамок комірки. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10408" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10408">#10408</a>)</li>
 <li>Додано підтримку нової специфікації HID для брайлівських дисплеїв, яка спрямована на стандартизацію їх підтримки. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12523" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12523">#12523</a>)<ul>
@@ -2867,7 +3077,7 @@ This can dramatically decrease build times on multi core systems. (<a class="gh-
 <li>У Windows 10 і новіших, NVDA оголошує кількість пропозицій під час введення пошукового запиту в додатках, таких, як «Настройки» і Microsoft Store. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7330" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7330">#7330</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12758" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12758">#12758</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12790" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12790">#12790</a>)</li>
 <li>Навігація в таблицях тепер підтримується в елементах керування сіткою, створених з використання командлета Out-GridView у PowerShell. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12928" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12928">#12928</a>)</li>
 </ul>
-<h3 id="_96">Зміни</h3>
+<h3 id="_105">Зміни</h3>
 <ul>
 <li>Espeak-ng оновлено до версії 1.51-dev commit <code>74068b91bcd578bd7030a7a6cde2085114b79b44</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12665" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12665">#12665</a>)</li>
 <li>NVDA початково використовуватиме eSpeak у разі, якщо жоден із голосів Windows OneCore не розмовляє мовою NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10451" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10451">#10451</a>)</li>
@@ -2882,7 +3092,7 @@ This can dramatically decrease build times on multi core systems. (<a class="gh-
 <li>Замість «Маркований контент» чи «мркт», NVDA тепер промовляє і відображає на брайлівському дисплеї «Підсвічено» або «пдсв». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12892" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12892">#12892</a>)</li>
 <li>NVDA більше не намагатиметься завершити роботу, коли діалоги чекають якоїсь дії (наприклад, Підтвердити/Скасувати). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12984" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12984">#12984</a>)</li>
 </ul>
-<h3 id="_97">Виправлення</h3>
+<h3 id="_106">Виправлення</h3>
 <ul>
 <li>Відстеження клавіш-модифікаторів (таких, як Control чи Insert) тепер надійніше, коли watchdog відновлюється. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12609" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12609">#12609</a>)</li>
 <li>Перевірка оновлень знову стала можливою на деяких системах; наприклад, на щойно встановлених системах Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12729" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12729">#12729</a>)</li>
@@ -2912,7 +3122,7 @@ This can dramatically decrease build times on multi core systems. (<a class="gh-
 <li>У Windows 11, NVDA більше не промовляє «область» у разі натискання Alt+Tab для перемикання між програмами. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12648" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12648">#12648</a>)</li>
 <li>Нова бічна панель «Сучасні примітки» тепер підтримується у MS Word за умови доступу до документа без UIA. Натисніть alt+f12 для перемикання між бічною панеллю й документом. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12982" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12982">#12982</a>)</li>
 </ul>
-<h3 id="_98">Зміни для розробників (англ)</h3>
+<h3 id="_107">Зміни для розробників (англ)</h3>
 <ul>
 <li>Building NVDA now requires Visual Studio 2019 16.10.4 or later.
 To match the production build environment, update Visual Studio to keep in sync with the <a href="https://www.appveyor.com/docs/windows-images-software/#visual-studio-2019" rel="noopener" target="_blank" title="current version AppVeyor is using">current version AppVeyor is using</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12728" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12728">#12728</a>)</li>
@@ -2933,12 +3143,12 @@ They are still available at the module level but are deprecated and to be remove
 Інструмент виправлення реєстрації COM тепер виправляє більше проблем під час роботи NVDA.
 Ця версія містить оновлення синтезатора eSpeak і бібліотеки брайлівського введення/виведення LibLouis.
 Також виправлено різні помилки і внесено поліпшення, зокрема, в підтримку Брайля  й терміналів Windows, калькулятора, панелі емодзі та історії буфера обміну.</p>
-<h3 id="_99">Важливі примітки</h3>
+<h3 id="_108">Важливі примітки</h3>
 <p>Через зміни в API лупи Windows, екранну завісу було оновлено для підтримки нових версій Windows.
 Щоб увімкнути екранну завісу у Windows 10 21H2 (10.0.19044) чи новіших версіях, використовуйте NVDA 2021.2.
 Це стосується Windows 10 Insiders і Windows 11.
 З міркувань безпеки, під час використання нової версії Windows отримайте візуальне підтвердження того, що екранна завіса робить екран повністю чорним.</p>
-<h3 id="_100">Нові можливості</h3>
+<h3 id="_109">Нові можливості</h3>
 <ul>
 <li>Експериментальна підтримка приміток ARIA:<ul>
 <li>додає команду для читання короткого опису подробиць у об’єкті з ARIA-подробицями. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12364" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12364">#12364</a>)</li>
@@ -2948,7 +3158,7 @@ They are still available at the module level but are deprecated and to be remove
 <li>У Windows 10 версії 1909 і новіших (включно з Windows 11), NVDA оголошує кількість пропозицій під час виконання пошуку в файловому провіднику. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10341" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10341">#10341</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12628" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12628">#12628</a>)</li>
 <li>У Microsoft Word, NVDA тепер оголошує результат виконання комбінацій клавіш відступу й висячого відступу. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6269" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6269">#6269</a>)</li>
 </ul>
-<h3 id="_101">Зміни</h3>
+<h3 id="_110">Зміни</h3>
 <ul>
 <li>Espeak-ng оновлено до 1.51-dev commit <code>ab11439b18238b7a08b965d1d5a6ef31cbb05cbb</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12449" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12449">#12449</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12202" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12202">#12202</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12280" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12280">#12280</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12568" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12568">#12568</a>)</li>
 <li>Якщо у налаштуваннях форматування документа увімкнено статті, то NVDA промовлятиме «стаття» після вмісту. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11103" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11103">#11103</a>)</li>
@@ -2958,7 +3168,7 @@ They are still available at the module level but are deprecated and to be remove
 </li>
 <li>Windows 10 OCR перейменовано на Windows OCR. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12690" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12690">#12690</a>)</li>
 </ul>
-<h3 id="_102">Виправлення</h3>
+<h3 id="_111">Виправлення</h3>
 <ul>
 <li>У Калькуляторі Windows 10, NVDA повідомлятиме вирази калькулятора на брайлівському дисплеї. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12268" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12268">#12268</a>)</li>
 <li>У термінальних програмах у  Windows 10 версії 1607 та новіших під час вставки або видалення символів у середині рядка, символи справа від каретки більше не читаються. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3200" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3200">#3200</a>)<ul>
@@ -2977,7 +3187,7 @@ They are still available at the module level but are deprecated and to be remove
 <li>Якщо під час фільтрування жестів вводу не показано ніяких результатів, діалог «Жести вводу» продовжує працювати належним чином. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12673" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12673">#12673</a>)</li>
 <li>Виправлено помилку, коли у низці випадків не оголошувався перший пункт підменю. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12624" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12624">#12624</a>)</li>
 </ul>
-<h3 id="_103">Зміни для розробників (англ.)</h3>
+<h3 id="_112">Зміни для розробників (англ.)</h3>
 <ul>
 <li><code>characterProcessing.SYMLVL_*</code> constants should be replaced using their equivalent <code>SymbolLevel.*</code> before 2022.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11856" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11856">#11856</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12636">#12636</a>)</li>
 <li><code>controlTypes</code> has been split up into various submodules, symbols marked for deprecation must be replaced before 2022.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12510" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12510">#12510</a>)<ul>
@@ -2999,7 +3209,7 @@ They are still available at the module level but are deprecated and to be remove
 <li>This release breaks compatibility with existing add-ons.</li>
 <li>This release also drops support for Adobe Flash.</li>
 </ul>
-<h3 id="_104">Нові можливості</h3>
+<h3 id="_113">Нові можливості</h3>
 <ul>
 <li>Рання підтримка UIA у браузерах на основі Chromium (таких, як Edge). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12025" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12025">#12025</a>)</li>
 <li>Факультативна експериментальна підтримка для Microsoft Excel з використанням UI Automation. Рекомендується лише для Microsoft Excel build 16.0.13522.10000 або новіших. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12210" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12210">#12210</a>)</li>
@@ -3011,7 +3221,7 @@ They are still available at the module level but are deprecated and to be remove
 <li>NVDA тепер повідомляє категорії, призначені для зустрічей у Microsoft Outlook, якщо вони існують. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11598" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11598">#11598</a>)</li>
 <li>Підтримуються брайлівські дисплеї Seika Notetaker від Nippon Telesoft. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11514" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11514">#11514</a>)</li>
 </ul>
-<h3 id="_105">Зміни</h3>
+<h3 id="_114">Зміни</h3>
 <ul>
 <li>У режимі огляду, елементи керування тепер можна активовувати за допомогою маршрутизації брайлівського курсора за їх дескриптором (наприклад, «псл» для посилання). Це особливо корисно для активації, наприклад, прапорців без міток. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7447" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7447">#7447</a>)</li>
 <li>NVDA тепер не дозволяє користувачам скористатися Windows 10 OCR у разі, якщо увімкнено екранну завісу. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11911" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11911">#11911</a>)</li>
@@ -3034,7 +3244,7 @@ They are still available at the module level but are deprecated and to be remove
 <li>Переглядач брайля тепер має стандартну кнопку закриття для зручнішої взаємодії з користувачами вказівних пристроїв. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12328" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12328">#12328</a>)</li>
 <li>З деяких мов у діалозі «Список елементів» клавішу прискорювача на кнопці «Активувати» було видалено, щоб уникнути колізій з мітками радіокнопок для вибору типу елементів. Коли кнопка доступна, вона як і раніше використовується в діалоговому вікні і її все ще можна викликати простим натисканням клавіші Enter у списку елементів. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6167" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6167">#6167</a>)</li>
 </ul>
-<h3 id="_106">Виправлення</h3>
+<h3 id="_115">Виправлення</h3>
 <ul>
 <li>Список повідомлень в Outlook 2010 знову став читабельним. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12241" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12241">#12241</a>)</li>
 <li>У термінальних програмах на Windows 10 версії 1607 і вище при вставці або видаленні символів в середині рядка перестали зчитуватися символи праворуч від каретки. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3200" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3200">#3200</a>)<ul>
@@ -3067,7 +3277,7 @@ They are still available at the module level but are deprecated and to be remove
 <li>У новому Microsoft Edge на основі Chromium текстові поля, такі як адресний рядок, тепер сповіщають про те, що вони порожні. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12474" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12474">#12474</a>)</li>
 <li>Виправлено драйвер шрифту Брайля від Seika. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10787" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10787">#10787</a>)</li>
 </ul>
-<h3 id="_107">Зміни для розробників</h3>
+<h3 id="_116">Зміни для розробників</h3>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release. Add-ons will need to be re-tested and have their manifest updated.</li>
 <li>NVDA's build system now fetches all Python dependencies with pip and stores them in a Python virtual environment. This is all done transparently.<ul>
@@ -3195,7 +3405,7 @@ They are still available at the module level but are deprecated and to be remove
 Виправлено помилки і поліпшено підтримку додатків Пошта, Outlook, Teams, Visual Studio, Azure Data Studio і Foobar2000.
 У роботі з веб-додатками поліпшено взаємодію з Документами Google і значно збільшено рівень підтримки атрибутів WAI-ARIA.
 А також безліч інших важливих поліпшень і виправлень.</p>
-<h3 id="_108">Нові можливості</h3>
+<h3 id="_117">Нові можливості</h3>
 <ul>
 <li>Натискання F1 у діалогах NVDA тепер відкриває відповідний розділ довідки з посібника користувача. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7757" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7757">#7757</a>)</li>
 <li>У Microsoft SQL Server Management Studio та Visual Studio 2017 і новіших додано підтримку технології автоматичного доповнення (IntelliSense). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7504" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7504">#7504</a>)</li>
@@ -3211,7 +3421,7 @@ They are still available at the module level but are deprecated and to be remove
 <li>Переглядач Брайля тепер підтримує маршрутизацію Брайля для користувачів мишки, для цього наведіть вказівник мишки на брайлівську комірку. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11804" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11804">#11804</a>)</li>
 <li>NVDA тепер автоматично визначає підключення пристроїв Humanware Brailliant BI 40X і 20X як через USB, так і через Bluetooth. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11819" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11819">#11819</a>)</li>
 </ul>
-<h3 id="_109">Зміни</h3>
+<h3 id="_118">Зміни</h3>
 <ul>
 <li>Бібліотеку брайлівського введення/виведення Liblouis оновлено до версії 3.16.1:<ul>
 <li>Addresses multiple crashes</li>
@@ -3233,7 +3443,7 @@ They are still available at the module level but are deprecated and to be remove
 <li>Загальний репозиторій мовних даних консорціуму Unicode (CLDR), який використовується в NVDA для читання символів емодзі, оновлений до версії 38. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11817" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11817">#11817</a>)</li>
 <li>Вбудовану функцію підсвічування фокуса було перейменовано в підсвічування. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11700" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11700">#11700</a>)</li>
 </ul>
-<h3 id="_110">Виправлення</h3>
+<h3 id="_119">Виправлення</h3>
 <ul>
 <li>NVDA тепер знову коректно працює з полями редагування в додатку для радіоаматорів Fast Log Entry. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8996" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8996">#8996</a>)</li>
 <li>У Foobar2000 NVDA тепер коректно повідомляє, скільки пройшло часу, якщо відсутній загальний час відтворення (наприклад, при відтворенні інтернет-потоку). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11337" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11337">#11337</a>)</li>
@@ -3267,7 +3477,7 @@ They are still available at the module level but are deprecated and to be remove
 <li>QWERTY-введення на брайлівських дисплеях Papenmeier тепер знову працює і не викликає випадкових зависань NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11944" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11944">#11944</a>)</li>
 <li>Вирішено кілька проблем у браузерах на основі Chromium, коли навігація в таблицях не працювала і NVDA не повідомляла номерів рядків/стовпців таблиці. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12359" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12359">#12359</a>)</li>
 </ul>
-<h3 id="_111">Зміни для розробників (англ)</h3>
+<h3 id="_120">Зміни для розробників (англ)</h3>
 <ul>
 <li>System tests can now send keys using spy.emulateKeyPress, which takes a key identifier that conforms to NVDA's own key names, and by default also blocks until the action is executed. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11581" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11581">#11581</a>)</li>
 <li>NVDA no longer requires the current directory to be the NVDA application directory in order to function. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6491" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6491">#6491</a>)</li>

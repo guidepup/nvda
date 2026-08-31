@@ -2,16 +2,16 @@
 <html lang="ca" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>Guia de l'usuari de NVDA 2026.1.1</title>
+<title>Guia de l'usuari de NVDA 2026.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="guia-de-lusuari-de-nvda-202611">Guia de l'usuari de NVDA 2026.1.1</h1>
+<body><h1 id="guia-de-lusuari-de-nvda-20262">Guia de l'usuari de NVDA 2026.2</h1>
 <div class="toc">
 <ul>
-<li><a href="#guia-de-lusuari-de-nvda-202611" title="Guia de l'usuari de NVDA 2026.1.1">Guia de l'usuari de NVDA 2026.1.1</a><ul>
+<li><a href="#guia-de-lusuari-de-nvda-20262" title="Guia de l'usuari de NVDA 2026.2">Guia de l'usuari de NVDA 2026.2</a><ul>
 <li><a href="#Introduction" title="Introducció">Introducció</a><ul>
 <li><a href="#GeneralFeatures" title="Característiques generals">Característiques generals</a></li>
 <li><a href="#SystemRequirements" title="Requisits del sistema">Requisits del sistema</a><ul>
@@ -61,10 +61,11 @@
 </li>
 <li><a href="#MoreSetupOptions" title="Més opcions de configuració">Més opcions de configuració</a><ul>
 <li><a href="#InstallingNVDA" title="Opcions d'instal·lació">Opcions d'instal·lació</a><ul>
-<li><a href="#InstallWithIncompatibleAddons" title="Avís d'add-ons incompatibles">Avís d'add-ons incompatibles</a></li>
+<li><a href="#InstallWithIncompatibleAddons" title="Avís de complements incompatibles">Avís de complements incompatibles</a></li>
 <li><a href="#StartAtWindowsLogon" title="Utilitza NVDA durant l'inici d'inici de sessió">Utilitza NVDA durant l'inici d'inici de sessió</a></li>
 <li><a href="#CreateDesktopShortcut" title="Crea una drecera d'escriptori (ctrl+alt+n)">Crea una drecera d'escriptori (ctrl+alt+n)</a></li>
 <li><a href="#CopyPortableConfigurationToCurrentUserAccount" title="Copiar la configuració portable al compte d'usuari actual">Copiar la configuració portable al compte d'usuari actual</a></li>
+<li><a href="#RestartWindowsAfterInstall" title="Reinicia Windows després de la instal·lació">Reinicia Windows després de la instal·lació</a></li>
 </ul>
 </li>
 <li><a href="#CreatingAPortableCopy" title="Creació d'una còpia portàtil">Creació d'una còpia portàtil</a></li>
@@ -87,6 +88,7 @@
 <li><a href="#TouchGestures" title="Gestos tàctils">Gestos tàctils</a><ul>
 <li><a href="#Taps" title="Tocs">Tocs</a></li>
 <li><a href="#Flicks" title="Deslizaments">Deslizaments</a></li>
+<li><a href="#PinchGestures" title="Els gestos de pessic">Els gestos de pessic</a></li>
 </ul>
 </li>
 <li><a href="#TouchModes" title="Modes tàctils">Modes tàctils</a></li>
@@ -117,6 +119,10 @@
 </li>
 <li><a href="#BrowseMode" title="Mode de navegació">Mode de navegació</a><ul>
 <li><a href="#SingleLetterNavigation" title="Navegació amb una sola lletra">Navegació amb una sola lletra</a><ul>
+<li><a href="#BrowseModeTouch" title="Navegació tàctil en mode de navegació">Navegació tàctil en mode de navegació</a><ul>
+<li><a href="#gestos-tactils-en-mode-de-navegacio" title="Gestos tàctils en mode de navegació">Gestos tàctils en mode de navegació</a></li>
+</ul>
+</li>
 <li><a href="#TextNavigationCommand" title="Ordres de navegació del paràgraf de text">Ordres de navegació del paràgraf de text</a></li>
 <li><a href="#OtherNavigationCommands" title="Altres ordres de navegació">Altres ordres de navegació</a></li>
 </ul>
@@ -137,9 +143,15 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Braille">Braille</a><ul>
+<li><a href="#BrailleReading" title="Llegint en Braille">Llegint en Braille</a><ul>
+<li><a href="#AutomaticBrailleScrolling" title="Desplaçament automàtic en braille">Desplaçament automàtic en braille</a></li>
+<li><a href="#BrailleReadingGestures" title="Gestos de lectura en braille">Gestos de lectura en braille</a></li>
+</ul>
+</li>
 <li><a href="#BrailleAbbreviations" title="Abreviatures de tipus de control, estat i punts de referència">Abreviatures de tipus de control, estat i punts de referència</a></li>
 <li><a href="#BrailleInput" title="Entrada Braille">Entrada Braille</a><ul>
 <li><a href="#BrailleKeyboardShortcuts" title="Introducció de dreceres de teclat">Introducció de dreceres de teclat</a></li>
+<li><a href="#BrailleInputGestures" title="Gestos d'entrada en braille">Gestos d'entrada en braille</a></li>
 </ul>
 </li>
 </ul>
@@ -147,6 +159,16 @@
 <li><a href="#Vision" title="Visió">Visió</a><ul>
 <li><a href="#VisionFocusHighlight" title="Resaltat visual">Resaltat visual</a></li>
 <li><a href="#VisionScreenCurtain" title="Cortina de pantalla">Cortina de pantalla</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Lupa">Lupa</a><ul>
+<li><a href="#MagnifierToggle" title="Activació i desactivació de la Lupa">Activació i desactivació de la Lupa</a></li>
+<li><a href="#MagnifierCommands" title="Comandes de Lupa">Comandes de Lupa</a></li>
+<li><a href="#MagnifierZoomLevels" title="Nivells de zoom">Nivells de zoom</a></li>
+<li><a href="#MagnifierColorFilters" title="Filtres de color">Filtres de color</a></li>
+<li><a href="#MagnifierTrackingMode" title="Modes de seguiment">Modes de seguiment</a></li>
+<li><a href="#MagnifierScreenOverview" title="Mostra la visió general de tota la pantalla">Mostra la visió general de tota la pantalla</a></li>
+<li><a href="#MagnifierSettings" title="Configuració de la lupa">Configuració de la lupa</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Reconeixement de contingut">Reconeixement de contingut</a><ul>
@@ -211,6 +233,7 @@
 <li><a href="#SpeechSettingsPitch" title="To">To</a></li>
 <li><a href="#SpeechSettingsVolume" title="Volum">Volum</a></li>
 <li><a href="#SpeechSettingsInflection" title="Inflexió">Inflexió</a></li>
+<li><a href="#SpeechSettingPunctuationSilence" title="Pausa natural després de la puntuació">Pausa natural després de la puntuació</a></li>
 <li><a href="#SpeechSettingsUseWasapi" title="Utilitza el sistema modern de sortida d'àudio (WASAPI)">Utilitza el sistema modern de sortida d'àudio (WASAPI)</a></li>
 <li><a href="#SpeechSettingsLanguageSwitching" title="Canvi automàtic d'idioma">Canvi automàtic d'idioma</a></li>
 <li><a href="#SpeechSettingsDialectSwitching" title="Canvi automàtic de dialectes">Canvi automàtic de dialectes</a></li>
@@ -260,6 +283,7 @@
 </li>
 <li><a href="#BrailleSpeakOnRouting" title="Diu el caràcter quan encamines el cursor en el text">Diu el caràcter quan encamines el cursor en el text</a></li>
 <li><a href="#BrailleSpeakOnNavigating" title="Parla quan naveguis per línia o paràgraf">Parla quan naveguis per línia o paràgraf</a></li>
+<li><a href="#BrailleAutoScrollRate" title="Velocitat de desplaçament automàtica">Velocitat de desplaçament automàtica</a></li>
 <li><a href="#BrailleSettingsWordWrap" title="Evita separar paraules sempre que sigui possible">Evita separar paraules sempre que sigui possible</a></li>
 <li><a href="#BrailleUnicodeNormalization" title="Normalització Unicode">Normalització Unicode</a></li>
 <li><a href="#BrailleSettingsInterruptSpeech" title="Interrompre la veu mentre es desplaça">Interrompre la veu mentre es desplaça</a></li>
@@ -294,6 +318,19 @@
 <li><a href="#VisionSettings" title="Visió">Visió</a><ul>
 <li><a href="#VisionSettingsFocusHighlight" title="Resaltat visual">Resaltat visual</a></li>
 <li><a href="#VisionSettingsThirdPartyVisualAids" title="Configuració per a ajudes visuals de tercers">Configuració per a ajudes visuals de tercers</a></li>
+</ul>
+</li>
+<li><a href="#MagnifierSettingsCategory" title="Lupa">Lupa</a><ul>
+<li><a href="#OpenMagnifierSettings" title="Obrir la configuració de la Lupa">Obrir la configuració de la Lupa</a></li>
+<li><a href="#MagnifierEnable" title="Activar la Lupa">Activar la Lupa</a></li>
+<li><a href="#MagnifierZoom" title="Zoom">Zoom</a></li>
+<li><a href="#MagnifierFilter" title="Filtre de color">Filtre de color</a></li>
+<li><a href="#MagnifierPanningStepSize" title="Mida del pas de desplaçament">Mida del pas de desplaçament</a></li>
+<li><a href="#MagnifierFollowMouse" title="Seguir el ratolí">Seguir el ratolí</a></li>
+<li><a href="#MagnifierFollowSystemFocus" title="Seguir el focus del sistema">Seguir el focus del sistema</a></li>
+<li><a href="#MagnifierFollowReviewCursor" title="Seguir el cursor de revisió">Seguir el cursor de revisió</a></li>
+<li><a href="#MagnifierFollowNavigatorObject" title="Seguir el navegador d'objectes">Seguir el navegador d'objectes</a></li>
+<li><a href="#MagnifierTrackingModeSetting" title="Mode de seguiment">Mode de seguiment</a></li>
 </ul>
 </li>
 <li><a href="#KeyboardSettings" title="Teclat">Teclat</a><ul>
@@ -371,9 +408,10 @@
 <li><a href="#BrowseModeSettingsAutoPassThroughOnCaretMove" title="Mode focus automàtic per al moviment del cursor">Mode focus automàtic per al moviment del cursor</a></li>
 <li><a href="#BrowseModeSettingsPassThroughAudioIndication" title="Indicació d'àudio dels modes Focus i Navegació">Indicació d'àudio dels modes Focus i Navegació</a></li>
 <li><a href="#BrowseModeSettingsTrapNonCommandGestures" title="Impedeix que tots els gestos que no corresponen a instruccions arribin al document">Impedeix que tots els gestos que no corresponen a instruccions arribin al document</a></li>
+<li><a href="#BrowseModeSettingsBrowseModeNavigationElements" title="Elements de navegació tàctil en mode de navegació">Elements de navegació tàctil en mode de navegació</a></li>
 </ul>
 </li>
-<li><a href="#DocumentFormattingSettings" title="Formatació del document">Formatació del document</a><ul>
+<li><a href="#DocumentFormattingSettings" title="Format del document">Format del document</a><ul>
 <li><a href="#OpenDocumentFormattingSettings" title="Obrir configuració de format de document">Obrir configuració de format de document</a></li>
 <li><a href="#DocumentFormattingFontAttributes" title="Atributs de la font">Atributs de la font</a></li>
 <li><a href="#DocumentFormattingDetectFormatAfterCursor" title="Informa dels canvis de format després del cursor">Informa dels canvis de format després del cursor</a></li>
@@ -389,6 +427,7 @@
 <li><a href="#MathCATSpeechOptions" title="Opcions de parla">Opcions de parla</a><ul>
 <li><a href="#MathSpeechImpairment" title="Discapacitat">Discapacitat</a></li>
 <li><a href="#MathSpeechLanguage" title="Idioma">Idioma</a></li>
+<li><a href="#MathSpeechDecimalSeparator" title="Separador decimal per a nombres">Separador decimal per a nombres</a></li>
 <li><a href="#MathSpeechStyle" title="Estil de parla">Estil de parla</a></li>
 <li><a href="#MathSpeechVerbosity" title="Verbositat de veu">Verbositat de veu</a></li>
 <li><a href="#MathRelativeSpeed" title="Velocitat relativa de veu">Velocitat relativa de veu</a></li>
@@ -469,6 +508,7 @@
 <li><a href="#CancelExpiredFocusSpeech" title="Intent de cancel·lar la veu per a esdeveniments de focus caducats">Intent de cancel·lar la veu per a esdeveniments de focus caducats</a></li>
 <li><a href="#TrimLeadingSilenceSpeech" title="Retalla el silenci inicial a l'àudio de veu">Retalla el silenci inicial a l'àudio de veu</a></li>
 <li><a href="#UseWASAPIForSAPI4" title="Utilitza WASAPI per a la sortida d'àudio SAPI 4">Utilitza WASAPI per a la sortida d'àudio SAPI 4</a></li>
+<li><a href="#SpeechDictsUseModernRegex" title="Utilitza el motor modern d'expressions regulars per a les entrades del diccionari de veu">Utilitza el motor modern d'expressions regulars per a les entrades del diccionari de veu</a></li>
 <li><a href="#AdvancedSettingsCaretMoveTimeout" title="Temps d'espera per al moviment del cursor (a MS)">Temps d'espera per al moviment del cursor (a MS)</a></li>
 <li><a href="#ReportTransparentColors" title="Informa de transparència per als colors">Informa de transparència per als colors</a></li>
 <li><a href="#AdvancedSettingsDebugLoggingCategories" title="Categories de registre de depuració">Categories de registre de depuració</a></li>
@@ -541,7 +581,7 @@
 <li><a href="#PythonConsole" title="Consola Python">Consola Python</a></li>
 <li><a href="#AddonStoreMenuItem" title="Botiga de Complements">Botiga de Complements</a></li>
 <li><a href="#CreatePortableCopy" title="Crear còpia portàtil">Crear còpia portàtil</a></li>
-<li><a href="#RunCOMRegistrationFixingTool" title="Executar l'eina COM registration fixing...">Executar l'eina COM registration fixing...</a></li>
+<li><a href="#RunCOMRegistrationFixingTool" title="Run System Accessibility Repair Tool...">Run System Accessibility Repair Tool...</a></li>
 <li><a href="#ReloadPlugins" title="Recarregar plugins">Recarregar plugins</a></li>
 </ul>
 </li>
@@ -608,7 +648,7 @@
 </li>
 </ul>
 </div>
-<!-- KC:title: Referència ràpida de les ordres de NVDA 2026.1.1 -->
+<!-- KC:title: Referència ràpida de les ordres de NVDA 2026.2 -->
 
 <h2 id="Introduction">Introducció</h2>
 <p>Benvinguts a NVDA!</p>
@@ -635,6 +675,7 @@ NVDA està desenvolupat per <a href="https://www.nvaccess.org/" rel="noopener" t
 <li>Suport per a interfícies d'accessibilitat comunes com Microsoft Active Accessibility, Java Access Bridge, IAccessible2 i UI Automation</li>
 <li>Suport per a aplicacions del símbol del sistema i consola de Windows</li>
 <li>La capacitat de ressaltar el focus del sistema</li>
+<li>Ampliació de pantalla i filtratge de color integrats</li>
 </ul>
 <h3 id="SystemRequirements">Requisits del sistema</h3>
 <h4 id="MinimumSystemRequirements">Requisits mínims del sistema</h4>
@@ -898,13 +939,19 @@ Les ordres reals no s'executaran mentre estiguin en mode d'ajuda d'entrada.</p>
 <td>Informa de la barra d'estat si NVDA en troba una. Prement dues vegades s'escriurà la informació. Prement tres vegades es copiarà al porta-retalls</td>
 </tr>
 <tr>
-<td>Temps de lectura</td>
+<td>Llegir l'hora</td>
 <td>'NVDA+f12'</td>
 <td>'NVDA+f12'</td>
-<td>Prement una vegada s'informa de l'hora actual, prement dues vegades s'informa de la data. L'hora i la data s'informen en el format especificat a la configuració del Windows per al rellotge de la safata del sistema.</td>
+<td>Prement una vegada anuncia l'hora actual, prement dues vegades anuncia la data. L'hora i la data s'anuncien en el format especificat a la configuració del Windows per al rellotge de la safata del sistema.</td>
 </tr>
 <tr>
-<td>Format de text de l'informe</td>
+<td>Repeteix l'última informació parlada</td>
+<td>'NVDA+x'</td>
+<td>'NVDA+x'</td>
+<td>Repeteix l'última informació donada per NVDA. Si prems dues vegades, apareix en una finestra de consulta</td>
+</tr>
+<tr>
+<td>Informa del format del text</td>
 <td>'NVDA+f'</td>
 <td>'NVDA+f'</td>
 <td>Informa del format del text. Si premeu dues vegades, es mostra la informació d'una finestra</td>
@@ -1169,9 +1216,9 @@ Si ja heu tancat aquest diàleg o voleu instal·lar-lo des d'una còpia portàti
 <p>El diàleg d'instal·lació que apareix confirmarà si voleu instal·lar NVDA i també us indicarà si aquesta instal·lació actualitzarà una instal·lació anterior.
 Si premeu el botó Continuar, s'iniciarà la instal·lació de NVDA.
 També hi ha algunes opcions en aquest diàleg que s'expliquen a continuació.
-Un cop finalitzada la instal·lació, apareixerà un missatge que us indicarà que s'ha realitzat correctament.
-Si premeu D'acord en aquest punt, es reiniciarà la còpia recentment instal·lada de NVDA.</p>
-<h4 id="InstallWithIncompatibleAddons">Avís d'add-ons incompatibles</h4>
+Un cop acabada la instal·lació, apareixerà un diàleg amb opcions sobre què fer a continuació.
+Vegeu <a href="#RestartWindowsAfterInstall" title="Reiniciar Windows després de la instal·lació">Reiniciar Windows després de la instal·lació</a> per a més informació.</p>
+<h4 id="InstallWithIncompatibleAddons">Avís de complements incompatibles</h4>
 <p>Si ja teniu complements instal·lats, també pot ser que hi hagi un avís que els complements incompatibles es desactivaran.
 Abans de poder prémer el botó Continua, haureu d'utilitzar la casella de selecció per confirmar que enteneu que aquests complements es desactivaran.
 També hi haurà un botó per revisar els complements que es desactivaran.
@@ -1188,6 +1235,18 @@ Si es crea, a aquesta drecera també se li assignarà una tecla de drecera de 'C
 <p>Aquesta opció us permet triar si NVDA ha de copiar o no la configuració d'usuari de NVDA que s'està executant actualment a la configuració de l'usuari que ha iniciat la sessió, per a la còpia instal·lada de NVDA.
 Això no copiarà la configuració per a cap altre usuari d'aquest sistema ni a la configuració del sistema per utilitzar-la durant l'inici de sessió del Windows i <a href="#SecureScreens" title="altres pantalles segures">altres pantalles segures</a>.
 Aquesta opció només està disponible quan s'instal·la des d'una còpia portàtil, no quan s'instal·la directament des del paquet de l'instal·lador descarregat.</p>
+<h4 id="RestartWindowsAfterInstall">Reinicia Windows després de la instal·lació</h4>
+<p>Després que NVDA s'hagi instal·lat o actualitzat amb èxit, apareixerà un diàleg que recomana reiniciar Windows.
+Reiniciar assegura que NVDA estigui completament registrat al sistema i funcioni correctament en totes les aplicacions.</p>
+<p>El diàleg ofereix les següents opcions:</p>
+<ul>
+<li>Reiniciar Windows: Reinicia Windows immediatament.</li>
+<li>Inicia NVDA: Inicia la còpia nova instal·lada de NVDA sense reiniciar.<ul>
+<li>Nota: aquesta opció no està disponible quan l'instal·lador s'executa amb privilegis elevats (d'administrador).</li>
+</ul>
+</li>
+<li>Surt de NVDA: Tanca sense iniciar NVDA ni reiniciar Windows.</li>
+</ul>
 <h3 id="CreatingAPortableCopy">Creació d'una còpia portàtil</h3>
 <p>Si creeu una còpia portàtil directament des del paquet de descàrrega de NVDA, premeu el botó Crea una còpia portàtil.
 Si ja has tancat aquest diàleg o estàs executant una còpia instal·lada de NVDA, selecciona l'element de menú Crear còpia portàtil que trobaràs a Eines del menú de NVDA.</p>
@@ -1221,8 +1280,9 @@ Això inclou desactivar l'ús de la <a href="#AddonsManager" title="Botiga de co
 </ul>
 </li>
 <li>La impossibilitat de llegir les pantalles de control de comptes d'usuari (UAC) quan s'intenta iniciar una aplicació amb privilegis administratius.</li>
-<li>La incapacitat d'admetre l'entrada des d'una pantalla tàctil.</li>
-<li>La incapacitat de proporcionar funcions com ara el mode de navegació i parlant de caràcters escrits a les aplicacions de la Botiga del Windows.</li>
+<li>La incapacitat d'admetre l'entrada des d'una pantalla tàctil.
+Si la lupa de NVDA està activada, l'entrada a la pantalla tàctil no funcionarà correctament.</li>
+<li>La incapacitat de proporcionar funcions com ara el mode de navegació i l'anunci de caràcters escrits a les aplicacions de la Botiga de Windows.</li>
 <li>No es suporta l'atenuació d'àudio.</li>
 </ul>
 <h2 id="GettingStartedWithNVDA">Utilitzant NVDA</h2>
@@ -1295,14 +1355,17 @@ Per descomptat, aquests gestos de toc múltiple també reconeixen quants dits s'
 <p>Hi ha 4 gestos de moviment possibles depenent de la direcció: lliscar cap a l'esquerra, lliscar cap a la dreta, lliscar cap amunt i cap avall.</p>
 <p>Igual que els tocs, es pot utilitzar més d'un dit per realitzar el gest.
 Per tant, són possibles gestos com el moviment de 2 dits cap amunt i el moviment de 4 dits cap a l'esquerra.</p>
+<h5 id="PinchGestures">Els gestos de pessic</h5>
+<p>Col·loca dos dits a la pantalla i mou-los un cap a l'altre per fer un gest de pessic.
+Allunya'ls l'un de l'altre per fer un gest de pinçament.</p>
 <h4 id="TouchModes">Modes tàctils</h4>
 <p>Com que hi ha moltes més ordres de NVDA que possibles gestos tàctils, NVDA té diversos modes tàctils entre els quals pots canviar i que fan que certs subconjunts d'ordres estiguin disponibles.
-Els dos modes són el mode text i el mode objecte.
+Els tres modes són el mode de text, el mode objecte i el mode de navegació.
 Algunes ordres de NVDA que apareixen en aquest document poden tenir un mode tàctil entre parèntesis després del gest tàctil.
 Per exemple, lliscar cap amunt (mode de text) significa que l'ordre es realitzarà si llisqueu cap amunt, però només en mode de text.
 Si l'ordre no té un mode a la llista, funcionarà en qualsevol mode.</p>
 <!-- KC:beginInclude -->
-<p>Per alternar els modes tàctils, fes un toc amb 3 dits.</p>
+<p>Per canviar entre modes tàctils, fes un toc de 3 dits.</p>
 <!-- KC:endInclude -->
 
 <h4 id="TouchKeyboard">Teclat tàctil</h4>
@@ -1363,7 +1426,14 @@ En un teclat sense tecla 'aplicacions', premeu 'shift+f10' en el seu lloc.</li>
 <td>majúscules</td>
 <td>majúscules</td>
 <td>cap</td>
-<td>Pausa instantàniament la parla. En premer-lo de nou es continuarà parlant on ho va deixar (si la pausa és compatible amb el sintetitzador actual)</td>
+<td>Pausa instantàniament la veu. En premer-lo de nou es continuarà parlant on ho va deixar (si la pausa és compatible amb el sintetitzador actual)</td>
+</tr>
+<tr>
+<td>Repeteix l'última informació parlada</td>
+<td>'NVDA+x'</td>
+<td>'NVDA+x'</td>
+<td>Cap</td>
+<td>Repeteix l'última informació donada per NVDA. Si prems dues vegades, apareix en una finestra de consulta</td>
 </tr>
 <tr>
 <td>Menú NVDA</td>
@@ -2309,6 +2379,53 @@ Si vols utilitzar-les sense deixar de poder utilitzar les tecles del cursor per 
 <p>Per activar i desactivar la navegació d'una sola lletra per al document actual, prem NVDA+shift+espai.</p>
 <!-- KC:endInclude -->
 
+<h4 id="BrowseModeTouch">Navegació tàctil en mode de navegació</h4>
+<p>Quan s'utilitza un dispositiu amb capacitat tàctil, NVDA ofereix un mode de navegació tàctil addicional per navegar contingut en mode navegació.</p>
+<p>Quan el mode de navegació està actiu en documents compatibles com pàgines web o documents de Word, NVDA pot exposar un mode tàctil de navegació.
+Aquest mode permet als usuaris navegar pels elements estructurals d'un document mitjançant gestos tàctils, de manera similar a la navegació en mode de navegació amb el teclat.</p>
+<p>En el mode tàctil de navegació, els gestos de desplaçament ràpid s'utilitzen per moure's entre elements comuns de documents com enllaços, botons, encapçalaments, camps de formulari, punts de referència i altres estructures de documents.</p>
+<h5 id="gestos-tactils-en-mode-de-navegacio">Gestos tàctils en mode de navegació</h5>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Toc</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selecciona el següent tipus d'element</td>
+<td>Fes un moviment cap avall</td>
+<td>Canvia al següent tipus d'element de navegació en mode de navegació</td>
+</tr>
+<tr>
+<td>Selecciona el tipus d'element anterior</td>
+<td>fes un moviment cap amunt</td>
+<td>Canvia al tipus d'element de navegació anterior del mode de navegació</td>
+</tr>
+<tr>
+<td>Passar al següent element</td>
+<td>Fes un moviment cap a la dreta</td>
+<td>Passa al següent element de mode de navegació del tipus seleccionat</td>
+</tr>
+<tr>
+<td>Passar a l'element anterior</td>
+<td>Fes un moviment cap a l'esquerra</td>
+<td>Es mou a l'element anterior de mode de navegació del tipus seleccionat</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>Quan es selecciona el tipus d'element "per defecte", fer un moviment ràpid a l'esquerra o a la dreta es mou per tots els elements del document.
+Quan es selecciona qualsevol altre tipus d'element, fer un moviment ràpid cap a l'esquerra o la dreta es mou a l'element anterior o següent d'aquest tipus.
+Fer un clic amunt o avall fa cicles entre els tipus d'elements disponibles.</p>
+<p>El tipus d'element seleccionat es recorda per separat per a cada document mentre roman obert.
+Tingues en compte que els gestos en mode tàctil de navegació només tenen efecte quan el mode de navegació està actiu al document.
+Si el focus es desplaça fora del document (per exemple, cap a la barra d'adreces del navegador o la barra de tasques), els gestos del mode tàctil de navegació no navegaran pel document fins que el focus torni a ell en mode navegació.</p>
 <h4 id="TextNavigationCommand">Ordres de navegació del paràgraf de text</h4>
 <p>Podeu saltar al paràgraf de text següent o anterior prement "p" o "maj+p".
 Els paràgrafs de text es defineixen per un grup de text que sembla estar escrit en frases completes.
@@ -2339,6 +2456,7 @@ Aquí teniu una llista d'ordres disponibles:</p>
 <li>Element de menú</li>
 <li>Botó d'interruptor</li>
 <li>Barra de progrés</li>
+<li>Deslitzador</li>
 <li>Referència</li>
 <li>Fórmula matemàtica</li>
 <li>Paràgraf alineat verticalment</li>
@@ -2722,12 +2840,154 @@ Per exemple, si 'fletxaDreta' t'ha tret d'una fracció, 'retrocés' et portarà 
 El mode per defecte es pot configurar al <a href="#MathSettings" title="panell de configuració de matemàtiques">panell de configuració de matemàtiques</a>.
 Tanmateix, en qualsevol moment durant la navegació, pots canviar de mode de navegació utilitzant 'shift+fletxaAmunt/fletxaAvall' per aprofitar les diferents potències de cada mode de navegació.</p>
 <h2 id="Braille">Braille</h2>
-<p>Si tens una pantalla braille, NVDA pot mostrar la informació en braille.
+<p>Si tens accés a una línia braille, NVDA pot mostrar la informació en braille.
 Si la línia braille té un teclat d'estil Perkins, també pots introduir braille contractat o no contractat.
 El braille també es pot mostrar a la pantalla utilitzant el <a href="#BrailleViewer" title="Visualitzador Braille">Visualitzador Braille</a> en lloc d'utilitzar o al mateix temps una pantalla braille física.</p>
 <p>Consulteu la secció <a href="#SupportedBrailleDisplays" title="línies braille compatibles">línies braille compatibles</a> per obtenir informació sobre les línies braille compatibles.
 Aquesta secció també conté informació sobre quines pantalles admeten la funcionalitat de detecció automàtica de línies braille de de NVDA.
 Pots configurar el braille utilitzant la <a href="#BrailleSettings" title="Categoria Braille">Categoria Braille</a> del diàleg <a href="#NVDASettings" title="Configuració de NVDA">Configuració de NVDA</a>.</p>
+<h3 id="BrailleReading">Llegint en Braille</h3>
+<p>Quan es llegeix braille en una línia actualitzable, el text es presenta a la <a href="#BrailleSettingsOutputTable" title="taula de sortida">taula de sortida</a> i <a href="#BrailleMode" title="Mode Braille">Mode Braille</a>.
+Quan el text és més llarg del que cabria a la línia, es poden utilitzar les tecles de desplaçament o altres tecles del dispositiu per navegar sense moure el focus ni el cursor de text.</p>
+<h4 id="AutomaticBrailleScrolling">Desplaçament automàtic en braille</h4>
+<p>El desplaçament automàtic en braille es pot activar per desplaçar la línia a una velocitat establerta.
+Quan s'utilitza aquesta funció, la línia braille es desplaça per presentar informació que és més del que cabria a la línia d'una sola vegada.
+La funció està desactivada per defecte.
+Pots canviar els gestos assignats per utilitzar el desplaçament automàtic en braille al <a href="#InputGestures" title="diàleg de gestos d'entrada">diàleg de gestos d'entrada</a> de NVDA abans que es pugui utilitzar.
+També hi ha gestos disponibles per accelerar o alentir la velocitat del desplaçament automàtic.
+Alternativament, pots <a href="#BrailleAutoScrollRate" title="configurar la velocitat de desplaçament automàtica a la configuració Braille">configurar la velocitat de desplaçament automàtica a la configuració Braille</a>.</p>
+<p>Mentre el braille està desplaçant-se, encara pots utilitzar les ordres de desplaçar-te enrere i desplaçar-te endavant sense deixar de desplaçar-te.
+Desplaçar-se enrere pot ser útil per llegir continguts anteriors de nou.
+Desplaçar-se cap endavant pot ser útil per saltar una línia en blanc, o si la línia que s'està llegint és curta.</p>
+<p>Mentre llegeixes, el desplaçament automàtic en braille s'atura quan passi alguna de les següents situacions:</p>
+<ul>
+<li>Es prem la tecla d'activació de desplaçament automàtic en braille</li>
+<li>L'usuari prem una tecla o un gest que mostraria un nou missatge</li>
+<li>L'enfocament es mou (incloent-hi amb tecles de desplaçament braille)</li>
+<li>S'arriba al final del document</li>
+<li>L'estat del bloqueig o de la pantalla segura canvia (com ara que l'ordinador es bloquegi)</li>
+</ul>
+<h4 id="BrailleReadingGestures">Gestos de lectura en braille</h4>
+<!-- KC:beginInclude -->
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canvia el mode braille</td>
+<td>'NVDA+alt+t'</td>
+<td>Permet alternar entre modes braille disponibles: "seguir cursors" i "mostrar sortida de veu"</td>
+</tr>
+<tr>
+<td>Seguiment braille</td>
+<td>'NVDA+control+t'</td>
+<td>Aquesta opció et permet triar si la línia braille seguirà el focus del sistema / cursor, el navegador d'objectes / cursor de revisió, o ambdós</td>
+</tr>
+<tr>
+<td>Canvia el desplaçament automàtic</td>
+<td>'NVDA+alt+k'</td>
+<td>Canvia si NVDA desplaça periòdicament la pantalla braille per presentar informació massa llarga per mostrar-la d'una sola vegada</td>
+</tr>
+<tr>
+<td>Augmentar la velocitat automàtica de desplaçament</td>
+<td>'NVDA+alt+l'</td>
+<td>Fa que el desplaçament automàtic sigui més ràpid (quan està activat)</td>
+</tr>
+<tr>
+<td>Disminuir la velocitat automàtica de desplaçament</td>
+<td>'NVDA+alt+j'</td>
+<td>Fa que el desplaçament automàtic sigui més lent (quan està activat)</td>
+</tr>
+<tr>
+<td>Alterna entre les formes de cursor braille</td>
+<td>Cap</td>
+<td>Passa per les opcions de forma (patró de punts) del cursor braille</td>
+</tr>
+<tr>
+<td>Alterna entre moviments del cursor del sistema quan enruta el cursor de revisió</td>
+<td>Cap</td>
+<td>alterna pel moviment del cursor braille del sistema quan repassis els estats del cursor de revisió mijansant les tecles d'encaminament del cursor o sensors braille</td>
+</tr>
+<tr>
+<td>Alterna entre mostrar els modes de missatges</td>
+<td>Cap</td>
+<td>Passa per les opcions de mostrar els modes de missatges braille</td>
+</tr>
+<tr>
+<td>Alterna mostrar en braille estats de selecció</td>
+<td>cap</td>
+<td>alterna pels estats de selecció en braille</td>
+</tr>
+<tr>
+<td>Cicle entre els estats de normalització Unicode en braille</td>
+<td>Cap</td>
+<td>Alterna els estats de normalització Unicode en braille</td>
+</tr>
+<tr>
+<td>Mou el braille al enfocament</td>
+<td>Cap</td>
+<td>Trasllada la pantalla braille al focus actual</td>
+</tr>
+<tr>
+<td>Mou el braille a la següent línia</td>
+<td>Cap</td>
+<td>Trasllada la línia braille a la següent línia</td>
+</tr>
+<tr>
+<td>Mou el braille a la línia anterior</td>
+<td>Cap</td>
+<td>Trasllada la línia braille a la línia anterior</td>
+</tr>
+<tr>
+<td>Informació del format en braille</td>
+<td>Cap</td>
+<td>Mostra la informació de format del text sota la cel·la braille</td>
+</tr>
+<tr>
+<td>Dur el cursor cap a o activar l'objecte braille</td>
+<td>Cap</td>
+<td>Encamina el cursor cap a o activa l'objecte sota aquesta cel·la braille</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap enrere</td>
+<td>Cap</td>
+<td>Desplaça la línia braille enrere</td>
+</tr>
+<tr>
+<td>Desplaça la línia braille cap endavant</td>
+<td>Cap</td>
+<td>Desplaça la línia braille cap endavant</td>
+</tr>
+<tr>
+<td>Conmuta el cursor braille</td>
+<td>Cap</td>
+<td>Activa i desactiva el cursor braille</td>
+</tr>
+<tr>
+<td>Conmuta la informació de context en braille</td>
+<td>Cap</td>
+<td>Canvia la manera com es presenta la informació de context en braille</td>
+</tr>
+<tr>
+<td>Conmuta la veu quan navegues en braille</td>
+<td>Cap</td>
+<td>Activa o desactiva la veu quan navegues per línies o paràgrafs amb braille</td>
+</tr>
+<tr>
+<td>Conmuta el caràcter parlat quan polses el sensor braille</td>
+<td>Cap</td>
+<td>Activa o desactiva la parla del caràcter sota el cursor quan polses el sensor braille sobre un carácter en el text</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>Consulteu la <a href="#BrailleSettings" title="Configuració Braille">Configuració Braille</a> de NVDA per a totes les opcions que es poden utilitzar per ajustar la lectura en braille.</p>
 <h3 id="BrailleAbbreviations">Abreviatures de tipus de control, estat i punts de referència</h3>
 <p>Per tal d'encaixar tanta informació com sigui possible en una pantalla braille, s'han definit les següents abreviatures per indicar el tipus i l'estat del control, així com els punts de referència.</p>
 <table>
@@ -3127,6 +3387,42 @@ i per introduir control+alt+t, utilitzeu les ordres "Polsar la tecla de control"
 <p>Quan escriviu en braille contractat, l'ús de les tecles de commutació del modificador farà que la vostra entrada es tradueixi com si haguéssiu premut els punts 7+8.
 A més, la tecla emulada no pot reflectir el braille escrit abans de prémer la tecla modificadora.
 Això vol dir que, per escriure alt+2 amb un codi braille que utilitza un signe numèric, primer heu de polsar Alt i després escriure un signe numèric.</p>
+<h4 id="BrailleInputGestures">Gestos d'entrada en braille</h4>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entrada via línia braille</td>
+<td>qualsevol punt</td>
+<td>Entrades dels punts braille mitjançant el teclat braille</td>
+</tr>
+<tr>
+<td>Esborrar el darrer carácter escrit</td>
+<td>'punt7'</td>
+<td>Esborra l'última cel·la o caràcter braille introduït</td>
+</tr>
+<tr>
+<td>Tradueix l'entrada braille</td>
+<td>'punt7+punt8'</td>
+<td>Tradueix qualsevol entrada en braille</td>
+</tr>
+<tr>
+<td>Tradueix i prem enter</td>
+<td>'punt8'</td>
+<td>Tradueix qualsevol entrada braille i prem la tecla enter</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
 <h2 id="Vision">Visió</h2>
 <p>Tot i que NVDA està dirigit principalment a persones cegues o amb discapacitat visual que utilitzen principalment la parla i/o braille per operar un ordinador, també proporciona instal·lacions integrades per canviar el contingut de la pantalla.
 Dins de NVDA, aquesta ajuda visual s'anomena proveïdor de millora de la visió.</p>
@@ -3164,6 +3460,11 @@ Per a aquesta situació, NVDA conté una funció anomenada "Cortina de pantalla"
 <td>'NVDA+control+escape'</td>
 <td>Activa per fer que la pantalla sigui negra o desactiva per mostrar el contingut de la pantalla. Si premeu una vegada, la cortina de pantalla s'activa fins que reinicieu NVDA. Premeu dues vegades, la cortina de pantalla s'habilita fins que la desactiveu.</td>
 </tr>
+<tr>
+<td>Informa sobre l'estat de la cortina de pantalla</td>
+<td>Cap</td>
+<td>Anuncia l'estat actual de la cortina de pantalla, si està desactivada, activada o en mode temporal.</td>
+</tr>
 </tbody>
 </table>
 <!-- KC:endInclude -->
@@ -3172,6 +3473,142 @@ Per a aquesta situació, NVDA conté una funció anomenada "Cortina de pantalla"
 Per exemple, no pots <a href="#Win10Ocr" title="utilitzar OCR">utilitzar OCR</a>.
 Algunes utilitats de captura de pantalla també poden no funcionar.</p>
 <p>Tingueu en compte que mentre la lupa de Windows està en funcionament i s'utilitzen colors de pantalla invertits, la cortina de pantalla no es pot activar.</p>
+<h2 id="Magnifier">Lupa</h2>
+<p>NVDA inclou una funció de Lup integrada que et permet fer zoom i ampliar parts de la pantalla.
+Aquesta funció és especialment útil per a usuaris amb baixa visió que necessiten ampliar el contingut a la pantalla, o per a usuaris que volen aplicar filtres de color per reduir la fatiga ocular o millorar la llegibilitat.</p>
+<p>La Lupa de NVDA funciona com una lupa de pantalla completa, és a dir, amplia tota la pantalla seguint el focus del sistema o el punter del ratolí.
+Ofereix diverses opcions de configuració per personalitzar l'experiència d'ampliació segons les teves necessitats.</p>
+<h3 id="MagnifierToggle">Activació i desactivació de la Lupa</h3>
+<p>Per activar o desactivar la lupa, prem 'NVDA+shift+w'.
+La tecla "Augmentar el nivell d'ampliació", 'NVDA+guió', iniciarà la lupa si no està en funcionament.
+Quan està desactivat, la pantalla torna a la seva mida normal.
+Com en altres configuracions de NVDA, l'estat de la Lupa es manté entre sessions.</p>
+<h3 id="MagnifierCommands">Comandes de Lupa</h3>
+<p>Un cop la lupa està activada, pots utilitzar les següents ordres de teclat per controlar-la:</p>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tecla</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activa i desactiva la lupa</td>
+<td>'NVDA+shift+w'</td>
+<td>Activa o desactiva la lupa</td>
+</tr>
+<tr>
+<td>Augmenta el nivell d'ampliació</td>
+<td>'NVDA+guió'</td>
+<td>Augmenta el nivell de zoom. Engega la lupa si encara no està en funcionament.</td>
+</tr>
+<tr>
+<td>Disminueix el nivell d'ampliació</td>
+<td>'NVDA+shift+guió'</td>
+<td>Disminueix el nivell de zoom</td>
+</tr>
+<tr>
+<td>Alterna entre els filtres de color</td>
+<td>'NVDA+shift+i'</td>
+<td>Passa pels filtres de color disponibles (normal, escala de grisos, invertit)</td>
+</tr>
+<tr>
+<td>Alterna entre els modes de seguiment</td>
+<td>Cap</td>
+<td>Alterna a través dels modes de seguiment (centre, relatiu)</td>
+</tr>
+<tr>
+<td>Mostra la visió general de tota la pantalla</td>
+<td>'NVDA+shift+l'</td>
+<td>Temporalment mostra una visió general de tota la pantalla</td>
+</tr>
+<tr>
+<td>Desplaça a l'esquerra</td>
+<td>'NVDA+alt+fletxa esquerra'</td>
+<td>Mou la vista ampliada a l'esquerra per la mida de pas de desplaçament configurada</td>
+</tr>
+<tr>
+<td>Desplaça cap a la dreta</td>
+<td>'NVDA+alt+fletxa dreta'</td>
+<td>Mou la vista ampliada a la dreta per la mida de pas de desplaçament configurada</td>
+</tr>
+<tr>
+<td>Desplaçament cap amunt</td>
+<td>'NVDA+alt+fletxaAmunt'</td>
+<td>Mou la vista ampliada cap amunt segons la mida del pas de desplaçament configurat</td>
+</tr>
+<tr>
+<td>Desplaçament cap avall</td>
+<td>'NVDA+alt+FletxaAvall'</td>
+<td>Desplaça la vista ampliada cap avall segons la mida del pas de desplaçament configurat</td>
+</tr>
+<tr>
+<td>Desplaça cap a la vora esquerra</td>
+<td>'NVDA+shift+alt+FletxaEsquerra'</td>
+<td>Mou la vista ampliada directament a la vora esquerra de la pantalla</td>
+</tr>
+<tr>
+<td>Desplaça cap a la vora dreta</td>
+<td>'NVDA+shift+alt+fletxa dreta'</td>
+<td>Mou la vista ampliada directament a la vora dreta de la pantalla</td>
+</tr>
+<tr>
+<td>Desplaça cap a la vora superior</td>
+<td>'NVDA+shift+alt+fletxaAmunt'</td>
+<td>Mou la vista ampliada directament a la vora superior de la pantalla</td>
+</tr>
+<tr>
+<td>Desplaça cap a la vora inferior</td>
+<td>'NVDA+shift+alt+FletxaAvall'</td>
+<td>Mou la vista ampliada directament a la vora inferior de la pantalla</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<h3 id="MagnifierZoomLevels">Nivells de zoom</h3>
+<p>La lupa admet nivells de zoom des de 1.0 (sense ampliació) fins a 50.0 (ampliació màxima).
+Pots ajustar el nivell de zoom utilitzant les ordres d'ampliació ('NVDA+guió') i reducció ('NVDA+shift+guió').
+Cada premsa augmenta o disminueix el zoom en un increment fix.</p>
+<h3 id="MagnifierColorFilters">Filtres de color</h3>
+<p>Els filtres de color poden ajudar els usuaris amb certes discapacitats visuals o sensibilitat a la llum modificant els colors que es mostren a la pantalla.
+La lupa ofereix tres opcions de filtre de color:</p>
+<ul>
+<li>Normal: No s'aplica cap modificació de color. Aquesta és la configuració per defecte.</li>
+<li>Escala de grisos: Converteix tots els colors en tons de grisos, cosa que pot ajudar a reduir la fatiga visual i millorar el contrast per a alguns usuaris.</li>
+<li>Invertit: Inverteix tots els colors de la pantalla (el negre esdevé blanc, el blanc esdevé negre, etc.), cosa que pot ser útil per a usuaris que prefereixen text clar sobre fons foscos o que tenen fotofòbia.</li>
+</ul>
+<p>Per passar pels filtres disponibles, prem 'NVDA+shift+i'.</p>
+<h3 id="MagnifierTrackingMode">Modes de seguiment</h3>
+<p>La lupa ofereix diferents modes per seguir el ratolí, enfocar el sistema, el cursor de revisió i el navegador d'objectes, i determinar quina part de la pantalla ampliar:</p>
+<ul>
+<li>Centre: L'àrea ampliada està centrada en la posició actualment seguida.
+Aquest mode manté l'element seguit al centre de la pantalla i s'enganxa a la vora de la pantalla.</li>
+<li>Relatiu: L'àrea ampliada manté la posició relativa de l'element seguit segons la seva posició a la pantalla.</li>
+</ul>
+<p>Per alternar entre els modes de seguiment, assigneu un gest personalitzat utilitzant el diàleg <a href="#InputGestures" title="Gestos d'entrada">Gestos d'entrada</a>.</p>
+<h3 id="MagnifierScreenOverview">Mostra la visió general de tota la pantalla</h3>
+<p>La lupa pot mostrar temporalment una visió general de tota la pantalla, cosa que la fa útil per a presentacions o quan necessites entendre ràpidament la disposició general de la pantalla.</p>
+<p>Això és útil quan vols:</p>
+<ul>
+<li>Mostrar el context al teu públic durant una presentació abans de fer zoom en detalls específics</li>
+<li>Visualitzar temporalment la disposició de pantalla completa mentre amplies</li>
+</ul>
+<p>Per mostrar una visió general de tota la pantalla, prem 'NVDA+shift+l'.
+La lupa farà llavors:</p>
+<ol>
+<li>Ampliació suau per mostrar la pantalla completa (nivell de zoom 1.0x)</li>
+<li>Moviment del ratolí pel monitor</li>
+<li>Quan el ratolí romangui quiet durant aproximadament 2 segons, fes automàticament zoom de nou al nivell original de zoom a la nova posició del ratolí</li>
+</ol>
+<p>Moure el ratolí abans que es produeixi el zoom enrere et dóna més temps per veure la pantalla completa.</p>
+<h3 id="MagnifierSettings">Configuració de la lupa</h3>
+<p>La lupa es pot configurar a la categoria "Lupa" del diàleg de Configuració de NVDA ('NVDA+control+w').
+Consulteu la secció <a href="#MagnifierSettingsCategory" title="Configuració de lupa">Configuració de lupa</a> per a més detalls sobre les opcions disponibles.</p>
 <h2 id="ContentRecognition">Reconeixement de contingut</h2>
 <p>Quan els autors no proporcionen prou informació perquè un usuari de lector de pantalla pugui determinar el contingut d'alguna cosa, es poden utilitzar diverses eines per intentar reconèixer el contingut d'una imatge.
 NVDA admet la funcionalitat de reconeixement òptic de caràcters (OCR) integrada a Windows 10 i posteriors per reconèixer text d'imatges.
@@ -3604,9 +4041,10 @@ Aquesta opció només està disponible per a còpies instal·lades de NVDA.</p>
 <p>Si inicieu la sessió al Windows proporcionant un nom d'usuari i una contrasenya, l'activació d'aquesta opció farà que NVDA s'iniciï automàticament a la pantalla d'inici de sessió quan s'iniciï Windows.
 Aquesta opció només està disponible per a còpies instal·lades de NVDA.</p>
 <h5 id="GeneralSettingsCopySettings">Utilitza la configuració actualment desada durant l'inici d'inici de sessió i en pantalles segures (requereix privilegis d'administrador)</h5>
-<p>En prémer aquest botó, es copia la configuració d'usuari de NVDA desada al directori de configuració del sistema de NVDA, de manera que NVDA l'utilitzarà durant l'inici de sessió i quan s'executi en Control de comptes d'usuari (UAC) i altres <a href="#SecureScreens" title="pantalles segures">pantalles segures</a>.
-Per assegurar-te que tots els teus paràmetres es transfereixen, assegura't de desar primer la configuració amb control+NVDA+c o Desa la configuració al menú NVDA.
-Aquesta opció només està disponible per a còpies instal·lades de NVDA.</p>
+<p>Prémer aquest botó et permetrà copiar la configuració d'usuari actualment desada de NVDA al directori de configuració del sistema de NVDA, de manera que NVDA l'utilitzarà durant l'inici de sessió i quan s'executi a Control de Compte d'Usuari (UAC) i altres <a href="#SecureScreens" title="pantalles segures">pantalles segures</a>.
+Per assegurar-te que totes les teves configuracions estan transferides, assegura't de desar-la primer amb control+NVDA+c o Desa la configuració al menú NVDA.
+Quan es prem aquest botó, primer s'obre el diàleg <a href="#CopyAddonsToSystemProfileDialog" title="Copiar la configuració a nivell de sistema">Copiar la configuració a nivell de sistema</a> on pots triar els complements que vols copiar a la configuració del sistema.</p>
+<p>Aquesta opció només està disponible per a còpies instal·lades de NVDA.</p>
 <h5 id="GeneralSettingsCheckForUpdates">Comprovar automàticament si hi ha actualitzacions de NVDA</h5>
 <p>Si aquesta opció està activada, NVDA comprovarà automàticament si hi ha versions actualitzades i t'informarà quan hi hagi una actualització disponible.
 També pots comprovar si hi ha actualitzacions manualment seleccionant Buscar actualitzacions a Ajuda al menú de NVDA.
@@ -3667,6 +4105,10 @@ Aquest és un control lliscant que va de 0 a 100: 0 és el més lent, 100 és el
 <p>Aquesta opció és un control lliscant que va de 0 a 100 - 0 és el volum més baix i 100 és el més alt.</p>
 <h5 id="SpeechSettingsInflection">Inflexió</h5>
 <p>Aquesta opció és un control lliscant que us permet triar quanta inflexió (pujada i baixada del to) ha d'utilitzar el sintetitzador per parlar.</p>
+<h5 id="SpeechSettingPunctuationSilence">Pausa natural després de la puntuació</h5>
+<p>Desactivar aquesta opció eliminarà les pauses després dels signes de puntuació.
+Aquesta opció està activada per defecte.
+Aquesta opció només existeix per a veus OneCore de Windows i és compatible amb Windows 10 versió 1803 o posterior.</p>
 <h5 id="SpeechSettingsUseWasapi">Utilitza el sistema modern de sortida d'àudio (WASAPI)</h5>
 <p>Aquesta opció habilita la sortida d'àudio mitjançant l'API de sessió d'àudio del Windows (WASAPI).
 Aquesta opció només existeix per a les veus de l'API de veu de Microsoft versió 5 (SAPI 5).
@@ -3723,9 +4165,10 @@ Aquesta opció s'aplica a tots els sintetitzadors, no només al sintetitzador ac
 <p>Activada per omissió, aquesta opció indica a NVDA si es pot confiar en l'idioma de la veu actual quan es processen símbols i caràcters.
 Si trobeu que NVDA està llegint la puntuació en l'idioma incorrecte per a un sintetitzador o veu en particular, potser voldreu desactivar-ho per forçar NVDA a utilitzar la seva configuració d'idioma global.</p>
 <h5 id="SpeechUnicodeNormalization">Normalització Unicode</h5>
-<p>Quan aquesta opció està activada, la normalització Unicode es realitza en el text que parla NVDA.
+<p>Quan aquesta opció està activada, es realitza la normalització Unicode sobre el text que NVDA pronuncia.
 Això és beneficiós quan es parla de caràcters que es poden representar de diverses maneres.
-NVDA utilitza l'algorisme NFKC (Normalization Form Compatibility Composition), que proporciona, entre d'altres, els següents avantatges:</p>
+NVDA utilitza l'algoritme NFKC (Composició de Compatibilitat de Formularis de Normalització), amb normalització addicional aplicada.
+NFKC ofereix els següents beneficis, entre d'altres:</p>
 <ol>
 <li>
 <p>Les versions en negreta i cursiva dels caràcters que formen part de l'estàndard Unicode i s'utilitzen habitualment a les xarxes socials es normalitzen al seu equivalent compatible més comú.
@@ -3742,12 +4185,16 @@ Aquest aspecte de la normalització també ajuda a llegir equacions a l'editor d
 <p>La normalització Unicode assegura que només s'utilitzarà una forma en tota la sortida de veu, que és la variant d'un sol caràcter.</p>
 </li>
 <li>
-<p>Descomposició d'algunes lligadures, incloent "ij" (lligadura ij) a la seva forma de dues lletres ("ij").</p>
+<p>Descomposició d'algunes lligadures, incloent-hi "ij" (lligadura ij) en la seva forma de dues lletres ("ij").</p>
 </li>
 <li>
 <p>Ordenació estable de modificadors en caràcters compostos, per exemple en hebreu antic.</p>
 </li>
 </ol>
+<p>La normalització addicional a NVDA gestiona variants decoratives de lletres que l'algorisme estàndard NFKC no descompon.
+Certs caràcters Unicode, com les majúscules llatines amb cercles negatius (🅐–🅩) i les majúscules llatines amb quadrat negatiu (🅲–🆉), es tracten com a símbols autònoms segons l'estàndard Unicode i no tenen descomposició de compatibilitat.
+NVDA amplia NFKC mapant aquests caràcters als seus equivalents llatins plans (A–Z).
+Cal tenir en compte que un petit nombre de lletres al quadrat negatiu que tenen semàntica d'emoji (🅰, 🅱 , 🅾 , 🅿 ) s'exclouen d'aquest mapeig per preservar el seu significat distintiu.</p>
 <p>Per alternar la normalització Unicode des de qualsevol lloc, assigneu un gest personalitzat utilitzant el <a href="#InputGestures" title="Diàleg de gestos d'entrada">Diàleg de gestos d'entrada</a>.</p>
 <table>
 <thead>
@@ -4180,6 +4627,12 @@ Es defineixen els símbols següents:</p>
 <h5 id="BrailleSpeakOnNavigating">Parla quan naveguis per línia o paràgraf</h5>
 <p>Si activeu aquesta opció, NVDA llegeix línies o paràgrafs assolits mitjançant els controls de navegació de la línia braille.</p>
 <p>Per alternar aquesta opció des de qualsevol lloc, assigneu un gest personalitzat a "speakOnNavigatingByUnit" a la secció "Braille" del <a href="#InputGestures" title="Diàleg de gestos d'entrada">Diàleg de gestos d'entrada</a>.</p>
+<h5 id="BrailleAutoScrollRate">Velocitat de desplaçament automàtica</h5>
+<p>Aquest control lliscant controla la velocitat a la qual NVDA desplaça la línia braille quan <a href="#AutomaticBrailleScrolling" title="desplaçament automàtic braille">desplaçament automàtic braille</a> està activat, mesurat en cel·les per segon.</p>
+<p>Per augmentar o disminuir la velocitat de desplaçament des de qualsevol lloc, si us plau, assigna gestos personalitzats utilitzant el <a href="#InputGestures" title="diàleg de gestos d'entrada">diàleg de gestos d'entrada</a>.</p>
+<p>El valor mínim (0%) és 1 cel·la per segon, i el màxim (100%) és 20 cel·les per segon.
+Per exemple, amb el valor per defecte de 10 cel·les/segon, si s'utilitza una línia braille de 40 cel·les, la línia es desplaçarà automàticament cada 4 segons.
+Si la línia té 20 cel·les, cada línia es mostrarà durant 2 segons.</p>
 <h5 id="BrailleSettingsWordWrap">Evita separar paraules sempre que sigui possible</h5>
 <p>Si aquesta opció està activada, una paraula que és massa gran per cabre al final de la línia braille no es dividirà.
 En canvi, hi haurà un espai en blanc al final de la línia.
@@ -4403,6 +4856,8 @@ Tanmateix, si vols proporcionar informació en un informe d'error, o activar o d
 Si et preocupa la privacitat, no configuris el nivell de registre amb aquesta opció.</li>
 <li>Depuració: A més dels missatges d'informació, avís i d'entrada/sortida, es registraran missatges addicionals de depuració.
 Igual que l'entrada/sortida, si et preocupa la privacitat, no hauries de posar el nivell de registre en aquesta opció.</li>
+<li>Debug (unredacted): In addition to debug logging, NVDA will not redact secrets such as passwords and API keys from logs.
+Only enable this temporarily when important debugging information is being redacted.</li>
 </ul>
 <h5 id="GeneralSettingsGatherUsageStats">Permet que NV Access reculli estadístiques d'ús de NVDA</h5>
 <p>Si això està activat, NV Access utilitzarà la informació de les comprovacions d'actualització, incloent-hi dades demogràfiques concretes com el sistema operatiu i el país d'origen, per fer el seguiment del nombre d'usuaris de NVDA.
@@ -4436,6 +4891,254 @@ Si només voleu ressaltar el focus i deixar les caselles de selecció del navega
 <p>Es poden proporcionar proveïdors addicionals de millora de la visió a <a href="#AddonsManager" title="Complements de NVDA">Complements de NVDA</a>.
 Quan aquests proveïdors tinguin opcions de configuració ajustables, es mostraran en aquesta categoria de configuració en agrupacions separades.
 Per obtenir la configuració admesa per proveïdor, consulteu la documentació d'aquest proveïdor.</p>
+<h4 id="MagnifierSettingsCategory">Lupa</h4>
+<!-- KC:setting -->
+
+<h5 id="OpenMagnifierSettings">Obrir la configuració de la Lupa</h5>
+<p>Tecla: 'NVDA+control+w'</p>
+<p>La categoria Lupa al diàleg de Configuració de NVDA et permet configurar el comportament per defecte de la funció <a href="#Magnifier" title="Lupa">Lupa</a> integrada de NVDA.
+Totes les opcions d'aquesta categoria entren en vigor immediatament, però seleccionar "Cancel·lar" (o prémer 'Escape') descartarà qualsevol canvi.</p>
+<p>Aquesta categoria de configuració conté les següents opcions:</p>
+<!-- KC:setting -->
+
+<h5 id="MagnifierEnable">Activar la Lupa</h5>
+<p>Tecla: 'NVDA+shift+w'</p>
+<p>Aquesta opció activa o atura la Lupa.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>Desactivada, activada</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>Desactivada</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierZoom">Zoom</h5>
+<p>Aquesta configuració et permet ajustar el nivell de zoom quan utilitzes la lupa.
+El nivell de zoom pot anar des del 100% (sense ampliació) fins al 5000% (ampliació màxima).
+El valor per defecte és el 200%.</p>
+<p>Sempre pots ajustar el nivell de zoom sobre la marxa utilitzant les ordres de ampliació ('NVDA+guió') i reducció ('NVDA+shift+guió') mentre la lupa està activa.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>de 100% a 5000%</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>200%</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:setting -->
+
+<h5 id="MagnifierFilter">Filtre de color</h5>
+<p>Tecla: 'NVDA+shift+i'</p>
+<p>Aquesta opció et permet seleccionar el filtre que vols aplicar quan utilitzis la lupa.</p>
+<p>Les opcions disponibles són:</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>Normal, escala de grisos, invertida</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>Normal</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opció</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>No s'aplica cap modificació de color.</td>
+</tr>
+<tr>
+<td>Escala de grisos</td>
+<td>Converteix tots els colors en tons de gris, cosa que pot ajudar a reduir la fatiga visual i millorar el contrast.</td>
+</tr>
+<tr>
+<td>Invertit</td>
+<td>Inverteix tots els colors de la pantalla, cosa que pot ser útil per a usuaris que prefereixen text clar sobre fons foscos o que tenen fotofòbia.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierPanningStepSize">Mida del pas de desplaçament</h5>
+<p>Aquesta opció et permet establir la mida del pas de desplaçament com a percentatge de la finestra ampliada visible.
+Això vol dir que quan utilitzes comandes de desplaçament manual, la vista ampliada es mourà pel percentatge especificat de la mida visible actual de la finestra.
+Percentatges més alts provoquen moviments més grans, fent que la navegació per la pantalla sigui més ràpida, mentre que els percentatges més baixos proporcionen un control més fi per a una posició precisa.
+La distància real dels píxels s'ajustarà automàticament segons el teu nivell de zoom actual.</p>
+<p>Nota: Les ordres de desplaçament permeten moure manualment la vista ampliada en qualsevol direcció, independentment del mode de seguiment.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>1 a 100</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowMouse">Seguir el ratolí</h5>
+<p>Aquesta casella controla si la lupa ha de seguir el punter del ratolí.
+Quan està activada, l'àrea ampliada es mourà automàticament per seguir el punter del ratolí, cosa que pot ser útil per als usuaris que naveguen principalment amb el ratolí en lloc del teclat.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>Desactivada, activada</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>Activada</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowSystemFocus">Seguir el focus del sistema</h5>
+<p>Aquesta casella controla si la lupa ha de seguir el focus del sistema.
+Quan està activada, l'àrea ampliada es mourà automàticament per seguir el focus del sistema, cosa que pot ser útil per als usuaris que naveguen principalment amb el teclat i volen que la lupa segueixi la seva navegació.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>Desactivada, activada</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>Activada</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowReviewCursor">Seguir el cursor de revisió</h5>
+<p>Aquesta casella determina si la lupa ha de seguir el cursor de revisió.
+Quan està activada, l'àrea ampliada es mourà automàticament per seguir el cursor de revisió, cosa que pot ser útil per als usuaris que utilitzen el cursor de revisió per navegar pel contingut i volen que la lupa segueixi la seva navegació.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>Desactivada, activada</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>Activada</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowNavigatorObject">Seguir el navegador d'objectes</h5>
+<p>Aquesta casella controla si la lupa ha de seguir el navegador d'objectes.
+Quan està activada, l'àrea ampliada es mourà automàticament per seguir el navegador d'objectes, cosa que pot ser útil per als usuaris que utilitzen la navegació per objectes per navegar pel contingut i volen que la lupa segueixi la seva navegació.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>Desactivada, activada</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>Activada</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierTrackingModeSetting">Mode de seguiment</h5>
+<p>Aquesta caixa combinada et permet seleccionar el mode de seguiment quan utilitzes la lupa.
+Per alternar entre els modes de seguiment, assigneu un gest personalitzat utilitzant el diàleg <a href="#InputGestures" title="Gestos d'entrada">Gestos d'entrada</a>.
+Les opcions disponibles són:</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>Centre, Relatiu</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>Centre</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opció</th>
+<th>Descripció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Centre</td>
+<td>L'àrea ampliada sempre està centrada en la posició que es segueix actualment.</td>
+</tr>
+<tr>
+<td>Relatiu</td>
+<td>L'àrea ampliada manté la posició relativa de l'element seguit segons la seva posició a la pantalla.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Teclat</h4>
 <!-- KC:setting -->
 
@@ -4449,8 +5152,8 @@ Aquesta categoria de configuració conté les opcions següents:</p>
 <p>Les caselles d'aquesta llista controlen quines tecles es poden utilitzar com a <a href="#TheNVDAModifierKey" title="Tecles modificadores de NVDA">Tecles modificadores de NVDA</a>. Les tecles següents estan disponibles per triar:</p>
 <ul>
 <li>La tecla bloqueig de majúscules</li>
-<li>La tecla d'inserció al teclat numèric</li>
-<li>La tecla d'inserció estesa (normalment es troba a sobre de les fletxes, a prop de inici i fi)</li>
+<li>La tecla insert al teclat numèric</li>
+<li>La tecla insert estesa (normalment es troba a sobre de les fletxes, a prop de inici i fi)</li>
 </ul>
 <p>Si no es tria cap tecla com a tecla de NVDA, pot ser impossible accedir a moltes ordres de NVDA, per tant, heu de marcar almenys un dels modificadors.</p>
 <!-- KC:setting -->
@@ -4702,7 +5405,13 @@ Si surts de fletxa fora del quadre d'edició, NVDA et tornarà a posar en mode d
 <p>Activada per defecte, aquesta opció et permet triar si els gestos (com ara prémer una tecla) que no donen lloc a una ordre de NVDA i no es consideren una tecla d'ordre en general, han de quedar atrapats per passar al document en què estàs centrat actualment.
 Per exemple, si s'habilita i es prem la lletra j, deuria capturar-se per arribar al document, tot i que no és una ordre de navegació ràpida ni és probable que sigui una ordre a la pròpia aplicació.
 En aquest cas, NVDA li dirà al Windows que reprodueixi un so predeterminat cada vegada que es prem una tecla atrapada.</p>
-<h4 id="DocumentFormattingSettings">Formatació del document</h4>
+<h5 id="BrowseModeSettingsBrowseModeNavigationElements">Elements de navegació tàctil en mode de navegació</h5>
+<p>Aquesta llista et permet triar quins tipus d'elements estan disponibles quan passes entre elements en mode de navegació tàctil.
+Utilitza les caselles per activar o desactivar els tipus d'elements individuals.
+Només apareixeran els tipus d'elements marcats quan et desplaces amunt o avall amb un dit per alternar entre els elements de navegació del mode de navegació.
+Aquesta configuració només afecta la navegació tàctil i no afecta la navegació del mode de navegació amb el teclat.</p>
+<p>Els tipus d'elements disponibles són els disponibles a través de <a href="#SingleLetterNavigation" title="navegació d'una sola lletra">navegació d'una sola lletra</a>.</p>
+<h4 id="DocumentFormattingSettings">Format del document</h4>
 <!-- KC:setting -->
 
 <h5 id="OpenDocumentFormattingSettings">Obrir configuració de format de document</h5>
@@ -4881,6 +5590,27 @@ Si no es poden trobar regles de parla per a la llengua principal, s'utilitza l'a
 <tr>
 <td>Per defecte</td>
 <td>Automàtic (l'idioma de la veu actual si s'admet, o tornar a l'anglès)</td>
+</tr>
+</tbody>
+</table>
+<h6 id="MathSpeechDecimalSeparator">Separador decimal per a nombres</h6>
+<p>Això determina el caràcter utilitzat com a separador decimal quan es llegeixen nombres en matemàtiques.
+Quan s'estableix en Automàtic, el separador es tria segons el llenguatge matemàtic.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>Automàtic, ".", ","</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>Automàtic</td>
 </tr>
 </tbody>
 </table>
@@ -5754,6 +6484,27 @@ Si veus que la veu SAPI 4 que utilitzes deixa de funcionar, pots desactivar aque
 </tr>
 </tbody>
 </table>
+<h5 id="SpeechDictsUseModernRegex">Utilitza el motor modern d'expressions regulars per a les entrades del diccionari de veu</h5>
+<p>Aquesta configuració controla com s'emparellen les entrades d'expressions regulars als <a href="#SpeechDictionaries" title="diccionaris de veu">diccionaris de veu</a>.
+El <a href="https://pypi.org/project/regex/" rel="noopener" target="_blank" title="motor modern">motor modern</a> té millor suport per a escriptures no llatines, com l'hebreu i l'àrab, i ofereix opcions de coincidència més potents.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcions</td>
+<td>Per defecte (Desactivat), Desactivat, Activat</td>
+</tr>
+<tr>
+<td>Per defecte</td>
+<td>Desactivada</td>
+</tr>
+</tbody>
+</table>
 <h5 id="AdvancedSettingsCaretMoveTimeout">Temps d'espera per al moviment del cursor (a MS)</h5>
 <p>Aquesta opció et permet configurar el nombre de mil·lisegons que NVDA esperarà perquè el cursor (punt d'inserció) es mogui en els controls de text editables.
 Si trobeu que NVDA sembla estar seguint incorrectament el cursor, per exemple, sembla que sempre hi ha un caràcter darrere o repeteix línies, potser voldreu provar d'augmentar aquest valor.</p>
@@ -5768,8 +6519,9 @@ El registre d'aquests missatges pot provocar una disminució del rendiment i fit
 Activeu-ne un només si un desenvolupador de NVDA ho indica específicament, per exemple, quan depureu per què un controlador de línia braille no funciona correctament.</p>
 <h5 id="PlayErrorSound">Reprodueix un so per detectar errors registrats</h5>
 <p>Aquesta opció us permet especificar si NVDA reproduirà un so d'error en cas que es registri un error.
-Si tries Només a les versions de prova (per defecte), l'error de reproducció de NVDA només sona si la versió actual de NVDA és una versió de prova (alfa, beta o executada des del codi font).
-Triar Sí permet habilitar els sons d'error sigui quina sigui la teva versió actual de NVDA.</p>
+Choosing "Only in test versions (default)" makes NVDA play error sounds only if the current NVDA version is a test version (alpha, beta or run from source).
+Choosing "Yes" allows to enable error sounds whatever your current NVDA version is.
+Choosing "No" disables error sounds no matter what your current NVDA version is, i.e. even in test versions.</p>
 <h5 id="TextParagraphRegexEdit">Expressió regular per a comandes de navegació ràpida de paràgraf de text</h5>
 <p>Aquest camp permet personalitzar l'expressió regular per detectar paràgrafs de text en mode de navegació.
 La <a href="#TextNavigationCommand" title="ordre de navegació de paràgraf de text">ordre de navegació de paràgraf de text</a> cerca els paràgrafs que coincideixen amb aquesta expressió regular.</p>
@@ -5797,13 +6549,35 @@ També podeu escriure una descripció de la regla al camp Comentari (alguna cosa
 <p>Els diccionaris de veu de NVDA, però, són molt més potents que el simple reemplaçament de paraules.
 El diàleg Afegeix una regla també conté una casella de selecció per dir si voleu que la regla distingeixi entre majúscules i minúscules (el que significa que NVDA hauria de preocupar-se de si els caràcters són majúscules o minúscules.
 NVDA ignora les majúscules i minúscules per defecte).</p>
-<p>Finalment, un conjunt de botons d'opció us permet indicar a NVDA si el vostre patró ha de coincidir en qualsevol lloc, només ha de coincidir si és una paraula completa o s'ha de tractar com una "expressió regular".
-Establir el patró perquè coincideixi com una paraula sencera significa que la substitució només es farà si el patró no es produeix com a part d'una paraula més gran.
-Aquesta condició es compleix si els caràcters immediatament abans i després de la paraula són una altra cosa que una lletra, un número o un guó baix, o si no hi ha cap caràcter.
-Per tant, utilitzant l'exemple anterior de substituir la paraula "ocell" per "granota", si haguéssiu de fer d'això un reemplaçament de paraula sencera, no coincidiria amb "ocells" o "ocell blau".</p>
-<p>Una expressió regular és un patró que conté símbols especials que us permeten fer coincidir amb més d'un caràcter alhora, o coincidir només amb números, o només lletres, com a exemples.
-Les expressions regulars no es tracten en aquesta guia de l'usuari.
-Per a un tutorial introductori, consulteu <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="Guia d'expressions regulars de Python">Guia d'expressions regulars de Python</a>.</p>
+<p>A set of radio buttons allows you to tell NVDA how your pattern should be matched.
+The available types are:</p>
+<ul>
+<li>A qualsevol lloc: El patró pot coincidir a qualsevol lloc del text.</li>
+<li>Paraula completa: La substitució només es farà si el patró es produeix com una paraula completa.
+Això vol dir que el patró no apareix com a part d'una paraula més gran.
+La condició es compleix si els caràcters immediatament abans i després de la paraula no són una lletra, un número o un guió baix, o si no hi ha caràcters en absolut.
+Per exemple, si substitueixes "ocell" per "granota" fent coincidència de paraules senceres, no coincidiria amb "ocells" ni "ocell blau".</li>
+<li>Part de la paraula: El patró ha d'anar precedit o seguit d'un caràcter alfanumèric o subratlla per coincidir.
+Això és útil per fer coincidir parts de paraules compostes.
+Per exemple, si substitueixes "ocell" per "granota" utilitzant part de la coincidència de paraules, coincidiria amb "ocells", "ocell blau" i "ocells blaus", però no la paraula independent "ocell" (perquè no té ni caràcter alfanumèric anterior ni posterior).</li>
+<li>Inici de paraula: El patró ha de tenir un límit de paraula a l'inici i un caràcter alfanumèric o subratllat al final.
+Per exemple, si substitueixes "ocell" per "granota" utilitzant l'inici de la coincidència de paraules, coincidiria amb "ocells" i "ocell blau", però no "cant d'ocell" ni la paraula independent "ocell".</li>
+<li>Fi de la paraula: El patró ha de tenir un caràcter alfanumèric o subratllat al principi i un límit de paraula al final.
+Per exemple, si substitueixes "ocell" per "granota" utilitzant la coincidència final de paraula, coincidiria amb "cant d'ocell", però no "ocells" ni la paraula independent "ocell".</li>
+<li>Expressió regular: El patró es tracta com una expressió regular, que és un patró que conté símbols especials que permeten coincidir en més d'un caràcter alhora, o fer coincidir només amb números, o només lletres, per posar alguns exemples.
+Les expressions regulars no estan cobertes en aquesta guia d'usuari.
+Per a un tutorial introductori, consulteu <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="Guia d'expressions regulars de Python">Guia d'expressions regulars de Python</a>.
+També considera <a href="#SpeechDictsUseModernRegex" title="l'opció avançada per permetre un motor més modern">l'opció avançada per permetre un motor més modern</a>, especialment quan es tracta amb escriptures no llatines, com l'hebreu i l'àrab.</li>
+<li>Comodins d'estil shell Unix: El patró utilitza comodins d'estil shell Unix per a les combinacions.
+Per exemple:<ul>
+<li>'*' coincideix amb qualsevol seqüència de caràcters.</li>
+<li>'?' coincideix amb un sol caràcter.</li>
+<li>'[az]' coincideix amb a o z.</li>
+<li>'[A-Z]' coincideix amb qualsevol lletra minúscula de la A a la Z.</li>
+<li>'[!a-z]' coincideix amb qualsevol caràcter excepte les lletres minúscules de la a a la z.</li>
+</ul>
+</li>
+</ul>
 <h4 id="SymbolPronunciation">Puntuació/pronunciació dels símbols</h4>
 <p>Aquest diàleg us permet canviar la forma en què es pronuncia la puntuació i altres símbols, així com el nivell de símbol en què es diuen.</p>
 <p>L'idioma per al qual s'està editant la pronunciació del símbol es mostrarà al títol del diàleg.
@@ -5866,31 +6640,29 @@ Per exemple, establir l'entrada emulada 'a' i configurar un gest d'entrada de 'c
 Tingueu en compte, però, que aquesta opció es pot canviar a les opcions generals del menú de preferències.
 Per desar la configuració manualment en qualsevol moment, selecciona l'element Desa la configuració al menú de NVDA.</p>
 <p>Si mai comets un error amb la configuració i has de tornar a la configuració desada, selecciona l'element "Tornar a la configuració desada" al menú de NVDA.
-També pots restablir la configuració als valors predeterminats de fàbrica originals seleccionant Restablir la configuració als valors predeterminats de fàbrica, que també es troba al menú de NVDA.</p>
+També pots restablir la configuració als valors predeterminats de fàbrica originals seleccionant Restablir la configuració als valors predeterminats de fàbrica, que també es troba al menú de NVDA.
+Després de reiniciar, apareixerà un diàleg que et permetrà desfer el restabliment i restaurar la configuració anterior.</p>
 <p>Les següents ordres de tecla de NVDA també són útils:</p>
 <!-- KC:beginInclude -->
 
 <table>
 <thead>
 <tr>
-<th>Nom</th>
-<th>Tecla d'escriptori</th>
-<th>Tecla del portàtil</th>
-<th>Descripció</th>
+<th>Name</th>
+<th>Key</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Guarda la configuració</td>
-<td>'NVDA+control+c'</td>
-<td>'NVDA+control+c'</td>
-<td>Desa la configuració actual perquè no es perdi quan surts de NVDA</td>
+<td>Save configuration</td>
+<td><code>NVDA+control+c</code></td>
+<td>Saves your current configuration so that it is not lost when you exit NVDA</td>
 </tr>
 <tr>
-<td>Reverteix la configuració</td>
-<td>'NVDA+control+r'</td>
-<td>'NVDA+control+r'</td>
-<td>Prement una vegada restableix la configuració a l'última vegada que la vau desar. Si premeu tres vegades, es restablirà als valors predeterminats de fàbrica.</td>
+<td>Revert configuration</td>
+<td><code>NVDA+control+r</code></td>
+<td>Pressing once resets your configuration to when you last saved it. Pressing three times will reset it back to factory defaults without showing the undo dialog.</td>
 </tr>
 </tbody>
 </table>
@@ -6389,10 +7161,10 @@ Per a més informació, llegiu la secció detallada: <a href="#AddonsManager" ti
 <h3 id="CreatePortableCopy">Crear còpia portàtil</h3>
 <p>Això obrirà un diàleg que et permetrà crear una còpia portàtil de NVDA a partir de la versió que s'està executant actualment.</p>
 <p>Segueix les instruccions a <a href="#CreatingAPortableCopy" title="Creació d'una còpia portàtil">Creació d'una còpia portàtil</a> per a més informació.</p>
-<h3 id="RunCOMRegistrationFixingTool">Executar l'eina COM registration fixing...</h3>
+<h3 id="RunCOMRegistrationFixingTool">Run System Accessibility Repair Tool...</h3>
 <p>De vegades, poden aparèixer problemes amb el Registre de Windows, que fan que NVDA es comporti de manera anòmala.
 Això pot ser causat, per exemple, per la instal·lació o desinstal·lació de certs programes (com Adobe Reader o Math Player), així com per actualitzacions de Windows i altres esdeveniments.
-L'Eina COM Registration Fixing intenta solucionar aquests problemes reparant les entrades d'accessibilitat al registre.</p>
+L'Eina de Reparació d'Accessibilitat del Sistema intenta solucionar aquests problemes reparant les entrades d'accessibilitat al registre.</p>
 <p>Els tipus de problemes que aquesta eina pot solucionar inclouen:</p>
 <ul>
 <li>NVDA informa "desconegut" o "panell" quan navega per navegadors com Firefox o Edge, programes de correu com Thunderbird, l'Explorador de Windows, la barra de tasques i altres programes.</li>
@@ -7067,14 +7839,12 @@ Aquestes inclouen:</p>
 <li>Baum: SuperVario, PocketVario, VarioUltra, Pronto!, SuperVario2, Vario 340</li>
 <li>HumanWare: Brailliant, BrailleConnect, Brailliant2</li>
 <li>APH: Refreshabraille</li>
-<li>Orbit: Orbit Reader 20</li>
+<li>Orbit: Orbit Reader 20, Orbit Reader 40</li>
 </ul>
 <p>Algunes altres pantalles fabricades per Baum també podrien funcionar, tot i que això no s'ha provat.</p>
 <p>Si connectes per USB línies que no utilitzen HID, primer has d'instal·lar els controladors USB proporcionats pel fabricant.
 VarioUltra i Pronto+ utilitzen HID.
-Refreshabraille i Orbit Reader 20 poden utilitzar HID si estan configurats adequadament.</p>
-<p>El mode sèrie USB de Orbit Reader 20 actualment només és compatible amb Windows 10 i versions posteriors.
-Generalment s'hauria d'utilitzar USB HID en lloc d'això.</p>
+El Refreshabraille, l'Orbit Reader 20 i l'Orbit Reader 40 poden utilitzar HID si estan configurats adequadament.</p>
 <p>A continuació es presenten les asignacions de tecles per a aquestes línies amb NVDA.
 Si us plau, consulteu la documentació de la vostra línia per a descripcions d'on es poden trobar aquestes tecles.</p>
 <!-- KC:beginInclude -->
@@ -9858,7 +10628,9 @@ L'esperança és que tots els futurs models de línia Braille creats per qualsev
 NVDA pot mostrar una sola línia braille a la línia de visualització braille dedicada del dispositiu, o diverses línies braille a la seva àrea gràfica tàctil.
 El model A300 té una àrea gràfica tàctil de 120 per 80 punts, que pot encaixar 8 línies de 20 cel·les cadascuna.</p>
 <p>Pots configurar si NVDA mostra braille a la línia de visualització braille dedicada o a la zona gràfica tàctil mitjançant l'opció Destinació Braille a la configuració Braille de NVDA per a aquest controlador.</p>
-<p>S'admeten tecles de desplaçament, però a causa de la limitació dels botons del dispositiu, actualment no hi ha altres ordres ni capacitats de guiat del cursor disponibles.</p>
+<p>El Dot Pad té tecles de desplaçament esquerra i dreta i quatre tecles de funció (f1 a f4).
+Es poden prémer diversos botons simultàniament per crear gestos de combinació (per exemple, 'f1+panEsquerra'), que es poden assignar mitjançant el diàleg de Gestos d'Entrada.
+A part del desplaçament, no s'assignen altres ordres per defecte.</p>
 <p>El controlador de la pantalla braille Dot Pad ara admet la detecció automàtica de dispositius connectats per USB.
 Tanmateix, la detecció automàtica està desactivada per defecte perquè el dispositiu utilitza identificadors USB genèrics que podrien entrar en conflicte amb altres dispositius.
 Per activar la detecció automàtica, ves a la configuració Braille de NVDA i marca "Dot Pad" a la llista de detecció automàtica.
@@ -9871,18 +10643,18 @@ Assegura't d'aixecar completament la mà del dispositiu quan naveguis amb NVDA, 
 <table>
 <thead>
 <tr>
-<th>Nom</th>
-<th>Tecla</th>
+<th>Name</th>
+<th>Key</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Desplaça la pantalla braille cap enrere</td>
-<td>'desplaçament_esquerre'</td>
+<td>'tecla de desplaçament Esquerra'</td>
 </tr>
 <tr>
 <td>Desplaça la pantalla braille cap endavant</td>
-<td>'desplaçament_dret'</td>
+<td>'tecla de desplaçament Dreta'</td>
 </tr>
 </tbody>
 </table>
@@ -10019,7 +10791,7 @@ Aquests paràmetres s'han de situar després de l'opció, separats de l'opció p
 <tr>
 <td>'-l LOGLEVEL'</td>
 <td>'--log-level=LOGLEVEL'</td>
-<td>El nivell més baix de missatge registrat (depuració 10, entrada/sortida 12, avís de depuració 15, informació 20, desactivat 100). El registre sempre està desactivat si el mode segur està activat.</td>
+<td>El nivell més baix de missatge registrat (depuració (sense censurar) 5, depuració 10, entrada/sortida 12, avís de depuració 15, informació 20, desactivat 100). El registre sempre està desactivat si el mode segur està activat.</td>
 </tr>
 <tr>
 <td>'-c CONFIGPATH'</td>
@@ -10072,9 +10844,9 @@ Aquests paràmetres s'han de situar després de l'opció, separats de l'opció p
 <td>Instal·la NVDA en silenci (no inicia la còpia nova instal·lada)</td>
 </tr>
 <tr>
-<td>Cap</td>
-<td>'--enable-start-on-logon=True</td>
-<td>False'</td>
+<td>None</td>
+<td><code>--enable-start-on-logon=True|False</code></td>
+<td>When installing, enable NVDA's <a href="#StartAtWindowsLogon" title="Use NVDA during Windows sign-in">Use NVDA during Windows sign-in</a></td>
 </tr>
 <tr>
 <td>Cap</td>
@@ -10160,5 +10932,6 @@ Aquests valors s'emmagatzemen al registre sota la clau 'HKEY_LOCAL_MACHINE\SOFTW
 <p>Si necessiteu més informació o assistència sobre NVDA, visiteu el <a href="https://www.nvaccess.org" rel="noopener" target="_blank" title="lloc web de NVDA">lloc web de NVDA</a>.
 Aquí podeu trobar documentació addicional, així com suport tècnic i recursos comunitaris.
 Aquest lloc també proporciona informació i recursos sobre el desenvolupament de NVDA.</p>
+<!-- markdownlint-disable-file MD060 -->
 </body>
 </html>

@@ -2,16 +2,16 @@
 <html lang="hr" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 – Priručnik za korisnike</title>
+<title>NVDA 2026.2 – Priručnik za korisnike</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="nvda-202611-prirucnik-za-korisnike">NVDA 2026.1.1 – Priručnik za korisnike</h1>
+<body><h1 id="nvda-20262-prirucnik-za-korisnike">NVDA 2026.2 – Priručnik za korisnike</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611-prirucnik-za-korisnike" title="NVDA 2026.1.1 – Priručnik za korisnike">NVDA 2026.1.1 – Priručnik za korisnike</a><ul>
+<li><a href="#nvda-20262-prirucnik-za-korisnike" title="NVDA 2026.2 – Priručnik za korisnike">NVDA 2026.2 – Priručnik za korisnike</a><ul>
 <li><a href="#Introduction" title="Uvod">Uvod</a><ul>
 <li><a href="#GeneralFeatures" title="Glavne značajke">Glavne značajke</a></li>
 <li><a href="#SystemRequirements" title="Preduvjeti za pokretanje NVDA čitača">Preduvjeti za pokretanje NVDA čitača</a><ul>
@@ -65,6 +65,7 @@
 <li><a href="#StartAtWindowsLogon" title="Koristi NVDA prilikom prijave">Koristi NVDA prilikom prijave</a></li>
 <li><a href="#CreateDesktopShortcut" title="Izradi prečac na radnoj površini (kontrol+alt+F5)">Izradi prečac na radnoj površini (kontrol+alt+F5)</a></li>
 <li><a href="#CopyPortableConfigurationToCurrentUserAccount" title="Kopiraj prijenosnu konfiguraciju na ovaj korisnički račun">Kopiraj prijenosnu konfiguraciju na ovaj korisnički račun</a></li>
+<li><a href="#RestartWindowsAfterInstall" title="Ponovno pokreni Windows nakon instalacije">Ponovno pokreni Windows nakon instalacije</a></li>
 </ul>
 </li>
 <li><a href="#CreatingAPortableCopy" title="Izrada prijenosne kopije">Izrada prijenosne kopije</a></li>
@@ -87,6 +88,7 @@
 <li><a href="#TouchGestures" title="Dodirne geste">Dodirne geste</a><ul>
 <li><a href="#Taps" title="Dodiri">Dodiri</a></li>
 <li><a href="#Flicks" title="Klizanje">Klizanje</a></li>
+<li><a href="#PinchGestures" title="Geste štipanja">Geste štipanja</a></li>
 </ul>
 </li>
 <li><a href="#TouchModes" title="Modusi dodira">Modusi dodira</a></li>
@@ -117,6 +119,10 @@
 </li>
 <li><a href="#BrowseMode" title="Modus čitanja">Modus čitanja</a><ul>
 <li><a href="#SingleLetterNavigation" title="Brzo kretanje pomoću početnih slova">Brzo kretanje pomoću početnih slova</a><ul>
+<li><a href="#BrowseModeTouch" title="Kretanje korištenjem dodirnih gesti u modusu čitanja">Kretanje korištenjem dodirnih gesti u modusu čitanja</a><ul>
+<li><a href="#dodirne-geste-u-modusu-citanja" title="Dodirne geste u modusu čitanja">Dodirne geste u modusu čitanja</a></li>
+</ul>
+</li>
 <li><a href="#TextNavigationCommand" title="Prečac za kretanje po odlomcima">Prečac za kretanje po odlomcima</a></li>
 <li><a href="#OtherNavigationCommands" title="Drugi prečaci za kretanje">Drugi prečaci za kretanje</a></li>
 </ul>
@@ -137,9 +143,15 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Brajica">Brajica</a><ul>
+<li><a href="#BrailleReading" title="Čitanje brajice">Čitanje brajice</a><ul>
+<li><a href="#AutomaticBrailleScrolling" title="Automatsko pomicanje brajičnog redka">Automatsko pomicanje brajičnog redka</a></li>
+<li><a href="#BrailleReadingGestures" title="Prečaci za čitanje brajice">Prečaci za čitanje brajice</a></li>
+</ul>
+</li>
 <li><a href="#BrailleAbbreviations" title="Kratice za orijentire, stanja i vrste kontrola">Kratice za orijentire, stanja i vrste kontrola</a></li>
 <li><a href="#BrailleInput" title="Brajični unos">Brajični unos</a><ul>
 <li><a href="#BrailleKeyboardShortcuts" title="Izvođenje tipkovničkih prečaca">Izvođenje tipkovničkih prečaca</a></li>
+<li><a href="#BrailleInputGestures" title="Prečaci za upisivanje brajice">Prečaci za upisivanje brajice</a></li>
 </ul>
 </li>
 </ul>
@@ -147,6 +159,16 @@
 <li><a href="#Vision" title="Vid">Vid</a><ul>
 <li><a href="#VisionFocusHighlight" title="Vizualno praćenje">Vizualno praćenje</a></li>
 <li><a href="#VisionScreenCurtain" title="Ekranska zavjesa">Ekranska zavjesa</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Povećalo">Povećalo</a><ul>
+<li><a href="#MagnifierToggle" title="Uključivanje i isključivanje povećala">Uključivanje i isključivanje povećala</a></li>
+<li><a href="#MagnifierCommands" title="Prečaci povećala">Prečaci povećala</a></li>
+<li><a href="#MagnifierZoomLevels" title="Razine uvećanja">Razine uvećanja</a></li>
+<li><a href="#MagnifierColorFilters" title="Filteri za boje">Filteri za boje</a></li>
+<li><a href="#MagnifierTrackingMode" title="Modusi praćenja">Modusi praćenja</a></li>
+<li><a href="#MagnifierScreenOverview" title="Prikaži pregled cijelog zaslona">Prikaži pregled cijelog zaslona</a></li>
+<li><a href="#MagnifierSettings" title="Postavke povećala">Postavke povećala</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Prepoznavanje sadržaja">Prepoznavanje sadržaja</a><ul>
@@ -211,6 +233,7 @@
 <li><a href="#SpeechSettingsPitch" title="Visina">Visina</a></li>
 <li><a href="#SpeechSettingsVolume" title="Glasnoća">Glasnoća</a></li>
 <li><a href="#SpeechSettingsInflection" title="Intonacija">Intonacija</a></li>
+<li><a href="#SpeechSettingPunctuationSilence" title="Prirodna pauza poslije interpunkcije">Prirodna pauza poslije interpunkcije</a></li>
 <li><a href="#SpeechSettingsUseWasapi" title="Koristi suvremeni sustav izlaza zvuka (WASAPI)">Koristi suvremeni sustav izlaza zvuka (WASAPI)</a></li>
 <li><a href="#SpeechSettingsLanguageSwitching" title="Automatsko mijenjanje jezika">Automatsko mijenjanje jezika</a></li>
 <li><a href="#SpeechSettingsDialectSwitching" title="Automatsko mijenjanje dijalekta">Automatsko mijenjanje dijalekta</a></li>
@@ -260,6 +283,7 @@
 </li>
 <li><a href="#BrailleSpeakOnRouting" title="Izgovaranje znakova prilikom usmjeravanja kursora u tekstu">Izgovaranje znakova prilikom usmjeravanja kursora u tekstu</a></li>
 <li><a href="#BrailleSpeakOnNavigating" title="Govori pri kretanju po redku ili odlomku">Govori pri kretanju po redku ili odlomku</a></li>
+<li><a href="#BrailleAutoScrollRate" title="Automatska brzina pomicanja">Automatska brzina pomicanja</a></li>
 <li><a href="#BrailleSettingsWordWrap" title="Izbjegavajte dijeljenje riječi kada je to moguće">Izbjegavajte dijeljenje riječi kada je to moguće</a></li>
 <li><a href="#BrailleUnicodeNormalization" title="Unicode normalizacija">Unicode normalizacija</a></li>
 <li><a href="#BrailleSettingsInterruptSpeech" title="Prekidanje govora tijekom pomicanja">Prekidanje govora tijekom pomicanja</a></li>
@@ -294,6 +318,19 @@
 <li><a href="#VisionSettings" title="Vid">Vid</a><ul>
 <li><a href="#VisionSettingsFocusHighlight" title="Vizualno praćenje">Vizualno praćenje</a></li>
 <li><a href="#VisionSettingsThirdPartyVisualAids" title="Postavke za vizualna pomagala treće strane">Postavke za vizualna pomagala treće strane</a></li>
+</ul>
+</li>
+<li><a href="#MagnifierSettingsCategory" title="Povećalo">Povećalo</a><ul>
+<li><a href="#OpenMagnifierSettings" title="Otvori postavke povećala">Otvori postavke povećala</a></li>
+<li><a href="#MagnifierEnable" title="Uključi povećalo">Uključi povećalo</a></li>
+<li><a href="#MagnifierZoom" title="Uvećanje">Uvećanje</a></li>
+<li><a href="#MagnifierFilter" title="Filter boje">Filter boje</a></li>
+<li><a href="#MagnifierPanningStepSize" title="Veličina koraka pomicanja">Veličina koraka pomicanja</a></li>
+<li><a href="#MagnifierFollowMouse" title="Prati &amp;miš">Prati &amp;miš</a></li>
+<li><a href="#MagnifierFollowSystemFocus" title="Prati &amp;fokus sustava">Prati &amp;fokus sustava</a></li>
+<li><a href="#MagnifierFollowReviewCursor" title="Prati &amp;pregledni kursor">Prati &amp;pregledni kursor</a></li>
+<li><a href="#MagnifierFollowNavigatorObject" title="Prati &amp;objekt navigatora">Prati &amp;objekt navigatora</a></li>
+<li><a href="#MagnifierTrackingModeSetting" title="Modus praćenja">Modus praćenja</a></li>
 </ul>
 </li>
 <li><a href="#KeyboardSettings" title="Tipkovnica">Tipkovnica</a><ul>
@@ -371,6 +408,7 @@
 <li><a href="#BrowseModeSettingsAutoPassThroughOnCaretMove" title="Automatski modus fokusa pri pomicanju kursora sustava">Automatski modus fokusa pri pomicanju kursora sustava</a></li>
 <li><a href="#BrowseModeSettingsPassThroughAudioIndication" title="Audio oznaka za moduse fokusa i čitanja">Audio oznaka za moduse fokusa i čitanja</a></li>
 <li><a href="#BrowseModeSettingsTrapNonCommandGestures" title="Onemogući nenaredbenim gestama pristup dokumentu">Onemogući nenaredbenim gestama pristup dokumentu</a></li>
+<li><a href="#BrowseModeSettingsBrowseModeNavigationElements" title="Elementi prilikom kretanja u modusu čitanja pri korištenju dodirnika">Elementi prilikom kretanja u modusu čitanja pri korištenju dodirnika</a></li>
 </ul>
 </li>
 <li><a href="#DocumentFormattingSettings" title="Oblikovanje dokumenta">Oblikovanje dokumenta</a><ul>
@@ -389,6 +427,7 @@
 <li><a href="#MathCATSpeechOptions" title="Opcije govora">Opcije govora</a><ul>
 <li><a href="#MathSpeechImpairment" title="Vrsta oštećenja">Vrsta oštećenja</a></li>
 <li><a href="#MathSpeechLanguage" title="Jezik">Jezik</a></li>
+<li><a href="#MathSpeechDecimalSeparator" title="Decimalni razdjelnik za brojeve">Decimalni razdjelnik za brojeve</a></li>
 <li><a href="#MathSpeechStyle" title="Stil govora">Stil govora</a></li>
 <li><a href="#MathSpeechVerbosity" title="Opširnost govora">Opširnost govora</a></li>
 <li><a href="#MathRelativeSpeed" title="Relativna brzina govora">Relativna brzina govora</a></li>
@@ -469,6 +508,7 @@
 <li><a href="#CancelExpiredFocusSpeech" title="Pokušaj zaustavljanja govora za događaje fokusa koji su istekli">Pokušaj zaustavljanja govora za događaje fokusa koji su istekli</a></li>
 <li><a href="#TrimLeadingSilenceSpeech" title="Odreži početnu tišinu unutar govornog izlaza ili zvuka">Odreži početnu tišinu unutar govornog izlaza ili zvuka</a></li>
 <li><a href="#UseWASAPIForSAPI4" title="Koristi WASAPI za sapi 4 govorni izlaz">Koristi WASAPI za sapi 4 govorni izlaz</a></li>
+<li><a href="#SpeechDictsUseModernRegex" title="Koristi moderni sustav regularnih izraza za unose u rječniku govora:">Koristi moderni sustav regularnih izraza za unose u rječniku govora:</a></li>
 <li><a href="#AdvancedSettingsCaretMoveTimeout" title="Brzina micanja kursora sustava (u milisekundama)">Brzina micanja kursora sustava (u milisekundama)</a></li>
 <li><a href="#ReportTransparentColors" title="Izgovaraj transparentnost boja">Izgovaraj transparentnost boja</a></li>
 <li><a href="#AdvancedSettingsDebugLoggingCategories" title="Kategorije zapisivanja">Kategorije zapisivanja</a></li>
@@ -541,7 +581,7 @@
 <li><a href="#PythonConsole" title="Python Konzola">Python Konzola</a></li>
 <li><a href="#AddonStoreMenuItem" title="Add-on store">Add-on store</a></li>
 <li><a href="#CreatePortableCopy" title="Stvori prijenosnu kopiju">Stvori prijenosnu kopiju</a></li>
-<li><a href="#RunCOMRegistrationFixingTool" title="Pokreni alat za popravak Com registracija...">Pokreni alat za popravak Com registracija...</a></li>
+<li><a href="#RunCOMRegistrationFixingTool" title="Pokreni alat za popravak pristupačnosti sustava...">Pokreni alat za popravak pristupačnosti sustava...</a></li>
 <li><a href="#ReloadPlugins" title="Ponovo učitaj dodatke">Ponovo učitaj dodatke</a></li>
 </ul>
 </li>
@@ -608,7 +648,7 @@
 </li>
 </ul>
 </div>
-<!-- KC:title: NVDA 2026.1.1 – Pregled tipkovničkih prečaca -->
+<!-- KC:title: NVDA 2026.2 – Pregled tipkovničkih prečaca -->
 
 <h2 id="Introduction">Uvod</h2>
 <p>Dobrodošli u NVDA!</p>
@@ -635,6 +675,7 @@ NVDA razvija organizacija <a href="https://www.nvaccess.org/" rel="noopener" tar
 <li>Podrška za uobičajena sučelja za pristupačnost, kao što su Microsoft Active Accessibility, Java Access Bridge, IAccessible2 i UI Automation</li>
 <li>Podrška za Windowsov naredbeni redak i druge aplikacije koje rade u naredbenom retku</li>
 <li>Mogućnost isticanja fokusa sustava</li>
+<li>Ugrađeno povećanje zaslona i filtriranje boja</li>
 </ul>
 <h3 id="SystemRequirements">Preduvjeti za pokretanje NVDA čitača</h3>
 <h4 id="MinimumSystemRequirements">Minimalni preduvjeti sustava</h4>
@@ -904,6 +945,12 @@ Prečaci se neće izvršavati sve dok se nalazite u ovom načinu.</p>
 <td>Ako se pritisne jedamput čita se trenutno vrijeme, ako se pritisne dva puta čita se datum. Vrijeme i datum se čitaju u  skladu sa oblikovanjem datuma i vremena postavljenom za sat u području obavijesti.</td>
 </tr>
 <tr>
+<td>Ponavlja posljednju izgovorenu informaciju</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Ponavlja posljednju informaciju koju je izgovorila NVDA. Kada se pritisne dvaput, informacija se prikazuje u modusu čitanja</td>
+</tr>
+<tr>
 <td>Pročitaj informacije o oblikovanju teksta</td>
 <td><code>NVDA+f</code></td>
 <td><code>NVDA+f</code></td>
@@ -1169,8 +1216,8 @@ Ako ste već zatvorili ovaj dijaloški okvir ili želite instalirati iz prijenos
 <p>Prikazani dijaloški okvir instalacije će potvrditi, želite li instalirati NVDA i obavijestit će vas, nadograđuje li se postojeća instalacija.
 Kad pritisnete gumb Nastavi, započet će NVDA instalacija.
 U ovom dijaloškom okviru postoji i nekoliko opcija koje su objašnjene niže dolje.
-Nakon završetka instalacije, pojavit će se poruka da je instalacija uspjela.
-Kad pritisnete U redu, pokrenut ćete novoinstaliranu kopiju NVDA čitača.</p>
+Nakon završetka instalacije, pojavit će se dijaloški okvir sa sljedećim mogućim opcijama za odabir.
+Za više informacija pogledajte odjeljak <a href="#RestartWindowsAfterInstall" title="ponovno pokretanje operacijskog sustava Windows nakon instalacije">ponovno pokretanje operacijskog sustava Windows nakon instalacije</a>.</p>
 <h4 id="InstallWithIncompatibleAddons">Upozorenje o nekompatibilnim dodacima</h4>
 <p>Ako već imate instalirane dodatke, može se pojaviti upozorenje koje označava potrebu za deinstaliranjem nekompatibilnih dodataka.
 Prije nego što ćete moći pritisnuti gumb Nastavi, morat ćete označiti potvrdni okvir kojim potvrđujete suglasnost o tome, da se deaktiviraju svi nekompatibilni dodaci.
@@ -1188,6 +1235,18 @@ Ako je izrađen, prečacu na radnoj površini bit će dodijeljen tipkovnički pr
 <p>Ova opcija vam omogućuje da odaberete hoće li NVDA kopirati korisničku konfiguraciju s trenutno pokrenutog NVDA u konfiguraciju za trenutno prijavljenog korisnika, za instaliranu kopiju NVDA.
 Ova opcija neće kopirati konfiguraciju za bilo kojeg drugog korisnika ovog sustava niti u konfiguraciju sustava za korištenje prilikom prijave u sustav Windows i <a href="#SecureScreens" title="ostale zaslone za prijavu">ostale zaslone za prijavu</a>.
 Ova je opcija dostupna samo kad se NVDA instalira iz prijenosne kopije, ali ne i u trenutku kad se NVDA instalira iz instalacijske datoteke koja je preuzeta s interneta.</p>
+<h4 id="RestartWindowsAfterInstall">Ponovno pokreni Windows nakon instalacije</h4>
+<p>Nakon uspješog ažuriranja ili instalacije NVDA, pojavit će se dijaloški okvir u kojem se preporučuje ponovno pokretanje poeracijskog sustava Windows.
+Ponovno pokretanje osigurava potpunu registraciju NVDA čitača zaslona u sustavu i njegov ispravan rad u svim aplikacijama.</p>
+<p>U dijaloškom okviru ponuđene su slijedeće opcije:</p>
+<ul>
+<li>Ponovno pokreni Windows: Odmah ponovno pokreće Windows.</li>
+<li>Pokreni NVDA: Pokreće novo instaliranu kopiju NVDA bez ponovnog pokretanja.<ul>
+<li>Napomena: ova opcija nije dostupna kada se instalacijski program pokreće s povišenim (administratorskim) ovlastima.</li>
+</ul>
+</li>
+<li>Izađi iz NVDA: Zatvori bez pokretanja NVDA ili ponovnog pokretanja Windowsa.</li>
+</ul>
 <h3 id="CreatingAPortableCopy">Izrada prijenosne kopije</h3>
 <p>Ako izrađujete prijenosnu kopiju iz preuzetog instalacijskog paketa za NVDA, jednostavno pritisnite gumb Stvori prijenosnu kopiju.
 Ako ste već zatvorili dijaloški okvir ili ako ste pokrenuli instaliranu kopiju NVDA čitača, odaberite stavku Stvori prijenosnu kopiju u NVDA izborniku.</p>
@@ -1221,7 +1280,8 @@ Ovo uključuje nemogućnost korišćenja <a href="#AddonsManager" title="prodavn
 </ul>
 </li>
 <li>Nemogućnost čitanja zaslona kontrole korisničkih računa (UAC) prilikom pokušaja pokretanja aplikacije s administratorskim pravima.</li>
-<li>Nemogućnost korištenja dodirnika.</li>
+<li>Nemogućnost korištenja dodirnika.
+Ako je NVDA povećalo uključeno, unos na dodirniku neće raditi ispravno.</li>
 <li>Nemogućnost podrške značajki poput modusa pregleda, čitanje upisanih znakova u Windows Store aplikacijama.</li>
 <li>Utišavanje zvuka nije podržano.</li>
 </ul>
@@ -1295,14 +1355,17 @@ Naravno, ove višedodirne geste prepoznaju koliko se prstiju koristi. Stoga je m
 <p>Postoje 4 moguće klizajuće geste ovisno o smjeru: klizanje u lijevo, klizanje u desno, klizanje prema gore i klizanje prema dolje.</p>
 <p>Kao i kod dodira, moguće je koristiti više od jednog prsta za izvođenje geste.
 Stoga su moguće geste, kao što su klizanje s 2 prsta gore i klizanje s 4 prsta u lijevo.</p>
+<h5 id="PinchGestures">Geste štipanja</h5>
+<p>Stavite dva prsta na ekran i pomaknite ih jedan prema drugome kako biste izveli gestu štipanja.
+Pomaknite ih jedno od drugoga kako biste izveli obrnutu gestu štipanja.</p>
 <h4 id="TouchModes">Modusi dodira</h4>
 <p>Budući da postoji puno više NVDA prečaca nego dodirnih gesti, NVDA ima nekoliko modusa dodira između kojih se možete prebacivati i koji omogućuju određene podskupove prečaca.
-Modusi dodira su tekstualni modus i objektni modus.
+Ta tri načina su tekstualni način, objektni način i način pregledavanja.
 Neke od navedenih naredbi u ovom dokumentu sadrže podatak o modusu dodira u zagradama poslije dodirne geste.
 Na primjer, klizni gore (tekstualni modus), znači da će prečac biti izvršen ako kliznete gore, ali samo kad ste u tekstualnom modusu.
 Ako prečac nema podatak o modusu, taj će prečac raditi u bilo kojem modusu.</p>
 <!-- KC:beginInclude -->
-<p>Za prebacivanje između modusa dodira, izvedite dodir s tri prsta.</p>
+<p>Za prebacivanje između načina dodira izvedite dodir s tri prsta.</p>
 <!-- KC:endInclude -->
 
 <h4 id="TouchKeyboard">Dodirna tipkovnica</h4>
@@ -1364,6 +1427,13 @@ Na tipkovnici bez <code>aplikacijske</code> tipke, umjesto toga pritisnite <code
 <td>šift</td>
 <td>nema</td>
 <td>Trenutno pauzira govor. Kad tipku ponovo pritisnete, NVDA će nastaviti govoriti gdje je stao (ako trenutačna govorna jedinica podržava pauziranje)</td>
+</tr>
+<tr>
+<td>Ponovite posljednju izgovorenu informaciju</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Nema</td>
+<td>Ponavlja posljednju informaciju koju je izgovorila NVDA. Kada se pritisne dvaput, informacija se prikazuje u modusu čitanja</td>
 </tr>
 <tr>
 <td>NVDA Izbornik</td>
@@ -2309,6 +2379,53 @@ Ako ih želite koristiti istovremeno s kursorskim tipkama kako biste mogli nesme
 <p>Da biste isključili ili uključili brzo kretanje za trenutačni dokument, pritisnite tipke NVDA+šift+razmaknica.</p>
 <!-- KC:endInclude -->
 
+<h4 id="BrowseModeTouch">Kretanje korištenjem dodirnih gesti u modusu čitanja</h4>
+<p>Kod korištenja uređaja s podrškom dodirnika, NVDA pruža dodatni modus kretanja dodirom za pregledavanje sadržaja u modusu čitanja.</p>
+<p>Kada je modus čitanja aktivan u podržanim dokumentima poput web stranica ili Word dokumenata, NVDA može omogućiti modus čitanja korištenjem dodirnika.
+Ovaj način rada omogućuje korisnicima navigaciju strukturnim elementima dokumenta pomoću dodirnih gesti, slično kretanju u modusu čitanja pomoću tipkovnice.</p>
+<p>U načinu pregleda dodirom, geste povlačenja koriste se za kretanje između uobičajenih elemenata dokumenta kao što su poveznice, gumbi, naslovi, polja obrazaca, orijentiri i druge strukture dokumenta.</p>
+<h5 id="dodirne-geste-u-modusu-citanja">Dodirne geste u modusu čitanja</h5>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Naziv</th>
+<th>Dodirna gesta</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Odaberi sljedeći tip elementa</td>
+<td>povlačenje prema dolje</td>
+<td>prelazi na sljedeći tip elementa modusa čitanja</td>
+</tr>
+<tr>
+<td>Odaberi prethodni tip elementa</td>
+<td>povuci prema gore</td>
+<td>Prelazi na prethodni tip elementa u modusu čitanja</td>
+</tr>
+<tr>
+<td>Premjesti na sljedeći element</td>
+<td>povlačenje u desno</td>
+<td>Prelazi na sljedeći element modusa pregleda odabranog tipa</td>
+</tr>
+<tr>
+<td>Premjesti na prethodni element</td>
+<td>povlačenje u lijevo</td>
+<td>Prelazi na prethodni element modusa čitanja odabranog tipa</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>Kada se odabere "zadani" tip elementa, povlačenje lijevo ili desno prolazi kroz sve elemente u dokumentu.
+Kada se odabere bilo koji drugi tip elementa, povlačenje lijevo ili desno prelazi na prethodni ili sljedeći element te vrste.
+Povlačenjem prsta gore ili dolje prolazite kroz dostupne vrste elemenata.</p>
+<p>Odabrani tip elementa pamti se zasebno za svaki dokument dok je otvoren.
+Imajte na umu da geste u načinu pregledavanja na dodir djeluju samo kada je način pregledavanja aktivan u dokumentu.
+Ako fokus izađe izvan dokumenta (na primjer, na adresnu traku preglednika ili traku zadataka), geste u načinu pregleda na dodir neće služiti za kretanje dokumentom dok se fokus ne vrati na njega u načinu pregledavanja.</p>
 <h4 id="TextNavigationCommand">Prečac za kretanje po odlomcima</h4>
 <p>Možete se kretati između sljedećeg i prethodnog odlomka tako da pritisnete <code>p</code> ili <code>shift+p</code>.
 Odlomci teksta su definirani kao grupa teksta koja je napisana punim rečenicama.
@@ -2339,6 +2456,7 @@ Ovdje su popisani dostupni prečaci:</p>
 <li>Stavka izbornika</li>
 <li>Preklopni gumb</li>
 <li>Traka napredka</li>
+<li>Klizač</li>
 <li>Referenca</li>
 <li>Matematička formula</li>
 <li>Okomito poravnat odlomak</li>
@@ -2722,12 +2840,154 @@ Na primjer, ako vas je <code>StrelicaLijevo</code> dovela izvan razlomka, <code>
 Zadani način rada može se postaviti u <a href="#MathSettings" title="panelu za matematičke postavke">panelu za matematičke postavke</a>.
 Međutim, u bilo kojem trenutku tijekom kretanja možete mijenjati načine kretanja koristeći <code>shift+strelicaGore/Dolje</code> kako biste iskoristili različite prednosti svakog načina kretanja.</p>
 <h2 id="Braille">Brajica</h2>
-<p>Ako posjedujete brajični redak, NVDA može prikazivati informacije koristeći brajicu.
+<p>Ako posjedujete brajični redak, NVDA uz njegovu pomoć može prikazivati informacije.
 Ako vaš brajični redak posjeduje perkins tipkovnicu, možete pisati kratkopisom ili punim pismom.
 Brajica također može biti prikazana koristeći <a href="#BrailleViewer" title="preglednik brajice">preglednik brajice</a> umjesto na brajičnom retku, ili se može prikazivati na brajičnom retku i uz pomoć preglednika brajice.</p>
 <p>Za više informacija o podržanim brajičnim redcima, pogledajte poglavlje <a href="#SupportedBrailleDisplays" title="Podržani brajični redci">Podržani brajični redci</a>.
 To poglavlje sadrži dodatne informacije o tome, koji brajični redci podržavaju automatsko otkrivanje brajičnih redaka.
 Možete konfigurirati brajicu koristeći <a href="#BrailleSettings" title="kategoriju Brajica">kategoriju Brajica</a> u dijaloškom okviru <a href="#NVDASettings" title="NVDA Postavke">NVDA Postavke</a>.</p>
+<h3 id="BrailleReading">Čitanje brajice</h3>
+<p>Prilikom čitanja brajice na brajičnom redku, tekst se prikazuje uz pomoć trenutne <a href="#BrailleSettingsOutputTable" title="izlazne tablice">izlazne tablice</a> i <a href="#BrailleMode" title="modusa brajice">modusa brajice</a>.
+Tamo gdje je  tekst duži nego što može stati na brajični redak, pomicanje ili druge tipke na uređaju mogu se koristiti za navigaciju bez pomicanja fokusa ili tekstualnog kursora.</p>
+<h4 id="AutomaticBrailleScrolling">Automatsko pomicanje brajičnog redka</h4>
+<p>Automatsko pomicanje sadržaja na brajičnom redku može se omogućiti za pomicanje zaslona na zadanu brzinu.
+Korištenjem ove značajke, brajični redak se pomiče kako bi prikazao informacije koje su veće od onoga što može stati na zaslon odjednom.
+Ta je značajka podrazumjevano onemogućena.
+Možete promijeniti dodijeljene prečace za automatsko pomicanje teksta na brajičnom redku u NVDA <a href="#InputGestures" title="dijaloškom okviru ulazne geste">dijaloškom okviru ulazne geste</a> prije početka korištenja.
+Dostupne su i prečaci za ubrzavanje ili usporavanje automatskog pomicanja.
+Umjesto postavljanja prečaca, možete <a href="#BrailleAutoScrollRate" title="postaviti automatsku brzinu pomicanja u postavkama brajice">postaviti automatsku brzinu pomicanja u postavkama brajice</a>.</p>
+<p>Dok se brajični redak pomiće, i dalje možete koristiti naredbe za pomicanje unatrag i unaprijed bez zaustavljanja pomicanja.
+Pomicanje unatrag može biti korisno za ponovno čitanje prethodnog sadržaja.
+Pomicanje unaprijed može biti korisno za preskakanje praznog retka ili ako je redak koji se čita kratak.</p>
+<p>Tijekom čitanja, automatsko pomicanje brajičnog redka prestaje kada se dogodi bilo što od sljedećeg:</p>
+<ul>
+<li>Pritisne se tipka za automatsko pomicanje brajičnog redka</li>
+<li>Korisnik pritisne tipku ili izvede ulaznu gestu koja prikazuje novu poruku</li>
+<li>Fokus se pomiče (uključujući tipke za pomicanje brajičnog redka)</li>
+<li>korisnik je došao do kraja dokumenta</li>
+<li>Stanje zaključanog ili sigurnog zaslona se mijenja (npr. zaključano računalo)</li>
+</ul>
+<h4 id="BrailleReadingGestures">Prečaci za čitanje brajice</h4>
+<!-- KC:beginInclude -->
+<table>
+<thead>
+<tr>
+<th>Naziv</th>
+<th>Prečac</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prebacivanje između modusa brajice</td>
+<td>`NVDA+alt+t``</td>
+<td>Omogućuje izmjenu između dostupnih brajevih načina: "prati kursore" i "prikaži izlaz govora"</td>
+</tr>
+<tr>
+<td>Prebacivanje brajice</td>
+<td><code>NVDA+control+t</code></td>
+<td>Ova opcija omogućuje odabir hoće li brajični redak slijediti fokus sustava, objekt navigatora ili oboje</td>
+</tr>
+<tr>
+<td>Uključivanje ili isključivanje automatskog pomicanja</td>
+<td><code>NVDA+alt+k</code></td>
+<td>Mijenja hoće li NVDA povremeno pomicati tekst na brajičnom redku kako bi prikazao informacije koje su preduge da bi se prikazale odjednom</td>
+</tr>
+<tr>
+<td>Povećajte brzinu automatskog pomicanja</td>
+<td><code>NVDA+alt+l</code></td>
+<td>Automatski pomicanje postaje brže (kad je uključeno)</td>
+</tr>
+<tr>
+<td>Smanji brzinu automatskog pomicanja</td>
+<td><code>NVDA+alt+j</code></td>
+<td>Usporava automatsko pomicanje (kad je uključeno)</td>
+</tr>
+<tr>
+<td>prebacuj između oblika brajičnog kursora</td>
+<td>Nema</td>
+<td>prebacuje kroz opcije izgleda brajičnog kursora</td>
+</tr>
+<tr>
+<td>Prebacuj kursor sustava prilikom usmjeravanja na pregled</td>
+<td>Nema</td>
+<td>prebacuje između modusa pregleda  prilikom pregleda stanja kursora</td>
+</tr>
+<tr>
+<td>Prebacuj između načina prikaza poruka</td>
+<td>Nema</td>
+<td>prebacuje između modusa prikaza poruka na brajičnom redku</td>
+</tr>
+<tr>
+<td>Prebacuj između modusa prikazivanja označavanja na brajičnom redku</td>
+<td>Nema</td>
+<td>prebacuje između dostupnih modusa za prikaz označenog sadržaja</td>
+</tr>
+<tr>
+<td>Prebacuj između načina Unicode normalizacije za brajične redke</td>
+<td>Nema</td>
+<td>prebacuje između načina Unicode normalizacije za brajične redke</td>
+</tr>
+<tr>
+<td>Pomakni brajicu na fokus</td>
+<td>Nema</td>
+<td>Premješta brajični redak na trenutno fokusiranu stavku</td>
+</tr>
+<tr>
+<td>Premjesti brajični redak na slijedeći redak</td>
+<td>Nema</td>
+<td>Premješta brajični redak na slijedeći redak</td>
+</tr>
+<tr>
+<td>Premjesti brajični redak na prethodni redak</td>
+<td>Nema</td>
+<td>Premješta brajični redak na prethodnu redak</td>
+</tr>
+<tr>
+<td>Izvještavaj o oblikovanju na brajičnom redku</td>
+<td>Nema</td>
+<td>Izvještava o oblikovanju teksta pod koji se nalazi pod brajičnom ćelijom</td>
+</tr>
+<tr>
+<td>Prebaci se na brajičnu kućicu ili aktiviraj element</td>
+<td>Nema</td>
+<td>Usmjerava kursor na objekt ili ga aktivira ispod brajične ćelije.</td>
+</tr>
+<tr>
+<td>Prebaci brajični redak u nazad</td>
+<td>Nema</td>
+<td>Pomiće brajični redak unatrag</td>
+</tr>
+<tr>
+<td>Prebaci brajični redak unaprijed</td>
+<td>Nema</td>
+<td>pomiće brajični redak unaprijed</td>
+</tr>
+<tr>
+<td>Prebaci stanje brajičnog kursora</td>
+<td>Nema</td>
+<td>uključuje ili isključuje stanje brajičnog kursora</td>
+</tr>
+<tr>
+<td>Prebaci kontekstualni prikaz brajice</td>
+<td>Nema</td>
+<td>Uključuje modus prikaza kontekstualnih informacija na brajici</td>
+</tr>
+<tr>
+<td>Uključuje ili isključuje govor pri čitanju brajice</td>
+<td>Nema</td>
+<td>Uključuje i isključuje govor prilikom kretanja po redovima ili odlomcima na brajici</td>
+</tr>
+<tr>
+<td>Uključi ili isključi izgovor znaka prilikom pritiska routing tipke</td>
+<td>Nema</td>
+<td>Uključuje ili isključuje izgovor znaka ispod kursora prilikom usmjeravanja kursora u tekstu</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>Pogledajte NVDA <a href="#BrailleSettings" title="postavke brajice">postavke brajice</a> za sve opcije koje se mogu koristiti za prilagodbu čitanja brajice.</p>
 <h3 id="BrailleAbbreviations">Kratice za orijentire, stanja i vrste kontrola</h3>
 <p>Kako bi stalo što više informacija na brajični redak, definirane su sljedeće kratice za vrste i stanja kontrola te za orijentire.</p>
 <table>
@@ -3127,6 +3387,42 @@ a kako biste izveli prečac ctrl+alt+t, koristite prečace "uključi tipku Ctrl"
 <p>Kada pišete kratkopisom, korištenje uključenja modifikatora će prouzročiti da vaš brajični ulaz bude preveden kao da ste pritisnuli točkice 7 i 8.
 Još ćemo dodati, da emulirani pritisak tipke ne može i neće utjecati na napisani brajični tekst prije uključenja modifikatora.
 To znači da ako biste htjeli pritisnuti alt+2 sa brajičnom tablicom koja koristi brojčani znak, najprije morate uključiti alt, a potom a nakon toga upisati brojčani znak.</p>
+<h4 id="BrailleInputGestures">Prečaci za upisivanje brajice</h4>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Naziv</th>
+<th>Prečac</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pisanje uz pomoć brajičnog redka</td>
+<td>bilo koje točkice</td>
+<td>Unos brajevih točaka putem brajične tipkovnice</td>
+</tr>
+<tr>
+<td>Brisanje posljednje unesene točkice</td>
+<td><code>točkica7</code></td>
+<td>Briše posljednju unesenu brajevu ćeliju ili znak</td>
+</tr>
+<tr>
+<td>Prevedi napisani brajev tekst</td>
+<td>`točkica7+točkica8</td>
+<td>Prevodi bilo koji tekst napisan uz pomoć brajičnog redka</td>
+</tr>
+<tr>
+<td>Prevedi i pritisni enter</td>
+<td><code>točkica8</code></td>
+<td>Prevodi bilo koji tekst napisan uz pomoć brajičnog redka i pritišće tipku enter</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
 <h2 id="Vision">Vid</h2>
 <p>Iako je NVDA namijenjen slijepim i slabovidnim korisnicima koji koriste govor ili brajicu kako bi koristili računalo, NVDA pruža i ugrađene mogućnosti za mijenjanje sadržaja ekrana.
 Unutar NVDA čitača, takva vizualna pomoć se zove poboljšanje vidljivosti.</p>
@@ -3164,6 +3460,11 @@ Zbog takvih situacija, NVDA sadrži funkciju "Ekranska zavjesa" koja se može uk
 <td><code>NVDA+control+escape</code></td>
 <td>Uključite ako želite učiniti zaslon crnim ili isključite ako želite vidjeti sadržaj zaslona. Kada se pritisne jedamput, zaslonska zavjesa je uključena sve dok je NVDA uključen. Kada se pritisne dvaput, zaslonska zavjesa je uključena uvijek.</td>
 </tr>
+<tr>
+<td>Izvještava o stanju zaslonske zavjese</td>
+<td>Nema</td>
+<td>Objavljuje trenutni status zaslonske zavjese, bilo da je onemogućena, omogućena ili u privremenom načinu rada.</td>
+</tr>
 </tbody>
 </table>
 <!-- KC:endInclude -->
@@ -3172,6 +3473,142 @@ Zbog takvih situacija, NVDA sadrži funkciju "Ekranska zavjesa" koja se može uk
 Na primjer, ne možete <a href="#Win10Ocr" title="koristiti OCR">koristiti OCR</a>.
 Neki alati za snimanje zaslona također možda neće raditi.</p>
 <p>Imajte na umu da dok Windows Magnifier radi i koriste se inverzne boje zaslona, zaslonska zavjesa se ne može uključiti.</p>
+<h2 id="Magnifier">Povećalo</h2>
+<p>NVDA uključuje ugrađenu funkciju povećala koja vam omogućuje zumiranje i povećanje dijelova ekrana.
+Ova značajka je posebno korisna za slabovidne korisnike koji trebaju povećati sadržaj na ekranu, ili za one koji žele primijeniti filtre za boje radi smanjenja naprezanja očiju ili poboljšanja čitljivosti.</p>
+<p>NVDA povećalo radi kao povećalo za cijeli zaslon, što znači da povećava cijeli zaslon prateći fokus sustava ili pokazivač miša.
+Povećalo nudi nekoliko opcija konfiguracije za prilagodbu iskustva povećanja prema vašim potrebama.</p>
+<h3 id="MagnifierToggle">Uključivanje i isključivanje povećala</h3>
+<p>Za uključivanje ili isključivanje povećala, pritisnite <code>NVDA+shift+w</code>.
+Pre;ac za "Povećanje razine povećanja", <code>NVDA+shift+jednako</code>, pokreće povećalo ako nije aktivno.
+Kada je povećalo isključeno, zaslon se vraća na svoju normalnu veličinu.
+Kao i kod drugih NVDA postavki, stanje povećala se čuva kroz sesije.</p>
+<h3 id="MagnifierCommands">Prečaci povećala</h3>
+<p>Kada je povećalo uključeno, možete ga kontrolirati sljedećim tipkovničkim prečacima:</p>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Naziv</th>
+<th>Prečac</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uključi i isključi povećalo</td>
+<td><code>NVDA+shift+w</code></td>
+<td>Omogućuje ili onemogućuje povećalo</td>
+</tr>
+<tr>
+<td>Povećaj razinu povećanja</td>
+<td><code>NVDA+shiftt+jednako</code></td>
+<td>Povećava razinu zumiranja. Pokreće povećalo ako već ne radi.</td>
+</tr>
+<tr>
+<td>Smanji razinu povećanja</td>
+<td><code>NVDA+shift+minus</code></td>
+<td>Smanjuje razinu pove'anja</td>
+</tr>
+<tr>
+<td>Prebacuj između filtara boja</td>
+<td><code>NVDA+shift+i</code></td>
+<td>prebacuje između dostupnih filtara boja (normalni, u sivim tonovima, invertirani)</td>
+</tr>
+<tr>
+<td>Prebacuje iymeđu modusa praćenja</td>
+<td>Nema</td>
+<td>prebacuje između načine praćenja (sredina, relativni)</td>
+</tr>
+<tr>
+<td>Prikaži pregled cijelog zaslona</td>
+<td><code>NVDA+shift+l</code></td>
+<td>Privremeno prikazuje pregled cijelog zaslona</td>
+</tr>
+<tr>
+<td>Pomicanje u lijevo</td>
+<td><code>NVDA+alt+strelicaLijevo</code></td>
+<td>Pomiče povećani prikaz koji je određen konfiguriranom veličinom koraka pomicanja</td>
+</tr>
+<tr>
+<td>pomicanje u desno</td>
+<td><code>NVDA+alt+strelicaDesno</code></td>
+<td>Pomjera povećani prikaz točno za konfiguriranu veličinu koraka panoramy</td>
+</tr>
+<tr>
+<td>Pomakni prema gore</td>
+<td><code>NVDA+alt+strelicaGore</code></td>
+<td>Pomiče povećani prikaz prema gore za konfiguriranu veličinu koraka panoramiranja</td>
+</tr>
+<tr>
+<td>Pomakni prema dolje</td>
+<td><code>NVDA+alt+strelicaDolje</code></td>
+<td>Pomiče povećani prikaz prema dolje za konfiguriranu veličinu koraka pomicanja</td>
+</tr>
+<tr>
+<td>pomakni prema lijevom rubu</td>
+<td><code>NVDA+shift+alt+strelicaLijevo</code></td>
+<td>Pomiče povećani prikaz izravno na lijevi rub zaslona</td>
+</tr>
+<tr>
+<td>Pomakni prema desnom rubu</td>
+<td><code>NVDA+shift+alt+strelicaDesno</code></td>
+<td>Pomiče povećani prikaz izravno na desni rub zaslona</td>
+</tr>
+<tr>
+<td>pomakni prema gornjem rubu</td>
+<td><code>NVDA+shift+alt+strelicaGore</code></td>
+<td>Pomiče povećani prikaz izravno na gornji rub ekrana</td>
+</tr>
+<tr>
+<td>pomakni prema donjem rubu</td>
+<td><code>NVDA+shift+alt+strelicaDolje</code></td>
+<td>Pomiče povećani prikaz izravno na donji rub zaslona</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<h3 id="MagnifierZoomLevels">Razine uvećanja</h3>
+<p>Povećalo podržava razine povećanja od 1,0 (bez povećanja) do 50,0 (maksimalno povećanje).
+Razinu zumiranja možete podesiti pomoću tipkovničkih prečaca za zumiranje (<code>NVDA+shift+jednako</code>) i <code>NVDA+shift+minus</code>).
+Svaki pritisak povećava ili smanjuje zum prema fiksnom koraku.</p>
+<h3 id="MagnifierColorFilters">Filteri za boje</h3>
+<p>Filtri za boje mogu pomoći korisnicima s određenim oštećenjima vida ili osjetljivošću na svjetlo mijenjanjem boja prikazanih na zaslonu.
+Povećalo nudi tri opcije filtera za boje:</p>
+<ul>
+<li>Normalno: Ne primjenjuje se nikakva promjena boje. Ovo je zadana postavka.</li>
+<li>Sivi tonovi: Pretvara sve boje u nijanse sive, što može pomoći u smanjenju naprezanja očiju i poboljšanju kontrasta kod nekih korisnika.</li>
+<li>Obrnuto: Invertira sve boje na ekranu (crna postaje bijela, bijela crna itd.), što može biti korisno korisnicima koji preferiraju svijetli tekst na tamnim pozadinama ili imaju fotofobiju.</li>
+</ul>
+<p>Za prebacivanje između dostupnih filtera pritisnite <code>NVDA+shift+i</code>.</p>
+<h3 id="MagnifierTrackingMode">Modusi praćenja</h3>
+<p>Povećalo nudi različite načine za praćenje miša, fokusa sustava, kursora za pregled i objekta navigatora, te određivanje koji dio ekrana treba povećati:</p>
+<ul>
+<li>Središte: Povećano područje je centrirano na trenutno praćenoj poziciji.
+Ovaj način održava praćeni element u središtu zaslona i pričvršćuje se uz rub zaslona.</li>
+<li>Relativno: Povećano područje održava relativni položaj praćenog elementa na temelju njegovog položaja na zaslonu.</li>
+</ul>
+<p>Za prebacivanje između načina praćenja, molimo dodijelite prilagođeni prečac pomoću dijaloškog okvira <a href="#InputGestures" title="uolazne geste">uolazne geste</a>.</p>
+<h3 id="MagnifierScreenOverview">Prikaži pregled cijelog zaslona</h3>
+<p>Povećalo može privremeno prikazati pregled cijelog zaslona, što je korisno za prezentacije ili kada trebate brzo razumjeti cjelokupni raspored zaslona.</p>
+<p>Ovo je korisno kada želite:</p>
+<ul>
+<li>pokazati kontekst publici tijekom prezentacije prije nego što fokusiranjana određenih detalja</li>
+<li>Privremeno pogledati cijeli zaslon prilikom povećavanja</li>
+</ul>
+<p>Za prikaz pregleda cijelog zaslona pritisnite <code>NVDA+shift+l</code>.
+Povećalo će tada:</p>
+<ol>
+<li>glatko povećavati u cilju prikazivanja cijelog zaslona (razina zumiranja 1.0x)</li>
+<li>Pratiti pokrete miša</li>
+<li>Kada miš ostane nepomičan otprilike 2 sekunde, automatski smanjiti razinu povećanja na izvornu razinu povećanja na novoj poziciji miša</li>
+</ol>
+<p>Pomicanjem miša prije smanjivanja povećanja dobivate više vremena za pregled cijelog zaslona.</p>
+<h3 id="MagnifierSettings">Postavke povećala</h3>
+<p>Povećalo se može konfigurirati u kategoriji "Povećalo" u NVDA dijaloškom okviru za postavke (¸<code>NVDA+control+w</code>).
+Pogledajte odjeljak <a href="#MagnifierSettingsCategory" title="postavke povećala">postavke povećala</a> za detalje o dostupnim opcijama.</p>
 <h2 id="ContentRecognition">Prepoznavanje sadržaja</h2>
 <p>Kad autori ne daju dovoljno informacija korisniku čitača ekrana, kako bi mogao prepoznati informaciju, mogu se koristiti razni alati, kako bi se tekst mogao prepoznati sa slike.
 NVDA podržava funkciju za optičko prepoznavanje znakova (OCR), koja je ugrađena u Windowse 10 i novije inačice kako bi se tekst mogao prepoznati sa slika.
@@ -3604,9 +4041,10 @@ Ova je opcija dostupna samo u instaliranim kopijama NVDA čitača.</p>
 <p>Aktiviranjem ove opcije, NVDA će se automatski pokrenuti na ekranu za prijavu tijekom pokretanja Windows sustava, ako se prijavljujete u Windows upisujući svoje korisničko ime i lozinku.
 Ova je opcija dostupna samo u instaliranim kopijama NVDA čitača.</p>
 <h5 id="GeneralSettingsCopySettings">Koristi trenutačno spremljene postavke za ekran prijave te ostale sigurne ekrane (zahtijeva administratorska prava)</h5>
-<p>Kada pritisnete ovaj gumb, vaša trenutna NVDA  konfiguracija bit će kopirana u mapu NVDA konfiguracije sustava što znači da će ju NVDA koristiti na zaslonu za prijavu te ako se pokreće kontrola korisničkog računa (UAC) te na drugim <a href="#SecureScreens" title="sigurnim zaslonima">sigurnim zaslonima</a>.
+<p>Pritiskom na ovaj gumb možete kopirati trenutno spremljenu NVDA korisničku konfiguraciju u NVDA-in direktorij za konfiguraciju sustava, tako da će NVDA koristiti tu opciju prilikom prijave i pri pokretanju na zaslonu kontrole korisničkih računa (UAC) i drugim <a href="#SecureScreens" title="sigurnim zaslonima">sigurnim zaslonima</a>.
 Da biste se uvjerili da su sve vaše postavke kopirane, prvo spremite vašu konfiguraciju pomoću prečaca kontrol+NVDA+c ili pomoću opcije spremi konfiguraciju u NVDA izborniku.
-Ova je opcija dostupna samo u instaliranim kopijama NVDA čitača.</p>
+Kada se pritisne ovaj gumb, prvo se otvara dijaloški okvir <a href="#CopyAddonsToSystemProfileDialog" title="Kopiraj postavke u konfiguraciju sustava">Kopiraj postavke u konfiguraciju sustava</a> u kojem možete odabrati dodatke koje želite kopirati u nju.</p>
+<p>Ova je opcija dostupna samo u instaliranim kopijama NVDA čitača.</p>
 <h5 id="GeneralSettingsCheckForUpdates">Automatski provjeri nadogradnje za NVDA</h5>
 <p>Ako je ova opcija uključena, NVDA će automatski provjeriti nadogradnje i obavjestiti vas kad je nadogradnja dostupna.
 Nadogradnje možete i ručno provjeriti. Odaberite Provjeri nadogradnje u podizborniku Pomoć u NVDA izborniku.
@@ -3667,6 +4105,10 @@ Ovaj klizač ima vrijednosti od 0 do 100 (0 je najniže, 100 je najviše).</p>
 <p>Ovaj klizač ima vrijednosti od 0 do 100 (0 je najtiše, 100 je najglasnije).</p>
 <h5 id="SpeechSettingsInflection">Intonacija</h5>
 <p>S ovim klizačem je moguće odabrati intonaciju govorne jedinice (dizanje i spuštanje visine pri čitanju) koju će koristiti za govor.</p>
+<h5 id="SpeechSettingPunctuationSilence">Prirodna pauza poslije interpunkcije</h5>
+<p>Onemogućavanje ove opcije uklonit će pauze nakon interpunkcijskih znakova.
+Ova je opcija podrazumijevano uključena.
+Ova opcija postoji samo za Windows OneCore glasove i podržana je na Windows 10 verziji 1803 ili novijima.</p>
 <h5 id="SpeechSettingsUseWasapi">Koristi suvremeni sustav izlaza zvuka (WASAPI)</h5>
 <p>Ova opcija omogućuje audio izlaz putem Windows Audio Session API-ja (WASAPI).
 Ova opcija postoji samo za Microsoft Speech API version 5 (SAPI 5) glasove.
@@ -3723,9 +4165,10 @@ Ova se opcija primjenjuje na sve govorne jedinice, ne samo na trenutačno aktivn
 <p>Standardno je uključena. Ova opcija govori programu NVDA da se jeziku trenutačno odabranog glasa može vjerovati, kad se procesiraju simboli i znakovi.
 Ako shvatite da NVDA čita interpunkciju koristeći krivi jezik za određenu govornu jedinicu ili glas, možda biste ovu opciju željeli isključiti kako biste prisilili NVDA da umjesto toga koristi glavnu jezičnu postavku.</p>
 <h5 id="SpeechUnicodeNormalization">Normalizacija Unicode znakova</h5>
-<p>Kada je ova opcija omogućena, Normalizacija Unicode znakova biti će izvedena na tekstu koji će NVDA izgovoriti.
+<p>Kada je ova opcija omogućena, Unicode normalizacija se vrši na tekstu koji NVDA izgovara.
 Ovo je ključno za znakove koji se mogu prikazivati u više oblika.
-NVDA koristi  NFKC (engl. Normalization Form Compatibility Composition) algoritam, koji donosi sljedeća poboljšanja, među kojima su uključena:</p>
+NVDA koristi NFKC (Normalization Form Compatibility Composition) algoritam, uz dodatnu normalizaciju.
+NFKC pruža sljedeće pogodnosti, između ostalog:</p>
 <ol>
 <li>
 <p>Podebljane i kurzivne verzije znakova koje su dio Unicode standarda i često se koriste na društvenim mrežama normalizirane su na njihov najčešći kompatibilni ekvivalent.
@@ -3742,12 +4185,16 @@ Ovaj aspekt normalizacije također je od pomoći pri čitanju jednadžbi u Micro
 <p>Unicode normalizacija osigurava da će se koristiti samo jedan oblik kroz sav izlaz govora, a to je varijanta s jednim znakom.</p>
 </li>
 <li>
-<p>Rastavljanje nekih ligatura, uključujući "ĳ" (ligatura ij) u njihove dvoslovne oblike ("ij").</p>
+<p>Razlaganje nekih ligatura, uključujući "ĳ" (ligatura ij), na njihov dvoslovni oblik ("ij").</p>
 </li>
 <li>
 <p>Stabilan poredak sastavljenih znakova, na primjer u starohebrejskom.</p>
 </li>
 </ol>
+<p>Dodatna normalizacija u NVDA obrađuje dekorativne varijante slova koje standardni NFKC algoritam ne razlaže.
+Određeni Unicode znakovi, poput negativno zaokruženih latiničnih velikih slova (🅐–🅩) i negativno kvadratnih latiničnih velikih slova (🅲–🆉), tretiraju se kao autonomni simboli prema Unicode standardu i nemaju dekompoziciju kompatibilnosti.
+NVDA proširuje NFKC mapiranjem tih znakova na njihove obične latinične ekvivalente (A–Z).
+Primijetite da je mali broj negativnih kvadratnih slova koja sadrže semantiku emojija (🅰, 🅱 , 🅾 , 🅿 ) isključen iz ovog preslikavanja kako bi se sačuvalo njihovo različito značenje.</p>
 <p>Kako biste mogli podesiti Unicode normalizaciju sa bilo kojeg mjesta, molimo dodijelite prilagođenu gestu koristeći <a href="#InputGestures" title="Dijaloški okvir ulazne geste">Dijaloški okvir ulazne geste</a>.</p>
 <table>
 <thead>
@@ -4180,6 +4627,12 @@ Definirani su sljedeći simboli:</p>
 <h5 id="BrailleSpeakOnNavigating">Govori pri kretanju po redku ili odlomku</h5>
 <p>Omogućavanje ove opcije prouzrokuje da NVDA izgovara redke ili odlomke koje čitamo na brajičnom redku.</p>
 <p>Kako biset mogli uključiti iči isključiti ovu opciju sa bilo kojeg mjesta, molimo postavite prilagođeni prečac na opciju "izgovaraj pri kretanju po jedinicama" u odjeljku "brajica" u<a href="#InputGestures" title="dijaloškom okviru ulazne geste">dijaloškom okviru ulazne geste</a>.</p>
+<h5 id="BrailleAutoScrollRate">Automatska brzina pomicanja</h5>
+<p>Ovaj klizač kontrolira brzinu kojom NVDA pomiče sadržaj na brajičnom redku kada je uključeno <a href="#AutomaticBrailleScrolling" title="automatsko pomicanje brajičnog redka">automatsko pomicanje brajičnog redka</a>, mjereno u ćelijama u sekundi.</p>
+<p>Za povećanje ili smanjivanje brzine pomicanja brajičnog redka s bilo kojeg mjesta, molimo dodijelite prilagođeni prečac ili ulaznu gestu koristeći <a href="#InputGestures" title="dijaloški okvir ulazne geste">dijaloški okvir ulazne geste</a>.</p>
+<p>Minimalna vrijednost (0%) je 1 ćelija u sekundi, a maksimalna vrijednost (100%) je 20 ćelija u sekundi.
+Na primjer, s zadanom vrijednošću od 10 ćelija/sekundi, ako se koristi brajični redak od 40 znakova, zaslon će se automatski pomicati svakih 4 sekunde.
+Ako bi brajični redak imao 20 ćelija, svaki redak na brajičnom redku prikazivao bi se 2 sekunde.</p>
 <h5 id="BrailleSettingsWordWrap">Izbjegavajte dijeljenje riječi kada je to moguće</h5>
 <p>Ako je to omogućeno, riječ koja je prevelika da stane na kraj Brailleovog pisma neće se podijeliti.
 Umjesto toga, na kraju zaslona bit će prazan prostor.
@@ -4403,6 +4856,8 @@ Međutim, ako želite navesti informacije u formularu za prijavu greške ili u p
 Ako ste zabrinuti za privatnost, nemojte postavljati razinu zapisivanja na ovu opciju.</li>
 <li>Debug: Osim informacija, upozorenja i ulaznih/izlaznih poruka, zabilježit će se i dodatne debug poruke.
 Baš kao i ulaz/izlaz, ako vas brine privatnost, ne biste trebali postavljati razinu zapisivanja na ovu opciju.</li>
+<li>Ispravljanje grešaka (necenzurirano): Osim debug logiranja, NVDA neće cenzurirati tajne poput lozinki i API ključeva iz logova.
+To se privremeno uključuje samo kada se važne informacije o otklanjanju pogrešaka ispravljaju.</li>
 </ul>
 <h5 id="GeneralSettingsGatherUsageStats">Dopustite NV Accessu prikupljanje statistike korištenja NVDA</h5>
 <p>Ako je to omogućeno, NV Access će koristiti informacije prikupljene putem provjera ažuriranja, uključujući određene demografske podatke poput operativnog sustava i zemlje podrijetla, za praćenje broja NVDA korisnika.
@@ -4436,6 +4891,254 @@ Ako želite samo istaknuti fokus i ostaviti potvrdne okvire navigacijskog objekt
 <p>Dodatne pružatelja vizualnih poboljšanja je moguće pružiti putem <a href="#AddonsManager" title="NVDA dodataka">NVDA dodataka</a>.
 Kad ti pružatelji sadrže prilagodljive postavke, one će se prikazati u ovoj kategoriji postavki u odvojenim grupama.
 Podržane postavke za pružatelje potražite u njihovoj dokumentaciji.</p>
+<h4 id="MagnifierSettingsCategory">Povećalo</h4>
+<!-- KC:setting -->
+
+<h5 id="OpenMagnifierSettings">Otvori postavke povećala</h5>
+<p>Prečac: <code>NVDA+control+w</code></p>
+<p>Kategorija Povećalo u NVDA Postavkama omogućuje vam podešavanje zadanog ponašanja NVDA ugrađene značajke <a href="#Magnifier" title="Povećalo">Povećalo</a>.
+Sve opcije u ovoj kategoriji stupaju na snagu odmah, ali odabirom "tipke odustani" (ili pritiskom na <code>escape</code>) odbacuje se sve promjene.</p>
+<p>Ova kategorija postavki sadrži sljedeće opcije:</p>
+<!-- KC:setting -->
+
+<h5 id="MagnifierEnable">Uključi povećalo</h5>
+<p>Prečac: <code>NVDA+shift+w</code></p>
+<p>Ova opcija pokreće ili zaustavlja Povećalo.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>Onemogućeno, omogućeno</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>Onemogućeno</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierZoom">Uvećanje</h5>
+<p>Ova postavka omogućuje podešavanje razine zumiranja prilikom korištenja povećala.
+Razina povećanja može varirati od 100% (bez povećanja) do 5000% (maksimalno povećanje).
+Zadana vrijednost je 200%.</p>
+<p>Uvijek možete prilagoditi razinu zumiranja u hodu pomoću naredbi za zumiranje (<code>NVDA+shift+jednako</code>) i <code>NVDA+shift+minus</code>) dok je povećalo aktivno.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>100% do 5000%</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>200%</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:setting -->
+
+<h5 id="MagnifierFilter">Filter boje</h5>
+<p>Prečac: <code>NVDA+shift+i</code></p>
+<p>Ova opcija omogućuje odabir filtera koji će se primijeniti kad koristite povećalo.</p>
+<p>Slijedeće opcije su dostupne:</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>Normalno, u sivim tonovima, obrnuto</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>Normalno</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opcija</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normalno</td>
+<td>Ne primjenjuje se nikakva promjena boje.</td>
+</tr>
+<tr>
+<td>Sivi</td>
+<td>Pretvara sve boje u nijanse sive, što može pomoći u smanjenju naprezanja očiju i poboljšanju kontrasta.</td>
+</tr>
+<tr>
+<td>Obrnuto</td>
+<td>Invertira sve boje na ekranu, što može biti korisno korisnicima koji preferiraju svijetli tekst na tamnim pozadinama ili imaju fotofobiju.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierPanningStepSize">Veličina koraka pomicanja</h5>
+<p>Ova opcija omogućuje postavljanje veličine koraka pomicanja kao postotak vidljivog povećanog prozora.
+To znači da kada koristite ručne prečace za pomicanje, povećani prikaz će se pomicati za određeni postotak trenutačne vidljive veličine prozora.
+Veći postoci uzrokuju veće pokrete, što ubrzava navigaciju po ekranu, dok niži postotci omogućuju precizniju kontrolu za precizno pozicioniranje.
+Stvarna udaljenost piksela automatski će se prilagoditi na temelju tvoje trenutne razine zumiranja.</p>
+<p>Napomena: naredbe za pomicanje omogućuju ručno pomicanje povećanog prikaza u bilo kojem smjeru, neovisno o načinu praćenja.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>1 do 100</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowMouse">Prati &amp;miš</h5>
+<p>Ovaj potvrdni okvir kontrolira treba li povećalo slijediti pokazivač miša.
+Kada je ova opcija omogućena, povećano područje automatski će se pomicati prateći pokazivač miša, što može biti korisno korisnicima koji se uglavnom kreću mišem, a ne tipkovnicom.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>Onemogućeno, omogućeno</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>Omogućeno</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowSystemFocus">Prati &amp;fokus sustava</h5>
+<p>Ovaj potvrdni okvir kontrolira treba li povećalo pratiti fokus sustava.
+Kada je ova opcija omogućena, povećano područje automatski se pomiče kako bi pratilo fokus sustava, što može biti korisno korisnicima koji se prvenstveno kreću tipkovnicom i žele povećalo za praćenje navigacije.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>Onemogućeno, omogućeno</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>Omogućeno</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowReviewCursor">Prati &amp;pregledni kursor</h5>
+<p>Ovaj potvrdni okvir kontrolira treba li povećalo slijediti pregledni kursor.
+Kada je omogućeno, povećano područje automatski će se pomicati prateći pregledni kursor, što može biti korisno korisnicima koji koriste pokazivač za pregled za navigaciju kroz sadržaj i žele da povećalo prati njihovu navigaciju.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>Onemogućeno, omogućeno</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>Omogućeno</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowNavigatorObject">Prati &amp;objekt navigatora</h5>
+<p>Ovaj potvrdni okvir kontrolira treba li povećalo slijediti objekt navigatora.
+Kada je omogućeno, povećano područje automatski se pomiče kako bi pratilo objekt navigatora, što može biti korisno korisnicima koji koriste navigaciju kroz objekte za navigaciju kroz sadržaj i žele da povećalo prati njihovo kretanje.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>Onemogućeno, omogućeno</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>Omogućeno</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierTrackingModeSetting">Modus praćenja</h5>
+<p>Ovaj odabirni okvir omogućuje odabir načina praćenja kad koristite povećalo.
+Za prebacivanje između načina praćenja, molimo dodijelite prilagođeni prečac pomoću dijaloškog okvira <a href="#InputGestures" title="ulazne geste">ulazne geste</a>.
+Slijedeće opcije su dostupne:</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>Središte, relativni</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>centrirano</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Opcija</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Središte</td>
+<td>Povećano područje uvijek je centrirano na trenutno praćenu poziciju.</td>
+</tr>
+<tr>
+<td>Relativno: Povećano područje održava relativni položaj praćenog elementa na temelju njegovog položaja na zaslonu.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Tipkovnica</h4>
 <!-- KC:setting -->
 
@@ -4702,6 +5405,12 @@ Ako izađete iz polja za uređivanje uz pomoć strelice, NVDA će vas vratiti u 
 <p>Ova je opcija podrazumijevano uključena. Ova opcija vam omogućuje  kontrolu nad tim, hoće li prečaci (kao što su pritisci tipki) koji nisu prečaci programa NVDA i ne smatraju se općenito prečacem da prolaze kroz dokument u kojem se nalazite.
 Na primjer, kad je ova opcija aktivirana, ako se pritisne slovo j, ono se neće proslijediti dokumentu, iako nije prečac za brzo kretanje ili prečac u samoj aplikaciji.
 U tom slučaju će NVDA narediti operativnom sustavu da svira standardni zvuk, kadgod se pritisne tipka koja se ne proslijeđuje.</p>
+<h5 id="BrowseModeSettingsBrowseModeNavigationElements">Elementi prilikom kretanja u modusu čitanja pri korištenju dodirnika</h5>
+<p>Ovaj popis omogućuje vam da odaberete koje su vrste elemenata dostupne prilikom izmjene elemenata u dodirnom načinu pregledanja.
+Koristite potvrdne okvire za omogućavanje ili onemogućavanje pojedinačnih tipova elemenata.
+Samo označeni tipovi elemenata pojavit će se prilikom prelaska prstom gore ili dolje kako bi se mijenjali navigacijski elementi načina pregledavanja.
+Ova postavka utječe samo na navigaciju na dodir i nema utjecaja na navigaciju u načinu pregledavanja na tipkovnici.</p>
+<p>Dostupni tipovi elemenata su svi dostupni putem <a href="#SingleLetterNavigation" title="jednoslovne navigacije">jednoslovne navigacije</a>.</p>
 <h4 id="DocumentFormattingSettings">Oblikovanje dokumenta</h4>
 <!-- KC:setting -->
 
@@ -4881,6 +5590,27 @@ Ako se ne mogu pronaći pravila govora za glavni jezik, koristi se engleski ("en
 <tr>
 <td>Zadano</td>
 <td>Automatski (jezik trenutnog glasa ako je podržan, ili automatski engleski)</td>
+</tr>
+</tbody>
+</table>
+<h6 id="MathSpeechDecimalSeparator">Decimalni razdjelnik za brojeve</h6>
+<p>To određuje znak koji se koristi kao decimalni razdjelnik pri čitanju brojeva u matematici.
+Kada je postavljen na automatski, razdjelnik se bira na temelju jezika za čitanje matematičkog sadržaja.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>Automatski, ".", ","</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>Automatski</td>
 </tr>
 </tbody>
 </table>
@@ -5754,6 +6484,27 @@ Ako otkrijete da vaš sapi 4 glas kojeg koristite prestane raditi, možete isklj
 </tr>
 </tbody>
 </table>
+<h5 id="SpeechDictsUseModernRegex">Koristi moderni sustav regularnih izraza za unose u rječniku govora:</h5>
+<p>Ova postavka kontrolira kako se regularni izrazi u <a href="#SpeechDictionaries" title="govornim rječnicima">govornim rječnicima</a> podudaraju.
+<a href="https://pypi.org/project/regex/" rel="noopener" target="_blank" title="Moderni engine">Moderni engine</a> ima bolju podršku za nelatinična pisma, poput hebrejskog i arapskog, te nudi snažnije opcije podudaranja.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opcije</td>
+<td>Zadano (onemogućeno), Onemogućeno, Omogućeno</td>
+</tr>
+<tr>
+<td>Zadano</td>
+<td>Onemogućeno</td>
+</tr>
+</tbody>
+</table>
 <h5 id="AdvancedSettingsCaretMoveTimeout">Brzina micanja kursora sustava (u milisekundama)</h5>
 <p>Ova opcija omogućuje povećanje ograničenja čekanja, u kojem NVDA čeka da se pojavi pokazivač u polju za uređivanje.
 Ako mislite da NVDA uvijek kasni jedan znak iza ili ponavlja retke, tada biste trebali povećati ovu vrijednost.</p>
@@ -5768,8 +6519,9 @@ Zapisivanje ovih poruka može prouzročiti pad performansi i velike datoteke zap
 Uključite iste samo ako vas je na to naveo Programer NVDA razvojnog tima, u slučaju da, na primjer, ne radi brajični redak.</p>
 <h5 id="PlayErrorSound">Reproduciraj zvuk za zapisane greške</h5>
 <p>Ova opcija omogućuje određivanje hoće li NVDA reproducirati zvuk u slučaju zapisane pogreške.
-Ako izaberete samo u testnim verzijama (podrazumijevano) prouzročit će da će se zvukovi reproducirati samo ako se radi o testnoj verziji (alpha, beta ili ako se pokreće iz izvornog koda).
-Ako odaberete da zvukovi će se reproducirati neovisno od verzije NVDA.</p>
+Odabirom "Samo u testnim verzijama (zadano)" NVDA se čuje pogreška u reprodukciji samo ako je trenutna NVDA verzija testna (alfa, beta ili pokrenuta iz izvornog koda).
+Odabirom "Da" možete omogućiti zvukove grešaka bez obzira na vašu trenutnu NVDA verziju.
+Odabir "Ne" isključuje zvukove pogreške bez obzira na to koja je vaša trenutna NVDA verzija, tj. čak i u testnim verzijama.</p>
 <h5 id="TextParagraphRegexEdit">Regularni izraz za kretanje po odlomcima</h5>
 <p>Ovo polje omogućuje prilagođavanje regularnog izraza za otkrivanje odlomka modusu čitanja.
 Traženje odlomaka koristeći <a href="#TextNavigationCommand" title="Prečac za kretanje po odlomcima">Prečac za kretanje po odlomcima</a> ovisi od ovog polja.</p>
@@ -5797,13 +6549,35 @@ Također biste možda htjeli napisati opis pravila u polje za komentar (nešto p
 <p>Međutim, NVDA govorni rječnici su daleko močniji od zamjene riječi.
 Dijaloški okvir za dodavanje pravila sadrži potvrdni okvir, kojim se određuje razlikovanje između malih i velikih slova (što znači da NVDA mora paziti, jesu li se u određenom pravilu koriste velika slova ili ne.
 NVDA standardno zanemaruje razlikovanje velikih i malih slova).</p>
-<p>I na kraju, serija izbornih gumba omogućuje da uzrokujete da NVDA zna da vaš uzorak se poklapa svugdje, da se tretira kao cijela riječ ili kao "regularni izraz".
-Postavljanje uzorka da se poklapa kao cijela riječ znači da će se zamjena izvršiti samo uzorak ne dolazi kao dio veće riječi.
-Ovaj je uvjet zadovoljen ako znakovi neposredno prije i poslije riječi su sve osim slova, broja, ili donje crte, te ako uopće ne postoje znakovi.
-Već, kad koristimo primjer zamjene riječi "ptica" s riječi "žaba", ako ste izabrali da NVDA tu riječ tretira kao zamjenu za cijelu riječ, neće se poklapati s "ptice" ili "bluebird".</p>
-<p>Regularni je izraz uzorak koji sadrži specijalne znakove koji omogućuju preklapanja više znakova od jednom ili podudaranje samo brojeva ili samo slova, kao nekoliko primjera.
+<p>Set izbornih gumbi omogućuje vam da proslijedite NVDA kako vaš uzorak mora biti ozgovoren.
+Dostupne vrste su:</p>
+<ul>
+<li>Bilo gdje: Uzorak se može podudarati bilo gdje u tekstu.</li>
+<li>Cijela riječ: Zamjena će biti napravljena samo ako se uzorak pojavi kao cjelovita riječ.
+To znači da se obrazac ne pojavljuje kao dio veće riječi.
+Uvjet je ispunjen ako su znakovi neposredno prije i poslije riječi išta drugo osim slova, broja ili podvlake, ili ako uopće nema znakova.
+Na primjer, ako zamijenite "bird" s "frog" koristeći podudaranje cijelih riječi, neće odgovarati "birds" ili "bluebird".</li>
+<li>Dio riječi: Uzorak mora biti prethođen ili praćen alfanumeričkim znakom ili podvlakom kako bi se podudarao.
+Ovo je korisno za usklađivanje dijelova složenica.
+Na primjer, ako zamijenite "bird" s "frog" koristeći dio podudaranja riječi, odgovarat će "birds", "bluebird", "bluebirds" i "birdsong", ali ne i samostalnoj riječi "bird" (jer nema ni prethodni ni sljedeći alfanumerički znak).</li>
+<li>Početak riječi: Uzorak mora imati granicu riječi na početku i alfanumerički znak ili podcrtavanje na kraju.
+Na primjer, ako zamijenite "bird" s "frog" koristeći podudaranje riječi na početku riječi, dobit ćete "birds" i "birdsong", ali ne i "bluebird" ili samostalnu riječ "bird".</li>
+<li>Kraj riječi: Uzorak mora imati alfanumerički znak ili podcrtavanje na početku i granicu riječi na kraju.
+Na primjer, ako zamijenite "bird" s "frog" koristeći podudaranje na kraju riječi, dobit ćete "bluebird" i "songbird", ali ne i "birds" ili samostalnu riječ "bird".</li>
+<li>Regularni izraz: Uzorak se tretira kao regularni izraz, što je obrazac koji sadrži posebne simbole koji omogućuju podudaranje na više znakova istovremeno, ili samo na brojevima, ili samo na slovima, kao nekoliko primjera.
 Regularni izrazi nisu pokriveni u ovom korisničkom priručniku.
-Kako bi ste pogledali uvodni tutorial, molimo otvorite <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="priručnik o regularnim izrazima pYthona">priručnik o regularnim izrazima pYthona</a>.</p>
+Kako bi ste pogledali uvodni tutorial, molimo otvorite <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="priručnik o regularnim izrazima pYthona">priručnik o regularnim izrazima pYthona</a>.
+Također razmotrite <a href="#SpeechDictsUseModernRegex" title="napredno podešavanje za omogućavanje modernijeg enginea">napredno podešavanje za omogućavanje modernijeg enginea</a>, osobito kada se radi o ne-latiničnim pismima, poput hebrejskog i arapskog.</li>
+<li>Unix shell-style podudarnice: Uzorak koristi Unix shell-style podudarnice za podudaranje.
+Na primjer:<ul>
+<li>'*' odgovara bilo kojem nizu znakova.</li>
+<li>'?' odgovara jednom znaku.</li>
+<li>'[az]' odgovara A ili Z.</li>
+<li>'[a-z]' odgovara svakom malom slovu od a do z.</li>
+<li>'[!a-z]' odgovara svakom znaku osim malim slovima a do z.</li>
+</ul>
+</li>
+</ul>
 <h4 id="SymbolPronunciation">Izgovor simbola interpunkcije</h4>
 <p>Ovaj dijaloški okvir omogućuje promjenu načina na koji su interpunkcija i drugi simboli izgovoreni, kao i razinu simbola na koji je izgovoren znak.</p>
 <p>Jezik za koji se uređuje izgovor simbola će se prikazati u naslovnoj traci dijaloškog okvira.
@@ -5866,7 +6640,8 @@ Na primjer, postavljanjem emuliranog unosa <code>a</code> i podešavanje ulazne 
 Međutim, imajte na umu da se ova opcija može promijeniti pod stavkom opće postavke u izborniku postavke.
 Da biste spremili postavke ručno u bilo koje vrijeme, odaberite stavku spremi konfiguraciju u NVDA izborniku.</p>
 <p>Ako ikad napravite pogrešku u vašim postavkama i trebate se vratiti natrag na pospremljene postavke, odaberite "vrati na spremljenu konfiguraciju" opciju koja se nalazi u NVDA izborniku.
-Možete također vratiti postavke na njihove standardne vrijednosti kad odaberete opciju vrati konfiguraciju na standardnu, koja se također nalazi u NVDA izborniku.</p>
+Možete također vratiti postavke na njihove standardne vrijednosti kad odaberete opciju vrati konfiguraciju na standardnu, koja se također nalazi u NVDA izborniku.
+Nakon vraćanja na tvorničke postavke, pojavit će se dijalog koji vam omogućuje da poništite vraćanje i vratite prethodnu konfiguraciju.</p>
 <p>Sljedeći prečaci su također korisni:</p>
 <!-- KC:beginInclude -->
 
@@ -5874,8 +6649,7 @@ Možete također vratiti postavke na njihove standardne vrijednosti kad odaberet
 <thead>
 <tr>
 <th>Naziv</th>
-<th>Tipka za stolna računala</th>
-<th>Tipka za prijenosna računala</th>
+<th>Prečac</th>
 <th>Opis</th>
 </tr>
 </thead>
@@ -5883,14 +6657,12 @@ Možete također vratiti postavke na njihove standardne vrijednosti kad odaberet
 <tr>
 <td>Spremi konfiguraciju</td>
 <td><code>NVDA+control+c</code></td>
-<td><code>NVDA+control+c</code></td>
-<td>Sprema konfiguraciju, tako da ne bude izgubljena poslije ponovnog pokretanja NVDA</td>
+<td>Sprema vašu trenutnu konfiguraciju kako se ne bi izgubila pri izlasku iz NVDA</td>
 </tr>
 <tr>
-<td>Vrati konfiguraciju</td>
+<td>Vraćanje konfiguracije</td>
 <td><code>NVDA+control+r</code></td>
-<td><code>NVDA+control+r</code></td>
-<td>Jednostruki pritisak vraća konfiguraciju na zadnju spremljenu konfiguraciju Kada se pritisne tri puta konfiguracija će se vratiti na zadane postavke.</td>
+<td>Jednim pritiskom vraća konfiguraciju na zadnju spremljenu konfiguraciju. Pritiskom tri puta konfiguracija se vraća na tvorničke postavke.</td>
 </tr>
 </tbody>
 </table>
@@ -6389,10 +7161,10 @@ Za više informacija, pročitajte opširno poglavlje: <a href="#AddonsManager" t
 <h3 id="CreatePortableCopy">Stvori prijenosnu kopiju</h3>
 <p>Ova će opcija otvoriti dijaloški okvir koji služi za stvaranje prijenosne inačice iz trenutno pokrenute kopije NVDA.</p>
 <p>Za više informacija, slijedite upute u <a href="#CreatingAPortableCopy" title="poglavlju stvaranje prijenosne kopije.">poglavlju stvaranje prijenosne kopije.</a></p>
-<h3 id="RunCOMRegistrationFixingTool">Pokreni alat za popravak Com registracija...</h3>
+<h3 id="RunCOMRegistrationFixingTool">Pokreni alat za popravak pristupačnosti sustava...</h3>
 <p>Ponekad se mogu pojaviti problemi s registrom sustava Windows, što rezultira nenormalnim ponašanjem NVDA.
 To može biti uzrokovano, na primjer, instaliranjem ili deinstaliranjem određenih programa (kao što su Adobe Reader ili Math Player), kao i ažuriranjima sustava Windows i drugim događajima.
-COM Registration Fixing Tool pokušava riješiti ove probleme popravljanjem unosa pristupačnosti u registru.</p>
+Alat za popravak pristupačnosti sustava pokušava riješiti ove probleme popravljanjem unosa pristupačnosti u registru.</p>
 <p>Vrste problema koje ovaj alat može riješiti uključuju:</p>
 <ul>
 <li>NVDA čita "nepoznato" ili "okno" prilikom kretanja u preglednicima kao što su Firefox ili Edge, e-mail programima kao što su Thunderbird, te u Windows Exploreru, programskoj traci i drugim programima.</li>
@@ -7067,14 +7839,12 @@ Sljedeći brajični redci su podržani:</p>
 <li>Baum: SuperVario, PocketVario, VarioUltra, Pronto!, SuperVario2, Vario 340</li>
 <li>HumanWare: Brailliant, BrailleConnect, Brailliant2</li>
 <li>APH: Refreshabraille</li>
-<li>Orbit: Orbit Reader 20</li>
+<li>Orbit: Orbit Reader 20, Orbit Reader 40</li>
 </ul>
 <p>Neki brajični redci, koje je proizveo baum mogu također raditi, premda to nije isprobano.</p>
 <p>Ako spajate brajične redke koji ne koriste hid preko usb veze, morate instalirati usb upravljačke programe proizvođača.
 VarioUltra i Pronto! brajični redci koriste HID.
-Refreshabraille i Orbit Reader 20 mogu koristiti HID ako su konfigurirani na određeni način.</p>
-<p>USB serijski način u Orbit Reader 20 brajičnom redku, trenutačno je podržan samo u Windows 10 i novijim inačicama operacijskog sustava.
-Umjesto toga, trebali biste koristiti USB HID.</p>
+Refreshabraille, Orbit Reader 20 i Orbit Reader 40 mogu koristiti HID ako su pravilno konfigurirani.</p>
 <p>Slijede prečaci za ove brajične retke s NVDA čitačem.
 Smještaj ovih tipki potražite u dokumentaciji brajičnog retka.</p>
 <!-- KC:beginInclude -->
@@ -9858,7 +10628,9 @@ Nadamo se da će bilo koji model brajičnog redka kojeg će proizvesti bilo koji
 NVDA može prikazati ili jednu liniju brajice na liniji za prikaz brajice namijenjenu uređaju ili više linija brajice na svom taktilnom grafičkom području.
 Model A300 ima taktilno grafičko područje od 120 x 80 točaka, u koje može stati 8 redaka od po 20 ćelija.</p>
 <p>Možete podesiti hoće li NVDA prikazivati Brailleovo pismo na namjenskoj liniji za prikaz brajice ili na taktilnom grafičkom području putem opcije Odredište brajice u NVDA postavkama Brajice za ovaj brajični redak.</p>
-<p>Podržane su tipke za pomicanje, ali zbog ograničenih gumba na uređaju druge naredbe i mogućnosti usmjeravanja trenutno nisu dostupne.</p>
+<p>Dot Pad ima tipke za pomicanje lijevo i desno te četiri funkcijske tipke (f1 do f4).
+Više tipki može se istovremeno pritisnuti za stvaranje kombiniranih prečaca (npr. 'f1+panLeft'), koje se mogu dodijeliti putem dijaloškog okvira ulaznih gesti.
+Osim pomicanja, niti jedan drugi prečac nije podrazumijevano dodijeljen.</p>
 <p>Upravljački program za Dot Pad podržava automatsko otkrivanje spojenih uređaja.
 Međutim, automatsko otkrivanje onemogućeno je prema zadanim postavkama jer uređaj koristi generičke USB identifikatore koji bi mogli biti u sukobu s drugim uređajima.
 Kako biste uključili automatsko otkrivanje, otvorite NVDA postavke, kategoriju brajica,  i odaberite "Dot Pad" na popisu uređaja za automatsko otkrivanje.
@@ -9872,17 +10644,17 @@ Obavezno podignite ruku s uređaja u potpunosti dok koristite NVDA čitač zaslo
 <thead>
 <tr>
 <th>Naziv</th>
-<th>prečac</th>
+<th>Opis</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Pomakni brajični redak u nazad</td>
-<td><code>pan_left</code></td>
+<td>Pomakni brajični prikaz unatrag</td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
-<td>Pomakni brajični redak u naprijed</td>
-<td><code>pan_right</code></td>
+<td>Pomakni brajični prikaz u naprijed</td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>
@@ -10019,7 +10791,7 @@ Ovi parametri trebaju biti smješteni poslije opcije, odvojene razmakom ako se k
 <tr>
 <td><code>-l LOGLEVEL</code></td>
 <td><code>--log-level=LOGLEVEL</code></td>
-<td>Najniža razina zapisivanih poruka u zapisniku (debug 10, ulaz/izlaz 12, debug upozorenje 15, info 20, onemogućeno 100). Zapisivanje dnevnika je uvijek isključeno kada je sigurni način uključen.</td>
+<td>Najniža razina zabilježenih poruka (debug (necenzurirano) 5, debug 10, ulaz/izlaz 12, upozorenje na debug 15, info 20, onemogućeno 100). Evidentiranje je uvijek onemogućeno ako je uključen sigurni način rada.</td>
 </tr>
 <tr>
 <td><code>-c CONFIGPATH</code></td>
@@ -10160,5 +10932,6 @@ Te vrijednosti pohranjuju se u registar pod ključem <code>HKEY_LOCAL_MACHINE\SO
 <p>Ako trebate više informacija ili pomoć sa čitačem ekrana NVDA, molimo posjetite <a href="https://www.nvaccess.org" rel="noopener" target="_blank" title="NVDA web stranicu">NVDA web stranicu</a>.
 Tamo je moguće naći dodatnu dokumentaciju, tehničku podršku i resurse zajednice.
 Ova web stranica sadržava informacije koje se tiču razvoja NVDA čitača.</p>
+<!-- markdownlint-disable-file MD060 -->
 </body>
 </html>

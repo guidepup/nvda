@@ -2,16 +2,16 @@
 <html lang="fr" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>Résumé des commandes NVDA 2026.1.1</title>
+<title>Résumé des commandes NVDA 2026.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="resume-des-commandes-nvda-202611">Résumé des commandes NVDA 2026.1.1</h1>
+<body><h1 id="resume-des-commandes-nvda-20262">Résumé des commandes NVDA 2026.2</h1>
 <div class="toc">
 <ul>
-<li><a href="#resume-des-commandes-nvda-202611" title="Résumé des commandes NVDA 2026.1.1">Résumé des commandes NVDA 2026.1.1</a><ul>
+<li><a href="#resume-des-commandes-nvda-20262" title="Résumé des commandes NVDA 2026.2">Résumé des commandes NVDA 2026.2</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Prendre en Main NVDA">Prendre en Main NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="Gestes Tactiles de NVDA">Gestes Tactiles de NVDA</a><ul>
 <li><a href="#TouchModes" title="Modes Tactiles">Modes Tactiles</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Le mode Navigation">Le mode Navigation</a><ul>
-<li><a href="#SingleLetterNavigation" title="Les Touches de Navigation Rapide">Les Touches de Navigation Rapide</a></li>
+<li><a href="#SingleLetterNavigation" title="Les Touches de Navigation Rapide">Les Touches de Navigation Rapide</a><ul>
+<li><a href="#BrowseModeTouch" title="Mode navigation tactile">Mode navigation tactile</a><ul>
+<li><a href="#gestes-tactiles-en-mode-navigation" title="Gestes tactiles en mode navigation">Gestes tactiles en mode navigation</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="La Liste d'Éléments">La Liste d'Éléments</a></li>
 <li><a href="#SearchingForText" title="Chercher du texte">Chercher du texte</a></li>
 <li><a href="#ImbeddedObjects" title="Les Objets Embarqués">Les Objets Embarqués</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Braille">Braille</a><ul>
-<li><a href="#BrailleInput" title="Saisie en Braille">Saisie en Braille</a></li>
+<li><a href="#BrailleReading" title="Lecture en braille">Lecture en braille</a><ul>
+<li><a href="#BrailleReadingGestures" title="Gestes de lecture du braille">Gestes de lecture du braille</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Saisie en Braille">Saisie en Braille</a><ul>
+<li><a href="#BrailleInputGestures" title="Gestes de saisie en braille">Gestes de saisie en braille</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Vision">Vision</a><ul>
 <li><a href="#VisionScreenCurtain" title="Le Rideau d'Écran">Le Rideau d'Écran</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Loupe">Loupe</a><ul>
+<li><a href="#MagnifierCommands" title="Commandes de la loupe">Commandes de la loupe</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Reconnaissance de Contenu">Reconnaissance de Contenu</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Séparation du son">Séparation du son</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Loupe">Loupe</a></li>
 <li><a href="#KeyboardSettings" title="Clavier">Clavier</a></li>
 <li><a href="#MouseSettings" title="Souris">Souris</a></li>
 <li><a href="#ReviewCursorSettings" title="Curseur de revue">Curseur de revue</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">Gestes Tactiles de NVDA</h3>
 <p>Pour activer/désactiver le support d'interaction tactile, appuyez sur NVDA+contrôle+alt+t.</p>
 <h4 id="TouchModes">Modes Tactiles</h4>
-<p>Pour basculer entre les modes, faites une tape avec trois doigts.</p>
+<p>Pour passer d'un mode tactile à l'autre, faites une tape avec trois doigts.</p>
 <h3 id="BasicNVDACommands">Commandes de Base</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>Maj</td>
 <td>Aucun</td>
 <td>Pause instantanée de la parole, un second appui reprend la parole là où elle s'était arrêtée</td>
+</tr>
+<tr>
+<td>Répéter la dernière information annoncée</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>None</td>
+<td>Répéter la dernière information annoncée par NVDA. Un double appui l'affiche dans une fenêtre</td>
 </tr>
 <tr>
 <td>Menu NVDA</td>
@@ -265,7 +290,7 @@
 <tr>
 <td>Annoncer l'état de la batterie</td>
 <td>NVDA+maj+b</td>
-<td>Annonce le pourcentage de charge de la batterie ou si l'adaptateur secteur est connecté</td>
+<td>Annonce le pourcentage de charge de la batterie ou si l'adaptateur secteur est connecté.</td>
 </tr>
 <tr>
 <td>Annoncer le contenu du presse-papiers</td>
@@ -356,7 +381,7 @@
 <td>Lire ligne courante</td>
 <td>NVDA+flèche haut</td>
 <td>NVDA+l</td>
-<td>Lit la ligne où se trouve le curseur système. Un double appui épelle la ligne. Un triple appui l'épelle en code international.</td>
+<td>Lit la ligne où se trouve le curseur système. Un double appui épelle la ligne. Un triple appui l'épelle en utilisant la description des caractères (code international).</td>
 </tr>
 <tr>
 <td>Lire texte sélectionné</td>
@@ -603,7 +628,7 @@
 <td>pavnum8</td>
 <td>NVDA+maj+point-virgule</td>
 <td>Aucun</td>
-<td>Lit la ligne de texte sous le curseur de revue, un double appui épelle la ligne</td>
+<td>Lit la ligne de texte sous le curseur de revue. Un double appui épelle cette ligne. Un triple appui épelle cette ligne en utilisant la description des caractères.</td>
 </tr>
 <tr>
 <td>Aller à la ligne suivante en revue</td>
@@ -631,7 +656,7 @@
 <td>pavnum5</td>
 <td>NVDA+contrôle+point-virgule</td>
 <td>Aucun</td>
-<td>Lit le mot à la position du curseur de revue, un double appui épelle le mot</td>
+<td>Lit le mot courant dans le texte à la position du curseur de revue. un double appui épelle le mot. Un triple appui lépelle en utilisant la description des caractères</td>
 </tr>
 <tr>
 <td>Aller au mot suivant en revue</td>
@@ -659,7 +684,7 @@
 <td>pavnum2</td>
 <td>NVDA+point-virgule</td>
 <td>Aucun</td>
-<td>Annonce le caractère courant sous le curseur de revue, un double appui annonce la valeur du caractère en décimal et hexadécimal</td>
+<td>Annonce le caractère courant sur la ligne de texte à la position du curseur de revue. Un double appui annonce une description ou un exemple de ce caractère. Un triple appui annonce la valeur du caractère en décimal et hexadécimal.</td>
 </tr>
 <tr>
 <td>Aller au caractère suivant en revue</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Pour activer ou désactiver la navigation rapide pour le document courant, appuyez sur NVDA+maj+espace.</p>
+<h4 id="BrowseModeTouch">Mode navigation tactile</h4>
+<h5 id="gestes-tactiles-en-mode-navigation">Gestes tactiles en mode navigation</h5>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tactile</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sélectionner le type d'élément suivant</td>
+<td>Glisser vers le bas</td>
+<td>Passe au type d'élément de navigation tactile suivant</td>
+</tr>
+<tr>
+<td>Sélectionner le type d'élément précédent</td>
+<td>glisser vers le haut</td>
+<td>Passe au type d'élément de navigation tactile précédent</td>
+</tr>
+<tr>
+<td>Passer à l'élément suivant</td>
+<td>glisser vers la droite</td>
+<td>Pass à l'élément de mode navigation suivant du type sélectionné</td>
+</tr>
+<tr>
+<td>Passer à l'élément précédent</td>
+<td>glisser vers la gauche</td>
+<td>Passe à l'élément de mode navigation précédent du type sélectionné</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">La Liste d'Éléments</h3>
 <table>
 <thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">Braille</h2>
+<h3 id="BrailleReading">Lecture en braille</h3>
+<h4 id="BrailleReadingGestures">Gestes de lecture du braille</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Touche</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modifier le mode braille</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Permet de faire défiler les modes braille disponibles&nbsp;: "suivre les curseurs" et "afficher la parole"</td>
+</tr>
+<tr>
+<td>Le Braille suit</td>
+<td><code>NVDA+contrôle+t</code></td>
+<td>Cette option vous permet de choisir si le braille suivra le curseur du focus système, le curseur de l'objet navigateur ou les deux</td>
+</tr>
+<tr>
+<td>Activer ou désactiver le défilement automatique</td>
+<td><code>NVDA+alt+k</code></td>
+<td>Définnit si NVDA fait défiler périodiquement l'afficheur braille pour présenter des informations trop longues pour être affichées en une fois.</td>
+</tr>
+<tr>
+<td>Augmenter la vitesse de défilement automatique</td>
+<td><code>NVDA+alt+l</code></td>
+<td>Accélère le défilement automatique (lorsqu'il est activé)</td>
+</tr>
+<tr>
+<td>Diminuer la vitesse de défilement automatique</td>
+<td><code>NVDA+alt+j</code></td>
+<td>Ralentit le défilement automatique (lorsqu'il est activé)</td>
+</tr>
+<tr>
+<td>Faire défiler les formes de curseur braille</td>
+<td>Aucune</td>
+<td>Faire défiler les options de forme (motif de points) du curseur braille</td>
+</tr>
+<tr>
+<td>Faire défiler déplacer le curseur système lors du routage du curseur de revue</td>
+<td>Aucune</td>
+<td>Faire défiler les choix pour Déplacer le curseur système lors du routage du curseur de revue</td>
+</tr>
+<tr>
+<td>Faire défiler les modes d'affichage des messages braille</td>
+<td>Aucune</td>
+<td>Faire défiler les modes d'affichage des messages braille</td>
+</tr>
+<tr>
+<td>Faire défiler les modes d'affichage de la sélection en braille</td>
+<td>Aucun</td>
+<td>Faire défiler les modes d'affichage de la sélection en braille</td>
+</tr>
+<tr>
+<td>Faire défiler les états de normalisation Unicode braille</td>
+<td>Aucune</td>
+<td>Faire défiler les états de normalisation Unicode braille</td>
+</tr>
+<tr>
+<td>Amener l'afficheur braille au focus</td>
+<td>Aucun</td>
+<td>Amener l'afficheur braille au focus courant</td>
+</tr>
+<tr>
+<td>Amener l'afficheur braille à la ligne suivante</td>
+<td>Aucun</td>
+<td>Amener l'afficheur braille à la ligne suivante</td>
+</tr>
+<tr>
+<td>Amener l'afficheur braille à la ligne précédente</td>
+<td>Aucun</td>
+<td>Amener l'afficheur braille à la ligne précédente</td>
+</tr>
+<tr>
+<td>Annoncer la mise en forme braille</td>
+<td>Aucune</td>
+<td>Annoncer les informations de mise en forme pour le texte sous cette cellule braille</td>
+</tr>
+<tr>
+<td>Amener le curseur ou activer l'objet braille</td>
+<td>Aucun</td>
+<td>Amener le curseur à cette cellule braille ou activer l'objet sous cette cellule braille</td>
+</tr>
+<tr>
+<td>Faire défiler l'afficheur braille en arrière</td>
+<td>Aucune</td>
+<td>Faire défiler l'afficheur braille en arrière</td>
+</tr>
+<tr>
+<td>Faire défiler l'afficheur braille en avant</td>
+<td>Aucun</td>
+<td>Faire défiler l'afficheur braille en avant</td>
+</tr>
+<tr>
+<td>Activer ou désactiver le curseur braille</td>
+<td>Aucun</td>
+<td>Activer ou désactiver le curseur braille</td>
+</tr>
+<tr>
+<td>Faire défiler les informations contextuelles en braille</td>
+<td>Aucune</td>
+<td>Faire défiler les modes de présentation des informations contextuelles en braille</td>
+</tr>
+<tr>
+<td>Activer ou désactiver le retour vocal lors de la navigation en braille</td>
+<td>Aucun</td>
+<td>Activer ou désactiver le retour vocal lors de la navigation en braille par ligne ou par paragraphe</td>
+</tr>
+<tr>
+<td>Bascule l'annonce du caractère lors du routage</td>
+<td>Aucune</td>
+<td>Bascule l'annonce du caractère lors du routage du curseur dans le texte</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Saisie en Braille</h3>
 <p>L'appui sur le point 7 efface la dernière cellule ou le dernier caractère braille saisi.
 Le point 8 traduit toute saisie braille puis appuie sur la touche Entrée.
 L'appui simultané sur les points 7 et 8 traduit toute saisie braille sans ajouter d'espace ou actionner la touche entrée.</p>
+<h4 id="BrailleInputGestures">Gestes de saisie en braille</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Touche</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Saisie via afficheur braille</td>
+<td>n'importe quel point</td>
+<td>Saisie à l'aide du clavier braille</td>
+</tr>
+<tr>
+<td>Effacer la dernière saisie</td>
+<td><code>point7</code></td>
+<td>Effacer la dernière cellule ou le dernier caractère braille saisi</td>
+</tr>
+<tr>
+<td>Convertir saisie braille</td>
+<td><code>point7+point8</code></td>
+<td>Convertir toute saisie braille</td>
+</tr>
+<tr>
+<td>Convertir et appuyer sur entrée</td>
+<td><code>point8</code></td>
+<td>Convertir toute saisie braille et appuyer sur entrée</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Vision</h2>
 <h3 id="VisionScreenCurtain">Le Rideau d'Écran</h3>
 <table>
@@ -1218,6 +1426,94 @@ L'appui simultané sur les points 7 et 8 traduit toute saisie braille sans ajout
 <td>Activer ou désactiver le rideau d'écran</td>
 <td><code>NVDA+contrôle+échap</code></td>
 <td>Activer pour rendre l'écran noir ou désactiver pour afficher le contenu de l'écran. Un appui active le rideau d'écran jusqu'au prochain redémarrage de NVDA. Deux appuis activent le rideau d'écran jusqu'à ce que vous le désactiviez.</td>
+</tr>
+<tr>
+<td>Annoncer l'état du rideau d'écran</td>
+<td>Aucune</td>
+<td>Annonce l'état actuel du rideau d'écran, qu'il soit désactivé, activé ou en mode temporaire.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Loupe</h2>
+<h3 id="MagnifierCommands">Commandes de la loupe</h3>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Touche</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activer et désactiver la loupe</td>
+<td><code>NVDA+maj+w</code></td>
+<td>Active ou désactive la loupe</td>
+</tr>
+<tr>
+<td>Augmenter le niveau de zoom</td>
+<td><code>NVDA+ùaj+égal</code></td>
+<td>Augmente le niveau de zoom. Démarre la loupe si elle n'est pas déjà activée.</td>
+</tr>
+<tr>
+<td>Diminuer le niveau de zoom</td>
+<td><code>NVDA+maj+)</code></td>
+<td>Diminue le niveau de zoom</td>
+</tr>
+<tr>
+<td>Faire défiler les filtres de couleur</td>
+<td><code>NVDA+maj+i</code></td>
+<td>Fait défiler les filtres de couleur disponibles (normal, niveaux de gris, inversé)</td>
+</tr>
+<tr>
+<td>Faire défiler les modes de suivi</td>
+<td>Aucune</td>
+<td>Fait défiler les modes de suivi (centre, relatif)</td>
+</tr>
+<tr>
+<td>Afficher un aperçu de l'écran entier</td>
+<td><code>NVDA+maj+l</code></td>
+<td>Affiche temporairement un aperçu de tout l'écran</td>
+</tr>
+<tr>
+<td>Se déplacer vers la gauche</td>
+<td><code>NVDA+alt+FlècheGauche</code></td>
+<td>Déplace la vue agrandie vers la gauche de la taille du pas de déplacement configuré</td>
+</tr>
+<tr>
+<td>Se déplacer vers la droite</td>
+<td><code>NVDA+alt+FlècheDroite</code></td>
+<td>Déplace la vue agrandie vers la droite de la taille du pas de déplacement configuré</td>
+</tr>
+<tr>
+<td>Se déplacer vers le haut</td>
+<td><code>NVDA+alt+FlèchHaut</code></td>
+<td>Déplace la vue agrandie vers le haut de la taille du pas de déplacement configuré</td>
+</tr>
+<tr>
+<td>Se déplacer vers le bas</td>
+<td><code>NVDA+alt+FlècheBas</code></td>
+<td>Déplace la vue agrandie vers le bas de la taille du pas de déplacement configuré</td>
+</tr>
+<tr>
+<td>Se déplacer au bord gauche</td>
+<td><code>NVDA+maj+alt+flècheGauche</code></td>
+<td>Déplace la vue agrandie directement au bord gauche de l'écran</td>
+</tr>
+<tr>
+<td>Se déplacer au bord droit</td>
+<td><code>NVDA+maj+alt+flècheDroite</code></td>
+<td>Déplace la vue agrandie directement au bord droit de l'écran</td>
+</tr>
+<tr>
+<td>Se déplacer au bord supérieur</td>
+<td><code>NVDA+maj+alt+flècheHaut</code></td>
+<td>Déplace la vue agrandie directement au bord supérieur de l'écran</td>
+</tr>
+<tr>
+<td>Se déplacer au bord inférieur</td>
+<td><code>NVDA+maj+alt+flècheBAs</code></td>
+<td>Déplace la vue agrandie directement au bord inférieur de l'écran</td>
 </tr>
 </tbody>
 </table>
@@ -1251,7 +1547,7 @@ L'appui simultané sur les points 7 et 8 traduit toute saisie braille sans ajout
 <h4 id="BrowseModeInMicrosoftWord">Mode Navigation sous Microsoft Word</h4>
 <p>Pour activer ou désactiver le mode navigation sous Microsoft Word, appuyez sur NVDA+espace.</p>
 <h5 id="WordElementsList">La Liste d'Éléments</h5>
-<p>Quand vous êtes en mode navigation sous Microsoft Word, vous pouvez accéder à la liste d'éléments en pressant NVDA+f7.</p>
+<p>Quand vous êtes en mode navigation sous Microsoft Word, vous pouvez accéder à la liste d'éléments en appuyant sur NVDA+f7.</p>
 <h4 id="WordReportingComments">Annonce des Commentaires</h4>
 <p>Pour annoncer tout commentaire à la position actuelle du curseur, appuyez sur <code>NVDA+alt+c</code>.
 Un double appui affiche l'information en mode navigation.</p>
@@ -1653,6 +1949,37 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Loupe</h4>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Ordinateur de bureau</th>
+<th>Ordinateur portable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Ouvrir les paramètres de la loupe</td>
+<td><code>NVDA+control+w</code></td>
+<td><code>NVDA+control+w</code></td>
+<td>La catégorie Loupe dans la boîte de dialogue Paramètres de NVDA vous permet de configurer le comportement par défaut de la fonctionnalité de <a href="#Magnifier" title="Loupe">Loupe</a> intégrée de NVDA.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Activer la loupe</td>
+<td><code>NVDA+maj+w</code></td>
+<td><code>NVDA+maj+w</code></td>
+<td>Cette option démarre ou arrête la Loupe.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Filtre de couleur</td>
+<td><code>NVDA+maj+i</code></td>
+<td><code>NVDA+maj+i</code></td>
+<td>Cette option permet de sélectionner le filtre à appliquer lors de l'utilisation de la loupe.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Clavier</h4>
 <table>
 <thead>
@@ -1823,23 +2150,20 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <thead>
 <tr>
 <th>Nom</th>
-<th>Ordinateur de bureau</th>
-<th>Ordinateur portable</th>
+<th>Touche</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Enregistrer la configuration</td>
+<td>Sauvegarder la configuration</td>
 <td><code>NVDA+contrôle+c</code></td>
-<td><code>NVDA+contrôle+c</code></td>
-<td>Enregistre votre configuration actuelle afin qu’elle ne soit pas perdue lorsque vous quittez NVDA</td>
+<td>Enregistre votre configuration actuelle afin qu'elle ne soit pas perdue lorsque vous quittez NVDA</td>
 </tr>
 <tr>
 <td>Rétablir la configuration</td>
 <td><code>NVDA+contrôle+r</code></td>
-<td><code>NVDA+contrôle+r</code></td>
-<td>Un appui réinitialise votre configuration à la dernière sauvegarde. Trois appuis la réinitialise aux paramètres par défaut.</td>
+<td>Un appui réinitialise votre configuration à la dernière sauvegarde. Trois appuis la réinitialise aux paramètres par défaut sans afficher la boîte de dialogue d'annulation.</td>
 </tr>
 </tbody>
 </table>
@@ -4844,12 +5168,12 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 </thead>
 <tbody>
 <tr>
-<td>Défilement arrière de l'afficheur braille</td>
-<td><code>défilement_gauche</code></td>
+<td>Faire défiler l'afficheur braille vers l'arrière</td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
-<td>Défilement avant de l'afficheur braille</td>
-<td><code>défilement_droite</code></td>
+<td>Faire défiler l'afficheur braille vers l'avant</td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

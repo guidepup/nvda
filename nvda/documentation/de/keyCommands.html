@@ -2,16 +2,16 @@
 <html lang="de" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 Kurzübersicht der Befehle</title>
+<title>NVDA 2026.2 Kurzübersicht der Befehle</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611-kurzubersicht-der-befehle">NVDA 2026.1.1 Kurzübersicht der Befehle</h1>
+<body><h1 id="nvda-20262-kurzubersicht-der-befehle">NVDA 2026.2 Kurzübersicht der Befehle</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611-kurzubersicht-der-befehle" title="NVDA 2026.1.1 Kurzübersicht der Befehle">NVDA 2026.1.1 Kurzübersicht der Befehle</a><ul>
+<li><a href="#nvda-20262-kurzubersicht-der-befehle" title="NVDA 2026.2 Kurzübersicht der Befehle">NVDA 2026.2 Kurzübersicht der Befehle</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="NVDA benutzen">NVDA benutzen</a><ul>
 <li><a href="#NVDATouchGestures" title="Touchscreen-Bedienung mit NVDA">Touchscreen-Bedienung mit NVDA</a><ul>
 <li><a href="#TouchModes" title="Arbeitsmodi">Arbeitsmodi</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Der Lesemodus">Der Lesemodus</a><ul>
-<li><a href="#SingleLetterNavigation" title="Die Schnellnavigationstasten">Die Schnellnavigationstasten</a></li>
+<li><a href="#SingleLetterNavigation" title="Die Schnellnavigationstasten">Die Schnellnavigationstasten</a><ul>
+<li><a href="#BrowseModeTouch" title="Touch-Navigation im Browsermodus">Touch-Navigation im Browsermodus</a><ul>
+<li><a href="#touch-gesten-im-browsermodus" title="Touch-Gesten im Browsermodus">Touch-Gesten im Browsermodus</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="Die Elementliste">Die Elementliste</a></li>
 <li><a href="#SearchingForText" title="Nach Text suchen">Nach Text suchen</a></li>
 <li><a href="#ImbeddedObjects" title="Eingebettete Objekte">Eingebettete Objekte</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Braille">Braille</a><ul>
-<li><a href="#BrailleInput" title="Braille-Eingabe">Braille-Eingabe</a></li>
+<li><a href="#BrailleReading" title="Braille lesen">Braille lesen</a><ul>
+<li><a href="#BrailleReadingGestures" title="Gesten zum Lesen auf der Braillezeile">Gesten zum Lesen auf der Braillezeile</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Braille-Eingabe">Braille-Eingabe</a><ul>
+<li><a href="#BrailleInputGestures" title="Braille-Eingabegesten">Braille-Eingabegesten</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Visuelle Darstellungen">Visuelle Darstellungen</a><ul>
 <li><a href="#VisionScreenCurtain" title="Der Bildschirmvorhang">Der Bildschirmvorhang</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Vergrößerung">Vergrößerung</a><ul>
+<li><a href="#MagnifierCommands" title="Vergrößerungsbefehle">Vergrößerungsbefehle</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Inhalte erkennen">Inhalte erkennen</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Sound-Teilung der Audio-Kanäle">Sound-Teilung der Audio-Kanäle</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Vergrößerung">Vergrößerung</a></li>
 <li><a href="#KeyboardSettings" title="Die Tastatur-Einstellungen">Die Tastatur-Einstellungen</a></li>
 <li><a href="#MouseSettings" title="Die Maus-Einstellungen">Die Maus-Einstellungen</a></li>
 <li><a href="#ReviewCursorSettings" title="Die Einstellungen des NVDA-Cursors">Die Einstellungen des NVDA-Cursors</a></li>
@@ -118,8 +136,8 @@
 </li>
 </ul>
 </li>
-<li><a href="#RemoteAccess" title="Remote Access">Remote Access</a><ul>
-<li><a href="#RemoteAccessGestures" title="Remote Access Key Commands Summary">Remote Access Key Commands Summary</a></li>
+<li><a href="#RemoteAccess" title="Fernzugriff">Fernzugriff</a><ul>
+<li><a href="#RemoteAccessGestures" title="Zusammenfassung der Tastaturbefehle für den Fernzugriff">Zusammenfassung der Tastaturbefehle für den Fernzugriff</a></li>
 </ul>
 </li>
 <li><a href="#ExtraTools" title="Die Werkzeuge">Die Werkzeuge</a><ul>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">Touchscreen-Bedienung mit NVDA</h3>
 <p>Mit NVDA+Strg+Alt+T können Sie die Unterstützung der Touchscreen-Bedienung umschalten.</p>
 <h4 id="TouchModes">Arbeitsmodi</h4>
-<p>Um zwischen den Arbeitsmodi zu wechseln, tippen Sie einmal mit drei Fingern.</p>
+<p>Um zwischen den Berührungsmodi zu wechseln, tippen Sie mit drei Fingern.</p>
 <h3 id="BasicNVDACommands">Allgemeine NVDA-Befehle</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>Umschalt</td>
 <td>Keine</td>
 <td>Hält sofort den Lesevorgang an oder setzt bei erneutem Drücken den Lesevorgang fort (sofern das von der Sprachausgabe unterstützt wird).</td>
+</tr>
+<tr>
+<td>Zuletzt gesprochenes Wort wiederholen</td>
+<td>Information</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Keine</td>
 </tr>
 <tr>
 <td>NVDA-Menü</td>
@@ -690,18 +715,18 @@
 <td>Zieht den NVDA-Cursor auf die nächste Textseite, sofern dies von der Anwendung unterstützt wird</td>
 </tr>
 <tr>
-<td>Move to start of selection in review</td>
-<td><code>NVDA+alt+home</code></td>
-<td><code>NVDA+alt+home</code></td>
-<td>None</td>
-<td>Moves the review cursor to the first character of the selected text</td>
+<td>Zum Anfang der Auswahl in der Vorschau springen</td>
+<td><code>NVDA+Alt+Pos1</code></td>
+<td><code>NVDA+Alt+Pos1</code></td>
+<td>Keine</td>
+<td>Springt mit den NVDA-Cursor zum ersten Zeichen des ausgewählten Textes</td>
 </tr>
 <tr>
-<td>Move to end of selection in review</td>
-<td><code>NVDA+alt+end</code></td>
-<td><code>NVDA+alt+end</code></td>
-<td>None</td>
-<td>Moves the review cursor to the last character of the selected text</td>
+<td>Zum Ende der Auswahl in der Vorschau springen</td>
+<td><code>NVDA+Alt+Ende</code></td>
+<td><code>NVDA+Alt+Ende</code></td>
+<td>Keine</td>
+<td>Springt mit dem NVDA-Cursor zum letzten Zeichen des ausgewählten Textes</td>
 </tr>
 <tr>
 <td>Alles vorlesen</td>
@@ -858,11 +883,11 @@
 <td>Zieht das Navigator-Objekt zur Objektposition an der Mausposition</td>
 </tr>
 <tr>
-<td>Toggle mouse audio coordinates</td>
-<td>none</td>
-<td>none</td>
-<td>none</td>
-<td>Toggles whether NVDA plays audio beeps that report the mouse position as it moves.</td>
+<td>Schaltet die Audio-Koordinaten für den Mauszeiger ein oder aus</td>
+<td>Keine</td>
+<td>Keine</td>
+<td>Keine</td>
+<td>Legt fest, ob NVDA beim Bewegen der Maus Signaltöne wiedergibt, die die Position des Mauszeigers anzeigen.</td>
 </tr>
 </tbody>
 </table>
@@ -931,7 +956,7 @@
 <li>G: Grafik</li>
 <li>D: Sprungmarke</li>
 <li>O: Eingebettetes Objekt (Anwendung, Dialogfeld, Audio- und Video-Player)</li>
-<li>1 to 9: headings at levels 1 to 9 respectively</li>
+<li>1 bis 9: Überschriften der Ebene 1 bis 9</li>
 <li>A: Anmerkung: Kommentar, Dokumentänderung, etc.</li>
 <li><code>P</code>: Absatz</li>
 <li>W: Rechtschreibfehler</li>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Mit NVDA+Umschalt+Leertaste können Sie die Schnellnavigation im aktuellen Dokument ein- oder ausschalten.</p>
+<h4 id="BrowseModeTouch">Touch-Navigation im Browsermodus</h4>
+<h5 id="touch-gesten-im-browsermodus">Touch-Gesten im Browsermodus</h5>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Touch</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nächsten Elementtyp auswählen</td>
+<td>Nach unten wischen</td>
+<td>Wechselt zum nächsten Typ des Navigationselements im Lesemodus</td>
+</tr>
+<tr>
+<td>Vorherigen Elementtyp auswählen</td>
+<td>Nach oben wischen</td>
+<td>Wechselt zum vorherigen Typ des Navigationselements im Lesemodus</td>
+</tr>
+<tr>
+<td>Zum nächsten Element wechseln</td>
+<td>Nach rechts wischen</td>
+<td>Wechselt zum nächsten Element des ausgewählten Typs im Lesemodus</td>
+</tr>
+<tr>
+<td>Zum vorherigen Element wechseln</td>
+<td>Nach links wischen</td>
+<td>Wechselt zum vorherigen Element des ausgewählten Typs im Lesemodus</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">Die Elementliste</h3>
 <table>
 <thead>
@@ -987,9 +1045,9 @@
 </thead>
 <tbody>
 <tr>
-<td>Find text</td>
-<td>NVDA+control+f</td>
-<td>Opens the search dialog</td>
+<td>Text suchen</td>
+<td>NVDA+Strg+F</td>
+<td>Öffnet das Dialogfeld für die Suche</td>
 </tr>
 <tr>
 <td>Weitersuchen</td>
@@ -997,9 +1055,9 @@
 <td>Sucht das nächste Vorkommen des aktuellen Suchbegriffs</td>
 </tr>
 <tr>
-<td>Find previous</td>
-<td>NVDA+shift+f3</td>
-<td>searches the previous occurrence of the current search term</td>
+<td>Vorherige anzeigen</td>
+<td>NVDA+Umschalt+F3</td>
+<td>Sucht nach der letzten Stelle, an der der aktuelle Suchbegriff vorkommt</td>
 </tr>
 </tbody>
 </table>
@@ -1065,144 +1123,294 @@
 </thead>
 <tbody>
 <tr>
-<td>Move to previous</td>
-<td><code>leftArrow</code></td>
+<td>Zum vorherigen wechseln</td>
+<td><code>Pfeil nach links</code></td>
 </tr>
 <tr>
-<td>Move to previous cell in a table, or previous digit if in columnar math</td>
-<td><code>control+leftArrow</code> or <code>control+alt+leftArrow</code></td>
+<td>Wechselt zur vorherigen Zelle in einer Tabelle oder zur vorherigen Ziffer, wenn es sich um eine Spaltenberechnung handelt</td>
+<td><code>Strg+Pfeil nach links</code> oder <code>Strg+Alt+Pfeil nach Links</code></td>
 </tr>
 <tr>
-<td>Read previous</td>
-<td><code>shift+leftArrow</code></td>
+<td>Vorheriges lesen</td>
+<td><code>Umschalt+Pfeil nach links</code></td>
 </tr>
 <tr>
-<td>Describe previous</td>
-<td><code>control+shift+leftArrow</code></td>
+<td>Vorherige beschreibung</td>
+<td><code>Steuerung+Umschalt+Pfeil-links</code></td>
 </tr>
 <tr>
-<td>Move to next</td>
-<td><code>rightArrow</code></td>
+<td>Zum nächsten</td>
+<td><code>Pfeil nach rechts</code></td>
 </tr>
 <tr>
-<td>Move to next cell in a table, or next digit if in columnar math</td>
-<td><code>control+rightArrow</code> or <code>control+alt+rightArrow</code></td>
+<td>Wechselt zur nächsten Zelle in einer Tabelle oder zur nächsten Ziffer, wenn es sich um eine Spaltenberechnung handelt</td>
+<td><code>Strg+Pfeil nach rechts</code> oder <code>Strg+Alt+Pfeil nach rechts</code></td>
 </tr>
 <tr>
-<td>Read next</td>
-<td><code>shift+rightArrow</code></td>
+<td>Weiterlesen</td>
+<td><code>Umschalt+Pfeil nach rechts</code></td>
 </tr>
 <tr>
-<td>Describe next</td>
-<td><code>control+shift+rightArrow</code></td>
+<td>Nächste Beschreibung</td>
+<td><code>Steuerung+Umschalt+Pfeil-rechts</code></td>
 </tr>
 <tr>
-<td>Zoom out</td>
-<td><code>upArrow</code></td>
+<td>Herauszoomen</td>
+<td><code>Pfeil nach oben</code></td>
 </tr>
 <tr>
-<td>Move to cell above in a table, or digit above in columnar math</td>
-<td><code>control+upArrow</code> or <code>control+alt+upArrow</code></td>
+<td>Springt in einer Tabelle zur darüberliegenden Zelle oder bei schriftlicher Mathematik zur darüberliegenden Ziffer</td>
+<td><code>Strg+Pfeil nach oben</code> oder <code>Strg+Alt+Pfeil nach oben</code></td>
 </tr>
 <tr>
-<td>Change Navigation Mode (Enhanced/Simple/Character) to larger</td>
-<td><code>shift+upArrow</code></td>
+<td>Navigationsmodus auf größer ändern (Erweitert/Einfach/Zeichen)</td>
+<td><code>Umschalt+Pfeil nach oben</code></td>
 </tr>
 <tr>
-<td>Zoom out all the way</td>
-<td><code>control+shift+upArrow</code></td>
+<td>Ganz herauszoomen</td>
+<td><code>Strg+Umschalt+Pfeil nach oben</code></td>
 </tr>
 <tr>
-<td>Zoom in</td>
-<td><code>downArrow</code></td>
+<td>Hineinzoomen</td>
+<td><code>Pfeil nach unten</code></td>
 </tr>
 <tr>
-<td>Move to cell below in a table, or digit below in columnar math</td>
-<td><code>control+downArrow</code> or <code>control+alt+downArrow</code></td>
+<td>Gehe zur Zelle darunter in einer Tabelle, oder zur Ziffer darunter in schriftlichen Rechenaufgaben</td>
+<td><code>Strg+Pfeil nach unten</code> oder <code>Strg+Alt+Pfeil nach unten</code></td>
 </tr>
 <tr>
-<td>Change Navigation Mode (Enhanced/Simple/Character) to smaller</td>
-<td><code>shift+downArrow</code></td>
+<td>zum vorherigen Navigationsmodus wechseln (Erweitert/Einfach/Zeichen)</td>
+<td><code>Umschalt+Pfeil nach unten</code></td>
 </tr>
 <tr>
-<td>Zoom in all the way</td>
-<td><code>control+shift+downArrow</code></td>
+<td>Ganz hineinzoomen</td>
+<td><code>Strg+Umschalt+Pfeil nach unten</code></td>
 </tr>
 <tr>
-<td>Where am I</td>
-<td><code>enter</code></td>
+<td>Wo bin ich</td>
+<td><code>Eingabetaste</code></td>
 </tr>
 <tr>
-<td>Global Where am I</td>
-<td><code>control+enter</code></td>
+<td>Global Wo bin ich</td>
+<td><code>Strg+Eingabetaste</code></td>
 </tr>
 <tr>
-<td>Jump to placemarker</td>
-<td><code>1</code> through <code>0</code> (<code>0</code> is 10)</td>
+<td>Zur Sprungmarke springen</td>
+<td>"1" bis "0" („0“ ist 10)</td>
 </tr>
 <tr>
-<td>Set placemarker</td>
-<td><code>control+1</code> through <code>control+0</code></td>
+<td>Sprungmarke festlegen</td>
+<td><code>Steuerung+1</code> bis <code>Steuerung+0</code></td>
 </tr>
 <tr>
-<td>Read placemarker</td>
-<td><code>shift+1</code> through <code>shift+0</code></td>
+<td>Sprungmarke lesen</td>
+<td><code>Umschalt+1</code> bis <code>Umschalt+0</code></td>
 </tr>
 <tr>
-<td>Describe placemarker</td>
-<td><code>control+shift+1</code> through <code>control+shift+0</code></td>
+<td>Sprungmarke Beschreiben</td>
+<td>„Steuerung+Umschalt+1“ bis „Steuerung+Umschalt+0“.</td>
 </tr>
 <tr>
-<td>Read current</td>
-<td><code>space</code></td>
+<td>Aktuelles lesen</td>
+<td><code>Leertaste</code></td>
 </tr>
 <tr>
-<td>Read current cell</td>
-<td><code>control+space</code></td>
+<td>Aktuelle Zelle lesen</td>
+<td><code>Steuerung+Leertaste</code></td>
 </tr>
 <tr>
-<td>Toggle "speech mode" to Read or Describe</td>
-<td><code>shift+space</code></td>
+<td>Umschalten des "Sprachmodus" auf Lesen oder Beschreiben</td>
+<td><code>Umschalt+Leertaste</code></td>
 </tr>
 <tr>
-<td>Describe current</td>
-<td><code>control+shift+space</code></td>
+<td>Aktuelle Beschreibung</td>
+<td><code>Steuerung+Umschalt+Leertaste</code></td>
 </tr>
 <tr>
-<td>Move to start of expression</td>
-<td><code>home</code></td>
+<td>Zum Anfang des Ausdrucks wechseln</td>
+<td><code>Pos1</code></td>
 </tr>
 <tr>
-<td>Move to start of line</td>
-<td><code>control+home</code></td>
+<td>Zum Zeilenanfang wechseln</td>
+<td><code>Steuerung+Pos1</code></td>
 </tr>
 <tr>
-<td>Move to start of column in table, or move to digit at top in columnar math</td>
-<td><code>shift+home</code></td>
+<td>Wechselt zum Spaltenanfang in einer Tabelle oder zur obersten Ziffer in schriftlichen Rechenaufgaben</td>
+<td><code>Umschalt+Pos1</code></td>
 </tr>
 <tr>
-<td>Move to end of expression</td>
-<td><code>end</code></td>
+<td>Zum Ende des Ausdrucks wechseln</td>
+<td><code>Ende</code></td>
 </tr>
 <tr>
-<td>Move to end of line</td>
-<td><code>control+end</code></td>
+<td>Zum Ende der Zeile gehen</td>
+<td><code>Steuerung+Ende</code></td>
 </tr>
 <tr>
-<td>Move to end of column in table, or move to digit at bottom in columnar math</td>
-<td><code>shift+end</code></td>
+<td>Zum Ende der Spalte in einer Tabelle springen, oder zur untersten Ziffer in einer Spaltenrechnung</td>
+<td><code>Umschalt+Ende</code></td>
 </tr>
 <tr>
-<td>Move back to last position</td>
-<td><code>backspace</code></td>
+<td>Zurück zur letzten Position</td>
+<td><code>Rücktaste</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="Braille">Braille</h2>
+<h3 id="BrailleReading">Braille lesen</h3>
+<h4 id="BrailleReadingGestures">Gesten zum Lesen auf der Braillezeile</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Taste</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schaltet den Braille-Modus um</td>
+<td><code>NVDA+Alt+t</code></td>
+<td>Ermöglicht das Wechseln zwischen den verfügbaren Braille-Modi: „Cursor folgen“ und „Sprachausgabe anzeigen“</td>
+</tr>
+<tr>
+<td>Braillekopplung</td>
+<td><code>NVDA+Steuerung+t</code></td>
+<td>Die Option ermöglicht es Ihnen zu wählen, ob die Braillezeile dem Systemfokus / der Einfügemarke, dem Navigatorobjekt / dem NVDA-Cursor oder beidem (automatisch) folgen soll.</td>
+</tr>
+<tr>
+<td>Automatisches Scrollen umschalten</td>
+<td><code>NVDA+Alt+K</code></td>
+<td>Schaltet um, ob NVDA die Braillezeile regelmäßig scrollt, um Informationen anzuzeigen, die zu lang sind, um auf einmal dargestellt zu werden</td>
+</tr>
+<tr>
+<td>Erhöht die automatische Scrollgeschwindigkeit</td>
+<td><code>NVDA+Alt+l</code></td>
+<td>Beschleunigt das automatische Scrollen (sofern aktiviert)</td>
+</tr>
+<tr>
+<td>Verringert die automatische Scrollgeschwindigkeit</td>
+<td><code>NVDA+Alt+j</code></td>
+<td>Verlangsamt das automatische Scrollen (wenn aktiviert)</td>
+</tr>
+<tr>
+<td>Braille-Cursorformen durchschalten</td>
+<td>Keine</td>
+<td>Schaltet durch die Formoptionen (Punktmuster) des Braille-Cursors</td>
+</tr>
+<tr>
+<td>Schaltet durch die verschiedenen Einstellungen, wie die Einfügemarke dem NVDA-Cursor folgt, wenn eine Braillezeile verwendet wird.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Meldungsanzeigemodi umschalten</td>
+<td>Keine</td>
+<td>Schaltet durch die verschiedenen Anzeigemodi für Braille-Meldungen.</td>
+</tr>
+<tr>
+<td>Braille-Auswahlstatus umschalten</td>
+<td>Keine</td>
+<td>Wechselt durch die verschiedenen Anzeigestatus der Braille-Auswahl.</td>
+</tr>
+<tr>
+<td>Braille-Unicode-Normalisierung durchschalten</td>
+<td>None</td>
+<td>Schaltet durch die Braille-Unicode-Normalisierungszustände</td>
+</tr>
+<tr>
+<td>Braille zum Fokus bewegen</td>
+<td>Keine</td>
+<td>Verschiebt die Braillezeile zum aktuellen Fokus</td>
+</tr>
+<tr>
+<td>Braille in die nächste Zeile verschieben</td>
+<td>Keine</td>
+<td>Verschiebt die Braillezeile in die nächste Zeile</td>
+</tr>
+<tr>
+<td>Braillezeile zur vorherigen Zeile verschieben</td>
+<td>Keine</td>
+<td>Verschiebt die Braillezeile in die vorherige Zeile</td>
+</tr>
+<tr>
+<td>Braille-Formatierung melden</td>
+<td>Keine</td>
+<td>Meldet Formatierungsinformationen für den Text unter der Braille-Zelle.</td>
+</tr>
+<tr>
+<td>Braille-Objekt ansteuern oder aktivieren</td>
+<td>Keine</td>
+<td>Bewegt den NVDA-Cursor zum Objekt unter der aktuellen Braille-Zelle oder aktiviert sie.</td>
+</tr>
+<tr>
+<td>Braillezeile zurückscrollen</td>
+<td>Keine</td>
+<td>Scrollt die Braillezeile zurück</td>
+</tr>
+<tr>
+<td>Braillezeile vorwärts scrollen</td>
+<td>Keine</td>
+<td>Scrollt die Braillezeile vorwärts</td>
+</tr>
+<tr>
+<td>Braille-Cursor umschalten</td>
+<td>Keine</td>
+<td>Schalten Sie den Braille-Cursor ein und aus</td>
+</tr>
+<tr>
+<td>Braille-Kontextinformationen umschalten</td>
+<td>Keine</td>
+<td>Schalten Sie die Art und Weise um, wie Kontextinformationen in Braille dargestellt werden</td>
+</tr>
+<tr>
+<td>Sprachausgabe beim Navigieren mit Braille umschalten</td>
+<td>Keine</td>
+<td>Schaltet die Sprachausgabe ein und aus, wenn man zeilen- oder absatzweise mit Braille navigiert</td>
+</tr>
+<tr>
+<td>Zeichenansage beim Bewegen des Cursors umschalten</td>
+<td>Keine</td>
+<td>Schaltet die Ansage des Zeichens unter dem Cursor um, wenn der Cursor im Text bewegt wird.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Braille-Eingabe</h3>
 <p>Drücken Sie den Punkt 7, um das letzte Zeichen zu löschen.
 Drücken Sie den Punkt 8, um einen Zeilenvorschub einzufügen.
 Drücken Sie Punkte 7 und 8, um die eingegebenen Braillezeichen zu übersetzen, ohne einen Zeilenvorschub oder ein Leerzeichen einzufügen.</p>
+<h4 id="BrailleInputGestures">Braille-Eingabegesten</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Taste</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eingabe über die Braillezeile</td>
+<td>Punkte</td>
+<td>Eingabe von Braille über die Braille-Tastatur</td>
+</tr>
+<tr>
+<td>Zuletzt eingegebenes löschen</td>
+<td><code>Punkt7</code></td>
+<td>Löscht die zuletzt eingegebene Braillezelle oder das zuletzt eingegebene Braillezeichen</td>
+</tr>
+<tr>
+<td>Braille-Eingabe übersetzen</td>
+<td><code>dot7+dot8</code></td>
+<td>Übersetzt jede Braille-Eingabe</td>
+</tr>
+<tr>
+<td>Translate and press enter</td>
+<td><code>dot8</code></td>
+<td>Übersetzt jede Braille-Eingabe und drückt die Eingabetaste</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Visuelle Darstellungen</h2>
 <h3 id="VisionScreenCurtain">Der Bildschirmvorhang</h3>
 <table>
@@ -1218,6 +1426,94 @@ Drücken Sie Punkte 7 und 8, um die eingegebenen Braillezeichen zu übersetzen, 
 <td>Bildschirmvorhang ein- oder ausschalten</td>
 <td><code>NVDA+Strg+Escape</code></td>
 <td>Aktivieren Sie diesen, um den Bildschirm zu schwärzen oder deaktivieren Sie diesen, um den Bildschirminhalt anzuzeigen. Durch einmaliges Drücken wird der Bildschirmvorhang aktiviert, bis Sie NVDA neu starten. Durch zweimaliges Drücken bleibt der Bildschirmvorhang aktiviert, bis Sie ihn deaktivieren.</td>
+</tr>
+<tr>
+<td>Meldet den Zustand des Bildschirmvorhangs</td>
+<td>Keine</td>
+<td>Meldet den aktuellen Status des Bildschirmvorhangs, ob er deaktiviert oder aktiviert ist oder sich im temporären Modus befindet.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Vergrößerung</h2>
+<h3 id="MagnifierCommands">Vergrößerungsbefehle</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Taste</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vergrößerung ein- oder ausschalten</td>
+<td><code>NVDA+Umschalt+W</code></td>
+<td>Aktiviert oder deaktiviert die Vergrößerung</td>
+</tr>
+<tr>
+<td>Vergrößerungsstufe erhöhen</td>
+<td><code>NVDA+Umschalt+Plus</code></td>
+<td>Erhöht die Vergrößerungsstufe. Startet die Vergrößerung, falls sie noch nicht läuft.</td>
+</tr>
+<tr>
+<td>Vergrößerungsstufe verringern</td>
+<td><code>NVDA+Umschalt+Minus</code></td>
+<td>Verringert die Vergrößerungsstufe</td>
+</tr>
+<tr>
+<td>Farbfilter umschalten</td>
+<td><code>NVDA+Umschalt+I</code></td>
+<td>Schaltet zwischen den verfügbaren Farbfiltern um (Normal, Graustufen, Invertiert)</td>
+</tr>
+<tr>
+<td>Verfolgungsmodus umschalten</td>
+<td>Keine</td>
+<td>Schaltet zwischen den Verfolgungsmodi (zentriert, relativ) um.</td>
+</tr>
+<tr>
+<td>Übersicht über den gesamten Bildschirm anzeigen</td>
+<td><code>NVDA+Umschalt+L</code></td>
+<td>Zeigt vorübergehend eine Übersicht über den gesamten Bildschirm an</td>
+</tr>
+<tr>
+<td>Nach links schwenken</td>
+<td><code>NVDA+Alt+Pfeiltaste links</code></td>
+<td>Verschiebt die vergrößerte Ansicht nach links um die eingestellte Schwenkschrittgröße.</td>
+</tr>
+<tr>
+<td>Nach rechts schwenken</td>
+<td><code>NVDA+Alt+Rechtspfeil</code></td>
+<td>Bewegt die vergrößerte Ansicht um die konfigurierte Schwenkschrittgröße nach rechts.</td>
+</tr>
+<tr>
+<td>Nach oben schwenken</td>
+<td><code>NVDA+alt+upArrow</code></td>
+<td>Verschiebt den Bildausschnitt der Vergrößerung nach oben um die eingestellte Schrittweite.</td>
+</tr>
+<tr>
+<td>Ansicht nach unten verschieben</td>
+<td><code>NVDA+Alt+Pfeil nach unten</code></td>
+<td>Verschiebt die vergrößerte Ansicht um die eingestellte Schrittweite nach unten.</td>
+</tr>
+<tr>
+<td>Zur linken Kante verschieben</td>
+<td><code>NVDA+Umschalt+alt+Pfeil-nach-links</code></td>
+<td>Verschiebt die vergrößerte Ansicht direkt zur linken Bildschirmkante.</td>
+</tr>
+<tr>
+<td>Zum rechten Rand schwenken</td>
+<td><code>NVDA+Umschalt+Alt+Rechtspfeil</code></td>
+<td>Verschiebt die vergrößerte Ansicht direkt an den rechten Bildschirmrand.</td>
+</tr>
+<tr>
+<td>Zum oberen Rand springen</td>
+<td><code>NVDA+Umschalt+Alt+Pfeil nach oben</code></td>
+<td>Verschiebt den vergrößerten Bildschirmausschnitt direkt an den oberen Bildschirmrand.</td>
+</tr>
+<tr>
+<td>Zum unteren Bildschirmrand springen</td>
+<td><code>NVDA+Umschalt+Alt+Pfeil nach unten</code></td>
+<td>Bewegt die vergrößerte Ansicht direkt an den unteren Bildschirmrand.</td>
 </tr>
 </tbody>
 </table>
@@ -1554,16 +1850,16 @@ In Microsoft 2016 / 365 und neuer wurden die klassischen Kommentare in Microsoft
 <td>Verringert den Wert der aktuellen Sprachausgaben-Einstellung, auf der Sie sich befinden, in größeren Schritten. Wenn Sie sich z. B. auf einer Stimmen-Einstellung befinden, springt der Wert alle 20 Stimmen rückwärts; wenn Sie sich auf einer Schieberegler-Einstellung befinden, springt der Wert um bis zu 20 % rückwärts</td>
 </tr>
 <tr>
-<td>Set the first value of the current synth setting</td>
-<td>none</td>
-<td>none</td>
-<td>Select the first value of the current speech setting, e.g. set rate to 0 or select the first available voice</td>
+<td>Den ersten Wert der aktuellen Spracheinstellung festlegen</td>
+<td>keine</td>
+<td>keine</td>
+<td>Wählt den ersten Wert der aktuellen Spracheinstellung aus, z.B. die Geschwindigkeit auf 0 setzen oder die erste verfügbare Stimme auswählen.</td>
 </tr>
 <tr>
-<td>Set the last value of the current synth setting</td>
-<td>none</td>
-<td>none</td>
-<td>Select the last value of the current speech setting, e.g. set rate to 100 or select the last available voice</td>
+<td>Den zuletzt verwendeten Wert der aktuellen Sprachausgaben-Einstellung festlegen</td>
+<td>keine</td>
+<td>keine</td>
+<td>Den letzten Wert der aktuellen Spracheinstellung auswählen, z.B. die Rate auf 100 setzen oder die letzte verfügbare Stimme auswählen.</td>
 </tr>
 </tbody>
 </table>
@@ -1650,6 +1946,37 @@ In Microsoft 2016 / 365 und neuer wurden die klassischen Kommentare in Microsoft
 <td>Zwischen den Modi für die Sound-Teilung wechseln</td>
 <td><code>NVDA+Alt+S</code></td>
 <td>Wechselt zwischen den Modi für die Sound-Teilung.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="MagnifierSettingsCategory">Vergrößerung</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Desktop-Tastenkombination</th>
+<th>Laptop-Tastenkombination</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Einstellungen für die Vergrößerung öffnen</td>
+<td><code>NVDA+Strg+w</code></td>
+<td><code>NVDA+Strg+w</code></td>
+<td>In der Kategorie „Vergrößerung“ im Dialogfeld „NVDA-Einstellungen“ können Sie das Standardverhalten der in NVDA integrierten Funktion [Vergrößerung] (#Magnifier) ​​konfigurieren.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Vergrößerung aktivieren</td>
+<td><code>NVDA+Umschalt+w</code></td>
+<td><code>NVDA+Umschalt+w</code></td>
+<td>Diese Option startet oder stoppt die Vergrößerung.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Farbfilter</td>
+<td><code>NVDA+Umschalt+i</code></td>
+<td><code>NVDA+Umschalt+i</code></td>
+<td>Mit dieser Option können Sie den Filter auswählen, der angewendet wird, wenn Sie die Vergrößerung verwenden.</td>
 </tr>
 </tbody>
 </table>
@@ -1823,23 +2150,20 @@ In Microsoft 2016 / 365 und neuer wurden die klassischen Kommentare in Microsoft
 <thead>
 <tr>
 <th>Name</th>
-<th>Desktop-Tastenkombination</th>
-<th>Laptop-Tastenkombination</th>
+<th>Taste</th>
 <th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Save configuration</td>
-<td><code>NVDA+control+c</code></td>
-<td><code>NVDA+control+c</code></td>
-<td>Saves your current configuration so that it is not lost when you exit NVDA</td>
+<td>Konfiguration speichern</td>
+<td><code>NVDA+Steuerung+c</code></td>
+<td>Speichert Ihre aktuelle Konfiguration, damit sie beim Beenden von NVDA nicht verloren geht</td>
 </tr>
 <tr>
 <td>Konfiguration zurücksetzen</td>
-<td>'NVDA+Strg+R'</td>
-<td>'NVDA+Strg+R'</td>
-<td>Durch einmaliges Drücken wird Ihre Konfiguration auf den Zeitpunkt zurückgesetzt, an dem Sie sie zuletzt gespeichert haben. Durch dreimaliges Drücken wird es auf die Werkseinstellungen zurückgesetzt.</td>
+<td><code>NVDA+Steuerung+r</code></td>
+<td>Durch einmaliges Drücken wird Ihre Konfiguration auf den Zeitpunkt zurückgesetzt, an dem Sie sie zuletzt gespeichert haben. Durch dreimaliges Drücken wird es auf die Werkseinstellungen zurückgesetzt, ohne dass der Rückgängig-Dialog angezeigt wird.</td>
 </tr>
 </tbody>
 </table>
@@ -1848,8 +2172,8 @@ In Microsoft 2016 / 365 und neuer wurden die klassischen Kommentare in Microsoft
 <ul>
 <li>NVDA+Strg+P: Zeigt das Dialogfeld für die Konfigurationsprofile an.</li>
 </ul>
-<h2 id="RemoteAccess">Remote Access</h2>
-<h3 id="RemoteAccessGestures">Remote Access Key Commands Summary</h3>
+<h2 id="RemoteAccess">Fernzugriff</h2>
+<h3 id="RemoteAccessGestures">Zusammenfassung der Tastaturbefehle für den Fernzugriff</h3>
 <table>
 <thead>
 <tr>
@@ -1862,42 +2186,42 @@ In Microsoft 2016 / 365 und neuer wurden die klassischen Kommentare in Microsoft
 <tr>
 <td>Verbindung herstellen/trennen</td>
 <td>'NVDA+Alt+R'</td>
-<td>Startet eine neue RAS-Sitzung oder, wenn eine Sitzung bereits ausgeführt wird, wird die Verbindung mit der Sitzung getrennt.</td>
+<td>Startet eine neue Fernzugriffssitzung oder, wenn eine Sitzung bereits ausgeführt wird, wird die Verbindung mit der Sitzung getrennt.</td>
 </tr>
 <tr>
 <td>Steuerung umschalten</td>
 <td>'NVDA+Alt+Tabulatortaste'</td>
-<td>Wechselt zwischen der Steuerung des Remote- und des lokalen Computers.</td>
+<td>Wechselt zwischen der Steuerung des fernen und des lokalen Computers.</td>
 </tr>
 <tr>
 <td>Verbinden</td>
 <td>Keine</td>
-<td>Startet eine neue RAS-Sitzung. Nicht verfügbar im <a href="#SecureMode" title="abgesicherten Modus">abgesicherten Modus</a>.</td>
+<td>Startet eine neue Fernzugriffssitzung. Nicht verfügbar im <a href="#SecureMode" title="abgesicherten Modus">abgesicherten Modus</a>.</td>
 </tr>
 <tr>
 <td>Link kopieren</td>
 <td>Keine</td>
-<td>Kopiert einen Link zur Remote-Sitzung in die Zwischenablage.</td>
+<td>Kopiert einen Link zur Fernzugriffssitzung in die Zwischenablage.</td>
 </tr>
 <tr>
 <td>Trennen</td>
 <td>Keine</td>
-<td>Beendet eine vorhandene RAS-Sitzung.</td>
+<td>Beendet eine vorhandene Fernzugriffssitzung.</td>
 </tr>
 <tr>
 <td>Sprachausgabe stummschalten/Stummschaltung aufheben</td>
 <td>Keine</td>
-<td>Schaltet die Sprachausgabe des Remotecomputers stumm oder hebt die Stummschaltung auf.</td>
+<td>Schaltet die Sprachausgabe des fernen Computers stumm oder hebt die Stummschaltung auf.</td>
 </tr>
 <tr>
 <td>Zwischenablage senden</td>
 <td>Keine</td>
-<td>Sendet den Inhalt der Zwischenablage an den Remote-Computer.</td>
+<td>Sendet den Inhalt der Zwischenablage an den fernen Computer.</td>
 </tr>
 <tr>
-<td>Send <code>control+alt+delete</code></td>
-<td>None</td>
-<td>Sends <code>control+alt+delete</code> to the controlled computer.</td>
+<td><code>Strg+Alt+Entf senden | Keine | Sendet Strg+Alt+Entf an den gesteuerten Computer.</code></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -4236,7 +4560,7 @@ In Microsoft 2016 / 365 und neuer wurden die klassischen Kommentare in Microsoft
 <td><code>rightKeypadLeft+rightKeypadUp</code></td>
 </tr>
 <tr>
-<td><code>control+end</code> key</td>
+<td><code>STRG+ENDE</code></td>
 <td><code>rightKeypadRight+rightKeypadDown</code></td>
 </tr>
 </tbody>
@@ -4838,18 +5162,18 @@ In Microsoft 2016 / 365 und neuer wurden die klassischen Kommentare in Microsoft
 <table>
 <thead>
 <tr>
-<th>Bezeichnung</th>
+<th>Name</th>
 <th>Taste</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Braillezeile zurückscrollen</td>
-<td>"pan_left"</td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
 <td>Braillezeile vorwärts scrollen</td>
-<td>"pan_right"</td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>
