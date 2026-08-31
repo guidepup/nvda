@@ -2,16 +2,16 @@
 <html lang="ja" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 コマンド一覧表</title>
+<title>NVDA 2026.2 コマンド一覧表</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611">NVDA 2026.1.1 コマンド一覧表</h1>
+<body><h1 id="nvda-20262">NVDA 2026.2 コマンド一覧表</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611" title="NVDA 2026.1.1 コマンド一覧表">NVDA 2026.1.1 コマンド一覧表</a><ul>
+<li><a href="#nvda-20262" title="NVDA 2026.2 コマンド一覧表">NVDA 2026.2 コマンド一覧表</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="NVDAの使い方">NVDAの使い方</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA タッチジェスチャー">NVDA タッチジェスチャー</a><ul>
 <li><a href="#TouchModes" title="タッチモード">タッチモード</a></li>
@@ -28,11 +28,17 @@
 <li><a href="#ObjectNavigation" title="オブジェクトナビゲーション">オブジェクトナビゲーション</a></li>
 <li><a href="#ReviewingText" title="テキストの確認">テキストの確認</a></li>
 <li><a href="#ReviewModes" title="レビューモード">レビューモード</a></li>
-<li><a href="#NavigatingWithTheMouse" title="マウスカーソルの移動">マウスカーソルの移動</a></li>
+<li><a href="#NavigatingWithTheMouse" title="マウスポインターの移動">マウスポインターの移動</a></li>
 </ul>
 </li>
 <li><a href="#BrowseMode" title="ブラウズモード">ブラウズモード</a><ul>
-<li><a href="#SingleLetterNavigation" title="1文字ナビゲーション">1文字ナビゲーション</a></li>
+<li><a href="#SingleLetterNavigation" title="1文字ナビゲーション">1文字ナビゲーション</a><ul>
+<li><a href="#BrowseModeTouch" title="ブラウズモードのタッチナビゲーション">ブラウズモードのタッチナビゲーション</a><ul>
+<li><a href="#_1" title="ブラウズモードのタッチジェスチャー">ブラウズモードのタッチジェスチャー</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="要素リスト">要素リスト</a></li>
 <li><a href="#SearchingForText" title="テキストの検索">テキストの検索</a></li>
 <li><a href="#ImbeddedObjects" title="埋め込みオブジェクト">埋め込みオブジェクト</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="点字ディスプレイ">点字ディスプレイ</a><ul>
-<li><a href="#BrailleInput" title="点字入力">点字入力</a></li>
+<li><a href="#BrailleReading" title="点字を読む">点字を読む</a><ul>
+<li><a href="#BrailleReadingGestures" title="点字を読むためのジェスチャー">点字を読むためのジェスチャー</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="点字入力">点字入力</a><ul>
+<li><a href="#BrailleInputGestures" title="点字入力ジェスチャー">点字入力ジェスチャー</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="ビジョン">ビジョン</a><ul>
 <li><a href="#VisionScreenCurtain" title="スクリーンカーテン">スクリーンカーテン</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="拡大鏡">拡大鏡</a><ul>
+<li><a href="#MagnifierCommands" title="拡大鏡の制御">拡大鏡の制御</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="画像認識">画像認識</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="オーディオ分割">オーディオ分割</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="拡大鏡">拡大鏡</a></li>
 <li><a href="#KeyboardSettings" title="キーボード">キーボード</a></li>
 <li><a href="#MouseSettings" title="マウス">マウス</a></li>
 <li><a href="#ReviewCursorSettings" title="レビューカーソル">レビューカーソル</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">NVDA タッチジェスチャー</h3>
 <p>タッチジェスチャー対応を有効化または無効化するには NVDA+Ctrl+Alt+T を押します。</p>
 <h4 id="TouchModes">タッチモード</h4>
-<p>タッチモードのトグル切り替えをするには、3本指タップします。</p>
+<p>タッチモードを切り替えるには、3本指タップします。</p>
 <h3 id="BasicNVDACommands">基本的なNVDAコマンド</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>Shift</td>
 <td>なし</td>
 <td>読み上げを一時的に停止します。音声エンジンによっては、もう一度押すと停止した位置から読み上げを再開できるものもあります。</td>
+</tr>
+<tr>
+<td>最後に読み上げた情報を繰り返す</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>なし</td>
+<td>NVDA が読み上げた最後の情報を繰り返します。2回押すとウィンドウに情報を表示します</td>
 </tr>
 <tr>
 <td>NVDAメニュー</td>
@@ -380,7 +405,7 @@
 <td>リンク先URLの報告</td>
 <td><code>NVDA+k</code></td>
 <td><code>NVDA+k</code></td>
-<td>1回押すとテキストカーソルまたはシステムフォーカスの位置のリンク先URLを報告します。2回押すとウィンドウを開いて表示します。</td>
+<td>1回押すとテキストカーソルまたはキーボードフォーカスの位置のリンク先URLを報告します。2回押すとウィンドウを開いて表示します。</td>
 </tr>
 <tr>
 <td>テキストカーソルの位置情報の報告</td>
@@ -775,7 +800,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="NavigatingWithTheMouse">マウスカーソルの移動</h3>
+<h3 id="NavigatingWithTheMouse">マウスポインターの移動</h3>
 <table>
 <thead>
 <tr>
@@ -799,7 +824,7 @@
 <td>Shift+テンキースラッシュ</td>
 <td>NVDA+Ctrl+開き角カッコ</td>
 <td>なし</td>
-<td>左マウスボタンをロックします。もう1回押すとロックを解除します。ドラッグするにはこのキーで左マウスボタンをロックし、マウスを移動するか、マウスカーソル移動用コマンドを実行します。</td>
+<td>左マウスボタンをロックします。もう1回押すとロックを解除します。ドラッグするにはこのキーで左マウスボタンをロックし、マウスを移動するか、マウスポインター移動用コマンドを実行します。</td>
 </tr>
 <tr>
 <td>右マウスボタンをクリック</td>
@@ -813,52 +838,52 @@
 <td>Shift+テンキーアスタリスク</td>
 <td>NVDA+Ctrl+閉じ角カッコ</td>
 <td>なし</td>
-<td>右マウスボタンをロックします。もう1回押すとロックを解除します。ドラッグするにはこのキーで右マウスボタンをロックし、マウスを移動するか、マウスカーソル移動用コマンドを実行します。</td>
+<td>右マウスボタンをロックします。もう1回押すとロックを解除します。ドラッグするにはこのキーで右マウスボタンをロックし、マウスを移動するか、マウスポインター移動用コマンドを実行します。</td>
 </tr>
 <tr>
-<td>現在のマウスカーソル位置で上にスクロール</td>
+<td>現在のマウスポインター位置で上にスクロール</td>
 <td>なし</td>
 <td>なし</td>
 <td>なし</td>
-<td>現在のマウスカーソル位置で上にスクロールします。</td>
+<td>現在のマウスポインター位置で上にスクロールします。</td>
 </tr>
 <tr>
-<td>現在のマウスカーソル位置で下にスクロール</td>
+<td>現在のマウスポインター位置で下にスクロール</td>
 <td>なし</td>
 <td>なし</td>
 <td>なし</td>
-<td>現在のマウスカーソル位置で下にスクロールします。</td>
+<td>現在のマウスポインター位置で下にスクロールします。</td>
 </tr>
 <tr>
-<td>現在のマウスカーソル位置で左にスクロール</td>
+<td>現在のマウスポインター位置で左にスクロール</td>
 <td>なし</td>
 <td>なし</td>
 <td>なし</td>
-<td>現在のマウスカーソル位置で左にスクロールします。</td>
+<td>現在のマウスポインター位置で左にスクロールします。</td>
 </tr>
 <tr>
-<td>現在のマウスカーソル位置で右にスクロール</td>
+<td>現在のマウスポインター位置で右にスクロール</td>
 <td>なし</td>
 <td>なし</td>
 <td>なし</td>
-<td>現在のマウスカーソル位置で右にスクロールします。</td>
+<td>現在のマウスポインター位置で右にスクロールします。</td>
 </tr>
 <tr>
-<td>マウスカーソルを現在のナビゲーターオブジェクトに移動</td>
+<td>マウスポインターを現在のナビゲーターオブジェクトに移動</td>
 <td>NVDA+テンキースラッシュ</td>
 <td>NVDA+Shift+M</td>
 <td>なし</td>
-<td>マウスカーソルを現在のナビゲーターオブジェクトおよびレビューカーソルに移動します。</td>
+<td>マウスポインターを現在のナビゲーターオブジェクトおよびレビューカーソルに移動します。</td>
 </tr>
 <tr>
-<td>マウスカーソル位置のオブジェクトに移動</td>
+<td>マウスポインター位置のオブジェクトに移動</td>
 <td>NVDA+テンキーアスタリスク</td>
 <td>NVDA+Shift+N</td>
 <td>なし</td>
-<td>ナビゲーターオブジェクトをマウスカーソル位置のオブジェクトに移動します。</td>
+<td>ナビゲーターオブジェクトをマウスポインター位置のオブジェクトに移動します。</td>
 </tr>
 <tr>
-<td>マウスカーソルの座標をビープ音で報告の切り替え</td>
+<td>マウスポインターの座標をビープ音で報告の切り替え</td>
 <td>なし</td>
 <td>なし</td>
 <td>なし</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>現在のドキュメントで1文字ナビゲーションを使用するか使わないかを切り替えるには NVDA+Shift+スペース を押します。</p>
+<h4 id="BrowseModeTouch">ブラウズモードのタッチナビゲーション</h4>
+<h5 id="_1">ブラウズモードのタッチジェスチャー</h5>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>タッチ</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>次の要素の種別を選択</td>
+<td>スワイプ下</td>
+<td>ブラウズモードのナビゲーションで次の要素の種別に切り替える</td>
+</tr>
+<tr>
+<td>前の要素の種別を選択</td>
+<td>スワイプ上</td>
+<td>ブラウズモードのナビゲーションで前の要素の種別に切り替える</td>
+</tr>
+<tr>
+<td>次の要素に移動</td>
+<td>右スワイプ</td>
+<td>ブラウズモードで選択中の種別の次の要素に移動</td>
+</tr>
+<tr>
+<td>前の要素に移動</td>
+<td>左スワイプ</td>
+<td>ブラウズモードで選択中の種別の前の要素に移動</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">要素リスト</h3>
 <table>
 <thead>
@@ -1059,7 +1117,7 @@
 <table>
 <thead>
 <tr>
-<th>名前</th>
+<th>名称</th>
 <th>キー</th>
 </tr>
 </thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">点字ディスプレイ</h2>
+<h3 id="BrailleReading">点字を読む</h3>
+<h4 id="BrailleReadingGestures">点字を読むためのジェスチャー</h4>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>点字モードの切り替え</td>
+<td><code>NVDA+alt+t</code></td>
+<td>利用可能な点字モード（「カーソルに追従」と「音声出力を表示」）を順番に切り替えます</td>
+</tr>
+<tr>
+<td>点字表示の切り替え</td>
+<td><code>NVDA+control+t</code></td>
+<td>点字ディスプレイがシステムフォーカス／テキストカーソル、ナビゲーターオブジェクト／レビューカーソル、またはその両方のどれに追従するかを選択できます</td>
+</tr>
+<tr>
+<td>自動スクロールの切り替え</td>
+<td><code>NVDA+Alt+k</code></td>
+<td>一度に表示できない長い情報を提示するために、NVDAが点字ディスプレイを定期的にスクロールするかどうかを切り替えます</td>
+</tr>
+<tr>
+<td>自動スクロールの速度を上げる</td>
+<td><code>NVDA+alt+l</code></td>
+<td>自動スクロールを速くします（有効な場合）</td>
+</tr>
+<tr>
+<td>自動スクロールの速度を下げる</td>
+<td><code>NVDA+alt+j</code></td>
+<td>自動スクロールを遅くします（有効な場合）</td>
+</tr>
+<tr>
+<td>点字カーソルの形状を切り替える</td>
+<td>なし</td>
+<td>点字カーソルの形状（ドットパターン）の選択肢を順番に切り替えます</td>
+</tr>
+<tr>
+<td>レビューカーソルの移動時にテキストカーソルを移動する設定を切り替える</td>
+<td>なし</td>
+<td>点字設定の「レビューカーソルの移動時にテキストカーソルを移動」の状態を順番に切り替えます</td>
+</tr>
+<tr>
+<td>メッセージ表示モードを切り替える</td>
+<td>なし</td>
+<td>点字のメッセージ表示モードを順番に切り替えます</td>
+</tr>
+<tr>
+<td>点字の選択範囲表示を切り替える</td>
+<td>なし</td>
+<td>点字の選択範囲表示の状態を順番に切り替えます</td>
+</tr>
+<tr>
+<td>点字のUnicode正規化を切り替える</td>
+<td>なし</td>
+<td>点字のUnicode正規化の状態を順番に切り替えます</td>
+</tr>
+<tr>
+<td>点字表示をフォーカスに移動</td>
+<td>なし</td>
+<td>点字ディスプレイを現在のフォーカスに移動します</td>
+</tr>
+<tr>
+<td>点字表示を次の行に移動</td>
+<td>なし</td>
+<td>点字ディスプレイを次の行に移動します</td>
+</tr>
+<tr>
+<td>点字表示を前の行に移動</td>
+<td>なし</td>
+<td>点字ディスプレイを前の行に移動します</td>
+</tr>
+<tr>
+<td>点字の書式情報を報告</td>
+<td>なし</td>
+<td>この点字セルの位置にあるテキストの書式情報を報告します</td>
+</tr>
+<tr>
+<td>点字セルに移動またはオブジェクトを実行</td>
+<td>なし</td>
+<td>この点字セルの位置にカーソルを移動するか、対応するオブジェクトを実行します</td>
+</tr>
+<tr>
+<td>点字表示をスクロールして戻る</td>
+<td>なし</td>
+<td>点字ディスプレイをスクロールして戻します</td>
+</tr>
+<tr>
+<td>点字表示をスクロールして進む</td>
+<td>なし</td>
+<td>点字ディスプレイをスクロールして進めます</td>
+</tr>
+<tr>
+<td>点字カーソルの切り替え</td>
+<td>なし</td>
+<td>点字カーソルの表示と非表示を切り替えます</td>
+</tr>
+<tr>
+<td>点字コンテキスト情報の切り替え</td>
+<td>なし</td>
+<td>点字でコンテキスト情報を提示する方法を切り替えます</td>
+</tr>
+<tr>
+<td>点字移動時の読み上げを切り替える</td>
+<td>なし</td>
+<td>点字で行または段落単位に移動するときの読み上げを切り替えます</td>
+</tr>
+<tr>
+<td>カーソル移動時の文字読み上げを切り替える</td>
+<td>なし</td>
+<td>テキスト内でカーソルを移動するとき、カーソル位置の文字を読み上げるかどうかを切り替えます</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">点字入力</h3>
 <p>7の点を押すと、直前の1マス分の点字または1文字を消去します。
 8の点を押すと、点字入力の変換と Enter の入力を行います。
 7と8の点を押すと、点字入力の変換だけを行います。スペースや Enter の入力は行いません。</p>
+<h4 id="BrailleInputGestures">点字入力ジェスチャー</h4>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>点字ディスプレイから入力</td>
+<td>任意の点</td>
+<td>点字キーボードで点字の点を入力します</td>
+</tr>
+<tr>
+<td>最後の入力を消去</td>
+<td><code>dot7</code></td>
+<td>最後に入力した点字セルまたは文字を消去します</td>
+</tr>
+<tr>
+<td>点字入力を変換</td>
+<td><code>dot7+dot8</code></td>
+<td>点字入力を変換します</td>
+</tr>
+<tr>
+<td>変換してEnterキーを押す</td>
+<td><code>dot8</code></td>
+<td>点字入力を変換してEnterキーを押します</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">ビジョン</h2>
 <h3 id="VisionScreenCurtain">スクリーンカーテン</h3>
 <table>
@@ -1218,6 +1426,94 @@
 <td>スクリーンカーテンの切り替え</td>
 <td><code>NVDA+ctrl+esc</code></td>
 <td>画面を黒にしてコンテンツを表示しません。1回押すとNVDAを再起動するまで有効です。2回押すと手動で無効にするまで有効になります。</td>
+</tr>
+<tr>
+<td>スクリーンカーテンの状態を報告</td>
+<td>なし</td>
+<td>スクリーンカーテンの現在の状態（無効、有効、一時的に有効）を報告</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">拡大鏡</h2>
+<h3 id="MagnifierCommands">拡大鏡の制御</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拡大鏡のオン/オフの切り替え</td>
+<td><code>NVDA+shift+w</code></td>
+<td>拡大鏡の有効/無効を切り替えます</td>
+</tr>
+<tr>
+<td>拡大鏡の倍率を上げる</td>
+<td><code>NVDA+shift+イコール</code></td>
+<td>拡大鏡の倍率を上げます。拡大鏡が起動していない場合は拡大鏡を開始します。</td>
+</tr>
+<tr>
+<td>拡大鏡の倍率を下げる</td>
+<td><code>NVDA+shift+マイナス</code></td>
+<td>拡大鏡の倍率を下げます。</td>
+</tr>
+<tr>
+<td>カラーフィルターの切り替え</td>
+<td><code>NVDA+shift+i</code></td>
+<td>利用可能なカラーフィルター（ノーマル、グレースケール、反転）を切り替えます。</td>
+</tr>
+<tr>
+<td>追跡モードの切り替え</td>
+<td>なし</td>
+<td>追跡モードを切り替えます (中央、相対的)</td>
+</tr>
+<tr>
+<td>画面全体の概要を表示する</td>
+<td><code>NVDA+shift+l</code></td>
+<td>画面全体の概要を一時的に表示します</td>
+</tr>
+<tr>
+<td>左にパン</td>
+<td><code>NVDA+alt+左矢印</code></td>
+<td>指定したパンニング移動量で、拡大表示を左に移動する</td>
+</tr>
+<tr>
+<td>右にパン</td>
+<td><code>NVDA+alt+右矢印</code></td>
+<td>指定したパンニング移動量で、拡大表示を右に移動する</td>
+</tr>
+<tr>
+<td>上にパン</td>
+<td><code>NVDA+alt+上矢印</code></td>
+<td>指定したパンニング移動量で、拡大表示を上に移動する</td>
+</tr>
+<tr>
+<td>下にパン</td>
+<td><code>NVDA+alt+下矢印</code></td>
+<td>指定したパンニング移動量で、拡大表示を下に移動する</td>
+</tr>
+<tr>
+<td>左端へパン</td>
+<td><code>NVDA+shift+alt+左矢印</code></td>
+<td>拡大表示を画面の左端に移動</td>
+</tr>
+<tr>
+<td>右端へパン</td>
+<td><code>NVDA+shift+alt+右矢印</code></td>
+<td>拡大表示を画面の右端に移動</td>
+</tr>
+<tr>
+<td>上の端へパン</td>
+<td><code>NVDA+shift+alt+上矢印</code></td>
+<td>拡大表示を画面の上の端に移動</td>
+</tr>
+<tr>
+<td>下の端へパン</td>
+<td><code>NVDA+shift+alt+下矢印</code></td>
+<td>拡大表示を画面の下の端に移動</td>
 </tr>
 </tbody>
 </table>
@@ -1284,7 +1580,7 @@
 <p>フォーカス位置のセルにあるメモを報告するには <code>NVDA+Alt+C</code> を押します。
 2回押すとウィンドウを開いて情報を表示します。
 Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Microsoft Excel の従来のコメント機能はメモ機能という名前になりました。</p>
-<p>ノートを追加または編集するには、セルにフォーカスを移動して Shift+F2 を押します。</p>
+<p>メモを追加または編集するには、セルにフォーカスを移動して Shift+F2 を押します。</p>
 <h4 id="ExcelReadingProtectedCells">保護されたセルの読み上げ</h4>
 <p>保護されたセルに移動するには NVDA+スペース でブラウズモードに切り替えてください。矢印キーなど Excel の標準的な移動コマンドで現在のワークシートのすべてのセルに移動できるようになります。</p>
 <h3 id="MicrosoftPowerPoint">Microsoft PowerPoint</h3>
@@ -1640,7 +1936,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <table>
 <thead>
 <tr>
-<th>名前</th>
+<th>名称</th>
 <th>キー</th>
 <th>説明</th>
 </tr>
@@ -1650,6 +1946,37 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <td>オーディオ分割モードの切り替え</td>
 <td><code>NVDA+Alt+S</code></td>
 <td>オーディオ分割モードを切り替えます。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="MagnifierSettingsCategory">拡大鏡</h4>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>デスクトップ用キー</th>
+<th>ラップトップ用キー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">拡大鏡の設定を開く</td>
+<td><code>NVDA+control+w</code></td>
+<td><code>NVDA+control+w</code></td>
+<td>NVDA 設定ダイアログの拡大鏡カテゴリでは、NVDA の <a href="#Magnifier" title="拡大鏡">拡大鏡</a> 機能の既定の動作を設定できます。</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">拡大鏡の有効化</td>
+<td><code>NVDA+shift+w</code></td>
+<td><code>NVDA+shift+w</code></td>
+<td>このオプションは拡大鏡を開始または停止します。</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">カラーフィルター</td>
+<td><code>NVDA+shift+i</code></td>
+<td><code>NVDA+shift+i</code></td>
+<td>このオプションでは、拡大鏡を使用する際に適用するフィルターを選択できます。</td>
 </tr>
 </tbody>
 </table>
@@ -1705,13 +2032,13 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <td id="OpenMouseSettings">NVDA設定ダイアログ「マウス」カテゴリを開く</td>
 <td><code>NVDA+Ctrl+M</code></td>
 <td><code>NVDA+Ctrl+M</code></td>
-<td>NVDA設定ダイアログのマウスカテゴリでは、マウスカーソル位置のテキストや座標の報告など、NVDAでのマウスの利用について設定できます。</td>
+<td>NVDA設定ダイアログのマウスカテゴリでは、マウスポインター位置のテキストや座標の報告など、NVDAでのマウスの利用について設定できます。</td>
 </tr>
 <tr>
-<td id="MouseSettingsTracking">マウスカーソル位置のテキストの報告</td>
+<td id="MouseSettingsTracking">マウスポインター位置のテキストの報告</td>
 <td>NVDA+M</td>
 <td>NVDA+M</td>
-<td>チェックされている場合、NVDAはマウスカーソル位置のテキストを読み上げます。これにより、マウスを動かして画面のオブジェクトを探すことができます。</td>
+<td>チェックされている場合、NVDAはマウスポインター位置のテキストを読み上げます。これにより、マウスを動かして画面のオブジェクトを探すことができます。</td>
 </tr>
 </tbody>
 </table>
@@ -1823,8 +2150,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <thead>
 <tr>
 <th>名称</th>
-<th>デスクトップ用キー</th>
-<th>ラップトップ用キー</th>
+<th>キー</th>
 <th>説明</th>
 </tr>
 </thead>
@@ -1832,12 +2158,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <tr>
 <td>設定情報の保存</td>
 <td><code>NVDA+Ctrl+C</code></td>
-<td><code>NVDA+Ctrl+C</code></td>
 <td>現在の設定を保存してNVDA終了後も設定が消えないようにします。</td>
 </tr>
 <tr>
 <td>設定を戻す</td>
-<td><code>NVDA+Ctrl+R</code></td>
 <td><code>NVDA+Ctrl+R</code></td>
 <td>1回押すと前回保存された設定に戻します。3回押すと設定をリセットします。</td>
 </tr>
@@ -1853,7 +2177,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <table>
 <thead>
 <tr>
-<th>名前</th>
+<th>名称</th>
 <th>キー</th>
 <th>説明</th>
 </tr>
@@ -4103,7 +4427,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <table>
 <thead>
 <tr>
-<th>名前</th>
+<th>名称</th>
 <th>キー</th>
 </tr>
 </thead>
@@ -4182,7 +4506,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <table>
 <thead>
 <tr>
-<th>名前</th>
+<th>名称</th>
 <th>キー</th>
 </tr>
 </thead>
@@ -4245,7 +4569,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <table>
 <thead>
 <tr>
-<th>名前</th>
+<th>名称</th>
 <th>キー</th>
 </tr>
 </thead>
@@ -4312,7 +4636,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <table>
 <thead>
 <tr>
-<th>名前</th>
+<th>名称</th>
 <th>キー</th>
 </tr>
 </thead>
@@ -4519,23 +4843,23 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <td><code>end1</code>, <code>end2</code></td>
 </tr>
 <tr>
-<td>ナビゲーターオブジェクトを現在のシステムフォーカスに移動</td>
+<td>ナビゲーターオブジェクトを現在のキーボードフォーカスに移動</td>
 <td><code>eCursor1</code>, <code>eCursor2</code></td>
 </tr>
 <tr>
-<td>現在のシステムフォーカスに移動</td>
+<td>現在のキーボードフォーカスに移動</td>
 <td><code>cursor1</code>, <code>cursor2</code></td>
 </tr>
 <tr>
-<td>マウスカーソルを現在のナビゲーターオブジェクトに移動</td>
+<td>マウスポインターを現在のナビゲーターオブジェクトに移動</td>
 <td><code>home1+home2</code></td>
 </tr>
 <tr>
-<td>ナビゲーターオブジェクトをマウスカーソル位置のオブジェクトに移動して読み上げ</td>
+<td>ナビゲーターオブジェクトをマウスポインター位置のオブジェクトに移動して読み上げ</td>
 <td><code>end1+end2</code></td>
 </tr>
 <tr>
-<td>現在のナビゲーターオブジェクトにシステムフォーカスを移動</td>
+<td>現在のナビゲーターオブジェクトにキーボードフォーカスを移動</td>
 <td><code>eCursor1+eCursor2</code></td>
 </tr>
 <tr>
@@ -4704,7 +5028,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <table>
 <thead>
 <tr>
-<th>名前</th>
+<th>名称</th>
 <th>キー</th>
 </tr>
 </thead>
@@ -4838,18 +5162,18 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <table>
 <thead>
 <tr>
-<th>名前</th>
+<th>名称</th>
 <th>キー</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>点字表示をスクロールして戻る</td>
-<td><code>pan_left</code></td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
 <td>点字表示をスクロールして進む</td>
-<td><code>pan_right</code></td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

@@ -2,16 +2,16 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
-<title>راهنمای سریع فرمان‌های NVDA نگارش 2026.1.1</title>
+<title>راهنمای سریع فرمان‌های NVDA نسخه‌ی 2026.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611">راهنمای سریع فرمان‌های NVDA نگارش 2026.1.1</h1>
+<body><h1 id="nvda-20262">راهنمای سریع فرمان‌های NVDA نسخه‌ی 2026.2</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611" title="راهنمای سریع فرمان‌های NVDA نگارش 2026.1.1">راهنمای سریع فرمان‌های NVDA نگارش 2026.1.1</a><ul>
+<li><a href="#nvda-20262" title="راهنمای سریع فرمان‌های NVDA نسخه‌ی 2026.2">راهنمای سریع فرمان‌های NVDA نسخه‌ی 2026.2</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="استفاده از NVDA">استفاده از NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="فرمان‌های لمسی NVDA">فرمان‌های لمسی NVDA</a><ul>
 <li><a href="#TouchModes" title="حالت‌های لمسی">حالت‌های لمسی</a></li>
@@ -23,7 +23,7 @@
 </ul>
 </li>
 <li><a href="#NavigatingWithNVDA" title="پیمایش با NVDA">پیمایش با NVDA</a><ul>
-<li><a href="#SystemFocus" title="پیمایش با محل فرمان‌پذیری یا تیررس (فکوس) سیستم (System Focus)">پیمایش با محل فرمان‌پذیری یا تیررس (فکوس) سیستم (System Focus)</a></li>
+<li><a href="#SystemFocus" title="پیمایش با فکوس سیستم">پیمایش با فکوس سیستم</a></li>
 <li><a href="#SystemCaret" title="پیمایش با نشانگر سیستم (System Caret)">پیمایش با نشانگر سیستم (System Caret)</a></li>
 <li><a href="#ObjectNavigation" title="پیمایش اشیاء">پیمایش اشیاء</a></li>
 <li><a href="#ReviewingText" title="بازبینی متن">بازبینی متن</a></li>
@@ -32,8 +32,14 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="حالت مرور">حالت مرور</a><ul>
-<li><a href="#SingleLetterNavigation" title="پیمایش تک‌حرفی">پیمایش تک‌حرفی</a></li>
-<li><a href="#ElementsList" title="فهرست سازه‌ها (The Elements List)">فهرست سازه‌ها (The Elements List)</a></li>
+<li><a href="#SingleLetterNavigation" title="پیمایش تک‌حرفی">پیمایش تک‌حرفی</a><ul>
+<li><a href="#BrowseModeTouch" title="پیمایش لمسی در حالت مرور">پیمایش لمسی در حالت مرور</a><ul>
+<li><a href="#_1" title="حرکات لمسی در حالت مرور">حرکات لمسی در حالت مرور</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#ElementsList" title="فهرست عنصرها (The Elements List)">فهرست عنصرها (The Elements List)</a></li>
 <li><a href="#SearchingForText" title="جستجو در متن">جستجو در متن</a></li>
 <li><a href="#ImbeddedObjects" title="اشیاء توکار">اشیاء توکار</a></li>
 <li><a href="#NativeSelectionMode" title="حالت انتخاب بومی">حالت انتخاب بومی</a></li>
@@ -41,17 +47,28 @@
 </li>
 <li><a href="#ReadingMath" title="خواندن محتوای ریاضی">خواندن محتوای ریاضی</a><ul>
 <li><a href="#InteractiveNavigation" title="پیمایش تعاملی">پیمایش تعاملی</a><ul>
-<li><a href="#MathNavigationModes" title="Navigation Modes">Navigation Modes</a></li>
+<li><a href="#MathNavigationModes" title="حالت‌های پیمایش">حالت‌های پیمایش</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#Braille" title="بریل">بریل</a><ul>
-<li><a href="#BrailleInput" title="ورودی بریل">ورودی بریل</a></li>
+<li><a href="#BrailleReading" title="خواندن بریل">خواندن بریل</a><ul>
+<li><a href="#BrailleReadingGestures" title="فرمان‌های خواندن بریل">فرمان‌های خواندن بریل</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="ورودی بریل">ورودی بریل</a><ul>
+<li><a href="#BrailleInputGestures" title="فرمان‌های ورودی بریل">فرمان‌های ورودی بریل</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="بینایی">بینایی</a><ul>
 <li><a href="#VisionScreenCurtain" title="پرده‌ی صفحه نمایش">پرده‌ی صفحه نمایش</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Magnifierذره‌بین">Magnifierذره‌بین</a><ul>
+<li><a href="#MagnifierCommands" title="فرمان‌های ذره‌بین">فرمان‌های ذره‌بین</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="بازشناسی محتوا">بازشناسی محتوا</a><ul>
@@ -62,7 +79,7 @@
 <li><a href="#MicrosoftWord" title="مایکروسافت وُرد">مایکروسافت وُرد</a><ul>
 <li><a href="#WordAutomaticColumnAndRowHeaderReading" title="خواندن سرسطرها و سر‌ستون‌ها بصورت خودکار">خواندن سرسطرها و سر‌ستون‌ها بصورت خودکار</a></li>
 <li><a href="#BrowseModeInMicrosoftWord" title="حالت مرور در Microsoft Word">حالت مرور در Microsoft Word</a><ul>
-<li><a href="#WordElementsList" title="فهرست سازه‌ها">فهرست سازه‌ها</a></li>
+<li><a href="#WordElementsList" title="فهرست عنصرها">فهرست عنصرها</a></li>
 </ul>
 </li>
 <li><a href="#WordReportingComments" title="اعلام دیدگاه‌ها">اعلام دیدگاه‌ها</a></li>
@@ -70,7 +87,7 @@
 </li>
 <li><a href="#MicrosoftExcel" title="مایکروسافت اکسل">مایکروسافت اکسل</a><ul>
 <li><a href="#ExcelAutomaticColumnAndRowHeaderReading" title="خواندن سرسطرها و سر‌ستون‌ها بصورت خودکار">خواندن سرسطرها و سر‌ستون‌ها بصورت خودکار</a></li>
-<li><a href="#ExcelElementsList" title="فهرست سازه‌ها">فهرست سازه‌ها</a></li>
+<li><a href="#ExcelElementsList" title="فهرست عنصرها">فهرست عنصرها</a></li>
 <li><a href="#ExcelReportingComments" title="اعلام یادداشت‌ها">اعلام یادداشت‌ها</a></li>
 <li><a href="#ExcelReadingProtectedCells" title="خواندن خانه‌های محافظت‌شده">خواندن خانه‌های محافظت‌شده</a></li>
 </ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="تقسیم صدا">تقسیم صدا</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Magnifier">Magnifier</a></li>
 <li><a href="#KeyboardSettings" title="صفحه‌کلید">صفحه‌کلید</a></li>
 <li><a href="#MouseSettings" title="موس">موس</a></li>
 <li><a href="#ReviewCursorSettings" title="مکان‌نمای بازبینی">مکان‌نمای بازبینی</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">فرمان‌های لمسی NVDA</h3>
 <p>برای فعال یا غیرفعال کردن پشتیبانی از تعامل لمسی، NVDA+control+alt+t را فشار دهید.</p>
 <h4 id="TouchModes">حالت‌های لمسی</h4>
-<p>برای تغییر دادن حالت‌های لمسی، یک ضربه‌ی سه‌انگشتی انجام دهید.</p>
+<p>برای تعویض این حالت‌ها، یک ضربه‌ی سه‌انگشتی انجام بدهید.</p>
 <h3 id="BasicNVDACommands">فرمان‌های اساسی NVDA</h3>
 <table>
 <thead>
@@ -194,7 +212,7 @@
 <td>Control+alt+n</td>
 <td>Control+alt+n</td>
 <td>ندارد</td>
-<td>NVDA را چنانچه در هنگام فرایند نصب، این میانبر ویندوز فعال شده باشد، از میز کار آغاز یا دوباره راه‌اندازی می‌کند. همان‌طور که گفته شد، این یک میانبر مخصوص ویندوز است؛ بنا بر این نمی‌توان آن‌را در پنجره‌ی مدیریت فرمان‌های ورودی NVDA اختصاص یا تغییر داد.</td>
+<td>NVDA را چنانچه در هنگام فرایند نصب، این میانبر ویندوز فعال شده باشد، از میز کار آغاز یا دوباره راه‌اندازی می‌کند. همان‌طور که گفته شد، این یک میانبر مخصوص ویندوز است؛ بنا بر این نمی‌توان آن‌را در پنجره‌ی فرمان‌های ورودی NVDA اختصاص یا تغییر داد.</td>
 </tr>
 <tr>
 <td>توقف سخن گفتن</td>
@@ -209,6 +227,13 @@
 <td>shift</td>
 <td>ندارد</td>
 <td>موقتا سخن‌گویی را متوقف می‌کند. فشردن دوباره‌ی این کلید، سخن گفتن NVDA را از جایی که قطع شده بود ادامه می‌دهد (مشروط به این‌که مکث کردن به وسیله‌ی موتور سخنگوی جاری پشتیبانی شود.)</td>
+</tr>
+<tr>
+<td>تکرار آخرین اطلاعات خوانده‌شده</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>ندارد</td>
+<td>آخرین اطلاعاتی که توسط NVDA خوانده شده است را تکرار می‌کند. با دو بار فشردن، آن را در یک پنجره‌ی قابل مرور نشان می‌دهد.</td>
 </tr>
 <tr>
 <td>منوی NVDA</td>
@@ -292,7 +317,7 @@
 </tbody>
 </table>
 <h2 id="NavigatingWithNVDA">پیمایش با  NVDA</h2>
-<h3 id="SystemFocus">پیمایش با محل فرمان‌پذیری یا تیررس (فکوس) سیستم (System Focus)</h3>
+<h3 id="SystemFocus">پیمایش با فکوس سیستم</h3>
 <table>
 <thead>
 <tr>
@@ -307,7 +332,7 @@
 <td>اعلام فکوس جاری</td>
 <td>NVDA+tab</td>
 <td>NVDA+tab</td>
-<td>شیء یا کنترل فعلی را که در تیررس سیستم است اعلام می‌کند. با دو بار فشردن، اطلاعات یاد‌شده حرف به حرف خوانده می‌شود</td>
+<td>شیء یا کنترل فعلی را که در فکوس سیستم است اعلام می‌کند. با دو بار فشردن، اطلاعات یاد‌شده حرف به حرف خوانده می‌شود</td>
 </tr>
 <tr>
 <td>اعلام عنوان</td>
@@ -325,7 +350,7 @@
 <td>اعلام نوار وضعیت</td>
 <td>NVDA+end</td>
 <td>NVDA+shift+end</td>
-<td>در صورتی که NVDA نوار وضعیتی در پنجره‌ی پیش رو پیدا کند، آن را می‌خوانَد. با دو بار فشردن، اطلاعات موجود در نوار وضعیت حرف به حرف خوانده می‌شود. با سه بار فشردن، اطلاعات نوار وضعیت در کلیپ‌برد کپی می‌شود</td>
+<td>در صورتی که NVDA نوار وضعیتی پیدا کند، آن را می‌خوانَد. با دو بار فشردن، اطلاعات موجود در نوار وضعیت حرف به حرف خوانده می‌شود. با سه بار فشردن، اطلاعات نوار وضعیت در کلیپ‌برد کپی می‌شود</td>
 </tr>
 <tr>
 <td>اعلام کلید میانبر</td>
@@ -371,10 +396,10 @@
 <td>قالب‌بندی متنی که نشانگر روی آن قرار دارد را اعلام می‌کند. با دو بار فشردن، اطلاعات را در حالت مرور نشان می‌دهد</td>
 </tr>
 <tr>
-<td>Report language</td>
-<td>none</td>
-<td>none</td>
-<td>Reports text language. Pressing twice shows the information in a window</td>
+<td>اعلام کردن زبان</td>
+<td>ندارد</td>
+<td>ندارد</td>
+<td>زبان متن را اعلام می‌کند. با دو بار فشردن، اطلاعات را در یک پنجره نشان می‌دهد</td>
 </tr>
 <tr>
 <td>اعلام مقصد لینک</td>
@@ -536,7 +561,7 @@
 <td>به اولین شیئی که توسط پیمایشگر جاری در بر گرفته شده‌است می‌رود</td>
 </tr>
 <tr>
-<td>حرکت به شیء در تیررس (دارای فکوس)</td>
+<td>حرکت به شیء دارای فکوس</td>
 <td>NVDA+منها در ماشین‌حساب</td>
 <td>NVDA+backspace</td>
 <td>ندارد</td>
@@ -547,14 +572,14 @@
 <td>NVDA+اینتر در ماشین‌حساب</td>
 <td>NVDA+اینتر</td>
 <td>دو ضربه</td>
-<td>شیء پیمایشگر جاری را فعال می‌کند. (شبیه کلیک کردن با موس، یا فشردن Space هنگامی که در تیررس سیستم است.)</td>
+<td>شیء پیمایشگر جاری را فعال می‌کند. (شبیه کلیک کردن با موس، یا فشردن Space هنگامی که در فکوس سیستم است.)</td>
 </tr>
 <tr>
 <td>حرکت فکوس یا نشانگر سیستم به محل بازبینی فعلی</td>
 <td>NVDA+shift+منها در ماشین‌حساب</td>
 <td>NVDA+shift+backspace</td>
 <td>ندارد</td>
-<td>با یک بار فشرده شدن، تیررس سیستم را به پیمایشگر فعلی می‌بَرَد. با دو بار فشردن، نشانگر سیستم را به محل مکان‌نمای بازبینی می‌بَرَد</td>
+<td>با یک بار فشرده شدن، فکوس سیستم را به پیمایشگر فعلی می‌بَرَد. با دو بار فشردن، نشانگر سیستم را به محل مکان‌نمای بازبینی می‌بَرَد</td>
 </tr>
 <tr>
 <td>اعلام محل مکان‌نمای بازبینی</td>
@@ -858,11 +883,11 @@
 <td>شیء پیمایشگر را در محل شیئی که موس روی آن قرار گرفته قرار می‌دهد</td>
 </tr>
 <tr>
-<td>Toggle mouse audio coordinates</td>
-<td>none</td>
-<td>none</td>
-<td>none</td>
-<td>Toggles whether NVDA plays audio beeps that report the mouse position as it moves.</td>
+<td>تغییر وضعیت مختصات صوتی موس</td>
+<td>ندارد</td>
+<td>ندارد</td>
+<td>ندارد</td>
+<td>اینکه NVDA هنگام حرکت موس موقعیت موس را با بوق‌های صوتی اعلام کند یا خیر را تنظیم می‌کند.</td>
 </tr>
 </tbody>
 </table>
@@ -877,14 +902,14 @@
 </thead>
 <tbody>
 <tr>
-<td>تغییر حالت به مرور / فرمان‌پذیری (Browse/Focus)</td>
+<td>تغییر حالت به مرور / فکوس</td>
 <td>NVDA+فاصله</td>
-<td>وضعیت NVDA را بین حالت‌های فرمان‌پذیری و مرور تغییر می‌دهد</td>
+<td>وضعیت NVDA را بین حالت‌های فکوس و مرور تغییر می‌دهد</td>
 </tr>
 <tr>
-<td>خروج از حالت فرمان‌پذیری</td>
+<td>خروج از حالت فکوس</td>
 <td>escape</td>
-<td>چنانچه پیش از این بطور خودکار حالت فرمان‌پذیری فعال شده باشد، به حالت مرور باز‌می‌گردد</td>
+<td>چنانچه پیش از این بطور خودکار حالت فکوس فعال شده باشد، به حالت مرور باز‌می‌گردد</td>
 </tr>
 <tr>
 <td>نوسازی سند در حالت مرور</td>
@@ -909,7 +934,7 @@
 </tbody>
 </table>
 <h3 id="SingleLetterNavigation">پیمایش تک‌حرفی</h3>
-<p>کلیدهای زیر به تنهایی امکان رفتن به سازه‌ی (element) بعدی موجود در سند را فراهم می‌کنند. افزودن Shift به این کلیدها باعث می‌شود که به سازه‌ی قبلی بروید:</p>
+<p>کلیدهای زیر به تنهایی امکان رفتن به عنصر (element) بعدی موجود در سند را فراهم می‌کنند. افزودن Shift به این کلیدها باعث می‌شود که به عنصر قبلی بروید:</p>
 <ul>
 <li>h: سرنوشتار</li>
 <li>l: فهرست</li>
@@ -936,7 +961,7 @@
 <li><code>p</code>: پاراگراف متنی</li>
 <li>w: خطای املایی</li>
 </ul>
-<p>کلیدهای زیر برای حرکت به ابتدا و انتهای یک سازه‌ی دربرگیرنده مانند جدول یا فهرست در نظر گرفته شده‌اند:</p>
+<p>کلیدهای زیر برای حرکت به ابتدا و انتهای یک عنصر دربرگیرنده مانند جدول یا فهرست در نظر گرفته شده‌اند:</p>
 <table>
 <thead>
 <tr>
@@ -949,17 +974,50 @@
 <tr>
 <td>حرکت به ابتدای  دربرگیرنده</td>
 <td>shift+comma</td>
-<td>حرکت به ابتدای سازه‌ی دربرگیرنده (مانند فهرست، جدول، ...) در جایی که نشانگر قرار دارد</td>
+<td>حرکت به ابتدای عنصر دربرگیرنده (مانند فهرست، جدول، ...) در جایی که نشانگر قرار دارد</td>
 </tr>
 <tr>
 <td>حرکت به بعد از انتهای دربرگیرنده</td>
 <td>comma</td>
-<td>به بعد از انتهای سازه‌ی دربرگیرنده (فهرست، جدول، ...) می‌رود. جایی که نشانگر قرار دارد</td>
+<td>به بعد از انتهای عنصر دربرگیرنده (فهرست، جدول، ...) می‌رود. جایی که نشانگر قرار دارد</td>
 </tr>
 </tbody>
 </table>
 <p>برای فعال یا غیرفعال کردن پیمایش تک‌حرفی برای سند پیش رو، کلید‌های NVDA+shift+فاصله را فشار دهید.</p>
-<h3 id="ElementsList">فهرست سازه‌ها (The Elements List)</h3>
+<h4 id="BrowseModeTouch">پیمایش لمسی در حالت مرور</h4>
+<h5 id="_1">حرکات لمسی در حالت مرور</h5>
+<table>
+<thead>
+<tr>
+<th>نام</th>
+<th>حرکت لمسی</th>
+<th>توضیح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>انتخاب نوع عنصر بعدی</td>
+<td>کشش پایین</td>
+<td>به نوع عنصر بعدی در پیمایش حالت مرور تغییر می‌دهد.</td>
+</tr>
+<tr>
+<td>انتخاب نوع عنصر قبلی</td>
+<td>کشش بالا</td>
+<td>به نوع عنصر قبلی در پیمایش حالت مرور تغییر می‌دهد.</td>
+</tr>
+<tr>
+<td>حرکت به عنصر بعدی</td>
+<td>کشش راست</td>
+<td>به عنصر بعدی حالت مرور از نوع انتخاب‌شده می‌بَرَد.</td>
+</tr>
+<tr>
+<td>حرکت به عنصر قبلی</td>
+<td>کشش چپ</td>
+<td>به عنصر قبلی حالت مرور از نوع انتخاب‌شده می‌بَرَد.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ElementsList">فهرست عنصرها (The Elements List)</h3>
 <table>
 <thead>
 <tr>
@@ -970,9 +1028,9 @@
 </thead>
 <tbody>
 <tr>
-<td>فهرست سازه‌ها در حالت مرور</td>
+<td>فهرست عنصرها در حالت مرور</td>
 <td>NVDA+f7</td>
-<td>گونه‌های مختلف سازه‌های موجود در سند جاری را فهرست می‌کند</td>
+<td>انواع مختلف عنصرهای موجود در سند جاری را فهرست می‌کند</td>
 </tr>
 </tbody>
 </table>
@@ -1055,154 +1113,304 @@
 </tr>
 </tbody>
 </table>
-<h4 id="MathNavigationModes">Navigation Modes</h4>
+<h4 id="MathNavigationModes">حالت‌های پیمایش</h4>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Key</th>
+<th>نام</th>
+<th>کلید</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Move to previous</td>
-<td><code>leftArrow</code></td>
+<td>رفتن به قبلی</td>
+<td><code>جهت‌نمای چپ</code></td>
 </tr>
 <tr>
-<td>Move to previous cell in a table, or previous digit if in columnar math</td>
-<td><code>control+leftArrow</code> or <code>control+alt+leftArrow</code></td>
+<td>رفتن به خانه‌ی قبلی در جدول، یا اگر در ریاضی ستونی هستید ، رقم قبلی</td>
+<td><code>کنترل+جهت‌نمای چپ</code> یا <code>کنترل+آلْت+جهت‌نمای چپ</code></td>
 </tr>
 <tr>
-<td>Read previous</td>
-<td><code>shift+leftArrow</code></td>
+<td>خواندن قبلی</td>
+<td><code>شیفت+جهت‌نمای چپ</code></td>
 </tr>
 <tr>
-<td>Describe previous</td>
-<td><code>control+shift+leftArrow</code></td>
+<td>توصیف کردن قبلی</td>
+<td><code>کنترل+شیفت+جهت‌نمای چپ</code></td>
 </tr>
 <tr>
-<td>Move to next</td>
-<td><code>rightArrow</code></td>
+<td>رفتن به بعدی</td>
+<td><code>جهت‌نمای راست</code></td>
 </tr>
 <tr>
-<td>Move to next cell in a table, or next digit if in columnar math</td>
+<td>رفتن به خانه‌ی بعدی در جدول، یا اگر در ریاضی ستونی هستید، رفتن به رقم بعدی</td>
 <td><code>control+rightArrow</code> or <code>control+alt+rightArrow</code></td>
 </tr>
 <tr>
-<td>Read next</td>
-<td><code>shift+rightArrow</code></td>
+<td>خواندن بعدی</td>
+<td><code>شیفت+جهت‌نمای راست</code></td>
 </tr>
 <tr>
-<td>Describe next</td>
-<td><code>control+shift+rightArrow</code></td>
+<td>توصیف کردن بعدی</td>
+<td><code>کنترل+شیفت+جهت‌نمای راست</code></td>
 </tr>
 <tr>
-<td>Zoom out</td>
-<td><code>upArrow</code></td>
+<td>دور‌نمایی</td>
+<td><code>جهت‌نمای بالا</code></td>
 </tr>
 <tr>
-<td>Move to cell above in a table, or digit above in columnar math</td>
-<td><code>control+upArrow</code> or <code>control+alt+upArrow</code></td>
+<td>رفتن به خانه‌ی بالا در جدول، یا رقم بالا در ریاضی ستونی</td>
+<td><code>کنترل+جهت‌نمای بالا</code> یا <code>کنترل+آلْت+جهت‌نمای بالا</code></td>
 </tr>
 <tr>
-<td>Change Navigation Mode (Enhanced/Simple/Character) to larger</td>
-<td><code>shift+upArrow</code></td>
+<td>تغییر حالت پیمایش (پیشرفته/ساده/نویسه) به بزرگتر</td>
+<td><code>شیفت+جهت‌نمای بالا</code></td>
 </tr>
 <tr>
-<td>Zoom out all the way</td>
-<td><code>control+shift+upArrow</code></td>
+<td>دور‌نمایی حداکثری</td>
+<td><code>کنترل+شیفت+جهت‌نمای بالا</code></td>
 </tr>
 <tr>
-<td>Zoom in</td>
-<td><code>downArrow</code></td>
+<td>نزدیک‌نمایی</td>
+<td><code>جهت‌نمای پایین</code></td>
 </tr>
 <tr>
-<td>Move to cell below in a table, or digit below in columnar math</td>
-<td><code>control+downArrow</code> or <code>control+alt+downArrow</code></td>
+<td>رفتن به خانه‌ی پایین در جدول، یا رقم پایین در ریاضی ستونی</td>
+<td><code>کنترل+جهت‌نمای پایین</code> یا <code>کنترل+آلْت+جهت‌نمای پایین</code></td>
 </tr>
 <tr>
-<td>Change Navigation Mode (Enhanced/Simple/Character) to smaller</td>
-<td><code>shift+downArrow</code></td>
+<td>تغییر حالت پیمایش (پیشرفته/ساده/نویسه) به کوچکتر</td>
+<td><code>شیفت+جهت‌نمای پایین</code></td>
 </tr>
 <tr>
-<td>Zoom in all the way</td>
-<td><code>control+shift+downArrow</code></td>
+<td>نزدیک‌نمایی حداکثری</td>
+<td><code>کنترل+شیفت+جهت‌نمای پایین</code></td>
 </tr>
 <tr>
-<td>Where am I</td>
-<td><code>enter</code></td>
+<td>موقعیت فعلی</td>
+<td><code>اینتر</code></td>
 </tr>
 <tr>
-<td>Global Where am I</td>
-<td><code>control+enter</code></td>
+<td>موقعیت کلی</td>
+<td><code>کنترل+اینتر</code></td>
 </tr>
 <tr>
-<td>Jump to placemarker</td>
-<td><code>1</code> through <code>0</code> (<code>0</code> is 10)</td>
+<td>رفتن به نشان‌گذار</td>
+<td><code>1</code> تا <code>0</code> (<code>0</code> 10 است.)</td>
 </tr>
 <tr>
-<td>Set placemarker</td>
-<td><code>control+1</code> through <code>control+0</code></td>
+<td>گذاشتن نشان</td>
+<td><code>کنترل+1</code> تا <code>کنترل+0</code></td>
 </tr>
 <tr>
-<td>Read placemarker</td>
-<td><code>shift+1</code> through <code>shift+0</code></td>
+<td>خواندن نشان‌گذار</td>
+<td><code>شیفت+1</code> تا <code>شیفت+0</code></td>
 </tr>
 <tr>
-<td>Describe placemarker</td>
-<td><code>control+shift+1</code> through <code>control+shift+0</code></td>
+<td>توصیف نشان‌گذار</td>
+<td><code>کنترل+شیفت+1</code> تا <code>کنترل+شیفت+0</code></td>
 </tr>
 <tr>
-<td>Read current</td>
-<td><code>space</code></td>
+<td>خواندن مورد فعلی</td>
+<td><code>کلید فاصله</code></td>
 </tr>
 <tr>
-<td>Read current cell</td>
-<td><code>control+space</code></td>
+<td>خواندن خانه‌ی جاری</td>
+<td><code>کنترل+کلید فاصله</code></td>
 </tr>
 <tr>
-<td>Toggle "speech mode" to Read or Describe</td>
-<td><code>shift+space</code></td>
+<td>تغییر «حالت گفتار» به خواندن یا توصیف کردن</td>
+<td><code>شیفت+کلید فاصله</code></td>
 </tr>
 <tr>
-<td>Describe current</td>
-<td><code>control+shift+space</code></td>
+<td>توصیف مورد فعلی</td>
+<td><code>کنترل+شیفت+کلید فاصله</code></td>
 </tr>
 <tr>
-<td>Move to start of expression</td>
+<td>رفتن به ابتدای عبارت</td>
 <td><code>home</code></td>
 </tr>
 <tr>
-<td>Move to start of line</td>
-<td><code>control+home</code></td>
+<td>رفتن به ابتدای خط</td>
+<td><code>کنترل+home</code></td>
 </tr>
 <tr>
-<td>Move to start of column in table, or move to digit at top in columnar math</td>
-<td><code>shift+home</code></td>
+<td>رفتن به ابتدای ستون در جدول، یا رفتن به رقم بالایی در ریاضی ستونی</td>
+<td><code>شیفت+home</code></td>
 </tr>
 <tr>
-<td>Move to end of expression</td>
+<td>رفتن به انتهای عبارت</td>
 <td><code>end</code></td>
 </tr>
 <tr>
-<td>Move to end of line</td>
-<td><code>control+end</code></td>
+<td>رفتن به انتهای خط</td>
+<td><code>کنترل+end</code></td>
 </tr>
 <tr>
-<td>Move to end of column in table, or move to digit at bottom in columnar math</td>
+<td>رفتن به انتهای ستون در جدول، یا رفتن به رقم پایینی در ریاضی ستونی</td>
 <td><code>shift+end</code></td>
 </tr>
 <tr>
-<td>Move back to last position</td>
+<td>برگشتن به آخرین موقعیت</td>
 <td><code>backspace</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="Braille">بریل</h2>
+<h3 id="BrailleReading">خواندن بریل</h3>
+<h4 id="BrailleReadingGestures">فرمان‌های خواندن بریل</h4>
+<table>
+<thead>
+<tr>
+<th>نام</th>
+<th>کلید</th>
+<th>توضیح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>تغییر حالت بریل</td>
+<td><code>NVDA+alt+t</code></td>
+<td>اجازه می‌دهد بین حالتهای موجود بریل جابجا شوید: «دنبال کردن مکاننماها» و «نمایش خروجی گفتار»</td>
+</tr>
+<tr>
+<td>اتصال بریل</td>
+<td><code>NVDA+control+t</code></td>
+<td>این گزینه به شما اجازه می‌دهد انتخاب کنید نمایشگر بریل فکوس یا نشانگر سیستم، پیمایشگر یا مکان‌نمای بازبینی، یا هردو را دنبال کند</td>
+</tr>
+<tr>
+<td>فعال یا غیرفعال‌سازی جابجایی خودکار</td>
+<td><code>NVDA+alt+k</code></td>
+<td>تغییر وضعیت اینکه آیا NVDA برای نمایش اطلاعاتی که برای مشاهده‌ی یک‌جا بسیار طولانی هستند، نمایشگر بریل را  به‌تناوب جابجا کند یا خیر</td>
+</tr>
+<tr>
+<td>افزایش سرعت جابجایی خودکار</td>
+<td><code>NVDA+alt+l</code></td>
+<td>جابجایی خودکار را (وقتی فعال باشد) تندتر می‌کند</td>
+</tr>
+<tr>
+<td>کاهش سرعت جابجایی خودکار</td>
+<td><code>NVDA+alt+j</code></td>
+<td>جابجایی خودکار را (وقتی فعال باشد) کندتر می‌کند</td>
+</tr>
+<tr>
+<td>حرکت بین شکل‌های مکان‌نمای بریل</td>
+<td>ندارد</td>
+<td>گزینه‌های شکل (الگوی نقطه‌های» مکان‌نمای بریل را تغییر می‌دهد</td>
+</tr>
+<tr>
+<td>تغییر حرکت نشانگر سیستم هنگام جانمایی مکان‌نمای بازبینی</td>
+<td>ندارد</td>
+<td>حرکت نشانگر سیستم در بریل را هنگام جانمایی وضعیت‌های مکان‌نمای بازبینی تغییر می‌دهد</td>
+</tr>
+<tr>
+<td>تغییر حالت‌های نمایش پیام‌ها</td>
+<td>ندارد</td>
+<td>حالت‌های نمایش پیام‌ها در بریل را تغییر می‌دهد</td>
+</tr>
+<tr>
+<td>تغییر وضعیت‌های نمایش  انتخاب در بریل</td>
+<td>ندارد</td>
+<td>وضعیت‌های نمایش انتخاب در بریل را تغییر می‌دهد</td>
+</tr>
+<tr>
+<td>تغییر وضعیت عادی‌سازی یونی‌کد در بریل</td>
+<td>ندارد</td>
+<td>وضعیت‌های عادیسازی یونی‌کد در بریل را تغییر می‌دهد</td>
+</tr>
+<tr>
+<td>بردن بریل به فکوس</td>
+<td>ندارد</td>
+<td>نمایشگر بریل را به فکوس جاری می‌بَرَد</td>
+</tr>
+<tr>
+<td>بردن بریل به خط بعدی</td>
+<td>ندارد</td>
+<td>نمایشگر بریل را به خط بعدی می‌بَرَد</td>
+</tr>
+<tr>
+<td>بردن بریل به خط قبلی</td>
+<td>ندارد</td>
+<td>نمایشگر بریل را به خط قبلی می‌بَرَد</td>
+</tr>
+<tr>
+<td>اعلام قالب‌بندی بریل</td>
+<td>ندارد</td>
+<td>اطلاعات قالب‌بندی برای این خانه‌ی بریل را اعلام می‌کند</td>
+</tr>
+<tr>
+<td>جانمایی یا فعال‌سازی شیء بریل</td>
+<td>ندارد</td>
+<td>شیء زیر این خانه‌ی بریل را جانمایی یا فعال می‌کند</td>
+</tr>
+<tr>
+<td>عقب بردن نمایشگر بریل</td>
+<td>ندارد</td>
+<td>نمایشگر بریل را به عقب می‌بَرَد</td>
+</tr>
+<tr>
+<td>جلو بردن نمایشگر بریل</td>
+<td>ندارد</td>
+<td>نمایشگر بریل را به جلو می‌بَرَد</td>
+</tr>
+<tr>
+<td>فعال یا غیرفعال‌سازی مکان‌نمای بریل</td>
+<td>ندارد</td>
+<td>مکان‌نمای بریل را روشن و خاموش می‌کند</td>
+</tr>
+<tr>
+<td>تغییر وضعیت اطلاعات زمینه‌ای بریل</td>
+<td>ندارد</td>
+<td>شیوه‌ی نمایش اطلاعات زمینه‌ای را در بریل تغییر می‌دهد</td>
+</tr>
+<tr>
+<td>تغییر خواندن هنگام پیمایش بریل</td>
+<td>ندارد</td>
+<td>خواندن را هنگام پیمایش خطی یا پاراگرافی با بریل فعال یا غیرفعال می‌کند</td>
+</tr>
+<tr>
+<td>فعال یا غیرفعال‌سازی خواندن نویسه هنگام جانمایی</td>
+<td>ندارد</td>
+<td>هنگام جانمایی مکان‌نما در متن، خواندن نویسه‌ی زیر مکان‌نما را فعال یا غیرفعال می‌کند</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">ورودی بریل</h3>
 <p>با فشردن نقطه‌ی ۷ آخرین خانه‌ی بریل یا نویسه‌ی وارد‌شده پاک می‌شود.
 نقطه‌ی ۸ ورودی بریل جاری را -بر اساس جدول ورودی انتخاب‌شده- برگردان می‌کند و کلید اینتر را فشار می‌دهد.
 فشردن نقطه‌های ۷-۸، ورودی بریل را برگردان می‌کند ، ولی فاصله یا اینتر وارد نمی‌کند.</p>
+<h4 id="BrailleInputGestures">فرمان‌های ورودی بریل</h4>
+<table>
+<thead>
+<tr>
+<th>نام</th>
+<th>کلید</th>
+<th>توضیح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ورود توسط نمایشگر بریل</td>
+<td>هرکدام از نقطه‌ها</td>
+<td>نقطه‌های بریل را از طریق صفحه‌کلید بریل وارد می‌کند</td>
+</tr>
+<tr>
+<td>پاک کردن آخرین مورد واردشده</td>
+<td><code>نقطه‌ی ۷</code></td>
+<td>آخرین خانه‌ی بریل واردشده یا نویسه را پاک می‌کند</td>
+</tr>
+<tr>
+<td>برگرداندن ورودی بریل</td>
+<td><code>نقطه‌ی ۷+نقطه‌ی ۸</code></td>
+<td>هر ورودی بریل را برمی‌گردانَد</td>
+</tr>
+<tr>
+<td>برگرداندن و زدن اینتر</td>
+<td><code>نقطه‌ی ۸</code></td>
+<td>هر ورودی بریل را برمی‌گردانَد و اینتر را فشار می‌دهد</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">بینایی</h2>
 <h3 id="VisionScreenCurtain">پرده‌ی صفحه نمایش</h3>
 <table>
@@ -1218,6 +1426,94 @@
 <td>فعال یا غیرفعال کردن وضعیت پرده‌ی صفحه نمایش</td>
 <td><code>NVDA+control+escape</code></td>
 <td>برای سیاه کردن صفحه‌ی نمایش فعال و برای نمایش محتوای صفحه‌ی نمایش غیرفعال کنید. یک بار فشردن، پرده‌ی صفحه‌نمایش را تا راه‌اندازی دوباره‌ی NVDA فعال نگه‌می‌دارد. با دو بار فشردن، حرده فعال می‌مانَد تا شما آن را غیرفعال کنید.</td>
+</tr>
+<tr>
+<td>اعلام وضعیت پرده‌ی صفحه‌ی نمایش</td>
+<td>ندارد</td>
+<td>وضعیت جاری پرده‌ی صفحه نمایش را که غیرفعال یا فعال یا در حالت موقت است، اعلام می‌کند</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Magnifierذره‌بین</h2>
+<h3 id="MagnifierCommands">فرمان‌های ذره‌بین</h3>
+<table>
+<thead>
+<tr>
+<th>نام</th>
+<th>کلید</th>
+<th>توضیح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>روشن و خاموش کردن ذره‌بین</td>
+<td><code>NVDA+شیفت+w</code></td>
+<td>ذره‌بین را فعال یا غیرفعال می‌کند</td>
+</tr>
+<tr>
+<td>افزایش سطح درشت‌نمایی</td>
+<td><code>NVDA+شیفت+مساوی</code></td>
+<td>سطح بزرگ‌نمایی را افزایش می‌دهد. ذره‌بین را اگر از قبل در حال اجرا نباشد اجرا می‌کند.</td>
+</tr>
+<tr>
+<td>کاهش سطح درشت‌نمایی</td>
+<td><code>NVDA+شیفت+منها</code></td>
+<td>سطح بزرگ‌نمایی را کاهش می‌دهد</td>
+</tr>
+<tr>
+<td>تغییر فیلترهای رنگی</td>
+<td><code>NVDA+شیفت+i</code></td>
+<td>بین فیلترهای رنگی موجود (عادی، طیف خاکستری و معکوس) جابجا می‌کند</td>
+</tr>
+<tr>
+<td>تغییر حالت دنبال کردن</td>
+<td>ندارد</td>
+<td>حالت‌های دنبال کردن (مرکزی، نسبی) را تغییر می‌دهد</td>
+</tr>
+<tr>
+<td>نمایش نمایی اجمالی از تمام صفحه</td>
+<td><code>NVDA+شیفت+l</code></td>
+<td>موقتا نمایی اجمالی از تمام صفحه را نشان می‌دهد</td>
+</tr>
+<tr>
+<td>جابجایی به چپ</td>
+<td><code>NVDA+آلْت+جهت‌نمای چپ</code></td>
+<td>نمای درشت‌نمایی‌شده را به اندازه‌ی گام جابجایی پیکربندی‌شده به چپ می‌بَرَد</td>
+</tr>
+<tr>
+<td>جابجایی به راست</td>
+<td><code>NVDA+آلْت+جهت‌نمای راست</code></td>
+<td>نمای درشت‌نمایی‌شده را به اندازه‌ی گام جابجایی پیکربندی‌شده به راست می‌بَرَد</td>
+</tr>
+<tr>
+<td>جابجایی به بالا</td>
+<td><code>NVDA+آلْت+جهت‌نمای بالا</code></td>
+<td>نمای درشت‌نمایی‌شده را به اندازه‌ی گام جابجایی پیکربندی‌شده به بالا می‌بَرَد</td>
+</tr>
+<tr>
+<td>جابجایی به پایین</td>
+<td><code>NVDA+آلْت+جهت‌نمای پایین</code></td>
+<td>نمای درشت‌نمایی‌شده را به اندازه‌ی گام جابجایی پیکربندی‌شده به پایین می‌بَرَد</td>
+</tr>
+<tr>
+<td>جابجایی به لبه‌ی چپ</td>
+<td><code>NVDA+شیفت+آلْت+جهت‌نمای چپ</code></td>
+<td>نمای درشت‌نمایی‌شده را مستقیما به لبه‌ی چپ صفحه می‌بَرَد</td>
+</tr>
+<tr>
+<td>جابجایی به لبه‌ی راست</td>
+<td><code>NVDA+شیفت+آلْت+جهت‌نمای راست</code></td>
+<td>نمای درشت‌نمایی‌شده را مستقیما به لبه‌ی راست صفحه می‌بَرَد</td>
+</tr>
+<tr>
+<td>جابجایی به لبه‌ی بالا</td>
+<td><code>NVDA+شیفت+آلْت+جهت‌نمای بالا</code></td>
+<td>نمای درشت‌نمایی‌شده را مستقیما به لبه‌ی بالای صفحه می‌بَرَد</td>
+</tr>
+<tr>
+<td>جابجایی به لبه‌ی پایین</td>
+<td><code>NVDA+شیفت+آلْت+جهت‌نمای پایین</code></td>
+<td>نمای درشت‌نمایی‌شده را مستقیما به لبه‌ی پایین صفحه می‌بَرَد</td>
 </tr>
 </tbody>
 </table>
@@ -1250,8 +1546,8 @@
 </table>
 <h4 id="BrowseModeInMicrosoftWord">حالت مرور در Microsoft Word</h4>
 <p>برای فعال یا غیرفعال کردن حالت مرور در Microsoft Word، کلیدهای NVDA و فاصله را بزنید.</p>
-<h5 id="WordElementsList">فهرست سازه‌ها</h5>
-<p>هنگامی که در Microsoft Word در حالت مرور هستید، می‌توانید با استفاده از کلید‌های NVDA+F7 به فهرست سازه‌ها دست پیدا کنید.</p>
+<h5 id="WordElementsList">فهرست عنصرها</h5>
+<p>هنگامی که در Microsoft Word در حالت مرور هستید، می‌توانید با استفاده از کلید‌های NVDA+F7 به فهرست عنصرها دست پیدا کنید.</p>
 <h4 id="WordReportingComments">اعلام دیدگاه‌ها</h4>
 <p>برای اعلام دیدگاه موجود در محل نشانگر، <code>NVDA+alt+c</code> را فشار دهید.
 با دو بار فشردن، اطلاعات را در یک پیام قابل مرور نمایش می‌دهد.</p>
@@ -1278,13 +1574,13 @@
 </tr>
 </tbody>
 </table>
-<h4 id="ExcelElementsList">فهرست سازه‌ها</h4>
-<p>برای دسترسی به فهرست سازه‌ها در اکسل، کلید‌های NVDA+F7 را بفشارید.</p>
+<h4 id="ExcelElementsList">فهرست عنصرها</h4>
+<p>برای دسترسی به فهرست عنصرها در اکسل، کلید‌های NVDA+F7 را بفشارید.</p>
 <h4 id="ExcelReportingComments">اعلام یادداشت‌ها</h4>
-<p>برای اعلام یادداشت موجود برای خانه‌ی جاری، <code>NVDA+alt+c</code> را فشار دهید.
+<p>برای اعلام یادداشت موجود برای خانه‌ی جاریِ دارای فکوس، <code>NVDA+alt+c</code> را فشار دهید.
 با دو بار فشردن، اطلاعات را در یک پیام قابل مرور نمایش می‌دهد.
 در مایکروسافت آفیس ۲۰۱۶، ۳۶۵ و جدیدتر، دیدگاه‌ها در اکسل به یادداشت‌ها تغییر نام یافته‌اند.</p>
-<p>برای افزودن یا ویرایش یادداشت در خانه‌ای که در تیررس قرار دارد، shift+f2 را بزنید.</p>
+<p>برای افزودن یا ویرایش یادداشت در خانه‌ی دارای فکوس، shift+f2 را بزنید.</p>
 <h4 id="ExcelReadingProtectedCells">خواندن خانه‌های محافظت‌شده</h4>
 <p>برای اینکه بتوانید روی خانه‌های قفل‌شده حرکت کنید، با فشردن کلید‌های NVDA+فاصله به حالت مرور بروید. سپس، با استفاده از فرمان‌های استاندارد اکسل همچون جهتنماها، در میان همه‌ی خانه‌های موجود در کارپوشه حرکت کنید.</p>
 <h3 id="MicrosoftPowerPoint">مایکروسافت پاورپوینت</h3>
@@ -1539,7 +1835,7 @@
 <td>افزودن به تنظیم جاری موتور سخنگو به میزان بیشتر</td>
 <td><code>NVDA+control+pageUp</code></td>
 <td><code>NVDA+shift+control+pageUp</code></td>
-<td>مقدار تنظیم گفتاری که روی آن هستید را به میزان بیشتری افزایش می‌دهد. مثلا، هنگامی که روی یک تنظیم صدا هستید، هر بار ۲۰ صدا به جلو می‌پرد. وقتی روی یک تنظیم لغزنده مثل سرعت، زیر و بمی یا غیره باشید، مقدار آن را هر بار تا ۲۰٪ جلو می‌بَرَد</td>
+<td>مقدار تنظیم گفتاری که روی آن هستید را به میزان بیشتری افزایش می‌دهد. مثلا، هنگامی که روی یک تنظیم صدا هستید، هر بار ۲۰ صدا به جلو می‌رود. وقتی روی یک تنظیم لغزنده مثل سرعت، زیر و بمی یا غیره باشید، مقدار آن را هر بار تا ۲۰٪ جلو می‌بَرَد</td>
 </tr>
 <tr>
 <td>کاستن از  تنظیم جاری در حلقه‌ی تنظیمات موتور سخنگو</td>
@@ -1551,19 +1847,19 @@
 <td>کاستن از تنظیم جاری موتور سخنگو به میزان بیشتر</td>
 <td><code>NVDA+control+pageDown</code></td>
 <td><code>NVDA+shift+control+pageDown</code></td>
-<td>مقدار تنظیم گفتاری که روی آن هستید را به میزان بیشتری کاهش می‌دهد. مثلا، هنگامی که روی یک تنظیم صدا هستید، هر بار ۲۰ صدا به عقب می‌پرد. وقتی روی یک تنظیم لغزنده مثل سرعت، زیر و بمی یا غیره باشید، مقدار آن را هر بار تا ۲۰٪ عقب می‌بَرَد</td>
+<td>مقدار تنظیم گفتاری که روی آن هستید را به میزان بیشتری کاهش می‌دهد. مثلا، هنگامی که روی یک تنظیم صدا هستید، هر بار ۲۰ صدا به عقب می‌رود. وقتی روی یک تنظیم لغزنده مثل سرعت، زیر و بمی یا غیره باشید، مقدار آن را هر بار تا ۲۰٪ عقب می‌بَرَد</td>
 </tr>
 <tr>
-<td>Set the first value of the current synth setting</td>
-<td>none</td>
-<td>none</td>
-<td>Select the first value of the current speech setting, e.g. set rate to 0 or select the first available voice</td>
+<td>تعیین اولین مقدار تنظیم جاری موتور سخنگو</td>
+<td>ندارد</td>
+<td>ندارد</td>
+<td>اولین مقدار تنظیم جاری موتور سخنگو را انتخاب می‌کند؛ مثلا تنظیم سرعت روی ۰ یا انتخاب اولین صدای موجود</td>
 </tr>
 <tr>
-<td>Set the last value of the current synth setting</td>
-<td>none</td>
-<td>none</td>
-<td>Select the last value of the current speech setting, e.g. set rate to 100 or select the last available voice</td>
+<td>تعیین آخرین مقدار تنظیم جاری موتور سخنگو</td>
+<td>ندارد</td>
+<td>ندارد</td>
+<td>آخرین مقدار تنظیم جاری موتور سخنگو را انتخاب می‌کند؛ مثلا تنظیم سرعت روی ۱۰۰ یا انتخاب آخرین صدای موجود</td>
 </tr>
 </tbody>
 </table>
@@ -1650,6 +1946,37 @@
 <td>گشتن بین حالت‌های تقسیم صدا</td>
 <td><code>NVDA+alt+s</code></td>
 <td>حالت‌های تقسیم صدا را تغییر می‌دهد.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="MagnifierSettingsCategory">Magnifier</h4>
+<table>
+<thead>
+<tr>
+<th>نام</th>
+<th>کلید رومیزی</th>
+<th>کلید لپتاپ</th>
+<th>توضیح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Open Magnifier settings</td>
+<td><code>NVDA+control+w</code></td>
+<td><code>NVDA+control+w</code></td>
+<td>The Magnifier category in the NVDA Settings dialog allows you to configure the default behavior of NVDA's built-in <a href="#Magnifier" title="Magnifier">Magnifier</a> feature.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Enable Magnifier</td>
+<td><code>NVDA+shift+w</code></td>
+<td><code>NVDA+shift+w</code></td>
+<td>This option starts or stops the Magnifier.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Color filter</td>
+<td><code>NVDA+shift+i</code></td>
+<td><code>NVDA+shift+i</code></td>
+<td>This option allows you to select the filter to apply when using the magnifier.</td>
 </tr>
 </tbody>
 </table>
@@ -1822,24 +2149,21 @@
 <table>
 <thead>
 <tr>
-<th>نام</th>
-<th>رومیزی</th>
-<th>لپتاپ</th>
-<th>توضیح</th>
+<th>Name</th>
+<th>Key</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>ذخیره‌ی پیکربندی</td>
+<td>Save configuration</td>
 <td><code>NVDA+control+c</code></td>
-<td><code>NVDA+control+c</code></td>
-<td>پیکربندی فعلی شما را ذخیره می‌کند تا هنگام خروج از NVDA از بین نرود</td>
+<td>Saves your current configuration so that it is not lost when you exit NVDA</td>
 </tr>
 <tr>
-<td>بازگرداندن پیکربندی</td>
+<td>Revert configuration</td>
 <td><code>NVDA+control+r</code></td>
-<td><code>NVDA+control+r</code></td>
-<td>یک بار فشار دادن، پیکربندی شما را به آخرین باری که ذخیره کرده‌اید بازمی‌گرداند. سه بار فشار دادن، آن را به تنظیمات کارخانه باز‌می‌گردانَد.</td>
+<td>Pressing once resets your configuration to when you last saved it. Pressing three times will reset it back to factory defaults without showing the undo dialog.</td>
 </tr>
 </tbody>
 </table>
@@ -2194,7 +2518,7 @@
 <td>t2</td>
 </tr>
 <tr>
-<td>بردن نمایشگر به مکان فرمان‌پذیری فعلی</td>
+<td>بردن نمایشگر به فکوس جاری</td>
 <td>t3</td>
 </tr>
 <tr>
@@ -2286,7 +2610,7 @@
 <td>sp1+sp4</td>
 </tr>
 <tr>
-<td>کلید windows+b (در تیررس آوردن محدوده‌ی اعلان‌های سیستم)</td>
+<td>کلید windows+b (فکوس روی محدوده‌ی اعلان‌های سیستم)</td>
 <td>sp3+sp4</td>
 </tr>
 <tr>
@@ -3815,7 +4139,7 @@
 <td>F6</td>
 </tr>
 <tr>
-<td>رفتن به شیء فرمان‌پذیر</td>
+<td>رفتن به شیء دارای فکوس</td>
 <td>F7</td>
 </tr>
 <tr>
@@ -4117,7 +4441,7 @@
 <td><code>forward</code></td>
 </tr>
 <tr>
-<td>حرکت به فکوس فعلی</td>
+<td>حرکت به فکوس جاری</td>
 <td><code>backward+forward</code></td>
 </tr>
 <tr>
@@ -4259,7 +4583,7 @@
 <td><code>switch1Right</code></td>
 </tr>
 <tr>
-<td>حرکت به فکوس فعلی</td>
+<td>حرکت به فکوس جاری</td>
 <td><code>switch1Center</code></td>
 </tr>
 <tr>
@@ -4326,7 +4650,7 @@
 <td><code>l8</code></td>
 </tr>
 <tr>
-<td>حرکت به فکوس فعلی</td>
+<td>حرکت به فکوس جاری</td>
 <td><code>l1+l8</code></td>
 </tr>
 <tr>
@@ -4838,18 +5162,18 @@
 <table>
 <thead>
 <tr>
-<th>نام</th>
-<th>کلید</th>
+<th>Name</th>
+<th>Key</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>بردن نمایشگر بریل به عقب</td>
-<td><code>pan_left</code></td>
+<td>Scroll braille display back</td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
-<td>بردن نمایشگر بریل به جلو</td>
-<td><code>pan_right</code></td>
+<td>Scroll braille display forward</td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

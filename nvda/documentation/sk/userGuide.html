@@ -2,16 +2,16 @@
 <html lang="sk" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 Používateľská príručka</title>
+<title>NVDA 2026.2 Používateľská príručka</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="nvda-202611-pouzivatelska-prirucka">NVDA 2026.1.1 Používateľská príručka</h1>
+<body><h1 id="nvda-20262-pouzivatelska-prirucka">NVDA 2026.2 Používateľská príručka</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611-pouzivatelska-prirucka" title="NVDA 2026.1.1 Používateľská príručka">NVDA 2026.1.1 Používateľská príručka</a><ul>
+<li><a href="#nvda-20262-pouzivatelska-prirucka" title="NVDA 2026.2 Používateľská príručka">NVDA 2026.2 Používateľská príručka</a><ul>
 <li><a href="#Introduction" title="Úvod">Úvod</a><ul>
 <li><a href="#GeneralFeatures" title="Všeobecné vlastnosti">Všeobecné vlastnosti</a></li>
 <li><a href="#SystemRequirements" title="Systémové požiadavky">Systémové požiadavky</a><ul>
@@ -65,6 +65,7 @@
 <li><a href="#StartAtWindowsLogon" title="Spúšťať NVDA na prihlasovacej obrazovke">Spúšťať NVDA na prihlasovacej obrazovke</a></li>
 <li><a href="#CreateDesktopShortcut" title="Vytvoriť odkaz na pracovnej ploche so skratkou ctrl+alt+n">Vytvoriť odkaz na pracovnej ploche so skratkou ctrl+alt+n</a></li>
 <li><a href="#CopyPortableConfigurationToCurrentUserAccount" title="Skopírovať nastavenia s prenosnej verzie do profilu aktuálne prihláseného používateľa">Skopírovať nastavenia s prenosnej verzie do profilu aktuálne prihláseného používateľa</a></li>
+<li><a href="#RestartWindowsAfterInstall" title="Reštartovať systém po inštalácii">Reštartovať systém po inštalácii</a></li>
 </ul>
 </li>
 <li><a href="#CreatingAPortableCopy" title="Vytvorenie prenosnej verzie">Vytvorenie prenosnej verzie</a></li>
@@ -87,6 +88,7 @@
 <li><a href="#TouchGestures" title="Dotykové gestá">Dotykové gestá</a><ul>
 <li><a href="#Taps" title="Klepnutia">Klepnutia</a></li>
 <li><a href="#Flicks" title="Švihanie">Švihanie</a></li>
+<li><a href="#PinchGestures" title="Gestá spojenie a odtiahnutie prstov">Gestá spojenie a odtiahnutie prstov</a></li>
 </ul>
 </li>
 <li><a href="#TouchModes" title="Režim dotyku">Režim dotyku</a></li>
@@ -117,6 +119,10 @@
 </li>
 <li><a href="#BrowseMode" title="Režim prehliadania">Režim prehliadania</a><ul>
 <li><a href="#SingleLetterNavigation" title="Príkazy rýchlej navigácie">Príkazy rýchlej navigácie</a><ul>
+<li><a href="#BrowseModeTouch" title="Dotykové gestá v režime prehliadania">Dotykové gestá v režime prehliadania</a><ul>
+<li><a href="#dotykove-gesta-v-rezime-prehliadania" title="Dotykové gestá v režime prehliadania">Dotykové gestá v režime prehliadania</a></li>
+</ul>
+</li>
 <li><a href="#TextNavigationCommand" title="Navigácia po textových odsekoch">Navigácia po textových odsekoch</a></li>
 <li><a href="#OtherNavigationCommands" title="Ďalšie príkazy navigácie">Ďalšie príkazy navigácie</a></li>
 </ul>
@@ -137,9 +143,15 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Brailovo písmo">Brailovo písmo</a><ul>
+<li><a href="#BrailleReading" title="Čítanie na brailovom riadku">Čítanie na brailovom riadku</a><ul>
+<li><a href="#AutomaticBrailleScrolling" title="Automatické posúvanie">Automatické posúvanie</a></li>
+<li><a href="#BrailleReadingGestures" title="Gestá na čítanie brailu">Gestá na čítanie brailu</a></li>
+</ul>
+</li>
 <li><a href="#BrailleAbbreviations" title="Skratky pre prvky, oblasti stránky a typy stavov v brailovom zobrazení">Skratky pre prvky, oblasti stránky a typy stavov v brailovom zobrazení</a></li>
 <li><a href="#BrailleInput" title="brailový zápis">brailový zápis</a><ul>
 <li><a href="#BrailleKeyboardShortcuts" title="Zadávanie klávesových skratiek">Zadávanie klávesových skratiek</a></li>
+<li><a href="#BrailleInputGestures" title="Gestá na písanie v braily">Gestá na písanie v braily</a></li>
 </ul>
 </li>
 </ul>
@@ -147,6 +159,16 @@
 <li><a href="#Vision" title="Zrak">Zrak</a><ul>
 <li><a href="#VisionFocusHighlight" title="Zvýraznenie na obrazovke">Zvýraznenie na obrazovke</a></li>
 <li><a href="#VisionScreenCurtain" title="Tienenie obrazovky">Tienenie obrazovky</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Zväčšovač">Zväčšovač</a><ul>
+<li><a href="#MagnifierToggle" title="Zapnutie a vypnutie zväčšovača">Zapnutie a vypnutie zväčšovača</a></li>
+<li><a href="#MagnifierCommands" title="Príkazy zväčšovača">Príkazy zväčšovača</a></li>
+<li><a href="#MagnifierZoomLevels" title="Úroveň zväčšenia">Úroveň zväčšenia</a></li>
+<li><a href="#MagnifierColorFilters" title="Farebné filtre">Farebné filtre</a></li>
+<li><a href="#MagnifierTrackingMode" title="Režimi sledovania">Režimi sledovania</a></li>
+<li><a href="#MagnifierScreenOverview" title="Zobrazenie náhľadu celej obrazovky">Zobrazenie náhľadu celej obrazovky</a></li>
+<li><a href="#MagnifierSettings" title="Nastavenia zväčšovača">Nastavenia zväčšovača</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Optické rozpoznávanie textu Windows">Optické rozpoznávanie textu Windows</a><ul>
@@ -211,6 +233,7 @@
 <li><a href="#SpeechSettingsPitch" title="Výška">Výška</a></li>
 <li><a href="#SpeechSettingsVolume" title="Hlasitosť">Hlasitosť</a></li>
 <li><a href="#SpeechSettingsInflection" title="Intonácia">Intonácia</a></li>
+<li><a href="#SpeechSettingPunctuationSilence" title="Prirodzená pauza po interpunkcii">Prirodzená pauza po interpunkcii</a></li>
 <li><a href="#SpeechSettingsUseWasapi" title="Povoliť audio výstup cez WASAPI">Povoliť audio výstup cez WASAPI</a></li>
 <li><a href="#SpeechSettingsLanguageSwitching" title="Automaticky prepínať jazyk">Automaticky prepínať jazyk</a></li>
 <li><a href="#SpeechSettingsDialectSwitching" title="Automaticky prepínať dialekt">Automaticky prepínať dialekt</a></li>
@@ -260,6 +283,7 @@
 </li>
 <li><a href="#BrailleSpeakOnRouting" title="Vyslovovať znaky pri posúvaní kurzora privolávacími tlačidlami brailového riadku">Vyslovovať znaky pri posúvaní kurzora privolávacími tlačidlami brailového riadku</a></li>
 <li><a href="#BrailleSpeakOnNavigating" title="Hovoriť pri pohybe po riadkoch a odsekoch">Hovoriť pri pohybe po riadkoch a odsekoch</a></li>
+<li><a href="#BrailleAutoScrollRate" title="Rýchlosť automatického posúvania">Rýchlosť automatického posúvania</a></li>
 <li><a href="#BrailleSettingsWordWrap" title="Zabrániť deleniu slov, keď je to možné">Zabrániť deleniu slov, keď je to možné</a></li>
 <li><a href="#BrailleUnicodeNormalization" title="Normalizovať znaky unicode">Normalizovať znaky unicode</a></li>
 <li><a href="#BrailleSettingsInterruptSpeech" title="Prerušiť reč počas posúvania">Prerušiť reč počas posúvania</a></li>
@@ -294,6 +318,19 @@
 <li><a href="#VisionSettings" title="Zrak">Zrak</a><ul>
 <li><a href="#VisionSettingsFocusHighlight" title="Zvýraznenie na obrazovke">Zvýraznenie na obrazovke</a></li>
 <li><a href="#VisionSettingsThirdPartyVisualAids" title="Nastavenia pre vizuálne rozšírenia tretích strán">Nastavenia pre vizuálne rozšírenia tretích strán</a></li>
+</ul>
+</li>
+<li><a href="#MagnifierSettingsCategory" title="Zväčšovač">Zväčšovač</a><ul>
+<li><a href="#OpenMagnifierSettings" title="Otvoriť nastavenia zväčšovača">Otvoriť nastavenia zväčšovača</a></li>
+<li><a href="#MagnifierEnable" title="Zapnúť zväčšovač">Zapnúť zväčšovač</a></li>
+<li><a href="#MagnifierZoom" title="Úroveň zväčšenia">Úroveň zväčšenia</a></li>
+<li><a href="#MagnifierFilter" title="Farebný filter">Farebný filter</a></li>
+<li><a href="#MagnifierPanningStepSize" title="Krok posunu zväčšovača">Krok posunu zväčšovača</a></li>
+<li><a href="#MagnifierFollowMouse" title="Sledovať kurzor myši">Sledovať kurzor myši</a></li>
+<li><a href="#MagnifierFollowSystemFocus" title="Sledovať systémový fokus">Sledovať systémový fokus</a></li>
+<li><a href="#MagnifierFollowReviewCursor" title="Sledovať prezerací kurzor">Sledovať prezerací kurzor</a></li>
+<li><a href="#MagnifierFollowNavigatorObject" title="Sledovať navigačný objekt">Sledovať navigačný objekt</a></li>
+<li><a href="#MagnifierTrackingModeSetting" title="Režim sledovania">Režim sledovania</a></li>
 </ul>
 </li>
 <li><a href="#KeyboardSettings" title="Klávesnica">Klávesnica</a><ul>
@@ -371,6 +408,7 @@
 <li><a href="#BrowseModeSettingsAutoPassThroughOnCaretMove" title="Automaticky aktivovať režim fokusu pri pohybe kurzorom">Automaticky aktivovať režim fokusu pri pohybe kurzorom</a></li>
 <li><a href="#BrowseModeSettingsPassThroughAudioIndication" title="Režim prehliadania a režim fokusu oznamovať zvukom">Režim prehliadania a režim fokusu oznamovať zvukom</a></li>
 <li><a href="#BrowseModeSettingsTrapNonCommandGestures" title="Ignorovať skratky mimo rýchlej navigácie">Ignorovať skratky mimo rýchlej navigácie</a></li>
+<li><a href="#BrowseModeSettingsBrowseModeNavigationElements" title="Prvky dostupné pri navigácii na dotykovej obrazovke">Prvky dostupné pri navigácii na dotykovej obrazovke</a></li>
 </ul>
 </li>
 <li><a href="#DocumentFormattingSettings" title="Čítanie textu">Čítanie textu</a><ul>
@@ -389,6 +427,7 @@
 <li><a href="#MathCATSpeechOptions" title="Možnosti reči">Možnosti reči</a><ul>
 <li><a href="#MathSpeechImpairment" title="Znevýhodnenie">Znevýhodnenie</a></li>
 <li><a href="#MathSpeechLanguage" title="Jazyk">Jazyk</a></li>
+<li><a href="#MathSpeechDecimalSeparator" title="Oddeľovač desatinných čísel">Oddeľovač desatinných čísel</a></li>
 <li><a href="#MathSpeechStyle" title="Štýl reči">Štýl reči</a></li>
 <li><a href="#MathSpeechVerbosity" title="Výrečnosť">Výrečnosť</a></li>
 <li><a href="#MathRelativeSpeed" title="Relatívna rýchlosť reči">Relatívna rýchlosť reči</a></li>
@@ -469,6 +508,7 @@
 <li><a href="#CancelExpiredFocusSpeech" title="Prerušiť reč po vypršaní zameranej udalosti">Prerušiť reč po vypršaní zameranej udalosti</a></li>
 <li><a href="#TrimLeadingSilenceSpeech" title="Odstrániť nadbytočné počiatočné medzery v reči">Odstrániť nadbytočné počiatočné medzery v reči</a></li>
 <li><a href="#UseWASAPIForSAPI4" title="Na výstup pre reč cez Sapi 4 používať rozhranie WASAPI">Na výstup pre reč cez Sapi 4 používať rozhranie WASAPI</a></li>
+<li><a href="#SpeechDictsUseModernRegex" title="Používať modernú knižnicu na spracovanie regulárnych výrazov pri načítaní položiek rečových slovníkov">Používať modernú knižnicu na spracovanie regulárnych výrazov pri načítaní položiek rečových slovníkov</a></li>
 <li><a href="#AdvancedSettingsCaretMoveTimeout" title="Počkať pred pohybom systémového kurzora (v milisekundách)">Počkať pred pohybom systémového kurzora (v milisekundách)</a></li>
 <li><a href="#ReportTransparentColors" title="Oznamovať hodnoty priehľadných farieb">Oznamovať hodnoty priehľadných farieb</a></li>
 <li><a href="#AdvancedSettingsDebugLoggingCategories" title="Úroveň záznamu">Úroveň záznamu</a></li>
@@ -541,7 +581,7 @@
 <li><a href="#PythonConsole" title="Python konzola">Python konzola</a></li>
 <li><a href="#AddonStoreMenuItem" title="Katalóg s doplnkami">Katalóg s doplnkami</a></li>
 <li><a href="#CreatePortableCopy" title="Vytvoriť prenosnú verziu">Vytvoriť prenosnú verziu</a></li>
-<li><a href="#RunCOMRegistrationFixingTool" title="Spustiť opravný nástroj COM...">Spustiť opravný nástroj COM...</a></li>
+<li><a href="#RunCOMRegistrationFixingTool" title="Spustiť opravný nástroj prístupnosti systému...">Spustiť opravný nástroj prístupnosti systému...</a></li>
 <li><a href="#ReloadPlugins" title="Načítať pluginy">Načítať pluginy</a></li>
 </ul>
 </li>
@@ -608,7 +648,7 @@
 </li>
 </ul>
 </div>
-<!-- KC:title: NVDA 2026.1.1 Zoznam príkazov -->
+<!-- KC:title: NVDA 2026.2 Zoznam príkazov -->
 
 <h2 id="Introduction">Úvod</h2>
 <p>Vitajte v NVDA!</p>
@@ -635,6 +675,7 @@ Vývoj NVDA zastrešuje organizácia <a href="https://www.nvaccess.org/" rel="no
 <li>Kompatibilita s rôznymi rozhraniami slúžiacimi na sprístupnenie aplikácií: Microsoft Active Accessibility, Java Access Bridge, IAccessible2 a UI Automation</li>
 <li>Podpora pre prostredie príkazového riadku Windows a konzolové aplikácie</li>
 <li>Podpora pre zvýraznenie zameraných objektov na obrazovke</li>
+<li>Vstavaný zväčšovač obrazovky a filter farieb</li>
 </ul>
 <h3 id="SystemRequirements">Systémové požiadavky</h3>
 <h4 id="MinimumSystemRequirements">Minimálne systémové požiadavky</h4>
@@ -904,6 +945,12 @@ Priradené príkazy sa pri zapnutej nápovede vstupu nebudú spúšťať.</p>
 <td>Oznámi čas; stlačené 2 krát rýchlo za sebou oznámi dátum. Dátum a čas je oznamovan podľa formátu nastaveného v systéme Windows.</td>
 </tr>
 <tr>
+<td>Zopakovať posledné hlásenie</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Zopakuje naposledy vyslovené hlásenie NVDA. Stlačené dvakrátzobrazí text v režime prehliadania</td>
+</tr>
+<tr>
 <td>Oznámiť formátovanie textu</td>
 <td><code>NVDA+f</code></td>
 <td><code>NVDA+f</code></td>
@@ -1169,8 +1216,8 @@ Ak ste úvodnú obrazovku zatvorili alebo chcete NVDA inštalovať z prenosnej v
 <p>Po spustení inštalácie sa vás program opýta, či skutočne chcete NVDA inštalovať a takisto vás upozorní v prípade, že sa rozhodnete aktualizovať už nainštalovanú verziu NVDA.
 Inštaláciu spustíte aktivovaním tlačidla Pokračovať.
 Počas inštalácie máte niekoľko možností, ktoré sú opísané v nasledujúcej podkapitole.
-Po úspešnom nainštalovaní sa zobrazí okno so správou, ktoré môžete zatvoriť stlačením tlačidla OK.
-Po zatvorení okna sa NVDA reštartuje.</p>
+Po skončení inštalácie sa zobrazí dialóg s ďalšími možnosťami.
+Pozrite <a href="#RestartWindowsAfterInstall" title="Reštartovanie systému po inštalácii">Reštartovanie systému po inštalácii</a> pre viac podrobností.</p>
 <h4 id="InstallWithIncompatibleAddons">Upozornenie na nekompatibilné doplnky</h4>
 <p>Ak používate nejaké doplnky, NVDA vás môže upozorniť, že vaše doplnky nie sú kompatibilné s verziou NVDA, ktorú sa pokúšate nainštalovať.
 Pred tým, než budete pokračovať, musíte odsúhlasiť zakázanie doplnkov.
@@ -1188,6 +1235,18 @@ Ak sa rozhodnete vytvoriť odkaz, inštalátor automaticky tomuto odkazu prirad�
 <p>Umožňuje určiť, či budú nastavenia z aktuálne spustenej kópie NVDA skopírované do používateľského profilu aktuálne prihláseného používateľa. Tieto nastavenia môžu byť následne použité s nainštalovanou verziou NVDA.
 Nastavenia nebudú skopírované do iných používateľských účtov v systéme a nebudú sa používať ani na  prihlasovacej obrazovke a <a href="#SecureScreens" title="iných zabezpečených obrazovkách">iných zabezpečených obrazovkách</a>.
 Táto voľba je dostupná len ak inštalujete NVDA z prenosnej verzie. Voľba sa nezobrazí, ak inštalujete NVDA priamo zo súboru z webovej stránky NVDA.</p>
+<h4 id="RestartWindowsAfterInstall">Reštartovať systém po inštalácii</h4>
+<p>Po úspešnej inštalácii alebo aktualizácii NVDA sa zobrazí dialóg s odporúčaním reštartovať Windows.
+Reštartovanie systému zaistí, že budú správne zapísané informácie v registroch a NVDA bude fungovať správne vo všetkých aplikáciách.</p>
+<p>Dostupné sú tieto možnosti:</p>
+<ul>
+<li>Reštartovať Windows: Okamžite reštartuje počítač.</li>
+<li>Spustiť NVDA: Spustí práve nainštalovanú verziu NVDA bez reštartu systému.<ul>
+<li>Upozorňujeme, že táto možnosť nie je dostupná, ak je inštalátor spustený s oprávneniami správcu.</li>
+</ul>
+</li>
+<li>Ukončiť NVDA: Zatvorí okno, nespustí NVDA a nereštartuje systém.</li>
+</ul>
 <h3 id="CreatingAPortableCopy">Vytvorenie prenosnej verzie</h3>
 <p>Ak vytvárate prenosnú verziu priamo so súboru so stránky NVDA, aktivujte tlačidlo Vytvoriť prenosnú verziu.
 Ak ste zatvorili úvodnú obrazovku, alebo máte spustenú inštalačnú verziu NVDA, v ponuke NVDA v podmenu nástroje aktivujte položku Vytvoriť prenosnú verziu.</p>
@@ -1221,7 +1280,8 @@ Rovnako nie je možné <a href="#AddonsManager" title="spravovať doplnky">sprav
 </ul>
 </li>
 <li>Nemožnosť čítať obrazovku na prepnutie užívateľského účtu (UAC) pri pokuse spustiť aplikáciu s právami administrátora.</li>
-<li>Nefunguje používanie dotykovej obrazovky.</li>
+<li>Nefunguje používanie dotykovej obrazovky.
+Dotyková obrazovka nefunguje správne, ak je spustený zväčšovač NVDA.</li>
 <li>Nie je možné využívať režim prehliadania a čítanie napísaných znakov vo Windows Store.</li>
 <li>Nie je možné využívať automatické stíšenie.</li>
 </ul>
@@ -1295,14 +1355,17 @@ Samozrejme tieto viac násobné klepnutia je možné vykonávať viacerými prst
 <p>Sú štyri možnosti švihnutia na základe smeru pohybu: švihnutie vľavo, vpravo, hore alebo dolu.</p>
 <p>Rovnako ako pri vykonávaní klepnutí je možné švihať viacerými prstami.
 Znamená to, že sú k dispozícii rôzne gestá ako napríklad švihnutie hore dvoma prstami, švihnutie vľavo štyrmi prstami a podobne.</p>
+<h5 id="PinchGestures">Gestá spojenie a odtiahnutie prstov</h5>
+<p>Položte na obrazovku dva prsty a ťahajte ich k sebe, čím vytvoríte gesto priblíženia.
+Odťahovaním prstov od seba vytvoríte gesto oddialenia.</p>
 <h4 id="TouchModes">Režim dotyku</h4>
 <p>K dispozícii je nepochybne väčšie množstvo príkazov NVDA než dostupných gest, ktoré je možné vykonať pomocou dotykovej obrazovky. Znamená to, že NVDA používa niekoľko tzv. režimov dotyku, medzi ktorými je možné prepínať a podľa aktívneho režimu dotyku sú aj dostupné konkrétne podmnožiny príkazov NVDA.
-Zatiaľ sú k dispozícii textový režim a objektový režim.
+Je dostupný textový režim, objektový režim a režim prehliadania.
 Niektoré príkazy ďalej v tomto dokumente môžu mať preto za názvom gesta uvedený v zátvorke jeden z týchto režimov.
 Napríklad švihnutie hore (textový režim) znamená, že príkaz sa vykoná po švihnutí smerom na hor ale len ak je aktívny textový režim dotyku.
 Ak príkaz za názvom gesta nemá uvedený názov režimu dotyku, bude tento príkaz fungovať vo všetkých dostupných režimoch.</p>
 <!-- KC:beginInclude -->
-<p>Prepínať režimy dotyku je možné klepnutím troma prstami.</p>
+<p>Režimi môžete prepínať klepnutím troma prstami.</p>
 <!-- KC:endInclude -->
 
 <h4 id="TouchKeyboard">Dotyková klávesnica</h4>
@@ -1364,6 +1427,13 @@ Ak sa na klávesnici tlačidlo <code>aplikácie</code> nenachádza, môžete ju 
 <td>shift</td>
 <td>Nie je</td>
 <td>Okamžite pozastaví reč. Po nasledujúcom stlačení bude reč pokračovať na prerušenom mieste ak to práve používaný hlasový výstup podporuje</td>
+</tr>
+<tr>
+<td>Zopakovať posledné hlásenie</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>nie je</td>
+<td>Zopakuje naposledy vyslovené hlásenie NVDA. Stlačené dvakrátzobrazí text v režime prehliadania</td>
 </tr>
 <tr>
 <td>Ponuka NVDA</td>
@@ -2309,6 +2379,53 @@ ak ich chcete používať a súčasne chcete čítať text pomocou kurzora, mô�
 <p>Na zapnutie a vypnutie rýchlej navigácie v režime prehliadania, použite skratku NVDA+shift+medzera.</p>
 <!-- KC:endInclude -->
 
+<h4 id="BrowseModeTouch">Dotykové gestá v režime prehliadania</h4>
+<p>NVDA poskytuje gestá pre navigáciu v režime prehliadania, ktoré môžete použiť na zariadeniach s dotykovou obrazovkou.</p>
+<p>Ak je režim prehliadania aktívny v podporovaných dokumentoch, napríklad na webovej stránke alebo dokumente Word, NVDA sprístupní gestá pre režim prehliadania.
+Takto je možné prezerať prvky podobne ako z klávesnice.</p>
+<p>Švihanie do strán je možné v režime prehliadania použiť na pohyb po prvkoch, akými sú odkazy, tlačidlá, nadpisy, formulárové prvky, oblasti stránky a podobne.</p>
+<h5 id="dotykove-gesta-v-rezime-prehliadania">Dotykové gestá v režime prehliadania</h5>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Názov</th>
+<th>gesto</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prejdi na nasledujúci typ prvku</td>
+<td>švihnutie dole</td>
+<td>Prejde na nasledujúci typ prvku</td>
+</tr>
+<tr>
+<td>Prejdi na predchádzajúci typ prvku</td>
+<td>švihnutie hore</td>
+<td>Prejde na predchádzajúci typ prvku</td>
+</tr>
+<tr>
+<td>Prejdi na nasledujúci prvok</td>
+<td>švihnutie doprava</td>
+<td>Prejde na nasledujúci prvok podľa zvoleného typu</td>
+</tr>
+<tr>
+<td>Prejdi na predchádzajúci prvok</td>
+<td>švihnutie doľava</td>
+<td>Prejde na predchádzajúci prvok podľa zvoleného typu</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>Ak je zvolený ako typ prvku predvolený, potom švihanie doprava a doľava prechádza po všetkých prvkoch dokumentu.
+Ak vyberiete akýkoľvek iný typ prvku, potom švihanie doprava a doľava prechádza po prvkoch zvoleného typu.
+Medzi dostupnými typmi prvkov prepínajte švihaním hore a dole.</p>
+<p>Zvolený typ prvku ostáva zapamätaný pre každý otvorený dokument.
+Upozorňujeme, že gestá na navigáciu po prvkoch v režime prehliadania je možné použiť len v prípade, že je režim prehliadania aktívny.
+Ak sa fokus presunie mimo režimu prehliadania (napríklad do adresného riadku prehliadača alebo panela úloh), gestá na navigáciu v režime prehliadania nebudú fungovať a začnú fungovať až po návrate do režimu prehliadania.</p>
 <h4 id="TextNavigationCommand">Navigácia po textových odsekoch</h4>
 <p>Na nasledujúci textový odsek môžete prejsť skratkou <code>p</code> a na predchádzajúci odsek skratkou <code>shift+p</code>.
 Textové odseky sú definované ako kúsok textu, ktorý zvyčajne tvoria celé vety.
@@ -2339,6 +2456,7 @@ Dostupné sú nasledujúce príkazy:</p>
 <li>Položka menu</li>
 <li>Prepínacie tlačidlo</li>
 <li>Indikátor priebehu</li>
+<li>Posuvník</li>
 <li>Referencia (poznámka pod čiarou, koncová poznámka...)</li>
 <li>Matematický obsah</li>
 <li>Vertikálne zarovnaný odsek</li>
@@ -2728,6 +2846,148 @@ brailový výstup je možné zobraziť aj na obrazovke počítača použitím <a
 <p>Informácie o podporovaných riadkoch nájdete v časti <a href="#SupportedBrailleDisplays" title="Podporované brailové zobrazovače">Podporované brailové zobrazovače</a>.
 Na tomto mieste tiež nájdete informácie o tom, ktoré riadky dokáže NVDA rozpoznať automaticky.
 Všetky nastavenia týkajúce sa brailových riadkov a tabuliek nájdete v kategórii  <a href="#BrailleSettings" title="Braillovo písmo">Braillovo písmo</a> v <a href="#NVDASettings" title="nastaveniach">nastaveniach</a>.</p>
+<h3 id="BrailleReading">Čítanie na brailovom riadku</h3>
+<p>Text na brailovom riadku je prezentovaný podľa nastavenej <a href="#BrailleSettingsOutputTable" title="Výstupnej prekladovej tabuky">Výstupnej prekladovej tabuky</a> a <a href="#BrailleMode" title="Režimu brailu">Režimu brailu</a>.
+Ak je text dlhší a nemestí sa na plochu displeja, je možné na zobrazenie ďalšieho textu použiť posúvacie alebo iné podobné tlačidlá bez nutnosti posúvať sa v texte a meniť fokus.</p>
+<h4 id="AutomaticBrailleScrolling">Automatické posúvanie</h4>
+<p>Môžete si aktivovať automatické posúvanie textu na brailovom riadku a určiť jeho rýchlosť.
+V tomto prípade sa text automaticky posúva v prípadoch, keď je potrebné zobraziť viac textu, ako je možné ukázať naraz na riadku.
+Táto funkcia je predvolene vypnutá.
+Pred prvým použitím automatického posúvania je potrebné definovať skratky v dialógu <a href="#InputGestures" title="Klávesové skratky">Klávesové skratky</a>.
+Tiež sú dostupné skratky na zrýchlenie alebo spomalenie automatického posúvania.
+Rýchlosť posúvania je možné tiež nastaviť v <a href="#BrailleAutoScrollRate" title="Nastaveniach brailu">Nastaveniach brailu</a>.</p>
+<p>Počas aktívneho posúvania môžete aj naďalej používať tlačidlá na posúvanie, pričom automatické posúvanie ostane stále aktívne.
+Môžete sa napríklad tlačidlom na posun späť vrátiť k obsahu, ktorý si chcete znovu prečítať.
+Tlačidlom na posun vpred môžete preskočiť prázdny alebo krátky riadok.</p>
+<p>Automatické posúvanie sa zastaví v týchto prípadoch:</p>
+<ul>
+<li>Klávesovou skratkou vypnete automatické posúvanie</li>
+<li>Stlačíte skratku alebo vykonáte gesto, ktorým zobrazíte novú správu</li>
+<li>Dôjde k zmene fokusu (aj pomocou posúvacích tlačidiel na riadku)</li>
+<li>Kurzor sa ocitne na konci dokumentu</li>
+<li>Dôjde k zmene na prihlasovacej alebo zamknutej obrazovke (napríklad pri zobrazení zamknutej obraozvky)</li>
+</ul>
+<h4 id="BrailleReadingGestures">Gestá na čítanie brailu</h4>
+<!-- KC:beginInclude -->
+<table>
+<thead>
+<tr>
+<th>Názov</th>
+<th>klávesová skratka</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prepnúť režim brailu</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Prepína medzi dostupnými režimami brailu: "Sledovanie kurzora" a "sledovanie reči"</td>
+</tr>
+<tr>
+<td>Zviazanie brailového kurzora</td>
+<td><code>NVDA+ctrl+t</code></td>
+<td>Určuje, či bude brailový kurzor zviazaný na fokus alebo textový kurzor, prezerací kurzor alebo navigačný objekt, alebo na oboje</td>
+</tr>
+<tr>
+<td>Prepnúť automatické posúvanie</td>
+<td><code>NVDA+alt+k</code></td>
+<td>zapína a vypína automatické posúvanie, ktoré sa použije, ak je potrebné zobraziť na riadku pridlhý text</td>
+</tr>
+<tr>
+<td>Zvýšiť rýchlosť automatického posúvania</td>
+<td><code>NVDA+alt+l</code></td>
+<td>zrýchly automatické posúvanie (ak je zapnuté)</td>
+</tr>
+<tr>
+<td>Znížiť rýchlosť automatického posúvania</td>
+<td><code>NVDA+alt+j</code></td>
+<td>spomalý automatické posúvanie (ak je zapnuté)</td>
+</tr>
+<tr>
+<td>Prepnúť tvar kurzora</td>
+<td>nie je</td>
+<td>Prepína medzi dostupnými tvarmi (kombináciami bodov) kurzora</td>
+</tr>
+<tr>
+<td>Prepnúť automatické polohovanie brailového kurzora na základe pozície systémového alebo prezeracieho kurzora</td>
+<td>nie je</td>
+<td>Prepína medzi dostupnými režimami polohovania brailového kurzora</td>
+</tr>
+<tr>
+<td>Prepnúť nastavenie zobrazenia správ</td>
+<td>nie je</td>
+<td>prepína medzi dostupnými režimami zobrazovania správ na brailovom riadku</td>
+</tr>
+<tr>
+<td>Prepnúť ukazovanie výberu</td>
+<td>nie je</td>
+<td>prepína medzi dostupnými režimami zobrazovania výberu na brailovom riadku</td>
+</tr>
+<tr>
+<td>Prepnúť režim normalizovania znakov</td>
+<td>nie je</td>
+<td>prepína medzi režimami normalizovania Unicode znakov na brailovom riadku</td>
+</tr>
+<tr>
+<td>Prejsť v braily na fokus</td>
+<td>nie je</td>
+<td>Presunie zobrazenie na brailovom riadku na fokus</td>
+</tr>
+<tr>
+<td>Prejsť v braily na nasledujúci riadok</td>
+<td>nie je</td>
+<td>posunie zobrazenie v braily na nasledujúci riadok</td>
+</tr>
+<tr>
+<td>Prejsť v braily na predchádzajúci riadok</td>
+<td>nie je</td>
+<td>posunie zobrazenie v braily na predchádzajúci riadok</td>
+</tr>
+<tr>
+<td>Oznámiť formátovanie</td>
+<td>nie je</td>
+<td>oznámi formátovanie pod zameranou bunkou v braily</td>
+</tr>
+<tr>
+<td>Premiestniť systémový kurzor alebo aktivovať prvok</td>
+<td>nie je</td>
+<td>Premiestni kurzor alebo aktivuje prvok pod zameranou brailovou bunkou v braily</td>
+</tr>
+<tr>
+<td>Posunúť riadok späť</td>
+<td>nie je</td>
+<td>posunie riadok späť</td>
+</tr>
+<tr>
+<td>Posunúť riadok vpred</td>
+<td>nie je</td>
+<td>posunie riadok vpred</td>
+</tr>
+<tr>
+<td>Prepnúť zobrazenie brailového kurzora</td>
+<td>nie je</td>
+<td>zapína a vypína zobrazenie brailového kurzora</td>
+</tr>
+<tr>
+<td>Prepnúť prezentáciu kontexTu</td>
+<td>nie je</td>
+<td>prepína spôsob oznamovania kontextu na brailovom riadku</td>
+</tr>
+<tr>
+<td>Prepnúť oznamovanie textu</td>
+<td>nie je</td>
+<td>zapína a vypína čítanie textu pomocou hlasového výstupu pri pohybe cez brailový riadok</td>
+</tr>
+<tr>
+<td>Prepnúť vyslovovanie znakov pod kurzorom</td>
+<td>nie je</td>
+<td>zapína a vypína oznamovanie znakov zameraných pomocou privolávacích tlačidiel na brailovom riadku</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>Všetky možnosti čítania na brailovom riadku je možné nastaviť v <a href="#BrailleSettings" title="Nastaveniach brailu">Nastaveniach brailu</a>.</p>
 <h3 id="BrailleAbbreviations">Skratky pre prvky, oblasti stránky a typy stavov v brailovom zobrazení</h3>
 <p>Aby sa na brailový riadok dostalo čo najviac informácií, pre prvky, oblasti stránky a stavy sa používajú tieto skratky.</p>
 <table>
@@ -3127,6 +3387,42 @@ Ak chcete zadať ctrl+alt+t, použite buď samostatné tlačidlá pre stlačenie
 <p>Ak používate skratkopis, modifikačné klávesy sú prekladané ako použitie bodov 7+8.
 Navyše, tieto skratky nezahŕňajú znaky zapísané pred použitím príkazu.
 Takže ak chcete stlačiť alt+2, pričom na zapísanie čísla 2 je potrebné použiť číslicový znak, najprv stlačte tlačidlo, ktorým do systému odošlete kláves alt, potom zapíšte číslicový znak a následne body 1 a 2.</p>
+<h4 id="BrailleInputGestures">Gestá na písanie v braily</h4>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Názov</th>
+<th>klávesová skratka</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vstup cez brailový riadok</td>
+<td>akákoľvek kombinácia bodov</td>
+<td>vloží znaky cez brailový riadok</td>
+</tr>
+<tr>
+<td>Odstrániť posledné</td>
+<td><code>bod7</code></td>
+<td>odstráni posledný zadaný brailový znak alebo bunku</td>
+</tr>
+<tr>
+<td>Preložiť brailový vstup</td>
+<td><code>bod7+bod8</code></td>
+<td>preloží zadaný brailový vstup</td>
+</tr>
+<tr>
+<td>Preložiť a stlačiť enter</td>
+<td><code>bod8</code></td>
+<td>preložý zadaný brailový vstup a odošle príkaz enter</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
 <h2 id="Vision">Zrak</h2>
 <p>NVDA je primárne určené pre zrakovo postihnutých používateľov, ktorí na prácu s počítačom využívajú hlasový výstup alebo brailový riadok. Dokáže však upravovať aj zobrazenie na obrazovke.
 Takéto úpravy v NVDA označujeme ako vizuálne rozšírenie.</p>
@@ -3164,6 +3460,11 @@ V týchto situáciách môžete použiť funkciu tienenia obrazovky. Toto spôso
 <td><code>NVDA+ctrl+escape</code></td>
 <td>Zapína a vypína tienenie obrazovky. Stlačené raz zapne tienenie do najbližšieho reštartu. Stlačené dvakrát zapne tienenie obrazovky natrvalo.</td>
 </tr>
+<tr>
+<td>Oznámiť stav tienenia obrazovky</td>
+<td>nie je</td>
+<td>Oznámi aktuálny stav tienenia obrazovky, ktoré môže byť zapnuté, vypnuté alebo dočasne zapnuté.</td>
+</tr>
 </tbody>
 </table>
 <!-- KC:endInclude -->
@@ -3172,6 +3473,142 @@ V týchto situáciách môžete použiť funkciu tienenia obrazovky. Toto spôso
 Nie je napríklad možné používať <a href="#Win10Ocr" title="Optické rozpoznávanie textu">Optické rozpoznávanie textu</a>.
 Tiež nemusia správne fungovať ďalšie funkcie, ktoré využívajú snímky obrazovky.</p>
 <p>Upozorňujeme, že ak je spustená funkcia zväčšenia vo Windows a používate inverziu farieb, nie je možné aktivovať tienenie obrazovky.</p>
+<h2 id="Magnifier">Zväčšovač</h2>
+<p>NVDA obsahuje vstavaný zväčšovač obrazovky, pomocou ktorého si môžete priblížiť a zväčšovať časti obrazovky.
+Funkcia je užitočná pre slabozrakých, ktorí potrebujú mať na obrazovke väčší text, alebo pre používateľov, ktorí potrebujú použiť farebné filtre na zníženie zaťaženia očí alebo na zrýchlenie čítania.</p>
+<p>Zväčšovač NVDA pracuje s celou obrazovkou, zväčšuje celú obrazovku pri sledovaní systémového kurzora alebo kurzora myšy.
+Nastavenia zväčšovača si môžete prispôsobiť.</p>
+<h3 id="MagnifierToggle">Zapnutie a vypnutie zväčšovača</h3>
+<p>Zväčšovač môžete zapnúť a vypnúť skratkou <code>NVDA+shift+w</code>.
+Zväčšovač môžete zapnúť aj skratkou na zvýšenie úrovne zväčšenia <code>NVDA+shift+rovná sa</code>.
+Pri vypnutí zväčšenia sa vráti obsah na obrazovke do štandardnej veľkosti.
+Rovnako ako iné nastavenia, aj nastavenia zväčšovača si NVDA pamätá po reštarte.</p>
+<h3 id="MagnifierCommands">Príkazy zväčšovača</h3>
+<p>Po zapnutí zväčšovača obrazovky je možné použiť tieto klávesové skratky:</p>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Názov</th>
+<th>klávesová skratka</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zapnúť alebo vypnúť zväčšovač</td>
+<td><code>NVDA+shift+w</code></td>
+<td>zapína a vypína zväčšovač obrazovky</td>
+</tr>
+<tr>
+<td>Zvýšiť úroveň zväčšenia</td>
+<td><code>NVDA+shift+rovná sa</code></td>
+<td>Zvýši úroveň zväčšenia. Spustí zväčšovač, ak ešte nie je aktívny.</td>
+</tr>
+<tr>
+<td>Znížiť úroveň zväčšenia</td>
+<td><code>NVDA+shift+mínus</code></td>
+<td>Zmenšuje úroveň zväčšenia</td>
+</tr>
+<tr>
+<td>Prepnúť farebný filter</td>
+<td><code>NVDA+shift+i</code></td>
+<td>prepína dostupné režimi farebného filtra (normálny, invertovaný, odtiene sivej)</td>
+</tr>
+<tr>
+<td>Prepnúť režim sledovania</td>
+<td>nie je</td>
+<td>Prepína medzi režimami sledovania (na stred a relatívne)</td>
+</tr>
+<tr>
+<td>Zobraziť náhľad obrazovky</td>
+<td><code>NVDA+shift+l</code></td>
+<td>dočasne zobrazí náhľad na celú obrazovku</td>
+</tr>
+<tr>
+<td>Posunúť doľava</td>
+<td><code>NVDA+alt+šípka vľavo</code></td>
+<td>posunie zväčšené zobrazenie doľava o zadaný počet krokov</td>
+</tr>
+<tr>
+<td>Posunúť doprava</td>
+<td><code>NVDA+alt+šípka vpravo</code></td>
+<td>posunie zväčšené zobrazenie doprava o zadaný počet krokov</td>
+</tr>
+<tr>
+<td>Posunúť hore</td>
+<td><code>NVDA+alt+šípka hore</code></td>
+<td>posunie zväčšené zobrazenie hore o zadaný počet krokov</td>
+</tr>
+<tr>
+<td>Posunúť dole</td>
+<td><code>NVDA+alt+šípka dole</code></td>
+<td>posunie zväčšené zobrazenie dole o zadaný počet krokov</td>
+</tr>
+<tr>
+<td>Posunúť k ľavému okraju</td>
+<td><code>NVDA+shift+alt+šípka vľavo</code></td>
+<td>Posunie zväčšenie k ľavému okraju obrazovky</td>
+</tr>
+<tr>
+<td>Posunúť k pravému okraju</td>
+<td><code>NVDA+shift+alt+šípka vpravo</code></td>
+<td>Posunie zväčšenie k pravému okraju obrazovky</td>
+</tr>
+<tr>
+<td>Posunúť k hornému okraju</td>
+<td><code>NVDA+shift+alt+šípka hore</code></td>
+<td>Posunie zväčšenie k hornému okraju obrazovky</td>
+</tr>
+<tr>
+<td>Posunúť k dolnému okraju</td>
+<td><code>NVDA+shift+alt+šípka dole</code></td>
+<td>Posunie zväčšenie k dolnému okraju obrazovky</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<h3 id="MagnifierZoomLevels">Úroveň zväčšenia</h3>
+<p>Zväčšovač podporuje úrovne zväčšenia od 1,0 (bez zväčšenia) do 50,0 (maximálne zväčšenie).
+Zväčšenie môžete zvýšiťskratkou pre zvýšenie zväčšenia (<code>NVDA+shift+rovná sa</code>) a znížiť skratkou pre zníženie zväčšenia (<code>NVDA+shift+mínus</code>).
+Každé stlačenie skratky zvýši alebo zníži zväčšenie v rovnakom pomere.</p>
+<h3 id="MagnifierColorFilters">Farebné filtre</h3>
+<p>Farebné filtre môžu pomôcť používateľom s rôznymi chybami zraku alebo ľuďom citlivým na svetlo úpravou zobrazených farieb na obrazovke.
+Dostupné sú tri farebné filtre:</p>
+<ul>
+<li>Normálne: Nie sú aplikované žiadne úpravy farieb. Toto je predvolené nastavenie.</li>
+<li>Odtiene sivej: prevedie farby na odtiene sivej, čo môže pre niektorých používateľov zlepšiť kontrast a znížiť záťaž očí.</li>
+<li>Invertované: Obráti farby (čierna je biela, biela je čierna a podobne), čo pomáha používateľom, ktorí preferujú biely text na tmavom pozadí alebo sú svetloplachí.</li>
+</ul>
+<p>Medzi dostupnými režimami farebného filtra prepínajte skratkou <code>NVDA+shift+i</code>.</p>
+<h3 id="MagnifierTrackingMode">Režimi sledovania</h3>
+<p>Zväčšovač obrazovky ponúka viacero režimov sledovania myšy, systémového fokusu, prezeracieho kurzora, navigačného objektu a umožňuje určiť, ktoré oblasti obrazovky majú byť zväčšené:</p>
+<ul>
+<li>Stred: Zväčšená oblasť je zarovnaná na aktuálne sledované miesto.
+V tomto režime sa sledovaný prvok udržiava v strede obrazovky a hranice sa prispôsobia okrajom obrazovky.</li>
+<li>Relatívne: Sledovaný prvok zostáva v zväčšenej oblasti v rovnakej relatívnej polohe ako na obrazovke.</li>
+</ul>
+<p>Režimi sledovania je možné prepínať klávesovou skratkou, ktorú je potrebné definovať v dialogu <a href="#InputGestures" title="klávesové skratky">klávesové skratky</a>.</p>
+<h3 id="MagnifierScreenOverview">Zobrazenie náhľadu celej obrazovky</h3>
+<p>Zväčšovač môže dočasne zobraziť náhľad celej obrazovky, čo môže byť užitočné pri prezentáciách alebo ak potrebujete vidieť pôvodný obraz.</p>
+<p>Toto môže byť užitočné v nasledujúcich prípadoch:</p>
+<ul>
+<li>Ak chcete divákom ukázať celkový kontext pred tým, ako sa zameriate na detaily</li>
+<li>Dočasne vidieť celkové rozloženie pred zväčšením</li>
+</ul>
+<p>Náhľad obrazovky zobrazíte skratkou <code>NVDA+shift+l</code>.
+Zväčšovač sa bude správať nasledovne:</p>
+<ol>
+<li>Plyneule zmenší pohľad na obrazovku (prejde na zväčšenie 1,0X)</li>
+<li>Bude sledovať pohyb myšy</li>
+<li>Ak sa pohyb myšy zastaví na viac ako dve sekundy, vráti pôvodné zväčšenie pričom zachovaá aktuálnu pozíciu myšy</li>
+</ol>
+<p>Ak pohnete myšou skôr než dôjde k opätovnému zväčšeniu, získate ďalší extra čas na zobrazenie celej obrazovky.</p>
+<h3 id="MagnifierSettings">Nastavenia zväčšovača</h3>
+<p>Nastavenia zväčšovača môžete zmeniť v Dialógu s nastaveniami NVDA vo vetve "Zväčšovač" (skratka <code>NVDA+ctrl+w</code>).
+Dostupné možnosti sú popísané v časti <a href="#MagnifierSettingsCategory" title="Nastavenia zväčšovača">Nastavenia zväčšovača</a>.</p>
 <h2 id="ContentRecognition">Optické rozpoznávanie textu Windows</h2>
 <p>Ak nie sú k dispozícii užitočné textové informácie, je možné použiť nástroje na optické  rozpoznávanie textu z obrázka.
 NVDA dokáže rozpoznávať text z obrázka pomocou optického rozpoznávania (OCR) vstavaného v operačnom systéme Windows od verzie 10.
@@ -3604,9 +4041,10 @@ Táto voľba je dostupná len po nainštalovaní NVDA a nemôže byť použitá 
 <p>Ak sa do Windows prihlasujete zadaním vášho prihlasovacieho mena a hesla, zaškrtnutím tejto voľby zaistíte, aby sa NVDA spustil už pri zobrazení práve spomínanej obrazovky.
 Táto voľba je dostupná len po nainštalovaní NVDA a nemôže byť použitá pri spustenej prenosnej verzii.</p>
 <h5 id="GeneralSettingsCopySettings">použiť aktuálne nastavenia NVDA na prihlasovacej a zabezpečených obrazovkách (vyžaduje administrátorské práva)</h5>
-<p>Po stlačení tohto tlačidla NVDA skopíruje aktuálne nastavenia do systémového priečinka, aby mohli byť tieto nastavenia použité v prípade, ak je NVDA spustený na prihlasovacej obrazovke alebo <a href="#SecureScreens" title="iných zabezpečených obrazovkách">iných zabezpečených obrazovkách</a>.
+<p>Po stlačení tohto tlačidla budete môcť skopírovať aktuálne nastavenia do systémového priečinka, aby mohli byť použité v prípade, keď je NVDA spustený na prihlasovacej obrazovke, obrazovke s kontrolou používateľského konta (UAC) alebo <a href="#SecureScreens" title="iných zabezpečených obrazovkách">iných zabezpečených obrazovkách</a>.
 Ak sa chcete uistiť, že budú správne prekopírované všetky nastavenia, môžete uložiť nastavenia stlačením Ctrl+NVDA+c, alebo použitím voľby z ponuky NVDA.
-Táto voľba je dostupná len po nainštalovaní NVDA a nemôže byť použitá pri spustenej prenosnej verzii.</p>
+Po stlačení tlačidla sa najprv otvorí dialóg <a href="#CopyAddonsToSystemProfileDialog" title="Kopírovanie nastavení do systémovej konfigurácie">Kopírovanie nastavení do systémovej konfigurácie</a>, v ktorom môžete vybrať doplnky, ktoré budú skopírované do systémovej konfigurácie.</p>
+<p>Táto voľba je dostupná len po nainštalovaní NVDA a nemôže byť použitá pri spustenej prenosnej verzii.</p>
 <h5 id="GeneralSettingsCheckForUpdates">Kontrolovať dostupnosť novej verzie NVDA</h5>
 <p>Ak je začiarknuté, NVDA bude automaticky kontrolovať dostupnosť novej verzie a ak novú verziu nájde, upozorní vás na to.
 Aktualizácie môžete skontrolovať ručne aktivovaním položky skontrolovať aktualizácie v menu pomocník v ponuke NVDA.
@@ -3667,6 +4105,10 @@ Nula je najnižší tón a sto najvyšší tón reči.</p>
 <p>Posuvník, ktorým v rozmedzí od nula po sto nastavíte hlasitosť hlasu od najtichšieho po najhlasnejší.</p>
 <h5 id="SpeechSettingsInflection">Intonácia</h5>
 <p>Posuvník, ktorého hodnota hovorí hlasovému výstupu do akej miery má byť intonácia uplatnená smerom na hor i smerom na dol. V súčasnosti intonáciu podporuje len hlasový výstup eSpeak NG.</p>
+<h5 id="SpeechSettingPunctuationSilence">Prirodzená pauza po interpunkcii</h5>
+<p>Vypnutím tejto možnosti môžete odstrániť pauzy po interpunkčných znakoch.
+Predvolene je toto nastavenie začiarknuté.
+Táto možnosť je dostupná len pre hlasy Windows Onecore, a je dostupná od verzie Windows 10 1803.</p>
 <h5 id="SpeechSettingsUseWasapi">Povoliť audio výstup cez WASAPI</h5>
 <p>Táto možnosť povolí zvukový výstup cez Windows Audio Session API (WASAPI).
 Táto možnosť je dostupná len pre hlasy Microsoft Speech API 5 (SAPI 5).
@@ -3723,9 +4165,10 @@ Nastavenie interpunkcie ovplyvňuje prejav NVDA pre všetky hlasové výstupy.</
 <p>táto možnosť je predvolene začiarknutá a hovorí NVDA, že pri spracovaní textu sa má riadiť jazykom konkrétneho hlasu.
 Ak vám NVDA pri použití konkrétneho hlasu alebo hlasového výstupu nesprávne číta interpunkciu, odčiarknite túto možnosť, aby boli uprednostnené globálne nastavenia NVDA.</p>
 <h5 id="SpeechUnicodeNormalization">Normalizovať znaky unicode</h5>
-<p>Keď je táto možnosť povolená, na texte, ktorý NVDA vyslovuje , sa vykoná normalizácia znakov v kóde unicode.
+<p>Keď je táto možnosť povolená, na texte, ktorý NVDA vyslovuje, sa vykoná normalizácia znakov unicode.
 To je výhodné, pri vyslovovaní znakov, ktoré môžu byť zastúpené vo viacerých formách.
-NVDA používa algoritmus NFKC (Normalization Form Compatibility Composition), ktorý okrem iného poskytuje tieto výhody:</p>
+NVDA používa algoritmus NFKC (Normalization Form Compatibility Composition) s niektorými vlastnými pridanými postupmi normalizácie.
+Toto prináša napríklad tieto výhody:</p>
 <ol>
 <li>
 <p>Tučné verzie znakov a verzie znakov s kurzívou, ktoré sú súčasťou štandardu Unicode a bežne sa používajú v príspevkoch uverejňovaných na sociálnych sieťach, sú normalizované na ich najbežnejší kompatibilný ekvivalent.
@@ -3748,6 +4191,10 @@ Tento aspekt normalizácie pomáha aj pri čítaní rovníc v editore rovníc pr
 <p>Rovnaké poradie oznamovania modifikátorov pre zložené znaky, napríklad v starovekej hebrejčine.</p>
 </li>
 </ol>
+<p>Dodatočné normalizovanie znakov v NVDA spracúva dekoratívne písmená, ktoré štandardný NFKC algoritmus nezahŕňa.
+Niektoré znaky Unicode, napríklad latinské veľké písmená v negatívnom kruhu (🅐 – 🅩) a latinské veľké písmená v negatívnom štvorci (🅲 – 🆉), štandard Unicode považuje za samostatné symboly, preto nemajú kompatibilný rozklad.
+NVDA rozširuje v tomto smere NFKC a mapuje tieto znaky do ich čistej formy v latinke (A–Z).
+Upozorňujeme, že malý počet latinských písmen v negatívnom štvorci, ktoré majú význam emoji (🅰, 🅱, 🅾, 🅿), je z tohto mapovania vyňatý, aby sa zachoval ich osobitný význam.</p>
 <p>Ak chcete normalizáciu unicode prepínať odkiaľkoľvek, prosím priraďte si vlastnú skratku cez <a href="#InputGestures" title="dialóg klávesové skratky">dialóg klávesové skratky</a>.</p>
 <table>
 <thead>
@@ -4180,6 +4627,12 @@ K dispozícii sú tieto symboly:</p>
 <h5 id="BrailleSpeakOnNavigating">Hovoriť pri pohybe po riadkoch a odsekoch</h5>
 <p>Zapnutie tejto možnosti spôsobí, že NVDA bude oznamovať riadky a odseky aj v prípade, že na pohyb po texte použijete tlačidlá na brailovom riadku.</p>
 <p>Ak chcete túto možnosť prepínať odkiaľkoľvek, nastavte skratku na funkciu "Oznamuje text pri pohybe po riadkoch a odsekoch" v časti braille v dialógu <a href="#InputGestures" title="Klávesové skratky">Klávesové skratky</a>.</p>
+<h5 id="BrailleAutoScrollRate">Rýchlosť automatického posúvania</h5>
+<p>Tento posuvník určuje rýchlosť, akou NVDA posúva brailový riadok, ak je zapnuté <a href="#AutomaticBrailleScrolling" title="automatické posúvanie brailového riadka">automatické posúvanie brailového riadka</a>, pričom rýchlosť sa počíta ako počet buniek za sekundu.</p>
+<p>Ak potrebujete rýchlosť posúvania meniť kedykoľvek, môžete si na úpravu rýchlosti priradiť klávesovú skratku v dialógu <a href="#InputGestures" title="Klávesové skratky">Klávesové skratky</a>.</p>
+<p>Minimálna hodnota (0%) je jedna bunka za sekundu, maximálna hodnota (100%) je 20 buniek za sekundu.
+Ak napríklad nastavíte hodnotu na desať buniek za sekundu a používate 40 znakový riadok, tento sa posunie každé 4 sekundy.
+Ak bude mať riadok 20 znakov, k posunu dôjde každé dve sekundy.</p>
 <h5 id="BrailleSettingsWordWrap">Zabrániť deleniu slov, keď je to možné</h5>
 <p>Ak je to povolené, priveľmi dlhé slovo, ktorého zobrazenie sa nezmestí na koniec brailového riadku, nebude rozdelené.
 Namiesto toho bude na konci riadku nejaké prázdne miesto.
@@ -4403,6 +4856,8 @@ Ak chcete tvorcom programu poskytnúť informácie o chybových hláseniach, je 
 Ak sa obávate o vaše súkromie, nepoužívajte túto úroveň záznamu.</li>
 <li>Debug: Zaznamenáva závažné aj menej závažné chyby a tiež vstup a výstup.
 Opäť, ak sa obávate o vaše súkromie, nepoužívajte túto úroveň záznamu.</li>
+<li>Debug (necenzurované): Zaznamenáva tie isté informácie ako režim Debug, pričom zachováva v logu aj heslá a API kľúče.
+Túto možnosť zapínajte len v prípade, že sú cenzurované aj dôležité údaje, ktoré naozaj chcete v logu zachovať.</li>
 </ul>
 <h5 id="GeneralSettingsGatherUsageStats">Povoliť zasielanie štatistických údajov do NV Access</h5>
 <p>Ak je začiarknuté, NV Access bude zhromažďovať informácie, ktoré získa počas aktualizácie NVDA. Konkrétne ide o verziu a typ operačného systému a krajinu, v ktorej sa nachádzate. Cieľom je získať štatistické informácie o tom, koľko ľudí NVDA používa.
@@ -4436,6 +4891,254 @@ Ak chcete sledovať pomocou zvýraznenia len fokus a zvyšné polia odčiarknete
 <p>Ďalšie vizuálne rozšírenia môžete nainštalovať do NVDA pomocou <a href="#AddonsManager" title="doplnkov">doplnkov</a>.
 Ak tieto rozšírenia majú konfigurovateľné nastavenia, zobrazia sa v príslušných skupinách v tejto kategórii.
 Podrobnosti nájdete v príslušnom návode k danému doplnku.</p>
+<h4 id="MagnifierSettingsCategory">Zväčšovač</h4>
+<!-- KC:setting -->
+
+<h5 id="OpenMagnifierSettings">Otvoriť nastavenia zväčšovača</h5>
+<p>Klávesová skratka: <code>NVDA+control+w</code></p>
+<p>Kategória Zväčšovač v dialógu nastavení NVDA umožňuje ovplyvniť správanie <a href="#Magnifier" title="Zväčšovača obrazovky">Zväčšovača obrazovky</a>.
+Všetky zmeny vykonané v tejto vetve majú okamžitý efekt, ale stlačením tlačidla "Zrušiť" (alebo stlačením klávesu <code>escape</code>) ich môžete vrátiť.</p>
+<p>Dostupné sú tieto nastavenia:</p>
+<!-- KC:setting -->
+
+<h5 id="MagnifierEnable">Zapnúť zväčšovač</h5>
+<p>Klávesová skratka: <code>NVDA+shift+w</code></p>
+<p>Zapína alebo vypína zväčšovač.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>vypnuté, zapnuté</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>Vypnuté</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierZoom">Úroveň zväčšenia</h5>
+<p>Určuje úroveň zväčšenia.
+Hodnoty je možné nastaviť od 100% (bez zväčšenia) až do 5000% (maximálne zväčšenie).
+Predvolená hodnota je 200%.</p>
+<p>Kedykoľvek je možné úroveň zväčšenia zvýšiť skratkou (<code>NVDA+shift+rovná sa</code>) alebo znížiť skratkou (<code>NVDA+shift+mínus</code>) ak je zväčšovač aktívny.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>od 100% do 5000%</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>200%</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:setting -->
+
+<h5 id="MagnifierFilter">Farebný filter</h5>
+<p>Klávesová skratka: <code>NVDA+shift+i</code></p>
+<p>Umožňuje zvoliť farebný filter, ktorý sa použije pri zapnutom zväčšovači obrazovky.</p>
+<p>Dostupné sú tieto možnosti:</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>normálne, odtiene sivej, invertované</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>Normálne</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Možnosť</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normálne</td>
+<td>Nepoužije sa žiadny filter.</td>
+</tr>
+<tr>
+<td>Odtiene sivej</td>
+<td>prevedie farby na odtiene sivej, čo môže pre niektorých používateľov zlepšiť kontrast a znížiť záťaž očí.</td>
+</tr>
+<tr>
+<td>Invertované</td>
+<td>Obráti farby, čo pomáha používateľom, ktorí preferujú biely text na tmavom pozadí alebo sú svetloplachí.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierPanningStepSize">Krok posunu zväčšovača</h5>
+<p>Umožňuje nastaviť kroky posúvania zväčšenej oblasti na obrazovke v percentách.
+To znamená, že ak použijete skratky na posunutie zväčšenej oblasti, táto sa posunie o dané percento podľa veľkosti zobrazeného okna.
+Väčšie percentá spôsobujú rýchle posúvanie a rýchlejší spôsob navigácie po obrazovke, pričom menšie percentá umožňujú jemejšie nastavenie polohy a precíznejšiu kontrolu.
+Skutočná vzdialenosť v pixeloch sa automaticky prispôsobí aktuálnej úrovni zväčšenia.</p>
+<p>Všimnite si, že skratky na posúvanie zväčšenej oblasti umožňujú posúvať zväčšenie nezávisle od režimu sledovania.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>od 1do 100</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowMouse">Sledovať kurzor myši</h5>
+<p>Toto začiarkávacie pole určuje, či má zväčšovač sledovať ukazovateľ myši.
+Ak je začiarknuté, zväčšená oblasť bude automaticky sledovať myš, čo môže pomôcť používateľom, ktorí sa viac spoliehajú na myš ako na klávesnicu.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>vypnuté, zapnuté</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>Zapnuté</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowSystemFocus">Sledovať systémový fokus</h5>
+<p>Toto začiarkávacie pole určuje, či má zväčšovač sledovať systémový fokus.
+Ak je začiarknuté, zväčšená oblasť bude automaticky sledovať systémový fokus, čo môže pomôcť používateľom, ktorí sa viac spoliehajú na ovládanie z klávesnice a chcú sledovať navigáciu pomocou zväčšovača.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>vypnuté, zapnuté</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>Zapnuté</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowReviewCursor">Sledovať prezerací kurzor</h5>
+<p>Toto začiarkávacie pole určuje, či má zväčšovač sledovať prezerací kurzor.
+Ak je začiarknuté, zväčšená oblasť bude automaticky sledovať prezerací kurzor, čo môže pomôcť používateľom, ktorí prezerajú obsah prezeracím kurzorom a chcú sledovať navigáciu pomocou zväčšovača.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>vypnuté, zapnuté</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>Zapnuté</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowNavigatorObject">Sledovať navigačný objekt</h5>
+<p>Toto začiarkávacie pole určuje, či má zväčšovač sledovať navigačný objekt.
+Ak je začiarknuté, zväčšená oblasť bude automaticky sledovať navigačný objekt, čo môže pomôcť používateľom, ktorí prezerajú obsah pomocou objektovej navigácie a chcú sledovať navigáciu pomocou zväčšovača.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>vypnuté, zapnuté</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>Zapnuté</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierTrackingModeSetting">Režim sledovania</h5>
+<p>V tomto zoznamovom rámiku je možné vybrať spôsob sledovania zväčšovača.
+Režimi sledovania je možné prepínať klávesovou skratkou, ktorú je potrebné definovať v dialogu <a href="#InputGestures" title="klávesové skratky">klávesové skratky</a>.
+Dostupné sú tieto možnosti:</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>na stred, relatívne</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>na stred</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Možnosť</th>
+<th>popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stred</td>
+<td>Zväčšená oblasť je zarovnaná na aktuálne sledované miesto.</td>
+</tr>
+<tr>
+<td>Relatívne</td>
+<td>Sledovaný prvok zostáva v zväčšenej oblasti v rovnakej relatívnej polohe ako na obrazovke.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Klávesnica</h4>
 <!-- KC:setting -->
 
@@ -4702,6 +5405,12 @@ Ak budete v navigácii pokračovať, režim  fokusu sa automaticky vypne.</p>
 <p>Táto možnosť je predvolene začiarknutá a spôsobuje, že skratky, ktoré sa nepoužívajú v rýchlej navigácii (napríklad písmená), nebudú posielané do aktívnej aplikácie.
 Ak napríklad stlačíte v dokumente písmeno j, toto sa pri začiarknutom poli nenapíše do aktívneho dokumentu, ani nebude poslané do aplikácie  ako klávesová skratka.
 V tomto prípade NVDA prikáže systému, aby prehral predvolený zvuk vždy, ak je stlačená skratka, ktorá nie je skratkou NVDA ani skratkou rýchlej navigácie.</p>
+<h5 id="BrowseModeSettingsBrowseModeNavigationElements">Prvky dostupné pri navigácii na dotykovej obrazovke</h5>
+<p>V tomto zozname môžete určiť prvky, ktoré budú dostupné počas navigácie v režime prehliadania cez dotykovú obrazovku.
+Jednotlivými začiarkávacimi poliami môžete konkrétne typy prvkov zapnúť a vypnúť.
+Pri prezeraní zoznamu prvkov švihaním hore a dole budú dostupné len tie, ktoré v tomto zozname začiarknete.
+Toto nastavenie ovplyvňuje len navigáciu na dotykovej obrazovke a nemá vplyv na klávesové skratky rýchlej navigácie.</p>
+<p>Dostupné sú všetky prvky <a href="#SingleLetterNavigation" title="rýchlej navigácie">rýchlej navigácie</a>.</p>
 <h4 id="DocumentFormattingSettings">Čítanie textu</h4>
 <!-- KC:setting -->
 
@@ -4881,6 +5590,27 @@ Ak nie je možné nájsť ani pravidlá pre konkrétny jazyk, použije sa angli�
 <tr>
 <td>Predvolené</td>
 <td>Automaticky (jazyk hlasového výstupu, alebo ak nie je dostupný jazyk, angličtina)</td>
+</tr>
+</tbody>
+</table>
+<h6 id="MathSpeechDecimalSeparator">Oddeľovač desatinných čísel</h6>
+<p>Umožňuje určiť symbol, ktorý sa použije ako oddeľovač v desatinných číslach pri čítaní matematického obsahu.
+Ak zvolíte možnosť automaticky, oddeľovač sa vyberie na základe jazyka zvoleného vyššie.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>Automaticky, ".", ","</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>Automaticky</td>
 </tr>
 </tbody>
 </table>
@@ -5758,6 +6488,27 @@ Ak sapi 4 hlasový výstup, ktorý používate, prestane fungovať, odporúčame
 </tr>
 </tbody>
 </table>
+<h5 id="SpeechDictsUseModernRegex">Používať modernú knižnicu na spracovanie regulárnych výrazov pri načítaní položiek rečových slovníkov</h5>
+<p>Určuje, ako sú spracované regulárne výrazy v <a href="#SpeechDictionaries" title="rečových slovníkoch">rečových slovníkoch</a>.
+<a href="https://pypi.org/project/regex/" rel="noopener" target="_blank" title="moderné spracovanie">moderné spracovanie</a> má lepšiu podporu pre nelatinské písma, akými sú Hebrejčina a Arabčina a ponúka pokročilé možnosti.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Možnosti</td>
+<td>Predvolené (vypnuté), Vypnuté, Zapnuté</td>
+</tr>
+<tr>
+<td>Predvolené</td>
+<td>Vypnuté</td>
+</tr>
+</tbody>
+</table>
 <h5 id="AdvancedSettingsCaretMoveTimeout">Počkať pred pohybom systémového kurzora (v milisekundách)</h5>
 <p>Tu môžete nastaviť časový úsek, ktorý NVDA počká pred pohybom systémového kurzora (bodu vloženia).
 Ak zistíte, že NVDA nesprávne sleduje kurzor, napríklad je o znak pozadu alebo opakuje riadky, môže vám pomôcť zvýšiť tento časový úsek.</p>
@@ -5772,8 +6523,9 @@ Zapisovanie  týchto správ môže spomaliť NVDA a zvýšiť veľkosť súborov
 Zaznamenávanie týchto správ povoľte, len ak dostanete inštrukcie od vývojárov, napríklad pri diagnostike nefunkčného ovládača brailového riadka.</p>
 <h5 id="PlayErrorSound">Oznamovať zvukom zaznamenané chyby</h5>
 <p>Ak je zapnuté, NVDA bude zvukom oznamovať situácie, keď do logu zapíše chybu.
-Ak zvolíte Len v testovacích verziách NVDA (predvolené), NVDA bude zvuk prehrávať, len ak je spustená alpha, beta, alebo verzia zo zdroja.
-Ak vyberiete možnosť áno, bude zvuky NVDA prehrávať nezávisle od spustenej verzie.</p>
+Ak zvolíte Len v testovacích verziách NVDA (predvolené), NVDA bude zvuk prehrávať, len ak je spustená testovacia verzia (alpha, beta, alebo verzia zo zdroja).
+Ak vyberiete možnosť áno, bude zvuky NVDA prehrávať nezávisle od spustenej verzie.
+Ak zvolíte možnosť nie, nebudú sa prehrávať chybové zvuky ani v testovacích verziách NVDA.</p>
 <h5 id="TextParagraphRegexEdit">Regulárny výraz pre navigáciu po textových odsekoch</h5>
 <p>Tu môžete definovať regulárny výraz, ktorý sa používa na detekciu textových odsekov v režime prehliadania.
 Tento regulárny výraz je násedne použitý pri <a href="#TextNavigationCommand" title="Navigácii po textových odsekoch">Navigácii po textových odsekoch</a>.</p>
@@ -5801,13 +6553,35 @@ Aby ste sa v zozname pravidiel nestratili, je vhodné zadať nejaký text vystih
 <p>Rečové slovníky NVDA toho dokážu ešte viac než len zamieňať slová.
 Dialóg Upraviť položku slovníka obsahuje začiarkavacie políčko Rozlišovať malé a veľké písmená, čím môžete NVDA prinútiť rozlišovať či text je písaný veľkými písmenami alebo nie.
 Predvolene NVDA ignoruje veľkosť písmen.</p>
-<p>Nasleduje prepínač, ktorým určíte, či sa má výraz použiť ak sa nachádza kdekoľvek, ak je to celé slovo, alebo ide o "regulárny výraz".
-Ak nastavíte možnosť Iba celé slová, výraz sa použije len vtedy, ak nie je súčasťou väčšieho slova.
+<p>Prepínačom môžete určiť, akým spôsobom bude výraz spracovaný.
+Dostupné sú tieto možnosti:</p>
+<ul>
+<li>Všade: reťazec sa môže nachádzať kdekoľvek v texte.</li>
+<li>Iba celé slová: K nahradeniu výrazu dôjde len v prípade, že sa vzor zhoduje ako celé slovo.
+To znamená, že nejde len o súčasť väčšieho slova.
 Toto platí, keď pred a za výrazom nenasleduje žiadny alfanumerický znak, alebo podčiarkovník, alebo za a pred výrazom nie sú žiadne znaky a symboly.
-Vráťme sa ešte k predchádzajúcemu príkladu, v ktorom sme nahradili výraz "vták" výrazom "žaba". Ak nastavíte prepínač na Iba celé slová, výraz sa nezmení, ak bude v texte výraz "vtáky" alebo "bielyvták".</p>
-<p>Regulárny výraz je špeciálny druh vzoru, ktorý umožňuje filtrovať len znaky, len číslice alebo ľubovoľný počet ľubovoľných znakov v rôznych kombináciách.
+Ak napríklad nahradíte slovo "zýva" slovom "spieva" a zvolíte možnosť Iba celé slová, nebudú zamenené výrazy "nazývať" alebo "prezývať".</li>
+<li>Časť slova: Pred alebo za výrazom musí byť alfanumerický znak alebo podčiarkovník.
+Takto je možné upravovať výslovnosť zložených slov.
+Ak napríklad nahradíte slovo "zýva" za "spieva" s nastavením Časť slova, budú nahradené aj slová "zývať" aj "prezývať", ale nie slovo "zýva" (lebo za ním ani pred ním nie je už iný alfanumerický znak).</li>
+<li>Začiatok slova: Na začiatku slova musí byť jasná hranica a za výrazom musí nasledovať alfanumerický znak alebo podčiarkovník.
+Ak napríklad slovo "zýva" nahradíte "spieva" s týmto nastavením, bude akceptované aj "zývať", ale nie "prezýva" ani "zýva".</li>
+<li>Koniec slova: Výraz musí končiť jasnou hranicou slova a pred ním môže byť len alfanumerický znak alebo podčiarkovník.
+Ak napríklad pri tomto nastavení budete hľadať "zýva" a nahradíte ho "spieva", bude akceptované aj "nazýva"" aj "prezýva", ale nie "zývať" ani "zýva".</li>
+<li>Regulárny výraz: Je špeciálny druh vzoru, ktorý umožňuje filtrovať len znaky, len číslice alebo ľubovoľný počet ľubovoľných znakov v rôznych kombináciách.
 Regulárne výrazy nie sú popísané v tejto používateľskej príručke.
-Odporúčame preštudovať <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="Použitie regulárnych výrazov v prostredí Python">Použitie regulárnych výrazov v prostredí Python</a>.</p>
+Odporúčame preštudovať <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="Použitie regulárnych výrazov v prostredí Python">Použitie regulárnych výrazov v prostredí Python</a>.
+Ak pracujete s nelatinskými znakmi, napríklad v hebrejčine alebo Arabčine, odporúčame vám použiť <a href="#SpeechDictsUseModernRegex" title="Moderné spracovanie regulárnych výrazov">Moderné spracovanie regulárnych výrazov</a>.</li>
+<li>Maska v štýle Unix shellu: Výraz musí používať regulárne výrazy v štandarde Unix shellu.
+Napríklad:<ul>
+<li><code>*</code> spracuje akékoľvek znaky.</li>
+<li><code>?</code> zamieňa len jeden akýkoľvek znak.</li>
+<li><code>[az]</code> reaguje len na znak a alebo z.</li>
+<li><code>[a-z]</code> nahrádza akékoľvek malé písmená v rozsahu a až z.</li>
+<li><code>[!a-z]</code> spracuje všetky znaky s výnimkou rozsahu malých písmen a až z.</li>
+</ul>
+</li>
+</ul>
 <h4 id="SymbolPronunciation">Výslovnosť interpunkčných a špeciálnych symbolov</h4>
 <p>V tomto dialógu môžete nastavovať výslovnosť interpunkčných a ostatných špeciálnych symbolov ako aj úroveň interpunkcie, pri ktorom budú tieto vyslovované.</p>
 <p>V názve okna sa zobrazuje jazyk, ktorého symboly upravujete.
@@ -5870,7 +6644,8 @@ Ak napríklad na písmeno <code>A</code>  namapujete skratku <code>ctrl+m</code>
 Automatické ukladanie nastavení pri ukončení je možné nastaviť v dialógu Všeobecné nastavenia v podmenu Možnosti.
 Nastavenia môžete ručne uložiť potvrdením položky Uložiť nastavenia z ponuky NVDA.</p>
 <p>Ak ste pri nastaveniach programu urobili chybu a potrebujete sa vrátiť k uloženým nastaveniam, zvoľte možnosť opätovného načítania nastavení  z ponuky NVDA.
-Môžete sa tiež kedykoľvek  vrátiť k predvoleným nastaveniam. Z ponuky NVDA aktivujte položku Obnoviť predvolené nastavenia.</p>
+Môžete sa tiež kedykoľvek  vrátiť k predvoleným nastaveniam. Z ponuky NVDA aktivujte položku Obnoviť predvolené nastavenia.
+Po obnovení nastavení sa zobrazí dialóg, v ktorom je možné obnovenie nastavení zvrátiť a vrátiť sa k uloženým nastaveniam.</p>
 <p>Užitočné môžu byť tiež nasledujúce klávesové skratky:</p>
 <!-- KC:beginInclude -->
 
@@ -5878,23 +6653,20 @@ Môžete sa tiež kedykoľvek  vrátiť k predvoleným nastaveniam. Z ponuky NVD
 <thead>
 <tr>
 <th>Názov</th>
-<th>Klávesová skratka pre desktop</th>
-<th>Klávesová skratka pre laptop</th>
-<th>Popis</th>
+<th>klávesová skratka</th>
+<th>popis</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Uložiť nastavenia</td>
 <td><code>NVDA+ctrl+c</code></td>
-<td><code>NVDA+ctrl+c</code></td>
-<td>Uloží aktuálne nastavenia NVDA tak, aby sa pri ukončení nestratili</td>
+<td>`</td>
 </tr>
 <tr>
 <td>Návrat k uloženým nastaveniam</td>
-<td><code>NVDA+ctrl+r |</code>NVDA+ctrl+r</td>
+<td>`NVDA+ctrl+r</td>
 <td>Obnoví nastavenia z času, čo Ste naposledy konfiguráciu uložili. Stlačené trikrát obnoví predvolené nastavenia.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -6393,10 +7165,10 @@ Podrobnosti sú popísané v kapitole <a href="#AddonsManager" title="Doplnky a 
 <h3 id="CreatePortableCopy">Vytvoriť prenosnú verziu</h3>
 <p>Umožní z aktuálne spustenej kópie NVDA vytvoriť prenosnú verziu.</p>
 <p>Usmernenia a viac informácií získate v časti <a href="#CreatingAPortableCopy" title="Vytvorenie prenosnej verzie">Vytvorenie prenosnej verzie</a>.</p>
-<h3 id="RunCOMRegistrationFixingTool">Spustiť opravný nástroj COM...</h3>
+<h3 id="RunCOMRegistrationFixingTool">Spustiť opravný nástroj prístupnosti systému...</h3>
 <p>Niekedy môže nastať situácia, že údaje v registroch Windows spôsobujú neštandardné správanie NVDA.
 Toto môže byť spôsobené napríklad inštaláciou alebo odinštaláciou niektorých programov (napríklad Adobe Reader alebo Math Player), ale tiež aktualizáciami Windowsu a inými udalosťami.
-Opravný nástroj COM sa pokúsi opraviť problémy opätovným zapísaním kľúčov ohľadom prístupnosti do registrov.</p>
+Opravný nástroj sa pokúsi opraviť problémy opätovným zapísaním kľúčov ohľadom prístupnosti do registrov.</p>
 <p>Toto môže opraviť nasledujúce problémy:</p>
 <ul>
 <li>Oznamovanie "neznáme" alebo "panel", pri navigácii v prehliadačoch ako Firefox alebo Edge, e-mailových programoch ako napríklad Thunderbird, tiež pri navigácii vo Windows Exploreri, na panely úloh a podobne.</li>
@@ -7071,14 +7843,12 @@ Toto zahŕňa:</p>
 <li>Baum: SuperVario, PocketVario, VarioUltra, Pronto!, SuperVario2, Vario 340</li>
 <li>HumanWare: Brailliant, BrailleConnect, Brailliant2</li>
 <li>APH: Refreshabraille</li>
-<li>Orbit: Orbit Reader 20</li>
+<li>Orbit: Orbit Reader 20, Orbit Reader 40</li>
 </ul>
 <p>Niektoré ďalšie riadky od Baum by mohli tiež fungovať, no zatiaľ toto nebolo dostatočne odskúšané.</p>
 <p>Ak pripájate niektorý z  riadkov cez USB a riadok nepodporuje režim HID, musíte najskôr nainštalovať ovládače dodávané od výrobcu.
 Riadky VarioUltra a Pronto! používajú pripojenie cez HID.
-Riadky Refreshabraille a Orbit Reader môžete nastaviť tak, aby používali technológiu HID.</p>
-<p>USB sériový režim je podporovaný  pri riadkoch Orbit Reader 20 len v systéme Windows od verzie 10.
-Odporúčame vám ale používať režim HID.</p>
+Riadky Refreshabraille, Orbit Reader 20 a Orbit Reader 40 je možné nastaviť tak, aby využívali rozhranie HID.</p>
 <p>Nasleduje zoznam klávesových príkazov pre tieto typy riadkov.
 Prosím, prečítajte si dokumentáciu dodanú spolu so zariadením na zistenie rozmiestnenia klávesov.</p>
 <!-- KC:beginInclude -->
@@ -9862,7 +10632,9 @@ Cieľom je, aby všetky budúce brailové riadky podporovali tento štandard č�
 NVDA dokáže zobraziť text na brailovom riadku ale tiež viacero riadkov textu na grafickej ploche.
 Model A300 má grafickú plochu s rozmermi 120 na 80 bodov, takže dokáže zobraziť 8 riadkov s dvadsiatimi bunkami.</p>
 <p>Zdroj zobrazovaného textu (brailový riadok alebo grafická plocha), nastavíte v nastaveniach Brailovho písma, v časti zdroj.</p>
-<p>Nvda podporuje použitie tlačidiel na posun, avšak zariadenie má málo tlačidiel, preto nie sú dostupné napríklad funkcie na privolávanie kurzora.</p>
+<p>Dot Pad má ľavé a pravé tlačidlo posúvania a 4 funkčné klávesy (f1 až f4).
+Tlačidlá je možné stláčať aj súčasne a vytvárať tak rôzne kombinácie (napríklad <code>f1+ľavé posúvacie tlačidlo</code>) a k týmto skratkám je možné priradiť funkcie v dialógu klávesové skratky.
+Okrem posúvania nie sú predvolene priradené žiadne skratky.</p>
 <p>Ovládač Dot Pad podporuje automatickú detekciu pripojených USB zariadení.
 Avšak, automatická detekcia je predvolene vypnutá, lebo ovládač používa všeobecný spôsob zisťovania zariadení, ktorý môže spôsobovať konflikty s iným USB príslušenstvom.
 Ak chcete povoliť automatickú detekciu, v Nastaveniach NVDA v časti brailovo písmo zvoľte brailový riadok "dotpad".
@@ -10023,7 +10795,7 @@ Ak použijete krátky zápis parametra, argumenty oddeľte medzerou, ak použije
 <tr>
 <td><code>-l loglevel</code></td>
 <td><code>--log-level=loglevel</code></td>
-<td>Určuje úroveň záznamu (debug 10, Vstup a výstup 12, debug 15, info 20, vypnuté 100), predvolene je úroveň nastavená na upozornenia.  Zapisovanie logu je vždy vypnuté v bezpečnom režime.</td>
+<td>Určuje úroveň záznamu (debug (necenzurovaný) 5, debug 10, Vstup a výstup 12, debug 15, info 20, vypnuté 100), predvolene je úroveň nastavená na upozornenia.  Zapisovanie logu je vždy vypnuté v bezpečnom režime.</td>
 </tr>
 <tr>
 <td><code>-c C:\esta\k\profilu</code></td>
@@ -10164,5 +10936,6 @@ Hodnoty sú uložené v systémovom registri v kľúči <code>HKEY_LOCAL_MACHINE
 <p>Ak hľadáte ďalšie informácie o NVDA, o jeho vývoji, alebo hľadáte pomoc, navštívte <a href="https://www.nvaccess.org" rel="noopener" target="_blank" title="stránku projektu (anglicky)">stránku projektu (anglicky)</a>.
 Na tejto stránke môžete tiež nájsť e-mailové konferencie a odkazy na ďalšie komunitné projekty a stránky o NVDA.
 Môžete tu tiež nájsť informácie o vývoji, zdrojové kódy a iné súvisiace materiály.</p>
+<!-- markdownlint-disable-file MD060 -->
 </body>
 </html>

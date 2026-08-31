@@ -2,16 +2,16 @@
 <html lang="sr" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 Kratka napomena za komande</title>
+<title>NVDA 2026.2 Kratka napomena za komande</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611-kratka-napomena-za-komande">NVDA 2026.1.1 Kratka napomena za komande</h1>
+<body><h1 id="nvda-20262-kratka-napomena-za-komande">NVDA 2026.2 Kratka napomena za komande</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611-kratka-napomena-za-komande" title="NVDA 2026.1.1 Kratka napomena za komande">NVDA 2026.1.1 Kratka napomena za komande</a><ul>
+<li><a href="#nvda-20262-kratka-napomena-za-komande" title="NVDA 2026.2 Kratka napomena za komande">NVDA 2026.2 Kratka napomena za komande</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Korišćenje NVDA-a">Korišćenje NVDA-a</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA prečice za ekrane osetljive na dodir">NVDA prečice za ekrane osetljive na dodir</a><ul>
 <li><a href="#TouchModes" title="Režimi dodira">Režimi dodira</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Režim pretraživanja">Režim pretraživanja</a><ul>
-<li><a href="#SingleLetterNavigation" title="Navigacija jednim slovom">Navigacija jednim slovom</a></li>
+<li><a href="#SingleLetterNavigation" title="Navigacija jednim slovom">Navigacija jednim slovom</a><ul>
+<li><a href="#BrowseModeTouch" title="Navigacija režima pretraživanja na ekranu osetljivom na dodir">Navigacija režima pretraživanja na ekranu osetljivom na dodir</a><ul>
+<li><a href="#pokreti-na-ekranu-u-rezimu-pretrazivanja" title="Pokreti na ekranu u režimu pretraživanja">Pokreti na ekranu u režimu pretraživanja</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="Lista elemenata">Lista elemenata</a></li>
 <li><a href="#SearchingForText" title="Pretraga teksta">Pretraga teksta</a></li>
 <li><a href="#ImbeddedObjects" title="Umetnuti objekti">Umetnuti objekti</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Brajevo pismo">Brajevo pismo</a><ul>
-<li><a href="#BrailleInput" title="Brajev unos">Brajev unos</a></li>
+<li><a href="#BrailleReading" title="Čitanje brajevog pisma">Čitanje brajevog pisma</a><ul>
+<li><a href="#BrailleReadingGestures" title="Prečice čitanja brajevog pisma">Prečice čitanja brajevog pisma</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Brajev unos">Brajev unos</a><ul>
+<li><a href="#BrailleInputGestures" title="Brajeve ulazne komande">Brajeve ulazne komande</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Vid">Vid</a><ul>
 <li><a href="#VisionScreenCurtain" title="Zatamnjivanje ekrana">Zatamnjivanje ekrana</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Lupa">Lupa</a><ul>
+<li><a href="#MagnifierCommands" title="Komande lupe">Komande lupe</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Prepoznavanje sadržaja">Prepoznavanje sadržaja</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Razdvajanje zvuka">Razdvajanje zvuka</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Lupa">Lupa</a></li>
 <li><a href="#KeyboardSettings" title="Tastatura">Tastatura</a></li>
 <li><a href="#MouseSettings" title="Miš">Miš</a></li>
 <li><a href="#ReviewCursorSettings" title="Pregledni kursor">Pregledni kursor</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">NVDA prečice za ekrane osetljive na dodir</h3>
 <p>Da omogućite ili onemogućite podršku interakcije sa ekranom osetljivim na dodir, pritisnite NVDA+control+alt+t.</p>
 <h4 id="TouchModes">Režimi dodira</h4>
-<p>Da se prebacite između različitih režima dodira, dodirnite jednom sa tri prsta.</p>
+<p>Da biste se prebacivali između režima ekrana osetljivog na dodir, izvršite dodir sa tri prsta.</p>
 <h3 id="BasicNVDACommands">Osnovne NVDA komande</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>Šift</td>
 <td>Nema komande</td>
 <td>pauzira govor. Ako se pritisne ponovo govor se nastavlja gde je stao(ako trenutni sintetizator podržava pauziranje)</td>
+</tr>
+<tr>
+<td>Ponovi poslednju izgovorenu informaciju</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Nema</td>
+<td>Ponavlja poslednju informaciju koju je NVDA izgovorio. Pritiskanje dva puta je prikazuje u režimu pretraživanja</td>
 </tr>
 <tr>
 <td>NVDA meni</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Da isključite i uključite navigaciju slovima za trenutni dokument, pritisnite NVDA+šift+razmak.</p>
+<h4 id="BrowseModeTouch">Navigacija režima pretraživanja na ekranu osetljivom na dodir</h4>
+<h5 id="pokreti-na-ekranu-u-rezimu-pretrazivanja">Pokreti na ekranu u režimu pretraživanja</h5>
+<table>
+<thead>
+<tr>
+<th>Ime</th>
+<th>Pokret</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Izaberi narednu vrstu elementa</td>
+<td>Prevlačenje dole</td>
+<td>Prebacuje se na narednu vrstu elementa navigacije režima pretraživanja</td>
+</tr>
+<tr>
+<td>Izaberi prethodnu vrstu elementa</td>
+<td>Prevlačenje gore</td>
+<td>Prebacuje se na prethodnu vrstu elementa navigacije režima pretraživanja</td>
+</tr>
+<tr>
+<td>Prebaci se na naredni element</td>
+<td>Prevlačenje desno</td>
+<td>Pomera se na naredni element režima pretraživanja izabrane vrste</td>
+</tr>
+<tr>
+<td>Prebaci se na prethodni element</td>
+<td>Prevlačenje levo</td>
+<td>Pomera se na prethodni element režima pretraživanja izabrane vrste</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">Lista elemenata</h3>
 <table>
 <thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">Brajevo pismo</h2>
+<h3 id="BrailleReading">Čitanje brajevog pisma</h3>
+<h4 id="BrailleReadingGestures">Prečice čitanja brajevog pisma</h4>
+<table>
+<thead>
+<tr>
+<th>Ime</th>
+<th>Taster</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Menja brajev režim</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Dozvoljava vam da kružite između dostupnih brajevih režima: "Praćenje kursora" i "Prikazivanje govornog izlaza"</td>
+</tr>
+<tr>
+<td>Vezivanje brajevog reda</td>
+<td><code>NVDA+kontrol+t</code></td>
+<td>Ova opcija vam dozvoljava da izaberete da li će brajev red pratiti sistemski fokus i kursor, navigacioni objekat i pregledni kursor, ili oba</td>
+</tr>
+<tr>
+<td>Uključuje ili isključuje automatsko pomeranje</td>
+<td><code>NVDA+alt+k</code></td>
+<td>Određuje da li će NVDA povremeno pomerati brajev red kako bi prikazao informacije koje su preduge da bi se prikazale odjednom</td>
+</tr>
+<tr>
+<td>Povećaj brzinu automatskog pomeranja</td>
+<td><code>NVDA+alt+l</code></td>
+<td>Ubrzava automatsko pomeranje (kada je omogućeno)</td>
+</tr>
+<tr>
+<td>Smanji brzinu automatskog pomeranja</td>
+<td><code>NVDA+alt+j</code></td>
+<td>Usporava automatsko pomeranje (kada je omogućeno)</td>
+</tr>
+<tr>
+<td>Kruži kroz oblike brajevog kursora</td>
+<td>Nema</td>
+<td>Kruži kroz opcije oblika (šablone tačkica) brajevog kursora</td>
+</tr>
+<tr>
+<td>Uključuje ili isključuje pomeranje sistemskog kursora kada se prebacujete na pregledni kursor</td>
+<td>Nema</td>
+<td>Uključuje ili isključuje pomeranje sistemskog kursora prebacivanjem preglednog kursora na brajevom redu</td>
+</tr>
+<tr>
+<td>Kruži kroz režime prikazivanja poruka</td>
+<td>Nema</td>
+<td>Kruži kroz režime prikazivanja poruka na brajevom redu</td>
+</tr>
+<tr>
+<td>Kruži kroz stanja prikazivanja izbora na brajevom redu</td>
+<td>Nema</td>
+<td>Kruži kroz stanja prikazivanja izbora na brajevom redu</td>
+</tr>
+<tr>
+<td>Kruži kroz stanja unikodne standardizacije na brajevom redu</td>
+<td>Nema</td>
+<td>Kruži kroz stanja unikodne standardizacije na brajevom redu</td>
+</tr>
+<tr>
+<td>Premesti brajev red na fokus</td>
+<td>Nema</td>
+<td>Pomera brajev red na trenutni fokus</td>
+</tr>
+<tr>
+<td>Pomeri brajev red u naredni red</td>
+<td>Nema</td>
+<td>Pomera brajev red u naredni red</td>
+</tr>
+<tr>
+<td>Pomeri brajev red u prethodni red</td>
+<td>Nema</td>
+<td>Pomera brajev red u prethodni red</td>
+</tr>
+<tr>
+<td>Prijavi formatiranje na brajevom redu</td>
+<td>Nema</td>
+<td>Prijavljuje informacije o formatiranju teksta ispod ove brajeve ćelije</td>
+</tr>
+<tr>
+<td>Prebaci se na ili aktiviraj objekat na brajevom redu</td>
+<td>Nema</td>
+<td>Prebacuje kursor na ili aktivira objekat ispod ove brajeve ćelije</td>
+</tr>
+<tr>
+<td>Pomeri brajev red nazad</td>
+<td>Nema</td>
+<td>Pomera brajev red nazad</td>
+</tr>
+<tr>
+<td>Pomeri brajev red napred</td>
+<td>Nema</td>
+<td>Pomera brajev red napred</td>
+</tr>
+<tr>
+<td>Uključuje ili isključuje brajev kursor</td>
+<td>Nema</td>
+<td>Uključuje ili isključuje brajev kursor</td>
+</tr>
+<tr>
+<td>Promeni informacije o sadržaju na brajevom redu</td>
+<td>Nema</td>
+<td>Menja način na koji su informacije o sadržaju prikazane na brajevom redu</td>
+</tr>
+<tr>
+<td>Uključuje ili isključuje govor tokom kretanja brajevim redom</td>
+<td>Nema</td>
+<td>Uključuje ili isključuje govor kada se krećete po redovima ili pasusima na brajevom redu</td>
+</tr>
+<tr>
+<td>Uključuje ili isključuje izgovor znaka tokom prebacivanja</td>
+<td>Nema</td>
+<td>Uključuje ili isključuje izgovor znaka na poziciji kursora kada se kursor prebacuje brajevim redom po tekstu</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Brajev unos</h3>
 <p>Pritiskanje tačke 7 briše zadnji upisan znak.
 Tačka 8 prevodi bilo koji brajev unos i pritiska enter.
 Pritiskanje tačke7 i 8 prevodi brajev unos, bez pritiskanja tastera enter.</p>
+<h4 id="BrailleInputGestures">Brajeve ulazne komande</h4>
+<table>
+<thead>
+<tr>
+<th>Ime</th>
+<th>Komanda</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unos brajevim redom</td>
+<td>bilo koje tačke</td>
+<td>Upisuje brajeve tačke brajevom tastaturom</td>
+</tr>
+<tr>
+<td>Brisanje poslednjeg unosa</td>
+<td><code>tačka7</code></td>
+<td>Briše poslednju upisanu brajevu ćeliju ili znak</td>
+</tr>
+<tr>
+<td>Prevod brajevog unosa</td>
+<td><code>tačka7+tačka8</code></td>
+<td>Prevodi bilo koji brajev unos</td>
+</tr>
+<tr>
+<td>Prevod i pritiskanje tastera Enter</td>
+<td><code>Tačka8</code></td>
+<td>Prevodi bilo koji brajev unos i pritiska taster Enter</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Vid</h2>
 <h3 id="VisionScreenCurtain">Zatamnjivanje ekrana</h3>
 <table>
@@ -1218,6 +1426,94 @@ Pritiskanje tačke7 i 8 prevodi brajev unos, bez pritiskanja tastera enter.</p>
 <td>Menja stanje zatamnjivanja ekrana</td>
 <td><code>NVDA+kontrol+escape</code></td>
 <td>Omogućite kako bi ekran postao crn ili onemogućite da prikažete sadržaj ekrana. Ako se pritisne jednom, zatamnjivanje ekrana će biti omogućeno dok ponovo ne pokrenete NVDA. Ako se pritisne dva puta, zatamnjivanje ekrana je omogućeno dok ga ne onemogućite.</td>
+</tr>
+<tr>
+<td>Prijavljuje stanje zatamnjivanja ekrana</td>
+<td>Nema</td>
+<td>Izgovara trenutno stanje zatamnjivanja ekrana, da li je onemogućeno, omogućeno, ili u privremenom režimu.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Lupa</h2>
+<h3 id="MagnifierCommands">Komande lupe</h3>
+<table>
+<thead>
+<tr>
+<th>Ime</th>
+<th>Komanda</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uključuje ili isključuje lupu</td>
+<td><code>NVDA+šift+w</code></td>
+<td>Uključuje ili isključuje lupu</td>
+</tr>
+<tr>
+<td>Povećava nivo lupe</td>
+<td><code>NVDA+šift+plus ili jednako</code></td>
+<td>Povećava nivo zumiranja. Pokreće lupu ako već nije pokrenuta.</td>
+</tr>
+<tr>
+<td>Smanjuje nivo lupe</td>
+<td><code>NVDA+šift+apostrof ili minus</code></td>
+<td>Smanjuje nivo zumiranja</td>
+</tr>
+<tr>
+<td>Kruži kroz filtere boja</td>
+<td><code>NVDA+šift+i</code></td>
+<td>Kruži kroz dostupne filtere boja (normalno, sive nijanse, obrnuto)</td>
+</tr>
+<tr>
+<td>Menja režim praćenja</td>
+<td>Nema</td>
+<td>Menja režim praćenja (centar, relativan)</td>
+</tr>
+<tr>
+<td>Prikazuje pregled celog ekrana</td>
+<td><code>NVDA+Šift+l</code></td>
+<td>Privremeno prikazuje pregled celog ekrana</td>
+</tr>
+<tr>
+<td>Pomeri levo</td>
+<td><code>NVDA+alt+strelicaLevo</code></td>
+<td>Pomera uvećani prikaz levo podešenom veličinom</td>
+</tr>
+<tr>
+<td>Pomeri desno</td>
+<td><code>NVDA+alt+strelicaDesno</code></td>
+<td>Pomera uvećani prikaz desno podešenom veličinom</td>
+</tr>
+<tr>
+<td>Pomeri gore</td>
+<td><code>NVDA+alt+strelicaGore</code></td>
+<td>Pomera uvećani prikaz gore podešenom veličinom</td>
+</tr>
+<tr>
+<td>Pomeri dole</td>
+<td><code>NVDA+alt+strelicaDole</code></td>
+<td>Pomera uvećani prikaz dole podešenom veličinom</td>
+</tr>
+<tr>
+<td>Pomeri na levu ivicu</td>
+<td><code>NVDA+Šift+alt+strelicaLevo</code></td>
+<td>Pomera uvećani prikaz direktno na levu ivicu ekrana</td>
+</tr>
+<tr>
+<td>Pomeri na desnu ivicu</td>
+<td><code>NVDA+Šift+alt+strelicaDesno</code></td>
+<td>Pomera uvećani prikaz direktno na desnu ivicu ekrana</td>
+</tr>
+<tr>
+<td>Pomeri na gornju ivicu</td>
+<td><code>NVDA+Šift+alt+strelicaGore</code></td>
+<td>Pomera uvećani prikaz direktno na gornju ivicu ekrana</td>
+</tr>
+<tr>
+<td>Pomeri na donju ivicu</td>
+<td><code>NVDA+Šift+alt+strelicaDole</code></td>
+<td>Pomera uvećani prikaz direktno na donju ivicu ekrana</td>
 </tr>
 </tbody>
 </table>
@@ -1653,6 +1949,37 @@ U Microsoft 2016, 365 i novijim office verzijama, komentari u programu Microsoft
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Lupa</h4>
+<table>
+<thead>
+<tr>
+<th>Ime</th>
+<th>Desktop komanda</th>
+<th>Laptop komanda</th>
+<th>opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Otvara podešavanja lupe</td>
+<td><code>NVDA+kontrol+w</code></td>
+<td><code>NVDA+kontrol+w</code></td>
+<td>Kategorija lupe u dijalogu NVDA podešavanja vam dozvoljava da podesite podrazumevano ponašanje ugrađene funkcije NVDA <a href="#Magnifier" title="lupe">lupe</a>.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Omogući lupu</td>
+<td><code>NVDA+šift+w</code></td>
+<td><code>NVDA+šift+w</code></td>
+<td>Ova opcija pokreće ili zaustavlja lupu.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Filter boja</td>
+<td><code>NVDA+šift+i</code></td>
+<td><code>NVDA+šift+i</code></td>
+<td>Ova opcija vam dozvoljava da izaberete filter koji će se primeniti kada se koristi lupa.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Tastatura</h4>
 <table>
 <thead>
@@ -1822,24 +2149,21 @@ U Microsoft 2016, 365 i novijim office verzijama, komentari u programu Microsoft
 <table>
 <thead>
 <tr>
-<th>Име</th>
-<th>Desktop команда</th>
-<th>Laptop команда</th>
-<th>Опис</th>
+<th>Ime</th>
+<th>Prečica</th>
+<th>Opis</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Sačuvaj podešavanja</td>
+<td>Čuva podešavanja</td>
 <td><code>NVDA+kontrol+c</code></td>
-<td><code>NVDA+kontrol+c</code></td>
-<td>Čuva vaša trenutna podešavanja kako ne bi bila izgubljena kada zatvorite NVDA</td>
+<td>Čuva vaša trenutna podešavanja kako ne bi bila izgubljena nakon što zatvorite NVDA</td>
 </tr>
 <tr>
-<td>Vrati podešavanja</td>
+<td>Vraća podešavanja</td>
 <td><code>NVDA+kontrol+r</code></td>
-<td><code>NVDA+kontrol+r</code></td>
-<td>Pritiskanje jednom vraća podešavanja na ona koja ste poslednji put sačuvali. Pritiskanje tri puta ih vraća na fabrička.</td>
+<td>Pritiskanje jednom će vratiti vaša podešavanja na poslednji put kada ste ih sačuvali. Pritiskanje tri puta će ih vratiti nazad na podrazumevana bez prikazivanja dijaloga za poništavanje.</td>
 </tr>
 </tbody>
 </table>
@@ -4839,17 +5163,17 @@ U Microsoft 2016, 365 i novijim office verzijama, komentari u programu Microsoft
 <thead>
 <tr>
 <th>Ime</th>
-<th>Komanda</th>
+<th>Prečica</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Pomeri brajev red nazad</td>
-<td><code>pan_left</code></td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
 <td>Pomeri brajev red napred</td>
-<td><code>pan_right</code></td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

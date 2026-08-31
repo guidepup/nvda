@@ -2,16 +2,16 @@
 <html lang="tr" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 Komutlar Hızlı Rehber</title>
+<title>NVDA 2026.2 Komutlar Hızlı Rehber</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611-komutlar-hzl-rehber">NVDA 2026.1.1 Komutlar Hızlı Rehber</h1>
+<body><h1 id="nvda-20262-komutlar-hzl-rehber">NVDA 2026.2 Komutlar Hızlı Rehber</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611-komutlar-hzl-rehber" title="NVDA 2026.1.1 Komutlar Hızlı Rehber">NVDA 2026.1.1 Komutlar Hızlı Rehber</a><ul>
+<li><a href="#nvda-20262-komutlar-hzl-rehber" title="NVDA 2026.2 Komutlar Hızlı Rehber">NVDA 2026.2 Komutlar Hızlı Rehber</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="NVDA'ya Başlarken">NVDA'ya Başlarken</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA Dokunma Hareketleri">NVDA Dokunma Hareketleri</a><ul>
 <li><a href="#TouchModes" title="Dokunma Kipleri">Dokunma Kipleri</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Tarama Kipi">Tarama Kipi</a><ul>
-<li><a href="#SingleLetterNavigation" title="Tek Tuşla Dolaşım">Tek Tuşla Dolaşım</a></li>
+<li><a href="#SingleLetterNavigation" title="Tek Tuşla Dolaşım">Tek Tuşla Dolaşım</a><ul>
+<li><a href="#BrowseModeTouch" title="Tarama Kipinde Dokunarak Dolaşma">Tarama Kipinde Dokunarak Dolaşma</a><ul>
+<li><a href="#tarama-kipinde-dokunma-hareketleri" title="Tarama kipinde dokunma hareketleri">Tarama kipinde dokunma hareketleri</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="Öğe Listesi">Öğe Listesi</a></li>
 <li><a href="#SearchingForText" title="Metin arama">Metin arama</a></li>
 <li><a href="#ImbeddedObjects" title="Gömülü Nesneler">Gömülü Nesneler</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Braille">Braille</a><ul>
-<li><a href="#BrailleInput" title="Braille Girişi">Braille Girişi</a></li>
+<li><a href="#BrailleReading" title="Braille Okuma">Braille Okuma</a><ul>
+<li><a href="#BrailleReadingGestures" title="Braille Okuma Hareketleri">Braille Okuma Hareketleri</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Braille Girişi">Braille Girişi</a><ul>
+<li><a href="#BrailleInputGestures" title="Braille Girdi Hareketleri">Braille Girdi Hareketleri</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Görsellik">Görsellik</a><ul>
 <li><a href="#VisionScreenCurtain" title="Ekran perdesi">Ekran perdesi</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Büyüteç">Büyüteç</a><ul>
+<li><a href="#MagnifierCommands" title="Büyüteç Komutları">Büyüteç Komutları</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Görsel İçerik Tanıma">Görsel İçerik Tanıma</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Ses Ayırma">Ses Ayırma</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Büyüteç">Büyüteç</a></li>
 <li><a href="#KeyboardSettings" title="Klavye">Klavye</a></li>
 <li><a href="#MouseSettings" title="Fare">Fare</a></li>
 <li><a href="#ReviewCursorSettings" title="İnceleme İmleci">İnceleme İmleci</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">NVDA Dokunma Hareketleri</h3>
 <p>Dokunma etkileşimi desteğini açıp  kapatmak için, NVDA+kontrol+alt+t tuşlarına basın.</p>
 <h4 id="TouchModes">Dokunma Kipleri</h4>
-<p>Dokunma kipleri arasında geçiş yapmak için, üç parmakla bir kez dokunun.</p>
+<p>Dokunma kipleri arasında geçiş yapmak için üç parmakla dokunun.</p>
 <h3 id="BasicNVDACommands">Temel NVDA Komutları</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>Şift</td>
 <td>yok</td>
 <td>Konuşmayı O an için Duraklatır. Duraklama işlevi, geçerli sentezleyici tarafından destekleniyorsa, Şifte tekrar bastığınızda konuşma kaldığı yerden devam eder</td>
+</tr>
+<tr>
+<td>Son seslendirilen bilgiyi tekrarla</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Yok</td>
+<td>NVDA tarafından son seslendirilen bilgiyi tekrarlar. İki kez basıldığında bilgi, göz atılabilir bir pencerede gösterilir</td>
 </tr>
 <tr>
 <td>NVDA Menüsü</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Mevcut belge için tek tuşla dolaşımı açıp kapatmak için, NVDA+şift+aralık tuşlarını kullanın.</p>
+<h4 id="BrowseModeTouch">Tarama Kipinde Dokunarak Dolaşma</h4>
+<h5 id="tarama-kipinde-dokunma-hareketleri">Tarama kipinde dokunma hareketleri</h5>
+<table>
+<thead>
+<tr>
+<th>Ad</th>
+<th>Dokunuş</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sonraki öğe türünü seç</td>
+<td>aşağı kaydır</td>
+<td>Sonraki tarama kipi dolaşım öğesi türüne geçer</td>
+</tr>
+<tr>
+<td>Önceki öğe türünü seç</td>
+<td>yukarı kaydır</td>
+<td>Önceki tarama kipi dolaşım öğesi türüne geçer</td>
+</tr>
+<tr>
+<td>Sonraki öğeye git</td>
+<td>sağa kaydır</td>
+<td>Seçili türdeki sonraki tarama kipi öğesine gider</td>
+</tr>
+<tr>
+<td>Önceki öğeye git</td>
+<td>sola kaydır</td>
+<td>Seçili türdeki önceki tarama kipi öğesine gider</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">Öğe Listesi</h3>
 <table>
 <thead>
@@ -1203,12 +1261,162 @@
 </tbody>
 </table>
 <h2 id="Braille">Braille</h2>
+<h3 id="BrailleReading">Braille Okuma</h3>
+<h4 id="BrailleReadingGestures">Braille Okuma Hareketleri</h4>
+<table>
+<thead>
+<tr>
+<th>Ad</th>
+<th>Tuş</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Braille kipini değiştirir</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Kullanılabilir braille kipleri olan "imleçleri takip et" ve "konuşma çıktısını görüntüle" arasında geçiş yapılmasını sağlar</td>
+</tr>
+<tr>
+<td>Braille'i ilişkilendir</td>
+<td><code>NVDA+control+t</code></td>
+<td>Braille ekranın sistem odağını/imlecini, nesne sunucusunu/inceleme imlecini veya her ikisini takip edip etmeyeceğini seçmenizi sağlar</td>
+</tr>
+<tr>
+<td>Otomatik kaydırmayı açıp kapat</td>
+<td><code>NVDA+alt+k</code></td>
+<td>NVDA'nın bir defada gösterilemeyecek kadar uzun bilgileri sunmak için braille ekranı düzenli aralıklarla kaydırıp kaydırmayacağını belirler</td>
+</tr>
+<tr>
+<td>Otomatik kaydırma hızını artır</td>
+<td><code>NVDA+alt+l</code></td>
+<td>Otomatik kaydırmayı hızlandırır (etkinken)</td>
+</tr>
+<tr>
+<td>Otomatik kaydırma hızını azalt</td>
+<td><code>NVDA+alt+j</code></td>
+<td>Otomatik kaydırmayı yavaşlatır (etkinken)</td>
+</tr>
+<tr>
+<td>Braille imleci şekilleri arasında geçiş yap</td>
+<td>Yok</td>
+<td>Braille imlecinin şekil seçenekleri (nokta düzeni) arasında geçiş yapar</td>
+</tr>
+<tr>
+<td>İnceleme imleci yönlendirilirken sistem imlecini taşıma durumları arasında geçiş yap</td>
+<td>Yok</td>
+<td>İnceleme imleci yönlendirilirken braille sistem imlecini taşıma durumları arasında geçiş yapar</td>
+</tr>
+<tr>
+<td>İletileri gösterme kipleri arasında geçiş yap</td>
+<td>Yok</td>
+<td>Braille iletileri gösterme kipleri arasında geçiş yapar</td>
+</tr>
+<tr>
+<td>Braille seçimi gösterme durumları arasında geçiş yap</td>
+<td>Yok</td>
+<td>Braille seçimi gösterme durumları arasında geçiş yapar</td>
+</tr>
+<tr>
+<td>Braille Unicode normalleştirme durumları arasında geçiş yap</td>
+<td>Yok</td>
+<td>Braille Unicode normalleştirme durumları arasında geçiş yapar</td>
+</tr>
+<tr>
+<td>Braille'i odağa taşı</td>
+<td>Yok</td>
+<td>Braille ekranı geçerli odağa taşır</td>
+</tr>
+<tr>
+<td>Braille'i sonraki satıra taşı</td>
+<td>Yok</td>
+<td>Braille ekranı sonraki satıra taşır</td>
+</tr>
+<tr>
+<td>Braille'i önceki satıra taşı</td>
+<td>Yok</td>
+<td>Braille ekranı önceki satıra taşır</td>
+</tr>
+<tr>
+<td>Braille biçimlendirmesini bildir</td>
+<td>Yok</td>
+<td>Bu braille hücresinin altındaki metnin biçimlendirme bilgisini bildirir</td>
+</tr>
+<tr>
+<td>Braille nesnesine yönlendir veya nesneyi etkinleştir</td>
+<td>Yok</td>
+<td>İmleci bu braille hücresinin altındaki nesneye yönlendirir veya nesneyi etkinleştirir</td>
+</tr>
+<tr>
+<td>Braille ekranı geri kaydır</td>
+<td>Yok</td>
+<td>Braille ekranı geri kaydırır</td>
+</tr>
+<tr>
+<td>Braille ekranı ileri kaydır</td>
+<td>Yok</td>
+<td>Braille ekranı ileri kaydırır</td>
+</tr>
+<tr>
+<td>Braille imlecini açıp kapat</td>
+<td>Yok</td>
+<td>Braille imlecini açar veya kapatır</td>
+</tr>
+<tr>
+<td>Braille bağlam bilgisini açıp kapat</td>
+<td>Yok</td>
+<td>Bağlam bilgisinin braille olarak sunulma biçimini değiştirir</td>
+</tr>
+<tr>
+<td>Braille ile dolaşırken konuşmayı açıp kapat</td>
+<td>Yok</td>
+<td>Braille ile satırlar veya paragraflar arasında dolaşırken konuşmayı açar veya kapatır</td>
+</tr>
+<tr>
+<td>Yönlendirme sırasında karakter seslendirmesini açıp kapat</td>
+<td>Yok</td>
+<td>Metinde imleç yönlendirilirken imlecin altındaki karakterin seslendirilmesini açar veya kapatır</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Braille Girişi</h3>
 <ol>
 <li>nokta basarak son braille hücreyi ya da girilen karakteri silersiniz.</li>
 <li>nokta braille girişi çevirir ve enter tuşuna basar.</li>
 <li>ve 8. noktalara birlikte basarsanız aralık ya da enter tuşuna basılmaksızın braille girişi metne çevrilir.</li>
 </ol>
+<h4 id="BrailleInputGestures">Braille Girdi Hareketleri</h4>
+<table>
+<thead>
+<tr>
+<th>Ad</th>
+<th>Tuş</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Braille ekran üzerinden girdi</td>
+<td>herhangi bir nokta</td>
+<td>Braille klavyesi üzerinden braille noktaları girer</td>
+</tr>
+<tr>
+<td>Son girileni sil</td>
+<td><code>dot7</code></td>
+<td>Son girilen braille hücresini veya karakteri siler</td>
+</tr>
+<tr>
+<td>Braille girdiyi çevir</td>
+<td><code>dot7+dot8</code></td>
+<td>Tüm braille girdiyi çevirir</td>
+</tr>
+<tr>
+<td>Çevir ve enter tuşuna bas</td>
+<td><code>dot8</code></td>
+<td>Tüm braille girdiyi çevirir ve enter tuşuna basar</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Görsellik</h2>
 <h3 id="VisionScreenCurtain">Ekran perdesi</h3>
 <table>
@@ -1224,6 +1432,94 @@
 <td>Ekran perdesini ayarla</td>
 <td><code>NVDA+control+escape</code></td>
 <td>Ekranı karartmak için etkinleştirin veya karartmayı kaldırmak için devre dışı bırakın. Bir kez basıldığında, NVDA yeniden başlatılıncaya kadar ekran perdesi etkin kalır. İki kez basıldığında ekran perdesi siz devre dışı bırakana kadar etkin kalır.</td>
+</tr>
+<tr>
+<td>Ekran perdesinin durumunu bildirir</td>
+<td>Yok</td>
+<td>Ekran perdesinin devre dışı, etkin veya geçici kipte olduğunu belirterek geçerli durumunu bildirir.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Büyüteç</h2>
+<h3 id="MagnifierCommands">Büyüteç Komutları</h3>
+<table>
+<thead>
+<tr>
+<th>Ad</th>
+<th>Tuş</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Büyüteci açıp kapat</td>
+<td><code>NVDA+shift+w</code></td>
+<td>Büyüteci etkinleştirir veya devre dışı bırakır</td>
+</tr>
+<tr>
+<td>Büyütme düzeyini artır</td>
+<td><code>NVDA+shift+equals</code></td>
+<td>Yakınlaştırma düzeyini artırır. Büyüteç henüz çalışmıyorsa büyüteci başlatır.</td>
+</tr>
+<tr>
+<td>Büyütme düzeyini azalt</td>
+<td><code>NVDA+shift+minus</code></td>
+<td>Yakınlaştırma düzeyini azaltır</td>
+</tr>
+<tr>
+<td>Renk filtreleri arasında geçiş yap</td>
+<td><code>NVDA+shift+i</code></td>
+<td>Kullanılabilir renk filtreleri (normal, gri tonlamalı, ters çevrilmiş) arasında geçiş yapar</td>
+</tr>
+<tr>
+<td>Takip kipleri arasında geçiş yap</td>
+<td>Yok</td>
+<td>Takip kipleri (ortala, göreli) arasında geçiş yapar</td>
+</tr>
+<tr>
+<td>Tüm ekran genel görünümünü göster</td>
+<td><code>NVDA+shift+l</code></td>
+<td>Geçici olarak tüm ekranın genel görünümünü gösterir</td>
+</tr>
+<tr>
+<td>Sola kaydır</td>
+<td><code>NVDA+alt+leftArrow</code></td>
+<td>Büyütülmüş görünümü yapılandırılan kaydırma adımı boyutu kadar sola taşır</td>
+</tr>
+<tr>
+<td>Sağa kaydır</td>
+<td><code>NVDA+alt+rightArrow</code></td>
+<td>Büyütülmüş görünümü yapılandırılan kaydırma adımı boyutu kadar sağa taşır</td>
+</tr>
+<tr>
+<td>Yukarı kaydır</td>
+<td><code>NVDA+alt+upArrow</code></td>
+<td>Büyütülmüş görünümü yapılandırılan kaydırma adımı boyutu kadar yukarı taşır</td>
+</tr>
+<tr>
+<td>Aşağı kaydır</td>
+<td><code>NVDA+alt+downArrow</code></td>
+<td>Büyütülmüş görünümü yapılandırılan kaydırma adımı boyutu kadar aşağı taşır</td>
+</tr>
+<tr>
+<td>Sol kenara kaydır</td>
+<td><code>NVDA+shift+alt+leftArrow</code></td>
+<td>Büyütülmüş görünümü doğrudan ekranın sol kenarına taşır</td>
+</tr>
+<tr>
+<td>Sağ kenara kaydır</td>
+<td><code>NVDA+shift+alt+rightArrow</code></td>
+<td>Büyütülmüş görünümü doğrudan ekranın sağ kenarına taşır</td>
+</tr>
+<tr>
+<td>Üst kenara kaydır</td>
+<td><code>NVDA+shift+alt+upArrow</code></td>
+<td>Büyütülmüş görünümü doğrudan ekranın üst kenarına taşır</td>
+</tr>
+<tr>
+<td>Alt kenara kaydır</td>
+<td><code>NVDA+shift+alt+downArrow</code></td>
+<td>Büyütülmüş görünümü doğrudan ekranın alt kenarına taşır</td>
 </tr>
 </tbody>
 </table>
@@ -1659,6 +1955,37 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Büyüteç</h4>
+<table>
+<thead>
+<tr>
+<th>Ad</th>
+<th>Masaüstü Kısayol tuşu</th>
+<th>Dizüstü Kısayol tuşu</th>
+<th>Tarif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Büyüteç ayarlarını aç</td>
+<td><code>NVDA+control+w</code></td>
+<td><code>NVDA+control+w</code></td>
+<td>NVDA Ayarları iletişim kutusundaki Büyüteç kategorisi, NVDA'nın dahili <a href="#Magnifier" title="Büyüteç">Büyüteç</a> özelliğinin varsayılan davranışını yapılandırmanızı sağlar.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Büyüteci Etkinleştir</td>
+<td><code>NVDA+shift+w</code></td>
+<td><code>NVDA+shift+w</code></td>
+<td>Bu seçenek Büyüteci başlatır veya durdurur.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Renk filtresi</td>
+<td><code>NVDA+shift+i</code></td>
+<td><code>NVDA+shift+i</code></td>
+<td>Bu seçenek, büyüteç kullanılırken uygulanacak filtreyi seçmenizi sağlar.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Klavye</h4>
 <table>
 <thead>
@@ -1829,23 +2156,20 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 <thead>
 <tr>
 <th>Ad</th>
-<th>Masaüstü Kısayol tuşu</th>
-<th>Dizüstü Kısayol tuşu</th>
-<th>Tarif</th>
+<th>Tuş</th>
+<th>Açıklama</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Konfigurasyonu kaydet</td>
-<td><code>NVDA+kontrol+c</code></td>
+<td>Yapılandırmayı kaydet</td>
 <td><code>NVDA+control+c</code></td>
-<td>Geçerli ayarlarınızı NVDA'dan çıkarken kaybolmasın diye kaydeder.</td>
+<td>Geçerli yapılandırmanızı, NVDA'dan çıktığınızda kaybolmaması için kaydeder</td>
 </tr>
 <tr>
-<td>Kaydedilmiş konfigürasyona dön</td>
-<td><code>NVDA+kontrol+r</code></td>
+<td>Yapılandırmayı geri al</td>
 <td><code>NVDA+control+r</code></td>
-<td>Bir kez bastığınızda ayarınızı son kaydettiğiniz hâle döndürür. Üç kez bastığınızda fabrika ayarlarına döner.</td>
+<td>Bir kez basıldığında yapılandırmanızı son kaydettiğiniz durumuna sıfırlar. Üç kez basıldığında geri alma iletişim kutusunu göstermeden fabrika varsayılanlarına sıfırlar.</td>
 </tr>
 </tbody>
 </table>
@@ -2791,7 +3115,7 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 </thead>
 <tbody>
 <tr>
-<td>Route to braille cell</td>
+<td>Braille hücresine yönlendir</td>
 <td>routing</td>
 </tr>
 <tr>
@@ -3047,11 +3371,11 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 </thead>
 <tbody>
 <tr>
-<td>Scroll braille display back</td>
+<td>Braille ekranı geri kaydır</td>
 <td>left</td>
 </tr>
 <tr>
-<td>Scroll braille display forward</td>
+<td>Braille ekranı ileri kaydır</td>
 <td>right</td>
 </tr>
 <tr>
@@ -3087,7 +3411,7 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 <td>left+right</td>
 </tr>
 <tr>
-<td>Route to braille cell</td>
+<td>Braille hücresine yönlendir</td>
 <td>routing</td>
 </tr>
 </tbody>
@@ -3102,11 +3426,11 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 </thead>
 <tbody>
 <tr>
-<td>Scroll braille display back</td>
+<td>Braille ekranı geri kaydır</td>
 <td>left</td>
 </tr>
 <tr>
-<td>Scroll braille display forward</td>
+<td>Braille ekranı ileri kaydır</td>
 <td>right</td>
 </tr>
 <tr>
@@ -3154,7 +3478,7 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 <td>RJ right</td>
 </tr>
 <tr>
-<td>Route to braille cell</td>
+<td>Braille hücresine yönlendir</td>
 <td>routing</td>
 </tr>
 <tr>
@@ -3229,31 +3553,31 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 </thead>
 <tbody>
 <tr>
-<td>Scroll braille display back</td>
+<td>Braille ekranı geri kaydır</td>
 <td>left</td>
 </tr>
 <tr>
-<td>Scroll braille display forward</td>
+<td>Braille ekranı ileri kaydır</td>
 <td>right</td>
 </tr>
 <tr>
-<td>Move braille display to previous line</td>
+<td>Braille ekranı önceki satıra taşı</td>
 <td>up</td>
 </tr>
 <tr>
-<td>Move braille display to next line</td>
+<td>Braille ekranı sonraki satıra taşı</td>
 <td>dn</td>
 </tr>
 <tr>
-<td>Route to braille cell</td>
+<td>Braille hücresine yönlendir</td>
 <td>routing</td>
 </tr>
 <tr>
-<td>Report current character in review</td>
+<td>İncelemedeki geçerli karakteri bildir</td>
 <td>l1</td>
 </tr>
 <tr>
-<td>Activate current navigator object</td>
+<td>Geçerli nesne sunucusunu etkinleştir</td>
 <td>l2</td>
 </tr>
 <tr>
@@ -4127,7 +4451,7 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 <td><code>backward+forward</code></td>
 </tr>
 <tr>
-<td>Route to braille cell</td>
+<td>Braille hücresine yönlendir</td>
 <td><code>routing</code></td>
 </tr>
 <tr>
@@ -4202,7 +4526,7 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 <td><code>leftKeypadRight</code></td>
 </tr>
 <tr>
-<td>Route to braille cell</td>
+<td>Braille hücresine yönlendir</td>
 <td><code>routing</code></td>
 </tr>
 <tr>
@@ -4269,7 +4593,7 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 <td><code>switch1Center</code></td>
 </tr>
 <tr>
-<td>Route to braille cell</td>
+<td>Braille hücresine yönlendir</td>
 <td><code>routing</code></td>
 </tr>
 <tr>
@@ -4336,7 +4660,7 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 <td><code>l1+l8</code></td>
 </tr>
 <tr>
-<td>Route to braille cell</td>
+<td>Braille hücresine yönlendir</td>
 <td><code>routing</code></td>
 </tr>
 <tr>
@@ -4845,17 +5169,17 @@ Microsoft 2016, 365 ve daha yeni sürümlerde, Microsoft Excel'deki klasik açı
 <thead>
 <tr>
 <th>Ad</th>
-<th>Kısayol</th>
+<th>Tuş</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Braille ekranı geri kaydır</td>
-<td><code>pan_left</code></td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
 <td>Braille ekranı ileri kaydır</td>
-<td><code>pan_right</code></td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

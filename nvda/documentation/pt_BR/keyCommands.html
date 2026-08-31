@@ -2,16 +2,16 @@
 <html lang="pt_BR" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>Referência Rápida de Comandos do NVDA 2026.1.1</title>
+<title>Referência Rápida de Comandos do NVDA 2026.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="referencia-rapida-de-comandos-do-nvda-202611">Referência Rápida de Comandos do NVDA 2026.1.1</h1>
+<body><h1 id="referencia-rapida-de-comandos-do-nvda-20262">Referência Rápida de Comandos do NVDA 2026.2</h1>
 <div class="toc">
 <ul>
-<li><a href="#referencia-rapida-de-comandos-do-nvda-202611" title="Referência Rápida de Comandos do NVDA 2026.1.1">Referência Rápida de Comandos do NVDA 2026.1.1</a><ul>
+<li><a href="#referencia-rapida-de-comandos-do-nvda-20262" title="Referência Rápida de Comandos do NVDA 2026.2">Referência Rápida de Comandos do NVDA 2026.2</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Usando o NVDA">Usando o NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="Gestos de Toques do NVDA">Gestos de Toques do NVDA</a><ul>
 <li><a href="#TouchModes" title="Modos de Toques">Modos de Toques</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Modo de Navegação">Modo de Navegação</a><ul>
-<li><a href="#SingleLetterNavigation" title="Navegação com Caractere Avulso — Navegação Rápida">Navegação com Caractere Avulso — Navegação Rápida</a></li>
+<li><a href="#SingleLetterNavigation" title="Navegação com Caractere Avulso — Navegação Rápida">Navegação com Caractere Avulso — Navegação Rápida</a><ul>
+<li><a href="#BrowseModeTouch" title="Touch Navigation in Browse Mode">Touch Navigation in Browse Mode</a><ul>
+<li><a href="#touch-gestures-in-browse-mode" title="Touch gestures in browse mode">Touch gestures in browse mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="A Lista de Elementos">A Lista de Elementos</a></li>
 <li><a href="#SearchingForText" title="Procurando por texto">Procurando por texto</a></li>
 <li><a href="#ImbeddedObjects" title="Objetos Embutidos">Objetos Embutidos</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Braille">Braille</a><ul>
-<li><a href="#BrailleInput" title="Entrada — digitação — em Braille">Entrada — digitação — em Braille</a></li>
+<li><a href="#BrailleReading" title="Reading Braille">Reading Braille</a><ul>
+<li><a href="#BrailleReadingGestures" title="Braille Reading Gestures">Braille Reading Gestures</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Entrada — digitação — em Braille">Entrada — digitação — em Braille</a><ul>
+<li><a href="#BrailleInputGestures" title="Braille Input Gestures">Braille Input Gestures</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Visão">Visão</a><ul>
 <li><a href="#VisionScreenCurtain" title="Cortina de Tela">Cortina de Tela</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Magnifier">Magnifier</a><ul>
+<li><a href="#MagnifierCommands" title="Magnifier Commands">Magnifier Commands</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Reconhecimento de Conteúdo">Reconhecimento de Conteúdo</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Divisão de som">Divisão de som</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Magnifier">Magnifier</a></li>
 <li><a href="#KeyboardSettings" title="Teclado">Teclado</a></li>
 <li><a href="#MouseSettings" title="Mouse">Mouse</a></li>
 <li><a href="#ReviewCursorSettings" title="Cursor de Exploração">Cursor de Exploração</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">Gestos de Toques do NVDA</h3>
 <p>Para alternar o suporte à interação por toque, pressione NVDA+control+alt+t.</p>
 <h4 id="TouchModes">Modos de Toques</h4>
-<p>Para alternar entre os modos de toque, execute um toque com 3 dedos.</p>
+<p>To switch between touch modes, perform a 3-finger tap.</p>
 <h3 id="BasicNVDACommands">Comandos Básicos do NVDA</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>Shift</td>
 <td>nenhum</td>
 <td>Pausa instantaneamente a voz. Pressionada novamente continuará a falar desde onde parou (se a pausa for suportada pelo sintetizador atual)</td>
+</tr>
+<tr>
+<td>Repeat last spoken information</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>None</td>
+<td>Repeats the last information spoken by NVDA. Pressing twice shows it in a browseable window</td>
 </tr>
 <tr>
 <td>Menu do NVDA</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Para alternar a ativação das teclas de navegação com caracteres avulsos no documento atual, pressione NVDA+shift+espaço.</p>
+<h4 id="BrowseModeTouch">Touch Navigation in Browse Mode</h4>
+<h5 id="touch-gestures-in-browse-mode">Touch gestures in browse mode</h5>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Touch</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select next element type</td>
+<td>flick down</td>
+<td>Switches to the next browse mode navigation element type</td>
+</tr>
+<tr>
+<td>Select previous element type</td>
+<td>flick up</td>
+<td>Switches to the previous browse mode navigation element type</td>
+</tr>
+<tr>
+<td>Move to next element</td>
+<td>flick right</td>
+<td>Moves to the next browse mode element of the selected type</td>
+</tr>
+<tr>
+<td>Move to previous element</td>
+<td>flick left</td>
+<td>Moves to the previous browse mode element of the selected type</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">A Lista de Elementos</h3>
 <table>
 <thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">Braille</h2>
+<h3 id="BrailleReading">Reading Braille</h3>
+<h4 id="BrailleReadingGestures">Braille Reading Gestures</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggles braille mode</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Allows cycling between available braille modes: "follow cursors" and "display speech output"</td>
+</tr>
+<tr>
+<td>Tether braille</td>
+<td><code>NVDA+control+t</code></td>
+<td>This option allows you to choose whether the braille display will follow the system focus / caret, the navigator object / review cursor, or both</td>
+</tr>
+<tr>
+<td>Toggle automatic scroll</td>
+<td><code>NVDA+alt+k</code></td>
+<td>Toggles whether NVDA periodically scrolls the braille display to present information which is too long to show at once</td>
+</tr>
+<tr>
+<td>Increase automatic scroll rate</td>
+<td><code>NVDA+alt+l</code></td>
+<td>Makes automatic scrolling faster (when enabled)</td>
+</tr>
+<tr>
+<td>Decrease automatic scroll rate</td>
+<td><code>NVDA+alt+j</code></td>
+<td>Makes automatic scrolling slower (when enabled)</td>
+</tr>
+<tr>
+<td>Cycle braille cursor shapes</td>
+<td>None</td>
+<td>Cycle through the shape options (dot pattern) of the braille cursor</td>
+</tr>
+<tr>
+<td>Cycle move system caret when routing review cursor</td>
+<td>None</td>
+<td>Cycle through the braille move system caret when routing review cursor states</td>
+</tr>
+<tr>
+<td>Cycle show messages modes</td>
+<td>None</td>
+<td>Cycle through the braille show messages modes</td>
+</tr>
+<tr>
+<td>Cycle braille show selection states</td>
+<td>None</td>
+<td>Cycle through the braille show selection states</td>
+</tr>
+<tr>
+<td>Cycle braille Unicode normalization states</td>
+<td>None</td>
+<td>Cycle through the braille Unicode normalization states</td>
+</tr>
+<tr>
+<td>Move braille to focus</td>
+<td>None</td>
+<td>Moves the braille display to the current focus</td>
+</tr>
+<tr>
+<td>Move braille to next line</td>
+<td>None</td>
+<td>Moves the braille display to the next line</td>
+</tr>
+<tr>
+<td>Move braille to previous line</td>
+<td>None</td>
+<td>Moves the braille display to the previous line</td>
+</tr>
+<tr>
+<td>Report braille formatting</td>
+<td>None</td>
+<td>Reports formatting info for the text under this braille cell</td>
+</tr>
+<tr>
+<td>Route to or activate braille object</td>
+<td>None</td>
+<td>Routes the cursor to or activates the object under this braille cell</td>
+</tr>
+<tr>
+<td>Scroll braille display back</td>
+<td>None</td>
+<td>Scrolls the braille display back</td>
+</tr>
+<tr>
+<td>Scroll braille display forward</td>
+<td>None</td>
+<td>Scrolls the braille display forward</td>
+</tr>
+<tr>
+<td>Toggle braille cursor</td>
+<td>None</td>
+<td>Toggle the braille cursor on and off</td>
+</tr>
+<tr>
+<td>Toggle braille context information</td>
+<td>None</td>
+<td>Toggle the way context information is presented in braille</td>
+</tr>
+<tr>
+<td>Toggle speaking when navigating braille</td>
+<td>None</td>
+<td>Toggles on and off speaking when navigating by lines or paragraph with braille</td>
+</tr>
+<tr>
+<td>Toggle speaking character when routing</td>
+<td>None</td>
+<td>Toggles speaking the character under the cursor when routing cursor in text</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Entrada — digitação — em Braille</h3>
 <p>Pressionar o ponto 7 apaga a última cela ou caractere braille inserido.
 Ponto 8 transcreve qualquer entrada braille e pressiona a tecla enter.
 Pressionar o ponto 7 + ponto 8 transcreve qualquer entrada em braille, mas sem adicionar um espaço ou pressionar enter.</p>
+<h4 id="BrailleInputGestures">Braille Input Gestures</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input via braille display</td>
+<td>any dots</td>
+<td>Inputs braille dots via the braille keyboard</td>
+</tr>
+<tr>
+<td>Erase last entered</td>
+<td><code>dot7</code></td>
+<td>Erases the last entered braille cell or character</td>
+</tr>
+<tr>
+<td>Translate braille input</td>
+<td><code>dot7+dot8</code></td>
+<td>Translates any braille input</td>
+</tr>
+<tr>
+<td>Translate and press enter</td>
+<td><code>dot8</code></td>
+<td>Translates any braille input and presses the enter key</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Visão</h2>
 <h3 id="VisionScreenCurtain">Cortina de Tela</h3>
 <table>
@@ -1218,6 +1426,94 @@ Pressionar o ponto 7 + ponto 8 transcreve qualquer entrada em braille, mas sem a
 <td>Alterna o estado da cortina de tela</td>
 <td><code>NVDA+control+escape</code></td>
 <td>Habilite para deixar a tela preta ou desabilite para mostrar o conteúdo da tela. Pressionada uma vez, a cortina de tela fica habilitada até você reiniciar o NVDA. Pressionada duas vezes, a cortina de tela fica habilitada até você desabilitá-la.</td>
+</tr>
+<tr>
+<td>Reports the state of the screen curtain</td>
+<td>None</td>
+<td>Announces the current status of the screen curtain, whether it is disabled or enabled or in temporary mode.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Magnifier</h2>
+<h3 id="MagnifierCommands">Magnifier Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle the magnifier on and off</td>
+<td><code>NVDA+shift+w</code></td>
+<td>Enables or disables the magnifier</td>
+</tr>
+<tr>
+<td>Increase the magnification level</td>
+<td><code>NVDA+shift+equals</code></td>
+<td>Increases the zoom level. Starts the magnifier if it's not already running.</td>
+</tr>
+<tr>
+<td>Decrease the magnification level</td>
+<td><code>NVDA+shift+minus</code></td>
+<td>Decreases the zoom level</td>
+</tr>
+<tr>
+<td>Cycle color filters</td>
+<td><code>NVDA+shift+i</code></td>
+<td>Cycles through the available color filters (normal, grayscale, inverted)</td>
+</tr>
+<tr>
+<td>Cycle tracking mode</td>
+<td>None</td>
+<td>Cycles through tracking modes (center, relative)</td>
+</tr>
+<tr>
+<td>Show entire screen overview</td>
+<td><code>NVDA+shift+l</code></td>
+<td>Temporarily shows an overview of the entire screen</td>
+</tr>
+<tr>
+<td>Pan left</td>
+<td><code>NVDA+alt+leftArrow</code></td>
+<td>Moves the magnified view left by the configured panning step size</td>
+</tr>
+<tr>
+<td>Pan right</td>
+<td><code>NVDA+alt+rightArrow</code></td>
+<td>Moves the magnified view right by the configured panning step size</td>
+</tr>
+<tr>
+<td>Pan up</td>
+<td><code>NVDA+alt+upArrow</code></td>
+<td>Moves the magnified view up by the configured panning step size</td>
+</tr>
+<tr>
+<td>Pan down</td>
+<td><code>NVDA+alt+downArrow</code></td>
+<td>Moves the magnified view down by the configured panning step size</td>
+</tr>
+<tr>
+<td>Pan to left edge</td>
+<td><code>NVDA+shift+alt+leftArrow</code></td>
+<td>Moves the magnified view directly to the left edge of the screen</td>
+</tr>
+<tr>
+<td>Pan to right edge</td>
+<td><code>NVDA+shift+alt+rightArrow</code></td>
+<td>Moves the magnified view directly to the right edge of the screen</td>
+</tr>
+<tr>
+<td>Pan to top edge</td>
+<td><code>NVDA+shift+alt+upArrow</code></td>
+<td>Moves the magnified view directly to the top edge of the screen</td>
+</tr>
+<tr>
+<td>Pan to bottom edge</td>
+<td><code>NVDA+shift+alt+downArrow</code></td>
+<td>Moves the magnified view directly to the bottom edge of the screen</td>
 </tr>
 </tbody>
 </table>
@@ -1653,6 +1949,37 @@ No Microsoft 2016, 365 e mais recente, os comentários clássicos no Microsoft E
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Magnifier</h4>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Tecla de Desktop</th>
+<th>Tecla de Laptop</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Open Magnifier settings</td>
+<td><code>NVDA+control+w</code></td>
+<td><code>NVDA+control+w</code></td>
+<td>The Magnifier category in the NVDA Settings dialog allows you to configure the default behavior of NVDA's built-in <a href="#Magnifier" title="Magnifier">Magnifier</a> feature.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Enable Magnifier</td>
+<td><code>NVDA+shift+w</code></td>
+<td><code>NVDA+shift+w</code></td>
+<td>This option starts or stops the Magnifier.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Color filter</td>
+<td><code>NVDA+shift+i</code></td>
+<td><code>NVDA+shift+i</code></td>
+<td>This option allows you to select the filter to apply when using the magnifier.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Teclado</h4>
 <table>
 <thead>
@@ -1822,24 +2149,21 @@ No Microsoft 2016, 365 e mais recente, os comentários clássicos no Microsoft E
 <table>
 <thead>
 <tr>
-<th>Nome</th>
-<th>Tecla de Desktop</th>
-<th>Tecla de Laptop</th>
-<th>Descrição</th>
+<th>Name</th>
+<th>Key</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Salvar Configuração</td>
+<td>Save configuration</td>
 <td><code>NVDA+control+c</code></td>
-<td><code>NVDA+control+c</code></td>
-<td>Salva sua configuração atual, de modo que não se perca quando sair do NVDA</td>
+<td>Saves your current configuration so that it is not lost when you exit NVDA</td>
 </tr>
 <tr>
-<td>Voltar à Configuração Salva</td>
+<td>Revert configuration</td>
 <td><code>NVDA+control+r</code></td>
-<td><code>NVDA+control+r</code></td>
-<td>Pressionada uma vez retorna suas configurações para aquelas salvas da última vez. Pressionando-se 3 vezes irá retorná-las aos padrões originais.</td>
+<td>Pressing once resets your configuration to when you last saved it. Pressing three times will reset it back to factory defaults without showing the undo dialog.</td>
 </tr>
 </tbody>
 </table>
@@ -4838,18 +5162,18 @@ No Microsoft 2016, 365 e mais recente, os comentários clássicos no Microsoft E
 <table>
 <thead>
 <tr>
-<th>Nome</th>
-<th>Tecla</th>
+<th>Name</th>
+<th>Key</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Rolar a linha braille para trás</td>
-<td><code>pan_left</code></td>
+<td>Scroll braille display back</td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
-<td>Rolar a linha braille para frente</td>
-<td><code>pan_right</code></td>
+<td>Scroll braille display forward</td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

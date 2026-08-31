@@ -2,16 +2,16 @@
 <html lang="nl" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>`NVDA 2026.1 overzicht commando's</title>
+<title>`NVDA 2026.2 overzicht commando's</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-20261-overzicht-commandos">`NVDA 2026.1 overzicht commando's</h1>
+<body><h1 id="nvda-20262-overzicht-commandos">`NVDA 2026.2 overzicht commando's</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20261-overzicht-commandos" title="`NVDA 2026.1 overzicht commando's">`NVDA 2026.1 overzicht commando's</a><ul>
+<li><a href="#nvda-20262-overzicht-commandos" title="`NVDA 2026.2 overzicht commando's">`NVDA 2026.2 overzicht commando's</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Aan de slag met NVDA">Aan de slag met NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA Aanraakgebaren">NVDA Aanraakgebaren</a><ul>
 <li><a href="#TouchModes" title="Aanraakmodi">Aanraakmodi</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Bladermodus">Bladermodus</a><ul>
-<li><a href="#SingleLetterNavigation" title="Lettertoetsnavigatie">Lettertoetsnavigatie</a></li>
+<li><a href="#SingleLetterNavigation" title="Lettertoetsnavigatie">Lettertoetsnavigatie</a><ul>
+<li><a href="#BrowseModeTouch" title="Navigatie door aanraking in Bladermodus">Navigatie door aanraking in Bladermodus</a><ul>
+<li><a href="#aanraakgebaren-in-bladermodus" title="Aanraakgebaren in bladermodus">Aanraakgebaren in bladermodus</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="De lijst met elementen">De lijst met elementen</a></li>
 <li><a href="#SearchingForText" title="Naar tekst zoeken">Naar tekst zoeken</a></li>
 <li><a href="#ImbeddedObjects" title="Ingebedde objecten">Ingebedde objecten</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Braille">Braille</a><ul>
-<li><a href="#BrailleInput" title="Brailleinvoer">Brailleinvoer</a></li>
+<li><a href="#BrailleReading" title="Braille Lezen">Braille Lezen</a><ul>
+<li><a href="#BrailleReadingGestures" title="Gebaren voor het Lezen van Braille">Gebaren voor het Lezen van Braille</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Brailleinvoer">Brailleinvoer</a><ul>
+<li><a href="#BrailleInputGestures" title="Braille-invoerhandelingen">Braille-invoerhandelingen</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Zicht">Zicht</a><ul>
 <li><a href="#VisionScreenCurtain" title="Scherm Dimmen (Schermgordijn)">Scherm Dimmen (Schermgordijn)</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Vergrootglas">Vergrootglas</a><ul>
+<li><a href="#MagnifierCommands" title="Vergrootglascommando's">Vergrootglascommando's</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Inhoudherkenning">Inhoudherkenning</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Sound split (stereogeluid splitsen)">Sound split (stereogeluid splitsen)</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Vergrootglas">Vergrootglas</a></li>
 <li><a href="#KeyboardSettings" title="Toetsenbord (NVDA+control+k)">Toetsenbord (NVDA+control+k)</a></li>
 <li><a href="#MouseSettings" title="Muis (NVDA+control+m)">Muis (NVDA+control+m)</a></li>
 <li><a href="#ReviewCursorSettings" title="Leescursor (review cursor)">Leescursor (review cursor)</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">NVDA Aanraakgebaren</h3>
 <p>Om ondersteuning voor aanraakinteractie aan- of uit te zetten drukt u op NVDA+control+alt+t.</p>
 <h4 id="TouchModes">Aanraakmodi</h4>
-<p>Wisselen tussen aanraakmodi doet u door eenmaal tikken met drie vingers.</p>
+<p>Om te wisselen tussen aanraakmodi, tik je eenmaal met drie vingers.</p>
 <h3 id="BasicNVDACommands">De NVDA-basiscommando’s</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>Shift</td>
 <td>geen</td>
 <td>Spraakuitvoer wordt gepauzeerd. Druk Shift opnieuw in om verder te lezen vanaf de pauzepositie(als de gebruikte synthesizer dit ondersteunt)</td>
+</tr>
+<tr>
+<td>Herhaal laatst voorgelezen informatie</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Geen</td>
+<td>Herhaalt laatst door NVDA voorgelezen informatie. Tweemaal drukken toont deze in een bladervenster</td>
 </tr>
 <tr>
 <td>NVDA Menu</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Om de lettertoetsnavigatie voor het huidige document in of uit te schakelen drukt u op NVDA+shift+spatiebalk.</p>
+<h4 id="BrowseModeTouch">Navigatie door  aanraking in Bladermodus</h4>
+<h5 id="aanraakgebaren-in-bladermodus">Aanraakgebaren in bladermodus</h5>
+<table>
+<thead>
+<tr>
+<th>Naam</th>
+<th>Aanraking</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selecteer volgend elementtype</td>
+<td>snelle veeg omlaag</td>
+<td>Naar het volgende bladermodus besturingselementtype gaan</td>
+</tr>
+<tr>
+<td>Selecteer vorig elementtype</td>
+<td>snelle veeg omhoog</td>
+<td>Naar het vorige bladermodus besturingselementtype gaan</td>
+</tr>
+<tr>
+<td>Naar volgend element verplaatsen</td>
+<td>snelle veeg naar rechts</td>
+<td>Verplaatsing naar het volgende bladermoduselement van het geselecteerde type</td>
+</tr>
+<tr>
+<td>Verplaatsen naar vorig element</td>
+<td>snelle veeg naar links</td>
+<td>Verplaatsing naar het vorige bladermoduselement van het geselecteerde type</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">De lijst met elementen</h3>
 <table>
 <thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">Braille</h2>
+<h3 id="BrailleReading">Braille Lezen</h3>
+<h4 id="BrailleReadingGestures">Gebaren voor het Lezen van Braille</h4>
+<table>
+<thead>
+<tr>
+<th>Naam</th>
+<th>Toets</th>
+<th>Omschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wisselen van braille-modus</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Maakt het mogelijk de beschikbare braille-modi te doorlopen: "follow cursors" and "display speech output"</td>
+</tr>
+<tr>
+<td>Braille volgmodus</td>
+<td><code>NVDA+control+t</code></td>
+<td>Met deze optie kun je kiezen of de brailleleesregel de systeemfocus / caret volgt, het navigatorobject / de leescursor, ofbeide volgt</td>
+</tr>
+<tr>
+<td>automatisch scrollen in/uitschakelen</td>
+<td><code>NVDA+alt+k</code></td>
+<td>Hiermee kun je instellen of NVDA periodiek het braille-display scrollt om informatie weer te geven die te lang is om in één keer te tonen</td>
+</tr>
+<tr>
+<td>Snelheid automatisch scrollen verhogen</td>
+<td><code>NVDA+alt+l</code></td>
+<td>Maakt automatisch scrollen sneller (indien ingeschakeld)</td>
+</tr>
+<tr>
+<td>Snelheid automatisch scrollen verlagen</td>
+<td><code>NVDA+alt+j</code></td>
+<td>Maakt automatisch scrollen trager (indien ingeschakeld)</td>
+</tr>
+<tr>
+<td>Verschillende braille-cursorvormen doorlopen</td>
+<td>Geen</td>
+<td>Doorloop de opties mbt de beschikbare vormen(puntpatroon) van de braillecursor</td>
+</tr>
+<tr>
+<td>Doorloop  verplaatsen systeemcursor bij routering review cursor (leescursor)</td>
+<td>Geen</td>
+<td>Doorloop verplaatsen van de braille-systeemcaret bij het  routeren van leescursor-stadia</td>
+</tr>
+<tr>
+<td>Doorloop meldingenmodi tonen</td>
+<td>Geen</td>
+<td>Braille meldingenmodi tonen doorlopen</td>
+</tr>
+<tr>
+<td>Doorloop braille status van selecties tonen</td>
+<td>Geen</td>
+<td>Doorloop de braille status van selecties tonen</td>
+</tr>
+<tr>
+<td>Doorloop braille statusopties Unicode normalisatie</td>
+<td>Geen</td>
+<td>Loop langs the statusopties van de braille Unicode normalisatie</td>
+</tr>
+<tr>
+<td>Verplaats braille naar focus</td>
+<td>Geen</td>
+<td>Verplaatst de brailleleesregel naar de huidige focus</td>
+</tr>
+<tr>
+<td>Verplaats braille naar volgende regel</td>
+<td>Geen</td>
+<td>Verplaatst de brailleleesregel naar de volgende regel</td>
+</tr>
+<tr>
+<td>Verplaats braille naar vorige regel</td>
+<td>Geen</td>
+<td>Verplaatst de brailleleesregel naar de vorige regel</td>
+</tr>
+<tr>
+<td>Meld braille-opmaak</td>
+<td>Geen</td>
+<td>Opmaakinfo voor de tekst onder deze braillecel wordt gemeld</td>
+</tr>
+<tr>
+<td>Routeer naar of activeer braille-object</td>
+<td>Geen</td>
+<td>Routeert de cursor naar of activeert het object onder deze braillecel</td>
+</tr>
+<tr>
+<td>Scrol brailleleesregel terug</td>
+<td>Geen</td>
+<td>Scrolt de brailleleesregel terug</td>
+</tr>
+<tr>
+<td>Scroll brailleleesregel vooruit</td>
+<td>Geen</td>
+<td>Scrots de brailleleesregel vooruit</td>
+</tr>
+<tr>
+<td>Schakel braillecursor in/uit</td>
+<td>Geen</td>
+<td>Schakelt de braillecursor in en uit</td>
+</tr>
+<tr>
+<td>Wissel van braille-context informatieweergave</td>
+<td>Geen</td>
+<td>Schakel tussen mogelijkheden om context-informatie in braille weer te geven</td>
+</tr>
+<tr>
+<td>Spraak in-/uitschakelen tijdens navigeren in braille</td>
+<td>Geen</td>
+<td>Schakelt spreken in en uit wanneer je met braille per regel en per alinea navigeert</td>
+</tr>
+<tr>
+<td>Letterteken wel/niet uitspreken bij het routeren</td>
+<td>Geen</td>
+<td>Wel of geen spraak gebruiken voor het (letter)teken onder de cursor bij routering cursor in tekst</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Brailleinvoer</h3>
 <p>Door punt 7 in te toetsen, verwijdert u de laatst ingevoerde braillecel of het laatste brailleteken.
 Punt 8 zet alle braille-invoer om en activeert de Enter-toets.
 Door punt 7 + punt 8 in te drukken wordt alle braille-invoer omgezet, maar zonder de spatiebalk of Enter-toets te activeren.</p>
+<h4 id="BrailleInputGestures">Braille-invoerhandelingen</h4>
+<table>
+<thead>
+<tr>
+<th>Naam</th>
+<th>Toets</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invoer via brailleleesregel</td>
+<td>willekeurige punten</td>
+<td>Voert braillepunten in via het brailletoetsenbord</td>
+</tr>
+<tr>
+<td>Wis het laatst ingevoerde</td>
+<td><code>dot7</code></td>
+<td>Verwijdert laatst ingevoerde braillecel of letterteken</td>
+</tr>
+<tr>
+<td>Vertaal brailleinvoer</td>
+<td><code>punt7+punt8</code></td>
+<td>Vertaalt  alle brailleinvoer</td>
+</tr>
+<tr>
+<td>Vertalen en enter indrukken</td>
+<td><code>punt8</code></td>
+<td>Vertaalt alle braille-invoer  van welke aard dan ook en drukt de entertoets in</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Zicht</h2>
 <h3 id="VisionScreenCurtain">Scherm Dimmen (Schermgordijn)</h3>
 <table>
@@ -1218,6 +1426,94 @@ Door punt 7 + punt 8 in te drukken wordt alle braille-invoer omgezet, maar zonde
 <td>Wijzigt de staat van het schermgordijn</td>
 <td><code>NVDA+control+escape</code></td>
 <td>Inschakelen om het scherm te verduisteren of uitschakelen om te laten zien wat er op het scherm wordt weergegeven. Na eenmaal drukken is het schermgordijn actief totdat je NVDA opnieuw start. Na tweemaal drukken screen wordt het schermgordijn geactiveerd totdat je het uitzet.</td>
+</tr>
+<tr>
+<td>Meld status van schermgordijn</td>
+<td>Geen</td>
+<td>Laat de huidige status van het schermgordijn horen, of het in- of uitgeschakeld is dan wel  in de ttijdelijke modus staat.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Vergrootglas</h2>
+<h3 id="MagnifierCommands">Vergrootglascommando's</h3>
+<table>
+<thead>
+<tr>
+<th>Naam</th>
+<th>Toets</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vergrootglas in- en uitschakelen</td>
+<td><code>NVDA+shift+w</code></td>
+<td>Schakelthet vergrootglas in of uit</td>
+</tr>
+<tr>
+<td>Vergrotinsfacto verhogen</td>
+<td><code>NVDA+shift+is-gelijkteken</code></td>
+<td>Verhoogt het zoomniveau. Start de vergrootlens als deze nog niet actief is.</td>
+</tr>
+<tr>
+<td>Vergrotingsfactor verlagen</td>
+<td><code>NVDA+shift+min-teken</code></td>
+<td>Verlaagt het zoemniveau</td>
+</tr>
+<tr>
+<td>Een kleurfilter kiezen</td>
+<td><code>NVDA+shift+i</code></td>
+<td>Wisselt tussen beschikbare kleurenfilters (normaal, grijstinten, omgekeerd)</td>
+</tr>
+<tr>
+<td>Doorloop volgmodus</td>
+<td>Geen</td>
+<td>Hiermee doorloop je de volgmodi (midden, relatief)</td>
+</tr>
+<tr>
+<td>Volledig schermoverzicht tonen</td>
+<td><code>NVDA+shift+l</code></td>
+<td>Temporarily laat tijdelijk een volledig schermoverzicht zien</td>
+</tr>
+<tr>
+<td>Pan naar links</td>
+<td><code>NVDA+alt+pijlLinks</code></td>
+<td>Verschuift de vergrote weergave naar links met de opgegeven stapgrootte</td>
+</tr>
+<tr>
+<td>Pan naar rechts</td>
+<td><code>NVDA+alt+pijlRechts</code></td>
+<td>Verschuift de vergrote weergave naar rechts met de aangegeven stapgrootte</td>
+</tr>
+<tr>
+<td>Pan omhoog</td>
+<td><code>NVDA+alt+pijlOmhoog</code></td>
+<td>Verplaatst de vergrote weergave omhoog op basis van de ingestelde stapgrootte</td>
+</tr>
+<tr>
+<td>Pan omlaag</td>
+<td><code>NVDA+alt+pijlOmlaag</code></td>
+<td>Verplaatst de vergrote weergave omlaag met de ingestelde stapgrootte</td>
+</tr>
+<tr>
+<td>Pan naar linker rand</td>
+<td><code>NVDA+shift+alt+pijlLinks</code></td>
+<td>Verplaatst de vergrote weergave direct naar de linker rand van het scherm</td>
+</tr>
+<tr>
+<td>Pan naar rechter rand</td>
+<td><code>NVDA+shift+alt+pijlRechts</code></td>
+<td>Verplaatst de vergrote weergave direct naar de rechter rand van het scherm</td>
+</tr>
+<tr>
+<td>Pan naar bovenrand</td>
+<td><code>NVDA+shift+alt+pijlOmhoog</code></td>
+<td>Verplaatst de vergrote weergave direct naar de bovenrand van het scherm</td>
+</tr>
+<tr>
+<td>Pan naar onderrand</td>
+<td><code>NVDA+shift+alt+pijlOmlaag</code></td>
+<td>Verplaatst de vergrote weergave direct naar de onderrand van het scherm</td>
 </tr>
 </tbody>
 </table>
@@ -1653,6 +1949,37 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Vergrootglas</h4>
+<table>
+<thead>
+<tr>
+<th>Naam</th>
+<th>Desktoptoets</th>
+<th>Laptoptoets</th>
+<th>Beschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Open Vergrootglasinstellingen</td>
+<td><code>NVDA+control+w</code></td>
+<td><code>NVDA+control+w</code></td>
+<td>Via de categorie Vergrootglas in het dialoogvenster NVDA-instellingen kun je het standaardgedrag van de ingebouwde <a href="#Magnifier" title="vergrootglasfunctie">vergrootglasfunctie</a> van NVDA configureren.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Vergrootglas inschakelen</td>
+<td><code>NVDA+shift+w</code></td>
+<td><code>NVDA+shift+w</code></td>
+<td>Met deze optie wordt het vergrootglas aan- of uitgezet.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Kleurenfilter</td>
+<td><code>NVDA+shift+i</code></td>
+<td><code>NVDA+shift+i</code></td>
+<td>Met deze optie kun je de filter selecteren die bij gebruik van het vergrootglas moet worden toegepast.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Toetsenbord (NVDA+control+k)</h4>
 <table>
 <thead>
@@ -1823,23 +2150,20 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <thead>
 <tr>
 <th>Naam</th>
-<th>Desktoptoets</th>
-<th>Laptoptoets</th>
-<th>Beschrijving</th>
+<th>Toets</th>
+<th>Beschijving</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Configuratie opslaan</td>
 <td><code>NVDA+control+c</code></td>
-<td><code>NVDA+control+c</code></td>
-<td>Slaat je huidige configuratie op zodat deze niet verloren gaat wanneer je NVDA afsluit</td>
+<td>Hiermee sla je je huidige instellingen op zodat deze niet verloren gaan bij afsluiting van NVDA</td>
 </tr>
 <tr>
 <td>Configuratie terugzetten</td>
 <td><code>NVDA+control+r</code></td>
-<td><code>NVDA+control+r</code></td>
-<td>Bij eenmaal drukken zet je de configuratie terug naar de vorige keer dat deze werd opgeslagen. Bij driemaal drukken wordt de configuratie terug gezet naar de fabrieksinstellingen.</td>
+<td>Bij eenmaal indrukken wordt de configuratie terug gezet naar  de instellingen zoals die de laatste keer werden opgeslagen. Door driemaal indrukken wordt de configuratie terug gezet naar de fabrieksinstellingen zonderdat het dialoogvenster wordt getoond om dit ongedaan te maken.</td>
 </tr>
 </tbody>
 </table>
@@ -4839,17 +5163,17 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <thead>
 <tr>
 <th>Naam</th>
-<th>Toet</th>
+<th>Toets</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Braillleesregel terugscrollen</td>
-<td><code>pan_links</code></td>
+<td>Brailleleesregel terugscrollen</td>
+<td><code>panLinks</code></td>
 </tr>
 <tr>
-<td>Brailleleesregel vooruitscrollen</td>
-<td><code>pan_rechts</code></td>
+<td>Brailleleesregel vooruit scrollen</td>
+<td><code>panRechts</code></td>
 </tr>
 </tbody>
 </table>

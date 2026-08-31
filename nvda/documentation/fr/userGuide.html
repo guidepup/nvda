@@ -2,16 +2,16 @@
 <html lang="fr" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>Guide de l'utilisateur de NVDA 2026.1.1</title>
+<title>Guide de l'utilisateur de NVDA 2026.2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="guide-de-lutilisateur-de-nvda-202611">Guide de l'utilisateur de NVDA 2026.1.1</h1>
+<body><h1 id="guide-de-lutilisateur-de-nvda-20262">Guide de l'utilisateur de NVDA 2026.2</h1>
 <div class="toc">
 <ul>
-<li><a href="#guide-de-lutilisateur-de-nvda-202611" title="Guide de l'utilisateur de NVDA 2026.1.1">Guide de l'utilisateur de NVDA 2026.1.1</a><ul>
+<li><a href="#guide-de-lutilisateur-de-nvda-20262" title="Guide de l'utilisateur de NVDA 2026.2">Guide de l'utilisateur de NVDA 2026.2</a><ul>
 <li><a href="#Introduction" title="Introduction">Introduction</a><ul>
 <li><a href="#GeneralFeatures" title="Caractéristiques Générales">Caractéristiques Générales</a></li>
 <li><a href="#SystemRequirements" title="Configuration Système Requise">Configuration Système Requise</a><ul>
@@ -65,6 +65,7 @@
 <li><a href="#StartAtWindowsLogon" title="Utiliser NVDA lors de la connexion">Utiliser NVDA lors de la connexion</a></li>
 <li><a href="#CreateDesktopShortcut" title="Créer un raccourci sur le bureau (ctrl+alt+n)">Créer un raccourci sur le bureau (ctrl+alt+n)</a></li>
 <li><a href="#CopyPortableConfigurationToCurrentUserAccount" title="Copier la configuration portable sur le compte d'utilisateur actuel">Copier la configuration portable sur le compte d'utilisateur actuel</a></li>
+<li><a href="#RestartWindowsAfterInstall" title="Redémarrez Windows après l'installation">Redémarrez Windows après l'installation</a></li>
 </ul>
 </li>
 <li><a href="#CreatingAPortableCopy" title="Création d'une copie portable">Création d'une copie portable</a></li>
@@ -87,6 +88,7 @@
 <li><a href="#TouchGestures" title="Gestes Tactiles">Gestes Tactiles</a><ul>
 <li><a href="#Taps" title="Tapes">Tapes</a></li>
 <li><a href="#Flicks" title="Glisser">Glisser</a></li>
+<li><a href="#PinchGestures" title="Gestes de pincement et d’écartement">Gestes de pincement et d’écartement</a></li>
 </ul>
 </li>
 <li><a href="#TouchModes" title="Modes Tactiles">Modes Tactiles</a></li>
@@ -117,6 +119,10 @@
 </li>
 <li><a href="#BrowseMode" title="Le mode Navigation">Le mode Navigation</a><ul>
 <li><a href="#SingleLetterNavigation" title="Les Touches de Navigation Rapide">Les Touches de Navigation Rapide</a><ul>
+<li><a href="#BrowseModeTouch" title="Mode navigation tactile">Mode navigation tactile</a><ul>
+<li><a href="#gestes-tactiles-en-mode-navigation" title="Gestes tactiles en mode navigation">Gestes tactiles en mode navigation</a></li>
+</ul>
+</li>
 <li><a href="#TextNavigationCommand" title="Commande de navigation par paragraphe de texte">Commande de navigation par paragraphe de texte</a></li>
 <li><a href="#OtherNavigationCommands" title="Autres commandes de navigation">Autres commandes de navigation</a></li>
 </ul>
@@ -137,9 +143,15 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Braille">Braille</a><ul>
+<li><a href="#BrailleReading" title="Lecture en braille">Lecture en braille</a><ul>
+<li><a href="#AutomaticBrailleScrolling" title="Défilement automatique du braille">Défilement automatique du braille</a></li>
+<li><a href="#BrailleReadingGestures" title="Gestes de lecture du braille">Gestes de lecture du braille</a></li>
+</ul>
+</li>
 <li><a href="#BrailleAbbreviations" title="Abréviations des Types, États des Contrôles et Repères en Braille">Abréviations des Types, États des Contrôles et Repères en Braille</a></li>
 <li><a href="#BrailleInput" title="Saisie en Braille">Saisie en Braille</a><ul>
 <li><a href="#BrailleKeyboardShortcuts" title="Saisie de raccourcis clavier">Saisie de raccourcis clavier</a></li>
+<li><a href="#BrailleInputGestures" title="Gestes de saisie en braille">Gestes de saisie en braille</a></li>
 </ul>
 </li>
 </ul>
@@ -147,6 +159,16 @@
 <li><a href="#Vision" title="Vision">Vision</a><ul>
 <li><a href="#VisionFocusHighlight" title="Mise en Évidence Visuelle">Mise en Évidence Visuelle</a></li>
 <li><a href="#VisionScreenCurtain" title="Le Rideau d'Écran">Le Rideau d'Écran</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Loupe">Loupe</a><ul>
+<li><a href="#MagnifierToggle" title="Activation et désactivation de la loupe">Activation et désactivation de la loupe</a></li>
+<li><a href="#MagnifierCommands" title="Commandes de la loupe">Commandes de la loupe</a></li>
+<li><a href="#MagnifierZoomLevels" title="Niveaux de zoom">Niveaux de zoom</a></li>
+<li><a href="#MagnifierColorFilters" title="Filtres de couleur">Filtres de couleur</a></li>
+<li><a href="#MagnifierTrackingMode" title="Modes de suivi">Modes de suivi</a></li>
+<li><a href="#MagnifierScreenOverview" title="Afficher un aperçu de l'ensemble de l'écran">Afficher un aperçu de l'ensemble de l'écran</a></li>
+<li><a href="#MagnifierSettings" title="Paramètres de la loupe">Paramètres de la loupe</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Reconnaissance de Contenu">Reconnaissance de Contenu</a><ul>
@@ -211,6 +233,7 @@
 <li><a href="#SpeechSettingsPitch" title="Hauteur">Hauteur</a></li>
 <li><a href="#SpeechSettingsVolume" title="Volume">Volume</a></li>
 <li><a href="#SpeechSettingsInflection" title="Inflexion">Inflexion</a></li>
+<li><a href="#SpeechSettingPunctuationSilence" title="Pause naturelle après la ponctuation">Pause naturelle après la ponctuation</a></li>
 <li><a href="#SpeechSettingsUseWasapi" title="Utilisez le système de sortie audio moderne (WASAPI)">Utilisez le système de sortie audio moderne (WASAPI)</a></li>
 <li><a href="#SpeechSettingsLanguageSwitching" title="Changement automatique de langue">Changement automatique de langue</a></li>
 <li><a href="#SpeechSettingsDialectSwitching" title="Changement automatique de dialecte">Changement automatique de dialecte</a></li>
@@ -260,6 +283,7 @@
 </li>
 <li><a href="#BrailleSpeakOnRouting" title="Annoncer le caractère lors du routage du curseur dans le texte">Annoncer le caractère lors du routage du curseur dans le texte</a></li>
 <li><a href="#BrailleSpeakOnNavigating" title="Retour vocal lors de la navigation par ligne ou par paragraphe">Retour vocal lors de la navigation par ligne ou par paragraphe</a></li>
+<li><a href="#BrailleAutoScrollRate" title="Vitesse de défilement automatique">Vitesse de défilement automatique</a></li>
 <li><a href="#BrailleSettingsWordWrap" title="Ne pas couper les mots quand c'est possible">Ne pas couper les mots quand c'est possible</a></li>
 <li><a href="#BrailleUnicodeNormalization" title="Normalisation Unicode">Normalisation Unicode</a></li>
 <li><a href="#BrailleSettingsInterruptSpeech" title="Interrompre la parole pendant le défilement">Interrompre la parole pendant le défilement</a></li>
@@ -294,6 +318,19 @@
 <li><a href="#VisionSettings" title="Vision">Vision</a><ul>
 <li><a href="#VisionSettingsFocusHighlight" title="Mise en Évidence Visuelle">Mise en Évidence Visuelle</a></li>
 <li><a href="#VisionSettingsThirdPartyVisualAids" title="Paramètres des aides visuelles tierses">Paramètres des aides visuelles tierses</a></li>
+</ul>
+</li>
+<li><a href="#MagnifierSettingsCategory" title="Loupe">Loupe</a><ul>
+<li><a href="#OpenMagnifierSettings" title="Ouvrir les paramètres de la loupe">Ouvrir les paramètres de la loupe</a></li>
+<li><a href="#MagnifierEnable" title="Activer la loupe">Activer la loupe</a></li>
+<li><a href="#MagnifierZoom" title="Zoom">Zoom</a></li>
+<li><a href="#MagnifierFilter" title="Filtre de couleur">Filtre de couleur</a></li>
+<li><a href="#MagnifierPanningStepSize" title="Taille du pas de déplacement">Taille du pas de déplacement</a></li>
+<li><a href="#MagnifierFollowMouse" title="Suivre la souris">Suivre la souris</a></li>
+<li><a href="#MagnifierFollowSystemFocus" title="Suivre le focus système">Suivre le focus système</a></li>
+<li><a href="#MagnifierFollowReviewCursor" title="Suivre le curseur de revue">Suivre le curseur de revue</a></li>
+<li><a href="#MagnifierFollowNavigatorObject" title="Suivre l'objet navigateur">Suivre l'objet navigateur</a></li>
+<li><a href="#MagnifierTrackingModeSetting" title="Mode de suivi">Mode de suivi</a></li>
 </ul>
 </li>
 <li><a href="#KeyboardSettings" title="Clavier">Clavier</a><ul>
@@ -371,6 +408,7 @@
 <li><a href="#BrowseModeSettingsAutoPassThroughOnCaretMove" title="Mode formulaire automatique au déplacement du curseur">Mode formulaire automatique au déplacement du curseur</a></li>
 <li><a href="#BrowseModeSettingsPassThroughAudioIndication" title="Indication audio du mode formulaire ou navigation">Indication audio du mode formulaire ou navigation</a></li>
 <li><a href="#BrowseModeSettingsTrapNonCommandGestures" title="Empêcher les gestes ne correspondant pas à des commandes d'atteindre le document">Empêcher les gestes ne correspondant pas à des commandes d'atteindre le document</a></li>
+<li><a href="#BrowseModeSettingsBrowseModeNavigationElements" title="Éléments pour le mode navigation tactile">Éléments pour le mode navigation tactile</a></li>
 </ul>
 </li>
 <li><a href="#DocumentFormattingSettings" title="Mise en forme des documents">Mise en forme des documents</a><ul>
@@ -389,6 +427,7 @@
 <li><a href="#MathCATSpeechOptions" title="Options de la parole">Options de la parole</a><ul>
 <li><a href="#MathSpeechImpairment" title="Handicap">Handicap</a></li>
 <li><a href="#MathSpeechLanguage" title="Langue">Langue</a></li>
+<li><a href="#MathSpeechDecimalSeparator" title="Séparateur décimal pour les nombres">Séparateur décimal pour les nombres</a></li>
 <li><a href="#MathSpeechStyle" title="Style de parole">Style de parole</a></li>
 <li><a href="#MathSpeechVerbosity" title="Verbosité de la parole">Verbosité de la parole</a></li>
 <li><a href="#MathRelativeSpeed" title="Débit de parole relatif">Débit de parole relatif</a></li>
@@ -469,6 +508,7 @@
 <li><a href="#CancelExpiredFocusSpeech" title="Tenter d'interrompre la parole pour les événements de focus expirés">Tenter d'interrompre la parole pour les événements de focus expirés</a></li>
 <li><a href="#TrimLeadingSilenceSpeech" title="Supprimer le silence au début du flux audio de la parole">Supprimer le silence au début du flux audio de la parole</a></li>
 <li><a href="#UseWASAPIForSAPI4" title="Utiliser WASAPI pour la sortie audio SAPI 4">Utiliser WASAPI pour la sortie audio SAPI 4</a></li>
+<li><a href="#SpeechDictsUseModernRegex" title="Utiliser le moteur d'expression régulière moderne pour les entrées du dictionnaire vocal">Utiliser le moteur d'expression régulière moderne pour les entrées du dictionnaire vocal</a></li>
 <li><a href="#AdvancedSettingsCaretMoveTimeout" title="Délai d'attente de mouvement du curseur (en ms)">Délai d'attente de mouvement du curseur (en ms)</a></li>
 <li><a href="#ReportTransparentColors" title="Annoncer la transparence pour les couleurs">Annoncer la transparence pour les couleurs</a></li>
 <li><a href="#AdvancedSettingsDebugLoggingCategories" title="Catégories de journalisation de débogage">Catégories de journalisation de débogage</a></li>
@@ -541,7 +581,7 @@
 <li><a href="#PythonConsole" title="Console Python">Console Python</a></li>
 <li><a href="#AddonStoreMenuItem" title="Add-on Store">Add-on Store</a></li>
 <li><a href="#CreatePortableCopy" title="Créer une copie portable">Créer une copie portable</a></li>
-<li><a href="#RunCOMRegistrationFixingTool" title="Exécuter l'outil de correction d'enregistrements COM...">Exécuter l'outil de correction d'enregistrements COM...</a></li>
+<li><a href="#RunCOMRegistrationFixingTool" title="Exécuter l'outil de réparation de l'accessibilité du système...">Exécuter l'outil de réparation de l'accessibilité du système...</a></li>
 <li><a href="#ReloadPlugins" title="Recharger les modules">Recharger les modules</a></li>
 </ul>
 </li>
@@ -608,7 +648,7 @@
 </li>
 </ul>
 </div>
-<!-- KC:title: Résumé des commandes NVDA 2026.1.1 -->
+<!-- KC:title: Résumé des commandes NVDA 2026.2 -->
 
 <h2 id="Introduction">Introduction</h2>
 <p>Bienvenue dans NVDA !</p>
@@ -635,6 +675,7 @@ NVDA est développé par <a href="https://www.nvaccess.org/" rel="noopener" targ
 <li>Le support des interfaces d'accessibilité communes telles que Microsoft Active Accessibility, Java Access Bridge, IAccessible2 et UI Automation</li>
 <li>Le support de l'invite de commandes Windows et des applications en mode console</li>
 <li>La possibilité de mettre en évidence le focus système</li>
+<li>Loupe intégrée et filtres de couleur</li>
 </ul>
 <h3 id="SystemRequirements">Configuration Système Requise</h3>
 <h4 id="MinimumSystemRequirements">Configuration système minimale requise</h4>
@@ -852,7 +893,7 @@ Les commandes réelles ne s'exécuteront pas en mode d'aide à la saisie.</p>
 <td>Lire la sélection</td>
 <td><code>NVDA+maj+flècheHaut</code></td>
 <td><code>NVDA+maj+s</code></td>
-<td>Lit tout texte sélectionné. Un double appui épelle l'information. Un triple appui l'épelle en code international</td>
+<td>Lit tout texte sélectionné. Un double appui épelle l'information. Un triple appui l'épelle en utilisant la description des caractères (code international)</td>
 </tr>
 <tr>
 <td>Lire le texte du presse-papiers</td>
@@ -883,7 +924,7 @@ Les commandes réelles ne s'exécuteront pas en mode d'aide à la saisie.</p>
 <td>Annoncer le focus</td>
 <td><code>NVDA+tab</code></td>
 <td><code>NVDA+tab</code></td>
-<td>Annonce le contrôle actuellement en focus. Un double appui épelle l'information. Un triple appui l'épelle en code international</td>
+<td>Annonce le contrôle actuellement en focus. Un double appui épelle l'information. Un triple appui l'épelle en en utilisant la description des caractères (code international)</td>
 </tr>
 <tr>
 <td>Lire la fenêtre</td>
@@ -902,6 +943,12 @@ Les commandes réelles ne s'exécuteront pas en mode d'aide à la saisie.</p>
 <td><code>NVDA+f12</code></td>
 <td><code>NVDA+f12</code></td>
 <td>Un appui annonce l'heure courante, un double appui annonce la date. L'heure et la date sont annoncées dans le format spécifié dans les paramètres Windows pour l'horloge de la barre d'état système.</td>
+</tr>
+<tr>
+<td>Répéter la dernière information annoncée</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Répète la dernière information annoncée par NVDA. Un double appui l'affiche dans une fenêtre</td>
 </tr>
 <tr>
 <td>Annoncer la mise en forme du texte</td>
@@ -1169,8 +1216,8 @@ Si vous avez déjà fermé ce dialogue ou souhaitez installer à partir d'une co
 <p>Le dialogue d'installation qui apparaît demandera de confirmer si vous souhaitez installer NVDA et vous indiquera également si cette installation mettra à jour une installation précédente.
 Appuyez sur le bouton Continuer pour lancer l'installation de NVDA.
 Il y a aussi quelques options dans ce dialogue qui sont expliquées ci-dessous.
-Une fois l'installation terminée, un message apparaîtra vous indiquant qu'elle a réussi.
-Appuyer sur OK à ce stade redémarrera la copie nouvellement installée de NVDA.</p>
+Une fois l’installation terminée, une boîte de dialogue s’affichera avec plusieurs options permettant de choisir l’action à effectuer ensuite.
+Voir <a href="#RestartWindowsAfterInstall" title="Redémarrer Windows après l'installation">Redémarrer Windows après l'installation</a> pour plus d'informations.</p>
 <h4 id="InstallWithIncompatibleAddons">Avertissement d'extensions incompatibles</h4>
 <p>Si vous avez déjà installé des extensions, il peut également y avoir un avertissement indiquant que les extensions incompatibles seront désactivées.
 Avant de pouvoir appuyer sur le bouton Continuer, vous devrez utiliser la case à cocher pour confirmer que vous comprenez que ces extensions seront désactivées.
@@ -1188,6 +1235,18 @@ S'il est créé, ce raccourci se verra également attribuer une touche de raccou
 <p>Cette option vous permet de choisir si NVDA doit ou non copier la configuration utilisateur de la version actuellement exécutée de NVDA vers la configuration de l'utilisateur actuellement connecté, pour la version installée de NVDA.
 Cela ne copiera pas la configuration pour les autres utilisateurs de ce système ni dans la configuration du système à utiliser lors de la connexion à Windows et <a href="#SecureScreens" title="autres écrans sécurisés">autres écrans sécurisés</a>.
 Cette option n'est disponible que lors de l'installation à partir d'une copie portable, et non lors de l'installation directement à partir du Lanceur téléchargé.</p>
+<h4 id="RestartWindowsAfterInstall">Redémarrez Windows après l'installation</h4>
+<p>Une fois que NVDA a été installé ou mis à jour avec succès, une boîte de dialogue apparaîtra vous recommandant de redémarrer Windows.
+Le redémarrage garantit que NVDA est entièrement enregistré auprès du système et fonctionne correctement dans toutes les applications.</p>
+<p>La boîte de dialogue propose les options suivantes&nbsp;:</p>
+<ul>
+<li>Redémarrer Windows&nbsp;: redémarrez immédiatement Windows.</li>
+<li>Démarrer NVDA&nbsp;: démarrez la copie nouvellement installée de NVDA sans redémarrer.<ul>
+<li>Remarque&nbsp;: cette option n'est pas disponible lorsque le programme d'installation est exécuté avec des privilèges élevés (administrateur).</li>
+</ul>
+</li>
+<li>Quitter NVDA&nbsp;: Fermer sans démarrer NVDA ni redémarrer Windows.</li>
+</ul>
 <h3 id="CreatingAPortableCopy">Création d'une copie portable</h3>
 <p>Si vous créez une copie portable directement à partir du package de téléchargement NVDA, appuyez sur le bouton Créer une copie portable.
 Si vous avez déjà fermé ce dialogue ou si vous exécutez une copie installée de NVDA, choisissez l'élément de menu Créer une copie portable qui se trouve sous Outils dans le menu NVDA.</p>
@@ -1221,7 +1280,8 @@ Cela inclut la désactivation de l'utilisation de l'<a href="#AddonsManager" tit
 </ul>
 </li>
 <li>L'impossibilité de lire les écrans de contrôle de compte utilisateur (UAC) lorsque l'on tente de démarrer une application avec les privilèges administrateur&nbsp;;</li>
-<li>L'impossibilité d'utiliser un écran tactile comme support d'entrée&nbsp;;</li>
+<li>L'impossibilité d'utiliser un écran tactile comme support d'entrée&nbsp;;
+Si la loupe NVDA est activée, la saisie sur l'écran tactile ne fonctionnera pas correctement.</li>
 <li>L'impossibilité de prendre en charge des fonctionnalités comme le mode navigation ou l'annonce des caractères saisis dans les applications du Windows Store.</li>
 <li>L'atténuation audio n'est pas supportée.</li>
 </ul>
@@ -1295,20 +1355,23 @@ Bien sûr, ces gestes à tapes multiples reconnaissent combien de doigts sont ut
 <p>On peut glisser dans les quatre directions&nbsp;: glissé gauche, glissé droite, glissé bas, glissé haut.</p>
 <p>Exactement comme pour les tapes, il est possible d'utiliser plusieurs doigts.
 Il est donc possible d'avoir un glissé à deux doigts vers le haut ou trois vers la droite.</p>
+<h5 id="PinchGestures">Gestes de pincement et d’écartement</h5>
+<p>Placez deux doigts sur l'écran et rapprochez-les pour effectuer un geste de pincement.
+Éloignez-les l'un de l'autre pour effectuer un geste d'écartement.</p>
 <h4 id="TouchModes">Modes Tactiles</h4>
 <p>Comme il y a plus de commandes NVDA que de gestes tactiles possibles, NVDA a plusieurs modes tactiles entre lesquels on peut basculer, qui rendent un certain nombre de commandes disponibles.
-Les deux modes sont le mode texte et le mode objet.
+Les trois modes sont le mode texte, le mode objet et le mode navigation.
 Certaines commandes listées dans ce manuel peuvent avoir un mode indiqué entre parenthèses après le geste.
 Par exemple, glissé haut (mode texte) signifie que cette commande sera exécutée si vous glissez vers le haut, mais seulement en mode texte.
 Si la commande n'a aucun mode associé, le geste fonctionnera dans tous les modes.</p>
 <!-- KC:beginInclude -->
-<p>Pour basculer entre les modes, faites une tape avec trois doigts.</p>
+<p>Pour passer d'un mode tactile à l'autre, faites une tape avec trois doigts.</p>
 <!-- KC:endInclude -->
 
 <h4 id="TouchKeyboard">Clavier Tactile</h4>
 <p>Le clavier tactile sert à entrer du texte et des commandes à partir d'un écran tactile.
 Quand le focus est sur un champ de saisie, vous pouvez faire apparaître le clavier tactile d'une double-tape sur l'icône du clavier tactile au bas de l'écran.
-Sur les tablettes comme la Microsoft Surface Pro, le clavier tactile est toujours disponible quand le clavier est déconnecté
+Sur les tablettes comme la Microsoft Surface Pro, le clavier tactile est toujours disponible quand le clavier est déconnecté.
 Pour masquer le clavier tactile, faites une double-tape sur son icône ou quittez la zone de saisie.</p>
 <p>Quand le clavier tactile est activé, pour repérer une touche, placez vos doigts à l'endroit où se situe le clavier tactile (généralement au bas de l'écran), puis déplacez-vous sur le clavier avec un doigt.
 Quand vous avez trouvé la touche sur laquelle vous voulez appuyer, double-tapez la touche ou retirez votre doigt, selon les options définies dans la catégorie <a href="#TouchInteraction" title="Paramètres d'Interaction Tactile">Paramètres d'Interaction Tactile</a>des Paramètres NVDA.</p>
@@ -1364,6 +1427,13 @@ Sur un clavier sans touche <code>applications</code>, appuyez sur <code>maj+f10<
 <td>Maj</td>
 <td>Aucun</td>
 <td>Pause instantanée de la parole, un second appui reprend la parole là où elle s'était arrêtée</td>
+</tr>
+<tr>
+<td>Répéter la dernière information annoncée</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>None</td>
+<td>Répéter la dernière information annoncée par NVDA. Un double appui l'affiche dans une fenêtre</td>
 </tr>
 <tr>
 <td>Menu NVDA</td>
@@ -1424,7 +1494,7 @@ Sur un clavier sans touche <code>applications</code>, appuyez sur <code>maj+f10<
 <tr>
 <td>Annoncer l'état de la batterie</td>
 <td>NVDA+maj+b</td>
-<td>Annonce le pourcentage de charge de la batterie ou si l'adaptateur secteur est connecté</td>
+<td>Annonce le pourcentage de charge de la batterie ou si l'adaptateur secteur est connecté.</td>
 </tr>
 <tr>
 <td>Annoncer le contenu du presse-papiers</td>
@@ -1557,7 +1627,7 @@ NVDA annonce le déplacement par caractère, mot ou ligne, et annonce aussi la s
 <td>Lire ligne courante</td>
 <td>NVDA+flèche haut</td>
 <td>NVDA+l</td>
-<td>Lit la ligne où se trouve le curseur système. Un double appui épelle la ligne. Un triple appui l'épelle en code international.</td>
+<td>Lit la ligne où se trouve le curseur système. Un double appui épelle la ligne. Un triple appui l'épelle en utilisant la description des caractères (code international).</td>
 </tr>
 <tr>
 <td>Lire texte sélectionné</td>
@@ -1846,7 +1916,7 @@ Ceci peut être désactivé.</p>
 <td>pavnum8</td>
 <td>NVDA+maj+point-virgule</td>
 <td>Aucun</td>
-<td>Lit la ligne de texte sous le curseur de revue, un double appui épelle la ligne</td>
+<td>Lit la ligne de texte sous le curseur de revue. Un double appui épelle cette ligne. Un triple appui épelle cette ligne en utilisant la description des caractères.</td>
 </tr>
 <tr>
 <td>Aller à la ligne suivante en revue</td>
@@ -1874,7 +1944,7 @@ Ceci peut être désactivé.</p>
 <td>pavnum5</td>
 <td>NVDA+contrôle+point-virgule</td>
 <td>Aucun</td>
-<td>Lit le mot à la position du curseur de revue, un double appui épelle le mot</td>
+<td>Lit le mot courant dans le texte à la position du curseur de revue. un double appui épelle le mot. Un triple appui lépelle en utilisant la description des caractères</td>
 </tr>
 <tr>
 <td>Aller au mot suivant en revue</td>
@@ -1902,7 +1972,7 @@ Ceci peut être désactivé.</p>
 <td>pavnum2</td>
 <td>NVDA+point-virgule</td>
 <td>Aucun</td>
-<td>Annonce le caractère courant sous le curseur de revue, un double appui annonce la valeur du caractère en décimal et hexadécimal</td>
+<td>Annonce le caractère courant sur la ligne de texte à la position du curseur de revue. Un double appui annonce une description ou un exemple de ce caractère. Un triple appui annonce la valeur du caractère en décimal et hexadécimal.</td>
 </tr>
 <tr>
 <td>Aller au caractère suivant en revue</td>
@@ -2309,6 +2379,53 @@ Si vous voulez les utiliser tout en restant capable d'utiliser vos touches curse
 <p>Pour activer ou désactiver la navigation rapide pour le document courant, appuyez sur NVDA+maj+espace.</p>
 <!-- KC:endInclude -->
 
+<h4 id="BrowseModeTouch">Mode navigation tactile</h4>
+<p>Lors de l'utilisation d'un appareil tactile, NVDA fournit un mode navigation tactile supplémentaire pour parcourir le contenu en mode navigation.</p>
+<p>Lorsque le mode navigation est actif dans les documents pris en charge tels que les pages Web ou les documents Word, NVDA peut exposer un mode navigation tactile.
+Ce mode permet aux utilisateurs de parcourir les éléments structurels d'un document à l'aide de gestes tactiles, de manière similaires au mode navigation avec le clavier.</p>
+<p>En mode navigation tactile, les gestes glissés sont utilisés pour se déplacer entre les éléments courants du document tels que les liens, les boutons, les en-têtes, les champs de formulaire, les points de repère et autres structures de document.</p>
+<h5 id="gestes-tactiles-en-mode-navigation">Gestes tactiles en mode navigation</h5>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Tactile</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sélectionner le type d'élément suivant</td>
+<td>Glisser vers le bas</td>
+<td>Passe au type d'élément de navigation tactile suivant</td>
+</tr>
+<tr>
+<td>Sélectionner le type d'élément précédent</td>
+<td>glisser vers le haut</td>
+<td>Passe au type d'élément de navigation tactile précédent</td>
+</tr>
+<tr>
+<td>Passer à l'élément suivant</td>
+<td>glisser vers la droite</td>
+<td>Pass à l'élément de mode navigation suivant du type sélectionné</td>
+</tr>
+<tr>
+<td>Passer à l'élément précédent</td>
+<td>glisser vers la gauche</td>
+<td>Passe à l'élément de mode navigation précédent du type sélectionné</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>Lorsque le type d'élément "défaut" est sélectionné, un glissé vers la gauche ou la droite permet de parcourir tous les éléments du document.
+Lorsqu'un autre type d'élément est sélectionné, un glissé vers la gauche ou la droite permet de passer à l'élément précédent ou suivant de ce type.
+Un glissé vers le haut ou vers le bas fait défiler les types d’éléments disponibles.</p>
+<p>Le type d'élément sélectionné est mémorisé séparément pour chaque document tant qu'il reste ouvert.
+Notez que les gestes du mode de navigation tactile ne prennent effet que lorsque le mode navigation est actif dans le document.
+Si le focus se déplace en dehors du document (par exemple, à la barre d'adresse du navigateur ou la barre des tâches), les gestes de navigation en mode tactile ne parcourront pas le document jusqu'à ce que le focus y revienne en mode navigation.</p>
 <h4 id="TextNavigationCommand">Commande de navigation par paragraphe de texte</h4>
 <p>Vous pouvez passer au paragraphe de texte suivant ou précédent en appuyant sur <code>p</code> ou <code>maj+p</code>.
 Les paragraphes de texte sont définis comme un groupe de texte qui semble être écrit sous forme de phrases complètes.
@@ -2339,6 +2456,7 @@ Voici une liste des commandes disponibles:</p>
 <li>Élément de menu</li>
 <li>Bouton à bascule</li>
 <li>Barre de progression</li>
+<li>potentiomètre</li>
 <li>Référence</li>
 <li>Formule mathématique</li>
 <li>Paragraphe aligné verticalement</li>
@@ -2722,12 +2840,154 @@ Par exemple, si <code>flèche droite</code> vous a fait sortir d'une fraction, <
 Le mode par défaut peut être défini dans <a href="#MathSettings" title="le panneau des paramètres mathématiques">le panneau des paramètres mathématiques</a>.
 Cependant, à tout moment pendant la navigation, vous pouvez changer de mode de navigation en utilisant <code>maj+flècheHaut/flècheBas</code> pour tirer partie des différents atouts de chaque mode de navigation.</p>
 <h2 id="Braille">Braille</h2>
-<p>Si vous possédez un afficheur braille, NVDA peut afficher des informations en braille.
+<p>Si vous avez accès à une plage braille, NVDA peut afficher des informations en braille.
 Si votre terminal braille possède un clavier de type Perkins, vous pouvez également saisir du texte en intégral ou abrégé.
 Le Braille peut aussi être affiché à l'écran en utilisant <a href="#BrailleViewer" title="la Visionneuse Braille">la Visionneuse Braille</a> en remplacement ou en parallèle d'un afficheur braille physique.</p>
 <p>Veuillez consulter la section <a href="#SupportedBrailleDisplays" title="Terminaux Braille Pris en Charge">Terminaux Braille Pris en Charge</a> pour des informations concernant les terminaux braille pris en charge.
 Cette section contient également des informations sur les terminaux qui supportent la détection automatique de terminaux braille en arrière-plan.
 Vous pouvez configurer le braille dans la catégorie <a href="#BrailleSettings" title="Braille">Braille</a> du dialogue <a href="#NVDASettings" title="Paramètres">Paramètres</a>.</p>
+<h3 id="BrailleReading">Lecture en braille</h3>
+<p>Pour la lecture du braille sur un afficheur braille, le texte est présenté en utilisant la <a href="#BrailleSettingsOutputTable" title="table d'affichage">table d'affichage</a> et le <a href="#BrailleMode" title="Mode braille">Mode braille</a> actuels.
+Lorsque le texte est plus long que la taille de l'afficheur, les touches de défilement ou d'autres touches de l'appareil peuvent être utilisés pour naviguer sans déplacer le focus ou le curseur de texte.</p>
+<h4 id="AutomaticBrailleScrolling">Défilement automatique du braille</h4>
+<p>Le défilement automatique du braille peut être activé pour faire défiler l'affichage à une vitesse définie.
+Lors de l'utilisation de cette fonction, l'afficheur braille défilera pour présenter des informations qui dépassent la taille que l'afficheur peut présenter en une seule fois.
+Cette fonctionnalité est désactivée par défaut.
+Vous pouvez modifier les gestes attribués pour utiliser le défilement automatique en braille dans la <a href="#InputGestures" title="boîte de dialogue Gestes de commandes">boîte de dialogue Gestes de commandes</a> de NVDA avant de pouvoir l'utiliser.
+Des gestes sont également disponibles pour accélérer ou ralentir la vitesse de défilement automatique.
+Vous pouvez également <a href="#BrailleAutoScrollRate" title="définir la vitesse de défilement automatique dans les paramètres braille">définir la vitesse de défilement automatique dans les paramètres braille</a>.</p>
+<p>Pendant le défilement automatique du braille, vous pouvez toujours utiliser les commandes de défilement arrière et avant sans arrêter le défilement.
+Le défilement arrière peut être utile pour relire un contenu précédent.
+Le défilement avant peut être utile pour sauter une ligne vide ou si la ligne en cours de lecture est courte.</p>
+<p>Lors de la lecture, le défilement automatique du braille s'arrêtera lorsque l'un des événements suivants se produira&nbsp;:</p>
+<ul>
+<li>La touche bascule du défilement automatique du braille est enfoncée</li>
+<li>L'utilisateur appuie sur une touche ou un geste qui doit afficher un nouveau message</li>
+<li>Le focus est déplacé (y compris avec les touches de défilement de l'afficheur braille)</li>
+<li>La fin du document est atteinte</li>
+<li>L'état du verrouillage ou de l'écran sécurisé est modifié (par exemple, l'ordinateur est verrouillé)</li>
+</ul>
+<h4 id="BrailleReadingGestures">Gestes de lecture du braille</h4>
+<!-- KC:beginInclude -->
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Touche</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modifier le mode braille</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Permet de faire défiler les modes braille disponibles&nbsp;: "suivre les curseurs" et "afficher la parole"</td>
+</tr>
+<tr>
+<td>Le Braille suit</td>
+<td><code>NVDA+contrôle+t</code></td>
+<td>Cette option vous permet de choisir si le braille suivra le curseur du focus système, le curseur de l'objet navigateur ou les deux</td>
+</tr>
+<tr>
+<td>Activer ou désactiver le défilement automatique</td>
+<td><code>NVDA+alt+k</code></td>
+<td>Définnit si NVDA fait défiler périodiquement l'afficheur braille pour présenter des informations trop longues pour être affichées en une fois.</td>
+</tr>
+<tr>
+<td>Augmenter la vitesse de défilement automatique</td>
+<td><code>NVDA+alt+l</code></td>
+<td>Accélère le défilement automatique (lorsqu'il est activé)</td>
+</tr>
+<tr>
+<td>Diminuer la vitesse de défilement automatique</td>
+<td><code>NVDA+alt+j</code></td>
+<td>Ralentit le défilement automatique (lorsqu'il est activé)</td>
+</tr>
+<tr>
+<td>Faire défiler les formes de curseur braille</td>
+<td>Aucune</td>
+<td>Faire défiler les options de forme (motif de points) du curseur braille</td>
+</tr>
+<tr>
+<td>Faire défiler déplacer le curseur système lors du routage du curseur de revue</td>
+<td>Aucune</td>
+<td>Faire défiler les choix pour Déplacer le curseur système lors du routage du curseur de revue</td>
+</tr>
+<tr>
+<td>Faire défiler les modes d'affichage des messages braille</td>
+<td>Aucune</td>
+<td>Faire défiler les modes d'affichage des messages braille</td>
+</tr>
+<tr>
+<td>Faire défiler les modes d'affichage de la sélection en braille</td>
+<td>Aucun</td>
+<td>Faire défiler les modes d'affichage de la sélection en braille</td>
+</tr>
+<tr>
+<td>Faire défiler les états de normalisation Unicode braille</td>
+<td>Aucune</td>
+<td>Faire défiler les états de normalisation Unicode braille</td>
+</tr>
+<tr>
+<td>Amener l'afficheur braille au focus</td>
+<td>Aucun</td>
+<td>Amener l'afficheur braille au focus courant</td>
+</tr>
+<tr>
+<td>Amener l'afficheur braille à la ligne suivante</td>
+<td>Aucun</td>
+<td>Amener l'afficheur braille à la ligne suivante</td>
+</tr>
+<tr>
+<td>Amener l'afficheur braille à la ligne précédente</td>
+<td>Aucun</td>
+<td>Amener l'afficheur braille à la ligne précédente</td>
+</tr>
+<tr>
+<td>Annoncer la mise en forme braille</td>
+<td>Aucune</td>
+<td>Annoncer les informations de mise en forme pour le texte sous cette cellule braille</td>
+</tr>
+<tr>
+<td>Amener le curseur ou activer l'objet braille</td>
+<td>Aucun</td>
+<td>Amener le curseur à cette cellule braille ou activer l'objet sous cette cellule braille</td>
+</tr>
+<tr>
+<td>Faire défiler l'afficheur braille en arrière</td>
+<td>Aucune</td>
+<td>Faire défiler l'afficheur braille en arrière</td>
+</tr>
+<tr>
+<td>Faire défiler l'afficheur braille en avant</td>
+<td>Aucun</td>
+<td>Faire défiler l'afficheur braille en avant</td>
+</tr>
+<tr>
+<td>Activer ou désactiver le curseur braille</td>
+<td>Aucun</td>
+<td>Activer ou désactiver le curseur braille</td>
+</tr>
+<tr>
+<td>Faire défiler les informations contextuelles en braille</td>
+<td>Aucune</td>
+<td>Faire défiler les modes de présentation des informations contextuelles en braille</td>
+</tr>
+<tr>
+<td>Activer ou désactiver le retour vocal lors de la navigation en braille</td>
+<td>Aucun</td>
+<td>Activer ou désactiver le retour vocal lors de la navigation en braille par ligne ou par paragraphe</td>
+</tr>
+<tr>
+<td>Bascule l'annonce du caractère lors du routage</td>
+<td>Aucune</td>
+<td>Bascule l'annonce du caractère lors du routage du curseur dans le texte</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<p>Reportez-vous aux <a href="#BrailleSettings" title="Paramètres Braille de NVDA">Paramètres Braille de NVDA</a> pour l'ensemble des options qui peuvent être utilisées pour ajuster la lecture du braille.</p>
 <h3 id="BrailleAbbreviations">Abréviations des Types, États des Contrôles et Repères en Braille</h3>
 <p>Dans le but de loger autant d'informations que possible sur un afficheur braille, les abréviations suivantes ont été définies pour indiquer le type et l'état des contrôles ainsi que les repères.</p>
 <table>
@@ -3127,6 +3387,42 @@ et pour saisir contrôle+alt+t, utilisez soit les commandes "bascule de touche c
 <p>Lors de la saisie en braille abrégé, l'utilisation des touches de modification entraînera la traduction de votre entrée comme si vous aviez appuyé sur les points 7 + 8.
 De plus, la touche émulée ne peut pas refléter le braille tapé avant que la touche de modification ne soit enfoncée.
 Cela signifie que, pour taper alt+2 avec un code braille qui utilise un signe dièse, vous devez d'abord basculer Alt puis taper un signe dièse.</p>
+<h4 id="BrailleInputGestures">Gestes de saisie en braille</h4>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Touche</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Saisie via afficheur braille</td>
+<td>n'importe quel point</td>
+<td>Saisie à l'aide du clavier braille</td>
+</tr>
+<tr>
+<td>Effacer la dernière saisie</td>
+<td><code>point7</code></td>
+<td>Effacer la dernière cellule ou le dernier caractère braille saisi</td>
+</tr>
+<tr>
+<td>Convertir saisie braille</td>
+<td><code>point7+point8</code></td>
+<td>Convertir toute saisie braille</td>
+</tr>
+<tr>
+<td>Convertir et appuyer sur entrée</td>
+<td><code>point8</code></td>
+<td>Convertir toute saisie braille et appuyer sur entrée</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
 <h2 id="Vision">Vision</h2>
 <p>Bien que NVDA soit en premier lieu destiné à des personnes aveugles ou malvoyantes qui utilisent principalement la parole ou le braille pour accéder à un ordinateur, il offre aussi des facilités internes pour modifier le contenu de l'écran.
 Sous NVDA, une telle aide visuelle est appelée un service d'amélioration visuelle.</p>
@@ -3164,6 +3460,11 @@ Pour cette situation, NVDA contient une fonctionnalité appelée "Rideau d'Écra
 <td><code>NVDA+contrôle+échap</code></td>
 <td>Activer pour rendre l'écran noir ou désactiver pour afficher le contenu de l'écran. Un appui active le rideau d'écran jusqu'au prochain redémarrage de NVDA. Deux appuis activent le rideau d'écran jusqu'à ce que vous le désactiviez.</td>
 </tr>
+<tr>
+<td>Annoncer l'état du rideau d'écran</td>
+<td>Aucune</td>
+<td>Annonce l'état actuel du rideau d'écran, qu'il soit désactivé, activé ou en mode temporaire.</td>
+</tr>
 </tbody>
 </table>
 <!-- KC:endInclude -->
@@ -3172,6 +3473,142 @@ Pour cette situation, NVDA contient une fonctionnalité appelée "Rideau d'Écra
 Par exemple, vous ne pouvez pas <a href="#Win10Ocr" title="utiliser la Reconnaissance Optique de Caractères">utiliser la Reconnaissance Optique de Caractères</a>.
 Certains utilitaires de capture d'écran peuvent également ne pas fonctionner.</p>
 <p>Veuillez noter que lorsque la Loupe Windows est activée et que l'inversion des couleurs est utilisée, le rideau d'écran ne peut pas être activé.</p>
+<h2 id="Magnifier">Loupe</h2>
+<p>NVDA inclut une fonction de loupe intégrée qui vous permet de zoomer et d'agrandir certaines parties de l'écran.
+Cette fonctionnalité est particulièrement utile pour les utilisateurs malvoyants qui ont besoin d'agrandir le contenu à l'écran, ou pour les utilisateurs qui souhaitent appliquer des filtres de couleur pour réduire la fatigue oculaire ou améliorer la lisibilité.</p>
+<p>La loupe NVDA fonctionne comme une loupe plein écran, ce qui signifie qu'elle agrandit la totalité de l'écran tout en suivant le focus système ou le pointeur de la souris.
+Elle propose plusieurs options de configuration pour personnaliser l'expérience de grossissement en fonction de vos besoins.</p>
+<h3 id="MagnifierToggle">Activation et désactivation de la loupe</h3>
+<p>Pour activer ou désactiver la loupe, appuyez sur <code>NVDA+maj+w</code>.
+Un appui sur la touche "Augmenter le niveau de grossissement", <code>NVDA+maj+égal</code>, démarrera la loupe si elle n'est pas active.
+Lorsqu'elle est désactivée, l'écran revient à sa taille normale.
+Comme pour les autres paramètres NVDA, l'état de la Loupe est conservé d'une session à l'autre.</p>
+<h3 id="MagnifierCommands">Commandes de la loupe</h3>
+<p>Une fois la loupe activée, vous pouvez utiliser les commandes clavier suivantes pour la contrôler&nbsp;:</p>
+<!-- KC:beginInclude -->
+
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Touche</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activer et désactiver la loupe</td>
+<td><code>NVDA+maj+w</code></td>
+<td>Active ou désactive la loupe</td>
+</tr>
+<tr>
+<td>Augmenter le niveau de zoom</td>
+<td><code>NVDA+ùaj+égal</code></td>
+<td>Augmente le niveau de zoom. Démarre la loupe si elle n'est pas déjà activée.</td>
+</tr>
+<tr>
+<td>Diminuer le niveau de zoom</td>
+<td><code>NVDA+maj+)</code></td>
+<td>Diminue le niveau de zoom</td>
+</tr>
+<tr>
+<td>Faire défiler les filtres de couleur</td>
+<td><code>NVDA+maj+i</code></td>
+<td>Fait défiler les filtres de couleur disponibles (normal, niveaux de gris, inversé)</td>
+</tr>
+<tr>
+<td>Faire défiler les modes de suivi</td>
+<td>Aucune</td>
+<td>Fait défiler les modes de suivi (centre, relatif)</td>
+</tr>
+<tr>
+<td>Afficher un aperçu de l'écran entier</td>
+<td><code>NVDA+maj+l</code></td>
+<td>Affiche temporairement un aperçu de tout l'écran</td>
+</tr>
+<tr>
+<td>Se déplacer vers la gauche</td>
+<td><code>NVDA+alt+FlècheGauche</code></td>
+<td>Déplace la vue agrandie vers la gauche de la taille du pas de déplacement configuré</td>
+</tr>
+<tr>
+<td>Se déplacer vers la droite</td>
+<td><code>NVDA+alt+FlècheDroite</code></td>
+<td>Déplace la vue agrandie vers la droite de la taille du pas de déplacement configuré</td>
+</tr>
+<tr>
+<td>Se déplacer vers le haut</td>
+<td><code>NVDA+alt+FlèchHaut</code></td>
+<td>Déplace la vue agrandie vers le haut de la taille du pas de déplacement configuré</td>
+</tr>
+<tr>
+<td>Se déplacer vers le bas</td>
+<td><code>NVDA+alt+FlècheBas</code></td>
+<td>Déplace la vue agrandie vers le bas de la taille du pas de déplacement configuré</td>
+</tr>
+<tr>
+<td>Se déplacer au bord gauche</td>
+<td><code>NVDA+maj+alt+flècheGauche</code></td>
+<td>Déplace la vue agrandie directement au bord gauche de l'écran</td>
+</tr>
+<tr>
+<td>Se déplacer au bord droit</td>
+<td><code>NVDA+maj+alt+flècheDroite</code></td>
+<td>Déplace la vue agrandie directement au bord droit de l'écran</td>
+</tr>
+<tr>
+<td>Se déplacer au bord supérieur</td>
+<td><code>NVDA+maj+alt+flècheHaut</code></td>
+<td>Déplace la vue agrandie directement au bord supérieur de l'écran</td>
+</tr>
+<tr>
+<td>Se déplacer au bord inférieur</td>
+<td><code>NVDA+maj+alt+flècheBAs</code></td>
+<td>Déplace la vue agrandie directement au bord inférieur de l'écran</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:endInclude -->
+
+<h3 id="MagnifierZoomLevels">Niveaux de zoom</h3>
+<p>La loupe prend en charge les niveaux de zoom de 1,0 (pas de grossissement) à 50,0 (grossissement maximum).
+Vous pouvez ajuster le niveau de zoom à l'aide des commandes de zoom avant (<code>NVDA+maj+égal</code>) et de zoom arrière (<code>NVDA+maj+)</code>).
+Chaque appui augmente ou diminue le zoom d'un incrément fixe.</p>
+<h3 id="MagnifierColorFilters">Filtres de couleur</h3>
+<p>Les filtres de couleur peuvent aider les utilisateurs souffrant de certaines déficiences visuelles ou sensibles à la lumière en modifiant les couleurs affichées à l'écran.
+La loupe propose trois options de filtre de couleur&nbsp;:</p>
+<ul>
+<li>Normal : Aucune modification de couleur n’est appliquée. Il s'agit du paramètre par défaut.</li>
+<li>Niveaux de gris&nbsp;: convertit toutes les couleurs en nuances de gris, ce qui peut aider à réduire la fatigue oculaire et à améliorer le contraste pour certains utilisateurs.</li>
+<li>Inversé&nbsp;: inverse toutes les couleurs de l'écran (le noir devient blanc, le blanc devient noir, etc.), ce qui peut être utile pour les utilisateurs qui préfèrent les textes clairs sur des arrière-plans sombres ou qui souffrent de photophobie.</li>
+</ul>
+<p>Pour parcourir les filtres disponibles, appuyez sur <code>NVDA+maj+i</code>.</p>
+<h3 id="MagnifierTrackingMode">Modes de suivi</h3>
+<p>La loupe propose différents modes pour suivre la souris, le focus système, le curseur de revue et l'objet navigateur, et déterminer quelle partie de l'écran doit être agrandie&nbsp;:</p>
+<ul>
+<li>Centre&nbsp;: La zone agrandie est centrée sur la position actuellement suivie.
+Ce mode maintient l'élément suivi au centre de l'écran et son déplacement est limité aux bords de l'écran.</li>
+<li>Relatif: La zone agrandie conserve la position relative de l'élément suivi en fonction de sa position sur l'écran.</li>
+</ul>
+<p>Pour faire défiler les modes de suivi, veuillez attribuer un geste personnalisé à l'aide de la <a href="#InputGestures" title="boîte de dialogue Gestes de commandes">boîte de dialogue Gestes de commandes</a>.</p>
+<h3 id="MagnifierScreenOverview">Afficher un aperçu de l'ensemble de l'écran</h3>
+<p>La loupe peut afficher temporairement un aperçu de l'ensemble de l'écran, ce qui la rend utile pour les présentations ou lorsque vous avez besoin de comprendre rapidement la disposition globale de l'écran.</p>
+<p>Ceci est utile lorsque vous souhaitez&nbsp;:</p>
+<ul>
+<li>Montrez le contexte à votre public lors d'une présentation avant de zoomer sur des détails spécifiques</li>
+<li>Afficher temporairement la disposition de l'écran tout entier lorsque la loupe est active</li>
+</ul>
+<p>Pour afficher un aperçu de l'ensemble de l'écran, appuyez sur <code>NVDA+maj+l</code>.
+La loupe va alors&nbsp;:</p>
+<ol>
+<li>Effectuez un zoom arrière en douceur pour afficher l'ensemble de l'écran (niveau de zoom 1,0x)</li>
+<li>Surveiller le mouvement de la souris</li>
+<li>Lorsque la souris reste immobile pendant environ 2 secondes, revenir automatiquement au niveau de zoom d'origine à la nouvelle position de la souris.</li>
+</ol>
+<p>Si vous déplacez la souris avant que le zoom ne revienne à son niveau normal, vous disposez de plus de temps pour voir l’écran en entier.</p>
+<h3 id="MagnifierSettings">Paramètres de la loupe</h3>
+<p>La loupe peut être configurée dans la catégorie "Loupe" de la boîte de dialogue des paramètres de NVDA (<code>NVDA+contrôle+w</code>).
+Consultez la section <a href="#MagnifierSettingsCategory" title="Paramètres de la loupe">Paramètres de la loupe</a> pour plus de détails sur les options disponibles.</p>
 <h2 id="ContentRecognition">Reconnaissance de Contenu</h2>
 <p>Quand les auteurs ne fournissent pas assez d'informations pour qu'un utilisateur de revue d'écran puisse déterminer le contenu de quelque chose, divers outils peuvent être utilisés pour tenter de reconnaître le contenu à partir d'une image.
 NVDA supporte la fonctionnalité de reconnaissance optique de caractères (OCR) disponible sous Windows 10 et versions ultérieures pour reconnaître le texte dans les images.
@@ -3239,9 +3676,9 @@ Cela signifie que d'autres utilisateurs de revues d'écran ouvrant ce document u
 <p>Pour plus d'information sur le mode navigation et la navigation rapide, consultez la <a href="#BrowseMode" title="section Mode navigation">section Mode navigation</a>.</p>
 <h5 id="WordElementsList">La Liste d'Éléments</h5>
 <!-- KC:beginInclude -->
-<p>Quand vous êtes en mode navigation sous Microsoft Word, vous pouvez accéder à la liste d'éléments en pressant NVDA+f7.</p>
+<p>Quand vous êtes en mode navigation sous Microsoft Word, vous pouvez accéder à la liste d'éléments en appuyant sur NVDA+f7.</p>
 <!-- KC:endInclude -->
-<p>La liste d'éléments peut lister les titres, les liens, annotations (incluant inclut les commentaires et les demandes de changement) et les erreurs (actuellement limité aux fautes d'orthographe).</p>
+<p>La liste d'éléments peut lister les titres, les liens, annotations (inclut les commentaires et le suivi des modifications) et les erreurs (actuellement limité aux fautes d'orthographe).</p>
 <h4 id="WordReportingComments">Annonce des Commentaires</h4>
 <!-- KC:beginInclude -->
 <p>Pour annoncer tout commentaire à la position actuelle du curseur, appuyez sur <code>NVDA+alt+c</code>.
@@ -3604,9 +4041,10 @@ Cette option n'existe que dans les versions installées de NVDA.</p>
 <p>Si vous vous connectez à Windows en fournissant un nom d'utilisateur et un mot de passe, l'activation de cette option permettra à NVDA de démarrer automatiquement dès l'écran de connexion au démarrage de Windows.
 Cette option n'existe que dans les versions installées de NVDA.</p>
 <h5 id="GeneralSettingsCopySettings">Utiliser les paramètres actuellement sauvegardés sur l'écran de connexion et les autres écrans sécurisés</h5>
-<p>L'appui sur ce bouton copie votre configuration utilisateur actuellement sauvegardée dans le répertoire système de NVDA, ainsi, NVDA peut l'utiliser quand il s'exécute sur l'écran de connexion et les <a href="#SecureScreens" title="autres écrans sécurisés">autres écrans sécurisés</a>.
+<p>En appuyant sur ce bouton, vous pourrez copier votre configuration utilisateur NVDA actuellement enregistrée dans le répertoire de configuration système de NVDA, afin que NVDA l'utilise lors de la connexion et lorsqu'il s'exécute sur l'écran du Contrôle de compte d'utilisateur (UAC) et d'autres <a href="#SecureScreens" title="écrans sécurisés">écrans sécurisés</a>.
 Pour vous assurer que tous vos paramètres sont transférés, enregistrez d'abord votre configuration avec contrôle+NVDA+c ou Enregistrer la configuration dans le menu NVDA.
-Cette option n'existe que dans les versions installées de NVDA.</p>
+À l'appui sur ce bouton, la boîte de dialogue <a href="#CopyAddonsToSystemProfileDialog" title="Copier les paramètres dans la configuration système">Copier les paramètres dans la configuration système</a> est d'abord ouverte, dans lequel vous pouvez choisir les extensions que vous souhaitez copier dans la configuration du système.</p>
+<p>Cette option n'existe que dans les versions installées de NVDA.</p>
 <h5 id="GeneralSettingsCheckForUpdates">Vérifier automatiquement les mises à jour de NVDA</h5>
 <p>Si ceci est activé, NVDA recherchera automatiquement les versions mises à jour et vous informera lorsqu'une mise à jour est disponible.
 Vous pouvez également vérifier manuellement les mises à jour en sélectionnant "Recherche d'une Mise à Jour..." sous "Aide" du menu NVDA.
@@ -3667,6 +4105,10 @@ C'est un potentiomètre qui va de 0 à 100 - 0 étant le son le plus grave et 10
 <p>Cette option est un potentiomètre qui va de 0 à 100 - 0 étant le volume le plus bas et 100 le plus élevé.</p>
 <h5 id="SpeechSettingsInflection">Inflexion</h5>
 <p>Cette option est un potentiomètre qui vous permet de choisir le degré d'inflexion (augmentation et diminution de la hauteur) que le synthétiseur doit utiliser pour parler.</p>
+<h5 id="SpeechSettingPunctuationSilence">Pause naturelle après la ponctuation</h5>
+<p>La désactivation de cette option supprimera les pauses après les signes de ponctuation.
+Cette option est activée par défaut.
+Cette option existe uniquement pour les voix Windows OneCore et est prise en charge sur Windows 10 version 1803 ou ultérieure.</p>
 <h5 id="SpeechSettingsUseWasapi">Utilisez le système de sortie audio moderne (WASAPI)</h5>
 <p>Cette option active la sortie audio via l'API Windows Audio Session (WASAPI).
 Cette option n’existe que pour les voix Microsoft Speech API version 5 (SAPI 5).
@@ -3723,9 +4165,10 @@ Cette option s'applique à tous les synthétiseurs, pas uniquement au synthétis
 <p>Activée par défaut, cette option indique à NVDA si la langue de la voix en cours peut être utilisée pour le traitement des symboles et caractères.
 Si vous trouvez que NVDA lit les ponctuations dans la mauvaise langue pour une voix ou un synthétiseur particulier, vous pouvez désactiver ce comportement pour forcer NVDA à utiliser ses paramètres généraux de langue à la place.</p>
 <h5 id="SpeechUnicodeNormalization">Normalisation Unicode</h5>
-<p>Lorsque cette option est activée, la normalisation Unicode est appliqué au texte annoncé par NVDA.
+<p>Lorsque cette option est activée, la normalisation Unicode est effectuée sur le texte annoncé par NVDA.
 Ceci est utile lors de l'annonce de caractères pouvant être représentés sous plusieurs formes.
-NVDA utilise l'algorithme NFKC (Normalization Form Compatibility Composition), qui offre, entre autres, les avantages suivants :</p>
+NVDA utilise l'algorithme NFKC (Normalization Form Compatibility Composition), avec une normalisation supplémentaire appliquée.
+NFKC offre, entre autres, les avantages suivants&nbsp;:</p>
 <ol>
 <li>
 <p>Les versions en gras et en italique des caractères qui font partie de la norme Unicode et sont couramment utilisées sur les réseaux sociaux sont normalisées selon leur équivalent compatible le plus courant.
@@ -3742,12 +4185,16 @@ Cet aspect de la normalisation facilite également la lecture des équations dan
 <p>La normalisation Unicode garantit qu'une seule forme sera utilisée pour la sortie vocale, à savoir la variante à un caractère.</p>
 </li>
 <li>
-<p>Décomposition de certaines ligatures, dont "ĳ" (ligature ij néérlandaise) en leur forme à deux lettres ("ij").</p>
+<p>Décomposition de certaines ligatures, dont "ĳ" (ligature ij) en leur forme à deux lettres ("ij").</p>
 </li>
 <li>
 <p>Ordre stable des modificateurs dans les caractères composites, par exemple en hébreu ancien.</p>
 </li>
 </ol>
+<p>La normalisation supplémentaire dans NVDA gère les variantes de lettres décoratives que l'algorithme standard NFKC ne décompose pas.
+Certains caractères Unicode, tels que les lettres majuscules latines encerclées négatives (🅐–🅩) et les lettres majuscules latines encadrées négatives (🅲–🆉), sont traités comme des symboles autonomes par la norme Unicode et n'ont pas de décomposition de compatibilité.
+NVDA étend NFKC en mappant ces caractères à leurs équivalents en lettres latines simples (A à Z).
+Notez qu'un petit nombre de lettres encadrées en négatif qui ont une sémantique emoji (🅰, 🅱, 🅾, 🅿) sont exclues de cette association afin de préserver leur signification distincte.</p>
 <p>Pour activer/désactiver la normalisation Unicode depuis n'importe où, veuillez assigner un geste personnalisé en utilisant le <a href="#InputGestures" title="dialogue des Gestes de Commandes">dialogue des Gestes de Commandes</a>.</p>
 <table>
 <thead>
@@ -4180,6 +4627,12 @@ Les symboles suivants sont définis&nbsp;:</p>
 <h5 id="BrailleSpeakOnNavigating">Retour vocal lors de la navigation par ligne ou par paragraphe</h5>
 <p>L’activation de cette option amenera NVDA à annoncer les lignes ou les paragraphes atteints à l’aide des commandes de navigation de l’afficheur Braille.</p>
 <p>Pour activer cette option depuis n’importe où, veuillez attribuer un geste personnalisé à "Active ou désactive la lecture à voix haute lors de la navigation par lignes ou paragraphes en braille" dans la section "Braille" de la <a href="#InputGestures" title="boîte de dialogue Gestes de commande">boîte de dialogue Gestes de commande</a>.</p>
+<h5 id="BrailleAutoScrollRate">Vitesse de défilement automatique</h5>
+<p>Ce curseur contrôle la vitesse à laquelle NVDA fait défiler l'affichage braille lorsque le <a href="#AutomaticBrailleScrolling" title="défilement automatique du braille">défilement automatique du braille</a> est activé, mesurée en cellules par seconde.</p>
+<p>Pour augmenter ou diminuer la vitesse de défilement depuis n'importe où, veuillez attribuer des gestes personnalisés à l'aide de la <a href="#InputGestures" title="boîte de dialogue Gestes de commandes">boîte de dialogue Gestes de commandes</a>.</p>
+<p>La valeur minimale (0 %) est de 1 cellule par seconde et la valeur maximale (100 %) est de 20 cellules par seconde.
+Par exemple, avec la valeur par défaut de 10 cellules/sec, si un afficheur braille de 40 cellules est utilisé, l'affichage défilera automatiquement toutes les 4 secondes.
+Si l'écran comportait 20 cellules, chaque ligne de braille serait affichée pendant 2 secondes.</p>
 <h5 id="BrailleSettingsWordWrap">Ne pas couper les mots quand c'est possible</h5>
 <p>Si cette option est activée, un mot trop long pour entrer à la fin de l'afficheur braille ne sera pas coupé.
 À la place, il y aura des espaces à la fin de l'affichage.
@@ -4403,6 +4856,8 @@ Cependant, si vous voulez fournir des informations lors d'un rapport d'erreur, o
 Si la confidentialité vous préoccupe, ne définissez pas le niveau de journalisation sur cette option.</li>
 <li>Débogage&nbsp;: En plus des messages d'info, avertissements et entrées/sorties, des messages additionnels de débogage seront journalisés.
 Tout comme pour entrées/sorties, si la confidentialité vous préoccupe, vous ne devez pas définir le niveau de journalisation sur cette option.</li>
+<li>Débogage (non masqué)&nbsp;: En plus de la journalisation au niveau débogage, NVDA ne supprimera pas les informations sensibles telles que les mots de passe et les clés API des journaux.
+N'activez cette option que temporairement lorsque des informations de débogage importantes sont masquées.</li>
 </ul>
 <h5 id="GeneralSettingsGatherUsageStats">Autoriser NV Access à récupérer des statistiques d'utilisation de NVDA</h5>
 <p>Si cette option est activée, NV Access utilisera les informations de vérification de mises à jour, y compris certaines informations démographiques telles que le système d'exploitation et le pays d'origine, pour suivre le nombre d'utilisateurs de NVDA.
@@ -4436,6 +4891,254 @@ Si vous voulez mettre en évidence seulement le focus et laisser les cases objet
 <p>Des services d'aide visuelle additionnels peuvent être fournis dans des <a href="#AddonsManager" title="Extensions NVDA">Extensions NVDA</a>.
 Si ces services ont des paramètres ajustables, ils seront affichés dans cette catégorie de paramètres dans des groupes séparés.
 Pour les paramètres supportés par un service, veuillez vous référer à la documentation pour ce service.</p>
+<h4 id="MagnifierSettingsCategory">Loupe</h4>
+<!-- KC:setting -->
+
+<h5 id="OpenMagnifierSettings">Ouvrir les paramètres de la loupe</h5>
+<p>Touche&nbsp;: <code>NVDA+control+w</code></p>
+<p>La catégorie Loupe dans la boîte de dialogue Paramètres de NVDA vous permet de configurer le comportement par défaut de la fonctionnalité de <a href="#Magnifier" title="Loupe">Loupe</a> intégrée de NVDA.
+Toutes les options de cette catégorie prennent effet immédiatement, mais si vous choisissez "Annuler" (ou appuyer sur <code>Échap</code>), elles seront annulées.</p>
+<p>Cette catégorie de paramètres contient les options suivantes&nbsp;:</p>
+<!-- KC:setting -->
+
+<h5 id="MagnifierEnable">Activer la loupe</h5>
+<p>Touche&nbsp;: <code>NVDA+maj+w</code></p>
+<p>Cette option démarre ou arrête la Loupe.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>Désactivé, Activé</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>Désactivé</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierZoom">Zoom</h5>
+<p>Ce paramètre vous permet de définir le niveau de zoom lors de l'utilisation de la loupe.
+Le niveau de zoom peut aller de 100&nbsp;% (pas de grossissement) à 5&nbsp;000&nbsp;% (grossissement maximum).
+La valeur par défaut est de 200&nbsp;%.</p>
+<p>Vous pouvez toujours ajuster le niveau de zoom à la volée en utilisant les commandes de zoom avant (<code>NVDA+maj+égal</code>) et zoom arrière (<code>NVDA+maj+)</code>) pendant que la loupe est active.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>100% à 5000%</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>200%</td>
+</tr>
+</tbody>
+</table>
+<!-- KC:setting -->
+
+<h5 id="MagnifierFilter">Filtre de couleur</h5>
+<p>Touche&nbsp;: <code>NVDA+maj+i</code></p>
+<p>Cette option permet de sélectionner le filtre à appliquer lors de l'utilisation de la loupe.</p>
+<p>Les options disponibles sont&nbsp;:</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>Normal, Niveaux de gris, Inversé</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>Normal</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Aucune modification de couleur n'est appliquée.</td>
+</tr>
+<tr>
+<td>Niveaux de gris</td>
+<td>Convertit toutes les couleurs en nuances de gris, ce qui peut aider à réduire la fatigue oculaire et à améliorer le contraste.</td>
+</tr>
+<tr>
+<td>Inversé</td>
+<td>Inverse toutes les couleurs à l'écran, ce qui peut être utile pour les utilisateurs qui préfèrent le texte clair sur des arrière-plans sombres ou qui souffrent de photophobie.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierPanningStepSize">Taille du pas de déplacement</h5>
+<p>Cette option vous permet de définir la taille du pas de déplacement en pourcentage de la fenêtre agrandie visible.
+Cela signifie que lorsque vous utilisez les commandes de déplacement manuel, la vue agrandie se déplacera du pourcentage spécifié de la taille actuelle de la fenêtre visible.
+Un pourcentage plus élevé entraîne un mouvements plus important, ce qui accélère la navigation sur l'écran, tandis que un pourcentage plus faible offre un contrôle plus fin pour un positionnement précis.
+La distance réelle en pixels sera automatiquement ajustée en fonction de votre niveau de zoom actuel.</p>
+<p>Remarque&nbsp;: Les commandes de déplacement vous permettent de déplacer manuellement la vue agrandie dans n'importe quelle direction, indépendamment du mode de suivi.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>1 à 100</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowMouse">Suivre la souris</h5>
+<p>Cette case à cocher définit si la loupe doit suivre le pointeur de la souris.
+Lorsqu'elle est activée, la zone agrandie se déplacera automatiquement pour suivre le pointeur de la souris, ce qui peut être utile pour les utilisateurs qui naviguent principalement à l'aide de la souris plutôt que du clavier.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>Désactivé, Activé</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>Activé</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowSystemFocus">Suivre le focus système</h5>
+<p>Cette case à cocher définit si la loupe doit suivre le focus système.
+Lorsqu'elle est activée, la zone agrandie se déplace automatiquement pour suivre le focus système, ce qui peut être utile pour les utilisateurs qui naviguent principalement à l'aide du clavier et souhaitent que la loupe suive leur navigation.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>Désactivé, Activé</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>Activé</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowReviewCursor">Suivre le curseur de revue</h5>
+<p>Cette case à cocher définit si la loupe doit suivre le curseur de revue.
+Lorsqu'elle est activée, la zone agrandie se déplace automatiquement pour suivre le curseur de revue, ce qui peut être utile pour les utilisateurs qui utilisent le curseur de revue pour naviguer dans le contenu et souhaitent que la loupe suive leur navigation.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>Désactivé, Activé</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>Activé</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierFollowNavigatorObject">Suivre l'objet navigateur</h5>
+<p>Cette case à cocher définit si la loupe doit suivre l'objet navigateur.
+Lorsqu'elle est activée, la zone agrandie se déplacera automatiquement pour suivre l'objet navigateur, ce qui peut être utile pour les utilisateurs qui utilisent la navigation par objets pour naviguer dans le contenu et souhaitent que la loupe suive leur navigation.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>Désactivé, Activé</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>Activé</td>
+</tr>
+</tbody>
+</table>
+<h5 id="MagnifierTrackingModeSetting">Mode de suivi</h5>
+<p>Cette liste déroulante vous permet de choisir le mode de suivi lors de l'utilisation de la loupe.
+Pour faire défiler les modes de suivi, veuillez attribuer un geste personnalisé à l'aide de la <a href="#InputGestures" title="boîte de dialogue Gestes de commandes">boîte de dialogue Gestes de commandes</a>.
+Les options disponibles sont&nbsp;:</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>Centre, Relatif</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>Centre</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Centre</td>
+<td>La zone agrandie est toujours centrée sur la position actuellement suivie.</td>
+</tr>
+<tr>
+<td>Relatif</td>
+<td>La zone agrandie conserve la position relative de l'élément suivi en fonction de sa position sur l'écran.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Clavier</h4>
 <!-- KC:setting -->
 
@@ -4702,6 +5405,12 @@ Si vous sortez de la zone d'édition, le mode formulaire sera automatiquement d�
 <p>Activée par défaut, cette option vous permet de choisir si des gestes (tels que l'appui sur des touches) qui ne déclenchent pas une commande NVDA et ne sont pas considérés comme une commande en général, devraient être interceptés pour ne pas interagir avec le document actuellement en focus.
 Par exemple, si l'option est activée, si la lettre j est pressée, elle sera interceptée pour ne pas atteindre le document, même si ce n'est ni une touche de navigation rapide ni une commande dans l'application elle-même.
 Dans ce cas NVDA demandera à Windows de jouer un son par défaut quand une touche interceptée est pressée.</p>
+<h5 id="BrowseModeSettingsBrowseModeNavigationElements">Éléments pour le mode navigation tactile</h5>
+<p>Cette liste vous permet de choisir les types d'éléments disponibles lorsque vous parcourez les éléments en mode navigation tactile.
+Utilisez les cases à cocher pour activer ou désactiver des types d'éléments individuels.
+Seuls les types d'éléments cochés apparaîtront lorsque vous ferez un glissé haut ou bas pour parcourir les éléments de navigation en mode navigation.
+Ce paramètre affecte uniquement la navigation tactile et n’a aucun effet sur le mode navigation utilisé au clavier.</p>
+<p>Les types d'éléments disponibles sont ceux disponibles avec les <a href="#SingleLetterNavigation" title="touches de navigation rapide">touches de navigation rapide</a>.</p>
 <h4 id="DocumentFormattingSettings">Mise en forme des documents</h4>
 <!-- KC:setting -->
 
@@ -4881,6 +5590,27 @@ Si les règles de parole pour la langue principale ne peuvent pas être trouvée
 <tr>
 <td>Défaut</td>
 <td>Automatique (la langue de la voix courante si elle est prise en charge, ou anglais le cas échéant)</td>
+</tr>
+</tbody>
+</table>
+<h6 id="MathSpeechDecimalSeparator">Séparateur décimal pour les nombres</h6>
+<p>Ce paramètre détermine le caractère utilisé comme séparateur décimal lors de la lecture des nombres dans les expressions mathématiques.
+Lorsqu'il est défini sur Automatique, le séparateur est choisi en fonction de la langue de lecture des mathématiques.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>Automatique, ".", ","</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>Automatique</td>
 </tr>
 </tbody>
 </table>
@@ -5754,6 +6484,27 @@ Si vous constatez que la voix SAPI 4 que vous utilisez cesse de fonctionner, vou
 </tr>
 </tbody>
 </table>
+<h5 id="SpeechDictsUseModernRegex">Utiliser le moteur d'expression régulière moderne pour les entrées du dictionnaire vocal</h5>
+<p>Ce paramètre contrôle la façon dont les entrées en expression régulière dans les <a href="#SpeechDictionaries" title="dictionnaires de prononciation">dictionnaires de prononciation</a> sont mise en correspondance.
+Le <a href="https://pypi.org/project/regex/" rel="noopener" target="_blank" title="moteur moderne">moteur moderne</a> offre une meilleure prise en charge des scripts non latins, comme l’hébreu et l’arabe, et propose des options de correspondance plus puissantes.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Options</td>
+<td>Défaut (Désactivé), Désactivé, Activé</td>
+</tr>
+<tr>
+<td>Défaut</td>
+<td>Désactivé</td>
+</tr>
+</tbody>
+</table>
 <h5 id="AdvancedSettingsCaretMoveTimeout">Délai d'attente de mouvement du curseur (en ms)</h5>
 <p>Cette option vous permet de configurer le nombre de millisecondes durant lequel NVDA attendra le déplacement du curseur (point d'insertion) dans les contrôles de texte éditable.
 Si vous trouvez que NVDA semble mal suivre le curseur ex&nbsp;: il semble être toujours un caractère en retard ou il répète les lignes, alors vous pouvez essayer d'accroître cette valeur.</p>
@@ -5768,8 +6519,9 @@ La journalisation de ces messages peut dégrader la performance et produire de g
 N'activez l'une d'entre elle que si un développeur de NVDA vous l'a spécifiquement demandé ex&nbsp;: pour déboguer un pilote de terminal braille ne fonctionnant pas correctement.</p>
 <h5 id="PlayErrorSound">Jouer un son pour les erreurs journalisées</h5>
 <p>Cette option vous permet de spécifier si NVDA joue un son d'erreur au cas où une erreur est enregistrée.
-En sélectionnant Uniquement dans les versions de test (par défaut), NVDA émet des sons d'erreur uniquement si la version actuelle de NVDA est une version de test (alpha, bêta ou exécutée à partir de la source).
-En sélectionnant Oui les sons d'erreur sont activés quelle que soit votre version actuelle de NVDA.</p>
+En sélectionnant "Uniquement dans les versions de test" (par défaut), NVDA émet des sons d'erreur uniquement si la version actuelle de NVDA est une version de test (alpha, bêta ou exécutée à partir de la source).
+En sélectionnant "Oui" les sons d'erreur sont activés quelle que soit votre version actuelle de NVDA.
+En sélectionnant "Non" les sons d'erreur sont désactivés quelle que soit votre version actuelle de NVDA, c'est-à-dire même dans les versions de test.</p>
 <h5 id="TextParagraphRegexEdit">Expression régulière pour la navigation par paragraphes de texte</h5>
 <p>Ce champ permet aux utilisateurs de personnaliser l'expression régulière pour détecter les paragraphes de texte en mode navigation.
 La <a href="#TextNavigationCommand" title="commande de navigation par paragraphe de texte">commande de navigation par paragraphe de texte</a> recherche les paragraphes correspondant à cette expression régulière.</p>
@@ -5797,13 +6549,35 @@ Vous pouvez aussi ajouter un commentaire décrivant la règle dans la zone comme
 <p>Cependant, les dictionnaires de NVDA font bien mieux que le simple remplacement de mot.
 Le dialogue "Ajout de règles" contient une case à cocher permettant de choisir si vous voulez que la règle respecte la casse pour que NVDA tienne compte des majuscules et minuscules.
 Par défaut, NVDA ne tient pas compte de la casse.</p>
-<p>Pour finir, un ensemble de boutons radio vous permet de dire à NVDA si votre modèle devrait s'appliquer partout, seulement dans le cas d'un mot entier ou s'il devrait être traité comme une "expression régulière".
-Définir le modèle comme un mot entier signifie que le remplacement ne sera fait que si le modèle n'est pas rencontré dans un mot plus grand.
-Un caractère non alphanumérique ou un souligné ou pas de caractère doit être présent immédiatement avant et après le modèle.
-Ainsi, en utilisant l'exemple précédent de remplacement du mot "oiseau" par le mot "grenouille", si vous le définissez comme un remplacement de mot entier, cela ne marcherait pas pour "oiseaux" ou "damoiseau".</p>
-<p>Une expression régulière est un modèle contenant des symboles particuliers vous permettant de trouver une correspondance sur plus d'un caractère à la fois, ou seulement sur les lettres ou les chiffres etc.
+<p>Un ensemble de boutons radio vous permet de dire à NVDA comment votre modèle doit s'appliquer.
+Les types disponibles sont&nbsp;:</p>
+<ul>
+<li>N'importe où&nbsp;: le modèle peut s'appliquer n'importe où dans le texte.</li>
+<li>Mot entier&nbsp;: le remplacement ne sera effectué que si le modèle apparaît comme un mot complet.
+Cela signifie que le modèle n’apparaît pas dans le cadre d’un mot plus grand.
+La condition est remplie si les caractères immédiatement avant et après le mot sont autres qu'une lettre, un chiffre ou un trait de soulignement, ou s'il n'y a aucun caractère.
+Par exemple, si vous remplacez "oiseau" par "grenouille" en utilisant une correspondance de mots entiers, cela ne correspondra pas à "oiseaux" ou "damoiseau".</li>
+<li>Partie d'un mot&nbsp;: le modèle doit être précédé ou suivi d'un caractère alphanumérique ou d'un trait de soulignement pour correspondre.
+Ceci est utile pour faire correspondre des parties de mots composés.
+Par exemple, si vous remplacez "oiseau" par "grenouille" en utilisant la correspondance avec une partie d'un mot, cela correspondra à "oiseaux", "damoiseau" et "damoiseaux", mais pas au mot seul "oiseau" (car il n'a ni caractère alphanumérique précédent ni suivant).</li>
+<li>Début d'un mot&nbsp;: Le modèle doit avoir une limite de mot au début et un caractère alphanumérique ou un trait de soulignement à la fin.
+Par exemple, si vous remplacez "oiseau" par "grenouille" en sélectionnant la correspondance avec le début d'un mot, cela correspondra à "oiseaux", mais pas "damoiseau" ni au mot "oiseau" tout seul.</li>
+<li>Fin d'un mot&nbsp;: Le modèle doit avoir un caractère alphanumérique ou un trait de soulignement au début et une limite de mot à la fin.
+Par exemple, si vous remplacez "oiseau" par "grenouille" en utilisant la correspondance avec la fin d'un mot, cela correspondra à "damoiseau", mais pas à "oiseaux" ou au mot "oiseau" seul.</li>
+<li>Expression régulière&nbsp;: le modèle est traité comme une expression régulière, c'est-à-dire un modèle contenant des symboles spéciaux qui vous permettent de faire correspondre plusieurs caractères à la fois, ou de faire correspondre uniquement des chiffres ou uniquement des lettres, pour ne citer que quelques exemples.
 Les expressions régulières ne sont pas expliquées dans ce manuel.
-Pour un tutoriel d'introduction, veuillez consulter le <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="Guide des expressions régulières de Python">Guide des expressions régulières de Python</a>.</p>
+Pour un tutoriel d'introduction, veuillez consulter le <a href="https://docs.python.org/3.13/howto/regex.html" rel="noopener" target="_blank" title="Guide des expressions régulières de Python">Guide des expressions régulières de Python</a>.
+Considérez également <a href="#SpeechDictsUseModernRegex" title="le paramètre avancé pour activer un moteur plus moderne">le paramètre avancé pour activer un moteur plus moderne</a>, en particulier lorsqu'il s'agit d'écritures non latines, telles que l'hébreu et l'arabe.</li>
+<li>Caractères génériques de style shell Unix&nbsp;: le modèle utilise des caractères génériques de style shell Unix pour la correspondance.
+Par exemple&nbsp;:<ul>
+<li><code>*</code> correspond à n'importe quelle séquence de caractères.</li>
+<li><code>?</code> correspond à un seul caractère.</li>
+<li><code>[az]</code> correspond à a ou z.</li>
+<li><code>[a-z]</code> correspond à n'importe quelle lettre minuscule de a à z.</li>
+<li><code>[!a-z]</code> correspond à n'importe quel caractère, à l'exception des lettres minuscules de a à z.</li>
+</ul>
+</li>
+</ul>
 <h4 id="SymbolPronunciation">Prononciation des ponctuations et symboles</h4>
 <p>Ce dialogue vous permet de modifier la façon dont les ponctuations et autres symboles sont prononcés ainsi que le niveau de symbole auquel ils sont annoncés.</p>
 <p>La langue pour laquelle la prononciation des symboles est en cours d'édition sera indiquée dans le titre du dialogue.
@@ -5866,7 +6640,8 @@ Par exemple, définir le <code>a</code> comme touche émulée et configurer un g
 Notez cependant que ce comportement peut être modifié dans le dialogue "Paramètres généraux" du menu "Préférences".
 Pour sauvegarder manuellement les paramètres à n'importe quel moment, utilisez l'élément "Sauvegarder la configuration" dans le menu NVDA.</p>
 <p>Si vous faites une erreur dans vos paramètres et avez besoin de revenir aux valeurs précédentes, utilisez l'élément "Revenir à la configuration sauvegardée" dans le menu NVDA.
-Vous pouvez également réinitialiser votre configuration aux valeurs d'usine en utilisant l'élément "Réinitialiser la configuration aux valeurs par défaut" également disponible dans le menu de NVDA.</p>
+Vous pouvez également réinitialiser votre configuration aux valeurs d'usine en utilisant l'élément "Réinitialiser la configuration aux valeurs par défaut" également disponible dans le menu de NVDA.
+Après la réinitialisation, une boîte de dialogue apparaîtra vous permettant d'annuler la réinitialisation et de restaurer votre configuration précédente.</p>
 <p>Les touches de commandes suivantes sont également utiles&nbsp;:</p>
 <!-- KC:beginInclude -->
 
@@ -5874,23 +6649,20 @@ Vous pouvez également réinitialiser votre configuration aux valeurs d'usine en
 <thead>
 <tr>
 <th>Nom</th>
-<th>Ordinateur de bureau</th>
-<th>Ordinateur portable</th>
+<th>Touche</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Enregistrer la configuration</td>
+<td>Sauvegarder la configuration</td>
 <td><code>NVDA+contrôle+c</code></td>
-<td><code>NVDA+contrôle+c</code></td>
-<td>Enregistre votre configuration actuelle afin qu’elle ne soit pas perdue lorsque vous quittez NVDA</td>
+<td>Enregistre votre configuration actuelle afin qu'elle ne soit pas perdue lorsque vous quittez NVDA</td>
 </tr>
 <tr>
 <td>Rétablir la configuration</td>
 <td><code>NVDA+contrôle+r</code></td>
-<td><code>NVDA+contrôle+r</code></td>
-<td>Un appui réinitialise votre configuration à la dernière sauvegarde. Trois appuis la réinitialise aux paramètres par défaut.</td>
+<td>Un appui réinitialise votre configuration à la dernière sauvegarde. Trois appuis la réinitialise aux paramètres par défaut sans afficher la boîte de dialogue d'annulation.</td>
 </tr>
 </tbody>
 </table>
@@ -6389,10 +7161,10 @@ Pour plus d'informations, lisez la section détaillée : <a href="#AddonsManager
 <h3 id="CreatePortableCopy">Créer une copie portable</h3>
 <p>Ceci ouvrira un dialogue vous permettant de créer une copie portable de NVDA à partir de la version en cours d'exécution.</p>
 <p>Suivez les instructions dans <a href="#CreatingAPortableCopy" title="Création d'une copie portable">Création d'une copie portable</a> pour plus d'informations.</p>
-<h3 id="RunCOMRegistrationFixingTool">Exécuter l'outil de correction d'enregistrements COM...</h3>
+<h3 id="RunCOMRegistrationFixingTool">Exécuter l'outil de réparation de l'accessibilité du système...</h3>
 <p>Parfois, des problèmes peuvent survenir avec le registre Windows, ce qui entraîne un comportement anormal de NVDA.
 Cela peut être dû, par exemple, à l’installation ou à la désinstallation de certains programmes (tels qu’Adobe Reader ou Math Player), ainsi qu’aux mises à jour de Windows et à d’autres évènements.
-L’outil de correction des enregistrement COM tente de résoudre ces problèmes en réparant les entrées d’accessibilité dans le registre.</p>
+L'outil de réparation de l'accessibilité du système tente de résoudre ces problèmes en réparant les entrées d'accessibilité dans le registre.</p>
 <p>Les types de problèmes que cet outil peut résoudre incluent&nbsp;:</p>
 <ul>
 <li>NVDA signale "inconnu" ou "volet" lors de la navigation dans des navigateurs tels que Firefox ou Edge, des programmes de messagerie tels que Thunderbird, Windows Explorer, la barre des tâches et d’autres programmes.</li>
@@ -7067,14 +7839,12 @@ Les terminaux suivants sont pris en charge&nbsp;:</p>
 <li>Baum: SuperVario, PocketVario, VarioUltra, Pronto!, SuperVario2, Vario 340</li>
 <li>HumanWare: Brailliant, BrailleConnect, Brailliant2</li>
 <li>APH: Refreshabraille</li>
-<li>Orbit: Orbit Reader 20</li>
+<li>Orbit: Orbit Reader 20, Orbit Reader 40</li>
 </ul>
 <p>Il est possible que d'autres terminaux fabriqués par Baum fonctionnent, mais cela n'a pas été testé.</p>
 <p>Si vous connectez via USB des terminaux qui n'utilisent pas le mode HID, vous devrez d'abord installer les pilotes USB fournis par le constructeur.
 Le VarioUltra et le Pronto! utilisent HID.
-Le Refreshabraille et l'Orbit Reader 20 peuvent utiliser HID si configurés de manière appropriée.</p>
-<p>Le mode USB série de l'Orbit Reader 20 n'est actuellement pris en charge que sous Windows 10 et versions ultérieures.
-USB HID devrait en général être utilisé à la place.</p>
+Les modèles Refreshabraille, Orbit Reader 20 et Orbit Reader 40 peuvent utiliser HID s'ils sont configurés de manière appropriée.</p>
 <p>Voici les assignations de touches pour ces terminaux avec NVDA.
 Veuillez consulter la documentation du terminal pour savoir où se situent ces touches.</p>
 <!-- KC:beginInclude -->
@@ -9858,7 +10628,9 @@ L'espoir est que tous les futurs modèles d'afficheurs Braille créés par n'imp
 NVDA peut afficher soit une seule ligne de braille sur la ligne d’affichage braille dédiée des appareils, soit plusieurs lignes de braille sur sa zone graphique tactile.
 Le modèle A300 dispose d’une zone graphique tactile de 120 par 80 points, pouvant contenir 8 lignes de 20 cellules chacune.</p>
 <p>Vous pouvez configurer si NVDA affiche le braille sur la ligne d’affichage braille dédiée ou sur la zone graphique tactile via l’option Destination braille dans les paramètres braille de NVDA pour ce pilote.</p>
-<p>Les touches de panoramique sont prises en charge, mais en raison du nombre limité de boutons sur l’appareil, d’autres commandes et capacités de routage ne sont actuellement pas disponibles.</p>
+<p>Le Dot Pad possède des touches de défilement gauche et droite et quatre touches de fonction (f1 à f4).
+Plusieurs boutons peuvent être enfoncés simultanément pour créer des gestes combinés (par exemple, <code>f1+panLeft</code>), qui peuvent être assignés dans la boîte de dialogue Gestes de commandes.
+Hormis les commandes de défilement, aucune autre commande n'est assignée par défaut.</p>
 <p>Le pilote Dot Pad prend en charge la détection automatique des appareils connectés via USB.
 Cependant, la détection automatique est désactivée par défaut, car l’appareil utilise des identifiants USB génériques pouvant entrer en conflit avec d’autres appareils.
 Pour activer la détection automatique, rendez-vous dans les paramètres Braille de NVDA et cochez « Dot Pad » dans la liste de détection automatique.
@@ -9877,12 +10649,12 @@ Assurez-vous de retirer complètement votre main de l’appareil lorsque vous na
 </thead>
 <tbody>
 <tr>
-<td>Défilement arrière de l'afficheur braille</td>
-<td><code>défilement_gauche</code></td>
+<td>Faire défiler l'afficheur braille vers l'arrière</td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
-<td>Défilement avant de l'afficheur braille</td>
-<td><code>défilement_droite</code></td>
+<td>Faire défiler l'afficheur braille vers l'avant</td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>
@@ -10019,7 +10791,7 @@ Ces paramètres doivent être placés après l'option, séparés de l'option par
 <tr>
 <td><code>-l NIVEAUDEJOURNALISATION</code></td>
 <td><code>--log-level=NIVEAUDEJOURNALISATION</code></td>
-<td>Le niveau minimal de messages journalisés (débogage 10, entrées/sorties 12, avertissements de débogage 15, info 20, désactivé 100). La journalisation est toujours désactivée si le mode sécurisé est activé.</td>
+<td>Le niveau minimal de messages journalisés ((débogage (non masqué) 5, (débogage 10, entrées/sorties 12, avertissements de débogage 15, info 20, désactivé 100). La journalisation est toujours désactivée si le mode sécurisé est activé.</td>
 </tr>
 <tr>
 <td><code>-c CHEMINDECONFIG</code></td>
@@ -10074,7 +10846,7 @@ Ces paramètres doivent être placés après l'option, séparés de l'option par
 <tr>
 <td>Aucune</td>
 <td><code>--enable-start-on-logon=True|False</code></td>
-<td>Durant l'installation, active l'option <a href="#StartAtWindowsLogon" title="Utiliser NVDA lors de la connexion à Windows">Utiliser NVDA lors de la connexion à Windows</a></td>
+<td>Durant l'installation, active le <a href="#StartAtWindowsLogon" title="démarrage sur l'écran de connexion">démarrage sur l'écran de connexion</a> de NVDA</td>
 </tr>
 <tr>
 <td>Aucune</td>
@@ -10160,5 +10932,6 @@ Ces valeurs sont stockées dans le registre sous la clé <code>HKEY_LOCAL_MACHIN
 <p>Si vous avez besoin d'informations complémentaires ou d'aide concernant l'utilisation de NVDA, veuillez visiter le <a href="https://www.nvaccess.org" rel="noopener" target="_blank" title="site web de NVDA">site web de NVDA</a>.
 Sur ce site, vous pourrez trouver des informations complémentaires telles que des listes de discussion spécialisées et d'autres ressources communautaires pour vous aider à utiliser NVDA.
 Ce site fournit également des informations concernant le développement de NVDA.</p>
+<!-- markdownlint-disable-file MD060 -->
 </body>
 </html>

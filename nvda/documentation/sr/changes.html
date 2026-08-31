@@ -9,6 +9,218 @@
 
 </head>
 <body><h1 id="nvda-sta-je-novo">NVDA šta je novo</h1>
+<h2 id="20262">2026.2</h2>
+<p>Ova verzija uključuje novu funkciju ugrađene lupe, poboljšanja za pokrete i navigaciju na ekranu osetljivom na dodir, kao i dodatne mogućnosti za govor i brajeve redove.</p>
+<p>Lupa pruža opcije zumiranja i filtriranja boja kako bi pomogla slabovidim korisnicima.
+Lupa trenutno podržava samo režim celog ekrana, umanjeni režimi su planirani u budućoj verziji.</p>
+<p>Podrška za ekrane osetljive na dodir je značajno poboljšana novim pokretima skupljanja i širenja prstiju kao i navigacijom u režimu pretraživanja putem ekrana.
+Sada se možete kretati po linkovima, naslovima, poljima za uređivanje i drugim elementima korišćenjem prevlačenja po ekranu.</p>
+<p>Govorne funkcije su poboljšane podrškom za prilagođene govorne rečnike koji se mogu naći u dodacima kao i nove vrste unosa u rečniku za detaljniju kontrolu.
+Dodato je novo glasovno podešavanje za OneCore glasove koje kontroliše pauze nakon interpunkcije.
+Nova komanda dozvoljava ponavljanje poslednje izgovorene informacije, uz mogućnost da se prikaže u poruci režima pretraživanja.
+Podrazumevana komanda za ponavljanje poslednje izgovorene informacije je <code>NVDA+x</code>, ona se može promeniti u dijalogu ulaznih komandi.</p>
+<p>Brajev red sada može automatski da se pomera i DotPad uređaji podržavaju kombinacije više tastera.
+Podrazumevana komanda za uključivanje ili isključivanje automatskog pomeranja je <code>NVDA+alt+k</code>.</p>
+<p>Liblouis je ažuriran sa novim italijanskim i estonskim brajevim tabelama.</p>
+<p>Kada se NVDA podešavanja vrate na fabričke vrednosti, sada je dostupno dugme za poništavanje koje će vratiti prethodna podešavanja.</p>
+<h3 id="bezbednosne-ispravke">Bezbednosne ispravke</h3>
+<p>Molimo odgovorno prijavite bezbednosne probleme praćenjem NVDA <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="politike bezbednosti">politike bezbednosti</a>.</p>
+<ul>
+<li>Sprečeno prikazivanje potencijalno osetljivih informacija na brajevim redovima kada se računar isključi ili ponovo pokrene. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-qhjv-3xf4-9c66" rel="noopener" target="_blank" title="GHSA-qhjv-3xf4-9c66">GHSA-qhjv-3xf4-9c66</a>)</li>
+</ul>
+<h3 id="nove-karakteristike">Nove karakteristike</h3>
+<ul>
+<li>Lupa:<ul>
+<li>NVDA sada sadrži ugrađenu funkciju lupe koja vam dozvoljava da zumirate ili uvećate delove ekrana. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19228" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19228">#19228</a>, <a class="gh-link gh-mention" href="https://github.com/Boumtchack" rel="noopener" target="_blank" title="GitHub User: @Boumtchack">@Boumtchack</a>)</li>
+<li>Lupa podržava različite nivoe zumiranja, filtere boja (normalno, sive nijanse, obrnuto), kao i različite režime praćenja.</li>
+<li>Filteri boja mogu da pomognu korisnicima sa različitim oštećenjima vida ili osetljivim na svetlost tako što će obrnuti ili smanjiti prozirnost boja ekrana.</li>
+<li>Komanda dozvoljava privremeno prikazivanje pregleda celog ekrana.</li>
+<li>Sva podešavanja lupe se mogu promeniti u novom panelu podešavanja lupe u NVDA podešavanjima.</li>
+<li>Lupa se ne može koristiti zajedno sa zatamnjivanjem ekrana iz bezbednosnih razloga.</li>
+</ul>
+</li>
+<li>Govor:<ul>
+<li>Dodato je novo glasovno podešavanje "prirodna pauza nakon interpunkcije" za OneCore glasove, koje dozvoljava korisnicima da uključe ili isključe pauze za interpunkciju. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11876" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11876">#11876</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
+<li>Dodata je nova komanda, sa podrazumevanom prečicom <code>NVDA+x</code>, koja ponavlja poslednju informaciju koju je NVDA izgovorio; pritiskanje prečice dva puta će je prikazati u poruci režima pretraživanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/625" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #625">#625</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+</ul>
+</li>
+<li>Brajevi redovi:<ul>
+<li>Dodata mogućnost automatskog pomeranja brajevog reda. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18573" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18573">#18573</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)<ul>
+<li>Prečice <code>NVDA+alt+k</code>, <code>NVDA+alt+l</code> i <code>NVDA+alt+j</code> se mogu koristiti da uključite ili isključite automatsko pomeranje, povećate, ili smanjite brzinu pomeranja.</li>
+</ul>
+</li>
+<li>DotPad brajevi redovi sada podržavau prečice sa više tastera. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19565" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19565">#19565</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)<ul>
+<li>Sada možete da pritisnete više tastera u isto vreme kako biste pravili prilagođene prečice (na primer, <code>f1+panLeft</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ekran osetljiv na dodir:<ul>
+<li>Dodati pokreti skupljanja i širenja prstiju, koji dozvoljavaju da se pokreti skupljenja i širenja prstiju dodaju komandama. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19963" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19963">#19963</a>, <a class="gh-link gh-mention" href="https://github.com/kefaslungu" rel="noopener" target="_blank" title="GitHub User: @kefaslungu">@kefaslungu</a>)</li>
+<li>Dodata navigacija po eelementima režima pretraživanja na ekranu osetljivom na dodir, koja dozvoljava korisnicima da se kreću po linkovima, naslovima, poljima za uređivanje, listama, tabelama i drugim elementima brze navigacije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3424" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3424">#3424</a>, <a class="gh-link gh-mention" href="https://github.com/kefaslungu" rel="noopener" target="_blank" title="GitHub User: @kefaslungu">@kefaslungu</a>)<ul>
+<li>Prevucite dole ili gore da kružite kroz vrste elemenata; prevucite desno ili levo da se krećete po elementima izabrane vrste.</li>
+<li>Vrste elemenata koje se prikazuju kada kružite se mogu podesiti u panelu podešavanja režima pretraživanja.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Govorni rečnici:<ul>
+<li>Dodata podrška za prilagođene govorne rečnike. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19558" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19558">#19558</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17468" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17468">#17468</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)<ul>
+<li>Rečnici se mogu ponuditi u <code>speechDicts</code> folderu paketa sa dodatkom.</li>
+<li>Meta podaci o rečniku se mogu dodati u opcionom <code>speechDictionaries</code> odeljku manifesta dodatka.</li>
+<li>Molimo pogledajte odeljak <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#AddonSpeechDictionaries" rel="noopener" target="_blank" title="Custom speech dictionaries u vodiču za programere">Custom speech dictionaries u vodiču za programere</a> za više detalja.</li>
+</ul>
+</li>
+<li>Dodate su nove vrste unosa u rečniku, kao što su deo reči ili početak reči.
+Pogledajte odeljak govornih rečnika u korisničkom uputstvu za više detalja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19506" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19506">#19506</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+</ul>
+</li>
+<li>Nakon što se NVDA instalira ili ažurira, dijalog će sada ponuditi opcije da ponovo pokrenete Windows, pokrenete instaliranu kopiju, ili izađete iz instalacije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19268" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19268">#19268</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19718" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19718">#19718</a>, <a class="gh-link gh-mention" href="https://github.com/kefaslungu" rel="noopener" target="_blank" title="GitHub User: @kefaslungu">@kefaslungu</a>)</li>
+<li>Dodata komanda bez dodeljene prečice za promenu rasporeda tastature. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19211" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19211">#19211</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+<li>Dodata komanda bez dodeljene prečice za skakanje na naredni ili prethodni klizač u režimu pretraživanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17005" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17005">#17005</a>, <a class="gh-link gh-mention" href="https://github.com/tareh7z" rel="noopener" target="_blank" title="GitHub User: @tareh7z">@tareh7z</a>)</li>
+<li>Kada se NVDA podešavanja vrate na fabričke vrednosti iz NVDA menija, dijalog će biti prikazan nakon vraćanja sa dugmetom za poništavanje koje vraća prethodna podešavanja.
+Ovo ne utiče na tastersku prečicu trostrukog pritiskanja(<code>NVDA+kontrol+r</code>), budući da je njen cilj brz oporavak podešavanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19575" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19575">#19575</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Dodata komanda bez dodeljene prečice za prijavljivanje trenutnog stanja zatamnjivanja ekrana. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19759" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19759">#19759</a>)</li>
+</ul>
+<h3 id="promene">Promene</h3>
+<ul>
+<li>Ažuriran Liblouis brajev prevodilac na <a href="https://github.com/liblouis/liblouis/releases/tag/v3.37.0" rel="noopener" target="_blank" title="3.37.0">3.37.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19758" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19758">#19758</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)<ul>
+<li>Dodate nove italijanske i estonske šestotačkaste brajeve tabele.</li>
+</ul>
+</li>
+<li>Brajevi redovi:<ul>
+<li>Poruka na brajevom redu kada se NVDA pokrene je ažurirana kako bi spomenula da li je zatamnjivanje ekrana omogućeno. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19441" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19441">#19441</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
+<li>NVDA sada podržava Orbit Reader 40 u sopstvenom jedinstvenom HID režimu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19756" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19756">#19756</a>, <a class="gh-link gh-mention" href="https://github.com/trypsynth" rel="noopener" target="_blank" title="GitHub User: @trypsynth">@trypsynth</a>)</li>
+</ul>
+</li>
+<li>Sada je moguće otvoriti pregled dnevnika prečicom <code>NVDA+f1</code>, čak i kada je nivo evidentiranja u dnevniku podešen na "onemogućeno". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19318" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19318">#19318</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+<li>Poboljšan algoritam pretrage za filtriranje dodataka u prodavnici dodataka. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19309" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19309">#19309</a>)</li>
+<li>NVDA se sada može podesiti da ne reprodukuje zvukove za greške, čaki u verzijama za testiranje. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13021" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13021">#13021</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+<li>NVDA će se podrazumevano pokrenuti u režimu fokusiranja kada se koristi WhatsApp 2.2584.3.0 ili noviji. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19655" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19655">#19655</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
+<li>Režim pomoći za unos je poboljšan: (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6621" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6621">#6621</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>, <a class="gh-link gh-mention" href="https://github.com/Emil-18" rel="noopener" target="_blank" title="GitHub User: @Emil-18">@Emil-18</a>)<ul>
+<li>Kada kombinacija tastera upisuje znak u standardnom režimu unosa, kombinacija tastera će prvo biti prijavljena, a nakon toga znak.</li>
+<li>Ako kombinacija tastera izvršava NVDA komandu, ponašanje ostaje isto kao i ranije, opis komande će biti prijavljen.</li>
+</ul>
+</li>
+<li>Verzija proizvoda za Istraživač datoteka će biti u skladu sa stvarnom verzijom Windowsa uključujući ispravnu podverziju i brojeve revizije.
+Ovo se češće primećuje na Windows verzijama koje su paketi koji omogućavaju ažuriranje sa starije verzije kao što je Windows 11 2025 ažuriranje zasnovano na Windows 11 2024 ažuriranju. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19802" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19802">#19802</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
+<li>Komande navigacije matematičkog sadržaja sada podržavaju pomoć za unos, režim govora na zahtev i mogu se menjati. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19871" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19871">#19871</a>, <a class="gh-link gh-mention" href="https://github.com/RyanMcCleary" rel="noopener" target="_blank" title="GitHub User: @RyanMcCleary">@RyanMcCleary</a>)</li>
+<li>"Alatka za ispravljanje COM registracije" je preimenovana u "alatku za popravljanje pristupačnosti sistema" radi poboljšane jasnoće. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19622" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19622">#19622</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Dodato napredno podešavanje za prebacivanje unosa regularnih izraza u govornom rečniku na moderniji <a href="https://pypi.org/project/regex/" rel="noopener" target="_blank" title="regex"><code>regex</code></a> obrađivač.
+Ovo pruža unikodnost <code>\w</code> i <code>\b</code> kao i dodatne funkcije za regularne izraze.
+Podešavanje je podrazumevano onemogućeno. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20013" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20013">#20013</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li>Radio dugmad za vrstu u dijalogu za dodavanje unosa u rečnik su sada poređana vertikalno umesto horizontalno. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19657" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19657">#19657</a>)</li>
+<li>Uklonjena opcija "prilagođeno" koja nije bila funkcionalna iz podešavanja matematičkog decimalnog razdvajača. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20425" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20425">#20425</a>)</li>
+</ul>
+<h3 id="ispravljene-greske">Ispravljene greške</h3>
+<ul>
+<li>Prodavnica dodataka:<ul>
+<li>NVDA se više ne ruši kada direktorijum preuzimanja prodavnice dodataka ne može da se očisti zbog grešaka sa dozvolama za datoteke. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19202" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19202">#19202</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
+<li>Nakon što se preuzimanje nekog dodatka otkaže a zatim ponovo otvori prodavnica dodataka, preuzimanje nekog drugog dodatka više neće biti neuspešno. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20015" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20015">#20015</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Aktivatori profila podešavanja sada rade kada se otvori prodavnica dodataka. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19583" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19583">#19583</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+</ul>
+</li>
+<li>Ispravljena greška do koje može doći kada je NVDA proveravao da li sintetizator sa neispravnim jezicima podržava neki jezik. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20080" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20080">#20080</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
+<li>NVDA će pokušati da se oporavi brže nakon zamrzavanja neki aplikacija, posebno onih koje su napisane u Javi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14396">#14396</a>, <a class="gh-link gh-mention" href="https://github.com/thgcode" rel="noopener" target="_blank" title="GitHub User: @thgcode">@thgcode</a>)</li>
+<li>U Firefox režimu pretraživanja, pristupačno ime kontrola za uređivanje (kao što su izborna polja i radio dugmad) se sada ispravno izgovara kada kontrola ima <code>aria-label</code> i pridruženi <code>&lt;label&gt;</code> element koji sadrži samo <code>aria-hidden</code> sadržaj. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19409" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19409">#19409</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>U Foxit PDF uređivaču, NVDA ponovo može da istražuje PDF dokumente. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20440" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20440">#20440</a>, <a class="gh-link gh-mention" href="https://github.com/cary-rowen" rel="noopener" target="_blank" title="GitHub User: @cary-rowen">@cary-rowen</a>)</li>
+<li>Stavka "uključuje i isključuje čuvanje rasporeda ekrana prilikom učitavanja sadržaja dokumenta" u kategoriji "režim pretraživanja" dijaloga ulaznih komandi se sada ispravno ponaša. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18378" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18378">#18378</a>)</li>
+<li>U Microsoft Wordu uz omogućen UIA, promene stranica se sada ispravno izgovaraju kada se krećete kroz redove tabela koje obuhvataju više stranica. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19386" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19386">#19386</a>, <a class="gh-link gh-mention" href="https://github.com/akj" rel="noopener" target="_blank" title="GitHub User: @akj">@akj</a>)</li>
+<li>Ispravljeno preterano korišćenje resursa i treperenje istaknutog sadržaja kada se koristi vizuelno označavanje. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17434" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17434">#17434</a>, <a class="gh-link gh-mention" href="https://github.com/hwf1324" rel="noopener" target="_blank" title="GitHub User: @hwf1324">@hwf1324</a>)</li>
+<li>U Excelu, kada se omogući vizuelno označavanje, fokusirana ćelija će sada ispravno biti označena. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19641" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19641">#19641</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
+<li>Brajevi redovi više ne bi trebali da prestanu da prate fokus kada se krećete po Microsoft Kopilot aplikaciji. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19646" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19646">#19646</a>, <a class="gh-link gh-mention" href="https://github.com/Emil-18" rel="noopener" target="_blank" title="GitHub User: @Emil-18">@Emil-18</a>)</li>
+<li>Komanda <code>NVDA+k</code> sada ispravno prijavljuje odredišta linkova koji sadrže formatiran tekst, poput iskošenog ili podebljanog. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19428" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19428">#19428</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Pokazivači velikih slova se sada ispravno najavljuju prilikom izbora pojedinačnih znakova. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19505" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19505">#19505</a>, <a class="gh-link gh-mention" href="https://github.com/cary-rowen" rel="noopener" target="_blank" title="GitHub User: @cary-rowen">@cary-rowen</a>)</li>
+<li>MathML u Chromiumu se pouzdanije čita nakon što se NVDA pokrene. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20049" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20049">#20049</a>, <a class="gh-link gh-mention" href="https://github.com/RyanMcCleary" rel="noopener" target="_blank" title="GitHub User: @RyanMcCleary">@RyanMcCleary</a>)</li>
+<li>Dekorativni unikodni znakovi kao što su negativno na kvadrat, negativni krug i simbol regionalnog pokazivača se sada standardizuju na njihova osnovna latinična slova kada je unikodna standardizacija omogućena. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19608" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19608">#19608</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Ispravljeno zamrzavanje programa NVDA kada se krećete kroz JetBrains IDE-ove. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16741" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16741">#16741</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
+<li>Unosi u govornom rečniku vrste cele reči sada ispravno obrađuju reči koje sadrže znakove unikodnog kombinovanja (na primer hebrejsko niqqud, arapsko harakat). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20013" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20013">#20013</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)<ul>
+<li>Konkretno, unosi celih reči se više neće neispravno podudarati unutar većih reči kada te reči sadrže kombinovane znakove.</li>
+</ul>
+</li>
+<li>Ispravljen slučaj koji je mogao da izazove da se NVDA zamrzne kada se matematika čita na brajevom redu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20319" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20319">#20319</a>, <a class="gh-link gh-mention" href="https://github.com/AAClause" rel="noopener" target="_blank" title="GitHub User: @AAClause">@AAClause</a>)</li>
+<li>NVDA sada može da učitava sapi4 glasove koji ne podržavaju visinu, brzinu ili jačinu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20302" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20302">#20302</a>)</li>
+</ul>
+<h3 id="changes-for-developers">Changes for Developers</h3>
+<p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
+<ul>
+<li>Clarified NV Access's policy on API breaking changes in the <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="Developer Guide">Developer Guide</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19599" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19599">#19599</a>)</li>
+<li>Updated components:<ul>
+<li>Ruff to 0.15.9. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19736">#19736</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19908" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19908">#19908</a>)</li>
+<li>uv to 0.11.29. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19736">#19736</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19908" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19908">#19908</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19968" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19968">#19968</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20142" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20142">#20142</a>)</li>
+<li>Requests to 2.33.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19877" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19877">#19877</a>)</li>
+<li>cryptography to 48.0.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19877" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19877">#19877</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19968" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19968">#19968</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20142" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20142">#20142</a>)</li>
+<li>Python to 3.13.13. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20231" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20231">#20231</a>, <a class="gh-link gh-mention" href="https://github.com/dpy013" rel="noopener" target="_blank" title="GitHub User: @dpy013">@dpy013</a>)</li>
+<li>lxml to 6.1.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20142" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20142">#20142</a>)</li>
+<li>PyMdown Extensions to 10.21.3. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20142" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20142">#20142</a>)</li>
+</ul>
+</li>
+<li>A new parameter <code>redactSecrets</code> has been added to logging functions e.g. <code>log.debug</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19966" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19966">#19966</a>)<ul>
+<li>When set to <code>True</code>, logging output will be sanitized to replace detected secrets with asterisks.</li>
+<li>This is set to <code>False</code> by default for performance purposes.</li>
+<li>It is encouraged to enable this when logging anything particularly sensitive e.g. clipboard content.</li>
+<li>Added a <code>DEBUG_UNREDACTED</code> logging level for cases where developers explicitly need debug logging without <code>redactSecrets</code> masking.</li>
+</ul>
+</li>
+<li>NVDA libraries built by the build system are now linked with the <a href="https://learn.microsoft.com/en-us/cpp/build/reference/cetcompat" rel="noopener" target="_blank" title="/CETCOMPAT">/CETCOMPAT</a> flag, improving protection against certain malware attacks. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19435" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19435">#19435</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li>Subclasses of <code>browseMode.BrowseModeDocumentTreeInterceptor</code> that support screen layout being on and off should override the <code>_toggleScreenLayout</code> method, rather than implementing <code>script_toggleScreenLayout</code> directly. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19487" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19487">#19487</a>)</li>
+<li>A new method has been added to the UIA.UIA class, called <code>_getUIACacheablePropertyValue_handlesCOMErrors</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19713" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19713">#19713</a>, <a class="gh-link gh-mention" href="https://github.com/Emil-18" rel="noopener" target="_blank" title="GitHub User: @Emil-18">@Emil-18</a>)<ul>
+<li>This method calls <code>_getUIACacheablePropertyValue</code>, and takes an extra argument (<code>onError</code>) that specifies the value that should be returned if a <code>COMError</code> is raised.</li>
+</ul>
+</li>
+<li>The <code>scons tests</code> build target has been removed, as it was misleadingly named.
+It only ran the translation string comment check, which is equivalent to <code>scons checkPot</code>.
+The <code>scons checkPot</code> target has also been replaced with <code>runcheckpot.bat</code>.
+Use the individual test commands instead: <code>runcheckpot.bat</code>, <code>rununittests.bat</code>, <code>runsystemtests.bat</code>, <code>runlint.bat</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19606" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19606">#19606</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19676" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19676">#19676</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Added a private <code>_asyncioEventLoop</code> module that provides an asyncio event loop running on a background thread for use by NVDA components. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19816" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19816">#19816</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
+<li>Added several functions related to the braille auto-scroll feature. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19126" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19126">#19126</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>):<ul>
+<li>Added an <code>autoScroll</code> method to <code>braille.handler</code>.</li>
+<li>Added several functions for handling configuration value conversions and updates in <code>config.conf</code>:<ul>
+<li>Added a <code>getConfigValue</code> function to get the value for a provided configuration key path.</li>
+<li>Added a <code>setConfigValue</code> function to set a value for a provided configuration key path.</li>
+<li>Added a <code>valueToPercentage</code> function to calculate the percentage representation of a configuration value within its range.</li>
+<li>Added a <code>percentageToValue</code> function to convert a percentage to the corresponding configuration value.</li>
+<li>Added a <code>clampedIncrementAndUpdateConfig</code> function to update a configuration value by applying a step, constrained within its valid range.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>NVDA is now built with Visual Studio 2026. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20203" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20203">#20203</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li>Fixed a race condition in <code>nvdaController_speakSsml</code> with <code>asynchronous=False</code> where a <code>speechCanceled</code> signal fired between <code>queueFunction</code> returning and the synth thread executing the <code>CallbackCommand</code> would not be caught, causing the call to block indefinitely. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20220" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20220">#20220</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+</ul>
+<h4 id="deprecations">Deprecations</h4>
+<ul>
+<li>The <code>speechDictHandler.ENTRY_TYPE_*</code> constants are deprecated.
+Use the <code>speechDictHandler.types.EntryType</code> enumeration instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19430" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19430">#19430</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li><code>speechDictHandler.SpeechDictEntry</code> and <code>speechDictHandler.SpeechDict</code> have been moved to <code>speechDictHandler.types</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19430" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19430">#19430</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+<li><code>speechDictHandler.dictionaries</code> and <code>speechDictHandler.dictTypes</code> are deprecated without replacement. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19558" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19558">#19558</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
+</ul>
+<h2 id="202611">2026.1.1</h2>
+<p>Ovo je manje ažuriranje kako bi se ispravili bezbednosni problemi.
+Takođe uključuje ispravku greške do koje je došlo u verziji 2026.1 sa načinom na koji se <code>ctrl+f</code> obrađuje u istraživaču datoteka.
+Promena koja je uvedena u verziji 2026.1 vezana za način na koji NVDA obrađuje probleme sa povezivanjem na daljinski pristup je uklonjena.</p>
+<h3 id="bezbednosne-ispravke_1">Bezbednosne ispravke</h3>
+<p>Molimo odgovorno prijavljujte bezbednosne probleme praćenjem NVDA <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="politike bezbednosti">politike bezbednosti</a>.</p>
+<ul>
+<li>Ispravljena greška koja je mogla da izazove da se NVDA poveže na nepouzdan server daljinskog pristupa. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-m268-mc77-j2cr" rel="noopener" target="_blank" title="GHSA-m268-mc77-j2cr">GHSA-m268-mc77-j2cr</a>)</li>
+<li>Sprečava situaciju koja je mogla da izazove da se dodaci koji nisu izabrani kopiraju u sistemsku konfiguraciju. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-669f-7gpr-5vqm" rel="noopener" target="_blank" title="GHSA-669f-7gpr-5vqm">GHSA-669f-7gpr-5vqm</a>)</li>
+</ul>
+<h3 id="ispravljene-greske_1">Ispravljene greške</h3>
+<ul>
+<li>U istraživaču datoteka, pritiskanje prečice <code>ctrl+f</code> ponovo fokusira polje za pretragu bez dodatnog prijavljivanja okna. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20021" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20021">#20021</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+</ul>
+<h3 id="promene_1">Promene</h3>
+<ul>
+<li>Daljinski pristup ponovo pokušava automatsko ponovno povezivanje nakon što prvobitno povezivanje ne uspe kao kontrolisani računar, umesto da odmah prekine povezivanje.
+Ovo znači da će kontrolisanje računara bez fizičkog pristupa koji su podešeni da se automatski povežu nakon pokretanja ponovo biti moguće nakon što mreža postane dostupna. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20122">#20122</a>)</li>
+</ul>
+<h3 id="changes-for-developers_1">Changes for Developers</h3>
+<ul>
+<li>The <code>winBindings.cfgmgr32</code> module is now included in NVDA binary builds. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20089" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20089">#20089</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+</ul>
+<!-- Beyond this point, Markdown should not be linted, as we don't modify old change log sections. -->
+<!-- markdownlint-disable -->
+
 <h2 id="20261">2026.1</h2>
 <p>Ova verzija uključuje podršku za čitanje matematičkog sadržaja uz MathCAT, koji je sada ugrađen u NVDA.</p>
 <p>Izvršeno je nekoliko poboljšanja u govoru.
@@ -50,7 +262,7 @@ Preporučujemo vam ažuriranje na Windows 11, ili ako ovo nije moguće, na najno
 Windows 10 na ARM procesorima takođe više nije podržan.</li>
 <li>Wiris MathPlayer više nije podržan.</li>
 </ul>
-<h3 id="nove-karakteristike">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_1">Nove karakteristike</h3>
 <ul>
 <li>U prodavnici dodataka:<ul>
 <li>Rezultati skeniranja usluge VirusTotal su sada dostupni u detaljima dodatka.
@@ -73,7 +285,7 @@ Ovo se može omogućiti korišćenjem opcije "Prijavi kada objekti podržavaju v
 <li>Poboljšane performanse na ARM64 sistemima, kao što su sistemi sa Qualcomm procesorima. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18570" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18570">#18570</a>, <a class="gh-link gh-mention" href="https://github.com/leonarddeR" rel="noopener" target="_blank" title="GitHub User: @leonarddeR">@leonarddeR</a>)</li>
 <li>Dodata je nova nedodeljena globalna komanda za uključivanje i isključivanje opcije "Reprodukuj zvučne koordinate kada se miš pomera". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19026" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19026">#19026</a>, <a class="gh-link gh-mention" href="https://github.com/rlawnsrl123" rel="noopener" target="_blank" title="GitHub User: @rlawnsrl123">@rlawnsrl123</a>)</li>
 </ul>
-<h3 id="promene">Promene</h3>
+<h3 id="promene_2">Promene</h3>
 <ul>
 <li>NVDA više ne podržava Windows 8.1.
 Windows 10 (verzija 1507) je najmanja podržana verzija Windowsa.
@@ -111,7 +323,7 @@ Trenutno uključuje podešavanja zatamnjivanja ekrana (ranije su bila u kategori
 <li>NVDA interfejs je sada preveden na kmerski. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19450" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19450">#19450</a>)</li>
 <li>NVDA više neće podrazumevano omogućiti opciju "pokreni NVDA u toku prijavljivanja" kada se instalira prvi put. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19631" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19631">#19631</a>)</li>
 </ul>
-<h3 id="ispravljene-greske">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_2">Ispravljene greške</h3>
 <ul>
 <li>Daljinski pristup:<ul>
 <li>Poboljšana obaveštenja za korisnika kada povezivanje kao kontrolisani računar nije uspelo. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19103" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19103">#19103</a>, <a class="gh-link gh-mention" href="https://github.com/tareh7z" rel="noopener" target="_blank" title="GitHub User: @tareh7z">@tareh7z</a>)</li>
@@ -144,7 +356,7 @@ Trenutno uključuje podešavanja zatamnjivanja ekrana (ranije su bila u kategori
 <li>U Chromium pretraživačima, ako dokument sadrži linkove koji imaju neispravno formiranu adresu, čitanje dokumenta je ponovo moguće. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19125" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19125">#19125</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>NVDA više ne reprodukuje zvuk za pravopisne greške dok pišete ako je režim govora na zahtev ili isključen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19323" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19323">#19323</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="changes-for-developers">Changes for Developers</h3>
+<h3 id="changes-for-developers_2">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -293,7 +505,7 @@ Only add-ons with the given IDs will be copied. (<a class="gh-link gh-issue" hre
 <li><code>browseMode.ElementsListDialog.filterTimer</code> has been removed. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19702" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19702">#19702</a>)</li>
 <li>The type of the <code>installDate</code> property of <code>addonStore.models.addon.AddonManifestModel</code> and <code>addonStore.models.addon.InstalledAddonStoreModel</code> is now <code>datetime | None</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19901" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19901">#19901</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h4 id="deprecations">Deprecations</h4>
+<h4 id="deprecations_1">Deprecations</h4>
 <ul>
 <li><code>winVersion.WIN81</code> is deprecated. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18684" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18684">#18684</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li><code>NVDAHelper.versionedLibPath</code> is deprecated.
@@ -381,30 +593,28 @@ Use <code>AddonsState.fromDict</code> instead.</li>
 </ul>
 </li>
 </ul>
-<!-- Beyond this point, Markdown should not be linted, as we don't modify old change log sections. -->
-
 <h2 id="202533">2025.3.3</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravio bezbednosni propust.</p>
-<h3 id="bezbednosne-ispravke">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_2">Bezbednosne ispravke</h3>
 <p>Molimo odgovorno prijavite bezbednosne probleme praćenjem NVDA <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="politike bezbednosti">politike bezbednosti</a>.</p>
 <ul>
 <li>Sprečava situaciju u kojoj se NVDA neočekivano može pokrenuti kao administrator. <a href="https://github.com/nvaccess/nvda/security/advisories/ghsa-cq78-fjp7-3rp5" rel="noopener" target="_blank" title="GHSA-cq78-fjp7-3rp5">GHSA-cq78-fjp7-3rp5</a></li>
 </ul>
 <h2 id="202532">2025.3.2</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravio bezbednosni propust.</p>
-<h3 id="bezbednosne-ispravke_1">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_3">Bezbednosne ispravke</h3>
 <p>Molimo odgovorno prijavite bezbednosne probleme praćenjem NVDA <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="politike bezbednosti">politike bezbednosti</a>.</p>
 <ul>
 <li>Ispravljen propust koji je mogao da spreči pristup bezbednim ekranima daljinskim pristupom. (<a href="https://github.com/nvaccess/nvda/security/advisories/ghsa-42v6-wjv6-h3jj" rel="noopener" target="_blank" title="GHSA-42v6-wjv6-h3jj">GHSA-42v6-wjv6-h3jj</a>)</li>
 </ul>
 <h2 id="202531">2025.3.1</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravio bezbednosni propust kao i greška.</p>
-<h3 id="bezbednosne-ispravke_2">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_4">Bezbednosne ispravke</h3>
 <p>Molimo odgovorno prijavite bezbednosne probleme praćenjem NVDA <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="politike bezbednosti">politike bezbednosti</a>.</p>
 <ul>
 <li>Ispravljen propust koji je mogao da spreči pristup bezbednim ekranima daljinskim pristupom. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-vr27-g5ph-xvq2" rel="noopener" target="_blank" title="GHSA-vr27-g5ph-xvq2">GHSA-vr27-g5ph-xvq2</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_1">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_3">Ispravljene greške</h3>
 <ul>
 <li>Daljinski pristup sada vraća kontrolu nad lokalnim računarom ako se zaključa dok kontrolišete udaljeni računar. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18951" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18951">#18951</a>)</li>
 </ul>
@@ -417,7 +627,7 @@ Takođe su ispravljeni problemi sa povezivanjem i zvukom.</p>
 <p>Ispravljeno je nekoliko grešaka u SAPI5 glasovima, uključujući ispravku za preterano uklanjanje tišina, probleme sa zamrzavanjem i audio prekidima.</p>
 <p>eSpeak NG i Unicode CLDR su ažurirani.
 Dodati su emodži prevodi za beloruski i bosanski.</p>
-<h3 id="nove-karakteristike_1">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_2">Nove karakteristike</h3>
 <ul>
 <li>Prodavnica dodataka:<ul>
 <li>Dodaci se mogu sortirati prema minimalnoj i poslednjoj testiranoj NVDA verziji kao i po datumu instalacije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18440" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18440">#18440</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18560" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18560">#18560</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
@@ -428,7 +638,7 @@ Dodati su emodži prevodi za beloruski i bosanski.</p>
 <li>Dodata je nedodeljena komanda za slanje prečice <code>kontrol+alt+delete</code> kada se kontroliše drugi računar uz NVDA daljinski pristu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18105" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18105">#18105</a>)</li>
 <li>Dodato je novo podešavanje za automatsko utišavanje daljinskog pristupa kada se kontroliše lokalni računar. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18630" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18630">#18630</a>)</li>
 </ul>
-<h3 id="promene_1">Promene</h3>
+<h3 id="promene_3">Promene</h3>
 <ul>
 <li>Ažurirane komponente:<ul>
 <li>Ažuriran eSpeak NG na <a href="https://github.com/espeak-ng/espeak-ng/commit/3b8ef3d310f380e9ab4c6b19bf8367d8f99ac285" rel="noopener" target="_blank" title="commit 3b8ef3d">commit <code>3b8ef3d</code></a>.
@@ -449,7 +659,7 @@ Imajte na umu da je ovo podrazumevano onemogućeno zbog toga što uređaj korist
 <li>U Terminal programima na Windowsu 10 verzija 1607 i novijim, računanje promenjenog teksta se sada vrši u NVDA-u umesto putem eksternog procesa, što može poboljšati performanse i pouzdanost. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18480" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18480">#18480</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)</li>
 <li>Dijalog za povezivanje NVDA daljinskog pristupa sada pamti najnoviji režim povezivanja, vrstu servera i lokalni port ručnih povezivanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18512" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18512">#18512</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18701" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18701">#18701</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_2">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_4">Ispravljene greške</h3>
 <ul>
 <li>Govor:<ul>
 <li>Ispravljeno preterano uklanjanje početnih tišina koje je uklanjalo deo govora sa nekim glasovima. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18003" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18003">#18003</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
@@ -468,7 +678,7 @@ Imajte na umu da je ovo podrazumevano onemogućeno zbog toga što uređaj korist
 <li>Ispravljeno obeleživanje koje nije radilo sa Outlook listom automatskog dopunjavanja kontakata. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18483" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18483">#18483</a>, <a class="gh-link gh-mention" href="https://github.com/Nerlant" rel="noopener" target="_blank" title="GitHub User: @Nerlant">@Nerlant</a>)</li>
 <li>Prenosna kopija koja se pokrene odmah nakon pravljenja sada ispravno koristi svoja sopstvena podešavanja umesto podešavanja druge kopije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18442" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18442">#18442</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="changes-for-developers_1">Changes for Developers</h3>
+<h3 id="changes-for-developers_3">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -485,7 +695,7 @@ Imajte na umu da je ovo podrazumevano onemogućeno zbog toga što uređaj korist
 <li><code>comInterfaces_sconscript</code> has been updated to make the generated files in <code>comInterfaces</code> work better with IDEs. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17608" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17608">#17608</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
 <li>NVDA now configures <code>wx.lib.agw.persist.PersistenceManager</code> on GUI initialisation. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18601" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18601">#18601</a>)</li>
 </ul>
-<h4 id="deprecations_1">Deprecations</h4>
+<h4 id="deprecations_2">Deprecations</h4>
 <ul>
 <li>The following symbols in <code>synthDrivers.sapi5</code> are deprecated with no replacement: (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18300" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18300">#18300</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)<ul>
 <li><code>LP_c_ubyte</code></li>
@@ -515,7 +725,7 @@ Dodata je podrška za prebacivanje kursora point and click radnjom na Humanware 
 <p>LibLouis je ažuriran, dodajući nove tabele za biblijski hebrejski, ruski šestotačkasti kompjuterski brajev kod i tajlandski stepen 2.
 eSpeak NG je ažuriran, dodajući podršku za aromunski, krimskotatarski, mongolski i paštunski.</p>
 <p>Takođe su izvršene brojne druge ispravke i poboljšanja, uključujući interakciju mišem ili ekranom osetljivim na dodir, Windows 11 beležnicu i Google Chrome.</p>
-<h3 id="nove-karakteristike_2">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_3">Nove karakteristike</h3>
 <ul>
 <li>NVDA sada može da prijavi jezik teksta koji se čita. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17664" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17664">#17664</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>):<ul>
 <li>Dostupne su nove opcije za:<ul>
@@ -534,7 +744,7 @@ eSpeak NG je ažuriran, dodajući podršku za aromunski, krimskotatarski, mongol
 <li>Dodata je podrška za NLS eReader Zoomax brajev red. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15863" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15863">#15863</a>, <a class="gh-link gh-mention" href="https://github.com/florin-trutiu" rel="noopener" target="_blank" title="GitHub User: @florin-trutiu">@florin-trutiu</a>)</li>
 <li>Dodato je izborno polje u podešavanjima govora koje dozvoljava korisnicima da onemoguće WASAPI za SAPI5 glasove. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18309" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18309">#18309</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
 </ul>
-<h3 id="promene_2">Promene</h3>
+<h3 id="promene_4">Promene</h3>
 <ul>
 <li>Ažurirane komponente:<ul>
 <li>Ažuriran LibLouis brajev prevodilac na <a href="https://github.com/liblouis/liblouis/releases/tag/v3.34.0" rel="noopener" target="_blank" title="3.34.0">3.34.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18227" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18227">#18227</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)<ul>
@@ -554,7 +764,7 @@ eSpeak NG je ažuriran, dodajući podršku za aromunski, krimskotatarski, mongol
 <li>U programu Microsoft Edge, NVDA više neće zaustavljati neprekidno čitanje kada se izgovaraju obaveštenja kao što su "Učitavanje završeno". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17986" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17986">#17986</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li>NVDA će vas sada upozoriti pre ažuriranja kada ste povezani kao kontrolisani računar uz NVDA daljinski pristup. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18455" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18455">#18455</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_3">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_5">Ispravljene greške</h3>
 <ul>
 <li>U WinUI 3 aplikacijama uključujući Microsoft Copilot i delove Windows 11 istraživača datoteka, NVDA će izgovarati kontrole kada se koristi miš ili ekran osetljiv na dodir. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17407" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17407">#17407</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17771" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17771">#17771</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li>Ispravljeni neki retki slučajevi u kojima reprodukovanje NVDA zvukova može izazvati neočekivane greške. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17918" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17918">#17918</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -573,7 +783,7 @@ eSpeak NG je ažuriran, dodajući podršku za aromunski, krimskotatarski, mongol
 <li>Kada pišete u ćeliji u Microsoft Excelu, brajev red se sada ispravno ažurira kako bi prikazao nov sadržaj. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18391" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18391">#18391</a>)</li>
 <li>Kada se koristi NVDA daljinski pristup, govor sa ekrana kontrole korisničkog naloga na udaljenom računaru sada radi pouzdano. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18101" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18101">#18101</a>, <a class="gh-link gh-mention" href="https://github.com/jcsteh" rel="noopener" target="_blank" title="GitHub User: @jcsteh">@jcsteh</a>)</li>
 </ul>
-<h3 id="changes-for-developers_2">Changes for Developers</h3>
+<h3 id="changes-for-developers_4">Changes for Developers</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -602,13 +812,13 @@ The several built-in table definitions are moved to the <code>__tables</code> mo
 </ul>
 <h2 id="202512">2025.1.2</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravila greška.</p>
-<h3 id="ispravljene-greske_4">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_6">Ispravljene greške</h3>
 <ul>
 <li>Određene Microsoft Word verzije starije od verzije 16.0.18226 se neće rušiti čim se otvore. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18280" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18280">#18280</a>)</li>
 </ul>
 <h2 id="202511">2025.1.1</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravila greška.</p>
-<h3 id="ispravljene-greske_5">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_7">Ispravljene greške</h3>
 <ul>
 <li>Ispravljena greška zbog koje se prodavnica dodataka nije otvarala kada se koristi korejski jezik za NVDA interfejs. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18250" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18250">#18250</a>)</li>
 </ul>
@@ -630,7 +840,7 @@ Dostupne su nove koptske, sumerske kompaktna forma i portugalske šestotačkaste
 <ul>
 <li>Postojeći dodaci nisu kompatibilni uz ovu verziju.</li>
 </ul>
-<h3 id="bezbednosne-ispravke_3">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_5">Bezbednosne ispravke</h3>
 <p>Molimo odgovorno prijavite bezbednosne probleme praćenjem NVDA <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="bezbednosne politike">bezbednosne politike</a>.</p>
 <ul>
 <li>Sprečeno prikazivanje potencijalno osetljivih informacija na brajevim redovima kada je uređaj zaključan.
@@ -638,7 +848,7 @@ Dostupne su nove koptske, sumerske kompaktna forma i portugalske šestotačkaste
 <li>Sprečava učitavanje neželjenih DLL datoteka instalacije iz njenog direktorijuma.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-qf5h-qw92-rx2f" rel="noopener" target="_blank" title="GHSA-qf5h-qw92-rx2f">GHSA-qf5h-qw92-rx2f</a>)</li>
 </ul>
-<h3 id="nove-karakteristike_3">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_4">Nove karakteristike</h3>
 <ul>
 <li>Prodavnica dodataka:<ul>
 <li>Automatska ažuriranja(<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3208" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3208">#3208</a>):<ul>
@@ -713,7 +923,7 @@ Ova opcija je podrazumevano omogućena, ali može izazvati brže trošenje bater
 <li>NVDA je sada preveden na bosanski. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17953" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17953">#17953</a>)</li>
 <li>U Adobe Acrobatu, NVDA sada može da čita i vrši interakciju sa matematičkim zadacima u PDF dokumentima koje generišu novije verzije Microsoft Worda. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18056" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18056">#18056</a>)</li>
 </ul>
-<h3 id="promene_3">Promene</h3>
+<h3 id="promene_5">Promene</h3>
 <ul>
 <li>Ažurirane komponente:<ul>
 <li>Ažuriran LibLouis brajev prevodilac na <a href="https://github.com/liblouis/liblouis/releases/tag/v3.33.0" rel="noopener" target="_blank" title="3.33.0">3.33.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17469" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17469">#17469</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17768" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17768">#17768</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)<ul>
@@ -760,7 +970,7 @@ Ako ovo ne radi uz vaš SAPI 4 glas, možete onemogućiti WASAPI za SAPI 4 u nap
 </li>
 <li>Podrazumevane ulazne i izlazne brajeve tabele se sada mogu odrediti na osnovu NVDA jezika. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17306" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17306">#17306</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16390" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16390">#16390</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/290" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #290">#290</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_6">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_8">Ispravljene greške</h3>
 <ul>
 <li>Govor:<ul>
 <li>Ispravljena greška koja je izazivala da neprekidno čitanje  prestane na kraju prve rečenice kada se koriste neki SAPI5 sintetizatori. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16691" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16691">#16691</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
@@ -828,7 +1038,7 @@ U bilo kom dokumentu, ako je kursor u poslednjem redu, biće pomeren na kraj kad
 <li>Kada linkovi dovode do istog objekta na kom se virtuelni kursor već nalazi, NVDA će se ispravno prebaciti na odredište linka. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17669" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17669">#17669</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>Ikona prozora NVDA obeleživača više ne ostaje fiksna na programskoj traci ako se istraživač ponovo pokrene. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17696" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17696">#17696</a>, <a class="gh-link gh-mention" href="https://github.com/hwf1324" rel="noopener" target="_blank" title="GitHub User: @hwf1324">@hwf1324</a>)</li>
 </ul>
-<h3 id="changes-for-developers_3">Changes for Developers</h3>
+<h3 id="changes-for-developers_5">Changes for Developers</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -968,7 +1178,7 @@ Instead, a <code>callback</code> property has been added, which returns a functi
 <li><code>config.conf["documentFormatting"]["reportFontAttributes"]</code> has been removed, use <code>config.conf["documentFormatting"]["fontAttributeReporting"]</code> instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18066" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18066">#18066</a>)</li>
 <li><code>config.conf["speech"]["includeCLDR"]</code> has been removed, check/modify whether <code>config.conf["speech"]["symbolDictionaries"]</code> contains <code>"cldr"</code> instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18066" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18066">#18066</a>)</li>
 </ul>
-<h4 id="deprecations_2">Deprecations</h4>
+<h4 id="deprecations_3">Deprecations</h4>
 <ul>
 <li>The <code>braille.filter_displaySize</code> extension point is deprecated.
 Please use <code>braille.filter_displayDimensions</code> instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17011" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17011">#17011</a>)</li>
@@ -983,14 +1193,14 @@ Use <code>gui.message.MessageDialog</code> instead. (<a class="gh-link gh-issue"
 </ul>
 <h2 id="202442">2024.4.2</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravile greške sa brajevim uređaima i čitanjem matematičkog sadržaja u Chromiumu.</p>
-<h3 id="ispravljene-greske_7">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_9">Ispravljene greške</h3>
 <ul>
 <li>Ispravljena greška sa čitanjem matematičkog sadržaja sa Chromium pretraživačima (Chrome, Edge). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17421" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17421">#17421</a>, <a class="gh-link gh-mention" href="https://github.com/NSoiffer" rel="noopener" target="_blank" title="GitHub User: @NSoiffer">@NSoiffer</a>)</li>
 <li>Humanware Brailliant BI 40X uređaji sa verzijom softvera 2.4 sada rade ispravno. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17518" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17518">#17518</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
 </ul>
 <h2 id="202441">2024.4.1</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravila greška sa čuvanjem rečnika izgovora simbola.</p>
-<h3 id="ispravljene-greske_8">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_10">Ispravljene greške</h3>
 <ul>
 <li>Ispravljena greška zbog koje se rečnici izgovora simbola nisu sačuvali i dijalog se nije zatvorio. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17344" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17344">#17344</a>)</li>
 </ul>
@@ -1010,7 +1220,7 @@ NVDA više nije nestabilan nakon što se ponovo pokrene u toku automatskog Bluet
 <p>eSpeak NG je ažuriran, dodajući podršku za jezike farski i Xextan.</p>
 <p>LibLouis je ažuriran, dodajući nove brajeve tabele za tajlandski i grčki međunarodni brajev kod sa akcentovanim slovima na jednoj ćeliji.</p>
 <p>Takođe su ispravljene brojne greške, uključujući za praćenje miša u Firefoxu i režim govora na zahtev.</p>
-<h3 id="nove-karakteristike_4">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_5">Nove karakteristike</h3>
 <ul>
 <li>Nove brajeve karakteristike:<ul>
 <li>Sada je moguće promeniti način na koji NVDA prikazuje određene atribute formatiranja teksta na brajevom redu.
@@ -1031,7 +1241,7 @@ NVDA više nije nestabilan nakon što se ponovo pokrene u toku automatskog Bluet
 <li>NVDA sada može biti podešen da odvojeno izgovara ili prijavljuje atribute fonta na brajevom redu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16755" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16755">#16755</a>)</li>
 <li>Vreme isteka pre izvršavanja komande koja zahteva više uzastopnih pritiskanja se sada može podesiti; ovo može biti posebno od pomoći ljudima sa motoričkim poteškoćama. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11929" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11929">#11929</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="promene_4">Promene</h3>
+<h3 id="promene_6">Promene</h3>
 <ul>
 <li>Opcije komandne linije <code>-c</code>/<code>--config-path</code> i <code>--disable-addons</code> se sada uzimaju u obzir kada se ažuriranje pokrene iz programa NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16937" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16937">#16937</a>)</li>
 <li>Ažurirane komponente:<ul>
@@ -1058,7 +1268,7 @@ NVDA više nije nestabilan nakon što se ponovo pokrene u toku automatskog Bluet
 <li>Kada se koristi višelinijski brajev red uz standardni HID brajev drajver, koristiće se svi redovi brajevih ćelija. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16993" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16993">#16993</a>, <a class="gh-link gh-mention" href="https://github.com/alexmoon" rel="noopener" target="_blank" title="GitHub User: @alexmoon">@alexmoon</a>)</li>
 <li>Poboljšana je stabilnost NVDA podrške za Poedit uz neželjeni efekat da je najmanja neophodna verzija Poedita sada verzija 3.5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16889" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16889">#16889</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_9">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_11">Ispravljene greške</h3>
 <ul>
 <li>Ispravke za brajeve redove:<ul>
 <li>Sada je moguće koristiti tastere za pomeranje brajevog reda da biste pomerali kursor teksta u Microsoft PowerPointu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9101" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9101">#9101</a>)</li>
@@ -1100,7 +1310,7 @@ NVDA više nije nestabilan nakon što se ponovo pokrene u toku automatskog Bluet
 <li>Running SCons with the parameter <code>--all-cores</code> will automatically pick the maximum number of available CPU cores. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16943" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16943">#16943</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16868" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16868">#16868</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 <li>Developer info now includes information on app architecture (such as AMD64) for the navigator object. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16488" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16488">#16488</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 </ul>
-<h4 id="deprecations_3">Deprecations</h4>
+<h4 id="deprecations_4">Deprecations</h4>
 <ul>
 <li>The <code>bool</code> configuration key <code>[documentFormatting][reportFontAttributes]</code> is deprecated for removal in 2025.1, instead use <code>[fontAttributeReporting]</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16748" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16748">#16748</a>)<ul>
 <li>The new key has an <code>int</code> value matching an <code>OutputMode</code> <code>enum</code> with options for speech, braille, speech and braille and off.</li>
@@ -1112,7 +1322,7 @@ NVDA više nije nestabilan nakon što se ponovo pokrene u toku automatskog Bluet
 </ul>
 <h2 id="202431">2024.3.1</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravila greška sa obaveštenjem o automatskim ažuriranjima dodataka.</p>
-<h3 id="ispravljene-greske_10">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_12">Ispravljene greške</h3>
 <ul>
 <li>Kada se vrše automatske provere ažuriranja dodataka, NVDA se više neće smrzavati sa slabijim Internet vezama. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17036">#17036</a>)</li>
 </ul>
@@ -1128,7 +1338,7 @@ Za Web pretraživače, ispravljeno je prijavljivanje poruka sa greškama, figura
 <p>Liblouis je ažuriran, dodajući nove brajeve tabele za srpsku ćirilicu, jidiš, nekoliko drevnih jezika, turski i Međunarodni fonetski alfabet.
 eSpeak je ažuriran, dodajući podršku za Karakalpak jezik.
 Unikodna CLDR baza je takođe ažurirana.</p>
-<h3 id="nove-karakteristike_5">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_6">Nove karakteristike</h3>
 <ul>
 <li>Nove komande:<ul>
 <li>Dodate komande bez dodeljene prečice za vertikalno i horizontalno pomeranje točkića miša, za poboljšanje navigacije na Web stranicama i u aplikacijama sa dinamičkim sadržajem, kao što su Dism++. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16462" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16462">#16462</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-Rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-Rowen">@Cary-Rowen</a>)</li>
@@ -1148,7 +1358,7 @@ Unikodna CLDR baza je takođe ažurirana.</p>
 </li>
 <li>Dodata podrška za Help Tech Activator Pro redove. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16668" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16668">#16668</a>)</li>
 </ul>
-<h3 id="promene_5">Promene</h3>
+<h3 id="promene_7">Promene</h3>
 <ul>
 <li>Ažurirane komponente:<ul>
 <li>eSpeak NG je ažuriran na 1.52-dev commit <code>54ee11a79</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16495" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16495">#16495</a>)<ul>
@@ -1181,7 +1391,7 @@ Unikodna CLDR baza je takođe ažurirana.</p>
 <li>Po podrazumevanim podešavanjima, novi folder će biti napravljen kada se pravi prenosna kopija.
 Upozorenje će vas informisati kada se pravi u folderu koji nije prazan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16686" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16686">#16686</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_11">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_13">Ispravljene greške</h3>
 <ul>
 <li>Windows 11 ispravke:<ul>
 <li>NVDA se više neće zaglavljivati kada zatvorite istoriju privremene memorije i emodži panel. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16346" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16346">#16346</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16347" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16347">#16347</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
@@ -1248,7 +1458,7 @@ Takođe je dodata podrška za BrailleEdgeS2 i BrailleEdgeS3 brajeve uređaje.
 LibLouis je ažuriran, dodajući nove detaljne (uz indikaciju velikih slova) beloruske i ukrajinske brajeve tabele, lao  tabelu i  špansku tabelu za čitanje grčkih tekstova.</p>
 <p>eSpeak je ažuriran, dodajući novi tigrinjski jezik.</p>
 <p>Postoje brojne ispravke za sitne greške u aplikacijama, kao što su Thunderbird, Adobe Reader, Web pretraživači, Nudi i Geekbench.</p>
-<h3 id="nove-karakteristike_6">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_7">Nove karakteristike</h3>
 <ul>
 <li>Nove prečice:<ul>
 <li>Nova komanda brze navigacije <code>p</code> za skakanje na sledeći ili prethodni pasus teksta u režimu pretraživanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15998" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15998">#15998</a>, <a class="gh-link gh-mention" href="https://github.com/mltony" rel="noopener" target="_blank" title="GitHub User: @mltony">@mltony</a>)</li>
@@ -1295,7 +1505,7 @@ LibLouis je ažuriran, dodajući nove detaljne (uz indikaciju velikih slova) bel
 <li>NVDA će održavati zvučni uređaj budnim nakon što se govor zaustavi, kako bi sprečio da početak sledećeg izgovorenog teksta bude isprekidan sa nekim zvučnim uređajima kao što su Bluetooth slušalice. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14386" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14386">#14386</a>, <a class="gh-link gh-mention" href="https://github.com/jcsteh" rel="noopener" target="_blank" title="GitHub User: @jcsteh">@jcsteh</a>, <a class="gh-link gh-mention" href="https://github.com/mltony" rel="noopener" target="_blank" title="GitHub User: @mltony">@mltony</a>)</li>
 <li>HP Secure pretraživač je sada podržan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16377" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16377">#16377</a>)</li>
 </ul>
-<h3 id="promene_6">Promene</h3>
+<h3 id="promene_8">Promene</h3>
 <ul>
 <li>Prodavnica dodataka:<ul>
 <li>Minimalna i poslednja testirana NVDA verzija za dodatak se sada prikazuju u sekciji "Drugi detalji". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15776" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15776">#15776</a>, <a class="gh-link gh-mention" href="https://github.com/Nael-Sayegh" rel="noopener" target="_blank" title="GitHub User: @Nael-Sayegh">@Nael-Sayegh</a>)</li>
@@ -1324,9 +1534,9 @@ LibLouis je ažuriran, dodajući nove detaljne (uz indikaciju velikih slova) bel
 </li>
 <li>Nizovi tačaka koji se često koriste u sadržaju teksta se više ne prijavljuju na nivoima izgovora manje interpunkcije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15845" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15845">#15845</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_12">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_14">Ispravljene greške</h3>
 <ul>
-<li>Fixed math attributes being read in Adobe Reader, this resulted in poor or wrong speech and braille. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17980" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17980">#17980</a>)</li>
+<li>Ispravljeno čitanje matematičkih atributa u Adobe Readeru, ovo je izazivalo loš ili pogrešan izgovor i prikaz na brajevom redu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17980" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17980">#17980</a>)</li>
 <li>Windows 11 ispravke:<ul>
 <li>NVDA će ponovo izgovarati predloge za unos sa hardverske tastature. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16283" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16283">#16283</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li>U verziji 24H2 (2024 ažuriranje i Windows Server 2025), interakcija mišem ili ekranom osetljivim na dodir se može koristiti u brzim podešavanjima. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16348" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16348">#16348</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
@@ -1379,7 +1589,7 @@ Dostupne su nove tajlandske, filipinske i rumunske brajeve tabele.</p>
 <li>Windows 7 i Windows 8 više nisu podržani.
 Windows 8.1 je minimalna podržana verzija Windowsa.</li>
 </ul>
-<h3 id="nove-karakteristike_7">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_8">Nove karakteristike</h3>
 <ul>
 <li>Prodavnica dodataka:<ul>
 <li>Prodavnica dodataka sada podržava istovremeno izvršavanje radnji (na primer instalaciju, omogućavanje dodataka) biranjem više dodataka. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15350" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15350">#15350</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15623" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15623">#15623</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
@@ -1400,7 +1610,7 @@ Kada je režim govora podešen na zahtev, NVDA ne govori automatski (na primer p
 </ul>
 </li>
 </ul>
-<h3 id="promene_7">Promene</h3>
+<h3 id="promene_9">Promene</h3>
 <ul>
 <li>NVDA više ne podržava Windows 7 i Windows 8.
 Windows 8.1 je minimalna podržana verzija Windowsa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15544" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15544">#15544</a>)</li>
@@ -1436,7 +1646,7 @@ Korisnicima Poedita 1 preporučuje se ažuriranje na Poedit 3 ako žele da se os
 <li>Tokom navigacije objekata, onemogućeni (nedostupni) objekti više neće biti ignorisani. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15477" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15477">#15477</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 <li>Dodat sadržaj u dokument kratkih napomena o komandama. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16106" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16106">#16106</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_13">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_15">Ispravljene greške</h3>
 <ul>
 <li>Prodavnica dodataka:<ul>
 <li>Kada se status dodatka promeni dok je fokusiran, na primer promena iz "Preuzimanje" u "Preuzeto", ažurirana stavka se sada ispravno izgovara. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15859" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15859">#15859</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -1726,7 +1936,7 @@ Code which imports from one of them, should instead import from the replacement 
 </tr>
 </tbody>
 </table>
-<h4 id="deprecations_4">Deprecations</h4>
+<h4 id="deprecations_5">Deprecations</h4>
 <ul>
 <li>Using <code>watchdog.getFormattedStacksForAllThreads</code> is deprecated - please use <code>logHandler.getFormattedStacksForAllThreads</code> instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15616" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15616">#15616</a>, <a class="gh-link gh-mention" href="https://github.com/lukaszgo1" rel="noopener" target="_blank" title="GitHub User: @lukaszgo1">@lukaszgo1</a>)</li>
 <li><code>easeOfAccess.canConfigTerminateOnDesktopSwitch</code> has been deprecated, as it became obsolete since Windows 7 is no longer supported. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15644" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15644">#15644</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -1745,12 +1955,12 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 <h2 id="202334">2023.3.4</h2>
 <p>Ovo je manje ažuriranje za ispravku bezbednosnog problema i problema sa instalacijom.
 Molimo odgovorno prijavite bezbednosne probleme tako što ćete pratiti <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="politiku bezbednosti programa NVDA">politiku bezbednosti programa NVDA</a>.</p>
-<h3 id="bezbednosne-ispravke_4">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_6">Bezbednosne ispravke</h3>
 <ul>
 <li>Sprečava učitavanje prilagođene konfiguracije kada je prisiljen bezbedni režim.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-727q-h8j2-6p45" rel="noopener" target="_blank" title="GHSA-727q-h8j2-6p45">GHSA-727q-h8j2-6p45</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_14">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_16">Ispravljene greške</h3>
 <ul>
 <li>Ispravljena greška koja je izazvala da NVDA proces ne izađe ispravno. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16123" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16123">#16123</a>)</li>
 <li>Ispravljena greška koja je izazvala da ako prethodni NVDA proces nije uspeo da se ispravno zatvori, NVDA instalacija je mogla da bude neuspešna bez oporavka. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16122">#16122</a>)</li>
@@ -1758,7 +1968,7 @@ Molimo odgovorno prijavite bezbednosne probleme tako što ćete pratiti <a href=
 <h2 id="202333">2023.3.3</h2>
 <p>Ovo je manje ažuriranje za ispravljanje bezbednosnog problema.
 Molimo odgovorno prijavite bezbednosne probleme tako što ćete pratiti <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="politiku bezbednosti programa NVDA">politiku bezbednosti programa NVDA</a>.</p>
-<h3 id="bezbednosne-ispravke_5">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_7">Bezbednosne ispravke</h3>
 <ul>
 <li>Sprečavanje da mogući reflektovani XSS napad iz  prilagođenog sadržaja izazove izvršavanje koda.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8" rel="noopener" target="_blank" title="GHSA-xg6w-23rw-39r8">GHSA-xg6w-23rw-39r8</a>)</li>
@@ -1767,7 +1977,7 @@ Molimo odgovorno prijavite bezbednosne probleme tako što ćete pratiti <a href=
 <p>Ovo je manje ažuriranje za ispravljanje bezbednosnog problema.
 Bezbednosna ispravka u verziji 2023.3.1 nije ispravno rešila problem.
 Molimo odgovorno prijavite bezbednosne probleme tako što ćete pratiti <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="politiku bezbednosti programa NVDA">politiku bezbednosti programa NVDA</a>.</p>
-<h3 id="bezbednosne-ispravke_6">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_8">Bezbednosne ispravke</h3>
 <ul>
 <li>Bezbednosna ispravka u verziji 2023.3.1 nije ispravno rešila problem.
 Sprečava mogući pristup sistemu i izvršavanje koda sa sistemskim privilegijama za korisnike koji nisu autorizovani.
@@ -1776,7 +1986,7 @@ Sprečava mogući pristup sistemu i izvršavanje koda sa sistemskim privilegijam
 <h2 id="202331">2023.3.1</h2>
 <p>Ovo je manje ažuriranje za ispravljanje bezbednosnog problema.
 Molimo odgovorno prijavite bezbednosne probleme tako što ćete pratiti <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="politiku bezbednosti programa NVDA">politiku bezbednosti programa NVDA</a>.</p>
-<h3 id="bezbednosne-ispravke_7">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_9">Bezbednosne ispravke</h3>
 <ul>
 <li>Sprečava mogući pristup sistemu i izvršavanje koda sa sistemskim privilegijama za korisnike koji nisu autorizovani.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-h7pp-6jqw-g3pj" rel="noopener" target="_blank" title="GHSA-h7pp-6jqw-g3pj">GHSA-h7pp-6jqw-g3pj</a>)</li>
@@ -1790,7 +2000,7 @@ Ovo se može podesiti u kategoriji Windows optičkog prepoznavanja znakova NVDA 
 Sada je moguće izuzeti neželjene drajvere iz automatskog prepoznavanja, kako biste poboljšali performanse automatskog prepoznavanja.
 Dodate su takođe nove BRLTTY komande.</p>
 <p>Takođe sadrži ispravljene greške za prodavnicu dodataka, Microsoft Office, Microsoft Edge kontekstne menije, i Windows Kalkulator.</p>
-<h3 id="nove-karakteristike_8">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_9">Nove karakteristike</h3>
 <ul>
 <li>Poboljšano upravljanje zvukovima:<ul>
 <li>Novi panel podešavanja zvuka:<ul>
@@ -1820,7 +2030,7 @@ Nekompatibilne verzije ovih dodataka će biti onemogućene kada ažurirate NVDA:
 <li>Nova opcija u podešavanjima formatiranja dokumenta, "Zanemari prazne redove za prijavljivanje uvlačenja redova". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13394" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13394">#13394</a>)</li>
 <li>Dodata nedodeljena komanda za navigaciju po grupama kartica u režimu pretraživanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15046" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15046">#15046</a>)</li>
 </ul>
-<h3 id="promene_8">Promene</h3>
+<h3 id="promene_10">Promene</h3>
 <ul>
 <li>Brajevi redovi:<ul>
 <li>Kada se tekst u Terminalu promeni bez ažuriranja kursora, tekst na brajevom redu će se sada ispravno ažurirati kada se nalazi na promenjenom redu.
@@ -1842,7 +2052,7 @@ Sada možete da onemogućite određene drajvere za automatsko prepoznavanje u di
 <li>Prodavnica dodataka: Instalirani dodaci će sada biti prikazani na kartici za dostupne dodatke, ako su dostupni u prodavnici. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15374" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15374">#15374</a>)</li>
 <li>Neke prečice u NVDA meniju su ažurirane. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15364" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15364">#15364</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_15">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_17">Ispravljene greške</h3>
 <ul>
 <li>Microsoft Office:<ul>
 <li>Ispravljeno rušenje u programu Microsoft Word kada opcije formatiranja dokumenta "Prijavi naslove" i "Prijavi komentare i napomene" nisu omogućene. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15019" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15019">#15019</a>)</li>
@@ -1884,7 +2094,7 @@ They should also be thread safe, making it possible to call them from background
 Consult the <code>braille.BrailleDisplayDriver</code> class documentation for more details.
 Most notably, the <code>supportsAutomaticDetection</code> attribute must be set to <code>True</code> and the <code>registerAutomaticDetection</code> <code>classmethod</code> must be implemented.  (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15196" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15196">#15196</a>)</li>
 </ul>
-<h4 id="deprecations_5">Deprecations</h4>
+<h4 id="deprecations_6">Deprecations</h4>
 <ul>
 <li><code>braille.BrailleHandler.handlePendingCaretUpdate</code> is now deprecated with no public replacement.
 It will be removed in 2024.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15163" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15163">#15163</a>)</li>
@@ -1907,7 +2117,7 @@ Takođe su dodate nove prečice za optičko prepoznavanje znakova i ravnu naviga
 Navigacija i prijavljivanje formatiranja u Microsoft Office paketu je poboljšana.</p>
 <p>Puno grešaka je ispravljeno, posebno za brajeve redove, Microsoft Office, web pretraživače i Windows 11.</p>
 <p>eSpeak-NG, LibLouis braille translator, i Unicode CLDR su ažurirani.</p>
-<h3 id="nove-karakteristike_9">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_10">Nove karakteristike</h3>
 <ul>
 <li>Prodavnica dodataka je dodata u NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13985" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13985">#13985</a>)<ul>
 <li>Istraživanje, pretraga, instalacija i ažuriranje dodataka zajednice.</li>
@@ -1974,7 +2184,7 @@ Takođe, ako je WASAPI omogućen, sledeća napredna podešavanja se mogu podesit
 <li>U ažuriranju Windowsa 10 iz maja 2019 i novijim, NVDA može izgovarati imena virtuelnih radnih površina kada se otvaraju, menjaju ili zatvaraju. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5641" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5641">#5641</a>)</li>
 <li>Sistemski parametar je dodat koji će dozvoliti korisnicima i administratorima sistema da nateraju NVDA da se pokrene u bezbednom režimu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10018" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10018">#10018</a>)</li>
 </ul>
-<h3 id="promene_9">Promene</h3>
+<h3 id="promene_11">Promene</h3>
 <ul>
 <li>Ažurirane komponente:<ul>
 <li>eSpeak NG je ažuriran na 1.52-dev commit <code>ed9a7bcf</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15036">#15036</a>)</li>
@@ -2003,7 +2213,7 @@ Ovo se može onemogućiti u panelu naprednih podešavanja. (<a class="gh-link gh
 <li>Ako je Windows podešen da prijavljuje sekunde na satu sistemske trake, korišćenje prečice <code>NVDA+f12</code> za prijavljivanje vremena sada prati ovo podešavanje. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14742" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14742">#14742</a>)</li>
 <li>NVDA će sada prijavljivati grupe bez oznake koje imaju korisne informacijje o poziciji, kakve se mogu pronaći u novijim  verzijama Microsoft Office 365 menija. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14878" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14878">#14878</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_16">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_18">Ispravljene greške</h3>
 <ul>
 <li>Brajevi redovi:<ul>
 <li>Nekoliko poboljšanja u stabilnosti unosa/izlaza na brajevom redu, što će smanjiti učestalost grešaka i rušenja programa NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14627" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14627">#14627</a>)</li>
@@ -2081,7 +2291,7 @@ Similarly, the new <code>getCompletionRoutine</code> method allows you to conver
 <li><code>scons checkpot</code> will no longer check the <code>userConfig</code> subfolder anymore. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14820" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14820">#14820</a>)</li>
 <li>Translatable strings can now be defined with a singular and a plural form using <code>ngettext</code> and <code>npgettext</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12445" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12445">#12445</a>)</li>
 </ul>
-<h4 id="deprecations_6">Deprecations</h4>
+<h4 id="deprecations_7">Deprecations</h4>
 <ul>
 <li>Passing lambda functions to <code>hwIo.ioThread.IoThread.queueAsApc</code> is deprecated.
 Instead, functions should be weakly referenceable. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14627" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14627">#14627</a>)</li>
@@ -2112,7 +2322,7 @@ Dodate su nove Gruzijske, Swahili (Kenija) i Chichewa (Malawi) brajeve tabele.</
 <ul>
 <li>Postojeći dodaci nisu kompatibilni sa ovom verzijom.</li>
 </ul>
-<h3 id="nove-karakteristike_10">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_11">Nove karakteristike</h3>
 <ul>
 <li>Microsoft Excel uz UI Automation: automatsko prijavljivanje zaglavlja kolona i redova u tabelama. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14228" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14228">#14228</a>)<ul>
 <li>Napomena: ovo važi za tabele koje su formatirane korišćenjem dugmeta "Tabela" u oknu trake ubacivanja .
@@ -2139,7 +2349,7 @@ Ako se pritisne dva puta, biće prikazano u prozoru, za detaljniji pregled. (<a 
 <li>Nova nedodeljena globalna komanda (kategorija alati): prikaži odredište linka u prozoru.
 Isto kao i kada se dva puta pritisne <code>NVDA+k</code>, ali može biti korisnije za korisnike brajevih redova. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14583" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14583">#14583</a>)</li>
 </ul>
-<h3 id="promene_10">Promene</h3>
+<h3 id="promene_12">Promene</h3>
 <ul>
 <li>Ažuriran LibLouis brajev prevodilac na <a href="https://github.com/liblouis/liblouis/releases/tag/v3.24.0" rel="noopener" target="_blank" title="3.24.0">3.24.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14436" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14436">#14436</a>)<ul>
 <li>Značajna ažuriranja za Mađarske, unificirane Engleske i Kineske bopomofo brajeve kodove.</li>
@@ -2155,7 +2365,7 @@ Isto kao i kada se dva puta pritisne <code>NVDA+k</code>, ali može biti korisni
 </li>
 <li>Java aplikacije sa kontrolama koje se mogu izabrati će sada izgovoriti kada stavka nije izabrana, umesto kada je izabrana. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14336" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14336">#14336</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_17">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_19">Ispravljene greške</h3>
 <ul>
 <li>Windows 11 ispravke:<ul>
 <li>NVDA će izgovoriti istaknute pretrage kada se otvori start meni. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13841" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13841">#13841</a>)</li>
@@ -2294,7 +2504,7 @@ Usage of <code>Example.get()</code> is now <code>Example()</code>. (<a class="gh
 </ul>
 </li>
 </ul>
-<h4 id="deprecations_7">Deprecations</h4>
+<h4 id="deprecations_8">Deprecations</h4>
 <ul>
 <li><code>NVDAObjects.UIA.winConsoleUIA.WinTerminalUIA</code> is deprecated and usage is discouraged. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14047" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14047">#14047</a>)</li>
 <li><code>config.addConfigDirsToPythonPackagePath</code> has been moved.
@@ -2316,7 +2526,7 @@ Sekcija "vodič za brz početak" je dodata u korisničko uputstvo.
 Ispravljeno je takođe nekoliko grešaka.</p>
 <p>eSpeak i LibLouis su ažurirani.
 Dodate su nove Kineske, Švedske, Luganda i Kinyarwanda brajeve tabele.</p>
-<h3 id="nove-karakteristike_11">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_12">Nove karakteristike</h3>
 <ul>
 <li>Dodata sekcija "vodič za brz početak" u korisničko uputstvo. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13934" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13934">#13934</a>)</li>
 <li>Dodata nova komanda za proveru tasterske prečice trenutnog fokusa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13960" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13960">#13960</a>)<ul>
@@ -2347,7 +2557,7 @@ Dodate su nove Kineske, Švedske, Luganda i Kinyarwanda brajeve tabele.</p>
 <li>Microsoft Excel uz UI Automation: NVDA sada izgovara kada izađete iz tabele u okviru radnog lista. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14165" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14165">#14165</a>)</li>
 <li>Prijavljivanje zaglavlja u tabeli se sada može podesiti odvojeno za redove i kolone. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14075" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14075">#14075</a>)</li>
 </ul>
-<h3 id="promene_11">Promene</h3>
+<h3 id="promene_13">Promene</h3>
 <ul>
 <li>eSpeak NG je ažuriran na 1.52-dev commit <code>735ecdb8</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14060" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14060">#14060</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14079" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14079">#14079</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14118" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14118">#14118</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14203" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14203">#14203</a>)<ul>
 <li>Ispravljeno prijavljivanje latiničnih znakova kada se koristi Mandarinski. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12952" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12952">#12952</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13572" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13572">#13572</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14197" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14197">#14197</a>)</li>
@@ -2368,7 +2578,7 @@ Dodate su nove Kineske, Švedske, Luganda i Kinyarwanda brajeve tabele.</p>
 </li>
 <li>NVDA sada uključuje arhitekturu operativnog sistema kao deo praćenja statistika korišćenja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14019" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14019">#14019</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_18">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_20">Ispravljene greške</h3>
 <ul>
 <li>Kada se NVDA ažurira korišćenjem interfejsa komandne linije Windows menadžera paketa (winget), stabilna NVDA verzija neće uvek biti tretirana kao novija od bilo koje alfa verzije koja je instalirana. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12469" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12469">#12469</a>)</li>
 <li>NVDA će sada ispravno izgovarati grupisana polja u Java aplikacijama. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13962" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13962">#13962</a>)</li>
@@ -2402,7 +2612,7 @@ Napomena da još uvek postoje poznati problemi sa Chromeom i Edgeom. (<a class="
 <li>The <a href="https://groups.google.com/a/nvaccess.org/g/nvda-api/about" rel="noopener" target="_blank" title="NVDA API Announcement mailing list">NVDA API Announcement mailing list</a> was created. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13999" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13999">#13999</a>)</li>
 <li>NVDA no longer processes <code>textChange</code> events for most UI Automation applications due to their extreme negative performance impact. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11002" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11002">#11002</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14067">#14067</a>)</li>
 </ul>
-<h4 id="deprecations_8">Deprecations</h4>
+<h4 id="deprecations_9">Deprecations</h4>
 <ul>
 <li><code>core.post_windowMessageReceipt</code> is deprecated, use <code>winAPI.messageWindow.pre_handleWindowMessage</code> instead.</li>
 <li><code>winKernel.SYSTEM_POWER_STATUS</code> is deprecated and usage is discouraged, this has been moved to <code>winAPI._powerTracking.SystemPowerStatus</code>.</li>
@@ -2411,12 +2621,12 @@ Napomena da još uvek postoje poznati problemi sa Chromeom i Edgeom. (<a class="
 <h2 id="202233">2022.3.3</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravili problemi u verzijama 2022.3.2, 2022.3.1 i 2022.3.
 Takođe ispravlja bezbednosni problem.</p>
-<h3 id="bezbednosne-ispravke_8">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_10">Bezbednosne ispravke</h3>
 <ul>
 <li>Sprečava mogućnost sistemskog pristupa (na primer NVDA Python konzolu) za neprijavljene korisnike.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-fpwc-2gxx-j9v7" rel="noopener" target="_blank" title="GHSA-fpwc-2gxx-j9v7">GHSA-fpwc-2gxx-j9v7</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_19">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_21">Ispravljene greške</h3>
 <ul>
 <li>Ispravljena greška u kojoj ako se NVDA zamrzne prilikom zaključavanja, NVDA dozvoljava pristup korisničkoj radnoj površini sa zaključanog ekrana. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
 <li>Ispravljena greška u kojoj ako se NVDA zamrzne prilikom zaključavanja, NVDA se ne ponaša ispravno, kao da je uređaj još uvek zaključan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
@@ -2424,7 +2634,7 @@ Takođe ispravlja bezbednosni problem.</p>
 <li>Ispravljena greška sa NVDA instalacijom na određenim Windows okruženjima, na primer Windows Server. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14379" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14379">#14379</a>)</li>
 </ul>
 <h3 id="promene-za-programere-engleski_8">Promene za programere (engleski)</h3>
-<h4 id="deprecations_9">Deprecations</h4>
+<h4 id="deprecations_10">Deprecations</h4>
 <ul>
 <li><code>utils.security.isObjectAboveLockScreen(obj)</code> is deprecated, instead use <code>obj.isBelowLockScreen</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
 <li>The following functions in <code>winAPI.sessionTracking</code> are deprecated for removal in 2023.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)<ul>
@@ -2438,12 +2648,12 @@ Takođe ispravlja bezbednosni problem.</p>
 </ul>
 <h2 id="202232">2022.3.2</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravila pogoršanja koja je izazvala verzija 2022.3.1 i kako bi se ispravio bezbednosni problem.</p>
-<h3 id="bezbednosne-ispravke_9">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_11">Bezbednosne ispravke</h3>
 <ul>
 <li>Sprečava mogućnost pristupa na sistemskom nivou za korisnike koji nemaju autentikaciju.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3jj9-295f-h69w" rel="noopener" target="_blank" title="GHSA-3jj9-295f-h69w">GHSA-3jj9-295f-h69w</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_20">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_22">Ispravljene greške</h3>
 <ul>
 <li>Ispravljeno pogoršanje iz verzije 2022.3.1 koje je izazvalo onemogućavanje određenih funkcija na bezbednim ekranima. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14286" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14286">#14286</a>)</li>
 <li>Ispravljeno pogoršanje iz verzije 2022.3.1 koje je izazvalo onemogućavanje određenih funkcija nakon prijave, ako je NVDA pokrenut na zaključanom ekranu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14301" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14301">#14301</a>)</li>
@@ -2451,7 +2661,7 @@ Takođe ispravlja bezbednosni problem.</p>
 <h2 id="202231">2022.3.1</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravilo nekoliko bezbednosnih problema.
 Molimo odgovorno prijavite bezbednosne probleme na <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="bezbednosne-ispravke_10">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_12">Bezbednosne ispravke</h3>
 <ul>
 <li>Ispravljen propust koji je dozvoljavao da dobijete sistemske privilegije umesto korisničkih.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-q7c2-pgqm-vvw5" rel="noopener" target="_blank" title="GHSA-q7c2-pgqm-vvw5">GHSA-q7c2-pgqm-vvw5</a>)</li>
@@ -2460,7 +2670,7 @@ Molimo odgovorno prijavite bezbednosne probleme na <a href="mailto:info@nvaccess
 <li>Ispravljen problem koji je izazvao keširanje teksta preglednika govora kada se zaključa Windows.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-grvr-j2h8-3qm4" rel="noopener" target="_blank" title="GHSA-grvr-j2h8-3qm4">GHSA-grvr-j2h8-3qm4</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_21">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_23">Ispravljene greške</h3>
 <ul>
 <li>Sprečavanje korisnika bez autentikacije da ažurira podešavanja za preglednike govora i brajevih redova na zaključanom ekranu. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-grvr-j2h8-3qm4" rel="noopener" target="_blank" title="GHSA-grvr-j2h8-3qm4">GHSA-grvr-j2h8-3qm4</a>)</li>
 </ul>
@@ -2470,7 +2680,7 @@ Ovo uključuje odložene opise znakova i poboljšanu podršku za Windows konzolu
 <p>Ova verzija takođe uključuje nekoliko ispravljenih grešaka.
 Od važnijih, najnovije verzije programa Adobe Acrobat/Reader se više neće rušiti pri čitanju PDF dokumenata.</p>
 <p>eSpeak je ažuriran, i sada uključuje 3 nova jezika: Beloruski, Luksemburški i Totontepec Mixe.</p>
-<h3 id="nove-karakteristike_12">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_13">Nove karakteristike</h3>
 <ul>
 <li>U Windows Console Hostu kojeg koriste komandna linija, PowerShell, i Windows podsistem za Linux na Windowsu 11 verzija 22H2 (Sun Valley 2) i novije:<ul>
 <li>Značajno poboljšana brzina i stabilnost. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10964" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10964">#10964</a>)</li>
@@ -2484,7 +2694,7 @@ Može se ponovo omogućiti u NVDA panelu naprednih podešavanja. (<a class="gh-l
 <li>Dodata je nova opcija u podešavanjima govora za čitanje opisa znakova uz odlaganje. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13509" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13509">#13509</a>)</li>
 <li>Dodata je nova opcija za brajeve redove koja određuje da li će pomeranje brajevog reda napred i nazad prekinuti govor. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2124" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2124">#2124</a>)</li>
 </ul>
-<h3 id="promene_12">Promene</h3>
+<h3 id="promene_14">Promene</h3>
 <ul>
 <li>eSpeak NG je ažuriran na 1.52-dev commit <code>9de65fcb</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13295" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13295">#13295</a>)<ul>
 <li>Dodati jezici:<ul>
@@ -2499,7 +2709,7 @@ Može se ponovo omogućiti u NVDA panelu naprednih podešavanja. (<a class="gh-l
 <li>Umesto prijavljivanja "ima detalje" biće prijavljena svrha detalja kada je moguće, na primer "ima komentar". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13649" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13649">#13649</a>)</li>
 <li>Veličina instalacije programa NVDA se sada prikazuje u Windows programima i funkcijama. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13909">#13909</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_22">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_24">Ispravljene greške</h3>
 <ul>
 <li>Adobe Acrobat / Reader 64 bitni se više neće rušiti pri čitanju PDF dokumenata. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12920" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12920">#12920</a>)<ul>
 <li>Napomena da je najnovija verzija programa Adobe Acrobat / Reader takođe neophodna kako bi se izbeglo rušenje.</li>
@@ -2524,38 +2734,38 @@ Ovo će poboljšati brzinu u nekim Java aplikacijama kao što je IntelliJ IDEA. 
 <li>The Chromium virtual buffer is now loaded even when the document object has the MSAA <code>STATE_SYSTEM_BUSY</code> exposed via IA2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13306" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13306">#13306</a>)</li>
 <li>A config spec type <code>featureFlag</code> has been created for use with experimental features in NVDA. See <code>devDocs/featureFlag.md</code> for more information. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13859" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13859">#13859</a>)</li>
 </ul>
-<h4 id="deprecations_10">Deprecations</h4>
+<h4 id="deprecations_11">Deprecations</h4>
 <p>There are no deprecations proposed in 2022.3.</p>
 <h2 id="202224">2022.2.4</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravio bezbednosni problem.</p>
-<h3 id="ispravljene-greske_23">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_25">Ispravljene greške</h3>
 <ul>
 <li>Ispravljen propust koji je dozvoljavao da otvorite NVDA python konzolu putem preglednika dnevnika na zaključanom ekranu.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-585m-rpvv-93qg" rel="noopener" target="_blank" title="GHSA-585m-rpvv-93qg">GHSA-585m-rpvv-93qg</a>)</li>
 </ul>
 <h2 id="202223">2022.2.3</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravio API problem u verziji 2022.2.1.</p>
-<h3 id="ispravljene-greske_24">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_26">Ispravljene greške</h3>
 <ul>
 <li>Ispravljena greška koja je izazvala da NVDA ne izgovori "Bezbedna radna površina" kada uđe na bezbednu radnu površinu.
 Ovo je izazvalo da NVDA Remote ne prepoznaje bezbedne radne površine. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14094" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14094">#14094</a>)</li>
 </ul>
 <h2 id="202222">2022.2.2</h2>
 <p>Ova verzija ispravlja grešku iz verzije 2022.2.1 sa ulaznim komandama.</p>
-<h3 id="ispravljene-greske_25">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_27">Ispravljene greške</h3>
 <ul>
 <li>Ispravljena greška koja je izazvala da ulazne komande ne rade uvek. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14065" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14065">#14065</a>)</li>
 </ul>
 <h2 id="202221">2022.2.1</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravio bezbednosni problem.
 Molimo odgovorno prijavite bezbednosne probleme na <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="bezbednosne-ispravke_11">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_13">Bezbednosne ispravke</h3>
 <ul>
 <li>Ispravljen propust koji je dozvoljavao pokretanje Python konzole sa zaključanog ekrana. (GHSA-rmq3-vvhq-gp32)</li>
 <li>Ispravljen propust koji je dozvoljavao da napustite zaključani ekran objektnom navigacijom. (GHSA-rmq3-vvhq-gp32)</li>
 </ul>
 <h3 id="promene-za-programere-engleski_10">Promene za programere (engleski)</h3>
-<h4 id="deprecations_11">Deprecations</h4>
+<h4 id="deprecations_12">Deprecations</h4>
 <p>These deprecations are currently not scheduled for removal.
 The deprecated aliases will remain until further notice.
 Please test the new API and provide feedback.
@@ -2570,7 +2780,7 @@ Od važnijih, dodata su brojna poboljšanja u Java aplikacijama, za brajeve redo
 <p>Dodate su nove komande za navigaciju kroz tabele.
 Unicode CLDR je ažuriran.
 LibLouis je ažuriran, što uključuje novu Nemačku brajevu tabelu.</p>
-<h3 id="nove-karakteristike_13">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_14">Nove karakteristike</h3>
 <ul>
 <li>Podrška za interakciju sa Microsoft Loop komponentama u Microsoft Office proizvodima. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13617" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13617">#13617</a>)</li>
 <li>Dodate su nove komande za navigaciju kroz tabele. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/957" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #957">#957</a>)<ul>
@@ -2580,7 +2790,7 @@ LibLouis je ažuriran, što uključuje novu Nemačku brajevu tabelu.</p>
 </li>
 <li>Dodata je skripta bez podrazumevane komande za prebacivanje između različitih nivoa automatskog menanja jezika i dijalekta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10253" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10253">#10253</a>)</li>
 </ul>
-<h3 id="promene_13">Promene</h3>
+<h3 id="promene_15">Promene</h3>
 <ul>
 <li>NSIS je ažuriran na verziju 3.08. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9134" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9134">#9134</a>)</li>
 <li>CLDR je ažuriran na verziju 41.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13582" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13582">#13582</a>)</li>
@@ -2599,7 +2809,7 @@ LibLouis je ažuriran, što uključuje novu Nemačku brajevu tabelu.</p>
 </ul>
 </li>
 </ul>
-<h3 id="ispravljene-greske_26">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_28">Ispravljene greške</h3>
 <ul>
 <li>Ispravljene greške u Java aplikacijama:<ul>
 <li>NVDA će sada izgovoriti ako je kontrola samo za čitanje. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13692" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13692">#13692</a>)</li>
@@ -2650,7 +2860,7 @@ the case where a negative child ID or an IDispatch is returned by <code>IAccessi
 <li>New convenience functions <code>registerExecutableWithAppModule</code> and <code>unregisterExecutable</code> were added to the <code>appModuleHandler</code> module.
 They can be used to use a single App Module with multiple executables. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13366" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13366">#13366</a>)</li>
 </ul>
-<h4 id="deprecations_12">Deprecations</h4>
+<h4 id="deprecations_13">Deprecations</h4>
 <p>These are proposed API breaking changes.
 The deprecated part of the API will continue to be available until the specified release.
 If no release is specified, the plan for removal has not been determined.
@@ -2781,7 +2991,7 @@ Takođe su uključene razne ispravke grešaka za Windows 11, u aplikacijama kao 
 <ul>
 <li>This release breaks compatibility with existing add-ons.</li>
 </ul>
-<h3 id="nove-karakteristike_14">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_15">Nove karakteristike</h3>
 <ul>
 <li>Podrška za prijavljivanje napomena u programu MS Excel uz  UI Automation omogućen na Windowsu 11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12861" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12861">#12861</a>)</li>
 <li>U novijim verzijama programa Microsoft Word uz  UI Automation na  Windowsu 11, postojanje markera, nacrta komentara kao i rešenih komentara se sada prijavljuje izgovorom kao i na brajevom redu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12861" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12861">#12861</a>)</li>
@@ -2808,7 +3018,7 @@ Takođe su uključene razne ispravke grešaka za Windows 11, u aplikacijama kao 
 </ul>
 </li>
 </ul>
-<h3 id="promene_14">Promene</h3>
+<h3 id="promene_16">Promene</h3>
 <ul>
 <li>Espeak-ng je ažuriran na 1.51-dev commit <code>7e5457f91e10</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12950" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12950">#12950</a>)</li>
 <li>Ažuriran liblouis brajev prevodilac na <a href="https://github.com/liblouis/liblouis/releases/tag/v3.21.0" rel="noopener" target="_blank" title="3.21.0">3.21.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13141" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13141">#13141</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13438" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13438">#13438</a>)<ul>
@@ -2827,7 +3037,7 @@ Takođe su uključene razne ispravke grešaka za Windows 11, u aplikacijama kao 
 <li>Prijavljivanje kratkog opisa detalja sada ima podrazumevanu prečicu (<code>NVDA+d</code>). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13380" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13380">#13380</a>)</li>
 <li>NVDA mora ponovo biti pokrenut nakon što se instalira MathPlayer. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13486" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13486">#13486</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_27">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_29">Ispravljene greške</h3>
 <ul>
 <li>Okno upravljača privremene memorije više neće neispravno biti fokusirano kada se otvaraju određeni Office programi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12736">#12736</a>)</li>
 <li>Na sistemima na kojima je korisnik odredio da zameni primarno dugme na mišu tako da desni klik aktivira stavke, NVDA više neće otvarati kontekstni meni umesto da aktivira stavku, u aplikacijama kao što su Web pretraživači. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12642" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12642">#12642</a>)</li>
@@ -2951,7 +3161,7 @@ This can dramatically decrease build times on multi core systems. (<a class="gh-
 <h2 id="202135">2021.3.5</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravio bezbednosni problem.
 Molimo odgovorno prijavite bezbednosne probleme na adresu <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="bezbednosne-ispravke_12">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_14">Bezbednosne ispravke</h3>
 <ul>
 <li>Ispravljena bezbednosna preporuka <code>GHSA-xc5m-v23f-pgr7</code>.<ul>
 <li>Dijalog izgovora znakova interpunkcije i simbola je sada onemogućen u bezbednom načinu rada.</li>
@@ -2961,7 +3171,7 @@ Molimo odgovorno prijavite bezbednosne probleme na adresu <a href="mailto:info@n
 <h2 id="202134">2021.3.4</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravilo nekoliko prijavljenih bezbednosnih problema.
 Molimo odgovorno prijavite bezbednosne probleme na adresu  <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="bezbednosne-ispravke_13">Bezbednosne ispravke</h3>
+<h3 id="bezbednosne-ispravke_15">Bezbednosne ispravke</h3>
 <ul>
 <li>Ispravljena bezbednosna preporuka <code>GHSA-354r-wr4v-cx28</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13488" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13488">#13488</a>)<ul>
 <li>Uklonjena mogućnost da se NVDA pokrene uz omogućene dnevnike za otklanjanje grešaka kada je NVDA pokrenut u bezbednom načinu rada.</li>
@@ -2985,7 +3195,7 @@ Ova verzija se ispravno identifikuje kao 2021.3.3.</p>
 <h2 id="202132">2021.3.2</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravilo nekoliko prijavljenih bezbednosnih problema.
 Molimo odgovorno prijavite bezbednosne probleme na adresu  <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="ispravljene-greske_28">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_30">Ispravljene greške</h3>
 <ul>
 <li>Bezbednosna ispravka: Sprečavanje objektne navigacije van zaključanog ekrana na Windowsu 10 i Windowsu 11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13328" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13328">#13328</a>)</li>
 <li>Bezbednosna ispravka: Ekran upravljača dodacima je sada onemogućen na bezbednim ekranima. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13059" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13059">#13059</a>)</li>
@@ -2993,12 +3203,12 @@ Molimo odgovorno prijavite bezbednosne probleme na adresu  <a href="mailto:info@
 </ul>
 <h2 id="202131">2021.3.1</h2>
 <p>Ovo je manje ažuriranje kako bi se ispravilo nekoliko grešaka u verziji 2021.3.</p>
-<h3 id="promene_15">Promene</h3>
+<h3 id="promene_17">Promene</h3>
 <ul>
 <li>Novi HID brajev protokol više nije izabran u situacijama kada postoji drugi drajver za brajev red koji se može koristiti. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13153">#13153</a>)</li>
 <li>Novi HID brajev protokol se može onemogućiti korišćenjem opcije u panelu naprednih podešavanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13180" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13180">#13180</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_29">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_31">Ispravljene greške</h3>
 <ul>
 <li>Orjentiri će ponovo imati skraćenice na brajevom redu. <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13158" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13158">#13158</a></li>
 <li>Ispravljjena nestabilnost u automatskom prepoznavanju brajevih redova Humanware Brailliant i  APH Mantis Q40 kada se koriste putem  Bluetooth veze. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13153">#13153</a>)</li>
@@ -3015,7 +3225,7 @@ Jedno od ovih UIA poboljšanja je da Outlook ignoriše veći broj tabela koje sl
 <p>Zbog ažuriranja naših bezbednosnih sertifikata, manji broj korisnika dobija grešku kada NVDA 2021.2 proverava ažuriranja.
 NVDA će sada zahtevati da Windows ažurira bezbednosne sertifikate, što će u budućnosti sprečiti ovu grešku.
 Korisnici koji su dobili ovu grešku moraju ručno da preuzmu ovo ažuriranje.</p>
-<h3 id="nove-karakteristike_15">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_16">Nove karakteristike</h3>
 <ul>
 <li>Dodata ulazna komanda za uključivanje i isključivanje prijavljivanja stilova granica ćelija. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10408" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10408">#10408</a>)</li>
 <li>Podrška za novi HID brajev standard koji za cilj ima standardizaciju podrške za brajeve redove. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12523" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12523">#12523</a>)<ul>
@@ -3028,7 +3238,7 @@ Korisnici koji su dobili ovu grešku moraju ručno da preuzmu ovo ažuriranje.</
 <li>U Windowsu 10 i novijim, NVDA će izgovoriti broj predloga kada upisujete termine pretrage u aplikacijama kao što su podešavanja i Microsoft prodavnica. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7330" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7330">#7330</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12758" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12758">#12758</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12790" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12790">#12790</a>)</li>
 <li>Navigacija kroz tabele je sada podržana u kontrolama koje su napravljene korišćenjem Out-GridView cmdlet u  PowerShell. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12928" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12928">#12928</a>)</li>
 </ul>
-<h3 id="promene_16">Promene</h3>
+<h3 id="promene_18">Promene</h3>
 <ul>
 <li>Espeak-ng je ažuriran na 1.51-dev commit <code>74068b91bcd578bd7030a7a6cde2085114b79b44</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12665" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12665">#12665</a>)</li>
 <li>NVDA će podrazumevano koristiti eSpeak ako nijedan instaliran OneCore glas ne podržava željeni NVDA jezik. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10451" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10451">#10451</a>)</li>
@@ -3043,7 +3253,7 @@ Ako vam je ova funkcija potrebna molimo dodelite prečicu odgovarajućoj komandi
 <li>Umesto "Markiran sadržaj" ili "mrkd", "Obeleženo" ili "obel" će biti izgovoreno i prikazano na brajevom redu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12892" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12892">#12892</a>)</li>
 <li>NVDA neće više pokušavati da se zatvori kada su otvoreni dijalozi koji zahtevaju potvrdu (na primer uz dostupne opcije potvrdi / otkaži). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12984" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12984">#12984</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_30">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_32">Ispravljene greške</h3>
 <ul>
 <li>Praćenje modifikatorskih tastera na tastaturi (kao što su Kontrol, ili Insert) bolje radi u situacijama u kojima se watchdog oporavlja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12609" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12609">#12609</a>)</li>
 <li>Provera NVDA ažuriranja na određenim sistemima je ponovo moguća; na primer nove Windows instalacije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12729" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12729">#12729</a>)</li>
@@ -3099,7 +3309,7 @@ Takođe su ispravljeni važni problemi, posebno vezani za brajevu podršku i Win
 Koristite  NVDA 2021.2 da biste aktivirali zatamnjivanje ekrana na Windowsu 10 21H2 (10.0.19044) ili novijim.
 Ovo uključuje insajderske verzije Windowsa 10 kao i Windows 11.
 Kako biste se uverili u svoju privatnost, kada koristite noviju Windows verziju, vizuelno potvrdite da zatamnjivanje ekrana čini da ekran bude potpuno crn.</p>
-<h3 id="nove-karakteristike_16">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_17">Nove karakteristike</h3>
 <ul>
 <li>Eksperimentalna podrška za ARIA napomene:<ul>
 <li>dodata komanda za čitanje detalja objekta koji ima aria-details. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12364" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12364">#12364</a>)</li>
@@ -3109,7 +3319,7 @@ Kako biste se uverili u svoju privatnost, kada koristite noviju Windows verziju,
 <li>U  Windowsu 10 na verziji 1909 i novijim (što uključuje Windows 11), NVDA će izgovarati broj predloga kada pretražujete datoteke u istraživaču datoteka. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10341" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10341">#10341</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12628" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12628">#12628</a>)</li>
 <li>U programu Microsoft Word, NVDA će sada izgovarati rezultate uvlačenja kao i hanging uvlačenja kada se koriste prečice za ove opcije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6269" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6269">#6269</a>)</li>
 </ul>
-<h3 id="promene_17">Promene</h3>
+<h3 id="promene_19">Promene</h3>
 <ul>
 <li>Espeak-ng je ažuriran na 1.51-dev commit <code>ab11439b18238b7a08b965d1d5a6ef31cbb05cbb</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12449" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12449">#12449</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12202" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12202">#12202</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12280" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12280">#12280</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12568" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12568">#12568</a>)</li>
 <li>Ako je prijavljivanje članaka omogućeno u podešavanjima formatiranja dokumenta, NVDA će izgovoriti  "članak" nakon sadržaja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11103" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11103">#11103</a>)</li>
@@ -3119,7 +3329,7 @@ Kako biste se uverili u svoju privatnost, kada koristite noviju Windows verziju,
 </li>
 <li>Windows 10 optičko prepoznavanje znakova je preimenovano u Windows optičko prepoznavanje znakova. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12690" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12690">#12690</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_31">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_33">Ispravljene greške</h3>
 <ul>
 <li>U Windows 10 kalkulatoru, NVDA će prikazivati izraze računanja na brajevom redu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12268" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12268">#12268</a>)</li>
 <li>U terminal programima na Windowsu 10 verziji 1607 i novijim, kada se ubacuju ili brišu znakovi u sredini reda, znakovi desno od kursora se više ne čitaju. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3200" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3200">#3200</a>)<ul>
@@ -3160,7 +3370,7 @@ Kao i puno ispravljenih grešaka i poboljšanja, uključujući u Office paketima
 <li>This release breaks compatibility with existing add-ons.</li>
 <li>This release also drops support for Adobe Flash.</li>
 </ul>
-<h3 id="nove-karakteristike_17">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_18">Nove karakteristike</h3>
 <ul>
 <li>Prva faza podrške za UIA sa pretraživačima baziranim na Chromiumu  (kao što su Edge). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12025" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12025">#12025</a>)</li>
 <li>Opciona eksperimentalna podrška za Microsoft Excel korišćenjem UI Automation. Preporučuje se samo uz Microsoft Excel verziju 16.0.13522.10000 ili novije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12210" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12210">#12210</a>)</li>
@@ -3172,7 +3382,7 @@ Kao i puno ispravljenih grešaka i poboljšanja, uključujući u Office paketima
 <li>NVDA će sada prijaviti kategorije koje su obeležene za obaveze u aplikaciji Microsoft Outlook, ako postoje. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11598" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11598">#11598</a>)</li>
 <li>Podrška za Seika beležnicu kompanije Nippon Telesoft. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11514" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11514">#11514</a>)</li>
 </ul>
-<h3 id="promene_18">Promene</h3>
+<h3 id="promene_20">Promene</h3>
 <ul>
 <li>U režimu pretraživanja, kontrole se sada mogu aktivirati prebacivanjem kursora brajeve ćelije na njihov opis (na primer  "lnk" za link). Ovo je posebno korisno  za aktivaciju izbornih polja koja nemaju oznaku. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7447" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7447">#7447</a>)</li>
 <li>NVDA će sada sprečiti korisnika da izvrši Windows 10 optičko prepoznavanje znakova ako je zatamnjivanje ekrana omogućeno. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11911" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11911">#11911</a>)</li>
@@ -3195,7 +3405,7 @@ Kao i puno ispravljenih grešaka i poboljšanja, uključujući u Office paketima
 <li>Preglednik brajevog reda sada ima standardno dugme za zatvaranje za lakšu interakciju korisnika sa uređajima sa prekidačem. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12328" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12328">#12328</a>)</li>
 <li>U dijalogu liste elemenata, prečica koja aktivira taster "Aktiviraj" je uklonjena u određenim  jezicima kako bi sprečila sukob sa oznakom radio dugmeta za tip elementa. Kada je dostupno, ovo dugme ostaje podrazumevano dugme u dijalogu i može se jednostavno aktivirati tasterom Enter iz liste elemenata. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6167" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6167">#6167</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_32">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_34">Ispravljene greške</h3>
 <ul>
 <li>Lista poruka u programu Outlook 2010 se ponovo može čitati. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12241" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12241">#12241</a>)</li>
 <li>U Terminal aplikacijama na Windowsu 10 verziji 1607 i novijim, kada ubacujete ili brišete znakove u sredini reda, znakovi desno od kursora se više ne čitaju. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3200" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3200">#3200</a>)<ul>
@@ -3356,7 +3566,7 @@ Poboljšanja za pravila izgovaranja simbola, govorne rečnike, brajeve poruke i 
 Ispravljene greške i poboljšanja u aplikacijama Mail, Outlook, Teams, Visual Studio, Azure Data Studio, Foobar2000.
 Na Webu, poboljšanja u aplikaciji Google Docs, i bolja podrška za ARIA standard.
 Takođe puno drugih poboljšanja i ispravljenih grešaka.</p>
-<h3 id="nove-karakteristike_18">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_19">Nove karakteristike</h3>
 <ul>
 <li>Pritiskanjem tastera F1 u NVDA dijalozima otvoriće se relevantna sekcija pomoći. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7757" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7757">#7757</a>)</li>
 <li>Podrška za predloge automatskog dopunjavanja (IntelliSense) u programima Microsoft SQL Server Management Studio plus Visual Studio 2017 i novijim. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7504" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7504">#7504</a>)</li>
@@ -3372,7 +3582,7 @@ Takođe puno drugih poboljšanja i ispravljenih grešaka.</p>
 <li>Prebacivanje na brajevu ćeliju je sada moguće za korisnike miša u pregledniku brajevog reda, prevlačite za prebacivanje na ćeliju. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11804" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11804">#11804</a>)</li>
 <li>NVDA će sada automatski prepoznati brajeve redove Humanware Brailliant BI 40X i 20X preko USB i Bluetooth veze. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11819" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11819">#11819</a>)</li>
 </ul>
-<h3 id="promene_19">Promene</h3>
+<h3 id="promene_21">Promene</h3>
 <ul>
 <li>Ažuriran liblouis brajev prevodilac na verziju 3.16.1:<ul>
 <li>Addresses multiple crashes</li>
@@ -3394,7 +3604,7 @@ Takođe puno drugih poboljšanja i ispravljenih grešaka.</p>
 <li>Ažurirana CLDR Emoji baza na verziju 38. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11817" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11817">#11817</a>)</li>
 <li>Ugrađena opcija "Označavanje fokusa" je preimenovana u "vizuelno označavanje". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11700" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11700">#11700</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_33">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_35">Ispravljene greške</h3>
 <ul>
 <li>NVDA ponovo ispravno radi sa poljima za uređivanje kada se koristi aplikacija Fast Log Entry. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8996" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8996">#8996</a>)</li>
 <li>Preostalo vreme u aplikaciji Foobar2000 će se prijaviti kada nema ukupnog vremena trajanja  (na primer kada se reprodukuje stream uživo). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11337" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11337">#11337</a>)</li>
@@ -3438,7 +3648,7 @@ Takođe puno drugih poboljšanja i ispravljenih grešaka.</p>
 <h2 id="20203">2020.3</h2>
 <p>Ova verzija uključuje značajna poboljšanja u stabilnosti i brzini posebno u Microsoft Office aplikacijama. Takođe su dodata nova podešavanja za podršku ekrana osetljivog na dodir i prijavljivanje slika.
 Postojanje obeleženog (markiranog) sadržaja se može prijaviti u pretraživačima, i takođe su dodate nove Nemačke brajeve tabele.</p>
-<h3 id="nove-karakteristike_19">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_20">Nove karakteristike</h3>
 <ul>
 <li>Sada možete da omogućite ili onemogućite prijavljivanje  slika u panelu podešavanja formatiranja dokumenta. Napomena da čak i kada je ova opcija onemogućena, alternativni tekstovi za slike će se čitati. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4837" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4837">#4837</a>)</li>
 <li>Sada možete da omogućite ili onemogućite NVDA podršku za ekrane osetljive na dodir. Dodata je opcija u panel za interakciju sa ekranima osetljivim na dodir u NVDA podešavanjima. Podrazumevana komanda je NVDA+control+alt+t. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9682" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9682">#9682</a>)</li>
@@ -3455,7 +3665,7 @@ Postojanje obeleženog (markiranog) sadržaja se može prijaviti u pretraživač
 <li>Brajev red Handy Tech Active Braille sa džojstikom je sada podržan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11655" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11655">#11655</a>)</li>
 <li>Opcija "Automatski režim fokusiranja za pomeranje kursora" sada se može koristiti kada je onemogućena opcija "Automatski postavi sistemski fokus na elemente koji se mogu fokusirati". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11663" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11663">#11663</a>)</li>
 </ul>
-<h3 id="promene_20">Promene</h3>
+<h3 id="promene_22">Promene</h3>
 <ul>
 <li>Skripta za prijavljivanje formatiranja (NVDA+f) je sada promenjena kako bi prijavljivala formatiranje na poziciji sistemskog kursora umesto preglednog kursora programa NVDA. Da biste dobili formatiranje za poziciju preglednog kursora sada koristite NVDA+šift+f. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9505" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9505">#9505</a>)</li>
 <li>NVDA sada po podrazumevanim podešavanjima ne pomera sistemski  fokus na elemente koji se mogu fokusirati u režimu pretraživanja, što poboljšava brzinu i stabilnost. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11190" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11190">#11190</a>)</li>
@@ -3468,7 +3678,7 @@ Postojanje obeleženog (markiranog) sadržaja se može prijaviti u pretraživač
 <li>Kada koristite komandu "Prebaci pregledni kursor na fokus " u režimu pretraživanja, pregledni kursor se sada postavlja na poziciju virtuelnog kursora. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9622" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9622">#9622</a>)</li>
 <li>Informacije koje se prijavljuju u režimu pretraživanja, kao što su informacije o formatiranju komandom NVDA+F, sada su prikazane u malo većem prozoru i centrirane su na ekranu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9910" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9910">#9910</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_34">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_36">Ispravljene greške</h3>
 <ul>
 <li>NVDA sada uvek govori kada se krećete reč po reč i dođete do simbola koji je odvojen razmakom bez obzira na podešavanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5133" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5133">#5133</a>)</li>
 <li>U aplikacijama koje koriste QT 5.11 ili noviji, opisi objekata se ponovo prijavljuju. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8604" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8604">#8604</a>)</li>
@@ -3512,7 +3722,7 @@ Postojanje obeleženog (markiranog) sadržaja se može prijaviti u pretraživač
 </ul>
 <h2 id="20202">2020.2</h2>
 <p>Glavne karakteristike ove verzije uključuju podršku za novi brajev red kompanije Nattiq, bolju podršku za ESET antivirus interfejs i Windows Terminal, poboljšanja u brzini korišćenja aplikacije 1Password, kao i uz Windows OneCore sintetizator. Uz puno dodatnih ispravljenih grešaka i poboljšanja.</p>
-<h3 id="nove-karakteristike_20">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_21">Nove karakteristike</h3>
 <ul>
 <li>Podrška za nove brajeve redove:<ul>
 <li>Nattiq nBraille (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10778" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10778">#10778</a>)</li>
@@ -3529,7 +3739,7 @@ Postojanje obeleženog (markiranog) sadržaja se može prijaviti u pretraživač
 </li>
 <li>Puno novih simbola je dodato u rečnik sa simbolima. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11105" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11105">#11105</a>)</li>
 </ul>
-<h3 id="promene_21">Promene</h3>
+<h3 id="promene_23">Promene</h3>
 <ul>
 <li>Ažuriran liblouis brajev prevodilac sa 3.12 na <a href="https://github.com/liblouis/liblouis/releases/tag/v3.14.0" rel="noopener" target="_blank" title="3.14.0">3.14.0</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10832" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10832">#10832</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11221" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11221">#11221</a>)</li>
 <li>Prijavljivanje indeksa i eksponenata se sada može podesiti posebno od ostalih atributa fonta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10919" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10919">#10919</a>)</li>
@@ -3537,7 +3747,7 @@ Postojanje obeleženog (markiranog) sadržaja se može prijaviti u pretraživač
 <li>NVDA više ne izgovara "Vrh" i "Dno" kada se pregledni kursor direktno pomera na početak ili kraj  reda navigacionog objekta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9551" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9551">#9551</a>)</li>
 <li>NVDA više ne izgovara "Levo" i "Desno" kada se pregledni kursor direktno pomera na prvi ili poslednji znak reda navigacionog objekta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9551" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9551">#9551</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_35">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_37">Ispravljene greške</h3>
 <ul>
 <li>NVDA se sada ispravno pokreće kada datoteka sa dnevnikom ne može da se kreira. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6330" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6330">#6330</a>)</li>
 <li>U novijim verzijama aplikacije Microsoft Word 365, NVDA više neće izgovarati "obrisana reč u nazad" kada se pritisne ctrl plus backspace u toku uređivanja dokumenta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10851" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10851">#10851</a>)</li>
@@ -3574,19 +3784,19 @@ Postojanje obeleženog (markiranog) sadržaja se može prijaviti u pretraživač
 </ul>
 <h2 id="20201">2020.1</h2>
 <p>Glavne karakteristike ove verzije uključuju podršku za nove brajeve redove proizvođača HumanWare i APH, kao i puno drugih važnih ispravljenih grešaka kao što su mogućnost čitanja matematičkih izraza u programu Microsoft Word korišćenjem programa MathPlayer / MathType.</p>
-<h3 id="nove-karakteristike_21">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_22">Nove karakteristike</h3>
 <ul>
 <li>Trenutno izabrana stavka liste se ponovo izgovara u režimu pretraživanja programa Chrome, slično kao u verziji NVDA 2019.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10713" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10713">#10713</a>)</li>
 <li>Sada možete da izvršite desni klik miša ekranom osetljivim na dodir tako što jednim prstom dodirnete i zadržite. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3886" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3886">#3886</a>)</li>
 <li>Podrška za nove brajeve redove: APH Chameleon 20, APH Mantis Q40, HumanWare BrailleOne, BrailleNote Touch v2, i NLS eReader. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10830" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10830">#10830</a>)</li>
 </ul>
-<h3 id="promene_22">Promene</h3>
+<h3 id="promene_24">Promene</h3>
 <ul>
 <li>NVDA će sprečiti sistem da se zaključa ili ode u stanje spavanja tokom neprekidnog čitanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10643" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10643">#10643</a>)</li>
 <li>Podrška za okvire van procesa u programu Mozilla Firefox. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10707" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10707">#10707</a>)</li>
 <li>Ažuriran liblouis brajev prevodilac na verziju 3.12. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10161" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10161">#10161</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_36">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_38">Ispravljene greške</h3>
 <ul>
 <li>Unikodni simbol za minus se sada ponovo izgovara (U+2212) (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10633" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10633">#10633</a>)</li>
 <li>Kada se instalira dodatak iz menadžera dodataka, imena datoteka i foldera u prozoru za pretragu se više ne izgovaraju dva puta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10620" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10620">#10620</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2395" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2395">#2395</a>)</li>
@@ -3628,7 +3838,7 @@ Private changes that should not affect addon developers:</li>
 <p>NVDA 2019.3 je veoma značajno ažuriranje koje uključuje puno promena u strukturi kao što su prelazak sa Python 2 na Python 3, kao i nove mogućnosti u kodu za govor programa NVDA.
 Iako ove promene izazivaju nekompatibilnosti starijih NVDA dodataka, ažuriranje na Python 3 je neophodno zbog bolje bezbednosti, a promene u govoru dozvoljavaju vrlo uzbudljive inovacije u bliskoj budućnosti.
  Druge prednosti ove verzije uključuju podršku za 64 bitne Java aplikacije, funkcije zatamnjivanja ekrana i označavanja fokusa, podršku za nove brajeve redove i novi preglednik brajevog reda, i puno drugih ispravljenih grešaka.</p>
-<h3 id="nove-karakteristike_22">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_23">Nove karakteristike</h3>
 <ul>
 <li>Preciznost komande postavi miš na navigacioni objekat je značajno poboljšana u tekstualnim poljima u Java aplikacijama. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10157" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10157">#10157</a>)</li>
 <li>Dodata podrška za sledeće  Handy Tech brajeve redove (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8955" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8955">#8955</a>):<ul>
@@ -3658,7 +3868,7 @@ Iako ove promene izazivaju nekompatibilnosti starijih NVDA dodataka, ažuriranje
 </li>
 <li>Dodat alat za pregled brajevog reda, dozvoljava pregled teksta brajevog reda putem prozora na ekranu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7788" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7788">#7788</a>)</li>
 </ul>
-<h3 id="promene_23">Promene</h3>
+<h3 id="promene_25">Promene</h3>
 <ul>
 <li>Korisničko uputstvo sada opisuje kako da koristite NVDA u Windows konzoli. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9957" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9957">#9957</a>)</li>
 <li>Pokretanje  nvda.exe sada podrazumevano menja već pokrenutu kopiju programa NVDA. -r|--replace parametar komandne linije se i dalje prihvata, ali  se ignoriše. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8320" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8320">#8320</a>)</li>
@@ -3676,7 +3886,7 @@ Iako ove promene izazivaju nekompatibilnosti starijih NVDA dodataka, ažuriranje
 <li>Ako Java Access Bridge nije omogućen za korisnika, NVDA će ga automatski omogućiti pri pokretanju. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7952" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7952">#7952</a>)</li>
 <li>Ažuriran eSpeak-NG na 1.51-dev, commit <a class="gh-link gh-commit" href="https://github.com/nvaccess/nvda/commit/ca65812ac6019926f2fbd7f12c92d7edd3701e0c" rel="noopener" target="_blank" title="GitHub Commit: nvaccess/nvda@ca65812ac6019926f2fbd7f12c92d7edd3701e0c">ca65812</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10581" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10581">#10581</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_37">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_39">Ispravljene greške</h3>
 <ul>
 <li>Emoji i drugi 32 bit unicode znakovi sada zauzimaju manje mesta na brajevom redu kada se prikazuju  kao heksadecimalne vrednosti. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6695" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6695">#6695</a>)</li>
 <li>U Windowsu 10, NVDA će izgovarati opise alata u univerzalnim aplikacijama ako je podešen da prijavi opise alata u dijalogu predstavljanje objekata. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8118" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8118">#8118</a>)</li>
@@ -3815,7 +4025,7 @@ Iako ove promene izazivaju nekompatibilnosti starijih NVDA dodataka, ažuriranje
 </ul>
 <h2 id="20192">2019.2</h2>
 <p>Glavne karakteristike ove verzije uključuju automatsko prepoznavanje brajevih redova kompanije Freedom Scientific , eksperimentalno podešavanje u naprednim podešavanjima koje zaustavlja pomeranje sistemskog fokusa u režimu pretraživanja (što može doneti ubrzanja u radu ), opcija povećanja brzine za Windows OneCore sintetizator kako bi se dostigao veoma brz govor, i puno drugih ispravljenih grešaka.</p>
-<h3 id="nove-karakteristike_23">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_24">Nove karakteristike</h3>
 <ul>
 <li>Podrška za program Miranda NG radi sa novijim verzijama klijenta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9053" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9053">#9053</a>)</li>
 <li>Sada možete onemogućiti režim pretraživanja onemogućavanjem nove opcije "Omogući režim pretraživanja kada se stranica učita" u podešavanjima režima pretraživanja programa NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8716" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8716">#8716</a>)<ul>
@@ -3846,7 +4056,7 @@ Iako ove promene izazivaju nekompatibilnosti starijih NVDA dodataka, ažuriranje
 <li>Dodata eksperimentalna opcija u panel sa naprednim podešavanjima koja vam  dozvoljava da probate novu, napisanu iz početka NVDA podršku za Windows konzole korišćenjem Microsoft UI Automation API-a. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9614" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9614">#9614</a>)</li>
 <li>U Python konzoli, polje za unos sada podržava lepljenje više redova iz privremene memorije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9776" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9776">#9776</a>)</li>
 </ul>
-<h3 id="promene_24">Promene</h3>
+<h3 id="promene_26">Promene</h3>
 <ul>
 <li>Jačina sintetizatora se sada smanjuje za 5 umesto 10 procenata kada se koristi krug sintetizatora. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6754" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6754">#6754</a>)</li>
 <li>Pojašnjen tekst u upravljaču dodataka kada je NVDA pokrenut uz opciju --disable-addons. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9473" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9473">#9473</a>)</li>
@@ -3858,7 +4068,7 @@ Iako ove promene izazivaju nekompatibilnosti starijih NVDA dodataka, ažuriranje
 <li>NVDA će sada izgovoriti reč 'izabrano' nakon izgovaranja teksta koji je korisnik izabrao. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9028" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9028">#9028</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9909">#9909</a>)</li>
 <li>U programu Microsoft Visual Studio Code, NVDA će podrazumevano biti u režimu fokusiranja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9828" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9828">#9828</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_38">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_40">Ispravljene greške</h3>
 <ul>
 <li>NVDA se više ne ruši kada je folder dodatka prazan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7686" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7686">#7686</a>)</li>
 <li>LTR i  RTL znakovi se više ne izgovaraju u toku navigacije slovo po slovo ili prikazuju na brajevom redu kada  se pristupa prozoru  za svojstva. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8361" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8361">#8361</a>)</li>
@@ -3911,7 +4121,7 @@ Iako ove promene izazivaju nekompatibilnosti starijih NVDA dodataka, ažuriranje
 Umesto toga oni se trebaju instalirati kao NVDA dodatak. Za one koji programiraju kod za NVDA dodatak, kod za njih se može kopirati u novi razvojni scratchpad folder u folderu sa korisničkim podešavanjima,  ako je razvojni scratchpad folder omogućen u novom panelu za napredna NVDA podešavanja.
 Ove promene su neophodne kako bi se bolje osigurala kompatibilnost prilagođenog koda, kako nebi dolazilo do grešaka u programu NVDA kada ovaj kod postane nekompatibilan sa budućim NVDA verzijama.
 Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigurati bolju kompatibilnost.</p>
-<h3 id="nove-karakteristike_24">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_25">Nove karakteristike</h3>
 <ul>
 <li>Nove brajeve tabele: Afrikanski, Arapski osmotačkasti brajev kod, Arapski stepen 2, Španski stepen 2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4435" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4435">#4435</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9186" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9186">#9186</a>)</li>
 <li>Dodata opcija u podešavanjima miša programa NVDA za situacije  u kojima je miš kontrolisan od strane druge aplikacije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8452" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8452">#8452</a>)<ul>
@@ -3931,7 +4141,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <li>Dodata podrška za tabelu grafičkog prikaza u programu Windows upravljač diska (eng. Windows disk management). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1486" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1486">#1486</a>)</li>
 <li>Dodata podrška za Handy Tech Connect Braille i  Basic Braille 84. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9249" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9249">#9249</a>)</li>
 </ul>
-<h3 id="promene_25">Promene</h3>
+<h3 id="promene_27">Promene</h3>
 <ul>
 <li>Ažuriran liblouis brajev prevodilac na verziju 3.8.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9013" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9013">#9013</a>)</li>
 <li>Autori dodataka sada mogu da označe minimalnu neophodnu verziju programa NVDA za korišćenje njihovih dodataka. NVDA će odbiti instalaciju ili učitavanje dodataka u kojima je minimalna verzija označena kao novija verzija od verzije koja se trenutno koristi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6275" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6275">#6275</a>)</li>
@@ -3947,7 +4157,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 </ul>
 </li>
 </ul>
-<h3 id="ispravljene-greske_39">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_41">Ispravljene greške</h3>
 <ul>
 <li>Kada koristite OneCore sintetizator govora na Windowsu 10 ažuriranje iz aprila 2018 i novijim, velike pauze se više ne ubacuju nakon izgovaranja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8985" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8985">#8985</a>)</li>
 <li>Kada se krećete između znakova u tekstualnim kontrolama (na primer Notepad) ili režim pretraživanja, 32 bitni emoji znakovi koji sadrže 2  UTF-16 karaktera (kao što su ðŸ¤¦) će se ispravno čitati. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8782" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8782">#8782</a>)</li>
@@ -3994,7 +4204,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <p>Ova verzija ispravlja grešku pri pokretanju programa NVDA ako je jezik podešen na Aragoneski. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9089" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9089">#9089</a>)</p>
 <h2 id="20184">2018.4</h2>
 <p>Glavne karakteristike ove verzije uključuju poboljšanja brzine u novijim verzijama programa Mozilla Firefox, izgovor Emoji znakova sa svim sintetizatorima, izgovor statusa odgovora/prosleđivanja poruke u programu Outlook, prijavljivanje pozicije kursora od ivice strane u Wordu, i puno ispravljenih grešaka.</p>
-<h3 id="nove-karakteristike_25">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_26">Nove karakteristike</h3>
 <ul>
 <li>Nove brajeve tabele: Kineska(Kina, Mandarinski) stepen 1 i stepen 2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5553" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5553">#5553</a>)</li>
 <li>Status odgovora/prosleđivanja  se sada prijavljuje  za mailove u listi poruka programa  Microsoft Outlook. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6911" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6911">#6911</a>)</li>
@@ -4004,7 +4214,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <li>Dodata podrška za programe Foxit Reader i  Foxit Phantom PDF (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8944" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8944">#8944</a>)</li>
 <li>Dodata podrška za DBeaver alat za baze podataka. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8905" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8905">#8905</a>)</li>
 </ul>
-<h3 id="promene_26">Promene</h3>
+<h3 id="promene_28">Promene</h3>
 <ul>
 <li>"Prijavi balone pomoći" u dijalogu predstavljanja objekata je preimenovan u "Prijavi obaveštenja" kako bi uključilo prijavljivanje obaveštenja u Windowsu 8 i novijim. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5789" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5789">#5789</a>)</li>
 <li>U dijalogu podešavanja tastature, izborna polja za izbor NVDA tastera su sada u listi, i više nisu prikazana kao posebno izborno polje za svaki taster.</li>
@@ -4012,7 +4222,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <li>Ažuriran liblouis brajev prevodilac  na verziju 3.7.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8697" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8697">#8697</a>)</li>
 <li>Ažuriran  eSpeak-NG na verziju 919f3240cbb.</li>
 </ul>
-<h3 id="ispravljene-greske_40">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_42">Ispravljene greške</h3>
 <ul>
 <li>U programu Outlook 2016/365, kategorija i status zastave se prijavljuju za poruke. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8603" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8603">#8603</a>)</li>
 <li>Kada je NVDA podešen da koristi jezike kao što su Kirgijški, Mongolski ili Makedonski, više ne prikazuje dijalog pri pokretanju koji obaveštava da operativni sistem ne podržava trenutni jezik. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8064" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8064">#8064</a>)</li>
@@ -4049,7 +4259,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <p>Ovo je manje ažuriranje koje ispravlja  NVDA grešku koja izaziva da  32 bitne verzije programa Mozilla Firefox prestaju sa radom. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8759" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8759">#8759</a>)</p>
 <h2 id="20183">2018.3</h2>
 <p>Glavne karakteristike ove verzije uključuju automatsko prepoznavanje puno brajevih redova, podrška za nove Windows 10 karakteristike uključujući Windows 10 panel za unos emotikona, i puno ispravljenih grešaka.</p>
-<h3 id="nove-karakteristike_26">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_27">Nove karakteristike</h3>
 <ul>
 <li>NVDA će prijavljivati gramatičke greške kada su ispravno prikazane na Web stranicama u programu Mozilla Firefox. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8280" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8280">#8280</a>)</li>
 <li>Sadržaj koji je označen kao ubačen ili obrisan na Web stranicama se sada prijavljuje u programu  Google Chrome. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8558" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8558">#8558</a>)</li>
@@ -4067,7 +4277,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <li>Dodata podrška za različite moderne načine unosa u verzijama Windowsa 10. One uključuju panel emotikona (jesenje  Creators ažuriranje), diktiranje (jesenje creators ažuriranje), predlozi za unos teksta na hardverskoj tastaturi (aprilsko ažuriranje 2018), i privremena memorija u oblaku (oktobarsko ažuriranje 2018). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7273" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7273">#7273</a>)</li>
 <li>Sadržaj označen kao citat korišćenjem ARIA (role blockquote) je sada podržan u programu Mozilla Firefox 63. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8577" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8577">#8577</a>)</li>
 </ul>
-<h3 id="promene_27">Promene</h3>
+<h3 id="promene_29">Promene</h3>
 <ul>
 <li>Lista jezika u dijalogu opštih podešavanja je sada sortirana po imenima jezika umesto po ISO 639 kodovima. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7284" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7284">#7284</a>)</li>
 <li>Dodate podrazumevane komande za alt šift tab i  windows tab za sve podržane Freedom Scientific brajeve redove. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7387" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7387">#7387</a>)</li>
@@ -4079,7 +4289,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <li>Ažurirana adresa za ispravnu Rusku  osmotačkastu brajevu tabelu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8446" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8446">#8446</a>)</li>
 <li>Ažuriran  eSpeak-ng na 1.49.3dev commit 910f4c2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8561" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8561">#8561</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_41">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_43">Ispravljene greške</h3>
 <ul>
 <li>Pristupačne oznake za kontrole u programu  Google Chrome se sada češće prijavljuju u režimu pretraživanja   kada se oznaka  ne pojavljuje kao deo sadržaja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4773" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4773">#4773</a>)</li>
 <li>Obaveštenja su sada podržana u aplikaciji  Zoom. Na primer, ovo uključuje status mikrofona, i primljene poruke. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7754" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7754">#7754</a>)</li>
@@ -4131,7 +4341,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <p>Ova verzija sadrži ažurirane prevode zbog uklonjene karakteristike u poslednjem trenutku koja je izazvala probleme.</p>
 <h2 id="20182">2018.2</h2>
 <p>Glavne karakteristike ove verzije uključuju podršku za tabele u programu Kindle za  PC, podrška za Humanware BrailleNote Touch i  BI14 brajeve redove, poboljšanja za Onecore i Sapi5 sintetizatore govora, poboljšanja u programu Microsoft Outlook i još puno toga.</p>
-<h3 id="nove-karakteristike_27">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_28">Nove karakteristike</h3>
 <ul>
 <li>opseg redova i kolona za ćelije u tabeli se sada izgovara i prikazuje na brajevom redu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2642" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2642">#2642</a>)</li>
 <li>NVDA komande za navigaciju kroz tabele su  sada podržane u servisu  Google Docs (sa omogućenim brajevim režimom). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7946" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7946">#7946</a>)</li>
@@ -4150,7 +4360,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <li>Vreme i datum za podržane Handy Tech uređaje (na primer Active Braille i  Active Star) će sada automatski biti sinhronizovano sa programom  NVDA kada se razlikuje više od 5 sekundi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8016" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8016">#8016</a>)</li>
 <li>Ulazna komanda se može dodeliti za deaktiviranje svih aktivatora profila podešavanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4935" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4935">#4935</a>)</li>
 </ul>
-<h3 id="promene_28">Promene</h3>
+<h3 id="promene_30">Promene</h3>
 <ul>
 <li>Kolone statusa u upravljaču dodataka su promenjene kako bi označile da je dodatak  onemogućen ili omogućen umesto pokrenut i suspendovan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7929" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7929">#7929</a>)</li>
 <li>Ažuriran liblouis brajev prevodilac  na verziju 3.5.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7839" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7839">#7839</a>)</li>
@@ -4162,7 +4372,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <li>Sva podešavanja programa NVDA se sada mogu pronaći u jednom dijalogu za podešavanja kada se ode u  NVDA meni-&gt; Opcije-&gt; podešavanja, i više nisu u puno posebnih dijaloga. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7302" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7302">#7302</a>)</li>
 <li>Podrazumevani sintetizator govora kada se NVDA pokrene na Windowsu 10 je sada oneCore i više to nije ESpeak. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8176" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8176">#8176</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_42">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_44">Ispravljene greške</h3>
 <ul>
 <li>NVDA sada ispravno čita fokusirane kontrole pri unosu informacija Microsoft naloga u podešavanjima nakon unosa Email adrese. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7997" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7997">#7997</a>)</li>
 <li>NVDA sada ispravno čita Web stranicu nakon vraćanja nazad u programu Microsoft Edge. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7997" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7997">#7997</a>)</li>
@@ -4196,7 +4406,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <p>Ovo je posebna verzija programa NVDA koja ispravlja grešku u drajveru za Onecore Windows sintetizator govora, koji je zvučao kao da ima povećanu visinu i brzinu u Windows 10 Redstone 4 (1803). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8082" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8082">#8082</a>)</p>
 <h2 id="20181">2018.1</h2>
 <p>Glavne karakteristike ove verzije uključuju podršku za grafikone u programima  Microsoft word i  Powerpoint, podrška za nove brajeve redove: Eurobraille i Optelec pretvarač protokola, poboljšana podrška za Hims i Optelec brajeve redove, poboljšanja u brzini rada sa programom Mozilla Firefox 58 i novijim verzijama, i još puno toga.</p>
-<h3 id="nove-karakteristike_28">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_29">Nove karakteristike</h3>
 <ul>
 <li>Sada je moguća interakcija sa grafikonima u programima Microsoft Word i  Microsoft Powerpoint, slično kao u postojećoj podršci u programu Microsoft Excel. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7046" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7046">#7046</a>)<ul>
 <li>In Microsoft Word:  When in browse mode, cursor to an embedded chart and press enter to interact with it.</li>
@@ -4214,7 +4424,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <li>Rana podrška za Google tabele sa omogućenim brajevim režimom. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7935" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7935">#7935</a>)</li>
 <li>Podrška za  Eurobraille Esys, Esytime i  Iris brajeve redove. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7488" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7488">#7488</a>)</li>
 </ul>
-<h3 id="promene_29">Promene</h3>
+<h3 id="promene_31">Promene</h3>
 <ul>
 <li>Drajveri za HIMS Braille Sense/Braille EDGE/Smart Beetle i  Hims Sync su zamenjeni jednim drajverom. Novi drajver će automatski biti korišćen  za bivše syncBraille korisnike. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7459" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7459">#7459</a>)<ul>
 <li>Some keys , notably scroll keys, have been reassigned to follow the conventions used by Hims products. Consult the user guide for more details.</li>
@@ -4229,7 +4439,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 </ul>
 </li>
 </ul>
-<h3 id="ispravljene-greske_43">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_45">Ispravljene greške</h3>
 <ul>
 <li>Poruke režima pretraživanja kao što su korišćenje komande NVDA+f dva puta za prikazivanje formatiranja više ne prikazuju grešku kada je NVDA instaliran u folderu koji sadrži znakove koji nisu ASCII. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7474" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7474">#7474</a>)</li>
 <li>Fokus se sada ponovo ispravno vraća kada se vratite u aplikaciju Spotify iz neke druge aplikacije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7689" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7689">#7689</a>)</li>
@@ -4265,7 +4475,7 @@ Molimo pogledajte listu promena ispod kako biste videli kako dodaci mogu osigura
 <h2 id="20174">2017.4</h2>
 <p>Glavne karakteristike ove verzije uključuju puno ispravki za web podršku uključujući automatsko aktiviranje režima  pretraživanja za Web dijaloge, bolje prijavljivanje oznaka grupa za polja na Webu, Podrška za nove Windows 10 tehnologije kao što su Windows Defender zaštitnik aplikacija i Windows 10 na  ARM64, i automatsko prijavljivanje orijentacije ekrana i statusa baterije.
 Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP ili  Windows Vista. Najmanja zahtevana verzija Windowsa za NVDA je sada windows 7 sa Service Packom 1.</p>
-<h3 id="nove-karakteristike_29">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_30">Nove karakteristike</h3>
 <ul>
 <li>U režimu  pretraživanja, sada je moguće doći do kraja ili početka orjentira komandama za prelazak na početak ili kraj sadrživača (zarez/šift+zarez). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5482" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5482">#5482</a>)</li>
 <li>U programima Firefox, Internet explorer i Chrome, brza navigacija po poljima za uređivanje ili unos teksta sada uključuje obogaćena tekstualna polja označena kao contentEditable. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5534" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5534">#5534</a>)</li>
@@ -4282,7 +4492,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Podrška za Actilino brajev red kompanije Handy Tech je dodata. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7590" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7590">#7590</a>)</li>
 <li>Brajev unos za  Handy Tech brajeve redove je sada podržan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7590" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7590">#7590</a>)</li>
 </ul>
-<h3 id="promene_30">Promene</h3>
+<h3 id="promene_32">Promene</h3>
 <ul>
 <li>Minimalni zahtevan operativni sistem za  NVDA je sada  Windows 7 sa  Service Packom 1, ili Windows Server 2008 R2 sa  Service Packom 1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7546" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7546">#7546</a>)</li>
 <li>Web dijalozi u pretraživačima Firefox i Chrome sada automatski koriste režim pretraživanja, osim ako se radi u Web aplikaciji. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4493" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4493">#4493</a>)</li>
@@ -4300,7 +4510,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Datoteke koje imaju verziju (korisnička podešavanja, glasovni rečnici) se više ne čuvaju kada se privremena kopija programa NVDA pokrene. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7688" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7688">#7688</a>)</li>
 <li>Braillino, Bookworm i Modular (sa starim firmverom) brajevi redovi kompanije Handy Tech više nisu podrazumevano podržani. Instalirajte  Handy Tech univerzalni drajver i NVDA dodatak kako biste koristili ove redove. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7590" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7590">#7590</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_44">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_46">Ispravljene greške</h3>
 <ul>
 <li>Linkovi se sada ispravno prepoznaju na brajevom redu u aplikacijama kao što je Microsoft Word. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6780" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6780">#6780</a>)</li>
 <li>NVDA više ne postaje znatno sporiji kada imate puno otvorenih kartica u programima Firefox i Chrome. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3138" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3138">#3138</a>)</li>
@@ -4332,7 +4542,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 </ul>
 <h2 id="20173">2017.3</h2>
 <p>Glavne karakteristike ove verzije uključuju unos skraćenog brajevog pisma, podrška za nove Windows OneCore glasove dostupne na Windowsu 10, ugrađena podrška za Windows 10 optičko prepoznavanje znakova, i puno značajnih poboljšanja za brajev red i Web.</p>
-<h3 id="nove-karakteristike_30">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_31">Nove karakteristike</h3>
 <ul>
 <li>Podešavanje za brajev red je dodato na opciju"beskonačni prikaz poruka". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6669" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6669">#6669</a>)</li>
 <li>U listi poruka programa Microsoft Outlook, NVDA izgovara označenu poruku. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6374" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6374">#6374</a>)</li>
@@ -4366,7 +4576,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 </li>
 <li>U programima Firefox i  Chrome, NVDA sada podržava dinamičke prikaze mreža kao što su tabele u kojima  se može učitati ili prikazati samo deo sadržaja (konkretno,  aria-rowcount, aria-colcount, aria-rowindex i  aria-colindex atributi koji su ubačeni u  ARIA 1.1). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7410" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7410">#7410</a>)</li>
 </ul>
-<h3 id="promene_31">Promene</h3>
+<h3 id="promene_33">Promene</h3>
 <ul>
 <li>Nedodeljena komanda je dodata za ponovno pokretanje programa NVDA. Možete je pronaći u kategoriji razno dijaloga ulazne komande. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6396">#6396</a>)</li>
 <li>Raspored tastature se sada može podesiti iz dijaloga dobrodošlice. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6863" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6863">#6863</a>)</li>
@@ -4383,7 +4593,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Kada koristite brajev red, kursor se može podesiti za drugačiji oblik kada je brajev red vezan za fokus ili pregled. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7122">#7122</a>)</li>
 <li>NVDA logo je ažuriran. Ažuriran logo su slova NVDA u belom, na ljubičastoj pozadini. Ovo omogućava da bude vidljiv na bilo kojoj pozadini, i koristi ljubičastu boju iz NV Access logoa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7446" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7446">#7446</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_45">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_47">Ispravljene greške</h3>
 <ul>
 <li>Uređivački div elementi u programu Chrome više ne prijavljuju svoju oznaku kao vrednost u režimu pretraživanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7153">#7153</a>)</li>
 <li>Pritiskanje tastera end dok ste u režimu pretraživanja praznog Microsoft Word dokumenta više ne izaziva grešku. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7009" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7009">#7009</a>)</li>
@@ -4422,7 +4632,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 </ul>
 <h2 id="20172">2017.2</h2>
 <p>Glavne karakteristike ove verzije uključuju podršku za stišavanje pozadinskih zvukova u Windows 10 creators ažuriranju; ispravljeni problemi sa izborom teksta u režimu pretraživanja, uključujući probleme sa komandom izaberi sve; velika poboljšanja za Microsoft Edge podršku; i poboljšanja Web podrške što uključuje izgovor elemenata koji su označeni kao trenutni(koristeći aria-current).</p>
-<h3 id="nove-karakteristike_31">Nove karakteristike</h3>
+<h3 id="nove-karakteristike_32">Nove karakteristike</h3>
 <ul>
 <li>Informacije o granicama ćelija sada mogu biti izgovorene u programu Microsoft Excel koristeći komandu NVDA+f. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3044" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3044">#3044</a>)</li>
 <li>U Web pretraživačima, NVDA sada izgovara kada se element označi kao trenutni(konkretno, koristeći aria-current svojstvo). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6358" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6358">#6358</a>)</li>
@@ -4432,11 +4642,11 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Novi jezik: Bermudski.</li>
 <li>Simboli za strelice gore i dole i ostali unikod simboli se sada ispravno čitaju. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3805" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3805">#3805</a>)</li>
 </ul>
-<h3 id="promene_32">Promene</h3>
+<h3 id="promene_34">Promene</h3>
 <ul>
 <li>Kada se koristi jednostavan pregled u aplikacijama koje koriste UI automaciju, više stavki koje nemaju sadržaj se ignorišu kako bi navigacija bila olakšana. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6948" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6948">#6948</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6950" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6950">#6950</a>)</li>
 </ul>
-<h3 id="ispravljene-greske_46">Ispravljene greške</h3>
+<h3 id="ispravljene-greske_48">Ispravljene greške</h3>
 <ul>
 <li>Stavke menija na web stranicama(stavka menija za potvrdu i radio dugme) se sada mogu aktivirati u režimu pretraživanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6735" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6735">#6735</a>)</li>
 <li>Ako se pritisne  ESC dok je dijalog u konfiguracionim profilima"potvrdi brisanje" aktivan dialog se zatvara. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6851" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6851">#6851</a>)</li>

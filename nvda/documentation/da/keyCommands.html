@@ -2,19 +2,19 @@
 <html lang="da" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 Kommandooversigt</title>
+<title>NVDA 2026.2 Kommandooversigt</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611-kommandooversigt">NVDA 2026.1.1 Kommandooversigt</h1>
+<body><h1 id="nvda-20262-kommandooversigt">NVDA 2026.2 Kommandooversigt</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611-kommandooversigt" title="NVDA 2026.1.1 Kommandooversigt">NVDA 2026.1.1 Kommandooversigt</a><ul>
+<li><a href="#nvda-20262-kommandooversigt" title="NVDA 2026.2 Kommandooversigt">NVDA 2026.2 Kommandooversigt</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Kom i gang med at bruge NVDA">Kom i gang med at bruge NVDA</a><ul>
-<li><a href="#NVDATouchGestures" title="NVDA Berøringsbevægelser">NVDA Berøringsbevægelser</a><ul>
-<li><a href="#TouchModes" title="Berøringstilstande">Berøringstilstande</a></li>
+<li><a href="#NVDATouchGestures" title="NVDA-touchkommandoer">NVDA-touchkommandoer</a><ul>
+<li><a href="#TouchModes" title="Touchtilstande">Touchtilstande</a></li>
 </ul>
 </li>
 <li><a href="#BasicNVDACommands" title="Grundlæggende NVDA-kommandoer">Grundlæggende NVDA-kommandoer</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Gennemsynstilstand">Gennemsynstilstand</a><ul>
-<li><a href="#SingleLetterNavigation" title="Bogstavnavigering">Bogstavnavigering</a></li>
+<li><a href="#SingleLetterNavigation" title="Bogstavnavigering">Bogstavnavigering</a><ul>
+<li><a href="#BrowseModeTouch" title="Touchnavigation i gennemsynstilstand">Touchnavigation i gennemsynstilstand</a><ul>
+<li><a href="#touchkommandoer-i-gennemsynstilstand" title="Touchkommandoer i gennemsynstilstand">Touchkommandoer i gennemsynstilstand</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="Elementlisten">Elementlisten</a></li>
 <li><a href="#SearchingForText" title="Søg efter tekst">Søg efter tekst</a></li>
 <li><a href="#ImbeddedObjects" title="Indlejrede objekter">Indlejrede objekter</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Punktskrift">Punktskrift</a><ul>
-<li><a href="#BrailleInput" title="Indtastning med punkt">Indtastning med punkt</a></li>
+<li><a href="#BrailleReading" title="Læsning af punkt">Læsning af punkt</a><ul>
+<li><a href="#BrailleReadingGestures" title="Punktlæsningskommandoer">Punktlæsningskommandoer</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Indtastning med punkt">Indtastning med punkt</a><ul>
+<li><a href="#BrailleInputGestures" title="Punktinputkommandoer">Punktinputkommandoer</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Syn">Syn</a><ul>
 <li><a href="#VisionScreenCurtain" title="Skærmtæppe">Skærmtæppe</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Forstørrelse">Forstørrelse</a><ul>
+<li><a href="#MagnifierCommands" title="Kommandoer til Forstørrelse">Kommandoer til Forstørrelse</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Indholdsgenkendelse">Indholdsgenkendelse</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Lydopdeling">Lydopdeling</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Forstørrelse">Forstørrelse</a></li>
 <li><a href="#KeyboardSettings" title="Tastatur">Tastatur</a></li>
 <li><a href="#MouseSettings" title="Mus">Mus</a></li>
 <li><a href="#ReviewCursorSettings" title="Læsemarkør">Læsemarkør</a></li>
@@ -173,10 +191,10 @@
 </ul>
 </div>
 <h2 id="GettingStartedWithNVDA">Kom i gang med at bruge NVDA</h2>
-<h3 id="NVDATouchGestures">NVDA Berøringsbevægelser</h3>
-<p>For at slå understøttelse for berøring til eller fra, tryk NVDA+Ctrl+alt+T.</p>
-<h4 id="TouchModes">Berøringstilstande</h4>
-<p>For at skifte berøringstilstand, udfør et tryk med tre fingre.</p>
+<h3 id="NVDATouchGestures">NVDA-touchkommandoer</h3>
+<p>Tryk på NVDA+Ctrl+Alt+T for at slå understøttelse af touchinteraktion til eller fra.</p>
+<h4 id="TouchModes">Touchtilstande</h4>
+<p>Udfør et tryk med tre fingre for at skifte mellem touchtilstande.</p>
 <h3 id="BasicNVDACommands">Grundlæggende NVDA-kommandoer</h3>
 <table>
 <thead>
@@ -184,7 +202,7 @@
 <th>Navn</th>
 <th>Desktop tast</th>
 <th>Laptop tast</th>
-<th>Touchbevægelse</th>
+<th>Touch</th>
 <th>Beskrivelse</th>
 </tr>
 </thead>
@@ -209,6 +227,13 @@
 <td>Shift</td>
 <td>Ingen</td>
 <td>Sætter talen på pause. Når du trykker igen, fortsætter talen, hvor den slap (hvis pause er understøttet af den aktuelle talesyntese)</td>
+</tr>
+<tr>
+<td>Gentag seneste oplæsning</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Ingen</td>
+<td>Gentager de seneste oplysninger, NVDA har læst op. Ved to tryk vises teksten i et vindue i gennemsynstilstand</td>
 </tr>
 <tr>
 <td>NVDA-menu</td>
@@ -481,7 +506,7 @@
 <th>Navn</th>
 <th>Desktop tast</th>
 <th>Laptop tast</th>
-<th>Touchbevægelse</th>
+<th>Touch</th>
 <th>Beskrivelse</th>
 </tr>
 </thead>
@@ -579,7 +604,7 @@
 <th>Navn</th>
 <th>Desktop tast</th>
 <th>Laptop tast</th>
-<th>Touchbevægelse</th>
+<th>Touch</th>
 <th>Beskrivelse</th>
 </tr>
 </thead>
@@ -754,7 +779,7 @@
 <th>Navn</th>
 <th>Desktop tast</th>
 <th>Laptop tast</th>
-<th>Touchbevægelse</th>
+<th>Touch</th>
 <th>Beskrivelse</th>
 </tr>
 </thead>
@@ -782,7 +807,7 @@
 <th>Navn</th>
 <th>Desktop tast</th>
 <th>Laptop tast</th>
-<th>Touchbevægelse</th>
+<th>Touch</th>
 <th>Beskrivelse</th>
 </tr>
 </thead>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Du kan slå bogstavnavigering til og fra i det aktuelle dokument ved at trykke på NVDA+Shift+Mellemrum.</p>
+<h4 id="BrowseModeTouch">Touchnavigation i gennemsynstilstand</h4>
+<h5 id="touchkommandoer-i-gennemsynstilstand">Touchkommandoer i gennemsynstilstand</h5>
+<table>
+<thead>
+<tr>
+<th>Navn</th>
+<th>Touch</th>
+<th>Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vælg næste elementtype</td>
+<td>svirp ned</td>
+<td>Skifter til den næste navigationselementtype i gennemsynstilstand</td>
+</tr>
+<tr>
+<td>Vælg forrige elementtype</td>
+<td>svirp op</td>
+<td>Skifter til den forrige navigationselementtype i gennemsynstilstand</td>
+</tr>
+<tr>
+<td>Flyt til næste element</td>
+<td>højresvirp</td>
+<td>Flytter til det næste element af den valgte type i gennemsynstilstand</td>
+</tr>
+<tr>
+<td>Flyt til forrige element</td>
+<td>venstresvirp</td>
+<td>Flytter til det forrige element af den valgte type i gennemsynstilstand</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">Elementlisten</h3>
 <table>
 <thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">Punktskrift</h2>
+<h3 id="BrailleReading">Læsning af punkt</h3>
+<h4 id="BrailleReadingGestures">Punktlæsningskommandoer</h4>
+<table>
+<thead>
+<tr>
+<th>Navn</th>
+<th>Tast</th>
+<th>Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skift punkttilstand</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Gør det muligt at skifte mellem de tilgængelige punkttilstande: "følg markører" og "vis taleoutput"</td>
+</tr>
+<tr>
+<td>Punkt følger</td>
+<td><code>NVDA+control+t</code></td>
+<td>Denne mulighed lader dig vælge, om punktdisplayet skal følge systemfokus / systemmarkøren, navigatorobjektet / læsemarkøren eller begge dele</td>
+</tr>
+<tr>
+<td>Slå automatisk rulning til eller fra</td>
+<td><code>NVDA+alt+k</code></td>
+<td>Slår til eller fra, om NVDA med jævne mellemrum ruller punktdisplayet for at vise oplysninger, der er for lange til at blive vist på én gang</td>
+</tr>
+<tr>
+<td>Øg hastigheden for automatisk rulning</td>
+<td><code>NVDA+alt+l</code></td>
+<td>Gør den automatiske rulning hurtigere (når den er aktiveret)</td>
+</tr>
+<tr>
+<td>Sænk hastigheden for automatisk rulning</td>
+<td><code>NVDA+alt+j</code></td>
+<td>Gør den automatiske rulning langsommere (når den er aktiveret)</td>
+</tr>
+<tr>
+<td>Skift punktmarkørform</td>
+<td>Ingen</td>
+<td>Skifter mellem punktmarkørformerne (punktmønstrene)</td>
+</tr>
+<tr>
+<td>Skift indstillingen Flyt systemmarkøren ved brug af markørknapper med læsemarkøren</td>
+<td>Ingen</td>
+<td>Skifter mellem tilstandene for punktindstillingen Flyt systemmarkøren ved brug af markørknapper med læsemarkøren</td>
+</tr>
+<tr>
+<td>Skift mellem tilstande for visning af beskeder på punkt</td>
+<td>Ingen</td>
+<td>Skifter mellem tilstandene for visning af beskeder på punkt</td>
+</tr>
+<tr>
+<td>Skift tilstand for visning af markering på punkt</td>
+<td>Ingen</td>
+<td>Skifter mellem tilstandene for visning af markering på punkt</td>
+</tr>
+<tr>
+<td>Skift Unicode-normaliseringstilstand for punkt</td>
+<td>Ingen</td>
+<td>Skifter mellem Unicode-normaliseringstilstandene for punkt</td>
+</tr>
+<tr>
+<td>Flyt punkt til fokus</td>
+<td>Ingen</td>
+<td>Flytter punktdisplayet til det aktuelle fokus</td>
+</tr>
+<tr>
+<td>Flyt punkt til næste linje</td>
+<td>Ingen</td>
+<td>Flytter punktdisplayet til den næste linje</td>
+</tr>
+<tr>
+<td>Flyt punkt til forrige linje</td>
+<td>Ingen</td>
+<td>Flytter punktdisplayet til den forrige linje</td>
+</tr>
+<tr>
+<td>Oplys punktformatering</td>
+<td>Ingen</td>
+<td>Oplyser formateringsoplysninger for teksten under denne punktcelle</td>
+</tr>
+<tr>
+<td>Flyt til eller aktivér punktobjekt</td>
+<td>Ingen</td>
+<td>Flytter markøren til eller aktiverer objektet under denne punktcelle</td>
+</tr>
+<tr>
+<td>Rul punktdisplayet tilbage</td>
+<td>Ingen</td>
+<td>Ruller punktdisplayet tilbage</td>
+</tr>
+<tr>
+<td>Rul punktdisplayet frem</td>
+<td>Ingen</td>
+<td>Ruller punktdisplayet frem</td>
+</tr>
+<tr>
+<td>Slå punktmarkøren til eller fra</td>
+<td>Ingen</td>
+<td>Slår punktmarkøren til eller fra</td>
+</tr>
+<tr>
+<td>Skift visning af kontekstoplysninger på punkt</td>
+<td>Ingen</td>
+<td>Skifter den måde, kontekstoplysninger vises på punkt</td>
+</tr>
+<tr>
+<td>Slå tale ved punktnavigation til eller fra</td>
+<td>Ingen</td>
+<td>Slår tale ved navigation efter linjer eller afsnit med punkt til eller fra</td>
+</tr>
+<tr>
+<td>Slå oplæsning af tegn ved brug af markørknapper til eller fra</td>
+<td>Ingen</td>
+<td>Slår oplæsning af tegnet under markøren til eller fra, når markøren flyttes i tekst med markørknapper</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Indtastning med punkt</h3>
 <p>Et tryk på punkt 7 sletter sidst indtastede punktcelle eller tegn.
 Punkt 8 oversætter alt indtastet punkt og trykker på enter-tasten.
 Ved at trykke på punkt 7 og 8 sammen oversættes den indtastede punktskrift, men tilføjer ikke et mellemrum eller et tryk på enter-tasten.</p>
+<h4 id="BrailleInputGestures">Punktinputkommandoer</h4>
+<table>
+<thead>
+<tr>
+<th>Navn</th>
+<th>Tast</th>
+<th>Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input via punktdisplay</td>
+<td>vilkårlige punkter</td>
+<td>Indtaster punktskrift via punkttastaturet</td>
+</tr>
+<tr>
+<td>Slet sidst indtastede</td>
+<td><code>dot7</code></td>
+<td>Sletter den senest indtastede punktcelle eller det senest indtastede tegn</td>
+</tr>
+<tr>
+<td>Oversæt punktinput</td>
+<td><code>dot7+dot8</code></td>
+<td>Oversætter alt punktinput</td>
+</tr>
+<tr>
+<td>Oversæt og tryk enter</td>
+<td><code>dot8</code></td>
+<td>Oversætter alt punktinput og trykker på enter-tasten</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Syn</h2>
 <h3 id="VisionScreenCurtain">Skærmtæppe</h3>
 <table>
@@ -1218,6 +1426,94 @@ Ved at trykke på punkt 7 og 8 sammen oversættes den indtastede punktskrift, me
 <td>Skifter indstillingen for skærmtæppet</td>
 <td><code>NVDA+control+escape</code></td>
 <td>Hvis dette er aktiveret, er skærmen sort, og indhold vises ikke på skærmen. Hvis der trykkes én gang, vil denne funktion kun forblive aktiv, indtil du genstarter NVDA. Trykker du to gange, forbliver funktionen aktiv, indtil du slår den fra med ét tryk igen.</td>
+</tr>
+<tr>
+<td>Rapporterer status for skærmtæppet</td>
+<td>Ingen</td>
+<td>Oplyser skærmtæppets aktuelle status, herunder om det er deaktiveret, aktiveret eller i midlertidig tilstand.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Forstørrelse</h2>
+<h3 id="MagnifierCommands">Kommandoer til Forstørrelse</h3>
+<table>
+<thead>
+<tr>
+<th>Navn</th>
+<th>Tast</th>
+<th>Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Slå forstørrelse til og fra</td>
+<td><code>NVDA+shift+w</code></td>
+<td>Slår forstørrelse til eller fra</td>
+</tr>
+<tr>
+<td>Forøg forstørrelsesniveau</td>
+<td><code>NVDA+shift+plus</code></td>
+<td>Forøger zoomniveauet. Starter Forstørrelse, hvis den ikke allerede kører.</td>
+</tr>
+<tr>
+<td>Sænk forstørrelsesniveau</td>
+<td><code>NVDA+shift+minus</code></td>
+<td>Sænker zoomniveauet</td>
+</tr>
+<tr>
+<td>Skift mellem farvefiltre</td>
+<td><code>NVDA+shift+i</code></td>
+<td>Skifter mellem de tilgængelige farvefiltre (normal, gråtoner, inverteret)</td>
+</tr>
+<tr>
+<td>Skift mellem følgningstilstande</td>
+<td>Ingen</td>
+<td>Skifter mellem følgningstilstande (centreret, relativ)</td>
+</tr>
+<tr>
+<td>Vis oversigt over hele skærmen</td>
+<td><code>NVDA+shift+l</code></td>
+<td>Viser midlertidigt en oversigt over hele skærmen</td>
+</tr>
+<tr>
+<td>Panorer til venstre</td>
+<td><code>NVDA+alt+leftArrow</code></td>
+<td>Flytter den forstørrede visning mod venstre med det konfigurerede panoreringstrin</td>
+</tr>
+<tr>
+<td>Panorer til højre</td>
+<td><code>NVDA+alt+rightArrow</code></td>
+<td>Flytter den forstørrede visning mod højre med det konfigurerede panoreringstrin</td>
+</tr>
+<tr>
+<td>Panorer opad</td>
+<td><code>NVDA+alt+upArrow</code></td>
+<td>Flytter den forstørrede visning opad med det konfigurerede panoreringstrin</td>
+</tr>
+<tr>
+<td>Panorer nedad</td>
+<td><code>NVDA+alt+downArrow</code></td>
+<td>Flytter den forstørrede visning nedad med det konfigurerede panoreringstrin</td>
+</tr>
+<tr>
+<td>Panorer til venstre kant</td>
+<td><code>NVDA+shift+alt+leftArrow</code></td>
+<td>Flytter den forstørrede visning direkte til skærmens venstre kant</td>
+</tr>
+<tr>
+<td>Panorer til højre kant</td>
+<td><code>NVDA+shift+alt+rightArrow</code></td>
+<td>Flytter den forstørrede visning direkte til skærmens højre kant</td>
+</tr>
+<tr>
+<td>Panorer til øverste kant</td>
+<td><code>NVDA+shift+alt+upArrow</code></td>
+<td>Flytter den forstørrede visning direkte til skærmens øverste kant</td>
+</tr>
+<tr>
+<td>Panorer til nederste kant</td>
+<td><code>NVDA+shift+alt+downArrow</code></td>
+<td>Flytter den forstørrede visning direkte til skærmens nederste kant</td>
 </tr>
 </tbody>
 </table>
@@ -1477,7 +1773,7 @@ I Microsoft 2016, 365 og nyere er "Kommentarer" omdøbt til "Noter".</p>
 <td id="OpenSpeechSettings">Åbn taleindstillinger</td>
 <td><code>NVDA+control+v</code></td>
 <td><code>NVDA+control+v</code></td>
-<td>Indstillingskategorien  Tale, som findes i dialogen Indstillinger, rumer valgmuligheder til ændring af talesyntese, samt hvordan talen lyder.</td>
+<td>Kategorien Tale i dialogen NVDA-indstillinger indeholder indstillinger, som giver dig mulighed for at ændre talesyntesen og stemmeegenskaberne for den valgte syntese.</td>
 </tr>
 <tr>
 <td id="SpeechSettingsSymbolLevel">Niveau for sætningstegn og symboler</td>
@@ -1653,6 +1949,37 @@ I Microsoft 2016, 365 og nyere er "Kommentarer" omdøbt til "Noter".</p>
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Forstørrelse</h4>
+<table>
+<thead>
+<tr>
+<th>Navn</th>
+<th>Desktop tast</th>
+<th>Laptop tast</th>
+<th>Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Åbn indstillinger for Forstørrelse</td>
+<td><code>NVDA+control+w</code></td>
+<td><code>NVDA+control+w</code></td>
+<td>Kategorien Forstørrelse i dialogen NVDA-indstillinger giver dig mulighed for at konfigurere standardfunktionsmåden for NVDAs indbyggede funktion <a href="#Magnifier" title="Forstørrelse">Forstørrelse</a>.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Aktivér Forstørrelse</td>
+<td><code>NVDA+shift+w</code></td>
+<td><code>NVDA+shift+w</code></td>
+<td>Denne indstilling starter eller stopper Forstørrelse.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Farvefilter</td>
+<td><code>NVDA+shift+i</code></td>
+<td><code>NVDA+shift+i</code></td>
+<td>Denne indstilling giver dig mulighed for at vælge det filter, der skal anvendes, når du bruger Forstørrelse.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Tastatur</h4>
 <table>
 <thead>
@@ -1705,7 +2032,7 @@ I Microsoft 2016, 365 og nyere er "Kommentarer" omdøbt til "Noter".</p>
 <td id="OpenMouseSettings">Åbn museindstillinger</td>
 <td><code>NVDA+control+m</code></td>
 <td><code>NVDA+control+m</code></td>
-<td>Denne indstillingskategori kontrollerer indstillinger der lader NVDA spore musen, afspille lyde i forhold til musens koordinater, samt andre muserelaterede indstillinger.</td>
+<td>Denne indstillingskategori indeholder indstillinger, der lader NVDA følge musen, afspille lyde i forhold til musens koordinater samt styre andre muserelaterede indstillinger.</td>
 </tr>
 <tr>
 <td id="MouseSettingsTracking">Følg musen</td>
@@ -1823,23 +2150,20 @@ I Microsoft 2016, 365 og nyere er "Kommentarer" omdøbt til "Noter".</p>
 <thead>
 <tr>
 <th>Navn</th>
-<th>Desktop-tast</th>
-<th>Laptop-tast</th>
+<th>Tast</th>
 <th>Beskrivelse</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Gem konfiguration</td>
-<td>NVDA+Ctrl+c</td>
-<td>NVDA+Ctrl+c</td>
-<td>Gemmer dine aktuelle indstillinger, så de ikke går tabt, når du afslutter NVDA</td>
+<td><code>NVDA+control+c</code></td>
+<td>Gemmer din aktuelle konfiguration, så den ikke går tabt, når du afslutter NVDA</td>
 </tr>
 <tr>
-<td>Vend tilbage til konfiguration</td>
-<td>NVDA+Ctrl+r</td>
-<td>NVDA+Ctrl+r</td>
-<td>Gendanner de indstillinger, som NVDA havde, da du senest gemte NVDAs konfiguration.</td>
+<td>Gendan konfiguration</td>
+<td><code>NVDA+control+r</code></td>
+<td>Ét tryk gendanner din senest gemte konfiguration. Tre tryk gendanner fabriksindstillingerne uden at vise dialogen til at fortryde nulstillingen.</td>
 </tr>
 </tbody>
 </table>
@@ -4615,7 +4939,7 @@ I Microsoft 2016, 365 og nyere er "Kommentarer" omdøbt til "Noter".</p>
 <td><code>f1+end1</code>, <code>f9+end2</code></td>
 </tr>
 <tr>
-<td>Skift mellem punktmønstre for punktmarkørens form</td>
+<td>Skift mellem punktmarkørformer</td>
 <td><code>f1+eCursor1</code>, <code>f9+eCursor2</code></td>
 </tr>
 <tr>
@@ -4844,12 +5168,12 @@ I Microsoft 2016, 365 og nyere er "Kommentarer" omdøbt til "Noter".</p>
 </thead>
 <tbody>
 <tr>
-<td>Rul punktdisplay tilbage</td>
-<td><code>pan_left</code></td>
+<td>Rul punktdisplayet tilbage</td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
-<td>Rul punktdisplay fremad</td>
-<td><code>pan_right</code></td>
+<td>Rul punktdisplayet frem</td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

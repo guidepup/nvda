@@ -2,16 +2,16 @@
 <html lang="pl" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 Skróty poleceń klawiszowych</title>
+<title>NVDA 2026.2 Skróty poleceń klawiszowych</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611-skroty-polecen-klawiszowych">NVDA 2026.1.1 Skróty poleceń klawiszowych</h1>
+<body><h1 id="nvda-20262-skroty-polecen-klawiszowych">NVDA 2026.2 Skróty poleceń klawiszowych</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611-skroty-polecen-klawiszowych" title="NVDA 2026.1.1 Skróty poleceń klawiszowych">NVDA 2026.1.1 Skróty poleceń klawiszowych</a><ul>
+<li><a href="#nvda-20262-skroty-polecen-klawiszowych" title="NVDA 2026.2 Skróty poleceń klawiszowych">NVDA 2026.2 Skróty poleceń klawiszowych</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Używanie NVDA">Używanie NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="Gesty dotykowe">Gesty dotykowe</a><ul>
 <li><a href="#TouchModes" title="Tryby dotyku">Tryby dotyku</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="Tryb czytania">Tryb czytania</a><ul>
-<li><a href="#SingleLetterNavigation" title="Nawigacja pojedynczymi literami">Nawigacja pojedynczymi literami</a></li>
+<li><a href="#SingleLetterNavigation" title="Nawigacja pojedynczymi literami">Nawigacja pojedynczymi literami</a><ul>
+<li><a href="#BrowseModeTouch" title="Nawigacja dotykowa w trybie czytania">Nawigacja dotykowa w trybie czytania</a><ul>
+<li><a href="#gesty-dotykowe-w-trybie-czytania" title="Gesty dotykowe w trybie czytania">Gesty dotykowe w trybie czytania</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="Lista elementów">Lista elementów</a></li>
 <li><a href="#SearchingForText" title="Wyszukiwanie tekstu">Wyszukiwanie tekstu</a></li>
 <li><a href="#ImbeddedObjects" title="Obiekty zagnieżdżone">Obiekty zagnieżdżone</a></li>
@@ -47,11 +53,22 @@
 </ul>
 </li>
 <li><a href="#Braille" title="Brajl">Brajl</a><ul>
-<li><a href="#BrailleInput" title="Wprowadzanie brajla">Wprowadzanie brajla</a></li>
+<li><a href="#BrailleReading" title="Czytanie w brajlu">Czytanie w brajlu</a><ul>
+<li><a href="#BrailleReadingGestures" title="Skróty klawiszowe do czytania brajlem">Skróty klawiszowe do czytania brajlem</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="Wprowadzanie brajla">Wprowadzanie brajla</a><ul>
+<li><a href="#BrailleInputGestures" title="Skróty klawiszowe do wprowadzania tekstu w brajlu">Skróty klawiszowe do wprowadzania tekstu w brajlu</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="Widoczność">Widoczność</a><ul>
 <li><a href="#VisionScreenCurtain" title="Kurtyna">Kurtyna</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="Lupa">Lupa</a><ul>
+<li><a href="#MagnifierCommands" title="Polecenia lupy">Polecenia lupy</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Rozpoznawanie treści">Rozpoznawanie treści</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Tryb podzielonego dźwięku">Tryb podzielonego dźwięku</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="Lupa">Lupa</a></li>
 <li><a href="#KeyboardSettings" title="Klawiatura">Klawiatura</a></li>
 <li><a href="#MouseSettings" title="Mysz">Mysz</a></li>
 <li><a href="#ReviewCursorSettings" title="Kursor przeglądu">Kursor przeglądu</a></li>
@@ -176,7 +194,7 @@
 <h3 id="NVDATouchGestures">Gesty dotykowe</h3>
 <p>W celu przełączania obsługi gestów naciśnij NVDA+CTRL+ALT+T.</p>
 <h4 id="TouchModes">Tryby dotyku</h4>
-<p>Aby przełączać tryby dotyku, wykonaj stuknięcie trzema palcami.</p>
+<p>Aby przełączać się między trybami dotykowymi, wykonaj stuknięcie trzema palcami.</p>
 <h3 id="BasicNVDACommands">Podstawowe polecenia NVDA</h3>
 <table>
 <thead>
@@ -209,6 +227,13 @@
 <td>Shift</td>
 <td>Brak</td>
 <td>Natychmiast zatrzymuje mowę. Naciskając ponownie, będzie mówić od momentu, w którym zostało przerwane (jeśli wstrzymywanie jest obsługiwane przez syntezator)</td>
+</tr>
+<tr>
+<td>Powtórz ostatnią wypowiedzianą informację</td>
+<td><code>NVDA+x</code></td>
+<td><code>NVDA+x</code></td>
+<td>Powtarza ostatnie informacje odczytane przez NVDA, gdy jest naciśnięte dwukrotnie, informacje pokazują się w trybie czytania</td>
+<td></td>
 </tr>
 <tr>
 <td>Menu NVDA</td>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>Aby włączyć i wyłączyć nawigację literami dla aktualnego dokumentu, naciśnij NVDA+Shift+Spacja.</p>
+<h4 id="BrowseModeTouch">Nawigacja dotykowa w trybie czytania</h4>
+<h5 id="gesty-dotykowe-w-trybie-czytania">Gesty dotykowe w trybie czytania</h5>
+<table>
+<thead>
+<tr>
+<th>Nazwa</th>
+<th>gesta dotykowa</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wybierz następny typ elementu</td>
+<td>przesuń w dół</td>
+<td>Przechodzi na kolejny typ nawigacji w trybie czytania</td>
+</tr>
+<tr>
+<td>Wybierz poprzedni typ elementu</td>
+<td>przesuń w górę</td>
+<td>Przechodzi na poprzedni typ nawigacji w trybie czytania</td>
+</tr>
+<tr>
+<td>Przenieś do następnego elementu</td>
+<td>przesuń w prawo</td>
+<td>Przechodzi do kolejnego elementu trybu przeglądania wybranego typu</td>
+</tr>
+<tr>
+<td>Przenieś do poprzedniego elementu</td>
+<td>przesuń w lewo</td>
+<td>Przechodzi do poprzedniego elementu trybu przeglądania wybranego typu</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">Lista elementów</h3>
 <table>
 <thead>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">Brajl</h2>
+<h3 id="BrailleReading">Czytanie w brajlu</h3>
+<h4 id="BrailleReadingGestures">Skróty klawiszowe do czytania brajlem</h4>
+<table>
+<thead>
+<tr>
+<th>Nazwa</th>
+<th>Klawisz</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Przełącza tryb brajla</td>
+<td><code>NVDA+alt+t</code></td>
+<td>Umożliwia przełączanie się między dostępnymi trybami brajla: "podążaj za kursorami" oraz "wyświetlaj wyjście mowy"</td>
+</tr>
+<tr>
+<td>Powiąż brajl</td>
+<td><code>NVDA+control+t</code></td>
+<td>Ta opcja pozwala wybrać, czy wyświetlacz brajlowski będzie podążał za kursorem systemowym kursorem przeglądu czy oba</td>
+</tr>
+<tr>
+<td>Przełącz automatyczne przewijanie</td>
+<td><code>NVDA+alt+k</code></td>
+<td>Przełącza, przewijanie monitora brajlowskiego, aby pokazać informacje zbyt długie, by pokazać je naraz</td>
+</tr>
+<tr>
+<td>Zwiększ prędkość automatycznego przewijania</td>
+<td><code>NVDA+alt+l</code></td>
+<td>Automatyczne przewijanie będzie szybsze (gdy jest włączone)</td>
+</tr>
+<tr>
+<td>Zmniejszenie prędkości automatycznego przewijania</td>
+<td>'NVDA+alt+j'</td>
+<td>Sprawia, że automatyczne przewijanie jest wolniejsze (gdy jest włączone)</td>
+</tr>
+<tr>
+<td>Przełącz kształt kursora brajlowskich</td>
+<td>Brak</td>
+<td>Przełącza między opcjami kształtu (wzór kropek) kursora brajlowskiego</td>
+</tr>
+<tr>
+<td>Przenieś kursor przeglądu podczas naciskania klawisza routing</td>
+<td>Brak</td>
+<td>Przełącza się przez kursor przeglącu za pomocą klawiszy routing</td>
+</tr>
+<tr>
+<td>Przełącz tryby pokazywania wiadomości</td>
+<td>Brak</td>
+<td>Przełącza tryby wiadomości brajlowskich</td>
+</tr>
+<tr>
+<td>Przełącz pokazywanie zaznaczonych elementów</td>
+<td>Brak</td>
+<td>Przełącza między stanami pokazywania zaznaczonej treści w brajlu</td>
+</tr>
+<tr>
+<td>Przełącz między stanami normalizacji unicode w brajlu</td>
+<td>Brak</td>
+<td>przełącza między stanami normalizacji Unicode w brajlu</td>
+</tr>
+<tr>
+<td>Przenieś fokus brajlowski</td>
+<td>Brak</td>
+<td>Przenosi monitor brajlowski do aktualnego elementu</td>
+</tr>
+<tr>
+<td>Przenieś brajla do następnej linii</td>
+<td>Brak</td>
+<td>Przenosi monitor brajlowski na następną linię</td>
+</tr>
+<tr>
+<td>Przenieś do poprzedniego wiersza w brajlu</td>
+<td>Brak</td>
+<td>Przenosi monitor brajlowski do poprzedniej linii</td>
+</tr>
+<tr>
+<td>Pokazuj formatowanie dokumentu w brajlu</td>
+<td>Brak</td>
+<td>Pokazuje formatowanie dokumento dla aktualnej komórki brajlowskiej</td>
+</tr>
+<tr>
+<td>Przywołaj lub aktywuj obiekt w brajlu</td>
+<td>Brak</td>
+<td>przywołuje kursor do obiektu lub aktywuje obiekt pod tą komórką brajlowską</td>
+</tr>
+<tr>
+<td>Przewiń monitor brajlowski wstecz</td>
+<td>Brak</td>
+<td>Przewija wyświetlacz brajlowski z powrotem</td>
+</tr>
+<tr>
+<td>Przewiń monitor brajlowski do przodu</td>
+<td>Brak</td>
+<td>Przesuwa wyświetlacz brajlowski do przodu</td>
+</tr>
+<tr>
+<td>Przełączaj kursor brajlowski</td>
+<td>Brak</td>
+<td>włącza lub wyłącza kursor brajlowski</td>
+</tr>
+<tr>
+<td>Przełącz tryby pokazywania informacji kontekstowej w brajlu</td>
+<td>Brak</td>
+<td>Przełączaj sposób przedstawiania informacji kontekstowych w brajlu</td>
+</tr>
+<tr>
+<td>Przełączaj mowę podczas czytania brajlem</td>
+<td>Brak</td>
+<td>Włącza i wyłącza mowę podczas nawigacji po wierszach lub akapitach w brajlu</td>
+</tr>
+<tr>
+<td>Włącz lub wyłącz wymawianie znaku podczas naciśnięcia klawisza routing</td>
+<td>Brak</td>
+<td>Przełącza wymowę znaku pod kursorem podczas przywoływania kursoru w tekście</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">Wprowadzanie brajla</h3>
 <p>Naciśnięcie punktu 7 kasuje ostatni znak lub komórkę brajla.
 Punkt 8 tłumaczy wprowadzony brajl i naciska klawisz enter.
 Naciśnięcie punktu 7 + punktu 8  tłumaczy wprowadzony brajl, ale bez dodawania spacji lub naciskania entera.</p>
+<h4 id="BrailleInputGestures">Skróty klawiszowe do wprowadzania tekstu w brajlu</h4>
+<table>
+<thead>
+<tr>
+<th>Nazwa</th>
+<th>Skrót</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pisanie tekstu za pomocąmonitora brajlowskiego</td>
+<td>jakiekolwiek kropki</td>
+<td>Wprowadza kropki brajlowskie za pomocą klawiatury brajlowskiej</td>
+</tr>
+<tr>
+<td>Skasuj ostatni wpisany znak</td>
+<td><code>punkt7</code></td>
+<td>Usuwa ostatnią wpisaną komórkę lub znak brajlowski</td>
+</tr>
+<tr>
+<td>Przetłumacz wpisany tekst w brajlu</td>
+<td><code>punkt7+punkt8</code></td>
+<td>Tłumaczy dowolny napisany tekst za pomocą monitora brajlowskiego</td>
+</tr>
+<tr>
+<td>Przetłumacz i naciśnij enter</td>
+<td><code>punkt8</code></td>
+<td>Tłumaczy dowolny tekst w brajlu i naciska klawisz enter</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">Widoczność</h2>
 <h3 id="VisionScreenCurtain">Kurtyna</h3>
 <table>
@@ -1218,6 +1426,94 @@ Naciśnięcie punktu 7 + punktu 8  tłumaczy wprowadzony brajl, ale bez dodawani
 <td>Włącza lub wyłącza kurtynę</td>
 <td><code>NVDA+control+escape</code></td>
 <td>Włącza kurtynę dla zaciemnienai ekranu, lub ją wyłącza dla widoczności informacji. Przy jednokrotnym naciśnięciu, kurtyna jest włączona do momentu ponownego uruchomienia NVDA. Przy dwukrotnym naciśnięciu, kurtyna jest włączona do momentu ręcznego wylączenia.</td>
+</tr>
+<tr>
+<td>Odczytuje stan kurtyny</td>
+<td>Brak</td>
+<td>Ogłasza aktualny status kurtyny, niezależnie od tego, czy jest wyłączona, włączona, czy w trybie tymczasowym.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">Lupa</h2>
+<h3 id="MagnifierCommands">Polecenia lupy</h3>
+<table>
+<thead>
+<tr>
+<th>Nazwa</th>
+<th>Skrót</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Włącz i wyłącz lupę</td>
+<td><code>NVDA+shift+w</code></td>
+<td>Włącza lub wyłącza lupę</td>
+</tr>
+<tr>
+<td>Zwiększ poziom powiększenia</td>
+<td><code>NVDA+shift+równa się</code></td>
+<td>Zwiększa poziom powiększenia. Włącza lupę, jeśli jeszcze nie jest uruchomiona.</td>
+</tr>
+<tr>
+<td>Zmniejsz poziom powiększenia</td>
+<td><code>NVDA+shift+minus</code></td>
+<td>Zmniejsza poziom powiększenia</td>
+</tr>
+<tr>
+<td>Przełączaj między filtrami kolorów</td>
+<td><code>NVDA+shift+i</code></td>
+<td>Przełącza się przez dostępne filtry kolorów (normalny, w skali szarości, odwrócony)</td>
+</tr>
+<tr>
+<td>Przełączaj między trybami śledzenia</td>
+<td>Brak</td>
+<td>przełącza między trybami śledzenia (środek, względne)</td>
+</tr>
+<tr>
+<td>Pokaż cały przegląd ekranu</td>
+<td><code>NVDA+shift+l</code></td>
+<td>Tymczasowo pokazuje przegląd całego ekranu</td>
+</tr>
+<tr>
+<td>Przesunięcie w lewo</td>
+<td>'<code>NVDA+alt+strzałkaWlewo</code></td>
+<td>Przesuwa powiększony widok pozostawiony przez skonfigurowany rozmiar kroku przesunięcia</td>
+</tr>
+<tr>
+<td>Przesuń w prawo</td>
+<td><code>NVDA+alt+strzałkaWprawo</code></td>
+<td>Przesuwa powiększony widok o skonfigurowany rozmiar kroku przesunięcia</td>
+</tr>
+<tr>
+<td>Przesuwanie do góry</td>
+<td><code>NVDA+alt+strzałkawGórę</code></td>
+<td>Przesuwa powiększony widok w górę o skonfigurowany rozmiar kroku przesunięcia</td>
+</tr>
+<tr>
+<td>Przesuń w dół</td>
+<td><code>NVDA+alt+strzałkawDół</code></td>
+<td>Przesuwa powiększony widok w dół o skonfigurowany rozmiar kroku przesunięcia</td>
+</tr>
+<tr>
+<td>Przesunięcie do lewej krawędzi</td>
+<td><code>NVDA+shift+alt+strzałkawLewo</code></td>
+<td>Przesuwa powiększony widok bezpośrednio na lewą krawędź ekranu</td>
+</tr>
+<tr>
+<td>Przesuń do prawej krawędzi</td>
+<td><code>NVDA+shift+alt+strzałkawPrawo</code></td>
+<td>Przenosi powiększony widok bezpośrednio na prawą krawędź ekranu</td>
+</tr>
+<tr>
+<td>Przesuń do górnej krawędzi</td>
+<td><code>NVDA+shift+alt+strzałkawGórę</code></td>
+<td>Przenosi powiększony widok bezpośrednio na górną krawędź ekranu</td>
+</tr>
+<tr>
+<td>Przesuń do dolnej krawędzi</td>
+<td><code>NVDA+shift+alt+strzałkawDół</code></td>
+<td>Przenosi powiększony widok bezpośrednio na dolną krawędź ekranu</td>
 </tr>
 </tbody>
 </table>
@@ -1653,6 +1949,37 @@ W pakiecie Microsoft Office 2016, 365 lub nowszych, komentarze nazywane są tera
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">Lupa</h4>
+<table>
+<thead>
+<tr>
+<th>Działanie</th>
+<th>Skróty Klawiszowe Desktopa</th>
+<th>Skróty Klawiszowe Laptopa</th>
+<th>Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">Otwórz ustawienia lupy</td>
+<td><code>NVDA+control+w</code></td>
+<td><code>NVDA+control+w</code></td>
+<td>Kategoria lupa w oknie Ustawień NVDA pozwala skonfigurować domyślne zachowanie wbudowanej funkcji <a href="#Magnifier" title="lupy">lupy</a> w NVDA.</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">Włącz powiększanie</td>
+<td><code>NVDA+shift+w</code></td>
+<td><code>NVDA+shift+w</code></td>
+<td>Ta opcja uruchamia lub wyłącza Lupę.</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">Filtr koloru</td>
+<td><code>NVDA+shift+i</code></td>
+<td><code>NVDA+shift+i</code></td>
+<td>Ta opcja pozwala wybrać filtr do zastosowania podczas używania lupy.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">Klawiatura</h4>
 <table>
 <thead>
@@ -1822,24 +2149,21 @@ W pakiecie Microsoft Office 2016, 365 lub nowszych, komentarze nazywane są tera
 <table>
 <thead>
 <tr>
-<th>Działanie</th>
-<th>Skróty Klawiszowe Desktopa</th>
-<th>Skróty Klawiszowe Laptopa</th>
+<th>Nazwa</th>
+<th>Skrót</th>
 <th>Opis</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Zapisz ustawienia</td>
+<td>Zapisz konfigurację</td>
 <td><code>NVDA+control+c</code></td>
-<td><code>NVDA+control+c</code></td>
-<td>Zapisuje Twoje obecne ustawienia, co zapobiega utraceniu ich po wyłaczeniu NVDA</td>
+<td>Zapisuje twoją obecną konfigurację, aby nie została utracona po wyjściu z NVDA</td>
 </tr>
 <tr>
-<td>Przywróć zapisane ustawienia</td>
+<td>przywróć konfigurację</td>
 <td><code>NVDA+control+r</code></td>
-<td><code>NVDA+control+r</code></td>
-<td>Jednokrotne naciśnięcie przywraca ostatnią zapisaną konfigurację, natomiast trzykrotne, resetuje NVDA do ustawień fabrycznych.</td>
+<td>Naciśnięcie raz resetuje konfigurację do ostatniego zapisu. Trzy naciśnięcia spowodują, że przywróci go do ustawień fabrycznych, bez wyświetlania dialogu cofania.</td>
 </tr>
 </tbody>
 </table>
@@ -4839,17 +5163,17 @@ W pakiecie Microsoft Office 2016, 365 lub nowszych, komentarze nazywane są tera
 <thead>
 <tr>
 <th>Nazwa</th>
-<th>Skrót</th>
+<th>skrót</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Przewiń monitor brajlowski wstecz</td>
-<td><code>pan_left</code></td>
+<td>Przesuń monitor brajlowski wstecz</td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
-<td>Przewiń monitor brajlowski w przód</td>
-<td><code>pan_right</code></td>
+<td>Przesuń monitor brajlowski do przodu</td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>

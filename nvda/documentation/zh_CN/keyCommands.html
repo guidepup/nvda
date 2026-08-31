@@ -2,16 +2,16 @@
 <html lang="zh_CN" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.1.1 按键和手势快速参考</title>
+<title>NVDA 2026.2 按键和手势快速参考</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-202611">NVDA 2026.1.1 按键和手势快速参考</h1>
+<body><h1 id="nvda-20262">NVDA 2026.2 按键和手势快速参考</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-202611" title="NVDA 2026.1.1 按键和手势快速参考">NVDA 2026.1.1 按键和手势快速参考</a><ul>
+<li><a href="#nvda-20262" title="NVDA 2026.2 按键和手势快速参考">NVDA 2026.2 按键和手势快速参考</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="使用 NVDA">使用 NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA 触摸手势">NVDA 触摸手势</a><ul>
 <li><a href="#TouchModes" title="触摸模式">触摸模式</a></li>
@@ -32,7 +32,13 @@
 </ul>
 </li>
 <li><a href="#BrowseMode" title="浏览模式">浏览模式</a><ul>
-<li><a href="#SingleLetterNavigation" title="单键导航">单键导航</a></li>
+<li><a href="#SingleLetterNavigation" title="单键导航">单键导航</a><ul>
+<li><a href="#BrowseModeTouch" title="浏览模式下的触摸导航">浏览模式下的触摸导航</a><ul>
+<li><a href="#_1" title="浏览模式中的触摸手势">浏览模式中的触摸手势</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#ElementsList" title="元素列表">元素列表</a></li>
 <li><a href="#SearchingForText" title="搜索文本">搜索文本</a></li>
 <li><a href="#ImbeddedObjects" title="嵌入式对象">嵌入式对象</a></li>
@@ -40,18 +46,29 @@
 </ul>
 </li>
 <li><a href="#ReadingMath" title="阅读数学内容">阅读数学内容</a><ul>
-<li><a href="#InteractiveNavigation" title="交互式浏览">交互式浏览</a><ul>
+<li><a href="#InteractiveNavigation" title="交互式导航">交互式导航</a><ul>
 <li><a href="#MathNavigationModes" title="导航模式">导航模式</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#Braille" title="盲文">盲文</a><ul>
-<li><a href="#BrailleInput" title="盲文输入">盲文输入</a></li>
+<li><a href="#BrailleReading" title="阅读盲文">阅读盲文</a><ul>
+<li><a href="#BrailleReadingGestures" title="盲文阅读命令">盲文阅读命令</a></li>
+</ul>
+</li>
+<li><a href="#BrailleInput" title="盲文输入">盲文输入</a><ul>
+<li><a href="#BrailleInputGestures" title="盲文输入命令">盲文输入命令</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#Vision" title="视觉功能">视觉功能</a><ul>
 <li><a href="#VisionScreenCurtain" title="黑屏">黑屏</a></li>
+</ul>
+</li>
+<li><a href="#Magnifier" title="放大镜">放大镜</a><ul>
+<li><a href="#MagnifierCommands" title="放大镜命令">放大镜命令</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="图像内容识别">图像内容识别</a><ul>
@@ -99,6 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="声音拆分">声音拆分</a></li>
 </ul>
 </li>
+<li><a href="#MagnifierSettingsCategory" title="放大镜">放大镜</a></li>
 <li><a href="#KeyboardSettings" title="键盘">键盘</a></li>
 <li><a href="#MouseSettings" title="鼠标">鼠标</a></li>
 <li><a href="#ReviewCursorSettings" title="查看光标">查看光标</a></li>
@@ -209,6 +227,13 @@
 <td>Shift</td>
 <td>无</td>
 <td>立即暂停朗读，再次按下便会从刚刚停止的地方继续朗读（如果当前合成器可以支持暂停的话）。</td>
+</tr>
+<tr>
+<td>重复最后朗读的信息</td>
+<td><code>NVDA+X</code></td>
+<td><code>NVDA+X</code></td>
+<td>无</td>
+<td>重复最后朗读的内容。连按两次在浏览模式下显示该信息</td>
 </tr>
 <tr>
 <td>NVDA 菜单</td>
@@ -323,7 +348,7 @@
 </tr>
 <tr>
 <td>读出状态栏</td>
-<td><code>NVDA+行</code>尾</td>
+<td><code>NVDA+行尾</code></td>
 <td><code>NVDA+Shift+行尾</code></td>
 <td>读出当前应用程序的状态栏，连按两次逐字朗读，连按三次复制该信息到剪贴板</td>
 </tr>
@@ -739,11 +764,11 @@
 <td>读出查看光标所在处文本的格式信息，连按两次可使用浏览模式显示该信息</td>
 </tr>
 <tr>
-<td>读出符号极其发音替换文本</td>
+<td>读出符号及其发音替换文本</td>
 <td>无</td>
 <td>无</td>
 <td>无</td>
-<td>按一次读出当前查看光标处的符号。连按两次，在浏览模式下显示该符号极其对应的发音替换文本。</td>
+<td>按一次读出当前查看光标处的符号。连按两次，在浏览模式下显示该符号及其对应的发音替换文本。</td>
 </tr>
 </tbody>
 </table>
@@ -959,6 +984,39 @@
 </tbody>
 </table>
 <p>要想在当前文档中切换单键导航功能的开关，请使用 <code>NVDA+Shift+空格</code>键。</p>
+<h4 id="BrowseModeTouch">浏览模式下的触摸导航</h4>
+<h5 id="_1">浏览模式中的触摸手势</h5>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>触摸</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选择下一个元素类型</td>
+<td>向下滑动</td>
+<td>切换到下一个浏览模式导航元素类型</td>
+</tr>
+<tr>
+<td>选择上一个元素类型</td>
+<td>向上滑动</td>
+<td>切换到上一个浏览模式导航元素类型</td>
+</tr>
+<tr>
+<td>移动到下一个元素</td>
+<td>向右滑动</td>
+<td>移动到所选类型的下一个浏览模式元素</td>
+</tr>
+<tr>
+<td>移动到上一个元素</td>
+<td>向左滑动</td>
+<td>移动到所选类型的上一个浏览模式元素</td>
+</tr>
+</tbody>
+</table>
 <h3 id="ElementsList">元素列表</h3>
 <table>
 <thead>
@@ -1038,7 +1096,7 @@
 </tbody>
 </table>
 <h2 id="ReadingMath">阅读数学内容</h2>
-<h3 id="InteractiveNavigation">交互式浏览</h3>
+<h3 id="InteractiveNavigation">交互式导航</h3>
 <table>
 <thead>
 <tr>
@@ -1065,67 +1123,67 @@
 </thead>
 <tbody>
 <tr>
-<td>移到上一个</td>
+<td>移到上一项</td>
 <td><code>左光标</code></td>
 </tr>
 <tr>
-<td>移到表格中的上一个单元格；若位于竖式数学中，则移到上一位数字</td>
+<td>移到表格中的上一个单元格；若位于竖式运算中，则移到前一位数字</td>
 <td><code>Ctrl+左光标</code> 或 <code>Ctrl+Alt+左光标</code></td>
 </tr>
 <tr>
-<td>朗读上一个</td>
+<td>朗读上一项</td>
 <td><code>Shift+左光标</code></td>
 </tr>
 <tr>
-<td>描述上一个</td>
+<td>概述上一项</td>
 <td><code>Ctrl+Shift+左光标</code></td>
 </tr>
 <tr>
-<td>移到下一个</td>
+<td>移到下一项</td>
 <td><code>右光标</code></td>
 </tr>
 <tr>
-<td>移到表格中的下一个单元格；若位于竖式数学中，则移到下一位数字</td>
+<td>移到表格中的下一个单元格；若位于竖式运算中，则移到后一位数字</td>
 <td><code>Ctrl+右光标</code> 或 <code>Ctrl+Alt+右光标</code></td>
 </tr>
 <tr>
-<td>朗读下一个</td>
+<td>朗读下一项</td>
 <td><code>Shift+右光标</code></td>
 </tr>
 <tr>
-<td>描述下一个</td>
+<td>概述下一项</td>
 <td><code>Ctrl+Shift+右光标</code></td>
 </tr>
 <tr>
-<td>退出内层</td>
+<td>返回上一层</td>
 <td><code>上光标</code></td>
 </tr>
 <tr>
-<td>移到表格中的上方单元格；若位于竖式数学中，则移到上方数字</td>
+<td>移到表格中的上方单元格；若位于竖式运算中，则移到上方数字</td>
 <td><code>Ctrl+上光标</code> 或 <code>Ctrl+Alt+上光标</code></td>
 </tr>
 <tr>
-<td>将导航模式（增强/简单/字符）切换到更大粒度</td>
+<td>增大导航粒度（增强、简单、字符）</td>
 <td><code>Shift+上光标</code></td>
 </tr>
 <tr>
-<td>退出到最外层</td>
+<td>返回最外层</td>
 <td><code>Ctrl+Shift+上光标</code></td>
 </tr>
 <tr>
-<td>进入内层</td>
+<td>进入下一层</td>
 <td><code>下光标</code></td>
 </tr>
 <tr>
-<td>移到表格中的下方单元格；若位于竖式数学中，则移到下方数字</td>
+<td>移到表格中的下方单元格；若位于竖式运算中，则移到下方数字</td>
 <td><code>Ctrl+下光标</code> 或 <code>Ctrl+Alt+下光标</code></td>
 </tr>
 <tr>
-<td>将导航模式（增强/简单/字符）切换到更小粒度</td>
+<td>减小导航粒度（增强、简单、字符）</td>
 <td><code>Shift+下光标</code></td>
 </tr>
 <tr>
-<td>进入到最内层</td>
+<td>进入最内层</td>
 <td><code>Ctrl+Shift+下光标</code></td>
 </tr>
 <tr>
@@ -1149,7 +1207,7 @@
 <td><code>Shift+1</code> 到 <code>Shift+0</code></td>
 </tr>
 <tr>
-<td>描述位置标记</td>
+<td>概述位置标记</td>
 <td><code>Ctrl+Shift+1</code> 到 <code>Ctrl+Shift+0</code></td>
 </tr>
 <tr>
@@ -1161,11 +1219,11 @@
 <td><code>Ctrl+空格</code></td>
 </tr>
 <tr>
-<td>将“语音模式”切换为朗读或描述</td>
+<td>在“朗读”和“概述”模式之间切换</td>
 <td><code>Shift+空格</code></td>
 </tr>
 <tr>
-<td>描述当前项</td>
+<td>概述当前项</td>
 <td><code>Ctrl+Shift+空格</code></td>
 </tr>
 <tr>
@@ -1177,7 +1235,7 @@
 <td><code>Ctrl+行首</code></td>
 </tr>
 <tr>
-<td>移到表格列首；若位于竖式数学中，则移到顶部数字</td>
+<td>移到表格列首；若位于竖式运算中，则移到顶部数字</td>
 <td><code>Shift+行首</code></td>
 </tr>
 <tr>
@@ -1189,7 +1247,7 @@
 <td><code>Ctrl+行尾</code></td>
 </tr>
 <tr>
-<td>移到表格列尾；若位于竖式数学中，则移到底部数字</td>
+<td>移到表格列尾；若位于竖式运算中，则移到底部数字</td>
 <td><code>Shift+行尾</code></td>
 </tr>
 <tr>
@@ -1199,10 +1257,160 @@
 </tbody>
 </table>
 <h2 id="Braille">盲文</h2>
+<h3 id="BrailleReading">阅读盲文</h3>
+<h4 id="BrailleReadingGestures">盲文阅读命令</h4>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>按键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>切换盲文模式</td>
+<td><code>NVDA+Alt+T</code></td>
+<td>在可用的盲文模式间循环切换：“跟随光标”和“显示语音输出”</td>
+</tr>
+<tr>
+<td>切换盲文光标跟随</td>
+<td><code>NVDA+Ctrl+T</code></td>
+<td>此选项允许您选择是否希望点显器跟随系统焦点/系统光标、导航对象/查看光标或自动</td>
+</tr>
+<tr>
+<td>切换自动滚动</td>
+<td><code>NVDA+Alt+K</code></td>
+<td>切换 NVDA 是否定期滚动点显器以呈现一次性无法完整显示的信息</td>
+</tr>
+<tr>
+<td>提高自动滚动速度</td>
+<td><code>NVDA+Alt+L</code></td>
+<td>使自动滚动更快（启用时）</td>
+</tr>
+<tr>
+<td>降低自动滚动速度</td>
+<td><code>NVDA+Alt+J</code></td>
+<td>使自动滚动更慢（启用时）</td>
+</tr>
+<tr>
+<td>循环切换光标形状</td>
+<td>无</td>
+<td>在盲文光标形状之间循环切换</td>
+</tr>
+<tr>
+<td>循环切换移动查看光标时移动系统光标</td>
+<td>无</td>
+<td>在移动查看光标时移动系统光标的选项之间循环切换</td>
+</tr>
+<tr>
+<td>循环切换消息模式</td>
+<td>无</td>
+<td>在盲文消息模式之间循环切换</td>
+</tr>
+<tr>
+<td>循环切换盲文选中指示光标</td>
+<td>无</td>
+<td>在盲文选中指示光标之间循环切换</td>
+</tr>
+<tr>
+<td>循环切换盲文 Unicode 规范化状态</td>
+<td>无</td>
+<td>在盲文 Unicode 规范化状态之间循环切换</td>
+</tr>
+<tr>
+<td>移动到焦点</td>
+<td>无</td>
+<td>移动点显器到当前焦点所在处</td>
+</tr>
+<tr>
+<td>移动到下一行</td>
+<td>无</td>
+<td>移动点显器到下一行</td>
+</tr>
+<tr>
+<td>移动到上一行</td>
+<td>无</td>
+<td>移动点显器到上一行</td>
+</tr>
+<tr>
+<td>读出格式</td>
+<td>无</td>
+<td>读出当前盲文单元所在文本的格式信息</td>
+</tr>
+<tr>
+<td>定位或激活对象</td>
+<td>无</td>
+<td>将光标移至或激活该盲文单元所在的对象</td>
+</tr>
+<tr>
+<td>向后滚动</td>
+<td>无</td>
+<td>向后滚动盲文显示</td>
+</tr>
+<tr>
+<td>向前滚动</td>
+<td>无</td>
+<td>向前滚动盲文显示</td>
+</tr>
+<tr>
+<td>切换盲文光标</td>
+<td>无</td>
+<td>打开或关闭盲文光标</td>
+</tr>
+<tr>
+<td>切换盲文上下文</td>
+<td>无</td>
+<td>切换是否使用盲文显示上下文</td>
+</tr>
+<tr>
+<td>切换导航时读出内容</td>
+<td>无</td>
+<td>切换按行或段落导航时是否读出内容</td>
+</tr>
+<tr>
+<td>切换定位文本光标后读出字符</td>
+<td>无</td>
+<td>切换定位文本光标后是否读出光标所在处的字符</td>
+</tr>
+</tbody>
+</table>
 <h3 id="BrailleInput">盲文输入</h3>
 <p>按第 7 点删除最后输入的盲文或字符。
 按第 8 点或 Enter 翻译任何盲文输入。
 按第 7 与第 8 点转译任何盲文输入，但不加空格或 Enter。</p>
+<h4 id="BrailleInputGestures">盲文输入命令</h4>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>按键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通过点显器输入</td>
+<td>任意点位</td>
+<td>在盲文键盘上输入盲文</td>
+</tr>
+<tr>
+<td>擦除最后输入的内容</td>
+<td><code>7 点</code></td>
+<td>擦除最后输入的字符或盲文单元</td>
+</tr>
+<tr>
+<td>翻译盲文输入</td>
+<td><code>7 点 +8 点</code></td>
+<td>翻译任何盲文输入</td>
+</tr>
+<tr>
+<td>翻译并按回车键</td>
+<td><code>8 点</code></td>
+<td>翻译任何盲文输入并按下回车键</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Vision">视觉功能</h2>
 <h3 id="VisionScreenCurtain">黑屏</h3>
 <table>
@@ -1218,6 +1426,94 @@
 <td>切换黑屏状态的开关</td>
 <td><code>NVDA+Ctrl+Esc</code></td>
 <td>开启可使屏幕变黑，关闭则正常显示屏幕内容。按一次，临时开启黑屏，重启 NVDA 后将自动恢复。连按两次，开启黑屏，若想恢复屏幕显示，需手动关闭。</td>
+</tr>
+<tr>
+<td>读出黑屏的状态</td>
+<td>无</td>
+<td>读出当前的黑屏状态（临时开启、开启或关闭）。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Magnifier">放大镜</h2>
+<h3 id="MagnifierCommands">放大镜命令</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>按键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>切换放大镜的开关</td>
+<td><code>NVDA+Shift+W</code></td>
+<td>开启或关闭放大镜</td>
+</tr>
+<tr>
+<td>提高放大级别</td>
+<td><code>NVDA+Shift+等于</code></td>
+<td>增加放大级别。若放大镜尚未运行，则将其开启。</td>
+</tr>
+<tr>
+<td>降低放大级别</td>
+<td><code>NVDA+Shift+减号</code></td>
+<td>减小放大级别</td>
+</tr>
+<tr>
+<td>循环切换颜色滤镜</td>
+<td><code>NVDA+Shift+I</code></td>
+<td>在可用的颜色滤镜之间循环切换（正常、灰度、反转）</td>
+</tr>
+<tr>
+<td>循环切换跟踪模式</td>
+<td>无</td>
+<td>在可用的跟踪模式之间循环切换（居中、相对）</td>
+</tr>
+<tr>
+<td>显示全屏概览</td>
+<td><code>NVDA+Shift+L</code></td>
+<td>临时显示全屏概览</td>
+</tr>
+<tr>
+<td>向左平移</td>
+<td><code>NVDA+Alt+左光标</code></td>
+<td>按配置的平移步长将放大视图向左移动</td>
+</tr>
+<tr>
+<td>向右平移</td>
+<td><code>NVDA+Alt+右光标</code></td>
+<td>按配置的平移步长将放大视图向右移动</td>
+</tr>
+<tr>
+<td>向上平移</td>
+<td><code>NVDA+Alt+上光标</code></td>
+<td>按配置的平移步长将放大视图向上移动</td>
+</tr>
+<tr>
+<td>向下平移</td>
+<td><code>NVDA+Alt+下光标</code></td>
+<td>按配置的平移步长将放大视图向下移动</td>
+</tr>
+<tr>
+<td>平移到左边</td>
+<td><code>NVDA+Shift+Alt+左光标</code></td>
+<td>将放大视图直接移动到屏幕左边缘</td>
+</tr>
+<tr>
+<td>平移到右边</td>
+<td><code>NVDA+Shift+Alt+右光标</code></td>
+<td>将放大视图直接移动到屏幕右边缘</td>
+</tr>
+<tr>
+<td>平移到顶边</td>
+<td><code>NVDA+Shift+Alt+上光标</code></td>
+<td>将放大视图直接移动到屏幕上边缘</td>
+</tr>
+<tr>
+<td>平移到底边</td>
+<td><code>NVDA+Shift+Alt+下光标</code></td>
+<td>将放大视图直接移动到屏幕下边缘</td>
 </tr>
 </tbody>
 </table>
@@ -1441,7 +1737,7 @@
 </tbody>
 </table>
 <h2 id="ConfiguringNVDA">配置 NVDA</h2>
-<p>在对话框中，按 <code>f1</code> 键可打开与当前交点选项或当前对话框相关的用户指南对应章节。</p>
+<p>在对话框中，按 <code>f1</code> 键可打开与当前焦点选项或当前对话框相关的用户指南对应章节。</p>
 <h3 id="NVDASettings">NVDA 设置对话框</h3>
 <h4 id="GeneralSettings">常规</h4>
 <table>
@@ -1653,6 +1949,37 @@
 </tr>
 </tbody>
 </table>
+<h4 id="MagnifierSettingsCategory">放大镜</h4>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>台式机键盘</th>
+<th>笔记本键盘</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="OpenMagnifierSettings">打开放大镜设置</td>
+<td><code>NVDA+Ctrl+W</code></td>
+<td><code>NVDA+Ctrl+W</code></td>
+<td>“放大镜”类别允许您配置 NVDA 内置<a href="#Magnifier" title="放大镜">放大镜</a>功能的默认行为。</td>
+</tr>
+<tr>
+<td id="MagnifierEnable">开启放大镜</td>
+<td><code>NVDA+Shift+W</code></td>
+<td><code>NVDA+Shift+W</code></td>
+<td>此选项可启动或停止放大镜。</td>
+</tr>
+<tr>
+<td id="MagnifierFilter">颜色滤镜</td>
+<td><code>NVDA+Shift+I</code></td>
+<td><code>NVDA+Shift+I</code></td>
+<td>此选项允许您选择使用放大镜时要应用的颜色滤镜。</td>
+</tr>
+</tbody>
+</table>
 <h4 id="KeyboardSettings">键盘</h4>
 <table>
 <thead>
@@ -1823,23 +2150,20 @@
 <thead>
 <tr>
 <th>名称</th>
-<th>台式机键盘</th>
-<th>笔记本键盘</th>
+<th>按键</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>保存设置</td>
-<td>NVDA+Ctrl+c</td>
-<td>NVDA+Ctrl+c</td>
+<td><code>NVDA+Ctrl+C</code></td>
 <td>保存您的当前配置，当您退出 NVDA 时也不会丢失</td>
 </tr>
 <tr>
 <td>恢复配置</td>
-<td>NVDA+Ctrl+r</td>
-<td>NVDA+Ctrl+r</td>
-<td>按一次重置您的设置到上一次保存的状态，连按三次恢复到默认的出厂设置。</td>
+<td><code>NVDA+Ctrl+R</code></td>
+<td>按一次重置您的设置到上一次保存的状态，连按三次恢复到默认的出厂设置且不显示撤销对话框。</td>
 </tr>
 </tbody>
 </table>
@@ -4845,11 +5169,11 @@
 <tbody>
 <tr>
 <td>向后滚动盲文显示</td>
-<td><code>pan_left</code></td>
+<td><code>panLeft</code></td>
 </tr>
 <tr>
 <td>向前滚动盲文显示</td>
-<td><code>pan_right</code></td>
+<td><code>panRight</code></td>
 </tr>
 </tbody>
 </table>
