@@ -2,16 +2,16 @@
 <html lang="fi" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2:n käyttöohje</title>
+<title>NVDA 2026.3:n käyttöohje</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="nvda-20262n-kayttoohje">NVDA 2026.2:n käyttöohje</h1>
+<body><h1 id="nvda-20263n-kayttoohje">NVDA 2026.3:n käyttöohje</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262n-kayttoohje" title="NVDA 2026.2:n käyttöohje">NVDA 2026.2:n käyttöohje</a><ul>
+<li><a href="#nvda-20263n-kayttoohje" title="NVDA 2026.3:n käyttöohje">NVDA 2026.3:n käyttöohje</a><ul>
 <li><a href="#Introduction" title="Johdanto">Johdanto</a><ul>
 <li><a href="#GeneralFeatures" title="Yleiset ominaisuudet">Yleiset ominaisuudet</a></li>
 <li><a href="#SystemRequirements" title="Järjestelmävaatimukset">Järjestelmävaatimukset</a><ul>
@@ -89,6 +89,7 @@
 <li><a href="#Taps" title="Napautukset">Napautukset</a></li>
 <li><a href="#Flicks" title="Pyyhkäisyt">Pyyhkäisyt</a></li>
 <li><a href="#PinchGestures" title="Loitonnus- ja lähennyseleet">Loitonnus- ja lähennyseleet</a></li>
+<li><a href="#SequentialFlicks" title="Peräkkäiset pyyhkäisyt">Peräkkäiset pyyhkäisyt</a></li>
 </ul>
 </li>
 <li><a href="#TouchModes" title="Kosketustilat">Kosketustilat</a></li>
@@ -161,14 +162,14 @@
 <li><a href="#VisionScreenCurtain" title="Näyttöverho">Näyttöverho</a></li>
 </ul>
 </li>
-<li><a href="#Magnifier" title="Suurennus">Suurennus</a><ul>
-<li><a href="#MagnifierToggle" title="Suurennuksen käyttöönotto ja käytöstäpoisto">Suurennuksen käyttöönotto ja käytöstäpoisto</a></li>
-<li><a href="#MagnifierCommands" title="Suurennuksen näppäinkomennot">Suurennuksen näppäinkomennot</a></li>
+<li><a href="#Magnifier" title="Näytön suurennus">Näytön suurennus</a><ul>
+<li><a href="#MagnifierToggle" title="Näytön suurennuksen käyttöönotto ja käytöstäpoisto">Näytön suurennuksen käyttöönotto ja käytöstäpoisto</a></li>
+<li><a href="#MagnifierCommands" title="Näytön suurennuksen näppäinkomennot">Näytön suurennuksen näppäinkomennot</a></li>
 <li><a href="#MagnifierZoomLevels" title="Suurennustasot">Suurennustasot</a></li>
 <li><a href="#MagnifierColorFilters" title="Värisuodattimet">Värisuodattimet</a></li>
 <li><a href="#MagnifierTrackingMode" title="Seurantatilat">Seurantatilat</a></li>
 <li><a href="#MagnifierScreenOverview" title="Koko näytön yleisnäkymä">Koko näytön yleisnäkymä</a></li>
-<li><a href="#MagnifierSettings" title="Suurennuksen asetukset">Suurennuksen asetukset</a></li>
+<li><a href="#MagnifierSettings" title="Näytön suurennuksen asetukset">Näytön suurennuksen asetukset</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Sisällöntunnistus">Sisällöntunnistus</a><ul>
@@ -242,6 +243,7 @@
 <li><a href="#SpeechSettingsSymbolLevel" title="Välimerkki- ja symbolitaso">Välimerkki- ja symbolitaso</a></li>
 <li><a href="#SpeechSettingsTrust" title="Käytä puheäänen kieltä merkkejä ja symboleita käsiteltäessä">Käytä puheäänen kieltä merkkejä ja symboleita käsiteltäessä</a></li>
 <li><a href="#SpeechUnicodeNormalization" title="Unicode-normalisointi">Unicode-normalisointi</a></li>
+<li><a href="#SpeechSettingsSayAllReadingUnit" title="Jatkuvan luvun etenemistapa">Jatkuvan luvun etenemistapa</a></li>
 <li><a href="#SpeechReportNormalizedForCharacterNavigation" title="Ilmoita normalisointi merkeittäin liikuttaessa">Ilmoita normalisointi merkeittäin liikuttaessa</a></li>
 <li><a href="#SpeechSettingsCLDR" title="Käytä Unicode-konsortion symbolimäärityksiä merkkejä ja symboleita käsiteltäessä">Käytä Unicode-konsortion symbolimäärityksiä merkkejä ja symboleita käsiteltäessä</a></li>
 <li><a href="#SpeechSettingsCapPitchChange" title="Äänenkorkeuden muutos prosentteina isoille kirjaimille">Äänenkorkeuden muutos prosentteina isoille kirjaimille</a></li>
@@ -284,9 +286,10 @@
 <li><a href="#BrailleSpeakOnRouting" title="Puhu merkki siirrettäessä kohdistinta kosketuskohdistinnäppäimillä">Puhu merkki siirrettäessä kohdistinta kosketuskohdistinnäppäimillä</a></li>
 <li><a href="#BrailleSpeakOnNavigating" title="Puhu riveittäin ja kappaleittain siirryttäessä">Puhu riveittäin ja kappaleittain siirryttäessä</a></li>
 <li><a href="#BrailleAutoScrollRate" title="Automaattisen vierityksen nopeus">Automaattisen vierityksen nopeus</a></li>
-<li><a href="#BrailleSettingsWordWrap" title="Vältä sanojen katkaisua">Vältä sanojen katkaisua</a></li>
+<li><a href="#BrailleSettingsWordWrap" title="Rivitys">Rivitys</a></li>
 <li><a href="#BrailleUnicodeNormalization" title="Unicode-normalisointi">Unicode-normalisointi</a></li>
-<li><a href="#BrailleSettingsInterruptSpeech" title="Keskeytä puhe vieritettäessä">Keskeytä puhe vieritettäessä</a></li>
+<li><a href="#BrailleSettingsInterruptSpeech" title="Keskeytä puhe pistenäyttöä vieritettäessä">Keskeytä puhe pistenäyttöä vieritettäessä</a></li>
+<li><a href="#ChineseBrailleWordSegmentation" title="Erottele kiinankieliset sanat toisistaan">Erottele kiinankieliset sanat toisistaan</a></li>
 </ul>
 </li>
 <li><a href="#SelectBrailleDisplay" title="Valitse pistenäyttö">Valitse pistenäyttö</a><ul>
@@ -320,12 +323,12 @@
 <li><a href="#VisionSettingsThirdPartyVisualAids" title="Kolmannen osapuolen näön apuvälineiden asetukset">Kolmannen osapuolen näön apuvälineiden asetukset</a></li>
 </ul>
 </li>
-<li><a href="#MagnifierSettingsCategory" title="Suurennus">Suurennus</a><ul>
-<li><a href="#OpenMagnifierSettings" title="Avaa suurennuksen asetukset">Avaa suurennuksen asetukset</a></li>
-<li><a href="#MagnifierEnable" title="Ota suurennus käyttöön">Ota suurennus käyttöön</a></li>
+<li><a href="#MagnifierSettingsCategory" title="Näytön suurennus">Näytön suurennus</a><ul>
+<li><a href="#OpenMagnifierSettings" title="Avaa näytön suurennuksen asetukset">Avaa näytön suurennuksen asetukset</a></li>
+<li><a href="#MagnifierEnable" title="Käytä näytön suurennusta">Käytä näytön suurennusta</a></li>
 <li><a href="#MagnifierZoom" title="Suurennustaso">Suurennustaso</a></li>
 <li><a href="#MagnifierFilter" title="Värisuodatin">Värisuodatin</a></li>
-<li><a href="#MagnifierPanningStepSize" title="Panoroinnin askelkoko">Panoroinnin askelkoko</a></li>
+<li><a href="#MagnifierPanningStepSize" title="Vierityksen askelkoko">Vierityksen askelkoko</a></li>
 <li><a href="#MagnifierFollowMouse" title="Seuraa hiirtä">Seuraa hiirtä</a></li>
 <li><a href="#MagnifierFollowSystemFocus" title="Seuraa kohdistusta">Seuraa kohdistusta</a></li>
 <li><a href="#MagnifierFollowReviewCursor" title="Seuraa tarkastelukohdistinta">Seuraa tarkastelukohdistinta</a></li>
@@ -363,6 +366,7 @@
 <li><a href="#TouchInteraction" title="Kosketuksen vuorovaikutus">Kosketuksen vuorovaikutus</a><ul>
 <li><a href="#TouchSupportEnable" title="Ota kosketusnäytön tuki käyttöön">Ota kosketusnäytön tuki käyttöön</a></li>
 <li><a href="#TouchTypingMode" title="Kosketuskirjoitustila">Kosketuskirjoitustila</a></li>
+<li><a href="#TouchEdgeGestures" title="Käytä reunaeleitä">Käytä reunaeleitä</a></li>
 </ul>
 </li>
 <li><a href="#ReviewCursorSettings" title="Tarkastelukohdistin">Tarkastelukohdistin</a><ul>
@@ -400,14 +404,16 @@
 <li><a href="#BrowseModeSettingsMaxLength" title="Rivin merkkien enimmäismäärä">Rivin merkkien enimmäismäärä</a></li>
 <li><a href="#BrowseModeSettingsPageLines" title="Sivun rivimäärä">Sivun rivimäärä</a></li>
 <li><a href="#BrowseModeSettingsScreenLayout" title="Käytä ruutuasettelua">Käytä ruutuasettelua</a></li>
-<li><a href="#BrowseModeSettingsEnableOnPageLoad" title="Ota selaustila käyttöön sivua ladattaessa">Ota selaustila käyttöön sivua ladattaessa</a></li>
+<li><a href="#BrowseModeSettingsEnableOnPageLoad" title="Ota selaustila käyttöön sivua avattaessa">Ota selaustila käyttöön sivua avattaessa</a></li>
 <li><a href="#BrowseModeSettingsAutoSayAll" title="Lue sivu automaattisesti sen avauduttua">Lue sivu automaattisesti sen avauduttua</a></li>
-<li><a href="#BrowseModeSettingsIncludeLayoutTables" title="Sisällytä asettelutaulukot">Sisällytä asettelutaulukot</a></li>
+<li><a href="#BrowseModeSettingsIncludeLayoutTables" title="Näytä asettelutaulukot">Näytä asettelutaulukot</a></li>
 <li><a href="#BrowseModeLinksAndHeadings" title="Elementtien ilmoittamisen määrittäminen">Elementtien ilmoittamisen määrittäminen</a></li>
 <li><a href="#BrowseModeSettingsAutoPassThroughOnFocusChange" title="Automaattinen lomaketila kohdistuksen muuttuessa">Automaattinen lomaketila kohdistuksen muuttuessa</a></li>
 <li><a href="#BrowseModeSettingsAutoPassThroughOnCaretMove" title="Automaattinen lomaketila kohdistinta siirrettäessä">Automaattinen lomaketila kohdistinta siirrettäessä</a></li>
 <li><a href="#BrowseModeSettingsPassThroughAudioIndication" title="Ilmaise lomake- ja selaustilat merkkiäänellä">Ilmaise lomake- ja selaustilat merkkiäänellä</a></li>
 <li><a href="#BrowseModeSettingsTrapNonCommandGestures" title="Estä muiden kuin näppäinkomentojen välittyminen asiakirjaan">Estä muiden kuin näppäinkomentojen välittyminen asiakirjaan</a></li>
+<li><a href="#SearchHistory" title="Säilytä hakuhistoria">Säilytä hakuhistoria</a></li>
+<li><a href="#NativeSelectionModeSetting" title="Alkuperäinen valintatila">Alkuperäinen valintatila</a></li>
 <li><a href="#BrowseModeSettingsBrowseModeNavigationElements" title="Selaustilan kosketusnavigoinnin elementit">Selaustilan kosketusnavigoinnin elementit</a></li>
 </ul>
 </li>
@@ -417,10 +423,12 @@
 <li><a href="#DocumentFormattingDetectFormatAfterCursor" title="Ilmoita kohdistimen jälkeiset muotoilumuutokset">Ilmoita kohdistimen jälkeiset muotoilumuutokset</a></li>
 <li><a href="#ReportSpellingErrors" title="Kirjoitus- ja kielioppivirheiden ilmoittaminen">Kirjoitus- ja kielioppivirheiden ilmoittaminen</a></li>
 <li><a href="#DocumentFormattingSettingsLineIndentation" title="Rivien sisennysten ilmoittaminen">Rivien sisennysten ilmoittaminen</a></li>
+<li><a href="#IndentToneDuration" title="Sisennysmerkkiäänen kesto">Sisennysmerkkiäänen kesto</a></li>
 </ul>
 </li>
 <li><a href="#DocumentNavigation" title="Asiakirjassa liikkuminen">Asiakirjassa liikkuminen</a><ul>
 <li><a href="#ParagraphStyle" title="Kappaletyyli">Kappaletyyli</a></li>
+<li><a href="#WordSegmentationStandard" title="Sanojen erottelumenetelmä">Sanojen erottelumenetelmä</a></li>
 </ul>
 </li>
 <li><a href="#MathSettings" title="Matemaattisen sisällön asetukset">Matemaattisen sisällön asetukset</a><ul>
@@ -465,7 +473,7 @@
 </li>
 <li><a href="#RemoteSettings" title="Etäkäyttö">Etäkäyttö</a><ul>
 <li><a href="#RemoteEnable" title="Salli etäkäyttö">Salli etäkäyttö</a></li>
-<li><a href="#RemoteConfirmDisconnect" title="Pyydä vahvistus yhteyden katkaisulle, kun tätä konetta hallitaan">Pyydä vahvistus yhteyden katkaisulle, kun tätä konetta hallitaan</a></li>
+<li><a href="#RemoteConfirmDisconnect" title="Pyydä vahvistus yhteyden katkaisulle tätä konetta hallittaessa">Pyydä vahvistus yhteyden katkaisulle tätä konetta hallittaessa</a></li>
 <li><a href="#RemoteMuteOnLocalControl" title="Mykistä paikallista konetta hallittaessa">Mykistä paikallista konetta hallittaessa</a></li>
 <li><a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a></li>
 <li><a href="#RemoteAutoconnectMode" title="Tila">Tila</a></li>
@@ -491,8 +499,8 @@
 <li><a href="#AdvancedSettings" title="Lisäasetukset">Lisäasetukset</a><ul>
 <li><a href="#AdvancedSettingsMakingChanges" title="Muutosten tekeminen">Muutosten tekeminen</a></li>
 <li><a href="#AdvancedSettingsRestoringDefaults" title="Oletusasetusten palauttaminen">Oletusasetusten palauttaminen</a></li>
-<li><a href="#AdvancedSettingsEnableScratchpad" title="Lataa mukautettu koodi kehittäjän Scratchpad-hakemistosta">Lataa mukautettu koodi kehittäjän Scratchpad-hakemistosta</a></li>
-<li><a href="#AdvancedSettingsOpenScratchpadDir" title="Avaa kehittäjän Scratchpad-hakemisto">Avaa kehittäjän Scratchpad-hakemisto</a></li>
+<li><a href="#AdvancedSettingsEnableScratchpad" title="Lataa kehittäjän oma koodi Scratchpad-hakemistosta">Lataa kehittäjän oma koodi Scratchpad-hakemistosta</a></li>
+<li><a href="#AdvancedSettingsOpenScratchpadDir" title="Avaa Scratchpad-hakemisto">Avaa Scratchpad-hakemisto</a></li>
 <li><a href="#AdvancedSettingsSelectiveUIAEventRegistration" title="UI Automation -tapahtumien ja ominaisuusmuutosten rekisteröinti">UI Automation -tapahtumien ja ominaisuusmuutosten rekisteröinti</a></li>
 <li><a href="#MSWordUIA" title="Käytä UI automation -rajapintaa Microsoft Word -asiakirjoissa">Käytä UI automation -rajapintaa Microsoft Word -asiakirjoissa</a></li>
 <li><a href="#UseUiaForExcel" title="Käytä UI Automation -rajapintaa Microsoft Excelin laskentataulukoissa">Käytä UI Automation -rajapintaa Microsoft Excelin laskentataulukoissa</a></li>
@@ -542,7 +550,7 @@
 <li><a href="#RemoteAccessGettingStarted" title="Aloittaminen">Aloittaminen</a></li>
 <li><a href="#RemoteAccessSetup" title="Etäkäyttöistunnon määrittäminen">Etäkäyttöistunnon määrittäminen</a><ul>
 <li><a href="#RemoteAccessMode" title="Tilan valinta (hallitseva tai hallittava)">Tilan valinta (hallitseva tai hallittava)</a></li>
-<li><a href="#RemoteAccessJoin" title="Yhdistä olemassa olevaan palvelimeen (isäntä ja avain tarvitaan)">Yhdistä olemassa olevaan palvelimeen (isäntä ja avain tarvitaan)</a></li>
+<li><a href="#RemoteAccessJoin" title="Yhteyden muodostaminen olemassa olevaan palvelimeen (isäntä ja avain tarvitaan)">Yhteyden muodostaminen olemassa olevaan palvelimeen (isäntä ja avain tarvitaan)</a></li>
 <li><a href="#RemoteAccessConnectRelay" title="Yhdistäminen reitityspalvelimen kautta">Yhdistäminen reitityspalvelimen kautta</a></li>
 <li><a href="#RemoteAccessConnectSelfHosted" title="NVDA:n käyttäminen palvelimena">NVDA:n käyttäminen palvelimena</a></li>
 </ul>
@@ -590,21 +598,21 @@
 <li><a href="#SAPI4" title="Microsoft Speech API versio 4 (SAPI 4)">Microsoft Speech API versio 4 (SAPI 4)</a></li>
 <li><a href="#SAPI5" title="SAPI 5">SAPI 5</a></li>
 <li><a href="#MicrosoftSpeechPlatform" title="Microsoft Speech Platform">Microsoft Speech Platform</a></li>
-<li><a href="#OneCore" title="Windows OneCore">Windows OneCore</a></li>
+<li><a href="#OneCore" title="OneCore">OneCore</a></li>
 </ul>
 </li>
 <li><a href="#SupportedBrailleDisplays" title="Tuetut pistenäytöt">Tuetut pistenäytöt</a><ul>
 <li><a href="#AutomaticDetection" title="Automaattista tunnistusta tukevat pistenäytöt">Automaattista tunnistusta tukevat pistenäytöt</a></li>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/PAC Mate">Freedom Scientific Focus/PAC Mate</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA 6/protokollamuunnin">Optelec ALVA 6/protokollamuunnin</a></li>
-<li><a href="#HandyTech" title="Handy Tech">Handy Tech</a></li>
+<li><a href="#HandyTech" title="Help Tech">Help Tech</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Baum/Humanware/APH/Orbit">Baum/Humanware/APH/Orbit</a></li>
 <li><a href="#HedoProfiLine" title="hedo ProfiLine USB">hedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="hedo MobilLine USB">hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/B / BrailleNote Touch">HumanWare Brailliant BI/B / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="Kaikki mallit">Kaikki mallit</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32, BI 40 ja B 80">Brailliant BI 32, BI 40 ja B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32-, BI 40-, B 80-, BI 20X- ja BI 40X -näyttöjen näppäinkomennot">Brailliant BI 32-, BI 40-, B 80-, BI 20X- ja BI 40X -näyttöjen näppäinkomennot</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Brailliant BI 14">Brailliant BI 14</a></li>
 </ul>
 </li>
@@ -638,6 +646,7 @@
 <li><a href="#AdvancedTopics" title="Edistyneet aiheet">Edistyneet aiheet</a><ul>
 <li><a href="#SecureMode" title="Suojattu tila">Suojattu tila</a></li>
 <li><a href="#SecureScreens" title="Suojatut ympäristöt">Suojatut ympäristöt</a></li>
+<li><a href="#DownloadingNVDA" title="NVDA:n lataaminen">NVDA:n lataaminen</a></li>
 <li><a href="#CommandLineOptions" title="Komentorivivalitsimet">Komentorivivalitsimet</a></li>
 <li><a href="#UninstallingNVDA" title="NVDA:n poistaminen">NVDA:n poistaminen</a></li>
 <li><a href="#SystemWideParameters" title="Järjestelmänlaajuiset parametrit">Järjestelmänlaajuiset parametrit</a></li>
@@ -648,7 +657,7 @@
 </li>
 </ul>
 </div>
-<!-- KC:title: NVDA 2026.2:n komentojen pikaopas -->
+<!-- KC:title: NVDA 2026.3:n komentojen pikaopas -->
 
 <h2 id="Introduction">Johdanto</h2>
 <p>Tervetuloa käyttämään NVDA:ta.</p>
@@ -726,7 +735,7 @@ Tämä koskee sekä alkuperäisiä että muokattuja ohjelmistokopioita ja kaikki
 <ul>
 <li><a href="#GettingAndSettingUpNVDA" title="Lataaminen">Lataaminen</a>: NVDA:n hankkiminen ja latausohjeet</li>
 <li><a href="#SettingUpNVDA" title="Käyttöönotto ">Käyttöönotto </a>: NVDA:n asennus ja käyttöönotto</li>
-<li><a href="#RunningNVDA" title="NVDA:n käyttö">NVDA:n käyttö</a>: Yleisimmät näppäinkomennot ja ominaisuudet</li>
+<li><a href="#RunningNVDA" title="Käyttö">Käyttö</a>: Yleisimmät näppäinkomennot ja ominaisuudet</li>
 </ul>
 <p>Näiden jälkeen käsitellään <a href="#Preferences" title="asetusten muuttamista">asetusten muuttamista</a>, <a href="#Addons" title="lisäosien käyttöä">lisäosien käyttöä</a>, <a href="#Community" title="yhteisön toimintaan osallistumista">yhteisön toimintaan osallistumista</a> sekä <a href="#GettingHelp" title="tuen saamista">tuen saamista</a>.
 Tämä on tiivistelmä käyttöohjeen muista osista.
@@ -817,6 +826,7 @@ Niillä määritetään, käynnistyykö NVDA automaattisesti.</li>
 </ol>
 <h3 id="RunningNVDA">NVDA:n käyttäminen</h3>
 <p>Kaikki NVDA-komennot löytyvät kokonaisuudessaan varsinaisesta käyttöohjeesta, jossa ne on jaoteltu hakua helpottaviin lukuihin.
+Käyttöohje on mahdollista avata aktiivista ohjausobjektia käsittelevästä kohdasta painamalla <code>F1</code> missä tahansa NVDA:n valintaikkunassa.
 Komentotaulukot on koottu myös erilliseen komentojen pikaoppaaseen.
 Jokaiseen komentoon syvennytään tarkemmin vaiheittaisten harjoitusten avulla englanninkielisessä "Basic Training for NVDA" -opetusmateriaalimoduulissa.
 "Basic Training for NVDA" -moduuli on ostettavissa <a href="https://www.nvaccess.org/shop" rel="noopener" target="_blank" title="NV Access Shopista">NV Access Shopista</a>.</p>
@@ -949,6 +959,12 @@ Komentojen toimintoja ei suoriteta.</p>
 <td><code>NVDA+X</code></td>
 <td><code>NVDA+X</code></td>
 <td>Toistaa NVDA:n viimeksi puhuman tekstin. Kahdesti painettaessa se näytetään selaustilassa.</td>
+</tr>
+<tr>
+<td>Kopioi viimeksi puhuttu teksti</td>
+<td><code>NVDA+Ctrl+X</code></td>
+<td><code>NVDA+Ctrl+X</code></td>
+<td>Kopioi NVDA:n viimeksi puhuman tekstin leikepöydälle.</td>
 </tr>
 <tr>
 <td>Ilmoita tekstin muotoilutiedot</td>
@@ -1179,7 +1195,8 @@ Lisäosakaupan ikkuna voidaan sulkea Sulje-painikkeen lisäksi myös <code>Esc</
 Tälle välilehdelle voidaan siirtyä missä tahansa lisäosakaupan kohdassa painamalla <code>Ctrl+Sarkain</code>.
 Lisäosan tilana näkyy "Päivitys saatavilla".
 Luettelossa näytetään asennettuna oleva sekä saatavilla oleva versio.
-Toimintovalikko avataan painamalla lisäosan kohdalla <code>Enter</code>-näppäintä, jonka jälkeen valikosta valitaan ”Päivitä”.</p>
+Toimintovalikko avataan painamalla lisäosan kohdalla <code>Enter</code>-näppäintä, jonka jälkeen valikosta valitaan ”Päivitä”.
+Jos lisäosa on poistettu käytöstä, toiminnon nimenä on sen sijaan "Päivitä ja ota käyttöön", sillä lisäosien on oltava käytössä asentamista varten; käytöstä poistetun lisäosan päivittäminen ottaa sen uudelleen käyttöön.</p>
 <p>NVDA ilmoittaa oletusarvoisesti käynnistyessään, jos lisäosiin on saatavilla päivityksiä.
 Lisätietoja tästä toiminnallisuudesta ja sen määrittämisestä löytyy kohdasta <a href="#AutomaticAddonUpdates" title="Päivitysilmoitukset">Päivitysilmoitukset</a>.</p>
 <h3 id="Community">Yhteisö</h3>
@@ -1194,6 +1211,7 @@ Tällä verkossa suoritettavalla tentillä käyttäjät voivat osoittaa NVDA-osa
 <p>NVDA:ssa saadaan ohjeita avaamalla NVDA-valikko näppäinyhdistelmällä <code>NVDA+N</code> ja sen jälkeen Ohje-valikko painamalla <code>O</code>.
 Tämän valikon kautta pääsee lukemaan käyttöohjetta, komentojen pikaopasta, uusien ominaisuuksien historiaa sekä muita tietoja.
 Kolme ensimmäistä vaihtoehtoa avautuvat oletusselaimessa.
+Käyttöohje on mahdollista avata aktiivista ohjausobjektia käsittelevästä kohdasta painamalla <code>F1</code> missä tahansa NVDA:n valintaikkunassa.
 Kattavampaa harjoitusmateriaalia on saatavilla <a href="https://www.nvaccess.org/shop" rel="noopener" target="_blank" title="NV Access Shopista">NV Access Shopista</a>.</p>
 <p>Suosittelemme aloittamaan "Basic Training for NVDA" -moduulista.
 Siinä käsitellään perusteet käytön aloittamisesta lähtien aina verkkosivujen selaamiseen ja objektinavigoinnin käyttöön saakka.
@@ -1280,8 +1298,8 @@ Myös <a href="#AddonsManager" title="lisäosakauppa">lisäosakauppa</a> on pois
 </ul>
 </li>
 <li>Käyttäjätilien valvonnan kehotteiden lukeminen ei ole mahdollista yritettäessä käynnistää sovellusta järjestelmänvalvojan oikeuksin.</li>
-<li>Kosketusnäyttösyötettä ei tueta.
-Kosketusnäyttöeleitä ei tunnisteta oikein, kun suurennustoiminto on käytössä.</li>
+<li>NVDA ei käsittele kosketuseleitä, vaan ne välitetään aktiiviselle sovellukselle.</li>
+<li>Hiiritoiminnot ja kosketuseleet eivät toimi oikein, kun NVDA:n näytön suurennus on käytössä, koska kohdistus on tällöin epätarkkaa.</li>
 <li>Selaustila ja kirjoitettujen merkkien puhuminen eivät toimi Microsoft Storesta ladatuissa sovelluksissa.</li>
 <li>Äänenvaimennusta ei tueta.</li>
 </ul>
@@ -1341,7 +1359,7 @@ Tämä tehdään asettamalla sormi mihin tahansa näytön kohtaan.
 Muita ohjausobjekteja ja tekstiä voidaan lukea myös pitämällä ja siirtämällä sormea näytöllä.</p>
 <h4 id="TouchGestures">Kosketuseleet</h4>
 <p>Jäljempänä tässä käyttöohjeessa olevissa komentokuvauksissa saatetaan ilmoittaa kosketusele, jota voidaan käyttää kyseisen komennon suorittamiseen kosketusnäytöllä.
-Seuraavassa on ohjeita eri kosketuseleiden suorittamiseen.</p>
+Alla on ohjeita eri kosketuseleiden suorittamiseen.</p>
 <h5 id="Taps">Napautukset</h5>
 <p>Näyttöä napautetaan nopeasti yhdellä tai useammalla sormella.</p>
 <p>Yhden sormen kertanapautusta kutsutaan napautukseksi.
@@ -1358,6 +1376,15 @@ Tämän vuoksi esim. pyyhkäisy ylös kahdella sormella tai pyyhkäisy vasemmall
 <h5 id="PinchGestures">Loitonnus- ja lähennyseleet</h5>
 <p>Lähennysele tehdään asettamalla kaksi sormea näytölle ja siirtämällä niitä toisiaan kohti.
 Loitonnusele tehdään vastaavasti siirtämällä sormia poispäin toisistaan.</p>
+<h5 id="SequentialFlicks">Peräkkäiset pyyhkäisyt</h5>
+<p>Peräkkäinen pyyhkäisyele voidaan suorittaa tekemällä kaksi pyyhkäisyä nopeasti peräkkäin.
+Tämä lisää huomattavasti sellaisten kosketuseleiden määrää, joita NVDA-komennoille voidaan määrittää.</p>
+<p>Molemmat pyyhkäisyt on mahdollista suorittaa kahdella eri tavalla:</p>
+<ul>
+<li>Nostamalla sormen ensimmäisen pyyhkäisyn jälkeen ja tekemällä sen jälkeen toisen pyyhkäisyn ennen kuin eleen suoritus aikakatkaistaan.</li>
+<li>Toinen on yhtenäinen pyyhkäisy, joka vaihtaa jyrkästi suuntaa sormea nostamatta.</li>
+</ul>
+<p>Tunnistettavia yhdistelmiä on kaksitoista: neljä vastakkaissuuntaista paria (esim. pyyhkäisy oikealle ja sitten vasemmalle) sekä kahdeksan kohtisuoraa L:n muotoista paria (esim. pyyhkäisy oikealle ja sitten ylös).</p>
 <h4 id="TouchModes">Kosketustilat</h4>
 <p>Koska NVDA-komentoja on huomattavasti enemmän kuin mahdollisia kosketuseleitä, NVDA:ssa on tämän vuoksi useita kosketustiloja, joiden välillä vaihtamalla saadaan käyttöön tiettyä tarkoitusta varten olevat komennot.
 Käytettävissä olevat tilat ovat tekstitila, objektitila ja selaustila.
@@ -1434,6 +1461,13 @@ Näppäimistöissä, joissa ei ole <code>sovellusnäppäintä</code>, käytetä�
 <td><code>NVDA+X</code></td>
 <td>Ei mitään</td>
 <td>Toistaa NVDA:n viimeksi puhuman tekstin. Kahdesti painettaessa se näytetään selaustilassa.</td>
+</tr>
+<tr>
+<td>Kopioi viimeksi puhuttu teksti</td>
+<td><code>NVDA+Ctrl+X</code></td>
+<td><code>NVDA+Ctrl+X</code></td>
+<td>Ei mitään</td>
+<td>Kopioi NVDA:n viimeksi puhuman tekstin leikepöydälle.</td>
 </tr>
 <tr>
 <td>NVDA-valikko</td>
@@ -1661,15 +1695,15 @@ NVDA puhuu kaiken merkeittäin, sanoittain ja riveittäin liikuttaessa ja ilmoit
 </tr>
 <tr>
 <td>Seuraava lause</td>
-<td>Alt+Nuoli alas</td>
-<td>Alt+Nuoli alas</td>
-<td>Siirtää kohdistimen seuraavaan lauseeseen ja puhuu sen (tuetaan vain Microsoft Wordissa ja Outlookissa).</td>
+<td><code>Alt+Alanuoli</code></td>
+<td><code>Alt+Alanuoli</code></td>
+<td>Siirtää kohdistimen seuraavaan lauseeseen ja lukee sen. Kaikkia asiakirjoja ei tueta.</td>
 </tr>
 <tr>
 <td>Edellinen lause</td>
-<td>Alt+Nuoli ylös</td>
-<td>Alt+Nuoli ylös</td>
-<td>Siirtää kohdistimen edelliseen lauseeseen ja puhuu sen (tuetaan vain Microsoft Wordissa ja Outlookissa).</td>
+<td><code>Alt+Ylänuoli</code></td>
+<td><code>Alt+Ylänuoli</code></td>
+<td>Siirtää kohdistimen edelliseen lauseeseen ja lukee sen. Kaikkia asiakirjoja ei tueta.</td>
 </tr>
 </tbody>
 </table>
@@ -2457,6 +2491,7 @@ Tässä on luettelo käytettävissä olevista komennoista:</p>
 <li>Vaihtopainike</li>
 <li>Edistymispalkki</li>
 <li>Liukusäädin</li>
+<li>Napsautettava kohde</li>
 <li>Viite</li>
 <li>Matemaattinen kaava</li>
 <li>Pystysuunnassa tasattu kappale</li>
@@ -2503,6 +2538,7 @@ Kun haluttu kohde on valittu, sen kohdalle voidaan siirtyä tai se voidaan avata
 Teksti kirjoitetaan "Kirjoita etsittävä teksti" -kenttään.
 "Sama kirjainkoko" -valintaruutu saa haun käsittelemään isoja ja pieniä kirjaimia eri tavalla.
 Esim. kun tämä on valittuna, teksti "NV Access" löytyy, muttei tekstiä "nv access".
+Kun selaustilan <a href="#SearchHistory" title="Hakuhistorian säilyttäminen">Hakuhistorian säilyttäminen</a> -asetus on käytössä, tämä kenttä muuttuu yhdistelmäruuduksi, jossa näytetään enintään 20 viimeisintä etsittyä hakusanaa NVDA:n uudelleenkäynnistykseen asti.
 hakujen suorittamiseen käytetään seuraavia näppäimiä:</p>
 <!-- KC:beginInclude -->
 
@@ -2563,15 +2599,17 @@ Seuraavalla näppäinkomennolla voidaan palata alkuperäiselle upotetun objektin
 
 <h3 id="NativeSelectionMode">Alkuperäinen valintatila</h3>
 <p>Kun tekstiä valitaan selaustilassa <code>Vaihto+Nuolinäppäimillä</code>, valintaa ei oletusarvoisesti tehdä varsinaisessa sovelluksessa vaan NVDA:n muodostamassa asiakirjan selaustilanäkymässä.
-Tämä tarkoittaa, että valinta ei näy näytöllä, ja tekstin kopiointi <code>Ctrl+C</code>-näppäinyhdistelmällä kopioi sisällön vain yksinkertaisessa NVDA:n tuottamassa tekstimuodossa. Toisin sanoen esimerkiksi taulukoiden muotoilu tai linkit eivät kopioidu.
-NVDA:ssa on kuitenkin alkuperäinen valintatila, joka voidaan ottaa käyttöön tuetuissa selaustila-asiakirjoissa.
+Tämä tarkoittaa, että valinta ei näy ruudulla, ja tekstin kopiointi <code>Ctrl+C</code>-näppäinyhdistelmällä kopioi sisällön vain yksinkertaisessa NVDA:n tuottamassa tekstimuodossa. Toisin sanoen esimerkiksi taulukoiden muotoilu tai linkit eivät säily.
+NVDA:ssa on kuitenkin alkuperäinen valintatila, joka voidaan ottaa käyttöön tai poistaa käytöstä sitä tukevissa selaustila-asiakirjoissa.
 Alkuperäinen valintatila saa asiakirjan alkuperäisen valinnan seuraamaan NVDA:n selaustilan valintaa, mikä mahdollistaa yksityiskohtien, kuten muotoilun, linkkien ja taulukoiden kopioinnin.
 Tätä tilaa tuetaan seuraavissa sovelluksissa:</p>
 <ul>
 <li>Mozilla Firefox</li>
 <li>Mozilla Thunderbird</li>
 <li>Chrome, Edge sekä mikä tahansa Chromium 134:ään tai sitä uudempaan perustuva selain</li>
+<li>Microsoft Word ja Outlook, joissa sen käytöstä poistaminen ei ole mahdollista</li>
 </ul>
+<p>Alkuperäinen valintatila voidaan <a href="#NativeSelectionModeSetting" title="ottaa automaattisesti käyttöön">ottaa automaattisesti käyttöön</a> NVDA:n selaustilan asetuksista sitä tukevissa asiakirjoissa.</p>
 <!-- KC:beginInclude -->
 
 <table>
@@ -2655,7 +2693,8 @@ Tarkastelukohdistin seuraa oletusarvoisesti järjestelmän kohdistinta, joten yl
 <!-- KC:endInclude -->
 
 <p>Tällöin käyttöön otetaan matemaattisen sisällön tila, jossa lauseketta on mahdollista tarkastella tiettyjen komentojen, kuten nuolinäppäinten, avulla.
-Lausekkeessa voidaan liikkua esimerkiksi vasemmalla ja oikealla nuolinäppäimellä, ja jokin sen osa, kuten murtoluku, voidaan ottaa tarkempaan tarkasteluun eli zoomata siihen ylänuolinäppäimellä.</p>
+Lausekkeessa voidaan liikkua esimerkiksi vasemmalla ja oikealla nuolinäppäimellä, ja jokin sen osa, kuten murtoluku, voidaan ottaa tarkempaan tarkasteluun eli zoomata siihen ylänuolinäppäimellä.
+Kun <a href="#VisionFocusHighlight" title="visuaalinen">visuaalinen</a> ja selaustilakohdistimen korostus ovat käytössä, verkossa olevan MathML-lausekkeen nykyinen aliosa korostetaan myös visuaalisesti.</p>
 <p>Asiakirjaan palataan takaisin painamalla Esc-näppäintä.</p>
 <p>Joskus matemaattinen sisältö saatetaan näyttää painikkeena tai muunlaisena elementtinä, joka avaa aktivoitaessa valintaikkunan tai näyttää kaavaan liittyviä lisätietoja.
 Kaavan sisältävä painike tai muu elementti aktivoidaan painamalla Ctrl+Enter.</p>
@@ -3436,7 +3475,7 @@ Sijainnit korostetaan värillisellä, suorakulmaisella ääriviivalla.</p>
 <li>Kiinteä sininen korostaa yhdistetyn navigointiobjektin ja kohdistuksen sijainnin (esim. koska <a href="#ReviewCursorFollowFocus" title="navigointiobjekti seuraa kohdistusta.">navigointiobjekti seuraa kohdistusta.</a>)</li>
 <li>Sininen katkoviiva korostaa pelkän objektin, jossa kohdistus on.</li>
 <li>Kiinteä pinkki korostaa pelkän navigointiobjektin.</li>
-<li>Kiinteä keltainen korostaa virtuaalikohdistimen, jota käytetään selaustilassa (kuten verkkoselaimissa, joissa ei ole fyysistä kohdistinta).</li>
+<li>Yhtenäinen keltainen väri korostaa selaustilassa ja tekstintunnistuksen tuloksissa käytettävää näennäiskohdistinta sekä matemaattisen lausekkeen aktiivista aliosaa verkkosivulla navigoitaessa.</li>
 </ul>
 <p>Kun kohdistuksen korostus on otettu käyttöön <a href="#NVDASettings" title="NVDA:n asetusvalintaikkunan">NVDA:n asetusvalintaikkunan</a> <a href="#VisionSettings" title="Näkö-kategoriassa">Näkö-kategoriassa</a>, tällöin voidaan valita, <a href="#VisionSettingsFocusHighlight" title="korostetaanko kohdistus, navigointiobjekti vai selaustilakohdistin">korostetaanko kohdistus, navigointiobjekti vai selaustilakohdistin</a>.</p>
 <h3 id="VisionScreenCurtain">Näyttöverho</h3>
@@ -3469,21 +3508,21 @@ Tällaisia tilanteita varten NVDA:ssa on ominaisuus nimeltä näyttöverho, jonk
 </table>
 <!-- KC:endInclude -->
 
-<p>Näytöllä näkyvään sisältöön perustuvat toiminnot eivät toimi näyttöverhon ollessa käytössä.
-Esimerkiksi <a href="#Win10Ocr" title="tekstintunnistuksen käyttö ei ole mahdollista">tekstintunnistuksen käyttö ei ole mahdollista</a>.
-Jotkin kuvakaappaustyökalut eivät myöskään välttämättä toimi.</p>
+<p>Jos näyttöverho on käytössä, jotkin ruudulla näkyvään tietoon tukeutuvat ominaisuudet eivät toimi.
+<a href="#Win10Ocr" title="Windowsin tekstintunnistusta">Windowsin tekstintunnistusta</a> on edelleen mahdollista käyttää tuetuissa järjestelmissä näyttöverhon ollessa käytössä.
+Tietyt kuvakaappaustyökalut saattavat lakata toimimasta.</p>
 <p>Näyttöverhoa ei voi ottaa käyttöön, jos Windowsin suurennuslasi ja käänteiset värit ovat käytössä.</p>
-<h2 id="Magnifier">Suurennus</h2>
-<p>NVDA:ssa on sisäänrakennettu suurennustoiminto, jonka avulla näytön osia voi suurentaa.
+<h2 id="Magnifier">Näytön suurennus</h2>
+<p>NVDA:ssa on sisäänrakennettu suurennustoiminto, jonka avulla näytön osia voidaan suurentaa.
 Tämä toiminto on tarkoitettu erityisesti helpottamaan näytön sisällön suurentamista heikkonäköisille sekä mahdollistamaan värisuodattimien käytön silmien rasituksen vähentämiseksi ja luettavuuden parantamiseksi.</p>
 <p>Toiminto suurentaa koko näytön ja seuraa kohdistusta tai hiiren osoitinta.
 Käytettävissä on useita asetusvaihtoehtoja, joiden avulla suurennuskokemusta voidaan mukauttaa omien tarpeiden mukaisesti.</p>
-<h3 id="MagnifierToggle">Suurennuksen käyttöönotto ja käytöstäpoisto</h3>
-<p>Suurennus otetaan käyttöön painamalla <code>NVDA+Vaihto+W</code>.
+<h3 id="MagnifierToggle">Näytön suurennuksen käyttöönotto ja käytöstäpoisto</h3>
+<p>Näytön suurennus otetaan käyttöön painamalla <code>NVDA+Vaihto+W</code>.
 Myös suurennuksen tasoa kasvattava näppäinkomento, <code>NVDA+Vaihto+Plus</code>, käynnistää suurennuksen, ellei se ole jo käynnissä.
 Näyttö palautuu normaaliin kokoonsa, kun toiminto poistetaan käytöstä.
 Suurennuksen tila säilyy istunnosta toiseen muiden NVDA:n asetusten tavoin.</p>
-<h3 id="MagnifierCommands">Suurennuksen näppäinkomennot</h3>
+<h3 id="MagnifierCommands">Näytön suurennuksen näppäinkomennot</h3>
 <p>Suurennusta voidaan hallita seuraavilla näppäinkomennoilla sen ollessa käytössä:</p>
 <!-- KC:beginInclude -->
 
@@ -3497,14 +3536,14 @@ Suurennuksen tila säilyy istunnosta toiseen muiden NVDA:n asetusten tavoin.</p>
 </thead>
 <tbody>
 <tr>
-<td>Ota suurennus käyttöön tai poista se käytöstä</td>
+<td>Ota näytön suurennus käyttöön tai poista se käytöstä</td>
 <td><code>NVDA+Vaihto+W</code></td>
-<td>Ottaa suurennuksen käyttöön tai poistaa sen käytöstä.</td>
+<td>Ottaa näytön suurennuksen käyttöön tai poistaa sen käytöstä.</td>
 </tr>
 <tr>
 <td>Kasvata suurennustasoa</td>
 <td><code>NVDA+Vaihto+Plus</code></td>
-<td>Kasvattaa suurennuksen tasoa tai käynnistää suurennustoiminnon, mikäli se ei ole käynnissä.</td>
+<td>Kasvattaa suurennuksen tasoa tai käynnistää näytön suurennuksen, mikäli se ei ole käynnissä.</td>
 </tr>
 <tr>
 <td>Pienennä suurennustasoa</td>
@@ -3524,47 +3563,52 @@ Suurennuksen tila säilyy istunnosta toiseen muiden NVDA:n asetusten tavoin.</p>
 <tr>
 <td>Näytä koko näytön yleisnäkymä</td>
 <td><code>NVDA+Vaihto+L</code></td>
-<td>Näyttää hetkellisesti koko näytön yleisnäkymän.</td>
+<td>Näyttää tilapäisesti koko näytön yleisnäkymän.</td>
 </tr>
 <tr>
-<td>Panoroi vasemmalle</td>
+<td>Vieritä vasemmalle</td>
 <td><code>NVDA+Alt+Nuoli vasemmalle</code></td>
-<td>Panoroi suurennettua näkymää vasemmalle määritetyn panoroinnin askelkoon verran.</td>
+<td>Vierittää suurennettua näkymää vasemmalle määritetyn vierityksen askelkoon verran.</td>
 </tr>
 <tr>
-<td>Panoroi oikealle</td>
+<td>Vieritä oikealle</td>
 <td><code>NVDA+Alt+Nuoli oikealle</code></td>
-<td>Panoroi suurennettua näkymää oikealle määritetyn panoroinnin askelkoon verran.</td>
+<td>Vierittää suurennettua näkymää oikealle määritetyn vierityksen askelkoon verran.</td>
 </tr>
 <tr>
-<td>Panoroi ylös</td>
+<td>Vieritä ylös</td>
 <td><code>NVDA+Alt+Nuoli ylös</code></td>
-<td>Panoroi suurennettua näkymää ylöspäin määritetyn panoroinnin askelkoon verran.</td>
+<td>Vierittää suurennettua näkymää ylöspäin määritetyn vierityksen askelkoon verran.</td>
 </tr>
 <tr>
-<td>Panoroi alas</td>
+<td>Vieritä alas</td>
 <td><code>NVDA+Alt+Nuoli alas</code></td>
-<td>Panoroi suurennettua näkymää alaspäin määritetyn panoroinnin askelkoon verran.</td>
+<td>Vierittää suurennettua näkymää alaspäin määritetyn vierityksen askelkoon verran.</td>
 </tr>
 <tr>
-<td>Panoroi vasempaan reunaan</td>
+<td>Vieritä vasempaan reunaan</td>
 <td><code>NVDA+Vaihto+Alt+Nuoli vasemmalle</code></td>
-<td>Panoroi suurennusnäkymän suoraan näytön vasempaan reunaan.</td>
+<td>Vierittää suurennusnäkymän näytön vasempaan reunaan.</td>
 </tr>
 <tr>
-<td>Panoroi oikeaan reunaan</td>
+<td>Vieritä oikeaan reunaan</td>
 <td><code>NVDA+Vaihto+Alt+Nuoli oikealle</code></td>
-<td>Panoroi suurennusnäkymän suoraan näytön oikeaan reunaan.</td>
+<td>Vierittää suurennusnäkymän näytön oikeaan reunaan.</td>
 </tr>
 <tr>
-<td>Panoroi yläreunaan</td>
+<td>Vieritä yläreunaan</td>
 <td><code>NVDA+Vaihto+Alt+Nuoli ylös</code></td>
-<td>Panoroi suurennusnäkymän suoraan näytön yläreunaan.</td>
+<td>Vierittää suurennusnäkymän näytön yläreunaan.</td>
 </tr>
 <tr>
-<td>Panoroi alareunaan</td>
+<td>Vieritä alareunaan</td>
 <td><code>NVDA+Vaihto+Alt+Nuoli alas</code></td>
-<td>Panoroi suurennusnäkymän suoraan näytön alareunaan.</td>
+<td>Vierittää suurennusnäkymän näytön alareunaan.</td>
+</tr>
+<tr>
+<td>Siirrä hiiri suurennusnäkymään</td>
+<td>Ei mitään</td>
+<td>Siirtää hiiren osoittimen suurennusnäkymän keskikohtaan.</td>
 </tr>
 </tbody>
 </table>
@@ -3576,7 +3620,7 @@ Arvoa voidaan muuttaa lähennyksen (<code>NVDA+Vaihto+Plus</code>) ja loitonnuks
 Jokainen painallus kasvattaa tai pienentää suurennusta tietyn vakiomäärän verran.</p>
 <h3 id="MagnifierColorFilters">Värisuodattimet</h3>
 <p>Värisuodattimien avulla voidaan helpottaa tiettyjen näkövammojen tai valoherkkyyden vaikutuksia muokkaamalla näytön värejä.
-Suurennustoiminto tukee kolmea eri värisuodatinta:</p>
+Näytön suurennus tukee kolmea eri värisuodatinta:</p>
 <ul>
 <li>Normaali: Värimuokkauksia ei tehdä (oletusasetus).</li>
 <li>Harmaasävy: Muuttaa värit harmaan sävyiksi, mikä vähentää silmien rasitusta ja parantaa kontrastia.</li>
@@ -3584,7 +3628,7 @@ Suurennustoiminto tukee kolmea eri värisuodatinta:</p>
 </ul>
 <p>Suodattimien välillä vaihdetaan painamalla <code>NVDA+Vaihto+I</code>.</p>
 <h3 id="MagnifierTrackingMode">Seurantatilat</h3>
-<p>Suurennustoiminnossa on eri tiloja hiiren, kohdistuksen, tarkastelukohdistimen ja navigointiobjektin seurantaan sekä suurennettavan näytönosan määrittämiseen.</p>
+<p>Näytönsuurennustoiminnossa on eri tiloja hiiren, kohdistuksen, tarkastelukohdistimen ja navigointiobjektin seurantaan sekä suurennettavan näytönosan määrittämiseen.</p>
 <ul>
 <li>Keskittävä: Suurennettu näkymä keskitetään senhetkiseen seurattavaan kohteeseen.
 Tässä tilassa seurattava kohde pidetään näytön keskellä ja sitä estetään siirtymästä näytön reunojen ulkopuolelle.</li>
@@ -3592,23 +3636,23 @@ Tässä tilassa seurattava kohde pidetään näytön keskellä ja sitä estetä�
 </ul>
 <p>Seurantatilaa vaihtava näppäinkomento voidaan määrittää <a href="#InputGestures" title="Näppäinkomennot-valintaikkunassa">Näppäinkomennot-valintaikkunassa</a>.</p>
 <h3 id="MagnifierScreenOverview">Koko näytön yleisnäkymä</h3>
-<p>Suurennus voi näyttää tilapäisesti koko näytön yleisnäkymän, mikä helpottaa esitysten pitämistä sekä näytön ulkoasun nopeaa hahmottamista.</p>
+<p>Näytön suurennus voi näyttää tilapäisesti koko näytön yleisnäkymän, mikä helpottaa esitysten pitämistä sekä näytön ulkoasun nopeaa hahmottamista.</p>
 <p>Tästä on hyötyä seuraavissa tilanteissa:</p>
 <ul>
 <li>Näytettäessä yleisölle esityksen kokonaiskuvaa ennen yksityiskohtiin syventymistä</li>
-<li>Tarkasteltaessa tilapäisesti koko näytön ulkoasua suurennusta käytettäessä</li>
+<li>Tarkasteltaessa tilapäisesti koko näytön ulkoasua näytön suurennusta käytettäessä</li>
 </ul>
 <p>Yleisnäkymä näytetään painamalla <code>NVDA+Vaihto+L</code>.
-Tällöin suurennus tekee seuraavaa:</p>
+Tällöin näytön suurennus tekee seuraavaa:</p>
 <ol>
 <li>Loitontaa näkymän tasaisesti koko näytön kokoiseksi (suurennustaso 1.0x)</li>
 <li>Tarkkailee hiiren liikettä</li>
 <li>Lähentää näkymän automaattisesti takaisin alkuperäiselle tasolle hiiren uudessa sijainnissa, kun se on ollut paikallaan noin 2 sekuntia</li>
 </ol>
 <p>Koko näyttöä voidaan tarkastella pidempään liikuttamalla hiirtä ennen kuin näkymä lähentyy takaisin.</p>
-<h3 id="MagnifierSettings">Suurennuksen asetukset</h3>
-<p>Suurennuksen asetuksia voidaan muuttaa NVDA:n asetusvalintaikkunan ”Suurennus”-kategoriassa (<code>NVDA+Ctrl+W</code>).
-Lisätietoja käytettävissä olevista asetuksista on kohdassa <a href="#MagnifierSettingsCategory" title="Suurennuksen asetukset">Suurennuksen asetukset</a>.</p>
+<h3 id="MagnifierSettings">Näytön suurennuksen asetukset</h3>
+<p>Näytön suurennuksen asetuksia voidaan muuttaa NVDA:n asetusvalintaikkunan Näytön suurennus -kategoriassa (<code>NVDA+Ctrl+W</code>).
+Lisätietoja käytettävissä olevista asetuksista on kohdassa <a href="#MagnifierSettingsCategory" title="Näytön suurennuksen asetukset">Näytön suurennuksen asetukset</a>.</p>
 <h2 id="ContentRecognition">Sisällöntunnistus</h2>
 <p>Kun tekijät eivät tarjoa riittävästi tietoa ruudunlukuohjelman käyttäjälle sisällön määrittämiseen, sitä voidaan yrittää tunnistaa kuvasta eri työkalujen avulla.
 NVDA tukee Windowsin sisäänrakennettua tekstintunnistustoimintoa kuvissa olevan tekstin tunnistamiseen.
@@ -3628,7 +3672,9 @@ NVDA voi käyttää sitä kuvissa olevan tekstin tai esteellisten sovellusten tu
 Lisäkieliä on mahdollista asentaa avaamalla Käynnistä-valikko, valitsemalla Asetukset -&gt; Aika ja kieli -&gt; Alue ja kieli ja valitsemalla sitten Lisää kieli.</p>
 <p>Kun halutaan seurata jatkuvasti muuttuvaa sisältöä, kuten tekstityksiä videota katsottaessa, tällöin voidaan ottaa valinnaisesti käyttöön tunnistetun sisällön automaattinen päivittäminen.
 Tämä onnistuu myös <a href="#Win10OcrSettings" title="Windowsin tekstintunnistus -kategorian">Windowsin tekstintunnistus -kategorian</a> kautta <a href="#NVDASettings" title="NVDA:n asetukset">NVDA:n asetukset</a> -valintaikkunassa.</p>
-<p>Windowsin tekstintunnistus voi olla osittain tai täysin yhteensopimaton <a href="#Vision" title="NVDA:n näönparannusten">NVDA:n näönparannusten</a> tai muiden ulkoisten aputoimintojen kanssa. Sinun on poistettava käytöstä tällaiset aputoiminnot ennen tunnistuksen suorittamista.</p>
+<p>Windowsin tekstintunnistusta voidaan edelleen käyttää tuetuissa järjestelmissä <a href="#VisionScreenCurtain" title="näyttöverhon">näyttöverhon</a> tai NVDA:n <a href="#Magnifier" title="näytön suurennuksen">näytön suurennuksen</a> ollessa käytössä.
+Ulkoiset näön apuvälineet saattavat olla osittain tai kokonaan yhteensopimattomia Windowsin tekstintunnistuksen kanssa.
+Ne saattaa olla tarpeen poistaa käytöstä ennen tunnistuksen suorittamista.</p>
 <!-- KC:beginInclude -->
 <p>Nykyisen navigointiobjektin teksti tunnistetaan Windowsin tekstintunnistuksen avulla painamalla NVDA+R.</p>
 <!-- KC:endInclude -->
@@ -3945,7 +3991,11 @@ Konsoli-ikkunan koko on kiinteä, tyypillisesti paljon pienempi kuin puskuri, jo
 Kun uutta tekstiä tulostuu näytölle, sisältöä vieritetään ylöspäin, eikä aiempi teksti ole enää näkyvissä.
 Tekstiä, jota ei näy ikkunassa, ei voi tarkastella NVDA:n tekstintarkastelukomennoilla Windows 11 22H2:ta vanhemmissa käyttöjärjestelmissä.
 Konsoli-ikkunan vierittäminen on siksi tarpeen, jotta aiempaa tekstiä voidaan lukea.
-Uudemmissa konsolin versioissa ja Windows-päätteessä on mahdollista tarkastella koko tekstipuskuria vapaasti ilman ikkunan vierittämistä.</p>
+Uudemmissa konsolin versioissa ja Windowsin Päätteessä on mahdollista tarkastella koko tekstipuskuria vapaasti ilman ikkunan vierittämistä.</p>
+<p>Kohdistimen päivitykset saattavat viivästyä joissakin tapauksissa, kuten SSH-yhteyttä käytettäessä.
+NVDA odottaa Windowsin Päätteessä kohdistimen liikkumista hieman kauemmin, minkä vuoksi vanhentuneiden merkkien puhuminen on epätodennäköisempää.
+Jos kohdistimen ilmoittaminen on edelleen epätarkkaa, kannattaa kokeilla kasvattaa lisäasetuksissa <a href="#AdvancedSettingsCaretMoveTimeout" title="kohdistimen siirtämisen aikakatkaisun">kohdistimen siirtämisen aikakatkaisun</a> arvoa.
+Tämän arvon kasvattaminen saattaa saada kohdistimen siirtämisen tuntumaan hitaalta, joten sitä kannattaa muuttaa vain päätesovelluksia koskevassa asetusprofiilissa.</p>
 <!-- KC:beginInclude -->
 <p>Seuraavat sisäänrakennetut Windows-konsolin näppäinkomennot voivat olla hyödyllisiä <a href="#ReviewingText" title="tarkasteltaessa tekstiä">tarkasteltaessa tekstiä</a> NVDA:lla vanhemmissa Windows-konsolin versioissa:</p>
 <table>
@@ -4108,7 +4158,7 @@ Arvot 0 - 100 ovat mahdollisia (0=matalin ja 100=korkein).</p>
 <h5 id="SpeechSettingPunctuationSilence">Pidä tauko välimerkkien kohdalla</h5>
 <p>Välimerkkien kohdalla ei pidetä taukoa, jos tämä asetus poistetaan käytöstä.
 Asetus on oletusarvoisesti käytössä.
-Se on käytettävissä vain Windows OneCore -puheäänillä, ja sitä tuetaan Windows 10:n versiossa 1803 tai sitä uudemmissa.</p>
+Se on käytettävissä vain OneCore -puheäänillä, ja sitä tuetaan Windows 10:n versiossa 1803 tai sitä uudemmissa.</p>
 <h5 id="SpeechSettingsUseWasapi">Käytä äänentoistoon WASAPI-rajapintaa</h5>
 <p>Tämä asetus ottaa käyttöön äänentoiston Windows Audio Session APIn (WASAPI) kautta.
 Tämä asetus on käytettävissä vain SAPI 5 -puheäänillä.
@@ -4211,6 +4261,32 @@ Joitakin emojimerkityksen sisältäviä käänteisvärisiä neliökirjaimia (�
 <tr>
 <td>Oletus</td>
 <td>Käytössä</td>
+</tr>
+</tbody>
+</table>
+<h5 id="SpeechSettingsSayAllReadingUnit">Jatkuvan luvun etenemistapa</h5>
+<p>Tästä yhdistelmäruudusta voidaan valita tekstiyksikkö, jonka verran jatkuva luku etenee kerrallaan.
+Tämä vaikuttaa siihen, miten usein kohdistin ja näkymä siirtyvät jatkuvan luvun aikana, sekä mahdollisesti myös  äänensävyyn pitkissä tekstikappaleissa.
+Kun asetuksena on "Lauseittain", NVDA lukee tekstiä lauseittain sellaisissa ohjausobjekteissa ja asiakirjoissa, jotka tukevat lauseenrajoja, ja siirtyy automaattisesti riveittäin lukemiseen, jos lauseenrajojen tukea ei ole.
+Lauseenrajoja tuetaan Microsoft Wordissa ja Outlookissa, monissa muokkauskentissä sekä useimmissa selaustilassa luettavissa asiakirjoissa, kuten verkkosivuilla.
+"Kappaleittain"-asetusta käytettäessä sisältöä luetaan kappaleittain.
+Kun asetukseksi on valittu "Riveittäin", tekstiä luetaan aina riveittäin.
+Jos asetuksena on "Riveittäin", jatkuva luku lukee esim. NVDA:n lokin tarkastelussa ja muissa muotoilua tukevissa ohjausobjekteissa tekstiä riveittäin, kun taas oletusasetusta käytettäessä luetaan lauseittain.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asetukset</td>
+<td>Oletus (Lauseittain), Lauseittain, Kappaleittain, riveittäin</td>
+</tr>
+<tr>
+<td>Oletus</td>
+<td>Lauseittain</td>
 </tr>
 </tbody>
 </table>
@@ -4633,15 +4709,27 @@ Seuraavat symbolit on määritelty:</p>
 <p>Vähimmäisarvo (0 %) on 1 merkki sekunnissa ja enimmäisarvo (100 %) 20 merkkiä sekunnissa.
 Jos käytössä on esimerkiksi 40-merkkinen pistenäyttö ja oletusnopeutena 10 merkkiä sekunnissa, näyttöä vieritetään neljän sekunnin välein.
 20-merkkisellä näytöllä jokaista pisteriviä näytettäisiin 2 sekuntia.</p>
-<h5 id="BrailleSettingsWordWrap">Vältä sanojen katkaisua</h5>
-<p>Jos tämä asetus on käytössä, sanaa, joka on liian pitkä mahtuakseen pistenäytön rivin loppuun, ei katkaista.
+<p>Vaikka automaattinen vieritys on käytössä, aiempaa sisältöä voidaan edelleen lukea uudelleen taaksepäin vierittävällä komennolla ja ohittaa esimerkiksi tyhjä tai liian lyhyt rivi eteenpäin vierittävällä komennolla.</p>
+<p>Automaattinen vieritys poistetaan käytöstä kosketuskohdistinnäppäintä painettaessa, ilmoitusta pistenäytöllä näytettäessä, uuden objektin tullessa näkyviin, suojattuun ympäristöön siirryttäessä, istuntoa lukittaessa tai ikkunan lopun tullessa vastaan.</p>
+<h5 id="BrailleSettingsWordWrap">Rivitys</h5>
+<p>Tästä yhdistelmäruudusta voidaan valita, miten NVDA käsittelee tekstiä, joka ei mahdu pistenäytölle.
+Kun sana jakautuu eri riveille, rivin viimeisessä solussa näytetään jatkomerkki (pisteet 7 ja 8), ellei jäljempänä toisin mainita.
+Seuraavat asetukset ovat käytettävissä:</p>
+<ul>
+<li>Ei käytössä: Teksti rivitetään näytön reunassa ja tarvittaessa myös sanan keskeltä, eikä  jatkomerkkiä näytetä.
+Riveillä näytetään mahdollisimman paljon tekstiä.
+Tekstin loppuosa voidaan lukea näyttöä vierittämällä.</li>
+<li>Näytä sanakatkosten merkki: Tekstiä ei rivitetä, mutta jatkomerkki näytetään aina, kun sana katkeaa näytön reunassa.
+Sanan loppuosa voidaan lukea näyttöä vierittämällä.</li>
+<li>Sanarajojen kohdalla: Sanaa ei katkaista, jos se on liian pitkä mahtuakseen pisterivin loppuosaan.
 Sen sijaan pisterivin loppuun jää hieman tyhjää tilaa.
 Koko sana voidaan lukea vierittämällä näyttöä.
-Tätä kutsutaan myös automaattiseksi rivitykseksi.
-Jos yksittäinen sana on liian pitkä mahtuakseen näytölle, se on silti katkaistava.</p>
-<p>Jos tämä asetus ei ole käytössä, sanasta näytetään niin paljon kuin mahdollista, mutta sen loppuosa katkaistaan.
-Sanan loppu voidaan lukea vierittämällä näyttöä.</p>
-<p>Asetuksen käyttöön ottaminen saattaa mahdollistaa sujuvamman lukemisen, mutta vaatii yleensä enemmän näytön vierittämistä.</p>
+Yksittäinen sana on silti katkaistava, jos se on liian pitkä mahtuakseen näytölle.
+Tämän asetuksen käyttöönotto saattaa mahdollistaa sujuvamman lukemisen, mutta vaatii yleensä enemmän näytön vierittämistä.</li>
+<li>Sana- tai tavurajojen kohdalla: Kuten "Sanarajojen kohdalla", mutta liian pitkät sanat katkaistaan mahdollisuuksien mukaan tavurajan kohdalta sanan kielen perusteella, jos se on tiedossa.
+Esimerkiksi <code>käyttäytyä</code>-sana voidaan katkaista osien <code>käyt</code> ja <code>täytyä</code> välistä.
+Jatkomerkki näytetään aina, kun sana katkeaa.</li>
+</ul>
 <h5 id="BrailleUnicodeNormalization">Unicode-normalisointi</h5>
 <p>Kun tämä asetus on käytössä, pistenäytöllä näytettävälle tekstille suoritetaan Unicode-normalisointi.
 Tämä on hyödyllistä, kun vastaan tulee pistekirjoitusmerkkejä, joita ei ole määritelty tietyssä pistetaulukossa ja joilla on yhteensopiva vaihtoehto, kuten sosiaalisessa mediassa yleisesti käytetyt lihavoidut ja kursivoidut merkit.
@@ -4665,7 +4753,7 @@ Muita Unicode-normalisoinnin hyötyjä käsitellään tarkemmin <a href="#Speech
 </tr>
 </tbody>
 </table>
-<h5 id="BrailleSettingsInterruptSpeech">Keskeytä puhe vieritettäessä</h5>
+<h5 id="BrailleSettingsInterruptSpeech">Keskeytä puhe pistenäyttöä vieritettäessä</h5>
 <p>Tämä asetus määrittää, keskeytetäänkö puhe vieritettäessä pistenäyttöä eteen/taaksepäin.
 Edelliselle/seuraavalle riville siirtävät komennot keskeyttävät puheen aina.</p>
 <p>Jatkuva puhe saattaa häiritä pistekirjoitusta luettaessa.
@@ -4682,6 +4770,29 @@ Tästä syystä asetus on oletusarvoisesti käytössä, jolloin puhe keskeytetä
 <tr>
 <td>Asetukset</td>
 <td>Oletus (Käytössä), Käytössä, Ei käytössä</td>
+</tr>
+<tr>
+<td>Oletus</td>
+<td>Käytössä</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ChineseBrailleWordSegmentation">Erottele kiinankieliset sanat toisistaan</h5>
+<p>Tällä asetuksella määritetään, käyttääkö NVDA tekstiä pistekirjoitukseksi muunnettaessa kiinan kielen sanojen erottelua.
+Kun asetus on käytössä ja käytetään muuta kiinalaista pistetulostustaulukkoa kuin ”mandariinikiina (Taiwan)”, NVDA lisää välilyönnit kiinankielisten sanojen väliin ennen tekstin muuntamista.
+Kun asetus ei ole käytössä, teksti välitetään suoraan tulostustaulukolle eikä sanojen väliin lisätä välilyöntejä.
+Asetuksella ei ole vaikutusta "mandariinikiina (Taiwan)" -taulukkoa tai muita kuin kiinalaisia tulostustaulukoita käytettäessä.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asetukset</td>
+<td>Käytössä, Ei käytössä</td>
 </tr>
 <tr>
 <td>Oletus</td>
@@ -4853,9 +4964,9 @@ Asetuksesta voi kuitenkin olla hyötyä, jos tarvitaan tietoja esimerkiksi virhe
 <li>Tiedot: NVDA tallentaa lokiin perustietoja, kuten käynnistysilmoituksia ja kehittäjille hyödyllistä tietoa.</li>
 <li>Varoitukset: Lokiin tallennetaan varoituksia, jotka eivät ole vakavien virheiden aiheuttamia.</li>
 <li>Syöttö ja tulostus: Lokiin tallennetaan näppäimistön ja pistenäyttöjen syöte sekä puhe- ja pistekirjoitustuloste.
-Jos olet huolissasi tietosuojasta, älä määritä lokitasoksi tätä vaihtoehtoa.</li>
+Jos tietosuoja huolestuttaa, lokitasoksi ei kannata valita tätä vaihtoehtoa.</li>
 <li>Vianmääritys: Lokiin tallennetaan tiedot-, varoitukset- sekä syöttö ja tulostusilmoitusten lisäksi vianmäärityksen lisäilmoituksia.
-Kuten syöttö/tulostus-tasolla, älä määritä lokitasoksi tätä vaihtoehtoa, jos olet huolissasi tietosuojasta.</li>
+Kuten syöttö- ja tulostustasolla, lokitasoksi ei kannata valita tätä vaihtoehtoa, jos tietosuoja huolestuttaa.</li>
 <li>Vianmääritys (sensuroimaton): Lokeista ei sensuroida vianmääritystietojen lisäksi mitään arkaluonteisia tietoja, kuten salasanoja tai rajapinta-avaimia.
 Tämän käyttöönottoa suositellaan vain tilapäisesti, jos lokissa ei näy tärkeitä vianmääritystietoja arkaluonteisten tietojen sensuroinnin vuoksi.</li>
 </ul>
@@ -4882,7 +4993,7 @@ Tämä asetuskategoria sisältää oletusarvoisesti seuraavat vaihtoehdot:</p>
 <li>Ota korostus käyttöön: Ottaa käyttöön tai poistaa käytöstä visuaalisen korostuksen.</li>
 <li>Korosta kohdistus: Määrittää, korostetaanko <a href="#SystemFocus" title="kohdistus.">kohdistus.</a></li>
 <li>Korosta navigointiobjekti: Määrittää, korostetaanko <a href="#ObjectNavigation" title="navigointiobjekti.">navigointiobjekti.</a></li>
-<li>Korosta selaustilakohdistin: Määrittää, korostetaanko <a href="#BrowseMode" title="selaustilan virtuaalikohdistin.">selaustilan virtuaalikohdistin.</a></li>
+<li>Korosta selaustilakohdistin: Määrittää, näytetäänkö <a href="#BrowseMode" title="selaustilan näennäiskohdistin">selaustilan näennäiskohdistin</a> korostettuna esim. tekstintunnistuksen tuloksissa ja verkossa olevaa matemaattista sisältöä selattaessa.</li>
 </ul>
 <p>Huom: "Ota korostus käyttöön" -valintaruudun valitseminen tai valinnan poistaminen siitä muuttaa vastaavasti myös kolmen muun valintaruudun tilaa.
 Jos "Ota korostus käyttöön" -valintaruutu ei ole käytössä ja valitset tämän valintaruudun, myös kolme muuta valintaruutua valitaan automaattisesti.
@@ -4891,19 +5002,19 @@ Mikäli haluat korostaa pelkän kohdistuksen ja jättää navigointiobjektin sek
 <p>Muita näönparannuksen tarjoajia voidaan asentaa <a href="#AddonsManager" title="lisäosina.">lisäosina.</a>
 Mikäli näillä tarjoajilla on muutettavia asetuksia, ne näytetään erillisissä ryhmissä tässä asetuskategoriassa.
 Katso tietoja kunkin tarjoajan tukemista asetuksista kyseisen tarjoajan ohjeesta.</p>
-<h4 id="MagnifierSettingsCategory">Suurennus</h4>
+<h4 id="MagnifierSettingsCategory">Näytön suurennus</h4>
 <!-- KC:setting -->
 
-<h5 id="OpenMagnifierSettings">Avaa suurennuksen asetukset</h5>
+<h5 id="OpenMagnifierSettings">Avaa näytön suurennuksen asetukset</h5>
 <p>Näppäinkomento: <code>NVDA+Ctrl+W</code></p>
-<p>NVDA:n sisäänrakennetun <a href="#Magnifier" title="Suurennustoiminnon">Suurennustoiminnon</a> asetukset voidaan määrittää asetusvalintaikkunan Suurennus-kategoriassa.
+<p>NVDA:n <a href="#Magnifier" title="näytön suurennuksen">näytön suurennuksen</a> asetukset voidaan määrittää asetusvalintaikkunan Näytön suurennus -kategoriassa.
 Tämän kategorian asetukset otetaan käyttöön heti, mutta muutokset voidaan hylätä painamalla Peruuta-painiketta tai <code>Esc</code>-näppäintä.</p>
 <p>Seuraavat asetukset ovat käytettävissä:</p>
 <!-- KC:setting -->
 
-<h5 id="MagnifierEnable">Ota suurennus käyttöön</h5>
+<h5 id="MagnifierEnable">Käytä näytön suurennusta</h5>
 <p>Näppäinkomento: <code>NVDA+Vaihto+W</code></p>
-<p>Tämä asetus ottaa suurennuksen käyttöön tai poistaa sen käytöstä.</p>
+<p>Tämä asetus ottaa näytön suurennuksen käyttöön tai poistaa sen käytöstä.</p>
 <table>
 <thead>
 <tr>
@@ -4923,10 +5034,10 @@ Tämän kategorian asetukset otetaan käyttöön heti, mutta muutokset voidaan h
 </tbody>
 </table>
 <h5 id="MagnifierZoom">Suurennustaso</h5>
-<p>Tällä asetuksella määritetään suurennustoiminnon suurennuksen taso.
+<p>Tällä asetuksella määritetään näytön suurennuksen suurennustaso.
 Sen arvot ovat väliltä 100 % (ei suurennusta) ja 5000 % (enimmäissuurennus).
 Oletus on 200 %.</p>
-<p>Suurennuksen tasoa voi muuttaa suurennuksen käytön aikana lähennyskomennolla (<code>NVDA+Vaihto+Plus</code>) ja loitonnuskomennolla (<code>NVDA+Vaihto+Miinus</code>).</p>
+<p>Suurennustasoa on mahdollista muuttaa näytön suurennuksen käytön aikana lähennyskomennolla (<code>NVDA+Vaihto+Plus</code>) ja loitonnuskomennolla (<code>NVDA+Vaihto+Miinus</code>).</p>
 <table>
 <thead>
 <tr>
@@ -4949,7 +5060,7 @@ Oletus on 200 %.</p>
 
 <h5 id="MagnifierFilter">Värisuodatin</h5>
 <p>Näppäinkomento: <code>NVDA+Vaihto+I</code></p>
-<p>Tästä valitaan suurennuksen oletusarvoinen värisuodatin.</p>
+<p>Tästä valitaan näytön suurennuksen oletusarvoinen värisuodatin.</p>
 <p>Seuraavat vaihtoehdot ovat käytettävissä:</p>
 <table>
 <thead>
@@ -4991,12 +5102,12 @@ Oletus on 200 %.</p>
 </tr>
 </tbody>
 </table>
-<h5 id="MagnifierPanningStepSize">Panoroinnin askelkoko</h5>
-<p>Tällä asetuksella määritetään panoroinnin askelkoko prosentteina näkyvissä olevasta suurennetusta ikkunasta.
-Tällöin siis suurennettu näkymä siirtyy manuaalisia panorointikomentoja käytettäessä määritetyn prosenttiosuuden verran senhetkisestä näkyvissä olevan ikkunan koosta.
+<h5 id="MagnifierPanningStepSize">Vierityksen askelkoko</h5>
+<p>Tällä asetuksella määritetään vierityksen askelkoko prosentteina näkyvissä olevasta suurennetusta ikkunasta.
+Tällöin suurennettu näkymä siirtyy manuaalisia vierityskomentoja käytettäessä määritetyn prosenttiosuuden verran senhetkisestä näkyvissä olevan ikkunan koosta.
 Suuremmat prosenttiarvot siirtävät näkymää enemmän ja nopeuttavat näytöllä navigointia, kun taas pienemmät arvot mahdollistavat tarkemman hallinnan täsmällistä kohdistamista varten.
 Todellista etäisyyttä säädetään pikseleinä automaattisesti käytössä olevan suurennustason perusteella.</p>
-<p>Suurennettua näkymää voidaan siirtää panorointikomennoilla manuaalisesti mihin tahansa suuntaan seurantatilasta riippumatta.</p>
+<p>Suurennettua näkymää voidaan siirtää vierityskomennoilla manuaalisesti mihin tahansa suuntaan seurantatilasta riippumatta.</p>
 <table>
 <thead>
 <tr>
@@ -5016,7 +5127,7 @@ Todellista etäisyyttä säädetään pikseleinä automaattisesti käytössä ol
 </tbody>
 </table>
 <h5 id="MagnifierFollowMouse">Seuraa hiirtä</h5>
-<p>Tällä valintaruudulla määritetään, seuraako suurennus hiiren osoitinta.
+<p>Tällä valintaruudulla määritetään, seuraako näytön suurennus hiiren osoitinta.
 Kun se on valittuna, suurennettu näkymä seuraa automaattisesti hiiren osoitinta, mistä on hyötyä pääasiassa pelkän hiiren käyttäjille.</p>
 <table>
 <thead>
@@ -5037,8 +5148,8 @@ Kun se on valittuna, suurennettu näkymä seuraa automaattisesti hiiren osoitint
 </tbody>
 </table>
 <h5 id="MagnifierFollowSystemFocus">Seuraa kohdistusta</h5>
-<p>Tällä valintaruudulla määritetään, seuraako suurennus järjestelmän kohdistusta.
-Suurennettu näkymä seuraa tämän asetuksen ollessa käytössä automaattisesti järjestelmän kohdistusta, mistä on hyötyä pääasiassa näppäimistön avulla liikkuville käyttäjille, jotka haluavat suurennuksen seuraavan mukana.</p>
+<p>Tällä valintaruudulla määritetään, seuraako näytön suurennus kohdistusta.
+Suurennettu näkymä seuraa tämän asetuksen ollessa käytössä automaattisesti kohdistusta, mistä on hyötyä pääasiassa näppäimistön avulla liikkuville käyttäjille, jotka haluavat näytön suurennuksen seuraavan mukana.</p>
 <table>
 <thead>
 <tr>
@@ -5058,8 +5169,8 @@ Suurennettu näkymä seuraa tämän asetuksen ollessa käytössä automaattisest
 </tbody>
 </table>
 <h5 id="MagnifierFollowReviewCursor">Seuraa tarkastelukohdistinta</h5>
-<p>Tällä valintaruudulla määritetään, seuraako suurennus tarkastelukohdistinta.
-Suurennettu näkymä seuraa tämän asetuksen ollessa käytössä automaattisesti tarkastelukohdistinta, mistä on hyötyä käyttäjille, jotka liikkuvat sisällössä sen avulla ja haluavat suurennuksen seuraavan mukana.</p>
+<p>Tällä valintaruudulla määritetään, seuraako näytön suurennus tarkastelukohdistinta.
+Suurennettu näkymä seuraa tämän asetuksen ollessa käytössä automaattisesti tarkastelukohdistinta, mistä on hyötyä käyttäjille, jotka liikkuvat sisällössä sen avulla ja haluavat näytön suurennuksen seuraavan mukana.</p>
 <table>
 <thead>
 <tr>
@@ -5079,8 +5190,8 @@ Suurennettu näkymä seuraa tämän asetuksen ollessa käytössä automaattisest
 </tbody>
 </table>
 <h5 id="MagnifierFollowNavigatorObject">Seuraa navigointiobjektia</h5>
-<p>Tällä valintaruudulla määritetään, seuraako suurennus navigointiobjektia.
-Suurennettu näkymä seuraa tämän asetuksen ollessa käytössä automaattisesti navigointiobjektia, mistä on hyötyä käyttäjille, jotka liikkuvat sisällössä sen avulla ja haluavat suurennuksen seuraavan mukana.</p>
+<p>Tällä valintaruudulla määritetään, seuraako näytön suurennus navigointiobjektia.
+Suurennettu näkymä seuraa tämän asetuksen ollessa käytössä automaattisesti navigointiobjektia, mistä on hyötyä käyttäjille, jotka liikkuvat sisällössä sen avulla ja haluavat näytön suurennuksen seuraavan mukana.</p>
 <table>
 <thead>
 <tr>
@@ -5100,8 +5211,8 @@ Suurennettu näkymä seuraa tämän asetuksen ollessa käytössä automaattisest
 </tbody>
 </table>
 <h5 id="MagnifierTrackingModeSetting">Seurantatila</h5>
-<p>Tästä yhdistelmäruudusta valitaan suurennuksen aikana käytettävä seurantatila.
-Seurantatilaa on mahdollista vaihtaa omalla näppäinkomennolla, joka voidaan määrittää <a href="#InputGestures" title="Näppäinkomennot-valintaikkunassa">Näppäinkomennot-valintaikkunassa</a>.
+<p>Tästä yhdistelmäruudusta valitaan näytön suurennuksen aikana käytettävä seurantatila.
+Seurantatilaa on mahdollista vaihtaa omalla näppäinkomennollaan, joka voidaan määrittää <a href="#InputGestures" title="Näppäinkomennot-valintaikkunassa">Näppäinkomennot-valintaikkunassa</a>.
 Seuraavat vaihtoehdot ovat käytettävissä:</p>
 <table>
 <thead>
@@ -5179,9 +5290,13 @@ Seuraavat vaihtoehdot ovat käytettävissä:</p>
 <li>Aina: NVDA puhuu kaikki kirjoitetut sanat.</li>
 </ul>
 <h5 id="KeyboardSettingsSpeechInteruptForCharacters">Keskeytä puhe merkkejä kirjoitettaessa</h5>
-<p>Jos tämä valintaruutu on valittuna, puhe keskeytetään aina, kun näppäimistöltä syötetään jokin merkki. Asetus on oletusarvoisesti käytössä.</p>
+<p>Kun tämä asetus on käytössä, puhe keskeytetään aina merkkejä kirjoitettaessa.
+Tämä on oletusarvoisesti käytössä.
+Tämä asetus vaikuttaa kaikkeen NVDA:n puheeseen myös selaus- ja lomaketilassa sekä jatkuvassa luvussa.</p>
 <h5 id="KeyboardSettingsSpeechInteruptForEnter">Keskeytä puhe Enter-näppäintä painettaessa</h5>
-<p>Jos tämä valintaruutu on valittuna, puhe keskeytetään aina Enter-näppäintä painettaessa. Asetus on oletusarvoisesti käytössä.</p>
+<p>Puhe keskeytetään aina Enter-näppäintä painettaessa, kun tämä asetus on käytössä.
+Se on oletusarvoisesti käytössä.
+Tämä asetus vaikuttaa kaikkeen NVDA:n puheeseen myös selaus- ja lomaketilassa sekä jatkuvassa luvussa.</p>
 <h5 id="KeyboardSettingsSkimReading">Salli näppäinkomennot jatkuvassa luvussa</h5>
 <p>Jos tämä asetus on käytössä, tietyt navigointikomennot (kuten selaustilan pikanavigointi tai riveittäin/kappaleittain liikkuminen) eivät keskeytä jatkuvaa lukua, vaan siirtävät uuteen sijaintiin, jonka jälkeen lukemista jatketaan.</p>
 <h5 id="KeyboardSettingsBeepLowercase">Anna merkkiääni pieniä kirjaimia kirjoitettaessa Caps Lockin ollessa käytössä</h5>
@@ -5254,6 +5369,14 @@ Tätä asetusta voidaan muuttaa myös näppäinkomennolla NVDA+Ctrl+Alt+T.</p>
 <p>Tällä valintaruudulla määritetään menetelmä, jota käytetään kirjoitettaessa tekstiä kosketusnäppäimistöllä.
 Kun valintaruutu on valittuna, haluttua näppäintä painetaan etsimällä se näppäimistöltä ja nostamalla sormi näytöltä.
 Mikäli valintaruutu ei ole valittuna, näppäintä on painettava kaksoisnapauttamalla.</p>
+<h5 id="TouchEdgeGestures">Käytä reunaeleitä</h5>
+<p>Tällä valintaruudulla otetaan käyttöön reunaeleiden tuki.
+Kun tämä asetus on käytössä, enintään 15 mm päästä mistä tahansa näytön reunasta alkavat eleet tulkitaan erillisiksi eleiksi, ja ne voidaan määrittää toisistaan riippumatta <a href="#InputGestures" title="Näppäinkomennot-valintaikkunassa">Näppäinkomennot-valintaikkunassa</a>.
+Esimerkiksi näytön vasemmasta reunasta alkava oikealle suuntautuva pyyhkäisy voidaan määrittää eri komentoon kuin sama näytön keskellä tehtävä ele.
+Jos reunaeleet poistetaan käytöstä komentomääritysten tekemisen jälkeen, kyseiset määritykset säilyvät, mutta niitä ei koskaan käytetä.
+Huom: Windows tai tehtäväpalkki saattaa kaapata tietyillä reunoilla tehtävät eleet ennen kuin ne välittyvät NVDA:lle.
+Esimerkiksi alareunasta pyyhkäiseminen avaa yleensä Käynnistä-valikon tai Toimintokeskuksen, ja jos tehtäväpalkki on toisessa reunassa, kyseisen reunan eleet kaapataan samalla tavalla.
+Jos ele ei toimi jossain tietyssä reunassa, kannattaa tarkistaa, kaappaako Windows sen, ja jättää kyseinen reuna mahdollisesti määrittämättä.</p>
 <h4 id="ReviewCursorSettings">Tarkastelukohdistin</h4>
 <p>Tarkastelukohdistin-kategoriaa käytetään NVDA:n tarkastelukohdistimen toimintaan vaikuttavien asetusten määrittämiseen.
 Kategoria sisältää seuraavat asetukset:</p>
@@ -5374,7 +5497,7 @@ Esimerkiksi useita linkkejä sisältävä rivi puhutaan ja näytetään pistenä
 Jos asetus poistetaan käytöstä, linkit, painikkeet sekä muut vuorovaikutteiset elementit sijoitetaan omille riveilleen.
 Linkin tai painikkeen jälkeen tuleva ei-vuorovaikutteinen teksti pysyy kuitenkin samalla rivillä, jotta lukeminen olisi sujuvampaa.
 Tämä saattaa helpottaa sisällön ymmärtämistä sivua riveittäin selattaessa ja tehdä kohteiden kanssa vuorovaikutuksesta vaivattomampaa.</p>
-<h5 id="BrowseModeSettingsEnableOnPageLoad">Ota selaustila käyttöön sivua ladattaessa</h5>
+<h5 id="BrowseModeSettingsEnableOnPageLoad">Ota selaustila käyttöön sivua avattaessa</h5>
 <p>Tällä valintaruudulla määritetään, otetaanko selaustila käyttöön automaattisesti sivua ladattaessa.
 Kun asetus ei ole käytössä, selaustila voidaan edelleen ottaa käyttöön manuaalisesti verkkosivuilla tai asiakirjoissa, joissa selaustilaa tuetaan.
 Luettelo selaustilaa tukevista sovelluksista on <a href="#BrowseMode" title="Selaustila">Selaustila</a>-luvussa.
@@ -5383,7 +5506,7 @@ Asetus on oletusarvoisesti käytössä.</p>
 <h5 id="BrowseModeSettingsAutoSayAll">Lue sivu automaattisesti sen avauduttua</h5>
 <p>Tämä asetus määrittää, luetaanko sivu selaustilassa automaattisesti sen avauduttua.
 Asetus on oletusarvoisesti käytössä.</p>
-<h5 id="BrowseModeSettingsIncludeLayoutTables">Sisällytä asettelutaulukot</h5>
+<h5 id="BrowseModeSettingsIncludeLayoutTables">Näytä asettelutaulukot</h5>
 <p>Tämä asetus vaikuttaa siihen, miten NVDA käsittelee puhtaasti visuaaliseen esittämiseen käytettäviä taulukoita.
 Kun asetus on käytössä, NVDA käsittelee niitä normaaleina taulukoina (ts. ilmoittaa <a href="#DocumentFormattingSettings" title="asiakirjojen muotoiluasetusten">asiakirjojen muotoiluasetusten</a> mukaisesti sekä löytää ne pikanavigointikomennoilla).
 Kun asetus on poistettu käytöstä, asettelutaulukoita ei ilmaista eikä löydetä pikanavigointikomennoilla.
@@ -5405,6 +5528,51 @@ Takaisin selaustilaan palataan, kun kentästä siirrytään pois nuolinäppäimi
 <p>Tällä oletusarvoisesti käytössä olevalla asetuksella voidaan määrittää, estetäänkö muiden kuin NVDA:n ja yleisten näppäinkomentojen välittyminen aktiivisena olevaan asiakirjaan.
 Jos asetuksen käytössä ollessa painetaan esimerkiksi J-kirjainta, sen välittyminen asiakirjaan estetään, koska se ei ole pikanavigointikomento eikä todennäköisesti myöskään sovelluksen käytössä oleva näppäinkomento.
 Estettyä näppäintä painettaessa toistetaan Windowsin oletusmerkkiääni.</p>
+<h5 id="SearchHistory">Säilytä hakuhistoria</h5>
+<p>Tämä oletusarvoisesti käytössä oleva asetus määrittää, muistaako Etsi-valintaikkuna nykyisen NVDA-istunnon aikana etsityt hakusanat.
+Kun asetus on käytössä, Etsi-valintaikkunan yhdistelmäruudusta on valittavissa enintään 20 viimeisintä hakusanaa; hakuhistoria säilytetään vain muistissa ja se tyhjennetään, kun NVDA käynnistetään uudelleen.
+Jos yhdistelmäruutu haittaa syöttötavan käyttöä (kuten joidenkin IME-ohjelmien yhteydessä), asetukseksi voidaan valita "Ei käytössä", jolloin Etsi-valintaikkunassa käytetään tavallista muokkauskenttää.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asetukset</td>
+<td>Oletus (Käytössä), Ei käytössä, Käytössä</td>
+</tr>
+<tr>
+<td>Oletus</td>
+<td>Käytössä</td>
+</tr>
+</tbody>
+</table>
+<h5 id="NativeSelectionModeSetting">Alkuperäinen valintatila</h5>
+<p>Tämä oletusarvoisesti poissa käytöstä oleva asetus määrittää, otetaanko <a href="#NativeSelectionMode" title="alkuperäinen valintatila">alkuperäinen valintatila</a> automaattisesti käyttöön sitä tukevissa selaustila-asiakirjoissa.
+Asetuksella ei ole vaikutusta Microsoft Wordissa eikä Outlookissa, joissa alkuperäinen valintatila on aina käytössä.
+Kun asetus ei ole käytössä, alkuperäinen valintatila voidaan silti ottaa käyttöön asiakirjakohtaisesti näppäinkomennolla <code>NVDA+Vaihto+F10</code>.
+Tämän asetuksen muutos tulee voimaan uusia asiakirjoja avattaessa.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asetukset</td>
+<td>Oletus (Ei käytössä), Ei käytössä, Käytössä</td>
+</tr>
+<tr>
+<td>Oletus</td>
+<td>Ei käytössä</td>
+</tr>
+</tbody>
+</table>
 <h5 id="BrowseModeSettingsBrowseModeNavigationElements">Selaustilan kosketusnavigoinnin elementit</h5>
 <p>Tästä luettelosta valitaan selaustilan kosketusnavigoinnissa käytettävissä olevat elementtityypit.
 Ne otetaan käyttöön tai poistetaan käytöstä valintaruutujen avulla.
@@ -5443,6 +5611,7 @@ Seuraavien tietojen ilmoittaminen voidaan määrittää:</p>
 <li>Sivunumerot</li>
 <li>Rivinumerot</li>
 <li>Rivien sisennysten ilmoittaminen <a href="#DocumentFormattingSettingsLineIndentation" title="(ei käytössä, puheella, merkkiäänillä, puheella ja merkkiäänillä)">(ei käytössä, puheella, merkkiäänillä, puheella ja merkkiäänillä)</a></li>
+<li>Sisennysmerkkiäänen kesto (ms)</li>
 <li>Tyhjien rivien ohittaminen rivien sisennyksiä ilmoitettaessa</li>
 <li>Kappalesisennykset (esim. riippuva ja ensimmäisen rivin sisennys)</li>
 <li>Rivivälit (yksin- ja kaksinkertainen jne.)</li>
@@ -5515,6 +5684,10 @@ Merkkiäänen korkeus nousee jokaisen välilyönnin kohdalla, ja sarkainmerkki v
 </ul>
 <p>Jos valitset "Ohita tyhjät rivit rivien sisennystä ilmoitettaessa" -valintaruudun, sisennyksen muutoksia ei ilmoiteta tyhjillä riveillä.
 Tästä voi olla hyötyä luettaessa esim. ohjelman lähdekoodia, jossa tyhjiä rivejä käytetään sisennettyjen tekstilohkojen erottamiseen toisistaan.</p>
+<h5 id="IndentToneDuration">Sisennysmerkkiäänen kesto</h5>
+<p>Tällä asetuksella määritetään sisennysmerkkiäänen kesto, kun <a href="#DocumentFormattingSettingsLineIndentation" title="Rivien sisennysten ilmoittaminen">Rivien sisennysten ilmoittaminen</a> -yhdistelmäruudusta on valittuna "Merkkiäänillä" tai "Puheella ja merkkiäänillä".
+Arvo voi olla väliltä 10–2000 ms.
+Oletus on 40 ms.</p>
 <h4 id="DocumentNavigation">Asiakirjassa liikkuminen</h4>
 <p>Tästä kategoriasta voidaan määrittää asiakirjassa liikkumisen asetuksia.</p>
 <h5 id="ParagraphStyle">Kappaletyyli</h5>
@@ -5548,6 +5721,54 @@ Tämä tyyli toimii parhaiten asiakirjoissa, joissa käytetään lohkokappaleita
 Tätä tyyliä ei voi käyttää Microsoft Wordissa eikä Outlookissa, ellei Word-asiakirjojen käsittelyyn käytetä UI Automation -rajapintaa.</li>
 </ul>
 <p>Kappaletyyliä on mahdollista vaihtaa mistä tahansa omalla näppäinkomennolla, joka voidaan määrittää <a href="#InputGestures" title="Näppäinkomennot-valintaikkunassa">Näppäinkomennot-valintaikkunassa</a>.</p>
+<h5 id="WordSegmentationStandard">Sanojen erottelumenetelmä</h5>
+<p>Tämä asetus määrittää, miten sanojen rajat tunnistetaan sanoittain liikuttaessa.
+Tämä vaikuttaa siihen, miten teksti jaetaan sanoiksi, lauseiksi ja kappaleiksi kirjoitusjärjestelmissä, joissa ei käytetä välilyöntejä.
+Kiinalaisen pistekirjoituksen tulostuksessa käytetään erillistä <a href="#ChineseBrailleWordSegmentation" title="kiinankielisten sanojen erotteluasetusta">kiinankielisten sanojen erotteluasetusta</a> paitsi silloin, kun käytössä oleva tulostustaulukko on "mandariinikiina (Taiwan)".</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asetukset</td>
+<td>Oletus (Automaattinen), Automaattinen, kiinalainen, Unicode (ICU), Perinteinen (Uniscribe)</td>
+</tr>
+<tr>
+<td>Oletus</td>
+<td>Automaattinen</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Asetus</th>
+<th>Toiminta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automaattinen</td>
+<td>Kiinankielisessä tekstissä käytetään kiinankielisten sanojen erottelua, mikäli se on käytettävissä. Muutoin suositaan Unicode (ICU) -menetelmää ja viimeisenä vaihtoehtona käytetään Windowsin perinteistä sanojen erottelua.</td>
+</tr>
+<tr>
+<td>kiinalainen</td>
+<td>Käytetään kiinankielisten sanojen erottelua. Jos se ei ole käytettävissä, NVDA käyttää samaa varavaihtoehtoa kuin <code>Automaattinen</code>-asetuksessa.</td>
+</tr>
+<tr>
+<td>Unicode (ICU)</td>
+<td>Sanojen erotteluun käytetään Windows 10:n versiossa 1703 (Creators Update) ja sitä uudemmissa saatavilla olevaa sisäänrakennettua ICU-kirjastoa, ja muutoin turvaudutaan vanhaan menetelmään.</td>
+</tr>
+<tr>
+<td>Perinteinen (Uniscribe)</td>
+<td>Käytetään Windowsin vanhempaa sanojen erottelumenetelmää, jota hyödynnetään perinteisessä Muistiossa ja muissa vanhemmissa Win32-muokkauskentissä.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="MathSettings">Matemaattisen sisällön asetukset</h4>
 <p>Tässä kategoriassa voidaan muuttaa matemaattisen sisällön lukutapaa.</p>
 <h5 id="MathCATSpeechOptions">Puheasetukset</h5>
@@ -6093,32 +6314,32 @@ Tästä on hyötyä erityisesti alfa- ja beetatestaajille, jotka testaavat lisä
 Tämä voi olla hyödyllistä alueilla, joissa NV Accessin lisäosakaupan palvelimen käyttö on hidasta tai pääsyä ei ole lainkaan.</p>
 <p>Nykyisen peilipalvelimen URL-osoite näytetään vain luku -tyyppisessä tekstikentässä.
 Jos peilipalvelin ei ole käytössä (ts. käytetään NV Accessin lisäosakaupan palvelinta), tekstikentässä näytetään "Ei peilipalvelinta".</p>
-<p>Mikäli haluat vaihtaa lisäosakaupan peilipalvelinta, avaa <a href="#SetURLDialog" title="Määritä lisäosakaupan peilipalvelin -valintaikkuna">Määritä lisäosakaupan peilipalvelin -valintaikkuna</a> painamalla "Vaihda..."-painiketta.</p>
+<p>Jos lisäosakaupan peilipalvelinta halutaan vaihtaa, avataan <a href="#SetURLDialog" title="Määritä lisäosakaupan peilipalvelin -valintaikkuna">Määritä lisäosakaupan peilipalvelin -valintaikkuna</a> painamalla "Vaihda..."-painiketta.</p>
 <h4 id="RemoteSettings">Etäkäyttö</h4>
 <p>Tämä kategoria mahdollistaa <a href="#RemoteAccess" title="etäkäytön">etäkäytön</a> toiminnan määrittämisen.</p>
 <h5 id="RemoteEnable">Salli etäkäyttö</h5>
-<p>Ota NVDA:n etäkäyttötoiminto käyttöön tai poista se käytöstä tällä valintaruudulla.</p>
+<p>NVDA:n etäkäyttötoiminto otetaan käyttöön tai poistetaan käytöstä tällä valintaruudulla.</p>
 <p>Kun se ei ole valittuna, etäkäyttötoiminto ei ole käytettävissä.</p>
-<p>Huom: Jos haluat jatkaa etäkäyttöistuntoa suojatuissa ympäristöissä, kuten käyttäjätilien valvonnan kehotteissa, sinun on otettava tämä asetus käyttöön, tallennettava muutokset ja <a href="#GeneralSettingsCopySettings" title="kopioitava sen jälkeen asetuksesi NVDA:n järjestelmäasetusten hakemistoon">kopioitava sen jälkeen asetuksesi NVDA:n järjestelmäasetusten hakemistoon</a>.
+<p>Huom: Jos etäkäyttöistuntoa halutaan jatkaa suojatuissa ympäristöissä, kuten käyttäjätilien valvonnan kehotteissa, tämä asetus on otettava käyttöön, tallennettava muutokset ja <a href="#GeneralSettingsCopySettings" title="kopioitava sen jälkeen asetukset NVDA:n järjestelmäasetusten hakemistoon">kopioitava sen jälkeen asetukset NVDA:n järjestelmäasetusten hakemistoon</a>.
 Etäkäyttö jatkaa suojatuilla työpöydillä vain asennetun NVDA-version aloittamia istuntoja.
 Tämä tarkoittaa, että NVDA:n massamuistiversiota ei voi käyttää etäkäyttöistunnon aloittamiseen ja sen jatkamiseen suojatuissa ympäristöissä.</p>
 <p>Seuraavat asetukset ovat käytettävissä vain, jos etäkäyttö on sallittu.</p>
-<h5 id="RemoteConfirmDisconnect">Pyydä vahvistus yhteyden katkaisulle, kun tätä konetta hallitaan</h5>
-<p>Tämä asetus määrittää, pyydetäänkö etäkäyttöistunnon lopettamiselle vahvistus, kun tätä konetta hallitaan.</p>
-<p>Kun se on valittuna, NVDA pyytää vahvistuksen ennen yhteyden katkaisua.
+<h5 id="RemoteConfirmDisconnect">Pyydä vahvistus yhteyden katkaisulle tätä konetta hallittaessa</h5>
+<p>Tämä asetus määrittää, pyydetäänkö etäkäyttöistunnon yhteyden katkaisulle vahvistus, kun yhteys on muodostettu hallittavana koneena.</p>
+<p>Kun se on valittuna, NVDA pyytää vahvistuksen ennen yhteyden katkaisemista.
 Mikäli asetus ei ole valittuna, NVDA katkaisee yhteyden heti pyytämättä vahvistusta.</p>
 <h5 id="RemoteMuteOnLocalControl">Mykistä paikallista konetta hallittaessa</h5>
-<p>Tämä asetus määrittää, toistetaanko etäkoneen puhe ja äänet hallitessasi paikallista konetta.</p>
-<p>Kun tämä on valittuna, etäkäyttö mykistetään automaattisesti, kun yhteys muodostetaan ensin hallitsevana koneena ja vaihdettaessa myöhemmin paikallisen koneen hallintaan.
-Kun tämä ei ole valittuna, etäkäyttöistunnot aloitetaan ilman mykistystä, ja käyttäjän on itse mykistettävä ne tarvittaessa.</p>
-<p>Etäkäytön mykistys voidaan edelleen ottaa käyttöön tai poistaa käytöstä manuaalisesti paikallista konetta hallittaessa <a href="#RemoteAccessUsage" title="Etäkäyttö-valikon kautta">Etäkäyttö-valikon kautta</a> tai omalla näppäinkomennolla, joka on mahdollista määrittää <a href="#InputGestures" title="Näppäinkomennot-valintaikkunassa">Näppäinkomennot-valintaikkunassa</a>.</p>
+<p>Tämä asetus määrittää, toistetaanko etäkoneen puhe ja äänet paikallista konetta hallittaessa.</p>
+<p>Kun tämä on valittuna, etäkone mykistetään automaattisesti, kun yhteys muodostetaan ensin hallitsevana koneena ja vaihdetaan myöhemmin paikallisen koneen hallintaan.
+Kun tämä ei ole valittuna, etäkäyttöistunnot aloitetaan mykistämättöminä, ja käyttäjän on itse mykistettävä ne tarvittaessa.</p>
+<p>Etäkone voidaan edelleen mykistää tai sen mykistys poistaa manuaalisesti paikallista konetta hallittaessa <a href="#RemoteAccessUsage" title="Etäkäyttö-valikon kautta">Etäkäyttö-valikon kautta</a> tai omalla näppäinkomennollaan, joka on mahdollista määrittää <a href="#InputGestures" title="Näppäinkomennot-valintaikkunassa">Näppäinkomennot-valintaikkunassa</a>.</p>
 <h5 id="RemoteAutoconnect">Yhdistä automaattisesti NVDA:n käynnistyessä</h5>
 <p>Tämä asetus mahdollistaa etäkäyttöistunnon aloittamisen automaattisesti NVDA:n käynnistyessä.
-Tämä voi olla hyödyllistä esimerkiksi silloin, kun haluat hallita kotitietokonettasi ollessasi poissa kotoa.</p>
-<p>Ole varovainen ottaessasi tätä asetusta käyttöön, sillä se saattaa lisätä tietokoneesi luvattoman käytön riskiä.</p>
+Tästä voi olla hyötyä esimerkiksi silloin, kun kotitietokonetta halutaan hallita kodin ulkopuolelta.</p>
+<p>§Tätä asetusta käyttöön otettaessa on syytä olla varovainen, sillä se saattaa lisätä tietokoneen luvattoman käytön riskiä.</p>
 <p>Lisätietoja seuraavista asetuksista on luvussa <a href="#RemoteAccessSetup" title="Etäkäyttöistunnon määrittäminen">Etäkäyttöistunnon määrittäminen</a></p>
 <h5 id="RemoteAutoconnectMode">Tila</h5>
-<p>Valitse automaattisen yhdistämisen yhteystila.</p>
+<p>Tästä valitaan automaattisessa yhteyden muodostamisessa käytettävä yhteystila.</p>
 <p>Tämä asetus on käytettävissä vain, kun <a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a> on valittuna.</p>
 <table>
 <thead>
@@ -6130,17 +6351,17 @@ Tämä voi olla hyödyllistä esimerkiksi silloin, kun haluat hallita kotitietok
 <tbody>
 <tr>
 <td>Salli tämän koneen hallinta</td>
-<td>Käytä tätä tietokonetta "hallittavana" koneena. Tämä sallii "hallitsevaa" tietokonetta käyttävän henkilön käyttää tätä konetta ikään kuin hän istuisi sen ääressä.</td>
+<td>Tätä tietokonetta käytetään hallittavana koneena. Hallitsevaa tietokonetta käyttävälle henkilölle sallitaan tämän tietokoneen käyttö ikään kuin hän olisi sen ääressä.</td>
 </tr>
 <tr>
 <td>Hallitse toista konetta</td>
-<td>Käytä tätä tietokonetta "hallitsevana" koneena. Tämä sallii sinun suorittaa komentoja etäkoneessa.</td>
+<td>Tätä tietokonetta käytetään hallitsevana koneena. Tämä mahdollistaa komentojen suorittamisen etäkoneessa.</td>
 </tr>
 </tbody>
 </table>
 <h5 id="RemoteAutoconnectServer">Palvelin</h5>
-<p>Valitse tämä automaattista yhdistämistä varten.</p>
-<p>Tämä asetus on käytettävissä vain, kun <a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a> on valittuna.</p>
+<p>Tästä valitaan automaattisessa yhteyden muodostamisessa käytettävä palvelimen tyyppi.</p>
+<p>Se on käytettävissä vain, kun <a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a> on valittuna.</p>
 <table>
 <thead>
 <tr>
@@ -6151,29 +6372,29 @@ Tämä voi olla hyödyllistä esimerkiksi silloin, kun haluat hallita kotitietok
 <tbody>
 <tr>
 <td>Käytä olemassa olevaa</td>
-<td>Käytä olemassa olevaa etäkäyttöpalvelinta yhteyden välittämiseen (suositellaan).</td>
+<td>Käytetään olemassa olevaa etäkäyttöpalvelinta yhteyden välittämiseen (suositellaan).</td>
 </tr>
 <tr>
 <td>Isännöi paikallisesti</td>
-<td>Käytä tätä NVDA-versiota etäkäyttöpalvelimena (edistyneille käyttäjille). Tämä asetus saattaa edellyttää sellaisia verkon määrityksiä, joita ei käsitellä tässä käyttöohjeessa.</td>
+<td>Käytetään tätä NVDA-versiota etäkäyttöpalvelimena (edistyneille käyttäjille). Tämä vaihtoehto saattaa edellyttää sellaisia verkon määrityksiä, joita ei käsitellä tässä käyttöohjeessa.</td>
 </tr>
 </tbody>
 </table>
 <h5 id="RemoteAutoconnectHost">Isäntä</h5>
-<p>Määritä tässä kentässä etäkäyttöpalvelimen URL-osoite, jota käytetään automaattisissa yhteyksissä.
-Jos palvelin käyttää muuta porttia kuin 6837, lisää se kaksoispisteen jälkeen (esim. palvelin.com:1234).</p>
-<p>Tämä asetus on käytettävissä vain, kun <a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a> on valittuna ja <a href="#RemoteAutoconnectServer" title="palvelimeksi">palvelimeksi</a> on määritetty "Käytä olemassa olevaa".</p>
+<p>Tässä kentässä määritetään automaattisessa yhteyden muodostamisessa käytettävä etäkäyttöpalvelimen URL-osoite.
+Jos palvelin käyttää muuta porttia kuin 6837, portin numero lisätään kaksoispisteen jälkeen (esim. palvelin.com:1234).</p>
+<p>Se on käytettävissä vain, kun <a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a> on valittuna ja <a href="#RemoteAutoconnectServer" title="palvelimeksi">palvelimeksi</a> on määritetty "Käytä olemassa olevaa".</p>
 <h5 id="RemoteAutoconnectPort">Portti</h5>
-<p>Määritä tässä kentässä TCP-portti, jota käytetään automaattisissa yhteyksissä.</p>
-<p>Tämä asetus on käytettävissä vain, kun <a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a> on valittuna ja <a href="#RemoteAutoconnectServer" title="palvelimeksi">palvelimeksi</a> on määritetty "Isännöi paikallisesti".</p>
+<p>Tässä kentässä määritetään automaattisessa yhteyden muodostamisessa käytettävä TCP-portti.</p>
+<p>Se on käytettävissä vain, kun <a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a> on valittuna ja <a href="#RemoteAutoconnectServer" title="palvelimeksi">palvelimeksi</a> on määritetty "Isännöi paikallisesti".</p>
 <h5 id="RemoteAutoconnectKey">Avain</h5>
-<p>Määritä tässä kentässä avain (salasana), jota käytetään automaattisissa yhteyksissä.</p>
-<p>Tämä asetus on käytettävissä vain, kun <a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a> on valittuna.</p>
+<p>Tässä kentässä määritetään automaattisessa yhteyden muodostamisessa käytettävä avain eli salasana.</p>
+<p>Se on käytettävissä vain, kun <a href="#RemoteAutoconnect" title="Yhdistä automaattisesti NVDA:n käynnistyessä">Yhdistä automaattisesti NVDA:n käynnistyessä</a> on valittuna.</p>
 <h5 id="RemoteDeleteFingerprints">Poista kaikki luotetut sormenjäljet</h5>
-<p>Tämän painikkeen painaminen saa NVDA:n unohtamaan kaikki aiemmin luotettujen etäkäyttöpalvelinten sormenjäljet.
-Tämä tarkoittaa, että sinulta kysytään uudelleen, haluatko muodostaa yhteyden kaikkiin valtuuttamattomiin etäkäyttöpalvelimiin – myös sellaisiin, joihin olet aiemmin muodostanut yhteyden.
+<p>Tällä painikkeella poistetaan kaikkien aiemmin luotetuiksi hyväksyttyjen etäkäyttöpalvelinten sormenjäljet.
+Tämän jälkeen tunnistamattomiin etäkäyttöpalvelimiin yhdistäminen edellyttää uutta vahvistusta, vaikka samaan palvelimeen olisi jo muodostettu yhteys aiemmin.
 NVDA pyytää vahvistuksen sormenjälkien poistolle.</p>
-<p>Tämä asetus on käytettävissä vain, jos asetuksiisi on tallennettu luotettuja sormenjälkiä.</p>
+<p>Tämä painike on käytettävissä vain, jos asetuksiin on tallennettu luotettujen etäkäyttöpalvelinten sormenjälkiä.</p>
 <h4 id="Win10OcrSettings">Windowsin tekstintunnistusasetukset</h4>
 <p>Tämän kategorian asetuksilla voidaan vaikuttaa <a href="#Win10Ocr" title="Windowsin tekstintunnistuksen">Windowsin tekstintunnistuksen</a> toimintaan.
 Seuraavat asetukset ovat käytettävissä:</p>
@@ -6196,12 +6417,12 @@ Tästä voi olla hyötyä alueilla, joilla yhteys NV Accessin palvelimille on n�
 <li><a href="#AddonStoreMetadataMirror" title="lisäosakaupan peilipalvelinta">lisäosakaupan peilipalvelinta</a> käyttöön otettaessa tämän valintaikkunan otsikkona on "Määritä lisäosakaupan peilipalvelin".</li>
 </ul>
 <h5 id="SetURLTextbox">URL-osoite</h5>
-<p>Syötä tähän käytettävän peilipalvelimen URL-osoite.
+<p>Tähän syötetään käytettävän peilipalvelimen URL-osoite.
 Vain HTTP- ja HTTPS-osoitteita tuetaan.
 NV Access suosittelee käyttämään tietosuojan vuoksi HTTPS-osoitteita aina kun se on mahdollista.</p>
-<p>Käytä oletusarvoista NV Accessin palvelinta jättämällä tämä tyhjäksi.</p>
+<p>Oletusarvoista NV Accessin palvelinta käytetään jättämällä tämä tyhjäksi.</p>
 <h5 id="SetURLTest">Testaa...</h5>
-<p>Testaa antamasi URL-osoitteen toimivuus painamalla tätä painiketta.
+<p>Annettu URL-osoitteen toimivuus testataan painamalla tätä painiketta.
 Internet-yhteyden on oltava käytettävissä, jotta testi onnistuu.
 Suosittelemme aina testaamaan URL-osoitteen toimivuuden ennen sen tallentamista.</p>
 <h4 id="CopyAddonsToSystemProfileDialog">Asetusten kopiointi järjestelmänlaajuisiksi</h4>
@@ -6237,15 +6458,15 @@ Näihin asetuksiin tulee tehdä muutoksia vain, jos olet varma, mitä teet tai j
 <p>Palauta oletukset -painike palauttaa asetusten oletusarvot, vaikka vahvistusvalintaruutua ei ole valittu.
 Oletusarvojen palauttaminen voi olla joskus tarpeen, kun asetuksia on muutettu.
 Näin voi tehdä myös silloin, jos ei ole varma, onko asetuksia muutettu.</p>
-<h5 id="AdvancedSettingsEnableScratchpad">Lataa mukautettu koodi kehittäjän Scratchpad-hakemistosta</h5>
+<h5 id="AdvancedSettingsEnableScratchpad">Lataa kehittäjän oma koodi Scratchpad-hakemistosta</h5>
 <p>Koodin testaaminen on hyödyllistä NVDA:n lisäosia kehitettäessä.
-Tämä asetus sallii käytössä ollessaan NVDA:n ladata mukautettuja sovellusmoduuleita, yleisliitännäisiä, pistenäyttö- ja syntetisaattoriajureita sekä näönparannuksen tarjoajia erityisestä kehittäjille tarkoitetusta scratchpad-nimisestä hakemistosta, joka sijaitsee NVDA:n käyttäjäkohtaisessa asetushakemistossa.
+Kun tämä asetus on käytössä, NVDA voi ladata mukautettuja sovellusmoduuleita, yleisliitännäisiä, pistenäyttö- ja syntetisaattoriajureita sekä näönparannuksen palveluita erityisestä kehittäjille tarkoitetusta scratchpad-nimisestä hakemistosta, joka sijaitsee NVDA:n käyttäjäkohtaisessa asetushakemistossa.
 Kuten niiden vastineet lisäosissa, nämä moduulit ladataan NVDA:ta käynnistettäessä tai sovellusmoduulien ja yleisliitännäisten tapauksessa <a href="#ReloadPlugins" title="liitännäisiä uudelleenladattaessa">liitännäisiä uudelleenladattaessa</a>.
 Tämä asetus on oletusarvoisesti poissa käytöstä, mikä varmistaa, ettei NVDA suorita testaamatonta koodia käyttäjän tietämättä.
-Jos haluat jakaa koodiasi muille käyttäjille, se tulee paketoida NVDA:n lisäosaksi.</p>
-<h5 id="AdvancedSettingsOpenScratchpadDir">Avaa kehittäjän Scratchpad-hakemisto</h5>
+Jos koodia halutaan jakaa muille käyttäjille, se tulee paketoida NVDA:n lisäosaksi.</p>
+<h5 id="AdvancedSettingsOpenScratchpadDir">Avaa Scratchpad-hakemisto</h5>
 <p>Tämä painike avaa hakemiston, johon kehittäjä voi sijoittaa koodiaan.
-Se on käytettävissä vain, jos NVDA on määritetty lataamaan mukautettua koodia kehittäjien scratchpad-hakemistosta.</p>
+Se on käytettävissä vain, jos NVDA on määritetty lataamaan kehittäjän omaa koodia scratchpad-hakemistosta.</p>
 <h5 id="AdvancedSettingsSelectiveUIAEventRegistration">UI Automation -tapahtumien ja ominaisuusmuutosten rekisteröinti</h5>
 <table>
 <thead>
@@ -6289,8 +6510,8 @@ Asetuksella on seuraavat arvot:</p>
 <p>Kun tämä asetus on otettu käyttöön, NVDA yrittää käyttää Microsoftin UI Automation -saavutettavuusrajapintaa tietojen hakemiseen Microsoft Excelin laskentataulukoista.
 Tämä on kokeellinen ominaisuus, eivätkä kaikki Excelin ominaisuudet ole välttämättä käytettävissä sen avulla.
 Tällaisia ovat esim. kaavat ja kommentit näyttävä NVDA:n elementtilista sekä laskentataulukon lomakekenttiin siirtävät selaustilan pikanavigointikomennot.
-Laskentataulukon perusnavigointiin ja muokkaukseen tämä asetus saattaa kuitenkin tarjota merkittävän suorituskyvyn parannuksen.
-Emme vielä suosittele tämän asetuksen oletusarvoista käyttöön ottoa suurimmalle osalle käyttäjistä, mutta Excel 16.0.13522.10000 tai uudemman käyttäjiltä palaute on tervetullutta.
+Laskentataulukon perusnavigoinnin ja muokkauksen suorituskykyä tämä asetus saattaa kuitenkin parantaa merkittävästi.
+Emme vielä suosittele tämän asetuksen oletusarvoista käyttöönottoa suurimmalle osalle käyttäjistä, mutta Excel 16.0.13522.10000 tai uudemman käyttäjiltä palaute on tervetullutta.
 Excelin UI automation -rajapinnan toteutus muuttuu jatkuvasti, eivätkä Microsoft Officen 16.0.13522.10000:ta vanhemmat versiot välttämättä tarjoa tarpeeksi tietoja tämän asetuksen hyödyntämiseen.</p>
 <h5 id="UIAEnhancedEventProcessing">Käytä laajennettua tapahtumienkäsittelyä</h5>
 <table>
@@ -6540,7 +6761,9 @@ Ne ovat:</p>
 <p>Kaikissa sanastovalintaikkunoissa on luettelo säännöistä, joita käytetään puhutun tekstin käsittelyyn.
 Valintaikkunoissa on myös Lisää-, Muokkaa-, Poista- ja Poista kaikki -painikkeet.</p>
 <p>Sanastoon lisätään uusi sääntö painamalla Lisää-painiketta, täyttämällä näkyviin tulevan valintaikkunan kentät ja painamalla OK.
-Lisätty sääntö näkyy tämän jälkeen sääntöluettelossa.
+Lisätty sääntö näkyy tämän jälkeen sääntöluettelossa.</p>
+<p>Sääntöjen muokkaaminen ja poistaminen onnistuu pikavalikon kautta.
+Valittu sääntö voidaan poistaa myös Delete-näppäimellä.
 Tehtyjen muutosten tallentaminen varmistetaan poistumalla sanastovalintaikkunasta painamalla OK.</p>
 <p>Puhesanastosääntöjen avulla merkkijono voidaan muuttaa joksikin muuksi.
 Yksinkertaisena esimerkkinä tästä voisi olla, että NVDA saadaan sanomaan "sammakko" jokaisen lintu-sanan kohdalla.
@@ -6622,7 +6845,10 @@ Tämän jälkeen painetaan haluttua näppäinkomentoa, kuten näppäimistön nä
 Näppäinkomento voidaan usein tulkita useammalla kuin yhdellä tavalla.
 Jos esim. painetaan näppäimistön näppäintä, sen halutaan ehkä toimivan vain käytössä olevassa näppäinasettelussa (pöytäkone tai kannettava) tai niissä kaikissa.
 Tällöin näkyviin tulee valikko, josta haluttu vaihtoehto valitaan.</p>
-<p>Näppäinkomento poistetaan komennosta valitsemalla se ja painamalla Poista-painiketta.</p>
+<p>Näppäinkomentoja on mahdollista lisätä, muuttaa ja poistaa myös pikavalikon kautta.
+Näppäinkomentoa muutetaan valitsemalla se ja painamalla Muuta-painiketta.
+Tämän jälkeen suoritetaan uusi näppäinkomento, joka korvaa vanhan.
+Näppäinkomento poistetaan painamalla <code>Delete</code>-näppäintä tai Poista-painiketta.</p>
 <p>Jäljiteltävät näppäimistön näppäimet -kategoriassa on NVDA-komentoja, jotka jäljittelevät näppäimistön näppäimiä.
 Niitä voidaan käyttää näppäimistön ohjaamiseen suoraan pistenäytöltä.
 Jäljiteltävä näppäinkomento lisätään valitsemalla Jäljiteltävät näppäimistön näppäimet -kategoria ja painamalla Lisää-painiketta.
@@ -6688,8 +6914,10 @@ Myös näppäinkomentoa voidaan käyttää:</p>
 
 <p>Tämän valintaikkunan ensimmäinen ohjausobjekti on profiililuettelo, josta voidaan valita jokin käytettävissä olevista profiileista.
 Tällä hetkellä muokattava profiili on valittuna valintaikkunaa avattaessa.
-Käytössä olevista profiileista näytetään myös lisätietoa, joka ilmaisee, ovatko ne manuaalisesti tai käynnistimellä käyttöönotettavia ja/tai muokattavia.</p>
+Käytössä olevista profiileista näytetään myös lisätietoa, joka ilmaisee, ovatko ne manuaalisesti tai käynnistimellä käyttöön otettavia ja/tai muokattavia.</p>
 <p>Profiili nimetään uudelleen tai poistetaan painamalla Nimeä uudelleen- tai Poista-painikkeita.</p>
+<p>Profiileja voidaan nimetä uudelleen tai poistaa myös niiden pikavalikosta.
+Valittu profiili voidaan myös nimetä uudelleen <code>F2</code>-näppäimellä tai poistaa <code>Delete</code>-näppäimellä.</p>
 <p>Valintaikkuna suljetaan painamalla Sulje-painiketta.</p>
 <h4 id="ProfilesCreating">Profiilin luominen</h4>
 <p>Profiili luodaan painamalla Uusi-painiketta.</p>
@@ -6702,11 +6930,11 @@ Lisätietoja käynnistimistä on <a href="#ConfigProfileTriggers" title="jäljem
 <p>Profiili luodaan ja valintaikkuna suljetaan painamalla OK, jonka jälkeen kyseistä profiilia voidaan muokata.</p>
 <h4 id="ConfigProfileManual">Manuaalinen käyttöönotto</h4>
 <p>Profiili voidaan ottaa käyttöön manuaalisesti valitsemalla se ja painamalla Ota käyttöön manuaalisesti -painiketta.
-Tämän jälkeen voidaan edelleen ottaa käyttöön muita profiileja käynnistimien avulla, mutta manuaalisesti käyttöönotetun profiilin asetukset ovat etusijalla.
-Jos esim. linkkien ilmoittaminen on käytössä nykyiselle sovellukselle käynnistimen avulla käyttöön otetussa profiilissa mutta poissa käytöstä manuaalisesti käyttöönotetussa, linkkejä ei tällöin ilmoiteta.
-Jos puheääntä on kuitenkin vaihdettu käynnistimellä käyttöönotetussa profiilissa muttei manuaalisesti käyttöönotetussa, tällöin käytetään käynnistimellä käyttöönotetun profiilin puheääntä.
-Kaikki muokatut asetukset tallennetaan manuaalisesti käyttöönotettuun profiiliin.
-Manuaalisesti käyttöönotettu profiili poistetaan käytöstä valitsemalla se Asetusprofiilit-valintaikkunasta ja painamalla Poista käytöstä manuaalisesti -painiketta.</p>
+Tämän jälkeen muita profiileja voidaan edelleen ottaa käyttöön käynnistimien avulla, mutta manuaalisesti käyttöön otetun profiilin asetukset ovat aina ensisijaisia.
+Jos esim. linkkien ilmoittaminen on käytössä nykyiselle sovellukselle käynnistimen avulla käyttöön otetussa profiilissa mutta poissa käytöstä manuaalisesti käyttöön otetussa, linkkejä ei tällöin ilmoiteta.
+Jos puheääntä on kuitenkin vaihdettu käynnistimellä käyttöön otetussa profiilissa muttei manuaalisesti käyttöön otetussa, tällöin käytetään käynnistimellä käyttöön otetun profiilin puheääntä.
+Kaikki muokatut asetukset tallennetaan manuaalisesti käyttöön otettuun profiiliin.
+Manuaalisesti käyttöön otettu profiili poistetaan käytöstä valitsemalla se Asetusprofiilit-valintaikkunasta ja painamalla Poista käytöstä manuaalisesti -painiketta.</p>
 <h4 id="ConfigProfileTriggers">´Käynnistimet</h4>
 <p>Asetusprofiilit-valintaikkunassa olevaa Käynnistimet-painiketta painamalla voidaan määrittää, mitkä profiilit otetaan automaattisesti käyttöön käynnistimien avulla.</p>
 <p>Käynnistimet-luettelo näyttää käytettävissä olevat käynnistimet, joita ovat:</p>
@@ -6714,18 +6942,18 @@ Manuaalisesti käyttöönotettu profiili poistetaan käytöstä valitsemalla se 
 <li>Nykyinen sovellus: Käytetään nykyiseen sovellukseen siirryttäessä.</li>
 <li>Jatkuva luku: Käytetään jatkuva luku -komennolla luettaessa.</li>
 </ul>
-<p>Käynnistimen avulla automaattisesti käyttöönotettavaa profiilia vaihdetaan valitsemalla ensin käynnistin ja sen jälkeen Profiili-yhdistelmäruudusta haluttu profiili.
-Jos profiilia ei haluta käyttää, valitaan (normaalit asetukset) -vaihtoehto.</p>
+<p>Käynnistimen avulla automaattisesti käyttöön otettavaa profiilia vaihdetaan valitsemalla ensin käynnistin ja sen jälkeen Profiili-yhdistelmäruudusta haluttu profiili.
+Jos profiilia ei haluta käyttää, valitaan (yleiset asetukset) -vaihtoehto.</p>
 <p>Asetusprofiilit-valintaikkunaan palataan painamalla Sulje-painiketta.</p>
 <h4 id="ConfigProfileEditing">Profiilin muokkaaminen</h4>
 <p>Jos profiili on otettu käyttöön manuaalisesti, kaikki muutetut asetukset tallennetaan siihen.
-Muussa tapauksessa asetukset tallennetaan viimeisimpään käynnistimen avulla käyttöönotettuun profiiliin.
+Muussa tapauksessa asetukset tallennetaan viimeisimpään käynnistimen avulla käyttöön otettuun profiiliin.
 Jos esimerkiksi Muistio-sovellukseen on liitetty profiili, kaikki muutetut asetukset tallennetaan siihen Muistion ollessa aktiivisena.
-Jos sen sijaan mikään manuaalisesti tai käynnistimellä käyttöönotettu profiili ei ole käytössä, muutetut asetukset tallennetaan normaaleihin asetuksiin.</p>
+Jos sen sijaan mikään manuaalisesti tai käynnistimellä käyttöön otettu profiili ei ole käytössä, muutetut asetukset tallennetaan yleisiin asetuksiin.</p>
 <p>Jatkuva luku -toimintoon liitettyä profiilia muokataan <a href="#ConfigProfileManual" title="ottamalla se käyttöön manuaalisesti">ottamalla se käyttöön manuaalisesti</a>.</p>
 <h4 id="ConfigProfileDisablingTriggers">Käynnistimien tilapäinen käytöstä poistaminen</h4>
 <p>Kaikkien käynnistimien tilapäinen käytöstä poistaminen voi olla toisinaan hyödyllistä.
-Esimerkiksi manuaalisesti käyttöön otettua profiilia tai normaaleja asetuksia saattaa olla tarpeen muokata niin, etteivät käynnistimien avulla käyttöönotettavat profiilit vaikuta taustalla.
+Esimerkiksi manuaalisesti käyttöön otettua profiilia tai yleisiä asetuksia saattaa olla tarpeen muokata niin, etteivät käynnistimien avulla käyttöön otettavat profiilit vaikuta taustalla.
 Tämä tehdään valitsemalla Asetusprofiilit-valintaikkunassa "Poista käynnistimet tilapäisesti käytöstä" -valintaruutu.</p>
 <p>Käynnistimet voidaan poistaa käytöstä tai ottaa uudelleen käyttöön mistä tahansa omalla näppäinkomennolla, joka on mahdollista määrittää <a href="#InputGestures" title="Näppäinkomennot-valintaikkunassa">Näppäinkomennot-valintaikkunassa</a>.</p>
 <h4 id="ConfigProfileGestures">Profiilien käyttöönotto näppäinkomennoilla</h4>
@@ -6758,96 +6986,96 @@ NVDA aloittaa kuitenkin automaattisesti uuden istunnon, jos se on siten määrit
 Yhteyden manuaalinen katkaisu on edelleen mahdollista suojatussa tilassa.</p>
 <h3 id="RemoteAccessSetup">Etäkäyttöistunnon määrittäminen</h3>
 <p>Etäkäyttöistunnot määritetään etäkäyttöyhteyden valintaikkunassa.
-Avaa NVDA-valikko ja valitse sieltä Työkalut, sen jälkeen Etäkäyttö ja lopuksi "Yhdistä...".
-Vaihtoehtoisesti voit painaa missä tahansa <code>NVDA+Alt+R</code>.</p>
+Avataan NVDA-valikko ja valitaan sieltä Työkalut, sen jälkeen Etäkäyttö ja lopuksi "Yhdistä...".
+Vaihtoehtoisesti voidaan painaa missä tahansa <code>NVDA+Alt+R</code>.</p>
 <h4 id="RemoteAccessMode">Tilan valinta (hallitseva tai hallittava)</h4>
 <p>Ensin on valittava, kumpaa tietokonetta hallitaan ja kumpi on hallitseva.</p>
-<p>Tila-yhdistelmäruudusta voit valita, hallitseeko toinen henkilö konettasi vai hallitsetko itse jonkun toisen konetta.</p>
+<p>Tila-yhdistelmäruudusta voidaan valita, hallitaanko tätä tietokonetta vai käytetäänkö sitä toisen henkilön koneen hallitsemiseen.</p>
 <ul>
-<li>Jos tarvitset tietokoneen käytössä toisen henkilön apua, tässä tulee valita "Salli tämän koneen hallinta".</li>
-<li>Jos aiot auttaa toista henkilöä hänen tietokoneensa käytössä, valitse "Hallitse toista konetta".</li>
+<li>Jos tietokoneen käytössä tarvitaan toisen henkilön apua, tässä tulee valita "Salli tämän koneen hallinta".</li>
+<li>Jos toista henkilöä halutaan auttaa hänen tietokoneensa käytössä, valitaan "Hallitse toista konetta".</li>
 </ul>
-<h4 id="RemoteAccessJoin">Yhdistä olemassa olevaan palvelimeen (isäntä ja avain tarvitaan)</h4>
+<h4 id="RemoteAccessJoin">Yhteyden muodostaminen olemassa olevaan palvelimeen (isäntä ja avain tarvitaan)</h4>
 <p>Tässä tapauksessa toinen henkilö on joko muodostanut yhteyden reitityspalvelimen kautta tai isännöi yhteyttä paikallisesti.</p>
 <ol>
-<li>Valitse Palvelin-yhdistelmäruudusta "Käytä olemassa olevaa".</li>
+<li>Valitaan Palvelin-yhdistelmäruudusta "Käytä olemassa olevaa".</li>
 <li>
-<p>Syötä Isäntä-kenttään isännän URL-osoite sekä portti, mikäli se on tiedossa.</p>
+<p>Syötetään Isäntä-kenttään isännän URL-osoite sekä portti, mikäli se on tiedossa.</p>
 <ul>
-<li>Lisää tarvittaessa porttinumero isännän URL-osoitteen perään kaksoispisteellä (":") erotettuna.
+<li>Lisätään tarvittaessa porttinumero isännän URL-osoitteen perään kaksoispisteellä (":") erotettuna.
    Esimerkiksi <code>palvelin.com:1234</code>.</li>
 </ul>
 </li>
 <li>
-<p>Syötä Avain-kenttään saamasi avain.
-   Varmista, että kirjoitat avaimen täsmälleen annetussa muodossa.</p>
+<p>Syötetään Avain-kenttään saatu avain.
+   Varmistetaan, että avain kirjoitetaan täsmälleen annetussa muodossa.</p>
 </li>
-<li>Paina OK.</li>
+<li>Painetaan OK.</li>
 </ol>
 <h4 id="RemoteAccessConnectRelay">Yhdistäminen reitityspalvelimen kautta</h4>
-<p>Jos haluat sallia toisen henkilön muodostaa yhteyden koneeseesi internetin kautta, helpoin vaihtoehto on käyttää reitityspalvelinta. Tämä tehdään seuraavasti:</p>
+<p>Jos toiselle henkilölle halutaan sallia yhteyden muodostaminen tähän tietokoneeseen internetin kautta, helpoin vaihtoehto on käyttää reitityspalvelinta. Tämä tehdään seuraavasti:</p>
 <ol>
-<li>Valitse Palvelin-yhdistelmäruudusta "Käytä olemassa olevaa".</li>
+<li>Valitaan Palvelin-yhdistelmäruudusta "Käytä olemassa olevaa".</li>
 <li>
-<p>Syötä Isäntä-kenttään reitityspalvelimen isäntänimi, esim. <code>nvdaremote.com</code>.
-   Sinun täytyy antaa tämä osoite henkilölle, joka aikoo hallita konettasi.</p>
+<p>Syötetään Isäntä-kenttään reitityspalvelimen isäntänimi, esim. <code>nvdaremote.com</code>.
+   Tämä osoite täytyy antaa henkilölle, jolle tämän tietokoneen hallinta sallitaan.</p>
 <ul>
-<li>Lisää tarvittaessa porttinumero isäntänimen perään kaksoispisteellä (":") erotettuna.
+<li>Lisätään tarvittaessa porttinumero isäntänimen perään kaksoispisteellä (":") erotettuna.
    Esimerkiksi <code>palvelin.com:1234</code>.</li>
 </ul>
 </li>
 <li>
-<p>Avain: keksi pitkä ja vaikeasti arvattava avain tai paina "Luo avain" -painiketta, jolloin sellainen luodaan automaattisesti.
-   Sinun täytyy antaa se henkilölle, joka aikoo hallita konettasi.</p>
+<p>Avain: tähän kannattaa keksiä pitkä ja vaikeasti arvattava avain tai painaa "Luo avain" -painiketta, jolloin se luodaan automaattisesti.
+   Se täytyy antaa henkilölle, jolle tämän tietokoneen hallinta sallitaan.</p>
 <ul>
 <li>Huom: Avain toimii sekä istunnon tunnisteena että salasanana, joten sen on oltava vaikeasti arvattava.</li>
 </ul>
 </li>
 <li>
-<p>Paina OK.</p>
+<p>Painetaan OK.</p>
 </li>
-<li>Anna yhteyden tiedot (kuten isäntänimi ja avain) henkilölle, joka aikoo hallita konettasi, jotta hän voi muodostaa yhteyden.</li>
+<li>Yhteyden muodostamista varten tarvittavat tiedot (kuten isäntänimi ja avain) annetaan henkilölle, jolle tämän tietokoneen hallinta sallitaan.</li>
 </ol>
 <h4 id="RemoteAccessConnectSelfHosted">NVDA:n käyttäminen palvelimena</h4>
-<p>Jos et halua käyttää reitityspalvelinta tai mikäli muodostat yhteyden lähiverkon kautta:</p>
+<p>Jos reitityspalvelinta ei haluta käyttää tai yhteys muodostetaan lähiverkon kautta:</p>
 <ol>
-<li>Valitse Palvelin-yhdistelmäruudusta "Isännöi paikallisesti".</li>
-<li>Jos yhteys muodostetaan internetin kautta, voit painaa "Hae ulkoinen IP-osoite" -painiketta, jolloin ulkoinen (internetissä näkyvä) IP-osoitteesi näytetään.
-Sinun täytyy antaa se henkilölle, joka aikoo hallita konettasi.</li>
-<li>Jos yhteys muodostetaan lähiverkon kautta, sinun tulee antaa paikallinen IP-osoitteesi henkilölle, joka aikoo hallita konettasi.
+<li>Valitaan Palvelin-yhdistelmäruudusta "Isännöi paikallisesti".</li>
+<li>Jos yhteys muodostetaan internetin kautta, voidaan painaa "Hae ulkoinen IP-osoite" -painiketta, jolloin ulkoinen (internetissä näkyvä) IP-osoite näytetään.
+Se täytyy antaa henkilölle, jolle tämän tietokoneen hallinta sallitaan.</li>
+<li>Jos yhteys muodostetaan lähiverkon kautta, paikallinen IP-osoite tulee antaa henkilölle, jolle tämän tietokoneen hallinta sallitaan.
 Sen selvittämistä ei käsitellä tässä käyttöohjeessa.</li>
 <li>
-<p>Syötä Portti-kenttään sen portin numero, jota haluat käyttää saapuville etäkäyttöyhteyksille.
-   Myös konettasi hallitseva henkilö tarvitsee tämän.</p>
+<p>Syötetään Portti-kenttään sen portin numero, jota halutaan käyttää saapuville etäkäyttöyhteyksille.
+   Myös tätä tietokonetta hallitseva henkilö tarvitsee sen.</p>
 <ul>
 <li>Portti ei saa olla minkään muun palvelun käytössä.</li>
 <li>Etäkäytön oletusportti on 6837.</li>
-<li>Portin uudelleenohjaus voi olla tarpeen, jos yhteys muodostetaan internetin kautta.
+<li>Portin uudelleenohjaus saattaa olla tarpeen, jos yhteys muodostetaan internetin kautta.
    Porttien uudelleenohjausta ei käsitellä tässä käyttöohjeessa.
-   Ota tarvittaessa yhteyttä verkon ylläpitäjään.</li>
+   Tarvittaessa otetaan yhteyttä verkon ylläpitäjään.</li>
 </ul>
 </li>
 <li>
-<p>Avain: keksi pitkä ja vaikeasti arvattava avain tai paina "Luo avain" -painiketta, jolloin sellainen luodaan automaattisesti.
-   Se on annettava henkilölle, joka aikoo hallita konettasi.</p>
+<p>Avain: tähän kannattaa keksiä pitkä ja vaikeasti arvattava avain tai painaa "Luo avain" -painiketta, jolloin se luodaan automaattisesti.
+   Se on annettava henkilölle, jolle tämän tietokoneen hallinta sallitaan.</p>
 <ul>
 <li>Huom: Avain toimii sekä istunnon tunnisteena että salasanana, joten sen on oltava vaikeasti arvattava.</li>
 </ul>
 </li>
 <li>
-<p>Paina OK.</p>
+<p>Painetaan OK.</p>
 </li>
-<li>Anna yhteyden tiedot (kuten isäntänimi ja avain) henkilölle, joka aikoo hallita konettasi, jotta hän voi muodostaa yhteyden.</li>
+<li>Yhteyden muodostamiseen tarvittavat tiedot (kuten isäntänimi ja avain) on annettava henkilölle, jolle tämän tietokoneen hallinta sallitaan.</li>
 </ol>
 <h3 id="RemoteAccessUsage">Etäkäytö käyttäminen</h3>
-<p>Kun etäkäyttöistunto on aktiivinen, voit vaihtaa etäkäytettävän ja oman koneesi hallinnan välillä, jakaa leikepöydän sekä mykistää etäistunnon.</p>
+<p>Aktiivisen etäkäyttöistunnon aikana voidaan vaihtaa etäkoneen ja tämän koneen hallinnan välillä, jakaa leikepöytä sekä mykistää etäistunto.</p>
 <ul>
-<li>Vaihda etäkoneen hallinnan ja oman koneesi välillä painamalla <code>NVDA+Alt+Sarkain</code>.</li>
-<li>Lähetä leikepöydällä oleva teksti toiselle koneelle avaamalla NVDA-valikko, valitsemalla Työkalut, sitten "Etäkäyttö" ja lopuksi "Lähetä leikepöytä".</li>
-<li>Mikäli olet muodostanut yhteyden hallitsevana koneena, mykistä etäkoneen puhe omalta koneeltasi avaamalla NVDA-valikko, valitsemalla Työkalut, sitten Etäkäyttö ja lopuksi "Mykistä etäpuhe".</li>
-<li>Jos olet muodostanut yhteyden hallitsevana koneena, lähetä <code>Ctrl+Alt+Del</code>-komento hallittavalle koneelle avaamalla NVDA-valikko, valitsemalla Työkalut, sitten Etäkäyttö ja lopuksi "Lähetä Ctrl+Alt+Del".
+<li>Etäkoneen hallinnan ja tämän koneen välillä voidaan vaihtaa painamalla <code>NVDA+Alt+Sarkain</code>.</li>
+<li>Leikepöydällä oleva teksti voidaan lähettää toiselle koneelle avaamalla NVDA-valikko, valitsemalla Työkalut, sitten "Etäkäyttö" ja lopuksi "Lähetä leikepöytä".</li>
+<li>Jos yhteys on muodostettu hallitsevana koneena, etäkoneen puhe voidaan mykistää tältä koneelta avaamalla NVDA-valikko ja valitsemalla Työkalut, sitten Etäkäyttö ja lopuksi "Mykistä etäkone".</li>
+<li>Jos yhteys on muodostettu hallitsevana koneena, <code>Ctrl+Alt+Del</code>-komento voidaan lähettää hallittavalle koneelle avaamalla NVDA-valikko ja valitsemalla Työkalut, sitten Etäkäyttö ja lopuksi "Lähetä Ctrl+Alt+Del".
   Jotta tämä toimisi, hallittavassa koneessa on oltava käynnissä NVDA:n asennettu versio.
-  Tämä toiminto ei välttämättä toimi kaikissa tilanteissa, sillä se riippuu hallittavan koneen asetuksista.</li>
+  Tämä ei välttämättä toimi kaikissa tilanteissa, sillä sen toiminta riippuu hallittavan koneen asetuksista.</li>
 </ul>
 <h3 id="RemoteAccessGestures">Yhteenveto etäkäytön näppäinkomennoista</h3>
 <!-- KC:beginInclude -->
@@ -6863,7 +7091,7 @@ Sen selvittämistä ei käsitellä tässä käyttöohjeessa.</li>
 <tr>
 <td>Yhdistä tai katkaise yhteys</td>
 <td><code>NVDA+Alt+R</code></td>
-<td>Aloittaa uuden etäkäyttöistunnon tai katkaisee käynnissä olevan istunnon yhteyden.</td>
+<td>Aloittaa uuden etäkäyttöistunnon tai katkaisee aktiivisen istunnon yhteyden.</td>
 </tr>
 <tr>
 <td>Vaihda hallintaa</td>
@@ -6883,7 +7111,7 @@ Sen selvittämistä ei käsitellä tässä käyttöohjeessa.</li>
 <tr>
 <td>Katkaise yhteys</td>
 <td>Ei mitään</td>
-<td>Lopettaa käynnissä olevan etäkäyttöistunnon.</td>
+<td>Lopettaa aktiivisen etäkäyttöistunnon.</td>
 </tr>
 <tr>
 <td>Mykistä etäkone</td>
@@ -6927,17 +7155,17 @@ Lisäosien toiminnallisuutta ei ole rajoitettu NVDA:ssa millään tavalla.
 Tämä saattaa mahdollistaa henkilökohtaisten tietojen tarkastelun sekä koko järjestelmän hallinnan ja muokkaamisen.</p>
 <p>Lisäosakauppaan lähetetyt lisäosat tarkistetaan <a href="https://www.virustotal.com/" rel="noopener" target="_blank" title="VirusTotal">VirusTotal</a>-palvelulla.
 Se voi havaita haittaohjelmat, jotka olivat tunnettuja lisäosan lähettämishetkellä.
-VirusTotalin tulokset voivat kuitenkin olla epätarkkoja tai vanhentuneita.
-Esimerkiksi lisäosa, joka on merkitty haitalliseksi, ei välttämättä ole haitallinen, ja lisäosa, jota ei ole merkitty haitalliseksi, saattaa todellisuudessa olla haitallinen.
+Tarkistuksen tulokset voivat kuitenkin olla epätarkkoja tai vanhentuneita.
+Esimerkiksi haitalliseksi ilmoitettu lisäosa ei välttämättä ole haitallinen, kun taas lisäosa, jota ei ole ilmoitettu haitalliseksi, saattaa todellisuudessa olla haitallinen.
 Lisäosan lisätiedoissa näkyy yhteenveto tarkistuksen tuloksista.
-VirusTotal-tarkistuksen tuloksia voidaan tarkastella suoraan valitsemalla pikavalikosta <a href="#AddonStoreActions" title="VirusTotal-tarkistuksen tulokset -toiminto">VirusTotal-tarkistuksen tulokset -toiminto</a>.</p>
+Virustarkistuksen tuloksia voidaan tarkastella valitsemalla pikavalikosta <a href="#AddonStoreActions" title="Virustarkistuksen tulokset -toiminto">Virustarkistuksen tulokset -toiminto</a>.</p>
 <p>Lisäosan turvallisuuden arviointiin on olemassa useita muitakin tapoja:</p>
 <ul>
 <li>Selvitetään kehittäjän maine (esim. kuinka kauan hän on ollut kehittäjänä)</li>
 <li>Etsitään käyttäjäpalautetta <a href="https://groups.google.com/a/nvaccess.org/g/nvda-users" rel="noopener" target="_blank" title="NVDA-käyttäjien ryhmästä">NVDA-käyttäjien ryhmästä</a> tai <a href="https://nvda-addons.groups.io/g/nvda-addons" rel="noopener" target="_blank" title="NVDA-lisäosien ryhmästä">NVDA-lisäosien ryhmästä</a></li>
 <li>Varmistetaan, että lisäosaa päivitetään säännöllisesti</li>
 <li>Tutustutaan lisäosaa koskeviin <a href="#AddonStoreReviews" title="yhteisön arvosteluihin">yhteisön arvosteluihin</a></li>
-<li>Kerätään palautetta yhteisöltä keskustelufoorumien tai sosiaalisen median avulla</li>
+<li>Kerätään yhteisöpalautetta keskustelufoorumeilta tai sosiaalisesta mediasta</li>
 </ul>
 <h3 id="AddonStoreBrowsing">Lisäosien selaaminen</h3>
 <p>Lisäosakauppa näyttää avautuessaan lisäosien luettelon.
@@ -7223,8 +7451,8 @@ Microsoft ei kuitenkaan enää tue tätä, eivätkä tarvittavat osat ole enää
 NVDA tukee sekä 32- että 64-bittisiä SAPI 5 -puheääniä.
 Parhaan suorituskyvyn ja ominaisuuksien yhteensopivuuden vuoksi 64-bittisten äänien käyttö on suositeltavaa.
 Monia tätä standardia noudattavia puhesyntetisaattoreita on mahdollista ostaa tai ladata ilmaiseksi eri yrityksiltä ja verkkosivustoilta. Tietokoneellasi on myös luultavasti esiasennettuna vähintään yksi SAPI 5 -ääni.</p>
-<p>Kun NVDA:ssa käytetään 32- tai 64-bittistä SAPI 5 -syntetisaattoria, käytettävissä olevien puheäänien luettelo (johon pääsee <a href="#NVDASettings" title="NVDA:n asetukset">NVDA:n asetukset</a> -valintaikkunan <a href="#SpeechSettings" title="Puhe-kategoriasta">Puhe-kategoriasta</a> tai <a href="#SynthSettingsRing" title="syntetisaattorin asetusrenkaasta">syntetisaattorin asetusrenkaasta</a>) sisältää vastaavasti kaikki asennetuista 32- tai 64-bittisistä SAPI 5 -puhemoottoreista löytyvät äänet.
-Jos et löydä koneellesi asennettua SAPI 5 -ääntä, kokeile vaihtaa toiseen SAPI 5 -syntetisaattoriin <a href="#SelectSynthesizer" title="Valitse syntetisaattori -valintaikkunassa">Valitse syntetisaattori -valintaikkunassa</a>.</p>
+<p>Kun NVDA:ssa käytetään 32- tai 64-bittistä SAPI 5 -syntetisaattoria, käytettävissä olevien puheäänien luettelossa, johon pääsee <a href="#NVDASettings" title="NVDA:n asetukset">NVDA:n asetukset</a> -valintaikkunan <a href="#SpeechSettings" title="Puhe-kategoriasta">Puhe-kategoriasta</a> tai <a href="#SynthSettingsRing" title="syntetisaattorin asetusrenkaasta">syntetisaattorin asetusrenkaasta</a>, ovat vastaavasti kaikki asennettujen 32- tai 64-bittisten SAPI 5 -puhemoottoreiden äänet.
+Jos koneelle asennettua SAPI 5 -ääntä ei löydy, kannattaa kokeilla vaihtaa toiseen SAPI 5 -syntetisaattoriin <a href="#SelectSynthesizer" title="Valitse syntetisaattori -valintaikkunassa">Valitse syntetisaattori -valintaikkunassa</a>.</p>
 <h3 id="MicrosoftSpeechPlatform">Microsoft Speech Platform</h3>
 <p>Microsoft Speech Platform tarjoaa useille kielille ääniä, joita käytetään tavallisesti palvelinpohjaisten puhesovellusten kehittämiseeen.
 Näitä ääniä voidaan käyttää myös NVDA:lla.</p>
@@ -7238,19 +7466,19 @@ Esimerkiksi tiedosto MSSpeech_TTS_en-US_ZiraPro.msi on amerikanenglantia puhuva 
 </ul>
 </li>
 </ul>
-<h3 id="OneCore">Windows OneCore</h3>
-<p>Windows 10 ja uudemmat sisältävät uusia ääniä, jotka tunnetaan OneCore- tai matkapuhelinääninä.
-Ääniä on saatavilla useille kielille, ja ne reagoivat nopeammin kuin SAPI 5 -rajapinnan kautta käytettävät.
-NVDA käyttää oletusarvoisesti Windows OneCore -ääniä.</p>
-<p>Lisää uusia OneCore-ääniä menemällä Windowsin järjestelmäasetuksiin (Win+I) ja valitsemalla sieltä ensin "Aika ja kieli" ja sitten "Puhe".
-Paina "Lisää ääniä" -painiketta ja etsi haluamaasi kieltä kirjoittamalla se avautuvaan hakukenttään.
+<h3 id="OneCore">OneCore</h3>
+<p>Windows 10:ssä ja uudemmissa on uusia ääniä, jotka tunnetaan OneCore- tai matkapuhelinääninä.
+Ääniä on saatavilla useille kielille, ja ne reagoivat nopeammin kuin SAPI 5 -rajapinnan kautta käytettävät äänet.
+NVDA käyttää oletusarvoisesti OneCore-ääniä.</p>
+<p>Uusia OneCore-ääniä lisätään menemällä Windowsin järjestelmäasetuksiin (Win+I) ja valitsemalla sieltä ensin "Aika ja kieli" ja sen jälkeen "Puhe".
+Painetaan "Lisää ääniä" -painiketta ja etsitään haluttua kieltä kirjoittamalla se avautuvaan hakukenttään.
 Monilla kielillä on useita muunnelmia.
 "Yhdistynyt kuningaskunta" ja "Australia" ovat kaksi esimerkkiä englannin muunnelmista.
 "Ranska", "Kanada" ja "Sveitsi" ovat käytettävissä olevat ranskankielen muunnelmat.
-Etsi ensin laajempaa kieltä (kuten englanti tai ranska) ja etsi sitten muunnelma luettelosta.
-Valitse kaikki haluamasi kielet ja lisää ne painamalla "Lisää"-painiketta.
-Kun kielet on lisätty, käynnistä NVDA uudelleen.</p>
-<p>Katso luettelo saatavilla olevista äänistä <a href="https://support.microsoft.com/fi-fi/windows/liite-a-tuetut-kielet-ja-%C3%A4%C3%A4net-4486e345-7730-53da-fcfe-55cc64300f01" rel="noopener" target="_blank" title="tuetut kielet ja äänet">tuetut kielet ja äänet</a> -artikkelista.</p>
+Etsitään luettelosta ensin laajempaa kieltä, kuten englanti tai ranska, ja sen jälkeen muunnelmaa.
+Valitaan kaikki halutut kielet ja lisätään ne painamalla Lisää-painiketta.
+Kun kielet on lisätty, käynnistetään NVDA uudelleen.</p>
+<p>Saatavilla olevien äänien luettelo on <a href="https://support.microsoft.com/fi-fi/windows/liite-a-tuetut-kielet-ja-%C3%A4%C3%A4net-4486e345-7730-53da-fcfe-55cc64300f01" rel="noopener" target="_blank" title="tuetut kielet ja äänet">tuetut kielet ja äänet</a> -artikkelissa.</p>
 <h2 id="SupportedBrailleDisplays">Tuetut pistenäytöt</h2>
 <p>Tässä kappaleessa on tietoja NVDA:n tukemista pistenäytöistä.</p>
 <h3 id="AutomaticDetection">Automaattista tunnistusta tukevat pistenäytöt</h3>
@@ -7259,7 +7487,7 @@ Automaattinen tunnistus otetaan käyttöön valitsemalla käytettäväksi pisten
 Tämä vaihtoehto on oletusarvoisesti valittuna.</p>
 <p>Seuraavat näytöt tukevat automaattista tunnistusta.</p>
 <ul>
-<li>Handy Tech</li>
+<li>Help Tech (entinen Handy Tech)</li>
 <li>Baum/Humanware/APH/Orbit</li>
 <li>HumanWare Brailliant BI/B</li>
 <li>HumanWare BrailleNote</li>
@@ -7282,7 +7510,7 @@ Ajurit tukevat kaikkia Freedom Scientificin Focus- ja Pacmate-pistenäyttöjä, 
 Näytön asetuksia määritettäessä voidaan kuitenkin myös itse valita USB-portti tai Bluetooth yhteystyypin rajoittamiseksi.
 Tästä voi olla hyötyä, jos Focus-näyttö halutaan yhdistää NVDA:han Bluetoothilla ja silti ladata sitä tietokoneen USB-virralla.
 Myös NVDA:n automaattinen pistenäytön tunnistus tunnistaa tämän näytön USB:tä tai Bluetoothia käytettäessä.</p>
-<p>Seuraavassa on näiden pistenäyttöjen näppäinkomennot NVDA:ta käytettäessä.
+<p>Alla on luettelo näiden pistenäyttöjen NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan näytön käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -7341,6 +7569,10 @@ Näppäinten sijainnit kuvaillaan näytön käyttöohjeessa.</p>
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td>Vaihto+Sarkain-näppäinyhdistelmä</td>
@@ -7526,7 +7758,7 @@ Kun pariliitos on tehty tätä apuohjelmaa käyttäen ja NVDA ei tunnista laitet
 <p>Vaikka joissakin näistä pistenäytöistä onkin pistenäppäimistö, ne huolehtivat itse pistekirjoituksen kääntämisestä tekstiksi.
 Tämä tarkoittaa, että oletusarvoisesti NVDA:n pistekirjoituksen syöttöjärjestelmää ei käytetä (ts. pistesyöttötaulukkoasetuksella ei ole vaikutusta).
 HID-näppäimistösimulointi on mahdollista poistaa käytöstä näppäinkomennolla ALVA-näytöissä, joissa on viimeisin laiteohjelmisto.</p>
-<p>Seuraavassa on luettelo tämän näytön NVDA-näppäinkomennoista.
+<p>Alla on luettelo tämän näytön NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -7561,6 +7793,10 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td>Ilmoita muotoilutiedot pistesolusta</td>
@@ -7674,16 +7910,16 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 </table>
 <!-- KC:endInclude -->
 
-<h3 id="HandyTech">Handy Tech</h3>
-<p>NVDA tukee useimpia <a href="https://www.handytech.de/" rel="noopener" target="_blank" title="Handy Techin">Handy Techin</a> pistenäyttöjä, joissa on USB/sarjaporttiliitäntä tai Bluetooth-yhteys.
-Vanhempia USB-malleja varten tietokoneelle on asennettava Handy Techin USB-ajurit.</p>
-<p>Seuraavia näyttöjä ei oletusarvoisesti tueta, mutta niitä voidaan käyttää <a href="https://handytech.de/en/service/downloads-and-manuals/handy-tech-software/braille-display-drivers" rel="noopener" target="_blank" title="Handy Techin yleisajurin">Handy Techin yleisajurin</a> ja NVDA-lisäosan avulla:</p>
+<h3 id="HandyTech">Help Tech</h3>
+<p>NVDA tukee useimpia <a href="https://www.helptech.de/" rel="noopener" target="_blank" title="Help Techin">Help Techin</a> (entisen Handy Techin) näyttöjä USB-, sarjaportti- tai Bluetooth-liitännän kautta.</p>
+<p>Seuraavia näyttöjä ei enää tueta:</p>
 <ul>
 <li>Braillino</li>
 <li>Bookworm</li>
-<li>Modular-mallit, joissa on laiteohjelmiston versio 1.13 tai vanhempi. Huomaa, että näiden näyttöjen laiteohjelmisto on mahdollista päivittää.</li>
+<li>Modular (laiteohjelmiston versio 1.13 tai sitä vanhempi).
+Huom: Näiden näyttöjen laiteohjelmisto on mahdollista päivittää.</li>
 </ul>
-<p>Seuraavassa on luettelo Handy Tech -näyttöjen NVDA-näppäinkomennoista.
+<p>Alla on luettelo Help Tech -näyttöjen NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -7714,6 +7950,10 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td>Vaihto+Sarkain-näppäinyhdistelmä</td>
@@ -7780,7 +8020,7 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 Sen käyttämiseksi ei tarvitse asentaa ajureita.
 Riittää, että pistenäyttö kytketään tietokoneeseen ja määritetään NVDA käyttämään sitä.</p>
 <p>Tämä näyttö ei tue NVDA:n automaattista pistenäytön tunnistusta.</p>
-<p>Seuraavassa on luettelo tämän näytön NVDA-näppäinkomennoista.
+<p>Alla on luettelo tämän näytön NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -7845,7 +8085,7 @@ Näitä ovat:</p>
 <p>Mikäli tietokoneeseen kytketään USB:llä pistenäyttö, joka ei käytä HID:tä, valmistajan toimittamat ajurit on asennettava ensin.
 VarioUltra ja Pronto! käyttävät HID:tä.
 Oikein määritettyinä Refreshabraille, Orbit Reader 20 ja Orbit Reader 40 voivat käyttää HID-yhteyttä.</p>
-<p>Seuraavassa on luettelo näiden näyttöjen NVDA-näppäinkomennoista.
+<p>Alla on luettelo näiden näyttöjen NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -7876,6 +8116,10 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td><code>Vaihto+Sarkain</code>-näppäinyhdistelmä</td>
@@ -7952,7 +8196,7 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <p><a href="https://www.hedo.de/" rel="noopener" target="_blank" title="Hedo Reha-Technikin">Hedo Reha-Technikin</a> hedo ProfiLine USB -pistenäyttöä tuetaan.
 Sen käyttämiseksi on asennettava valmistajan toimittamat USB-ajurit.</p>
 <p>Tämä näyttö ei vielä tue NVDA:n automaattista pistenäytön tunnistusta.</p>
-<p>Seuraavassa on luettelo tämän näytön NVDA-näppäinkomennoista.
+<p>Alla on luettelo tämän näytön NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -8000,7 +8244,7 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <p><a href="https://www.hedo.de/" rel="noopener" target="_blank" title="Hedo Reha-Technikin">Hedo Reha-Technikin</a> hedo MobilLine USB -pistenäyttöä tuetaan.
 Sen käyttämiseksi on asennettava valmistajan toimittamat USB-ajurit.</p>
 <p>Tämä näyttö ei vielä tue NVDA:n automaattista pistenäytön tunnistusta.</p>
-<p>Seuraavassa on luettelo tämän näytön NVDA-näppäinkomennoista.
+<p>Alla on luettelo tämän näytön NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -8055,7 +8299,7 @@ OpenBraille-protokollaa käytettäessä ajureita ei tarvita.</p>
 <li>Humanware BrailleOne</li>
 <li>HumanWare NLS eReader</li>
 </ul>
-<p>Seuraavassa on luettelo Brailliant BI-, B- ja BrailleNote Touch -näyttöjen NVDA-näppäinkomennoista.
+<p>Alla on luettelo Brailliant BI-, B- ja BrailleNote Touch -näyttöjen NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteiden käyttöohjeissa.</p>
 <h4 id="HumanWareBrailliantKeyAssignmentForAllModels">Kaikki mallit</h4>
 <!-- KC:beginInclude -->
@@ -8087,6 +8331,10 @@ Näppäinten sijainnit kuvaillaan laitteiden käyttöohjeissa.</p>
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td>Vaihda Pistenäyttö seuraa -asetusta</td>
@@ -8152,7 +8400,7 @@ Näppäinten sijainnit kuvaillaan laitteiden käyttöohjeissa.</p>
 </table>
 <!-- KC:endInclude -->
 
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32, BI 40 ja B 80</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32-, BI 40-, B 80-, BI 20X- ja BI 40X -näyttöjen näppäinkomennot</h4>
 <!-- KC:beginInclude -->
 
 <table>
@@ -8163,6 +8411,22 @@ Näppäinten sijainnit kuvaillaan laitteiden käyttöohjeissa.</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Siirrä edelliselle riville</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>Vieritä taaksepäin</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>Siirrä seuraavalle riville</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>Vieritä eteenpäin</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>NVDA-valikko</td>
 <td><code>c1</code>, <code>c3</code>, <code>c4</code> ja <code>c5</code> (komento n)</td>
@@ -8216,8 +8480,9 @@ Näppäinten sijainnit kuvaillaan laitteiden käyttöohjeissa.</p>
 
 <h3 id="Hims">HIMS Braille Sense/Braille EDGE/Smart Beetle/Sync Braille</h3>
 <p>NVDA tukee <a href="https://www.hims-inc.com/" rel="noopener" target="_blank" title="HIMSin">HIMSin</a> Braille Sense-, Braille EDGE-, Smart Beetle- ja Sync Braille -pistenäyttöjä USB-liitäntää tai Bluetooth-yhteyttä käytettäessä.
-USB-liitäntää käytettäessä tietokoneelle on asennettava <a href="http://www.himsintl.com/upload/HIMS_USB_Driver_v25.zip" rel="noopener" target="_blank" title="HIMSin USB-ajurit">HIMSin USB-ajurit</a>.</p>
-<p>Seuraavassa on luettelo näiden näyttöjen NVDA-näppäinkomennoista.
+USB-liitäntää käytettäessä tietokoneelle on asennettava <a href="http://www.himsintl.com/upload/HIMS_USB_Driver_v25.zip" rel="noopener" target="_blank" title="HIMSin USB-ajurit">HIMSin USB-ajurit</a>.
+Windows 11:ssä, johon tämän ajurin asentaminen ei ole mahdollista, USB-liitäntään kytketyt Braille Sense- ja Braille EDGE -pistenäytöt tunnistetaan edelleen, jos tilalle asennetaan <a href="https://hims-product.s3.ap-northeast-2.amazonaws.com/Util/HIMS_Braille_Driver_V3_1.exe" rel="noopener" target="_blank" title="HIMSin WinUSB-ajuripaketti">HIMSin WinUSB-ajuripaketti</a>.</p>
+<p>Alla on luettelo näiden näyttöjen NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteiden käyttöohjeissa.</p>
 <!-- KC:beginInclude -->
 
@@ -8626,6 +8891,10 @@ Katso laitteen käyttöohjeesta kuvaukset näppäinten paikoista.</p>
 <td><code>kosketuskohdistinnäppäin</code></td>
 </tr>
 <tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
+</tr>
+<tr>
 <td>Vaihto+Nuoli ylös -näppäinyhdistelmä</td>
 <td><code>väli+RJ ylös</code>, <code>askelpalautin+RJ ylös</code></td>
 </tr>
@@ -8779,7 +9048,7 @@ Ylös-, alas-, oikea- ja vasen-näppäinten (tai EAB:n) painaminen ja alhaalla p
 </tr>
 </tbody>
 </table>
-<p>Seuraavassa on luettelo Papenmeierin NVDA-näppäinkomennoista:</p>
+<p>Alla on luettelo Papenmeierin NVDA-näppäinkomennoista:</p>
 <!-- KC:beginInclude -->
 
 <table>
@@ -8986,7 +9255,7 @@ Vanhoissa laitteissa ei ole EAB:tä; sen sijaan käytetään etupaneelin näppä
 </tr>
 </tbody>
 </table>
-<p>Seuraaavassa on Papenmeierin komentomääritykset NVDA:lle:</p>
+<p>Seuraaavassa on Papenmeierin näppäinkomentomääritykset NVDA:lle:</p>
 <!-- KC:beginInclude -->
 <p>Laitteet, joissa on EAB:</p>
 <table>
@@ -9205,7 +9474,7 @@ Jos liitäntänä käytetään sarjaporttia (tai USB-sarjaporttisovitinta) tai j
 <p>HumanWaren toimittamat ajurit on asennettava ennen kuin BrailleNote Apex kytketään sen USB-asiakasliitännällä.</p>
 <p>BrailleNote Apex BT:ssä voidaan käyttää pisteiden 1 ja 4 välissä olevaa vieritysrullaa useiden NVDA-komentojen suorittamiseen.
 Rulla koostuu neljästä suuntapisteestä, keskellä olevasta napsautuspainikkeesta sekä myötä- ja vastapäivään pyörivästä rullasta.</p>
-<p>Seuraavassa on luettelo BrailleNoten NVDA-näppäinkomennoista.
+<p>Alla on luettelo BrailleNoten NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -9319,7 +9588,7 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 </tr>
 </tbody>
 </table>
-<p>Seuraavassa on luettelo BrailleNote QT:n komennoista, jotka eivät ole käytettävissä pistekirjoituksen syöttötilassa.</p>
+<p>Alla on luettelo BrailleNote QT:n näppäinkomennoista, jotka eivät ole käytettävissä pistekirjoituksen syöttötilassa.</p>
 <table>
 <thead>
 <tr>
@@ -9402,7 +9671,7 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 </tr>
 </tbody>
 </table>
-<p>Seuraavassa on vieritysrullaan määritellyt komennot:</p>
+<p>Alla on vieritysrullaan määritellyt komennot:</p>
 <table>
 <thead>
 <tr>
@@ -9454,7 +9723,7 @@ Seuraavia malleja tuetaan:</p>
 </ul>
 <p>Voit määrittää näytön käyttämän sarjaportin <a href="#SelectBrailleDisplay" title="Valitse pistenäyttö">Valitse pistenäyttö</a> -valintaikkunasta.
 Nämä näytöt eivät tue NVDA:n automaattista pistenäytön tunnistusta.</p>
-<p>Seuraavassa on luettelo EcoBraille-näyttöjen näppäinmäärityksistä.
+<p>Alla on luettelo EcoBraille-näyttöjen näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan <a href="ftp://ftp.once.es/pub/utt/bibliotecnia/Lineas_Braille/ECO/" title="laitteen käyttöohjeessa">laitteen käyttöohjeessa</a>.</p>
 <!-- KC:beginInclude -->
 
@@ -10149,7 +10418,7 @@ Alla kuvaillut pistekirjoitusnäppäimistön toiminnot ovat käytettävissä vai
 
 <h3 id="NattiqTechnologies">Nattiq nBraille</h3>
 <p>NVDA tukee <a href="https://www.nattiq.com/" rel="noopener" target="_blank" title="Nattiq Technologiesin">Nattiq Technologiesin</a> pistenäyttöjä USB-liitäntää käytettäessä.</p>
-<p>Seuraavassa on luettelo Nattiq Technologiesin pistenäyttöjen NVDA-näppäinkomennoista.
+<p>Alla on luettelo Nattiq Technologiesin pistenäyttöjen NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -10193,7 +10462,7 @@ Käytettävää pistenäyttöä ja porttia määritettäessä on syytä kiinnitt
 <p>BRLTTY huolehtii tällä hetkellä itse pistesyötöstä näytöissä, joissa on pistenäppäimistö.
 Tämän vuoksi NVDA:n syöttötaulukkoasetuksella ei ole merkitystä.</p>
 <p>BRLTTY ei tue NVDA:n automaattista pistenäytön tunnistusta.</p>
-<p>Seuraavassa on luettelo BRLTTY:n NVDA-näppäinkomennoista.
+<p>Alla on luettelo BRLTTY:n NVDA-näppäinkomennoista.
 Tietoja BRLTTY-komentojen määrittämisestä pistenäyttöjen näppäimiin löytyy <a href="https://brltty.app/doc/KeyBindings/" rel="noopener" target="_blank" title="BRLTTY:n näppäinsidosluetteloista">BRLTTY:n näppäinsidosluetteloista</a>.</p>
 <!-- KC:beginInclude -->
 
@@ -10266,7 +10535,7 @@ Vaihda tarvittaessa siirtonopeudeksi 19200 pistenäytön valikosta.
 Vaikka ajuri tukee 9600 baudin siirtonopeutta, se ei voi vaikuttaa pistenäytön käyttämään siirtonopeuteen.
 Koska 19200 on pistenäytön oletussiirtonopeus, ajuri kokeilee sitä ensin.
 Jos siirtonopeudet eivät ole samat, ajuri voi käyttäytyä odottamattomasti.</p>
-<p>Seuraavassa on luettelo näiden näyttöjen NVDA-näppäinkomennoista.
+<p>Alla on luettelo näiden näyttöjen NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteiden käyttöohjeissa.</p>
 <!-- KC:beginInclude -->
 
@@ -10329,6 +10598,10 @@ Näppäinten sijainnit kuvaillaan laitteiden käyttöohjeissa.</p>
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>home1+useita kosketuskohdistinnäppäimen painalluksia</code>, <code>home2+useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td>Ilmoita muotoilutiedot pistesolusta</td>
@@ -10476,7 +10749,7 @@ Windows 10 ja 11 -käyttöjärjestelmät tunnistavat tämän näytön automaatti
 Tietokoneille, joissa Internet-yhteys on poistettu käytöstä tai ei ole saatavilla, voit manuaalisesti <a href="https://www.wch-ic.com/downloads/CH341SER_EXE.html" rel="noopener" target="_blank" title="ladata ja asentaa USB:n sarjaportiksi muuntavan CH340-piirin ajurin">ladata ja asentaa USB:n sarjaportiksi muuntavan CH340-piirin ajurin</a> käyttääksesi näyttöä USB-liitännällä.</p>
 <p>NVDA tunnistaa tämän näytön automaattisesti ja voi ottaa sen käyttöön USB:n tai Bluetoothin kautta.
 Näyttöä määrittäessäsi voit kuitenkin myös erikseen valita USB- tai Bluetooth-portin, jolloin yhteystapa rajataan vain jompaan kumpaan.</p>
-<p>Seuraavassa on luettelo tämän näytön NVDA-näppäinkomennoista.
+<p>Alla on luettelo tämän näytön NVDA-näppäinkomennoista.
 Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <!-- KC:beginInclude -->
 
@@ -10509,6 +10782,10 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
+</tr>
+<tr>
 <td>Nuoli ylös -näppäin</td>
 <td><code>up</code></td>
 </tr>
@@ -10536,7 +10813,7 @@ Näppäinten sijainnit kuvaillaan laitteen käyttöohjeessa.</p>
 <p>Tämä on kokeellinen ajuri uudelle HID Braille -protokollalle, josta Microsoft, Google, Apple ja useat avustavan teknologian yritykset, mukaan lukien NV Access, sopivat vuonna 2018.
 Toiveissa on, että kaikkien valmistajien tulevat pistenäyttömallit käyttäisivät tätä vakioprotokollaa, joka poistaisi valmistajakohtaisten pistenäyttöajureiden tarpeen.</p>
 <p>NVDA:n automaattinen pistenäytön tunnistus tunnistaa myös kaikki tätä protokollaa tukevat näytöt.</p>
-<p>Seuraavassa on luettelo näiden näyttöjen NVDA-näppäinkomennoista.</p>
+<p>Alla on luettelo näiden näyttöjen NVDA-näppäinkomennoista.</p>
 <!-- KC:beginInclude -->
 
 <table>
@@ -10558,6 +10835,10 @@ Toiveissa on, että kaikkien valmistajien tulevat pistenäyttömallit käyttäis
 <tr>
 <td>Siirrä pistesoluun</td>
 <td>kohdistimensiirtonäppäinsarja 1</td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td>useita kosketuskohdistinnäppäimen painalluksia, sarja 1</td>
 </tr>
 <tr>
 <td>Vaihda Piste näyttö seuraa -asetusta</td>
@@ -10676,7 +10957,7 @@ NVDA voidaan käynnistää suojatussa tilassa myös <code>-s</code>-<a href="#Co
 <li><a href="#ConfigurationProfiles" title="Asetusprofiilien">Asetusprofiilien</a> ominaisuudet, kuten luonnin, poiston, uudelleennimeämisen jne.</li>
 <li>Mukautettujen asetuskansioiden lataaminen <a href="#CommandLineOptions" title="-c-komentorivivalitsinta"><code>-c</code>-komentorivivalitsinta</a> käyttäen</li>
 <li>NVDA:n päivittämisen ja massamuistiversion luonnin</li>
-<li>Uuden <a href="#RemoteAccess" title="etäkäyttö">etäkäyttö</a>-istunnon manuaalinen aloittaminen (aiemmin <a href="#RemoteAutoconnect" title="automaattisesti yhdistymään">automaattisesti yhdistymään</a> määritetyt istunnot aloitetaan edelleen automaattisesti)</li>
+<li>Uuden <a href="#RemoteAccess" title="etäkäyttöistunnon">etäkäyttöistunnon</a> manuaalinen aloittaminen (aiemmin <a href="#RemoteAutoconnect" title="automaattisesti yhdistymään">automaattisesti yhdistymään</a> määritetyt istunnot aloitetaan edelleen automaattisesti)</li>
 <li><a href="#AddonsManager" title="Lisäosakaupan">Lisäosakaupan</a></li>
 <li><a href="#PythonConsole" title="Python-konsolin">Python-konsolin</a></li>
 <li><a href="#LogViewer" title="Lokintarkastelun">Lokintarkastelun</a> ja lokiin tallentamisen</li>
@@ -10703,6 +10984,16 @@ NVDA:n käyttäjäasetukset voidaan kopioida <a href="#GeneralSettingsCopySettin
 <li>Tällaisia ovat esimerkiksi ohjelmien asentaminen</li>
 </ul>
 </li>
+</ul>
+<h3 id="DownloadingNVDA">NVDA:n lataaminen</h3>
+<p>NVDA on suositeltavaa ladata NV Accessin lataussivulta osoitteesta <a href="https://www.nvaccess.org/download/" rel="noopener" target="_blank" title="https://www.nvaccess.org/download/">https://www.nvaccess.org/download/</a>.</p>
+<p>Lataaminen ja asentaminen onnistuu myös Windowsin WinGet-pakettienhallintatyökalulla.
+NVDA:n uusin versio asennetaan suorittamalla seuraava komento komentokehotteessa (<code>cmd</code>) tai PowerShellissä:</p>
+<p><code>winget install --id NVAccess.NVDA</code></p>
+<p>Beeta- ja RC-versiot asennetaan seuraavilla komennoilla:</p>
+<ul>
+<li>Beeta: <code>winget install --id NVAccess.NVDA.Beta</code></li>
+<li>RC: <code>winget install --id NVAccess.NVDA.RC</code></li>
 </ul>
 <h3 id="CommandLineOptions">Komentorivivalitsimet</h3>
 <p>NVDA hyväksyy käynnistyessään yhden tai useamman toimintaansa vaikuttavan komentorivivalitsimen.
@@ -10758,7 +11049,7 @@ Parametrit annetaan valitsimen jälkeen ja erotetaan sen lyhyestä muodosta väl
 </tr>
 </tbody>
 </table>
-<p>Seuraavassa on luettelo NVDA:n komentorivivalitsimista:</p>
+<p>Alla on luettelo NVDA:n komentorivivalitsimista:</p>
 <table>
 <thead>
 <tr>

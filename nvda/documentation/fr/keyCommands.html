@@ -2,16 +2,16 @@
 <html lang="fr" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>Résumé des commandes NVDA 2026.2</title>
+<title>Résumé des commandes NVDA 2026.3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="resume-des-commandes-nvda-20262">Résumé des commandes NVDA 2026.2</h1>
+<body><h1 id="resume-des-commandes-nvda-20263">Résumé des commandes NVDA 2026.3</h1>
 <div class="toc">
 <ul>
-<li><a href="#resume-des-commandes-nvda-20262" title="Résumé des commandes NVDA 2026.2">Résumé des commandes NVDA 2026.2</a><ul>
+<li><a href="#resume-des-commandes-nvda-20263" title="Résumé des commandes NVDA 2026.3">Résumé des commandes NVDA 2026.3</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Prendre en Main NVDA">Prendre en Main NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="Gestes Tactiles de NVDA">Gestes Tactiles de NVDA</a><ul>
 <li><a href="#TouchModes" title="Modes Tactiles">Modes Tactiles</a></li>
@@ -148,14 +148,14 @@
 <li><a href="#SupportedBrailleDisplays" title="Terminaux Braille Pris en Charge">Terminaux Braille Pris en Charge</a><ul>
 <li><a href="#FreedomScientificFocus" title="Les Terminaux Focus et PAC Mate de chez Freedom Scientific">Les Terminaux Focus et PAC Mate de chez Freedom Scientific</a></li>
 <li><a href="#OptelecALVA" title="Série Optelec ALVA 6/Convertisseur de Protocole">Série Optelec ALVA 6/Convertisseur de Protocole</a></li>
-<li><a href="#HandyTech" title="Les Terminaux Handy Tech">Les Terminaux Handy Tech</a></li>
+<li><a href="#HandyTech" title="Terminaux Help Tech">Terminaux Help Tech</a></li>
 <li><a href="#MDVLilli" title="Le Terminal MDV Lilli">Le Terminal MDV Lilli</a></li>
 <li><a href="#Baum" title="Les Terminaux Baum/Humanware/APH/Orbit">Les Terminaux Baum/Humanware/APH/Orbit</a></li>
 <li><a href="#HedoProfiLine" title="Hedo ProfiLine USB">Hedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="Hedo MobilLine USB">Hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="Série Brailliant BI/B de HumanWare / BrailleNote Touch">Série Brailliant BI/B de HumanWare / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="Assignations des Touches pour tous les Modèles">Assignations des Touches pour tous les Modèles</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Assignations de Touches pour les Brailliant BI 32, BI 40 et B 80">Assignations de Touches pour les Brailliant BI 32, BI 40 et B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Affectations de touches pour Brailliant BI 32, BI 40, B 80, BI 20X et BI 40X">Affectations de touches pour Brailliant BI 32, BI 40, B 80, BI 20X et BI 40X</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Assignations de Touches pour le Brailliant BI 14">Assignations de Touches pour le Brailliant BI 14</a></li>
 </ul>
 </li>
@@ -234,6 +234,13 @@
 <td><code>NVDA+x</code></td>
 <td>None</td>
 <td>Répéter la dernière information annoncée par NVDA. Un double appui l'affiche dans une fenêtre</td>
+</tr>
+<tr>
+<td>Copier la dernière information annoncée</td>
+<td><code>NVDA+contrôle+x</code></td>
+<td><code>NVDA+contrôle+x</code></td>
+<td>Aucun</td>
+<td>Copie dans le presse-papiers la dernière information annoncée par NVDA</td>
 </tr>
 <tr>
 <td>Menu NVDA</td>
@@ -415,15 +422,15 @@
 </tr>
 <tr>
 <td>Phrase suivante</td>
-<td>alt+flècheBas</td>
-<td>alt+flècheBas</td>
-<td>Amène le curseur à la phrase suivante et la lit. (Supporté seulement sous Microsoft Word et Outlook)</td>
+<td><code>alt+flècheBas</code></td>
+<td><code>alt+flècheBas</code></td>
+<td>Déplace le curseur à la phrase suivante et l'annonce. Certains documents ne sont pas pris en charge</td>
 </tr>
 <tr>
 <td>Phrase précédente</td>
-<td>alt+flècheHaut</td>
-<td>alt+flècheHaut</td>
-<td>Amène le curseur à la phrase précédente et la lit. (Supporté seulement sous Microsoft Word et Outlook)</td>
+<td><code>alt+flècheHaut</code></td>
+<td><code>alt+flècheHaut</code></td>
+<td>Déplace le curseur à la phrase précédente et l'annonce. Certains documents ne sont pas pris en charge</td>
 </tr>
 </tbody>
 </table>
@@ -1515,6 +1522,11 @@ L'appui simultané sur les points 7 et 8 traduit toute saisie braille sans ajout
 <td><code>NVDA+maj+alt+flècheBAs</code></td>
 <td>Déplace la vue agrandie directement au bord inférieur de l'écran</td>
 </tr>
+<tr>
+<td>Déplacer la souris vers la vue</td>
+<td>Aucun</td>
+<td>Déplace le curseur de la souris au centre de la vue agrandie</td>
+</tr>
 </tbody>
 </table>
 <h2 id="ContentRecognition">Reconnaissance de Contenu</h2>
@@ -1594,9 +1606,9 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 </thead>
 <tbody>
 <tr>
-<td>Basculer l'arrêt de la lecture vocale</td>
+<td>Basculer les notes du présentateur</td>
 <td>contrôle+maj+s</td>
-<td>Lorsque l'on est dans un diaporama en cours de lecture, cette commande basculera entre les notes du commentateur du diaporama et le contenu de celui-ci. Cela n'affecte que ce que NVDA lira, pas l'affichage à l'écran.</td>
+<td>Lorsque l'on est dans un diaporama en cours de lecture, cette commande basculera entre les notes du présentateur de la diapositive et le contenu de celle-ci. Cela n'affecte que ce que NVDA lira, pas l'affichage à l'écran.</td>
 </tr>
 </tbody>
 </table>
@@ -2329,6 +2341,10 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <td>routage</td>
 </tr>
 <tr>
+<td>Sélectionnez la plage de cellules braille depuis la première jusqu'à la dernière</td>
+<td><code>multiRoutage</code></td>
+</tr>
+<tr>
 <td>touche maj+tab</td>
 <td>barreEspacebraille+point1+point2</td>
 </tr>
@@ -2534,6 +2550,10 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <td>routage</td>
 </tr>
 <tr>
+<td>Sélectionnez la plage de cellules braille depuis la première jusqu'à la dernière</td>
+<td><code>multiRoutage</code></td>
+</tr>
+<tr>
 <td>Annoncer la mise en forme du texte sous la cellule braille</td>
 <td>routage secondaire</td>
 </tr>
@@ -2643,7 +2663,7 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 </tr>
 </tbody>
 </table>
-<h3 id="HandyTech">Les Terminaux Handy Tech</h3>
+<h3 id="HandyTech">Terminaux Help Tech</h3>
 <table>
 <thead>
 <tr>
@@ -2671,6 +2691,10 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <tr>
 <td>Aller à la cellule braille</td>
 <td>routage</td>
+</tr>
+<tr>
+<td>Sélectionnez la plage de cellules braille depuis la première jusqu'à la dernière</td>
+<td><code>multiRoutage</code></td>
 </tr>
 <tr>
 <td>Touche maj+tab</td>
@@ -2805,6 +2829,10 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <tr>
 <td>Aller à la cellule braille</td>
 <td><code>routage</code></td>
+</tr>
+<tr>
+<td>Sélectionnez la plage de cellules braille depuis la première jusqu'à la dernière</td>
+<td><code>multiRoutage</code></td>
 </tr>
 <tr>
 <td>touche <code>Maj+tab</code></td>
@@ -2984,6 +3012,10 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <td>routage</td>
 </tr>
 <tr>
+<td>Sélectionnez la plage de cellules braille depuis la première jusqu'à la dernière</td>
+<td><code>multiRoutage</code></td>
+</tr>
+<tr>
 <td>Bascule d'attachement du braille</td>
 <td>haut+bas</td>
 </tr>
@@ -3045,7 +3077,7 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 </tr>
 </tbody>
 </table>
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Assignations de Touches pour les Brailliant BI 32, BI 40 et B 80</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Affectations de touches pour Brailliant BI 32, BI 40, B 80, BI 20X et BI 40X</h4>
 <table>
 <thead>
 <tr>
@@ -3054,6 +3086,22 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Déplacer l'afficheur braille à la ligne précédente</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>Faire défiler l'afficheur braille vers l'arrière</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>Déplacer l'afficheur braille à la ligne suivante</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>Faire défiler l'afficheur braille vers l'avant</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>Menu NVDA</td>
 <td>c1+c3+c4+c5 (commande n)</td>
@@ -3474,6 +3522,10 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <tr>
 <td>Aller à la cellule braille</td>
 <td>routage</td>
+</tr>
+<tr>
+<td>Sélectionnez la plage de cellules braille depuis la première jusqu'à la dernière</td>
+<td><code>multiRoutage</code></td>
 </tr>
 <tr>
 <td>maj+flècheHaut</td>
@@ -4887,6 +4939,10 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Sélectionnez la plage de cellules braille depuis la première jusqu'à la dernière</td>
+<td>home1+multiRoutage<code>,</code>home2+multiRoutage`</td>
+</tr>
+<tr>
 <td>Annoncer la mise en forme du texte sous la cellule braille</td>
 <td><code>secondary routing</code></td>
 </tr>
@@ -5054,6 +5110,10 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <td><code>routage</code></td>
 </tr>
 <tr>
+<td>Sélectionnez la plage de cellules braille depuis la première jusqu'à la dernière</td>
+<td><code>multiRoutage</code></td>
+</tr>
+<tr>
 <td>Touche flèche haut</td>
 <td><code>haut</code></td>
 </tr>
@@ -5095,6 +5155,10 @@ Sous Microsoft 2016, 365 et plus récents, les commentaires classiques sous Micr
 <tr>
 <td>Aller à la cellule braille</td>
 <td>ensemble de routage 1</td>
+</tr>
+<tr>
+<td>Sélectionnez la plage de cellules braille depuis la première jusqu'à la dernière</td>
+<td>plusieurs touches de routage de l'ensemble 1</td>
 </tr>
 <tr>
 <td>Basculer braille suit to</td>

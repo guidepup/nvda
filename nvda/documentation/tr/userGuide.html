@@ -2,16 +2,16 @@
 <html lang="tr" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2 Kullanıcı Rehberi</title>
+<title>NVDA 2026.3 Kullanıcı Rehberi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="nvda-20262-kullanc-rehberi">NVDA 2026.2 Kullanıcı Rehberi</h1>
+<body><h1 id="nvda-20263-kullanc-rehberi">NVDA 2026.3 Kullanıcı Rehberi</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262-kullanc-rehberi" title="NVDA 2026.2 Kullanıcı Rehberi">NVDA 2026.2 Kullanıcı Rehberi</a><ul>
+<li><a href="#nvda-20263-kullanc-rehberi" title="NVDA 2026.3 Kullanıcı Rehberi">NVDA 2026.3 Kullanıcı Rehberi</a><ul>
 <li><a href="#Introduction" title="Giriş">Giriş</a><ul>
 <li><a href="#GeneralFeatures" title="Genel Özellikler">Genel Özellikler</a></li>
 <li><a href="#SystemRequirements" title="sistem gereksinimleri">sistem gereksinimleri</a><ul>
@@ -89,6 +89,7 @@
 <li><a href="#Taps" title="Dokunmalar">Dokunmalar</a></li>
 <li><a href="#Flicks" title="Fiskeler">Fiskeler</a></li>
 <li><a href="#PinchGestures" title="Sıkıştırma Hareketleri">Sıkıştırma Hareketleri</a></li>
+<li><a href="#SequentialFlicks" title="Ardışık Fiskeler">Ardışık Fiskeler</a></li>
 </ul>
 </li>
 <li><a href="#TouchModes" title="Dokunma Kipleri">Dokunma Kipleri</a></li>
@@ -242,6 +243,7 @@
 <li><a href="#SpeechSettingsSymbolLevel" title="Noktalama İşaretlerini Söyleme düzeyi">Noktalama İşaretlerini Söyleme düzeyi</a></li>
 <li><a href="#SpeechSettingsTrust" title="Karakter ve sembolleri işlerken sentezleyici ve sesin dilini dikkate al">Karakter ve sembolleri işlerken sentezleyici ve sesin dilini dikkate al</a></li>
 <li><a href="#SpeechUnicodeNormalization" title="Unicode normalleştirme">Unicode normalleştirme</a></li>
+<li><a href="#SpeechSettingsSayAllReadingUnit" title="Tümünü okuma birimi">Tümünü okuma birimi</a></li>
 <li><a href="#SpeechReportNormalizedForCharacterNavigation" title="Karaktere karakter gezinirken unicode normalleştirme durumunu bildir">Karaktere karakter gezinirken unicode normalleştirme durumunu bildir</a></li>
 <li><a href="#SpeechSettingsCLDR" title="Karakter ve sembooleri işlerken (emoji dahil) Unicode Konsorsiyumu verisini dahil et">Karakter ve sembooleri işlerken (emoji dahil) Unicode Konsorsiyumu verisini dahil et</a></li>
 <li><a href="#SpeechSettingsCapPitchChange" title="Büyük Harflerde Ses Perdesi Değişim Yüzdesi">Büyük Harflerde Ses Perdesi Değişim Yüzdesi</a></li>
@@ -284,9 +286,10 @@
 <li><a href="#BrailleSpeakOnRouting" title="Karakter karakter gezinirken karakteri bildir">Karakter karakter gezinirken karakteri bildir</a></li>
 <li><a href="#BrailleSpeakOnNavigating" title="Satır veya paragraf gezinirken sesli okuma">Satır veya paragraf gezinirken sesli okuma</a></li>
 <li><a href="#BrailleAutoScrollRate" title="Otomatik Kaydırma Hızı">Otomatik Kaydırma Hızı</a></li>
-<li><a href="#BrailleSettingsWordWrap" title="Mümkün olduğunda sözcükleri bölmemeye çalış">Mümkün olduğunda sözcükleri bölmemeye çalış</a></li>
+<li><a href="#BrailleSettingsWordWrap" title="Metin kaydırma">Metin kaydırma</a></li>
 <li><a href="#BrailleUnicodeNormalization" title="Unicode normalleştirme">Unicode normalleştirme</a></li>
 <li><a href="#BrailleSettingsInterruptSpeech" title="Kaydırma sırasında konuşmayı kesme">Kaydırma sırasında konuşmayı kesme</a></li>
+<li><a href="#ChineseBrailleWordSegmentation" title="Çince sözcük bölümlemeyi kullan">Çince sözcük bölümlemeyi kullan</a></li>
 </ul>
 </li>
 <li><a href="#SelectBrailleDisplay" title="Braille ekran seçimi">Braille ekran seçimi</a><ul>
@@ -363,6 +366,7 @@
 <li><a href="#TouchInteraction" title="Dokunmatik Etkileşim">Dokunmatik Etkileşim</a><ul>
 <li><a href="#TouchSupportEnable" title="Dokunmatik etkileşim desteğini etkinleştir">Dokunmatik etkileşim desteğini etkinleştir</a></li>
 <li><a href="#TouchTypingMode" title="Dokunarak yazma kipi">Dokunarak yazma kipi</a></li>
+<li><a href="#TouchEdgeGestures" title="Kenar hareketlerini etkinleştir">Kenar hareketlerini etkinleştir</a></li>
 </ul>
 </li>
 <li><a href="#ReviewCursorSettings" title="İnceleme İmleci">İnceleme İmleci</a><ul>
@@ -408,6 +412,8 @@
 <li><a href="#BrowseModeSettingsAutoPassThroughOnCaretMove" title="Düzenleme İmleci İçin Otomatik Odak Kipi">Düzenleme İmleci İçin Otomatik Odak Kipi</a></li>
 <li><a href="#BrowseModeSettingsPassThroughAudioIndication" title="Odak Kipiyle Tarama Kipi Arasındaki Geçişi Ses Çalarak bildir">Odak Kipiyle Tarama Kipi Arasındaki Geçişi Ses Çalarak bildir</a></li>
 <li><a href="#BrowseModeSettingsTrapNonCommandGestures" title="Komut tuşu olmayan tuşların belgeye gönderilmesini engelle">Komut tuşu olmayan tuşların belgeye gönderilmesini engelle</a></li>
+<li><a href="#SearchHistory" title="Arama geçmişini sakla">Arama geçmişini sakla</a></li>
+<li><a href="#NativeSelectionModeSetting" title="Yerel seçim kipi">Yerel seçim kipi</a></li>
 <li><a href="#BrowseModeSettingsBrowseModeNavigationElements" title="Tarama kipi dokunarak dolaşma öğeleri">Tarama kipi dokunarak dolaşma öğeleri</a></li>
 </ul>
 </li>
@@ -417,10 +423,12 @@
 <li><a href="#DocumentFormattingDetectFormatAfterCursor" title="imleçten sonraki biçim değişikliklerini bildir">imleçten sonraki biçim değişikliklerini bildir</a></li>
 <li><a href="#ReportSpellingErrors" title="Yazım ve dilbilgisi hatası bildirimi">Yazım ve dilbilgisi hatası bildirimi</a></li>
 <li><a href="#DocumentFormattingSettingsLineIndentation" title="Satır girintilerinin bildirimi">Satır girintilerinin bildirimi</a></li>
+<li><a href="#IndentToneDuration" title="Girinti tonu süresi">Girinti tonu süresi</a></li>
 </ul>
 </li>
 <li><a href="#DocumentNavigation" title="Belge dolaşımı">Belge dolaşımı</a><ul>
 <li><a href="#ParagraphStyle" title="Paragraf kipi">Paragraf kipi</a></li>
+<li><a href="#WordSegmentationStandard" title="Sözcük Bölümleme Standardı">Sözcük Bölümleme Standardı</a></li>
 </ul>
 </li>
 <li><a href="#MathSettings" title="Matematik Ayarları">Matematik Ayarları</a><ul>
@@ -597,14 +605,14 @@
 <li><a href="#AutomaticDetection" title="arka planda otomatik algılama işlevini destekleyen ekranlar">arka planda otomatik algılama işlevini destekleyen ekranlar</a></li>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/PAC Mate Serisi">Freedom Scientific Focus/PAC Mate Serisi</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA 6 serisi/protokol dönüştürücü">Optelec ALVA 6 serisi/protokol dönüştürücü</a></li>
-<li><a href="#HandyTech" title="Handy Tech Ekranları">Handy Tech Ekranları</a></li>
+<li><a href="#HandyTech" title="Help Tech Ekranları">Help Tech Ekranları</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Baum/Humanware/APH Braille/Orbit Ekranlar">Baum/Humanware/APH Braille/Orbit Ekranlar</a></li>
 <li><a href="#HedoProfiLine" title="hedo ProfiLine USB">hedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="hedo MobilLine USB">hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/B Serisi / BrailleNote Touch">HumanWare Brailliant BI/B Serisi / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="Tüm modeller için tuş atamaları">Tüm modeller için tuş atamaları</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32, BI 40 ve B 80 için tuş atamaları">Brailliant BI 32, BI 40 ve B 80 için tuş atamaları</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32, BI 40, B 80, BI 20X ve BI 40X için tuş atamaları">Brailliant BI 32, BI 40, B 80, BI 20X ve BI 40X için tuş atamaları</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Brailliant BI 14 için tuş atamalar">Brailliant BI 14 için tuş atamalar</a></li>
 </ul>
 </li>
@@ -638,6 +646,7 @@
 <li><a href="#AdvancedTopics" title="İleri Düzey Konular">İleri Düzey Konular</a><ul>
 <li><a href="#SecureMode" title="Güvenli Mod">Güvenli Mod</a></li>
 <li><a href="#SecureScreens" title="Güvenli Ekranlar">Güvenli Ekranlar</a></li>
+<li><a href="#DownloadingNVDA" title="NVDA'yı indirme">NVDA'yı indirme</a></li>
 <li><a href="#CommandLineOptions" title="Komut Satırı Seçenekleri">Komut Satırı Seçenekleri</a></li>
 <li><a href="#UninstallingNVDA" title="NVDA'yı Kaldırma">NVDA'yı Kaldırma</a></li>
 <li><a href="#SystemWideParameters" title="Sistem Çapında Geçerli Parametreler">Sistem Çapında Geçerli Parametreler</a></li>
@@ -648,7 +657,7 @@
 </li>
 </ul>
 </div>
-<!-- KC:title: NVDA 2026.2 Komutlar Hızlı Rehber -->
+<!-- KC:title: NVDA 2026.3 Komutlar Hızlı Rehber -->
 
 <h2 id="Introduction">Giriş</h2>
 <p>NVDA'ya hoş geldiniz!</p>
@@ -817,6 +826,7 @@ Bu seçenekler NVDA'nın otomatik olarak başlayıp başlamayacağını belirler
 </ol>
 <h3 id="RunningNVDA">NVDA'yı Çalıştırma</h3>
 <p>NVDA'nın tüm komutları kullanıcı rehberinde farklı başlıklara ayrılmış şekilde bulunmaktadır.
+Herhangi bir NVDA iletişim kutusundayken Kullanıcı Rehberinde mevcut denetimle ilgili konuyu açmak için <code>f1</code> tuşuna basın.
 Komutlar ayrıca "komutlar için çabuk rehber" bölümünde de bulunmaktadır.
 "NVDA için Temel Eğitim" modülü, her komutu derinlemesine anlatmaktadır.
 "NVDA Temel Eğitimi" (İngilizce), <a href="http://www.nvaccess.org/shop" rel="noopener" target="_blank" title="NV Access Shop">NV Access Shop</a> adresinden bulabilirsiniz.</p>
@@ -949,6 +959,12 @@ Girdi yardımı açıkken komutlar farklı uygulamalara gönderilmez.</p>
 <td><code>NVDA+x</code></td>
 <td><code>NVDA+x</code></td>
 <td>NVDA tarafından son seslendirilen bilgiyi tekrarlar. İki kez basıldığında bilgi, göz atılabilir bir pencerede gösterilir</td>
+</tr>
+<tr>
+<td>Son seslendirilen bilgiyi kopyala</td>
+<td><code>NVDA+kontrol+x</code></td>
+<td><code>NVDA+kontrol+x</code></td>
+<td>NVDA tarafından son seslendirilen bilgiyi panoya kopyalar</td>
 </tr>
 <tr>
 <td>Metin biçimini oku</td>
@@ -1179,7 +1195,8 @@ Eklenti mağazasında <code>escape</code> tuşunun Kapat düğmesiyle aynı şek
 Eklenti Mağazası'ndaki herhangi bir yerden bu sekmeye ulaşmak için <code>control+sekme</code> tuşlarına basın.
 Eklentinin durumu "Güncelleme mevcut" olarak listelenecektir.
 Listede  mevcut kurulu sürüm ve yüklenebilir güncel sürüm görüntülenecektir.
-Eylem listesini açmak için eklentide <code>enter</code> tuşuna basın ve "Güncelle" yi seçin.</p>
+Eylem listesini açmak için eklentide <code>enter</code> tuşuna basın ve "Güncelle" yi seçin.
+Eklenti devre dışıysa, eylemin adı "Güncelle (ve etkinleştir)" olur. Eklentilerin kurulabilmesi için etkin olmaları gerektiğinden, devre dışı bir eklentiyi güncellemek onu yeniden etkinleştirir.</p>
 <p>Varsayılan olarak, NVDA başlatıldıktan sonra herhangi bir eklenti güncellemesi mevcutsa bilgilendirilirsiniz.
 Bu davranış hakkında daha fazla bilgi edinmek ve değiştirmek için <a href="#AutomaticAddonUpdates" title="&quot;güncelleme bildirimleri&quot;">"güncelleme bildirimleri"</a> bölümüne bakın.</p>
 <h3 id="Community">Topluluk</h3>
@@ -1194,6 +1211,7 @@ Bu program, NVDA'daki becerilerinizi göstermek için tamamlayabileceğiniz çev
 <p>NVDA ile ilgili yardım almak için <code>nvda+n</code> tuşlarına basın, ardından yardım altmenüsüne gitmek için <code>a</code> tuşuna basın.
 Bu alt menüden Kullanıcı Rehberine, Komutlar İçin Çabuk Rehbere, ne yeni dosyasına ve daha fazlasına ulaşılabilir.
 Bu ilk üç seçenek, varsayılan web tarayıcınızda açılacaktır.
+Herhangi bir NVDA iletişim kutusundayken Kullanıcı Rehberinde mevcut denetimle ilgili konuyu açmak için <code>f1</code> tuşuna basın.
 Ayrıca <a href="https://www.nvaccess.org/shop" rel="noopener" target="_blank" title="NV Access Shop">NV Access Shop</a> adresinde daha kapsamlı Eğitim Materyalleri bulunmaktadır.</p>
 <p>"NVDA için Temel Eğitim" modülü ile başlamanızı öneririz.
 Bu modül, başlangıçtan itibaren web'de gezinmeden nesne sunucusunu kullanmaya kadar birçok konuyu kapsamaktadır.
@@ -1280,8 +1298,8 @@ Bu, <a href="#AddonsManager" title="Eklenti Mağazası">Eklenti Mağazası</a> k
 </ul>
 </li>
 <li>Yönetici izni isteyen bir uygulamayı başlatmaya çalışırken Kullanıcı Hesabı Denetimi (UAC) ekranlarını okuyamaması&lt;</li>
-<li>Dokunmatik ekran desteğinin olmaması
-NVDA büyüteci etkinse dokunmatik ekran girişi düzgün çalışmaz.</li>
+<li>NVDA dokunma girdilerini yok sayar (hareketler doğrudan uygulamaya iletilir).</li>
+<li>NVDA büyüteci etkinken fare ve dokunma girdileri düzgün çalışmaz (yani girdiler hatalı olur).</li>
 <li>Windows Mağazası uygulamalarında tarama kipi ve yazılan karakterlerin söylenmesi gibi özelliklerin kullanılamaması</li>
 <li>Ses zayıflamasının kullanılamaması gibi kısıtlamalar bulunmaktadır.</li>
 </ul>
@@ -1358,6 +1376,15 @@ Dolayısıyla iki parmakla sağa fiske, dört parmakla yukarı fiske gibi hareke
 <h5 id="PinchGestures">Sıkıştırma Hareketleri</h5>
 <p>İçe doğru sıkıştırma hareketi yapmak için iki parmağınızı ekrana yerleştirip birbirine doğru hareket ettirin.
 Sıkıştırmayı açma hareketini yapmak için parmaklarınızı birbirinden uzaklaştırın.</p>
+<h5 id="SequentialFlicks">Ardışık Fiskeler</h5>
+<p>Ardışık fiske hareketini gerçekleştirmek için arka arkaya hızlıca iki fiske yapabilirsiniz.
+Bu, NVDA komutlarına atanabilecek dokunma hareketlerinin sayısını büyük ölçüde artırır.</p>
+<p>Her iki fiske de iki şekilde yapılabilir:</p>
+<ul>
+<li>İlk fiskeden sonra parmağınızı kaldırıp hareketin süresi dolmadan ikinci fiskeyi yapmak.</li>
+<li>Ya da parmağınızı kaldırmadan, yönü keskin bir şekilde değiştirerek tek ve sürekli bir kaydırma hareketi yapmak.</li>
+</ul>
+<p>On iki birleşim tanınır: zıt yönlerde yapılan dört fiske çifti (örneğin önce sağa, sonra sola fiske) ve birbirine dik yönlerde yapılan, L şeklindeki sekiz fiske çifti (örneğin önce sağa, sonra yukarı fiske).</p>
 <h4 id="TouchModes">Dokunma Kipleri</h4>
 <p>Mümkün olan dokunma hareketlerinden daha fazla NVDA komutu bulunduğu için, NVDA, arasında geçiş yapabileceğiniz birden fazla dokunma kipine sahiptir.
 Üç kip; metin kipi, nesne kipi ve tarama kipidir.
@@ -1434,6 +1461,13 @@ Komutların işlevleri girdi hareketleri açıkken çalışmaz.</p>
 <td><code>NVDA+x</code></td>
 <td>Yok</td>
 <td>NVDA tarafından son seslendirilen bilgiyi tekrarlar. İki kez basıldığında bilgi, göz atılabilir bir pencerede gösterilir</td>
+</tr>
+<tr>
+<td>Son seslendirilen bilgiyi kopyala</td>
+<td><code>NVDA+kontrol+x</code></td>
+<td><code>NVDA+kontrol+x</code></td>
+<td>Yok</td>
+<td>NVDA tarafından son seslendirilen bilgiyi panoya kopyalar</td>
 </tr>
 <tr>
 <td>NVDA Menüsü</td>
@@ -1660,16 +1694,16 @@ Siz karakter karakter, sözcük sözcük ve satır satır dolaştıkça NVDA bun
 <td>Sistem imleci bulunduğu pozisyondaki metin veya nesnenin konumuyla ilgili bilgileri raporlar. Örneğin, bu, belgede yüzdelik cinsinden konumu, sayfanın kenarından olan mesafeyi veya tam ekran konumunu içerebilir. İki kez basmak daha fazla ayrıntı sunabilir.</td>
 </tr>
 <tr>
-<td>sonrakiCümle</td>
-<td>alt+aşağıOk</td>
-<td>alt+aşağıOk</td>
-<td>sonraki cümleye gider ve okur. (Yalnızca Microsoft Word ve Outlook için desteklenmektedir)</td>
+<td>Sonraki cümle</td>
+<td><code>alt+aşağıOk</code></td>
+<td><code>alt+aşağıOk</code></td>
+<td>Düzenleme imini sonraki cümleye taşır ve cümleyi seslendirir. Bazı belgeler desteklenmez</td>
 </tr>
 <tr>
-<td>öncekiCümle</td>
-<td>alt+yukarıOk</td>
-<td>alt+yukarıOk</td>
-<td>Önceki cümleye gider ve okur. (Yalnızca Microsoft Word ve outlook için desteklenmektedir)</td>
+<td>Önceki cümle</td>
+<td><code>alt+yukarıOk</code></td>
+<td><code>alt+yukarıOk</code></td>
+<td>Düzenleme imini önceki cümleye taşır ve cümleyi seslendirir. Bazı belgeler desteklenmez</td>
 </tr>
 </tbody>
 </table>
@@ -2457,6 +2491,7 @@ Komut listesi</p>
 <li>Geçiş düğmesi</li>
 <li>İlerleme çubuğu</li>
 <li>Kaydırma çubuğu</li>
+<li>Tıklanabilir öğe</li>
 <li>Referans</li>
 <li>Matematik formülü</li>
 <li>Dikey olarak hizalanmış paragraf</li>
@@ -2503,6 +2538,7 @@ Seçim düğmeleri, bu öge türlerinden hangilerinin gösterileceğini belirlem
 "Aramak istediğiniz metni yazın" alanına, bulunacak metin girilebilir.
 "Büyük / küçük harfe duyarlı" onay kutusu, aramanın büyük ve küçük harfleri farklı düşünmesini sağlar.
 Örneğin, "Büyük / küçük harfe duyarlı" seçiliyken "NV Access" ifadesini bulabilirken, "nv access" ifadesini bulamazsınız.
+Tarama kipindeki <a href="#SearchHistory" title="Arama geçmişini sakla">Arama geçmişini sakla</a> ayarı etkinleştirildiğinde bu alan, son aradığınız terimleri de sunan bir seçim kutusuna dönüşür. En fazla 20 terim saklanır ve NVDA yeniden başlatıldığında bunlar temizlenir.
 Arama yapmak için aşağıdaki tuşları kullanın:</p>
 <!-- KC:beginInclude -->
 
@@ -2564,14 +2600,16 @@ Gömülü nesneyi barındıran sayfaya geri dönmek için bir kısayol tuşu tan
 <h3 id="NativeSelectionMode">yerel girdi modu</h3>
 <p>Varsayılan olarak, Tarama kipinde <code>şift+ok</code> tuşlarıyla metin seçerken, seçim sadece nvda bazında yapılır, uygulamayı etkilemez.
 Bu, seçimin ekranda görünmediği ve metnin <code>control+c</code> ile kopyalanmasının yalnızca NVDA'nın içeriğin düz metin temsilini kopyalayacağı anlamına gelir. yani tabloların biçimlendirilmesi veya seçili metnin  bağlantı olup olmadığı gibi biçimsel özellikleri kopyalanmayacaktır.
-Ancak, NVDA, bu ayarı destekleyen belirli Göz atma Modu belgelerinde açılabilen bir Yerel girdi Moduna sahiptir.
+Ancak NVDA'nın, destekleyen tarama kipi belgelerinde açılıp kapatılabilen bir Yerel seçim kipi vardır.
 Girdi Seçimi, belgenin yerel seçiminin NVDA'nın Göz atma Modu seçimini takip etmesini sağlar; bu da biçimlendirme, bağlantılar ve tablolar gibi ayrıntıların kopyalanmasını mümkün kılar.
 Şu anda Yerel Seçim Modu şunlarda desteklenmektedir:</p>
 <ul>
 <li>Mozilla Firefox</li>
 <li>Mozilla Thunderbird</li>
 <li>Chrome, Edge ve Chromium 134 ya da daha yeni bir sürümünü kullanan tüm tarayıcılar</li>
+<li>Microsoft Word ve Outlook; bu uygulamalarda kapatılamaz</li>
 </ul>
+<p>Yerel seçim kipi, NVDA'nın Tarama Kipi ayarları aracılığıyla bu özelliği destekleyen belgelerde <a href="#NativeSelectionModeSetting" title="otomatik olarak da açılabilir">otomatik olarak da açılabilir</a>.</p>
 <!-- KC:beginInclude -->
 
 <table>
@@ -2655,7 +2693,8 @@ Varsayılan olarak, inceleme imleci sistem imlecini izler, yani genellikle isten
 <!-- KC:endInclude -->
 
 <p>Bu noktada, NVDA Matematiksel etkileşim moduna girecektir. İfadeyi incelemek için yön tuşları gibi komutları kullanabilirsiniz.
-Örneğin, ifade üzerinde sol ve sağ Ok tuşları ile hareket edebilirsiniz ve kesir vb ifadenin bir bölümünü daha yakından incelemek için aşağı ok tuşuna basabilirsiniz.</p>
+Örneğin, ifade üzerinde sol ve sağ Ok tuşları ile hareket edebilirsiniz ve kesir vb ifadenin bir bölümünü daha yakından incelemek için aşağı ok tuşuna basabilirsiniz.
+<a href="#VisionFocusHighlight" title="Görsel Vurgu">Görsel Vurgu</a> ve tarama kipi imlecinin vurgulanması etkinleştirildiğinde, web üzerindeki MathML içeriğinin mevcut alt bölümü de görsel olarak gösterilir.</p>
 <p>Matematiksel içeriğe sahip olan belgeye geri dönmek istediğinizde, escape tuşuna basmanız yeterli.</p>
 <p>Bazen matematiksel içerik, etkinleştirildiğinde formülle ilgili bir iletişim kutusu veya daha fazla bilgi gösterebilen bir düğme veya başka bir öğe türü olarak gösterilebilir.
 Düğmeyi veya formülü içeren öğeyi etkinleştirmek için kontrol + enter tuşlarına basın.</p>
@@ -3442,7 +3481,7 @@ Bu konumlar renkli bir dikdörtgen çizgiyle vurgulanır.</p>
 <li>Düz mavi, sistem odağı ve nesne sunucusu aynı konumdaysa vurgulama için kullanılır. (e.g. Çünkü <a href="#ReviewCursorFollowFocus" title="nesne sunucusu sistem odağını takip ediyordur">nesne sunucusu sistem odağını takip ediyordur</a>).</li>
 <li>Kesik mavi sistem imleci konumunu vurgular.</li>
 <li>Düz pembe, sadece nesne sunucusunu vurgular.</li>
-<li>Düz sarı (web tarayıcılarındaki gibi fiziksel bir imlecin bulunmadığı yerlerde ) tarama kipinde kullanılan sanal imleci vurgular.</li>
+<li>Düz sarı renk, tarama kipinde kullanılan sanal düzenleme imini (web tarayıcılarında olduğu gibi fiziksel bir düzenleme iminin bulunmadığı yerlerde), OCR tanıma sonuçlarındaki imleci ve web üzerindeki matematik içeriğinde gezinirken mevcut alt bölümü vurgular.</li>
 </ul>
 <p><a href="#NVDASettings" title="NVDA Ayarları">NVDA Ayarları</a> iletişim kutusunda <a href="#VisionSettings" title="görsellik kategorisi">görsellik kategorisi</a> altındaki Görsel vurgu etkinse, <a href="#VisionSettingsFocusHighlight" title="odağın, nesne sunucusunun ya da tarama kipi imleci konumunun  vurgulanıp vurgulanmayacağını değiştirebilirsiniz">odağın, nesne sunucusunun ya da tarama kipi imleci konumunun  vurgulanıp vurgulanmayacağını değiştirebilirsiniz</a></p>
 <h3 id="VisionScreenCurtain">Ekran perdesi</h3>
@@ -3475,9 +3514,9 @@ Bu tür durumlar için  NVDA, ekranı karartmak için etkinleştirilebilen "ekra
 </table>
 <!-- KC:endInclude -->
 
-<p>Ekran Perdesi etkinleştirildiğinde, tam olarak ekranda ne olduğuna dayanan özellikler çalışmayacaktır.
-Örneğin, <a href="#Win10Ocr" title="OCR kullanamazsınız">OCR kullanamazsınız</a>.
-Bazı ekran görüntüsü araçları da çalışmayabilir.</p>
+<p>Ekran Perdesi etkinleştirildiğinde, doğrudan ekranda gösterilen içeriğe bağlı olarak çalışan bazı özellikler çalışmaz.
+Desteklenen sistemlerde, Ekran Perdesi etkinken de <a href="#Win10Ocr" title="Windows OCR">Windows OCR</a> kullanılabilir.
+Bazı ekran görüntüsü alma araçları çalışmayabilir.</p>
 <p>Lütfen Windows Büyüteç çalışırken ve ters çevrilmiş ekran renkleri kullanılırken Ekran Perdesinin etkinleştirilemeyeceğini unutmayın.</p>
 <h2 id="Magnifier">Büyüteç</h2>
 <p>NVDA, ekranın bazı bölümlerini yakınlaştırıp büyütmenizi sağlayan dahili bir Büyüteç özelliği içerir.
@@ -3572,6 +3611,11 @@ Diğer NVDA ayarlarında olduğu gibi Büyüteç durumu da oturumlar arasında k
 <td><code>NVDA+shift+alt+downArrow</code></td>
 <td>Büyütülmüş görünümü doğrudan ekranın alt kenarına taşır</td>
 </tr>
+<tr>
+<td>Fareyi görünüme taşı</td>
+<td>Yok</td>
+<td>Fare imlecini büyütülmüş görünümün merkezine taşır</td>
+</tr>
 </tbody>
 </table>
 <!-- KC:endInclude -->
@@ -3634,7 +3678,9 @@ NVDA bu aracı görsellerdeki metni ya da erişilebilir olmayan uygulamalardaki 
 başlat menüsü, ayarlar, zaman ve dil, bölge ve dil altında dil ekle düğmesi kullanılarak ek diller yüklenebilir.</p>
 <p>Altyazılı bir video gibi sürekli değişen bir içeriği takip etmek istediğinizde, isteğe bağlı olarak tanınan içeriğin otomatik olarak yenilenmesini etkinleştirebilirsiniz.
 Bu aynı zamanda <a href="#NVDASettings" title="NVDA Ayarları">NVDA Ayarları</a> iletişim kutusunun <a href="#Win10OcrSettings" title="Windows OCR kategorisi">Windows OCR kategorisi</a> bölümünde de yapılabilir.</p>
-<p>Windows OCR, <a href="#Vision" title="NVDA görsel geliştirmeleri">NVDA görsel geliştirmeleri</a> ya da  diğer harici görsel yardımcılarla  kısmen veya tamamen uyumsuz olabilir. Tanıma işlemine geçmeden önce bu araçları devre dışı bırakmanız gerekecektir.</p>
+<p>Desteklenen sistemlerde, <a href="#VisionScreenCurtain" title="Ekran Perdesi">Ekran Perdesi</a> veya NVDA'nın dahili <a href="#Magnifier" title="Büyüteç">Büyüteç</a> özelliği etkinken de Windows OCR kullanılabilir.
+Harici görsel yardım araçları, Windows OCR ile kısmen veya tamamen uyumsuz olabilir.
+Tanıma işlemini başlatmadan önce bu görsel yardım araçlarını devre dışı bırakmanız gerekebilir.</p>
 <!-- KC:beginInclude -->
 <p>Windows OCR kullanarak geçerli nesne içindeki metni tanımak için, NVDA+r tuşlarına basın.</p>
 <!-- KC:endInclude -->
@@ -3952,6 +3998,10 @@ Yeni metin yazılırken, içerik yukarı kaydırılır ve önceki metin artık g
 Windows 11 22H2'den önceki Windows sürümlerinde, pencerede görünmeyen bir metne NVDA'nın metin inceleme komutlarıyla erişilemez.
 Bu nedenle, önceki metni okumak için konsol penceresini kaydırmanız gerekir.
 Yeni konsol sürümlerinde, pencereyi kaydırmaya gerek kalmadan tüm metin arabelleğinnde serbestçe gezinebilirsiniz.</p>
+<p>SSH üzerinden bağlantı kurulduğunda olduğu gibi bazı durumlarda, düzenleme imlecinin güncellenmesi gecikebilir.
+NVDA, Windows Terminal'de düzenleme imlecinin hareket etmesini biraz daha uzun süre bekler; böylece güncelliğini yitirmiş karakterleri bildirme olasılığı azalır.
+Düzenleme imleci hâlâ doğru bildirilmiyorsa, Gelişmiş Ayarlar'daki <a href="#AdvancedSettingsCaretMoveTimeout" title="Düzenleme imleci hareketi zaman aşımı">Düzenleme imleci hareketi zaman aşımı</a> değerini artırmayı deneyin.
+Bu değeri artırmak, düzenleme imlecinin daha yavaş hareket ettiği hissini verebilir. Bu nedenle, değeri uçbirim uygulamaları için bir konfigürasyon profilinde değiştirmeyi düşünebilirsiniz.</p>
 <!-- KC:beginInclude -->
 <p>Eski Windows Konsolu sürümlerinde NVDA ile <a href="#ReviewingText" title="metin incelemesi">metin incelemesi</a> için aşağıdaki yerleşik klavye kısayolları  yararlı olabilir:</p>
 <table>
@@ -4217,6 +4267,32 @@ Emoji anlamına sahip az sayıdaki içi dolu kare harfin (🅰, 🅱, 🅾, 🅿
 <tr>
 <td>Varsayılan</td>
 <td>Etkin</td>
+</tr>
+</tbody>
+</table>
+<h5 id="SpeechSettingsSayAllReadingUnit">Tümünü okuma birimi</h5>
+<p>Bu seçim kutusu, Tümünü oku (sürekli okuma) sırasında hangi metin birimiyle ilerleneceğini seçmenizi sağlar.
+Bu ayar, Tümünü oku sırasında düzenleme imlecinin ve görünümün ne sıklıkla ilerleyeceğini etkiler. Uzun metin bloklarında tonlamayı da etkileyebilir.
+"Mümkünse cümle" seçildiğinde NVDA, cümle sınırlarını destekleyen kontrollerde ve belgelerde cümle cümle okur. Cümle sınırlarının desteklenmediği durumlarda ise otomatik olarak satır satır okumaya geçer.
+Cümle sınırları Microsoft Word ve Outlook'ta, çeşitli yazı alanlarında ve web sayfaları gibi tarama kipinde gösterilen belgelerin çoğunda desteklenir.
+"Paragraf" seçildiğinde NVDA, paragraf paragraf okur.
+"Çizgi" olarak ayarlandığında, NVDA her zaman satır satır okur.
+Örneğin, "Çizgi" olarak ayarlandığında, Tümünü oku komutu NVDA'nın Log Görüntüleyicisi gibi zengin yazı alanlarında metni satır satır okur; varsayılan ayarda ise bu alanlar cümle cümle okunur.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seçenekler</td>
+<td>Varsayılan (Mümkünse cümle), Mümkünse cümle, Paragraf, Çizgi</td>
+</tr>
+<tr>
+<td>Varsayılan</td>
+<td>Mümkünse cümle</td>
 </tr>
 </tbody>
 </table>
@@ -4639,15 +4715,27 @@ Aşağıdaki semboller tanımlanmıştır:</p>
 <p>En düşük değer (%0) saniyede 1 hücre, en yüksek değer (%100) ise saniyede 20 hücredir.
 Örneğin varsayılan değer olan 10 hücre/sn ile 40 hücreli bir braille ekran kullanılırsa ekran her 4 saniyede bir otomatik olarak kaydırılır.
 Ekran 20 hücreli olsaydı her braille satırı 2 saniye boyunca gösterilirdi.</p>
-<h5 id="BrailleSettingsWordWrap">Mümkün olduğunda sözcükleri bölmemeye çalış</h5>
-<p>Bu seçenek etkinleştirilirse, braille ekranının sonuna sığmayacak kadar büyük olan bir sözcük bölünmeyecektir.
+<p>Otomatik kaydırma seçeneği etkinken, önceki içeriği yeniden okumak için geri kaydırma komutunu kullanmaya devam edebilirsiniz. Örneğin, boş bir satırı atlamak veya okunan satır çok kısaysa ilerlemek için ileri kaydırma komutunu da kullanabilirsiniz.</p>
+<p>Bir yönlendirme tuşuna basıldığında, braille olarak bir mesaj sunulduğunda, yeni bir nesne görüntülendiğinde, güvenli bir ekrana girildiğinde, oturum kilitlendiğinde veya pencerenin sonuna ulaşıldığında otomatik kaydırma devre dışı bırakılır.</p>
+<h5 id="BrailleSettingsWordWrap">Metin kaydırma</h5>
+<p>Bu seçim kutusu, braille ekrana sığmayacak kadar uzun metinlerin NVDA tarafından nasıl işleneceğini ayarlamanızı sağlar.
+Bir sözcük satırlar arasında bölündüğünde, aşağıda aksi belirtilmedikçe satırın son hücresinde devam işareti (7 ve 8'inci noktalar) gösterilir.
+Kullanılabilir seçenekler şunlardır:</p>
+<ul>
+<li>Kapalı: Metin, gerekirse sözcükler ortadan bölünerek ekranın kenarında alt satıra geçer; devam işareti gösterilmez.
+Her satırda mümkün olduğunca fazla metin gösterilir.
+Ekranı kaydırdığınızda metnin geri kalanını okuyabilirsiniz.</li>
+<li>Sözcükler bölündüğünde işaret göster: Metin alt satıra geçirilmez, ancak ekranın sonunda bir sözcük bölündüğünde devam işareti gösterilir.
+Ekranı kaydırdığınızda sözcüğün geri kalanını okuyabilirsiniz.</li>
+<li>Sözcük sınırlarında: Braille ekranın sonuna sığmayan sözcükler bölünmez.
 Bunun yerine ekranın sonunda bir miktar boş alan bırakılacaktır.
 Ekranı kaydırdığınızda sözcüğün tamamını okuyabilirsiniz.
-Bu seçenek bazen "kelime kaydırma" olarak da bilinir.
-Sözcük tek başına bile ekrana sığmayacak kadar büyükse yine de bölünecektir.</p>
-<p>Eğer bu seçenekdevre dışı bırakılırsa, sözcüğün görüntülenebilecek kısmı görüntülenecek, ancak geri kalanı kesilecektir.
-Ekranı kaydırdığınızda sözcüğün tamamını okuyabilirsiniz.</p>
-<p>Bu seçeneği etkinleştirmek daha akıcı okumalar yapmanızı sağlayabilir, ancak ekranı daha fazla kaydırmanız gerekir.</p>
+Sözcük tek başına bile ekrana sığmayacak kadar uzunsa yine bölünmesi gerekir; bu durumda devam işareti gösterilir.
+Bu seçenek daha akıcı okumanızı sağlayabilir, ancak genellikle ekranı daha fazla kaydırmanızı gerektirir.</li>
+<li>Sözcük veya hece sınırlarında: "Sözcük sınırlarında" seçeneği gibi çalışır, ancak ekrana sığmayan uzun sözcükler mümkünse hece sınırından bölünür. Sözcüğün dili biliniyorsa heceleme için bu dil kullanılır.
+Örneğin, <code>behave</code> sözcüğü <code>be</code> ile <code>have</code> arasından bölünebilir.
+Bir sözcük bölündüğünde devam işareti gösterilir.</li>
+</ul>
 <h5 id="BrailleUnicodeNormalization">Unicode normalleştirme</h5>
 <p>Bu seçenek etkinleştirildiğinde, braille ekranda braille ile yazılan metin üzerinde unicode normalleştirme gerçekleştirilir.
 Bu seçenek belirli bir braille tablosunda bilinmeyen ve sosyal medyada yaygın olarak kullanılan kalın ve italik karakterler gibi uyumlu bir alternatifi olan braille karakterleri ile karşılaştığınızda işe yarar.
@@ -4688,6 +4776,29 @@ Bundan ötürü ekranı kaydırırken konuşmayı kesen bu seçenek varsayılan 
 <tr>
 <td>Seçenekler</td>
 <td>Varsayılan (Etkin), Etkin, Devre Dışı</td>
+</tr>
+<tr>
+<td>Varsayılan</td>
+<td>Etkin</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ChineseBrailleWordSegmentation">Çince sözcük bölümlemeyi kullan</h5>
+<p>Bu ayar, NVDA'nın metni braille'e çevirirken Çince sözcük bölümlemeyi kullanıp kullanmayacağını belirler.
+Bu ayar etkinse ve "Çince (Taiwan, Mandarin)" dışında bir Çince braille çıktı tablosu kullanılıyorsa, NVDA çeviriden önce Çince sözcüklerin arasına boşluk ekler.
+Bu ayar devre dışıysa, NVDA sözcüklerin arasına boşluk eklemeden metni doğrudan çıktı tablosuna iletir.
+Bu ayarın "Çince (Taiwan, Mandarin)" tablosunda veya Çince olmayan çıktı tablolarında herhangi bir etkisi yoktur.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seçenekler</td>
+<td>Etkin, Devre dışı</td>
 </tr>
 <tr>
 <td>Varsayılan</td>
@@ -4888,7 +4999,7 @@ Varsayılan olarak, bu ayar kategorisi aşağıdaki seçenekleri içerir:</p>
 <li>Vurgulamayı Etkinleştir: Görsel Vurguyu açıp kapatır.</li>
 <li>Sistem odağını görselleştir: <a href="#SystemFocus" title="sistem odağının">sistem odağının</a> vurgulanıp vurgulanmayacağını değiştirir.</li>
 <li>Nesne sunucusunu görselleştir: <a href="#ObjectNavigation" title="nesne sunucusunun">nesne sunucusunun</a>vurgulanıp vurgulanmayacağını değiştirir.</li>
-<li>Tarama kipi imlecini görselleştir: <a href="#BrowseMode" title="tarama kipi sanal imlecinin">tarama kipi sanal imlecinin</a>vurgulanıp vurgulanmayacağını değiştirir.</li>
+<li>Tarama kipi imlecini vurgula: OCR tanıma sonuçlarındaki imleç ve web üzerindeki matematiksel içerikte dolaşırken mevcut alt bölüm de dahil olmak üzere, <a href="#BrowseMode" title="sanal tarama kipi imlecinin">sanal tarama kipi imlecinin</a> vurgulanıp vurgulanmayacağını değiştirir.</li>
 </ul>
 <p>"Vurgulamayı Etkinleştir" onay kutusunun işaretlenmesinin ve işaretinin kaldırılmasının diğer üç onay kutusunun durumunu da buna göre değiştireceğini unutmayın.
 Bu nedenle, "Vurgulamayı Etkinleştir" kapalıysa ve bu onay kutusunu işaretlerseniz, diğer üç onay kutusu da otomatik olarak işaretlenecektir.
@@ -5185,9 +5296,13 @@ Kullanılabilir seçenekler:</p>
 <li>Her zaman: NVDA tüm yazılan kelimeleri seslendirir.</li>
 </ul>
 <h5 id="KeyboardSettingsSpeechInteruptForCharacters">Karakterlere Basıldığında Konuşmayı Durdur</h5>
-<p>Açıksa,, bu seçenek bir karaktere basıldığında konuşmanın durmasına neden olur. Varsayılan olarak açıktır.</p>
+<p>Bu seçenek etkinse, her karakter yazıldığında konuşma kesilir.
+Bu seçenek varsayılan olarak etkindir.
+Bu seçenek, tarama kipinde, odak kipinde ve Tümünü oku komutu kullanılırken üretilen konuşmalar da dahil olmak üzere NVDA'nın tüm konuşma çıktısını etkiler.</p>
 <h5 id="KeyboardSettingsSpeechInteruptForEnter">Enter tuşuna basıldığında konuşmayı durdur</h5>
-<p>Açıksa, bu seçenek enter tuşuna basıldığında konuşmanın durmasına neden olur. Varsayılan olarak açıktır.</p>
+<p>Bu seçenek etkinse, enter tuşuna her basıldığında konuşma kesilir.
+Bu seçenek varsayılan olarak etkindir.
+Bu seçenek, tarama kipinde, odak kipinde ve Tümünü oku komutu kullanılırken üretilen konuşmalar da dahil olmak üzere NVDA'nın tüm konuşma çıktısını etkiler.</p>
 <h5 id="KeyboardSettingsSkimReading">Tümünü okurken atlamaya izin ver</h5>
 <p>Açıksa, tümünü okuma komutu verildiğinde belli dolaşma komutları kullanıldığı zaman (örneğin tarama kipinde hızlı dolaşım tuşları ya da paragraf veya satır değiştirme komutları) konuşma durdurulmaz, yerine okuma atlanılan konumdan itibaren devam eder.</p>
 <h5 id="KeyboardSettingsBeepLowercase">Büyük Harf Kilidi Açıkken, şifte basılarak küçük harf Yazılırsa Bip Sesi Çıkar</h5>
@@ -5260,6 +5375,14 @@ Bu ayar, NVDA+kontrol+alt+t kullanılarak da değiştirilebilir.</p>
 <p>Bu onay kutusu dokunmatik ekrandan giriş yapma yönteminizi belirlemenize olanak tanır.
 Onay kutusu işaretli ise, dokunmatik klavyede bir tuşu bulduktan sonra, parmağınızı ekrandan çektiğinizde bu tuşa basılır.
 İşaretli değilse, tuşa basmak için ekrana çift dokunmanız gerekir.</p>
+<h5 id="TouchEdgeGestures">Kenar hareketlerini etkinleştir</h5>
+<p>Bu onay kutusu, kenar hareketleri desteğini etkinleştirir.
+Bu seçenek etkinse, ekranın herhangi bir kenarına en fazla 15 mm uzaklıkta başlayan hareketler ayrı hareketler olarak değerlendirilir ve <a href="#InputGestures" title="Girdi Hareketleri iletişim kutusunda">Girdi Hareketleri iletişim kutusunda</a> bunlara bağımsız olarak komut atanabilir.
+Örneğin, ekranın sol kenarından başlayan sağa fiske hareketine, ekranın ortasında yapılan sağa fiske hareketinden farklı bir komut atanabilir.
+Atamalar yapıldıktan sonra kenar hareketleri devre dışı bırakılırsa, bu atamalar korunur ancak hiçbir zaman tetiklenmez.
+Not: Bazı kenarlardaki dokunma hareketleri, NVDA'ya ulaşmadan Windows veya Görev çubuğu tarafından işlenebilir.
+Örneğin, alt kenardan kaydırma genellikle Başlat menüsünü veya İşlem Merkezi'ni açar. Görev çubuğu başka bir kenardaysa, o kenardaki dokunmalar da benzer şekilde NVDA'ya ulaşmadan işlenir.
+Belirli bir kenardaki dokunma hareketi çalışmıyorsa, hareketin Windows tarafından işlenip işlenmediğini kontrol edin ve o kenara herhangi bir komut atamamayı değerlendirin.</p>
 <h4 id="ReviewCursorSettings">İnceleme İmleci</h4>
 <p>NVDA Ayarları iletişim kutusundaki İnceleme İmleci kategorisi, NVDA'nın inceleme imleci davranışını konfigüre etmek için kullanılır.
 Bu kategoride aşağıdaki seçenekler mevcuttur:</p>
@@ -5411,6 +5534,51 @@ Yön tuşlarıyla  yazı alanının dışına çıktığınızda ise tarama kipi
 <p>Varsayılan olarak etkin olan bu seçenek, bir NVDA komutu olmayan veya genel olarak komut tuşu olarak kabul edilmeyen hareketlerin (ör. tuşlara basmak), odağınızda olan belgeye iletilip iletilmeyeceğini belirlemenizi sağlar.
 Etkinleştirildiğinde, örneğin ş harfine basılırsa, bu tuş ne NVDA komutu ne de aktif uygulama komutu olarak kullanıldığı için , tuşun belgeye ulaşması engellenecektir.
 Bu durumda NVDA, Windows’a bu türden  bir tuşa basıldığında varsayılan bir ses çalmasını söyler.</p>
+<h5 id="SearchHistory">Arama geçmişini sakla</h5>
+<p>Varsayılan olarak etkin olan bu seçenek, <a href="#SearchingForText" title="Ara iletişim kutusunun">Ara iletişim kutusunun</a> mevcut NVDA oturumunda aradığınız terimleri hatırlayıp hatırlamayacağını belirler.
+Bu seçenek etkin olduğunda, Ara iletişim kutusu son kullanılan en fazla 20 arama terimini bir seçim kutusunda sunar. Bu geçmiş yalnızca bellekte tutulur ve NVDA yeniden başlatıldığında temizlenir.
+Seçim kutusu, bazı IME'lerde olduğu gibi, kullandığınız giriş yöntemini olumsuz etkiliyorsa, Ara iletişim kutusunda yeniden sade bir yazı alanı kullanmak için bu seçeneği Devre dışı olarak ayarlayabilirsiniz.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seçenekler</td>
+<td>Varsayılan (Etkin), Devre dışı, Etkin</td>
+</tr>
+<tr>
+<td>Varsayılan</td>
+<td>Etkin</td>
+</tr>
+</tbody>
+</table>
+<h5 id="NativeSelectionModeSetting">Yerel seçim kipi</h5>
+<p>Varsayılan olarak devre dışı olan bu seçenek, <a href="#NativeSelectionMode" title="Yerel seçim kipinin">Yerel seçim kipinin</a> bu kipi destekleyen Tarama Kipi belgelerinde otomatik olarak açılıp açılmayacağını belirler.
+Bu ayar, Yerel seçim kipinin her zaman kullanıldığı Microsoft Word ve Outlook'u etkilemez.
+Bu seçenek devre dışı bırakılsa bile, Yerel seçim kipini her belge için <code>NVDA+şift+f10</code> tuşlarıyla manuel olarak açabilirsiniz.
+Bu seçenekte yapılan değişiklik, yeni yüklenen belgelerde etkili olur.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seçenekler</td>
+<td>Varsayılan (Devre dışı), Devre dışı, Etkin</td>
+</tr>
+<tr>
+<td>Varsayılan</td>
+<td>Devre dışı</td>
+</tr>
+</tbody>
+</table>
 <h5 id="BrowseModeSettingsBrowseModeNavigationElements">Tarama kipi dokunarak dolaşma öğeleri</h5>
 <p>Bu liste, dokunarak tarama kipinde öğeler arasında geçiş yaparken hangi öğe türlerinin kullanılabileceğini seçmenizi sağlar.
 Her bir öğe türünü etkinleştirmek veya devre dışı bırakmak için onay kutularını kullanın.
@@ -5449,6 +5617,7 @@ Bu ayar yalnızca dokunarak dolaşmayı etkiler; klavyeyle tarama kipinde dolaş
 <li>Sayfa numaraları</li>
 <li>Satır Numaraları</li>
 <li>Satır girintilerinin bildirimi <a href="#DocumentFormattingSettingsLineIndentation" title="(Kapalı, Konuşma, Ses çalarak, Konuşarak ve Ses çalarak)">(Kapalı, Konuşma, Ses çalarak, Konuşarak ve Ses çalarak)</a></li>
+<li>Girinti tonu süresi (ms)</li>
 <li>Satır girinti bildirimi için boş satırları yoksay</li>
 <li>Paragraf girintisi (Örneğin, asılı girinti, ilk satır girintisi)</li>
 <li>Satır aralığı (tek, çift vs)</li>
@@ -5521,6 +5690,10 @@ Satır girintilerinin bildirimi seçim kutusunda dört seçenek bulunmaktadır.<
 </ul>
 <p>"Satır girinti bildirimi için boş satırları yoksay" onay kutusunu işaretlerseniz, boş satırlar için girinti değişiklikleri bildirilmeyecektir.
 Bu, programlama kaynak kodlarında olduğu gibi, girintili metin bloklarını ayırmak için boş satırların kullanıldığı bir belgeyi okurken yararlı olabilir.</p>
+<h5 id="IndentToneDuration">Girinti tonu süresi</h5>
+<p>Bu seçenek, <a href="#DocumentFormattingSettingsLineIndentation" title="&quot;Satır girintilerinin bildirimi&quot;">"Satır girintilerinin bildirimi"</a> seçim kutusunda "Ses çalarak" veya "Konuşarak ve Ses çalarak" seçildiğinde, girinti tonlarının süresini ayarlamanıza olanak tanır.
+Değer, 10 ms ile 2000 ms arasında olabilir.
+Varsayılan değer 40 ms'dir.</p>
 <h4 id="DocumentNavigation">Belge dolaşımı</h4>
 <p>Bu kategori belge dolaşımı ile ilgili çeşitli ayarlamaları yapmanıza yarar</p>
 <h5 id="ParagraphStyle">Paragraf kipi</h5>
@@ -5554,6 +5727,54 @@ Bu seçenek, blok paragraflar kullanan belgelerle çalışırken en iyi biçimde
 Microsoft Word denetimlerine erişmek için UIA kullanmıyorsanız, bu paragraf stilinin Microsoft Word veya Microsoft Outlook'ta kullanılamayacağını unutmayın.</li>
 </ul>
 <p>Mevcut paragraf kipleri arasında hızlıca geçiş yapmak için <a href="#InputGestures" title="Girdi hareketleri iletişim kutusu">Girdi hareketleri iletişim kutusu</a> üzerinden bir kısayol atayabilirsiniz.</p>
+<h5 id="WordSegmentationStandard">Sözcük Bölümleme Standardı</h5>
+<p>Bu ayar, sözcük sözcük dolaşırken NVDA'nın sözcük sınırlarını nasıl belirleyeceğini kontrol eder.
+Bu ayar, boşluk kullanılmadan yazılan dillerde metnin sözcüklere, cümlelere ve paragraflara nasıl bölüneceğini etkiler
+Çince braille çıktısı, "Çince (Taiwan, Mandarin)" çıktı tablosu dışında, ayrı bir <a href="#ChineseBrailleWordSegmentation" title="Çince sözcük bölümleme ayarı">Çince sözcük bölümleme ayarı</a> kullanır.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seçenekler</td>
+<td>Varsayılan (Otomatik), Otomatik, Çince, Unicode (ICU), Eski (Uniscribe)</td>
+</tr>
+<tr>
+<td>Varsayılan</td>
+<td>Otomatik</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Seçenek</th>
+<th>Davranış</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Otomatik</td>
+<td>Kullanılabilir olduğunda Çince metinler için Çince sözcük bölümlemeyi kullanır. Aksi takdirde, kullanılabilir olduğunda Unicode (ICU) sözcük bölümlemeyi tercih eder; bu da kullanılamıyorsa eski Windows sözcük bölümleme yöntemini kullanır.</td>
+</tr>
+<tr>
+<td>Çince</td>
+<td>Çince sözcük bölümlemeyi kullanır. Çince sözcük bölümleme kullanılamıyorsa NVDA, <code>Otomatik</code> seçeneğindeki gibi alternatif yöntemlere başvurur.</td>
+</tr>
+<tr>
+<td>Unicode (ICU)</td>
+<td>Sözcük bölümlemesi için Windows 10 sürüm 1703 (Creators Update) ve sonraki sürümlerde bulunan Windows'un dahili ICU kitaplığını kullanır; bu kitaplık kullanılamıyorsa eski yöntemi kullanır.</td>
+</tr>
+<tr>
+<td>Eski (Uniscribe)</td>
+<td>Klasik Not Defteri ve diğer eski Win32 yazı alanlarında kullanılan eski Windows sözcük bölümleme yöntemini kullanır.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="MathSettings">Matematik Ayarları</h4>
 <p>Bu kategori, NVDA'nın matematiksel içeriği nasıl okuyacağını ayarlamanıza olanak tanır.</p>
 <h5 id="MathCATSpeechOptions">Konuşma Seçenekleri</h5>
@@ -6546,7 +6767,9 @@ bunlar:</p>
 <p>Tüm sözlük iletişim kutularında konuşma işlemlerinde kullanılacak kuralların bir listesi bulunmaktadır.
 İletişim kutularında ayrıca, Kural Ekle, Düzenle, kaldır ve tümünü kaldır düğmeleri de mevcuttur.</p>
 <p>Sözlüğe yeni bir kural eklemek için önce ekle düğmesine basın, iletişim kutusundaki alanları doldurun ve tamam düğmesine basın.
-bundan sonra kural listesinde eklediğiniz yeni kuralı da göreceksiniz.
+bundan sonra kural listesinde eklediğiniz yeni kuralı da göreceksiniz.</p>
+<p>Kuralları düzenlemek veya kaldırmak için içerik menüsünü kullanabilirsiniz.
+Seçili kuralı kaldırmak için <code>delete</code> tuşunu da kullanabilirsiniz.
 Ancak kurallarınızı kaydettiğinizden emin olabilmek için, kural ekleme/düzenleme işiniz bitikten sonra sözlük iletişim kutusunu tamam düğmesine basarak tümüyle kapamayı unutmayın.</p>
 <p>NVDA konuşma sözlüklerindeki kurallar, bir sözcüğün telafuzunu farklı bir şeye dönüştürmenizi sağlar.
 örneğin, NVDA'dan, kuş kelimesiyle her karşılaştığında buna "kurbağa" demesini isteyebilirsiniz.
@@ -6628,7 +6851,10 @@ Daha sonra, eklemek istediğiniz girdi hareketini yapın; örneğin klavyede tu�
 Çoğu kez, bir hareket birden fazla şekilde değerlendirilebilir.
 Örneğin, klavyede bir tuşa bastıysanız, onun sadece mevcut klavye düzeni için geçerli olmasını isteyebilirsiniz (masaüstü ya da dizüstü düzenleri) ya da tüm düzenler için kaydedebilirsiniz.
 Bu durumda,, seçim yapmanız için bir menü belirir.</p>
-<p>Bir komutla ilgili hareketi silmek için, hareket seçiliyken kaldır tuşuna basın.</p>
+<p>Her komut için girdi hareketlerini eklemek, değiştirmek veya kaldırmak üzere içerik menüsünü de kullanabilirsiniz.
+Bir komutun girdi hareketini değiştirmek için, hareketi seçin ve Değiştir düğmesine basın.
+Daha sonra, komutla ilişkilendirmek istediğiniz yeni girdi hareketini yapın; bu hareket eskisinin yerini alır.
+Bir komuttan girdi hareketini kaldırmak için, <code>delete</code> tuşuna veya Kaldır düğmesine basabilirsiniz.</p>
 <p>Taklit sistem klavye tuşları kategorisi, sistem klavyesindeki tuşları taklit etmek için  girilmiş olan ya da sizin girebileceğiniz NVDA komutlarını içerir.
 Taklit sistem klavyesi tuşları, örneğin braille ekranınızdaki bazı tuşları kullanarak sistem klavyesinde bir tuşa ya da tuş kombinasyonuna basmak için  kullanılabilir.
 Bu kategori altına bir komut eklemek için, taklit sistem klavye tuşları kategorisini seçin ve Ekle düğmesine basın.
@@ -6696,6 +6922,8 @@ Ayrıca bunu bir tuş komutuyla yapabilirsiniz:</p>
 İletişim kutusunu açtığınızda, o anda düzenlemekte olduğunuz profil seçilidir.
 Aktif profiller için onların elle aktifleştirildiği, tetiklendiği veya düzenlenmekte olduğuyla ilgili ek bilgiler de gösterilir.</p>
 <p>Bir profili yeniden adlandırmak veya silmek için, Yeniden adlandır veya Sil düğmelerine basın.</p>
+<p>Profilleri, listedeki bir profilin içerik menüsünü açıp profili yeniden adlandırarak veya silerek de yönetebilirsiniz.
+Ayrıca seçili profili yeniden adlandırmak için <code>f2</code>, kaldırmak için <code>delete</code> tuşuna basabilirsiniz.</p>
 <p>Iletişim kutusunu kapatmak için Kapat düğmesine basın.</p>
 <h4 id="ProfilesCreating">Profil Oluşturma</h4>
 <p>Bir profil oluşturmak için, Yeni düğmesine basın.</p>
@@ -7265,7 +7493,7 @@ Bu sonuca, <a href="#BrailleSettings" title="Braille Ayarları iletişim kutusun
 Bu seçenek varsayılan olarak seçilidir.</p>
 <p>Aşağıdaki ekranlar otomatik algılama işlevini destekler.</p>
 <ul>
-<li>Handy Tech ekranları</li>
+<li>Help Tech ekranları (eski adıyla Handy Tech)</li>
 <li>Baum/Humanware/APH/Orbit braille ekranları</li>
 <li>HumanWare Brailliant BI/B serisi</li>
 <li>HumanWare BrailleNote</li>
@@ -7347,6 +7575,10 @@ Lütfen bu tuşların nerede bulunacağıyla ilgili Braille ekran yardım belgel
 <tr>
 <td>imleci parmağın üzerinde bulunduğu Braille hücresine taşıma</td>
 <td>hücre üzerindeki braille iğnesi</td>
+</tr>
+<tr>
+<td>İlk Braille hücresinden son Braille hücresine kadar olan aralığı seç</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>şift+tab key</td>
@@ -7569,6 +7801,10 @@ Lütfen bu tuşların nerede bulunacağıyla ilgili Braille ekran yardım belgel
 <td>routing</td>
 </tr>
 <tr>
+<td>İlk Braille hücresinden son Braille hücresine kadar olan aralığı seç</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>braille hücre altındaki metin biçimlendirmesini bildir</td>
 <td>secondary routing</td>
 </tr>
@@ -7680,16 +7916,16 @@ Lütfen bu tuşların nerede bulunacağıyla ilgili Braille ekran yardım belgel
 </table>
 <!-- KC:endInclude -->
 
-<h3 id="HandyTech">Handy Tech Ekranları</h3>
-<p>NVDA USB veya bluetooth ile bağlandıklarında <a href="https://www.handytech.de/" rel="noopener" target="_blank" title="Handy Tech">Handy Tech</a> tarafından üretilen çoğu braille ekranı destekler.
-Bazı daha eski USB ekranlar için Handy Tech sürücülerini sisteminize yüklemeniz gerekecektir.</p>
-<p>Aşağıdaki ekranlar için anında destek sunulmaz, ancak <a href="https://handytech.de/en/service/downloads-and-manuals/handy-tech-software/braille-display-drivers" rel="noopener" target="_blank" title="Handy Tech evrensel sürücüsü">Handy Tech evrensel sürücüsü</a> ve NVDA add-on aracılığıyla kullanılabilir:</p>
+<h3 id="HandyTech">Help Tech Ekranları</h3>
+<p>NVDA, USB, seri bağlantı noktası veya Bluetooth üzerinden bağlandığında, <a href="https://www.helptech.de/" rel="noopener" target="_blank" title="Help Tech">Help Tech</a> (eski adıyla Handy Tech) tarafından üretilen ekranların çoğunu destekler.</p>
+<p>Aşağıdaki ekranlar artık desteklenmemektedir:</p>
 <ul>
 <li>Braillino</li>
 <li>Bookworm</li>
-<li>Firmware sürümü 1.13 veya daha düşük olan modüler ekranlar. Bu ekranların firmware'inin güncellenebileceğini lütfen unutmayın.</li>
+<li>Üretici yazılımı sürümü 1.13 veya daha eski olan Modular ekranlar.
+Bu ekranların üretici yazılımının güncellenebileceğini lütfen unutmayın.</li>
 </ul>
-<p>Aşağıda Handy Tech ekranlarla kullanılabilecek tuş kombinasyonları yer almaktadır.
+<p>Aşağıda Help Tech ekranlarını NVDA ile hangi tuşlarla kullanabileceğinizi bulabilirsiniz.
 Lütfen bu tuşların nerede bulunacağıyla ilgili Braille ekran yardım belgelerine bakın.</p>
 <!-- KC:beginInclude -->
 
@@ -7720,6 +7956,10 @@ Lütfen bu tuşların nerede bulunacağıyla ilgili Braille ekran yardım belgel
 <tr>
 <td>imleci parmağın üzerinde bulunduğu Braille hücresine taşıma</td>
 <td>hücre üzerindeki braille iğnesi</td>
+</tr>
+<tr>
+<td>İlk Braille hücresinden son Braille hücresine kadar olan aralığı seç</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>Şift+tab tuşu</td>
@@ -7882,6 +8122,10 @@ Bu tuşların nerede bulunabileceğine ilişkin açıklamalar için lütfen ekra
 <tr>
 <td>imleci parmağın üzerinde bulunduğu Braille hücresine taşıma</td>
 <td><code>hücre üzerindeki braille iğnesi</code></td>
+</tr>
+<tr>
+<td>İlk braille hücresinden son braille hücresine kadar olan aralığı seç</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td><code>şift+tab</code> tuşu</td>
@@ -8095,6 +8339,10 @@ Tuşların yeri ve tarifi için Braille ekranın dokümantasyonunu inceleyin.</p
 <td>routing</td>
 </tr>
 <tr>
+<td>İlk braille hücresinden son braille hücresine kadar olan aralığı seç</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Braille'in takip ettiği imleci değiştir</td>
 <td>up+down</td>
 </tr>
@@ -8158,7 +8406,7 @@ Tuşların yeri ve tarifi için Braille ekranın dokümantasyonunu inceleyin.</p
 </table>
 <!-- KC:endInclude -->
 
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32, BI 40 ve B 80 için tuş atamaları</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32, BI 40, B 80, BI 20X ve BI 40X için tuş atamaları</h4>
 <!-- KC:beginInclude -->
 
 <table>
@@ -8169,6 +8417,22 @@ Tuşların yeri ve tarifi için Braille ekranın dokümantasyonunu inceleyin.</p
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Braille ekranı önceki satıra götürme</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>Braille ekranı geri kaydırma</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>Braille ekranı sonraki satıra götürme</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>Braille ekranı ileri kaydırma</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>NVDA Menüsü</td>
 <td>c1+c3+c4+c5 (komut n)</td>
@@ -8222,7 +8486,8 @@ Tuşların yeri ve tarifi için Braille ekranın dokümantasyonunu inceleyin.</p
 
 <h3 id="Hims">HIMS Braille Sense/Braille EDGE/Smart Beetle/Sync Braille Serileri</h3>
 <p>USB ya da bluetooth üzerinden bağlandıklarında, NVDA <a href="https://www.hims-inc.com/" rel="noopener" target="_blank" title="Hims">Hims</a> tarafından üretilen Braille Sense, Braille EDGE, Smart Beetle ve Sync Braille kabartma ekranları destekler.
-USB üzerinden bağlıyorsanız, sisteminize <a href="http://www.himsintl.com/upload/HIMS_USB_Driver_v25.zip" rel="noopener" target="_blank" title="HIMS tarafından dağıtılan USB sürücülerini">HIMS tarafından dağıtılan USB sürücülerini</a> sayfasından indirip kurmanız gerekir.</p>
+USB üzerinden bağlıyorsanız, sisteminize <a href="http://www.himsintl.com/upload/HIMS_USB_Driver_v25.zip" rel="noopener" target="_blank" title="HIMS tarafından dağıtılan USB sürücülerini">HIMS tarafından dağıtılan USB sürücülerini</a> sayfasından indirip kurmanız gerekir.
+Bu sürücünün yüklenemediği Windows 11 sistemlerinde, bunun yerine <a href="https://hims-product.s3.ap-northeast-2.amazonaws.com/Util/HIMS_Braille_Driver_V3_1.exe" rel="noopener" target="_blank" title="HIMS WinUSB sürücü paketini">HIMS WinUSB sürücü paketini</a> yüklerseniz USB üzerinden bağlanan Braille Sense ve Braille EDGE kabartma ekranları yine de algılanabilir.</p>
 <p>Aşağıda braille ekranı NVDA ile hangi tuşlarla kullanabileceğinizi bulabilirsiniz.
 Tuşların yeri ve tarifi için Braille ekranın dokümantasyonunu inceleyin.</p>
 <!-- KC:beginInclude -->
@@ -8630,6 +8895,10 @@ Bu tuşların nerede bulunabileceğinin açıklamaları için lütfen ekranın b
 <tr>
 <td>Braille hücresine yönlendir</td>
 <td>routing</td>
+</tr>
+<tr>
+<td>İlk braille hücresinden son braille hücresine kadar olan aralığı seç</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>şift+upArrow key</td>
@@ -10337,6 +10606,10 @@ Tuşların yeri ve tarifi için Braille ekranın dokümantasyonunu inceleyin.</p
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>İlk braille hücresinden son braille hücresine kadar olan aralığı seç</td>
+<td><code>home1+multiRouting</code>, <code>home2+multiRouting</code></td>
+</tr>
+<tr>
 <td>Braille hücresi altındaki metin biçimlendirmesini bildir</td>
 <td><code>secondary routing</code></td>
 </tr>
@@ -10515,6 +10788,10 @@ Bu tuşların nerede bulunabileceğine ilişkin açıklamalar için lütfen ekra
 <td><code>yönlendirme</code></td>
 </tr>
 <tr>
+<td>İlk Braille hücresinden son Braille hücresine kadar olan aralığı seç</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Yukarı ok tuşu</td>
 <td><code>yukarı</code></td>
 </tr>
@@ -10564,6 +10841,10 @@ Herhangi bir üretici tarafından oluşturulan gelecekteki tüm Braille Ekran mo
 <tr>
 <td>Braille hücresine git</td>
 <td>routing set 1</td>
+</tr>
+<tr>
+<td>İlk Braille hücresinden son Braille hücresine kadar olan aralığı seç</td>
+<td>1. gruptaki çoklu routing tuşları</td>
 </tr>
 <tr>
 <td>Braille taşımayı aç/kapatto</td>
@@ -10709,6 +10990,16 @@ NVDA kullanıcı tercihleri <a href="#GeneralSettingsCopySettings" title="güven
 <li>Bu, programların yüklenmesi olabilir</li>
 </ul>
 </li>
+</ul>
+<h3 id="DownloadingNVDA">NVDA'yı indirme</h3>
+<p>NVDA'yı <a href="https://www.nvaccess.org/download/" rel="noopener" target="_blank" title="https://www.nvaccess.org/download/">https://www.nvaccess.org/download/</a> adresindeki NV Access indirme sayfasından indirmeniz önerilir.</p>
+<p>NVDA, Windows Paket Yöneticisi (WinGet) kullanılarak da indirilebilir ve kurulabilir.
+NVDA'nın en son sürümünü kurmak için Komut İstemi (<code>cmd</code>) veya PowerShell'de aşağıdaki komutu çalıştırın:</p>
+<p><code>winget install --id NVAccess.NVDA</code></p>
+<p>Beta veya RC sürümlerini kurmak için aşağıdaki komutları kullanın:</p>
+<ul>
+<li>Beta: <code>winget install --id NVAccess.NVDA.Beta</code></li>
+<li>RC: <code>winget install --id NVAccess.NVDA.RC</code></li>
 </ul>
 <h3 id="CommandLineOptions">Komut Satırı Seçenekleri</h3>
 <p>NVDA başladığında onun davranışını değiştirecek bir veya daha fazla ek seçenek kabul edebilir.
