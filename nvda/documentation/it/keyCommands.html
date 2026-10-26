@@ -2,16 +2,16 @@
 <html lang="it" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2 Guida rapida ai comandi</title>
+<title>NVDA 2026.3 Guida rapida ai comandi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-20262-guida-rapida-ai-comandi">NVDA 2026.2 Guida rapida ai comandi</h1>
+<body><h1 id="nvda-20263-guida-rapida-ai-comandi">NVDA 2026.3 Guida rapida ai comandi</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262-guida-rapida-ai-comandi" title="NVDA 2026.2 Guida rapida ai comandi">NVDA 2026.2 Guida rapida ai comandi</a><ul>
+<li><a href="#nvda-20263-guida-rapida-ai-comandi" title="NVDA 2026.3 Guida rapida ai comandi">NVDA 2026.3 Guida rapida ai comandi</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Utilizzare NVDA">Utilizzare NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="Gesti di NVDA nei dispositivi a tocco">Gesti di NVDA nei dispositivi a tocco</a><ul>
 <li><a href="#TouchModes" title="Modalità di tocco">Modalità di tocco</a></li>
@@ -148,14 +148,14 @@
 <li><a href="#SupportedBrailleDisplays" title="Display braille supportati">Display braille supportati</a><ul>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Serie Focus/PAC Mate">Freedom Scientific Serie Focus/PAC Mate</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA serie 6/protocol converter">Optelec ALVA serie 6/protocol converter</a></li>
-<li><a href="#HandyTech" title="Modelli Handy Tech">Modelli Handy Tech</a></li>
+<li><a href="#HandyTech" title="Help Tech Displays">Help Tech Displays</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Display Braille Baum/Humanware/APH/Orbit Reader">Display Braille Baum/Humanware/APH/Orbit Reader</a></li>
 <li><a href="#HedoProfiLine" title="hedo ProfiLine USB">hedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="hedo MobilLine USB">hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/B Series / BrailleNote Touch">HumanWare Brailliant BI/B Series / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="Assegnazione tasti per tutti i modelli">Assegnazione tasti per tutti i modelli</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Assegnazione tasti per Brailliant BI 32, BI 40 e B 80">Assegnazione tasti per Brailliant BI 32, BI 40 e B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Key assignments for Brailliant BI 32, BI 40, B 80, BI 20X and BI 40X">Key assignments for Brailliant BI 32, BI 40, B 80, BI 20X and BI 40X</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Assegnazione tasti per Brailliant BI 14">Assegnazione tasti per Brailliant BI 14</a></li>
 </ul>
 </li>
@@ -234,6 +234,13 @@
 <td><code>NVDA+x</code></td>
 <td>Nessuno</td>
 <td>Ripete le ultime informazioni lette da NVDA. Premuto due volte le mostra in una finestra scorribile</td>
+</tr>
+<tr>
+<td>Copy last spoken information</td>
+<td><code>NVDA+control+x</code></td>
+<td><code>NVDA+control+x</code></td>
+<td>None</td>
+<td>Copies the last information spoken by NVDA to the clipboard</td>
 </tr>
 <tr>
 <td>Menu NVDA</td>
@@ -414,16 +421,16 @@
 <td>Fornisce informazioni inerenti il testo o l'oggetto su cui è situato il cursore di sistema. Ad esempio, ciò potrebbe includere la percentuale in un documento, la distanza dal bordo della pagina o la posizione esatta dello schermo. Premendo due volte si possono ottenere ulteriori dettagli.</td>
 </tr>
 <tr>
-<td>Frase successiva</td>
-<td>alt+freccia Giù</td>
-<td>alt+freccia Giù</td>
-<td>Sposta il cursore sulla frase successiva e la legge. (Supportato solo in Microsoft Word e Outlook)</td>
+<td>Next sentence</td>
+<td><code>alt+downArrow</code></td>
+<td><code>alt+downArrow</code></td>
+<td>Moves the caret to the next sentence and announces it. Some documents are not supported</td>
 </tr>
 <tr>
-<td>Frase precedente</td>
-<td>alt+freccia Su</td>
-<td>alt+freccia Su</td>
-<td>Sposta il cursore sulla frase precedente e la legge. (Supportato solo in Microsoft Word e Outlook)</td>
+<td>Previous sentence</td>
+<td><code>alt+upArrow</code></td>
+<td><code>alt+upArrow</code></td>
+<td>Moves the caret to the previous sentence and announces it. Some documents are not supported</td>
 </tr>
 </tbody>
 </table>
@@ -1515,6 +1522,11 @@ Tasto 7 + tasto 8 elabora il braille inserito, senza l'aggiunta di un invio o di
 <td><code>NVDA+shift+alt+frecciaGiù</code></td>
 <td>Sposta la vista ingrandita direttamente al bordo inferiore dello schermo</td>
 </tr>
+<tr>
+<td>Move mouse to view</td>
+<td>None</td>
+<td>Move the mouse cursor to the center of the magnified view</td>
+</tr>
 </tbody>
 </table>
 <h2 id="ContentRecognition">OCR: Riconoscimento del contenuto</h2>
@@ -2329,6 +2341,10 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 <td>routing</td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>tasti shift+tab</td>
 <td>spazio+punto1+punto2</td>
 </tr>
@@ -2534,6 +2550,10 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 <td>routing</td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Mostra informazioni di formattazione testo sulla cella braille</td>
 <td>cursor routing secondario</td>
 </tr>
@@ -2643,7 +2663,7 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 </tr>
 </tbody>
 </table>
-<h3 id="HandyTech">Modelli Handy Tech</h3>
+<h3 id="HandyTech">Help Tech Displays</h3>
 <table>
 <thead>
 <tr>
@@ -2671,6 +2691,10 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 <tr>
 <td>Route to braille cell</td>
 <td>routing</td>
+</tr>
+<tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>tasto shift+tab</td>
@@ -2805,6 +2829,10 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 <tr>
 <td>Route to braille cell</td>
 <td><code>routing</code></td>
+</tr>
+<tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>tasti <code>shift+tab</code></td>
@@ -2984,6 +3012,10 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 <td>routing</td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Commuta inseguimento Braille</td>
 <td>su+giù</td>
 </tr>
@@ -3045,7 +3077,7 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 </tr>
 </tbody>
 </table>
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Assegnazione tasti per Brailliant BI 32, BI 40 e B 80</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Key assignments for Brailliant BI 32, BI 40, B 80, BI 20X and BI 40X</h4>
 <table>
 <thead>
 <tr>
@@ -3054,6 +3086,22 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Move braille display to previous line</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>Scroll braille display back</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>Move braille display to next line</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>Scroll braille display forward</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>Menu NVDA</td>
 <td>c1+c3+c4+c5 (command n)</td>
@@ -3474,6 +3522,10 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 <tr>
 <td>Route to braille cell</td>
 <td>routing</td>
+</tr>
+<tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>shift+freccia su</td>
@@ -4887,6 +4939,10 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>home1+multiRouting</code>, <code>home2+multiRouting</code></td>
+</tr>
+<tr>
 <td>Visualizza la formattazione del testo sulla cella braille</td>
 <td><code>secondary routing</code></td>
 </tr>
@@ -5054,6 +5110,10 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Freccia su</td>
 <td><code>up</code></td>
 </tr>
@@ -5095,6 +5155,10 @@ In Microsoft 2016, 365 e successivi, i commenti classici in Microsoft Excel sono
 <tr>
 <td>Route to braille cell</td>
 <td>routing set 1</td>
+</tr>
+<tr>
+<td>Select range from first up to last braille cell</td>
+<td>multiple routing set 1 keys</td>
 </tr>
 <tr>
 <td>Attiva/disattiva inseguimento braille</td>

@@ -2,16 +2,16 @@
 <html lang="zh_TW" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2 指令快速參考</title>
+<title>NVDA 2026.3 指令快速參考</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-20262">NVDA 2026.2 指令快速參考</h1>
+<body><h1 id="nvda-20263">NVDA 2026.3 指令快速參考</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262" title="NVDA 2026.2 指令快速參考">NVDA 2026.2 指令快速參考</a><ul>
+<li><a href="#nvda-20263" title="NVDA 2026.3 指令快速參考">NVDA 2026.3 指令快速參考</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="使用 NVDA">使用 NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA 觸控手勢">NVDA 觸控手勢</a><ul>
 <li><a href="#TouchModes" title="觸控模式">觸控模式</a></li>
@@ -148,14 +148,14 @@
 <li><a href="#SupportedBrailleDisplays" title="支援的點顯器">支援的點顯器</a><ul>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/PAC Mate 系列">Freedom Scientific Focus/PAC Mate 系列</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA 6 系列/通訊協定轉換器">Optelec ALVA 6 系列/通訊協定轉換器</a></li>
-<li><a href="#HandyTech" title="Handy Tech 點顯器">Handy Tech 點顯器</a></li>
+<li><a href="#HandyTech" title="Help Tech 點顯器">Help Tech 點顯器</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Baum/Humanware/APH/Orbit 點顯器">Baum/Humanware/APH/Orbit 點顯器</a></li>
 <li><a href="#HedoProfiLine" title="hedo ProfiLine USB">hedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="hedo MobilLine USB">hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/B 系列 / BrailleNote Touch">HumanWare Brailliant BI/B 系列 / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="所有型號的按鍵指派">所有型號的按鍵指派</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32、BI 40 和 B 80 的按鍵指派">Brailliant BI 32、BI 40 和 B 80 的按鍵指派</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32, BI 40, B 80, BI 20X 及 BI 40X 的按鍵指派">Brailliant BI 32, BI 40, B 80, BI 20X 及 BI 40X 的按鍵指派</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Brailliant BI 14 的按鍵指派">Brailliant BI 14 的按鍵指派</a></li>
 </ul>
 </li>
@@ -219,14 +219,14 @@
 <td>Ctrl</td>
 <td>Ctrl</td>
 <td>兩指點一下</td>
-<td>立即停止朗讀。</td>
+<td>立即停止朗讀</td>
 </tr>
 <tr>
 <td>暫停語音</td>
 <td>Shift</td>
 <td>Shift</td>
 <td>無</td>
-<td>立即暫停語音，再按一次會從中斷的地方繼續朗讀 (若使用的合成器有支援)。</td>
+<td>立即暫停語音，再按一次會從中斷的地方繼續朗讀 (如果目前合成器支援暫停功能)</td>
 </tr>
 <tr>
 <td>重覆最後讀出的資訊</td>
@@ -234,6 +234,13 @@
 <td>NVDA+x</td>
 <td>無</td>
 <td>重複 NVDA 最後讀出的資訊，連按兩下顯示在可瀏覽視窗中</td>
+</tr>
+<tr>
+<td>複製最後讀出的資訊</td>
+<td>NVDA+Ctrl+X</td>
+<td>NVDA+Ctrl+X</td>
+<td>無</td>
+<td>複製 NVDA 最後讀出的資訊到剪貼簿</td>
 </tr>
 <tr>
 <td>NVDA 功能表</td>
@@ -247,21 +254,21 @@
 <td>NVDA+1</td>
 <td>NVDA+1</td>
 <td>無</td>
-<td>在這個模式下按下任何按鍵將會讀出按鍵及關聯的 NVDA 指令說明。</td>
+<td>在這個模式下按下任何按鍵將會讀出按鍵及關聯的 NVDA 指令說明</td>
 </tr>
 <tr>
 <td>結束 NVDA</td>
 <td>NVDA+q</td>
 <td>NVDA+q</td>
 <td>無</td>
-<td>結束 NVDA。</td>
+<td>結束 NVDA</td>
 </tr>
 <tr>
 <td>忽略下一個 NVDA 按鍵指令</td>
 <td>NVDA+F2</td>
 <td>NVDA+F2</td>
 <td>無</td>
-<td>告知 NVDA 將下一個按鍵動作直接傳到作用中的憗用程式，即使此按鍵通常是 NVDA 的快速鍵。</td>
+<td>告訴 NVDA 將下一個按鍵動作直接傳到作用中的憗用程式，即使此按鍵通常是 NVDA 的快速鍵</td>
 </tr>
 <tr>
 <td>切換應用程式睡眠模式的開或關</td>
@@ -393,7 +400,7 @@
 <td>讀出文字格式</td>
 <td>NVDA+F</td>
 <td>NVDA+F</td>
-<td>讀出游標所在的文字格式，按兩下以瀏覽模式顯示資訊</td>
+<td>讀出游標所在的文字格式，連按兩下以瀏覽模式顯示資訊</td>
 </tr>
 <tr>
 <td>讀出語言</td>
@@ -417,13 +424,13 @@
 <td>下一句</td>
 <td>Alt+向下鍵</td>
 <td>Alt+向下鍵</td>
-<td>移動游標到下一個句子的開頭並讀出該句子 (僅支援 Microsoft Word 及 Outlook)</td>
+<td>遊標移到下一句並讀出，某些文件不支援</td>
 </tr>
 <tr>
 <td>上一句</td>
 <td>Alt+向上鍵</td>
 <td>Alt+向上鍵</td>
-<td>移動游標到上一個句子的開頭並讀出該句子 (僅支援 Microsoft Word 及 Outlook)</td>
+<td>遊標移到上一句並讀出，某些文件不支援</td>
 </tr>
 </tbody>
 </table>
@@ -1376,9 +1383,9 @@
 </tbody>
 </table>
 <h3 id="BrailleInput">點字輸入</h3>
-<p>按點字鍵第7點清除最後鍵入的點字方或字元。
-按點字鍵第8點轉譯任何點字輸入並按 Enter 鍵。
-按點字鍵第7和第8點轉譯任何點字輸入，但沒有加空格或按 Enter。</p>
+<p>按點字鍵第七點清除最後鍵入的點字方或字元。
+按點字鍵第八點轉譯任何點字輸入並按 Enter 鍵。
+按點字鍵第七和第八點轉譯任何點字輸入，但沒有加空格或按 Enter。</p>
 <h4 id="BrailleInputGestures">點字輸入手勢</h4>
 <table>
 <thead>
@@ -1514,6 +1521,11 @@
 <td>平移到下邊緣</td>
 <td>NVDA+Shift+Alt+向下鍵</td>
 <td>將放大視窗直接平移到螢幕下邊緣</td>
+</tr>
+<tr>
+<td>滑鼠移到視窗</td>
+<td>無</td>
+<td>滑鼠遊標移到放大視窗中心</td>
 </tr>
 </tbody>
 </table>
@@ -2057,13 +2069,13 @@
 <td id="ReviewCursorFollowFocus">跟隨系統焦點</td>
 <td>NVDA+7</td>
 <td>NVDA+7</td>
-<td>啟用後，每當焦點改變時檢閱游標將始終與系統焦點位在同一個物件上。</td>
+<td>啟用後，焦點改變時檢閱游標將始終與系統焦點位在同一個物件上。</td>
 </tr>
 <tr>
 <td id="ReviewCursorFollowCaret">跟隨系統游標</td>
 <td>NVDA+6</td>
 <td>NVDA+6</td>
-<td>啟用後，每當游標移動時檢閱游標將自動移到系統游標所在的位置。</td>
+<td>啟用後，系統游標移動時檢閱游標將自動移到系統游標所在的位置。</td>
 </tr>
 </tbody>
 </table>
@@ -2329,6 +2341,10 @@
 <td>routing</td>
 </tr>
 <tr>
+<td>選取第一方到最後一方點字</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Shift+Tab</td>
 <td>點顯器空白鍵加 一,二點</td>
 </tr>
@@ -2534,6 +2550,10 @@
 <td>routing</td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Report text formatting under braille cell</td>
 <td>secondary routing</td>
 </tr>
@@ -2643,7 +2663,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="HandyTech">Handy Tech 點顯器</h3>
+<h3 id="HandyTech">Help Tech 點顯器</h3>
 <table>
 <thead>
 <tr>
@@ -2671,6 +2691,10 @@
 <tr>
 <td>Route to braille cell</td>
 <td>routing</td>
+</tr>
+<tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>shift+tab key</td>
@@ -2807,6 +2831,10 @@
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td><code>shift+tab</code> key</td>
 <td><code>space+dot1+dot3</code></td>
 </tr>
@@ -2844,7 +2872,7 @@
 </tr>
 </tbody>
 </table>
-<p>對於具有搖桿的點顯器:</p>
+<p>對於具有搖桿的點顯器：</p>
 <table>
 <thead>
 <tr>
@@ -2984,6 +3012,10 @@
 <td>routing</td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Toggle braille tethered to</td>
 <td>up+down</td>
 </tr>
@@ -3045,7 +3077,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32、BI 40 和 B 80 的按鍵指派</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32, BI 40, B 80, BI 20X 及 BI 40X 的按鍵指派</h4>
 <table>
 <thead>
 <tr>
@@ -3054,6 +3086,22 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Move braille display to previous line</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>Scroll braille display back</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>Move braille display to next line</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>Scroll braille display forward</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>NVDA Menu</td>
 <td>c1+c3+c4+c5 (command n)</td>
@@ -3476,6 +3524,10 @@
 <td>routing</td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>shift+upArrow key</td>
 <td>Space+RJ up, Backspace+RJ up</td>
 </tr>
@@ -3722,7 +3774,7 @@
 </tr>
 </tbody>
 </table>
-<p>BRAILLEX Tiny:</p>
+<p>BRAILLEX Tiny：</p>
 <table>
 <thead>
 <tr>
@@ -3793,7 +3845,7 @@
 </tr>
 </tbody>
 </table>
-<p>BRAILLEX 2D Screen:</p>
+<p>BRAILLEX 2D Screen：</p>
 <table>
 <thead>
 <tr>
@@ -4891,6 +4943,10 @@
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>home1+multiRouting</code>, <code>home2+multiRouting</code></td>
+</tr>
+<tr>
 <td>Report text formatting under braille cell</td>
 <td><code>secondary routing</code></td>
 </tr>
@@ -5058,6 +5114,10 @@
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Select range from first up to last braille cell</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Up arrow key</td>
 <td><code>up</code></td>
 </tr>
@@ -5099,6 +5159,10 @@
 <tr>
 <td>Route to braille cell</td>
 <td>routing set 1</td>
+</tr>
+<tr>
+<td>Select range from first up to last braille cell</td>
+<td>multiple routing set 1 keys</td>
 </tr>
 <tr>
 <td>Toggle braille tethered to</td>

@@ -2,16 +2,16 @@
 <html lang="nl" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>`NVDA 2026.2 overzicht commando's</title>
+<title>`NVDA 2026.3 overzicht commando's</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-20262-overzicht-commandos">`NVDA 2026.2 overzicht commando's</h1>
+<body><h1 id="nvda-20263-overzicht-commandos">`NVDA 2026.3 overzicht commando's</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262-overzicht-commandos" title="`NVDA 2026.2 overzicht commando's">`NVDA 2026.2 overzicht commando's</a><ul>
+<li><a href="#nvda-20263-overzicht-commandos" title="`NVDA 2026.3 overzicht commando's">`NVDA 2026.3 overzicht commando's</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="Aan de slag met NVDA">Aan de slag met NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA Aanraakgebaren">NVDA Aanraakgebaren</a><ul>
 <li><a href="#TouchModes" title="Aanraakmodi">Aanraakmodi</a></li>
@@ -148,14 +148,14 @@
 <li><a href="#SupportedBrailleDisplays" title="Ondersteunde Brailleleesregels">Ondersteunde Brailleleesregels</a><ul>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/PAC Mate Serie">Freedom Scientific Focus/PAC Mate Serie</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA 6 serie/protocol converter">Optelec ALVA 6 serie/protocol converter</a></li>
-<li><a href="#HandyTech" title="Handy Tech Leesregels">Handy Tech Leesregels</a></li>
+<li><a href="#HandyTech" title="Help Tech Leesregels">Help Tech Leesregels</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Brailleleesregels van Baum/HumanWare/APH/Orbit">Brailleleesregels van Baum/HumanWare/APH/Orbit</a></li>
 <li><a href="#HedoProfiLine" title="gedo ProfiLine USB">gedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="Hedo MobilLine USB">Hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/B Serie / BrailleNote Touch">HumanWare Brailliant BI/B Serie / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="Toegewezen toetsen die gelden voor Alle modellen">Toegewezen toetsen die gelden voor Alle modellen</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Toegewezen toetsen voor de Brailliant BI 32, BI 40 en B 80">Toegewezen toetsen voor de Brailliant BI 32, BI 40 en B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Toetstoewijzingen voor Brailliant BI 32, BI 40, B 80, BI 20X en BI 40X">Toetstoewijzingen voor Brailliant BI 32, BI 40, B 80, BI 20X en BI 40X</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Toegewezen toetsen voor de Brailliant BI 14">Toegewezen toetsen voor de Brailliant BI 14</a></li>
 </ul>
 </li>
@@ -234,6 +234,13 @@
 <td><code>NVDA+x</code></td>
 <td>Geen</td>
 <td>Herhaalt laatst door NVDA voorgelezen informatie. Tweemaal drukken toont deze in een bladervenster</td>
+</tr>
+<tr>
+<td>Kopieer laatst voorgelezen informatie</td>
+<td><code>NVDA+control+x</code></td>
+<td><code>NVDA+control+x</code></td>
+<td>Geen</td>
+<td>Hiermee kun je de door NVDA meest recent voorgelezen tekst naar het klembord kopiëren</td>
 </tr>
 <tr>
 <td>NVDA Menu</td>
@@ -415,15 +422,15 @@
 </tr>
 <tr>
 <td>Volgende zin</td>
-<td>alt+Pijl omlaag</td>
-<td>alt+Pijl omlaag</td>
-<td>Verplaatst cursor naar volgende zin en meldt deze (alleen ondersteund in Microsoft Word en Outlook).</td>
+<td><code>alt+pijlOmlaag</code></td>
+<td><code>alt+pijlOmlaag</code></td>
+<td>Verplaatst de caret naar de volgende zin en meldt dat. Sommige documenten worden niet ondersteund</td>
 </tr>
 <tr>
 <td>Vorige zin</td>
-<td>alt+Pijl omhoog</td>
-<td>Alt+Pijl omhoog</td>
-<td>Verplaatst cursor naar vorige zin en meldt deze (alleen ondersteund in Microsoft Word en Outlook ).</td>
+<td><code>alt+pijlOmhoog</code></td>
+<td><code>alt+pijlOmhoog</code></td>
+<td>Verplaatst de aanwijzer naar de vorige zin en meldt dat. Sommige documenten worden niet ondersteund</td>
 </tr>
 </tbody>
 </table>
@@ -1515,6 +1522,11 @@ Door punt 7 + punt 8 in te drukken wordt alle braille-invoer omgezet, maar zonde
 <td><code>NVDA+shift+alt+pijlOmlaag</code></td>
 <td>Verplaatst de vergrote weergave direct naar de onderrand van het scherm</td>
 </tr>
+<tr>
+<td>Breng muis in beeld</td>
+<td>Geen</td>
+<td>De muiscursor naar het centrum van het vergrote gebied verplaatsen</td>
+</tr>
 </tbody>
 </table>
 <h2 id="ContentRecognition">Inhoudherkenning</h2>
@@ -2329,6 +2341,10 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <td>Routing</td>
 </tr>
 <tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>shift+tab toetsen</td>
 <td>braille Spatiebalk+punt1+punt2</td>
 </tr>
@@ -2534,6 +2550,10 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <td>Routing</td>
 </tr>
 <tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Tekstopmaakg onder braillecel melden</td>
 <td>secondaire routing</td>
 </tr>
@@ -2643,7 +2663,7 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 </tr>
 </tbody>
 </table>
-<h3 id="HandyTech">Handy Tech Leesregels</h3>
+<h3 id="HandyTech">Help Tech Leesregels</h3>
 <table>
 <thead>
 <tr>
@@ -2671,6 +2691,10 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <tr>
 <td>Naar braillecel springen</td>
 <td>Routing</td>
+</tr>
+<tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>shift+tab toets</td>
@@ -2805,6 +2829,10 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <tr>
 <td>Cursor naar braillecel verplaatsen</td>
 <td><code>routing</code></td>
+</tr>
+<tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td><code>shift+tab</code> toets</td>
@@ -2984,6 +3012,10 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <td>routing</td>
 </tr>
 <tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Leesregel koppelen aan/uit</td>
 <td>omhoog+omlaag</td>
 </tr>
@@ -3045,7 +3077,7 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 </tr>
 </tbody>
 </table>
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Toegewezen toetsen voor de Brailliant BI 32, BI 40 en B 80</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Toetstoewijzingen voor Brailliant BI 32, BI 40, B 80, BI 20X en BI 40X</h4>
 <table>
 <thead>
 <tr>
@@ -3054,6 +3086,22 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Verplaats brailleleesregel naar vorige regel</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>Scroll brailleleesregel terug</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>Verplaats brailleleesregel naar volgende regel</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>Scroll brailleleesregel vooruit</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>NVDA Menu</td>
 <td>c1+c3+c4+c5 (commando n)</td>
@@ -3474,6 +3522,10 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <tr>
 <td>Naar braillecel routeren</td>
 <td>routing</td>
+</tr>
+<tr>
+<td>Bereik van eerste tot en met laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>shift+Pijl-omhoogtoets</td>
@@ -4887,6 +4939,10 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Bereik van eerste tot en met laatste braillecel selecteren</td>
+<td><code>home1+multiRouting</code>, <code>home2+multiRouting</code></td>
+</tr>
+<tr>
 <td>Meld tekstopmaak onder braillecel</td>
 <td><code>secondary routing</code></td>
 </tr>
@@ -5054,6 +5110,10 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <td><code>routeren</code></td>
 </tr>
 <tr>
+<td>Bereik van eerste tot en met laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Omhoog-pijltoetsy</td>
 <td><code>omhoog</code></td>
 </tr>
@@ -5095,6 +5155,10 @@ In Microsoft 2016, 365 en later is de klassieke benaming 'opmerkingen' in Micros
 <tr>
 <td>Naar braillecel routeren</td>
 <td>routing-set 1</td>
+</tr>
+<tr>
+<td>Bereik van eerste tot en met laatste braillecel selecteren</td>
+<td>multiple routing set 1-toetsen</td>
 </tr>
 <tr>
 <td>Braille volgen aan/uit</td>

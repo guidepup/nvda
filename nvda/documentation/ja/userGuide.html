@@ -2,16 +2,16 @@
 <html lang="ja" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2 ユーザーガイド</title>
+<title>NVDA 2026.3 ユーザーガイド</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="nvda-20262">NVDA 2026.2 ユーザーガイド</h1>
+<body><h1 id="nvda-20263">NVDA 2026.3 ユーザーガイド</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262" title="NVDA 2026.2 ユーザーガイド">NVDA 2026.2 ユーザーガイド</a><ul>
+<li><a href="#nvda-20263" title="NVDA 2026.3 ユーザーガイド">NVDA 2026.3 ユーザーガイド</a><ul>
 <li><a href="#Introduction" title="はじめに">はじめに</a><ul>
 <li><a href="#GeneralFeatures" title="一般的な機能">一般的な機能</a></li>
 <li><a href="#SystemRequirements" title="システム要件">システム要件</a><ul>
@@ -89,6 +89,7 @@
 <li><a href="#Taps" title="タップ">タップ</a></li>
 <li><a href="#Flicks" title="スワイプ">スワイプ</a></li>
 <li><a href="#PinchGestures" title="ピンチジェスチャー">ピンチジェスチャー</a></li>
+<li><a href="#SequentialFlicks" title="連続スワイプ">連続スワイプ</a></li>
 </ul>
 </li>
 <li><a href="#TouchModes" title="タッチモード">タッチモード</a></li>
@@ -242,6 +243,7 @@
 <li><a href="#SpeechSettingsSymbolLevel" title="句読点/記号レベル">句読点/記号レベル</a></li>
 <li><a href="#SpeechSettingsTrust" title="記号と文字の説明に音声の言語を使用">記号と文字の説明に音声の言語を使用</a></li>
 <li><a href="#SpeechUnicodeNormalization" title="Unicode 正規化">Unicode 正規化</a></li>
+<li><a href="#SpeechSettingsSayAllReadingUnit" title="すべて読み上げの単位">すべて読み上げの単位</a></li>
 <li><a href="#SpeechReportNormalizedForCharacterNavigation" title="文字の「正規化済み」を報告">文字の「正規化済み」を報告</a></li>
 <li><a href="#SpeechSettingsCLDR" title="記号と絵文字の説明に Unicode コンソーシアムのデータを使用">記号と絵文字の説明に Unicode コンソーシアムのデータを使用</a></li>
 <li><a href="#SpeechSettingsCapPitchChange" title="大文字のピッチ変更率">大文字のピッチ変更率</a></li>
@@ -284,9 +286,10 @@
 <li><a href="#BrailleSpeakOnRouting" title="テキストでのタッチカーソル操作で文字を読み上げ">テキストでのタッチカーソル操作で文字を読み上げ</a></li>
 <li><a href="#BrailleSpeakOnNavigating" title="行や段落の移動で読み上げ">行や段落の移動で読み上げ</a></li>
 <li><a href="#BrailleAutoScrollRate" title="自動スクロールの速さ">自動スクロールの速さ</a></li>
-<li><a href="#BrailleSettingsWordWrap" title="可能な場合に単語が切れないようにする">可能な場合に単語が切れないようにする</a></li>
+<li><a href="#BrailleSettingsWordWrap" title="テキストの折り返し">テキストの折り返し</a></li>
 <li><a href="#BrailleUnicodeNormalization" title="Unicode正規化">Unicode正規化</a></li>
 <li><a href="#BrailleSettingsInterruptSpeech" title="スクロールで読み上げを中断">スクロールで読み上げを中断</a></li>
+<li><a href="#ChineseBrailleWordSegmentation" title="中国語の単語分割を使用">中国語の単語分割を使用</a></li>
 </ul>
 </li>
 <li><a href="#SelectBrailleDisplay" title="点字ディスプレイの選択">点字ディスプレイの選択</a><ul>
@@ -363,6 +366,7 @@
 <li><a href="#TouchInteraction" title="タッチ操作">タッチ操作</a><ul>
 <li><a href="#TouchSupportEnable" title="タッチ操作サポートの有効化">タッチ操作サポートの有効化</a></li>
 <li><a href="#TouchTypingMode" title="タッチ文字入力モード">タッチ文字入力モード</a></li>
+<li><a href="#TouchEdgeGestures" title="画面端ジェスチャーを有効化">画面端ジェスチャーを有効化</a></li>
 </ul>
 </li>
 <li><a href="#ReviewCursorSettings" title="レビューカーソル">レビューカーソル</a><ul>
@@ -408,6 +412,8 @@
 <li><a href="#BrowseModeSettingsAutoPassThroughOnCaretMove" title="テキストカーソルの移動を追跡する自動フォーカスモード">テキストカーソルの移動を追跡する自動フォーカスモード</a></li>
 <li><a href="#BrowseModeSettingsPassThroughAudioIndication" title="音によるフォーカスモードとブラウズモード切替の報告">音によるフォーカスモードとブラウズモード切替の報告</a></li>
 <li><a href="#BrowseModeSettingsTrapNonCommandGestures" title="ドキュメントでコマンド以外の操作による入力を防止">ドキュメントでコマンド以外の操作による入力を防止</a></li>
+<li><a href="#SearchHistory" title="検索履歴を保持">検索履歴を保持</a></li>
+<li><a href="#NativeSelectionModeSetting" title="ネイティブ選択モード">ネイティブ選択モード</a></li>
 <li><a href="#BrowseModeSettingsBrowseModeNavigationElements" title="ブラウズモードのタッチナビゲーション要素">ブラウズモードのタッチナビゲーション要素</a></li>
 </ul>
 </li>
@@ -417,10 +423,12 @@
 <li><a href="#DocumentFormattingDetectFormatAfterCursor" title="テキストカーソル移動後に書式の変化を報告">テキストカーソル移動後に書式の変化を報告</a></li>
 <li><a href="#ReportSpellingErrors" title="スペルと文法エラーの報告">スペルと文法エラーの報告</a></li>
 <li><a href="#DocumentFormattingSettingsLineIndentation" title="行インデント">行インデント</a></li>
+<li><a href="#IndentToneDuration" title="行インデントの音の長さ">行インデントの音の長さ</a></li>
 </ul>
 </li>
 <li><a href="#DocumentNavigation" title="ドキュメントナビゲーション">ドキュメントナビゲーション</a><ul>
 <li><a href="#ParagraphStyle" title="段落の区切り方法">段落の区切り方法</a></li>
+<li><a href="#WordSegmentationStandard" title="単語分割方式">単語分割方式</a></li>
 </ul>
 </li>
 <li><a href="#MathSettings" title="数式の設定">数式の設定</a><ul>
@@ -581,7 +589,7 @@
 <li><a href="#PythonConsole" title="Pythonコンソール">Pythonコンソール</a></li>
 <li><a href="#AddonStoreMenuItem" title="アドオンストア">アドオンストア</a></li>
 <li><a href="#CreatePortableCopy" title="ポータブル版の作成">ポータブル版の作成</a></li>
-<li><a href="#RunCOMRegistrationFixingTool" title="システムアクセシビリティ修復ツールを実行…">システムアクセシビリティ修復ツールを実行…</a></li>
+<li><a href="#RunCOMRegistrationFixingTool" title="システムアクセシビリティ修復ツールを実行">システムアクセシビリティ修復ツールを実行</a></li>
 <li><a href="#ReloadPlugins" title="プラグインの再読み込み">プラグインの再読み込み</a></li>
 </ul>
 </li>
@@ -597,14 +605,14 @@
 <li><a href="#AutomaticDetection" title="自動検出に対応している点字ディスプレイ">自動検出に対応している点字ディスプレイ</a></li>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/PAC Mateシリーズ">Freedom Scientific Focus/PAC Mateシリーズ</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA 6 シリーズ/プロトコルコンバーター">Optelec ALVA 6 シリーズ/プロトコルコンバーター</a></li>
-<li><a href="#HandyTech" title="Handy Tech 点字ディスプレイ">Handy Tech 点字ディスプレイ</a></li>
+<li><a href="#HandyTech" title="Help Techディスプレイ">Help Techディスプレイ</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Baum/Humanware/APH/Orbit 点字ディスプレイ">Baum/Humanware/APH/Orbit 点字ディスプレイ</a></li>
 <li><a href="#HedoProfiLine" title="hedo ProfiLine USB">hedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="hedo MobilLine USB">hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/Bシリーズ / BrailleNote Touch">HumanWare Brailliant BI/Bシリーズ / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="すべてのモデル">すべてのモデル</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32, BI 40 および B 80">Brailliant BI 32, BI 40 および B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32、BI 40、B 80、BI 20X、BI 40Xのキー割り当て">Brailliant BI 32、BI 40、B 80、BI 20X、BI 40Xのキー割り当て</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Brailliant BI 14">Brailliant BI 14</a></li>
 </ul>
 </li>
@@ -638,6 +646,7 @@
 <li><a href="#AdvancedTopics" title="高度なトピック">高度なトピック</a><ul>
 <li><a href="#SecureMode" title="セキュアモード">セキュアモード</a></li>
 <li><a href="#SecureScreens" title="セキュアデスクトップ">セキュアデスクトップ</a></li>
+<li><a href="#DownloadingNVDA" title="NVDAのダウンロード">NVDAのダウンロード</a></li>
 <li><a href="#CommandLineOptions" title="コマンドラインオプション">コマンドラインオプション</a></li>
 <li><a href="#UninstallingNVDA" title="NVDAのアンインストール">NVDAのアンインストール</a></li>
 <li><a href="#SystemWideParameters" title="システム全体のパラメーター">システム全体のパラメーター</a></li>
@@ -648,7 +657,7 @@
 </li>
 </ul>
 </div>
-<!-- KC:title: NVDA 2026.2 コマンド一覧表 -->
+<!-- KC:title: NVDA 2026.3 コマンド一覧表 -->
 
 <h2 id="Introduction">はじめに</h2>
 <p>NVDAにようこそ！</p>
@@ -817,6 +826,7 @@ NVDA の読み込みが終わると、NVDA がインストールの操作を音�
 </ol>
 <h3 id="RunningNVDA">NVDAの使い方の基本</h3>
 <p>NVDA のすべてのコマンドは、ユーザーガイドのそれぞれのセクションで、詳しく説明されています。
+NVDA ダイアログ内で、<code>f1</code>を押すと、現在のコントロールに関するユーザーガイドのトピックが開きます。
 「コマンド一覧表」も利用できます。
 NV Access の教材 "Basic Training for NVDA" （英語）ではそれぞれの操作を学ぶことができます。
 "Basic Training for NVDA" の詳細は <a href="http://www.nvaccess.org/shop" rel="noopener" target="_blank" title="NV Access Shop">NV Access Shop</a> を参照してください。</p>
@@ -949,6 +959,12 @@ NVDA 制御キーは「変換キー」「Escapeキー」に割り当てること
 <td><code>NVDA+x</code></td>
 <td><code>NVDA+x</code></td>
 <td>NVDA が読み上げた最後の情報を繰り返します。2回押すとウィンドウに情報を表示します。</td>
+</tr>
+<tr>
+<td>最後に読み上げた情報をコピー</td>
+<td><code>NVDA+control+x</code></td>
+<td><code>NVDA+control+x</code></td>
+<td>NVDA が最後に読み上げた情報をクリップボードにコピー</td>
 </tr>
 <tr>
 <td>書式とドキュメント情報の報告</td>
@@ -1179,7 +1195,8 @@ NVDA 設定ダイアログ「一般」カテゴリを直接開くには <code>NV
 アドオンストアのどこからでも <code>Ctrl+Tab</code> を押してこのタブに移動できます。
 アドオンの状態は「更新可能」と表示されます。
 リストには現在インストールされているバージョンと利用可能なバージョンが表示されます。
-アドオンを選択して <code>Enter</code> を押し、アクションリストを開き、「更新」を選択します。</p>
+アドオンを選択して <code>Enter</code> を押し、アクションリストを開き、「更新」を選択します。
+アドオンが無効の場合、アクションのラベルは「更新（有効化）」になります。アドオンは有効化されていないとインストールできないため、無効なアドオンを更新すると再有効化されます。</p>
 <p>既定では、NVDAの起動後に利用可能なアドオンの更新がある場合、通知されます。
 この動作について詳しく知り、設定するには、<a href="#AutomaticAddonUpdates" title="更新の通知">更新の通知</a>を参照してください。</p>
 <h3 id="Community">コミュニティ</h3>
@@ -1194,6 +1211,7 @@ NV Accessが運営する<a href="https://groups.google.com/a/nvaccess.org/g/nvda
 <p>NVDA について情報を得るには <code>NVDA+N</code> で NVDA メニューを開いて <code>H</code> を押します。NVDA日本語版のこのサブメニューには「NVDA日本語版の説明」があります。この中で <a href="https://www.nvda.jp/" rel="noopener" target="_blank" title="NVDA日本語版のウェブサイト">NVDA日本語版のウェブサイト</a> と <a href="https://nvdajp-book.readthedocs.io/ja/latest/" rel="noopener" target="_blank" title="NVDA日本語版ガイドブック">NVDA日本語版ガイドブック</a> を紹介しています。
 このサブメニューには「ユーザーガイド」「コマンド一覧表」「最新情報（新機能などの紹介の履歴）」なども含まれます。
 これらのドキュメントは既定のウェブブラウザで開きます。
+NVDA ダイアログ内で、<code>f1</code>を押すと、現在のコントロールに関するユーザーガイドのトピックが開きます。
 <a href="https://www.nvaccess.org/shop" rel="noopener" target="_blank" title="NV Access Shop">NV Access Shop</a> （英語）でも教材を紹介しています。</p>
 <p>NV Access は "Basic Training for NVDA module" を推奨しています。
 この教材は初心者のための基本的な説明、ウェブブラウザの操作、オブジェクトナビゲーションを含んでいます。
@@ -1280,8 +1298,8 @@ CD-ROM などの読み出し専用メディアではインストーラーをコ�
 </ul>
 </li>
 <li>管理者権限が必要なアプリを起動しようとしたときに表示されるユーザーアカウント制御(UAC)の画面を操作できません。</li>
-<li>Windows 8 およびそれ以降: タッチ画面からの入力に対応できません。
-NVDAで拡大鏡を有効にすると、タッチスクリーン入力は正しく動作しません。</li>
+<li>NVDA はタッチ入力を無視します（ジェスチャーはそのまま通過します）。</li>
+<li>NVDA の拡大鏡が有効な場合、マウス入力とタッチ入力は正しく機能しません（入力位置が不正確になります）。</li>
 <li>Windows 8 およびそれ以降: Windowsストアアプリの中で、ブラウズモードや入力文字の報告などの機能を利用できません。</li>
 <li>Windows 8 およびそれ以降: オーディオのダッキングを利用できません。</li>
 </ul>
@@ -1358,6 +1376,15 @@ NV Access が収集するデータについての詳細は プライバシーと
 <h5 id="PinchGestures">ピンチジェスチャー</h5>
 <p>画面に2本の指を置き、互いに近づけるように動かすと、ピンチインのジェスチャーになります。
 互いに離すように動かすと、ピンチアウトのジェスチャーになります。</p>
+<h5 id="SequentialFlicks">連続スワイプ</h5>
+<p>すばやく連続して2回スワイプすると、連続スワイプジェスチャーを実行できます。
+これにより、NVDA コマンドに割り当てられるタッチジェスチャーの数が大幅に増えます。</p>
+<p>連続スワイプは、次の二通りの方法で実行できます：</p>
+<ul>
+<li>最初のスワイプの後に指を離し、ジェスチャーがタイムアウトする前に2回目のスワイプを実行します。</li>
+<li>または、指を離さずに方向を急に変える1回の連続スワイプとして実行します。</li>
+</ul>
+<p>12通りの組み合わせがあります。4つの反対方向の組み合わせ（右スワイプの後に左スワイプなど）と、8つの直角のL字型の組み合わせ（右スワイプの後に上スワイプなど）です。</p>
 <h4 id="TouchModes">タッチモード</h4>
 <p>NVDAのコマンドはタッチジェスチャーで区別できる操作よりも多いので、NVDAでは複数のタッチモードを切りかえます。そして、モードごとにコマンドを使いわけます。
 3つのモードはテキストモード、オブジェクトモード、ブラウズモードです。
@@ -1434,6 +1461,13 @@ Microsoft Surface Pro などのタブレットでは、キーボードが装着�
 <td><code>NVDA+x</code></td>
 <td>なし</td>
 <td>NVDA が読み上げた最後の情報を繰り返します。2回押すとウィンドウに情報を表示します</td>
+</tr>
+<tr>
+<td>最後に読み上げた情報をコピー</td>
+<td><code>NVDA+control+x</code></td>
+<td><code>NVDA+control+x</code></td>
+<td>なし</td>
+<td>NVDA が最後に読み上げた情報をクリップボードにコピー</td>
 </tr>
 <tr>
 <td>NVDAメニュー</td>
@@ -1660,16 +1694,16 @@ NVDAは、テキスト内を文字ごと、単語ごと、行ごとに移動す�
 <td>テキストカーソルのテキストやオブジェクトの位置を報告します。例えばドキュメント全体におけるパーセント表示、ページの端からの距離、画面の中の正確な座標などです。2回押すと詳細な情報を報告します。</td>
 </tr>
 <tr>
-<td>次の文を読み上げ</td>
-<td>Alt+下矢印</td>
-<td>Alt+下矢印</td>
-<td>テキストカーソルを次の文に移動してその文を読み上げます。(Microsoft Word および Outlook)</td>
+<td>次の文</td>
+<td><code>Alt+下矢印</code></td>
+<td><code>Alt+下矢印</code></td>
+<td>テキストカーソルを次の文に移動して読み上げます。一部の文書には対応していません。</td>
 </tr>
 <tr>
-<td>前の文を読み上げ</td>
-<td>Alt+上矢印</td>
-<td>Alt+上矢印</td>
-<td>テキストカーソルを前の文に移動してその文を読み上げます。(Microsoft Word および Outlook)</td>
+<td>前の文</td>
+<td><code>Alt+上矢印</code></td>
+<td><code>Alt+上矢印</code></td>
+<td>テキストカーソルを前の文に移動して読み上げます。一部の文書には対応していません。</td>
 </tr>
 </tbody>
 </table>
@@ -2457,6 +2491,7 @@ Esc キーを押すとブラウズモードに戻ります。
 <li>トグルボタン</li>
 <li>プログレスバー</li>
 <li>スライダー</li>
+<li>クリック可能な要素</li>
 <li>参照</li>
 <li>数式</li>
 <li>同じ水平位置にある段落</li>
@@ -2503,6 +2538,7 @@ Esc キーを押すとブラウズモードに戻ります。
 「探したい文字列を入力してください」というエディットフィールドにテキストを入力します。
 「大文字と小文字を区別」チェックボックスをチェックすると、アルファベットの大文字と小文字を区別して検索できます。
 例えば「大文字と小文字を区別」をチェックすると "NV Access" を検索対象にして "nv access" を検索対象にしない、といったことができます。
+<a href="#SearchHistory" title="検索履歴を保持">検索履歴を保持</a> のブラウズモード設定が有効な場合、このフィールドはコンボボックスになり、最近検索した語句（最大20件）も選択できます。これらはNVDAの再起動時に消去されます。
 テキストの検索では以下のキー操作を使用します。</p>
 <!-- KC:beginInclude -->
 
@@ -2564,14 +2600,16 @@ Esc キーを押すとブラウズモードに戻ります。
 <h3 id="NativeSelectionMode">ネイティブ選択モード</h3>
 <p>デフォルトでは、ブラウズモードで<code>shift+矢印</code>キーを使ってテキストを選択すると、選択はNVDAのブラウズモードでのドキュメント表現の中でのみ行われ、アプリ自体では行われません。
 このとき、選択範囲は画面に表示されません。また、<code>control+c</code>でテキストをコピーすると、NVDAのドキュメント表現におけるテキストの内容のみがコピーされます。つまり、テーブルの書式やリンクなどのドキュメント情報はコピーされません。
-しかし、NVDAにはネイティブ選択モードがあり、特にブラウズモードのドキュメントで有効にすることができます。
+ただし、NVDAにはネイティブ選択モードがあり、対応するブラウズモードドキュメントでオンとオフを切り替えられます。
 ネイティブ選択を使用すると、ドキュメントのネイティブ選択がNVDAのブラウズモードの選択に追従するようになり、書式、リンク、表などの詳細情報をコピーできるようになります。
 現時点では、ネイティブ選択モードは以下でサポートされています。</p>
 <ul>
 <li>Mozilla Firefox</li>
 <li>Mozilla Thunderbird</li>
 <li>Chrome、Edge、およびChromium 134以降をベースとするすべてのブラウザ</li>
+<li>Microsoft WordとOutlookではオフにできません</li>
 </ul>
+<p>ネイティブ選択モードは、NVDAのブラウズモード設定により、対応するドキュメントで<a href="#NativeSelectionModeSetting" title="自動的に有効化">自動的に有効化</a>することもできます。</p>
 <!-- KC:beginInclude -->
 
 <table>
@@ -2584,9 +2622,9 @@ Esc キーを押すとブラウズモードに戻ります。
 </thead>
 <tbody>
 <tr>
-<td>ネイティブ選択モードの切り替え</td>
-<td><code>NVDA+shift+f10</code></td>
-<td>ネイティブ選択モードを有効または無効に切り替えます。</td>
+<td>無効にしても、ドキュメントごとに<code>NVDA+shift+f10</code>を押して、ネイティブ選択モードを手動で有効にできます。</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2655,7 +2693,8 @@ NVDAは、Kindle Reader for PC を使い、アクセシブルな数式の読み�
 <!-- KC:endInclude -->
 
 <p>このコマンドを実行すると MathPlayer のコマンド、例えば矢印キーで数式を部分ごとに確認する、といった操作が可能になります。
-例えば、左矢印キーと右矢印キーで数式の中を移動して、分数の分子や分母などの部分に下矢印キーで移動する、といったことができます。</p>
+例えば、左矢印キーと右矢印キーで数式の中を移動して、分数の分子や分母などの部分に下矢印キーで移動する、といったことができます。
+<a href="#VisionFocusHighlight" title="ビジュアルハイライト">ビジュアルハイライト</a> とブラウズモードのカーソルハイライトが有効な場合、ウェブ上のMathMLの現在の部分も視覚的に表示されます。</p>
 <p>通常のドキュメントの操作に戻るには Esc キーを押してください。</p>
 <p>数式コンテンツがボタンや他の種別の要素として表示され、それをアクティブ化すると、数式に関連するダイアログやさらなる情報が表示されることもあります。
 数式を含むボタンや要素をアクティブにするには、ctrl+enterを押します。</p>
@@ -2954,9 +2993,9 @@ NVDAは、Kindle Reader for PC を使い、アクセシブルな数式の読み�
 <td>この点字セルの位置にカーソルを移動するか、対応するオブジェクトを実行します</td>
 </tr>
 <tr>
-<td>点字表示をスクロールして戻る</td>
-<td>なし</td>
-<td>点字ディスプレイをスクロールして戻します</td>
+<td>コマンドプロンプト（<code>cmd</code>）またはPowerShellで次のコマンドを実行してNVDAの最新バージョンをインストールします：</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>点字表示をスクロールして進む</td>
@@ -3436,7 +3475,7 @@ NVDA ではこれらの視覚的な補助の機能は、ビジョン拡張プロ
 <li>青い実線は、ナビゲーターオブジェクトとフォーカスの位置が同じであることを示します（例えば <a href="#ReviewCursorFollowFocus" title="フォーカスを追跡">フォーカスを追跡</a> オプションが有効の場合）。</li>
 <li>青い点線は、フォーカスだけがその位置にあることを示します。</li>
 <li>赤い実線は、ナビゲーターオブジェクトだけがその位置にあることを示します。</li>
-<li>黄色い実線は、ブラウズモードのカーソルの位置を示します（これはブラウズモードにおける仮想のテキストカーソルで、ウェブブラウザーなどでは実際にはその場所にテキストカーソルは存在しません）。</li>
+<li>黄色の実線で、ブラウズモードで使用される仮想テキストカーソル（ウェブブラウザーなど、物理的なテキストカーソルがない場所）、文字認識結果のカーソル、およびウェブ上で数式を移動するときの現在の部分をハイライト表示します。</li>
 </ul>
 <p><a href="#NVDASettings" title="NVDA 設定">NVDA 設定</a> ダイアログの <a href="#VisionSettings" title="ビジョン">ビジョン</a> カテゴリにおいて、ビジュアルハイライトを有効にすると、さらに<a href="#VisionSettingsFocusHighlight" title="フォーカス、ナビゲーターオブジェクト、ブラウズモードのカーソルのそれぞれのハイライトを有効または無効に設定">フォーカス、ナビゲーターオブジェクト、ブラウズモードのカーソルのそれぞれのハイライトを有効または無効に設定</a>できます。</p>
 <h3 id="VisionScreenCurtain">スクリーンカーテン</h3>
@@ -3469,9 +3508,9 @@ NVDA ではこれらの視覚的な補助の機能は、ビジョン拡張プロ
 </table>
 <!-- KC:endInclude -->
 
-<p>スクリーンカーテンが有効になっている場合、画面に実際に表示されている内容に依存している機能は動作しません。
-例えば <a href="#Win10Ocr" title="Windows 文字認識">Windows 文字認識</a> は使用できません。
-一部のスクリーンショット取得ユーティリティも動作しない場合があります。</p>
+<p>スクリーンカーテンが有効な場合、画面に実際に表示されている内容に依存する一部の機能は動作しません。
+対応システムでは、スクリーンカーテンが有効でも<a href="#Win10Ocr" title="Windows 文字認識">Windows 文字認識</a>を引き続き使用できます。
+一部のスクリーンショットユーティリティは動作しないことがあります。</p>
 <p>Windows 拡大鏡が実行中で、かつ画面の色を反転して使用している場合は、スクリーンカーテンを有効にできません。</p>
 <h2 id="Magnifier">拡大鏡</h2>
 <p>NVDA に画面の一部をズーム・拡大できる拡大鏡機能が搭載されました。
@@ -3566,6 +3605,11 @@ NVDA ではこれらの視覚的な補助の機能は、ビジョン拡張プロ
 <td><code>NVDA+shift+alt+下矢印</code></td>
 <td>拡大表示を画面の下の端に移動</td>
 </tr>
+<tr>
+<td>マウスを表示位置に移動</td>
+<td>なし</td>
+<td>マウスポインターを拡大表示の中央に移動</td>
+</tr>
 </tbody>
 </table>
 <!-- KC:endInclude -->
@@ -3628,7 +3672,9 @@ NVDA はこのエンジンを使って画像やアクセシブルでないアプ
 追加の言語をインストールするには Windows のスタートウィンドウから「設定」「時刻と言語」「地域と言語」を選び、「言語を追加する」を実行します。</p>
 <p>常に変化するコンテンツを監視したい場合、例えば字幕付きのビデオを視聴する際に、認識されたコンテンツの自動更新をオプションで有効にすることができます。
 これは <a href="#NVDASettings" title="NVDA 設定">NVDA 設定</a> ダイアログの <a href="#Win10OcrSettings" title="Windows 文字認識カテゴリ">Windows 文字認識カテゴリ</a> から設定できます。</p>
-<p>Windows 文字認識は、<a href="#Vision" title="NVDA のビジョン設定">NVDA のビジョン設定</a>または外部の視覚的な支援技術と互換性がない場合があります。文字認識を行う前に、これらの視覚補助を無効にする必要があります。</p>
+<p>対応システムでは、<a href="#VisionScreenCurtain" title="スクリーンカーテン">スクリーンカーテン</a>またはNVDA内蔵の<a href="#Magnifier" title="拡大鏡">拡大鏡</a>が有効でもWindows 文字認識を使用できます。
+外部の視覚補助は、Windows 文字認識と部分的またはまったく互換性がないことがあります。
+認識を開始する前に、これらの補助機能を無効にする必要がある場合があります。</p>
 <!-- KC:beginInclude -->
 <p>Windows 文字認識で現在のナビゲーターオブジェクトの画像を認識するには NVDA+R を押します。</p>
 <!-- KC:endInclude -->
@@ -3946,6 +3992,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 Windows 11 22H2 より前のバージョンの Windows コンソールでは、表示されなくなったテキストは、NVDA のテキストレビューでは読むことができません。
 そのため、過去に表示されていたテキストを読むためには、まずコンソールのスクロール位置を変える必要があります。
 新しいバージョンの Windows コンソールや Windows Terminal では、テキストバッファー全体を、スクロール位置を変えなくても、レビューできます。</p>
+<p>SSH経由で接続する場合など、テキストカーソルの更新が遅れることがあります。
+NVDAはWindows Terminalでのテキストカーソルの移動を少し長く待機するため、古い文字を読み上げる可能性が低くなります。
+テキストカーソルの報告がまだ不正確な場合は、詳細設定で<a href="#AdvancedSettingsCaretMoveTimeout" title="テキストカーソル移動タイムアウト">テキストカーソル移動タイムアウト</a>を増やしてみてください。
+この値を大きくするとテキストカーソルの移動が遅く感じられることがあるため、Terminal アプリ用の設定プロファイルで変更することを検討してください。</p>
 <!-- KC:beginInclude -->
 <p>以下は Windows コンソールの標準的なキーボードショートカットです。これらは以前のバージョンの Windows コンソールに対して NVDA で <a href="#ReviewingText" title="テキストのレビュー">テキストのレビュー</a> をする場合に役立ちます:</p>
 <table>
@@ -4211,6 +4261,32 @@ NVDAはこれらの文字をプレーンなラテン文字の相当文字（A–
 <tr>
 <td>既定の値</td>
 <td>有効</td>
+</tr>
+</tbody>
+</table>
+<h5 id="SpeechSettingsSayAllReadingUnit">すべて読み上げの単位</h5>
+<p>このコンボボックスでは、すべて読み上げ（連続読み上げ）で読み進める単位を選択できます。
+これは、すべて読み上げ中にテキストカーソルと表示が移動する頻度に影響し、長いテキストでは抑揚にも影響することがあります。
+「可能な場合は文」に設定すると、NVDAは文の区切りに対応するコントロールやドキュメントでは文ごとに読み上げ、文の区切りに対応していない場合は自動的に行ごとの読み上げに切り替えます。
+文の区切りは、Microsoft WordとOutlook、一部のエディットコントロール、およびウェブページなど、ほとんどのブラウズモードドキュメントでサポートされています。
+「段落」に設定すると、NVDAは段落ごとに読み上げます。
+「行」に設定すると、NVDAは常に行ごとに読み上げます。
+例えば「行」に設定すると、NVDAのログビューアーなどのリッチエディットコントロールでは、すべて読み上げは行ごとに読み上げます。一方、既定では文ごとに読み上げます。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オプション</td>
+<td>既定（可能な場合は文）、可能な場合は文、段落、行</td>
+</tr>
+<tr>
+<td>既定</td>
+<td>可能な場合は文</td>
 </tr>
 </tbody>
 </table>
@@ -4633,15 +4709,27 @@ NVDAが<a href="#DocumentFormattingFontAttributes" title="点字でフォント�
 <p>最小値（0%）は毎秒1セル、最大値（100%）は毎秒20セルです。
 例えば、既定値の毎秒10セルで40セルの点字ディスプレイを使用すると、点字ディスプレイは4秒ごとに自動的にスクロールします。
 ディスプレイが20セルの場合、点字の各行は2秒間表示されます。</p>
-<h5 id="BrailleSettingsWordWrap">可能な場合に単語が切れないようにする</h5>
-<p>これを有効にすると、点字ディスプレイの末尾に収まらない大きな単語は分割されません。
+<p>自動スクロールが有効な場合も、スクロールして戻るコマンドで前の内容を再確認したり、スクロールして進むコマンドで空白行をスキップしたり、短い行を飛ばして読み進めることができます。</p>
+<p>タッチカーソルキーを押したとき、点字でメッセージが表示されたとき、新しいオブジェクトが表示されたとき、セキュア画面に入ったとき、セッションがロックされたとき、またはウィンドウの末尾に達したとき、自動スクロールは無効になります。</p>
+<h5 id="BrailleSettingsWordWrap">テキストの折り返し</h5>
+<p>このコンボボックスでは、NVDAが点字ディスプレイに収まらない長さのテキストをどのように処理するかを設定できます。
+単語が行をまたいで分割される場合、特に記載がない限り、行の最後のセルに継続マーク（7点と8点）が表示されます。
+以下のオプションが利用できます：</p>
+<ul>
+<li>無効: ディスプレイの端で必要に応じて単語の途中で切って折り返しますが、継続マークは表示しません。
+各行に可能な限り多くのテキストを表示します。
+ディスプレイをスクロールすると、残りのテキストを読めます。</li>
+<li>次のオプションを利用できます。
+ディスプレイをスクロールすると、単語の残りを読めます。</li>
+<li>単語の境界: 点字ディスプレイの末尾に収まらない単語は分割しません。
 代わりに、ディスプレイの最後が空白となります。
 ディスプレイをスクロールすると、単語全体を読むことができます。
-これは「ワードラップ」と呼ばれます。
-ただし、単語自体がディスプレイに収まらないほど大きい場合は、その単語は分割される必要があります。</p>
-<p>これを無効にすると、単語の一部が可能な限り表示され、残りは切り捨てられます。
-ディスプレイをスクロールすると、単語の残りを読むことができます。</p>
-<p>これを有効にすると、より流暢に読むことができる場合があります。しかし、通常はディスプレイをより頻繁にスクロールする必要があります。</p>
+単語がディスプレイ単独でも収まらないほど長い場合は、単語を分割する必要があります。その場合は継続マークが表示されます。
+無効: ディスプレイの端で必要に応じて単語の途中で切って折り返しますが、継続マークは表示しません。</li>
+<li>単語または音節の境界: 「単語の境界」と同様ですが、収まらない長い単語は、可能な場合、その単語の言語に基づいて音節の境界で分割します。
+例えば、単語<code>behave</code>は<code>be</code>と<code>have</code>の間で分割されることがあります。
+単語を分割すると、常に継続マークが表示されます。</li>
+</ul>
 <h5 id="BrailleUnicodeNormalization">Unicode正規化</h5>
 <p>このオプションを有効にすると、点字ディスプレイに表示されるテキストに対してUnicode正規化が行われます。
 これは、特定の点字テーブルで扱えない文字に互換の代替文字がある場合に役立ちます。例えば、ソーシャルメディアでよく使用される太字や斜体の文字などです。
@@ -4682,6 +4770,29 @@ Unicode正規化については、<a href="#SpeechUnicodeNormalization" title="�
 <tr>
 <td>選択肢</td>
 <td>既定の値 (有効), 有効, 無効</td>
+</tr>
+<tr>
+<td>既定</td>
+<td>有効</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ChineseBrailleWordSegmentation">中国語の単語分割を使用</h5>
+<p>この設定では、NVDAがテキストを点字に変換する際に、単語分割に使用する方式を指定します。
+有効にすると、「中国語（台湾、マンダリン）」以外の中国語点字出力テーブルを使用している場合、NVDAは翻訳前に中国語の単語間へスペースを挿入します。
+単語がディスプレイの端で分割されてもテキストを折り返さず、継続マークを表示します。
+この設定は、「中国語（台湾、マンダリン）」テーブルや、中国語以外の出力テーブルには影響しません。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オプション</td>
+<td>有効、無効</td>
 </tr>
 <tr>
 <td>既定</td>
@@ -4882,7 +4993,7 @@ IP アドレスは更新チェック時にユーザーの国を判断するた�
 <li>ハイライトあり: ビジュアルハイライトの有効と無効を切り替えます。</li>
 <li>フォーカスをハイライト: <a href="#SystemFocus" title="フォーカス">フォーカス</a> をハイライトするかどうかを切り替えます。</li>
 <li>ナビゲーターオブジェクトをハイライト: <a href="#ObjectNavigation" title="ナビゲーターオブジェクト">ナビゲーターオブジェクト</a> をハイライトするかどうかを切り替えます。</li>
-<li>ブラウズモードのカーソルをハイライト: <a href="#BrowseMode" title="ブラウズモードにおける仮想のテキストカーソル">ブラウズモードにおける仮想のテキストカーソル</a> をハイライトするかどうかを切り替えます。</li>
+<li>ブラウズモードのカーソルをハイライト表示: <a href="#BrowseMode" title="仮想ブラウズモードカーソル">仮想ブラウズモードカーソル</a>をハイライト表示するかどうかを切り替えます。文字認識結果のカーソルや、ウェブ上で数式を移動するときの現在の部分も含まれます。</li>
 </ul>
 <p>「ハイライトあり」のチェックボックスをチェックまたはチェックなしに変更すると、他の3個のチェックボックスの状態もそれにあわせて変化します。
 例えば「ハイライトあり」をチェックなしの状態からチェックに切り替えると、他の3個のチェックボックスは自動的にチェックに変わります。
@@ -5176,12 +5287,16 @@ NVDA設定ダイアログを開かないで追跡モードを切り替えるに�
 <ul>
 <li>なし: NVDAは入力した単語を読み上げません。</li>
 <li>エディットコントロールのみ: NVDAは、エディットコントロールや文字を入力できる他の領域で入力された単語のみを読み上げます。</li>
-<li>常に: NVDAは入力した単語を常に読み上げます。</li>
+<li>常に使用: NVDAは入力した単語を常に読み上げます。</li>
 </ul>
 <h5 id="KeyboardSettingsSpeechInteruptForCharacters">文字入力で読み上げを中断</h5>
-<p>チェックされている場合、文字入力のキーが押されると音声読み上げを中断します。この設定は初期状態で有効です。</p>
+<p>ディスプレイをスクロールすると、単語の残りを読めます。
+このオプションは既定で有効です。
+このオプションは、ブラウズモード、フォーカスモード、すべて読み上げを含むNVDAのすべての音声に影響します。</p>
 <h5 id="KeyboardSettingsSpeechInteruptForEnter">Enterキーで読み上げを中断</h5>
-<p>チェックされている場合、エンターキーが押されると音声読み上げを中断します。この設定は初期状態で有効です。</p>
+<p>有効にすると、Enterキーを押すたびに音声が中断されます。
+単語の境界: ディスプレイの末尾に収まらない単語は分割しません。
+このオプションは、ブラウズモード、フォーカスモード、すべて読み上げを含むNVDAのすべての音声に影響します。</p>
 <h5 id="KeyboardSettingsSkimReading">「すべて読み上げ」で流し読みを許可</h5>
 <p>チェックされている場合、「すべて読み上げ」の途中で特定のナビゲーションコマンド（ブラウズモードにおける1文字ナビゲーションや、行単位、段落単位の移動など）を実行しても読み上げを中断しません。移動先の箇所から「すべて読み上げ」での読み上げを再開します。</p>
 <h5 id="KeyboardSettingsBeepLowercase">CapsLockがオンの時、小文字が入力されたらビープ音を鳴らす</h5>
@@ -5254,6 +5369,14 @@ Windowsのマウスポインターは、例えば編集可能や読み込み中�
 <p>このチェックボックスでは、タッチキーボードで文字を入力する方法の切り替えを行います。
 チェックされている場合、指でキーボードのキーを探し、指を画面から離すと選択されていたキーの入力が実行されます。
 チェックなしの場合、タッチキーボードのキーをダブルタップして入力を実行します。</p>
+<h5 id="TouchEdgeGestures">画面端ジェスチャーを有効化</h5>
+<p>このチェックボックスで画面端ジェスチャーを有効にします。
+有効にすると、画面の端から15 mm以内で開始したジェスチャーは独立したジェスチャーとして扱われ、<a href="#InputGestures" title="入力ジェスチャーダイアログ">入力ジェスチャーダイアログ</a>で個別に割り当てられます。
+例えば、画面の左端から開始する右スワイプには、画面中央で行う右スワイプとは別のコマンドを割り当てられます。
+画面端ジェスチャーを無効にした場合、割り当ては残りますが、実行されません。
+注意: 一部の画面端ジェスチャーは、NVDAに届く前にWindowsまたはタスクバーに処理されることがあります。
+例えば、下端からスワイプすると通常はスタートメニューまたはアクションセンターが開きます。また、タスクバーが別の端に配置されている場合、その端へのタッチも同様に処理されます。
+特定の画面端でジェスチャーが動作しない場合は、Windowsに処理されていないか確認し、その端には割り当てないことを検討してください。</p>
 <h4 id="ReviewCursorSettings">レビューカーソル</h4>
 <p>NVDA設定ダイアログのレビューカーソルカテゴリでは、NVDAのレビューカーソルの動作を設定できます。
 このカテゴリには以下の項目があります。</p>
@@ -5405,6 +5528,51 @@ Windowsのマウスポインターは、例えば編集可能や読み込み中�
 <p>このオプションは既定値でチェックされています。これは、キー入力などのジェスチャーが NVDA のコマンドではなく、アプリの操作としても実行できなかったときに、現在フォーカスのあるドキュメントに文字として入力されてしまうことを防ぐ機能です。
 チェックされている場合は、例えばキーボードから文字 j が入力され、1文字ナビゲーションとしても無効で、アプリの操作としても無効であったときに、ドキュメントにこの j という文字が書き込まれません。
 このとき NVDA は入力が防止されるたびに Windosws の既定の警告音を再生します。</p>
+<h5 id="SearchHistory">検索履歴を保持</h5>
+<p>既定で有効になっているこのオプションは、<a href="#SearchingForText" title="検索ダイアログ">検索ダイアログ</a>で現在のNVDAセッション中に検索した語句を保持するかどうかを指定します。
+有効にすると、検索ダイアログのコンボボックスに、最近検索した語句が最大20件表示されます。この履歴はメモリにのみ保持され、NVDAの再起動時に消去されます。
+コンボボックスが、IMEなどの入力方法に干渉する場合は、このオプションを「無効」に設定して、検索ダイアログを通常のエディットフィールドに戻せます。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オプション</td>
+<td>既定（有効）、無効、有効</td>
+</tr>
+<tr>
+<td>既定</td>
+<td>有効</td>
+</tr>
+</tbody>
+</table>
+<h5 id="NativeSelectionModeSetting">ネイティブ選択モード</h5>
+<p>既定では無効です。このオプションでは、<a href="#NativeSelectionMode" title="ネイティブ選択モード">ネイティブ選択モード</a>に対応したブラウズモードのドキュメントで、このモードを自動的に有効にするかどうかを指定します。
+この設定は、ネイティブ選択モードが常に使用されるMicrosoft WordおよびOutlookには影響しません。
+無効にしても、ドキュメントごとにネイティブ選択モードを手動で <code>NVDA+shift+f10</code> を押して有効にできます。
+このオプションの変更は、新しく読み込まれたドキュメントに適用されます。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オプション</td>
+<td>既定（無効）、無効、有効</td>
+</tr>
+<tr>
+<td>既定</td>
+<td>無効</td>
+</tr>
+</tbody>
+</table>
 <h5 id="BrowseModeSettingsBrowseModeNavigationElements">ブラウズモードのタッチナビゲーション要素</h5>
 <p>このリストでは、ブラウズモードのタッチナビゲーションで要素を切り替える際に使用可能な要素の種類を選択できます。
 チェックボックスを使用して、個々の要素の種別を有効または無効にできます。
@@ -5443,6 +5611,7 @@ Windowsのマウスポインターは、例えば編集可能や読み込み中�
 <li>ページ番号</li>
 <li>行番号</li>
 <li>行インデント <a href="#DocumentFormattingSettingsLineIndentation" title="(なし, 読み上げ, ビープ音, ビープ音と読み上げ)">(なし, 読み上げ, ビープ音, ビープ音と読み上げ)</a></li>
+<li>行インデントの音の長さ (ミリ秒)</li>
 <li>行インデントの報告で空白行を無視</li>
 <li>段落インデント(ぶら下げ、字下げなど)</li>
 <li>行間</li>
@@ -5515,6 +5684,10 @@ Windowsのマウスポインターは、例えば編集可能や読み込み中�
 </ul>
 <p>「行インデントの報告で空行を無視」チェックボックスをチェックすると、空行でインデントの変化が報告されなくなります。
 これは、プログラムのソースコードなど、インデントされたテキストブロックを区切るために空行が使用されるドキュメントを読む場合に便利です。</p>
+<h5 id="IndentToneDuration">行インデントの音の長さ</h5>
+<p>このオプションでは、<a href="#DocumentFormattingSettingsLineIndentation" title="「ビープ音」または「ビープ音と読み上げ」">「ビープ音」または「ビープ音と読み上げ」</a> のコンボボックスで選択した場合の行インデントの音の長さを設定します。
+この値は10ミリ秒から2000ミリ秒の範囲で設定できます。
+既定値は40ミリ秒です。</p>
 <h4 id="DocumentNavigation">ドキュメントナビゲーション</h4>
 <p>このカテゴリーではドキュメントナビゲーションの方法を変更できます。</p>
 <h5 id="ParagraphStyle">段落の区切り方法</h5>
@@ -5548,6 +5721,54 @@ Windowsのマウスポインターは、例えば編集可能や読み込み中�
 「Microsoft Word ドキュメントに UI オートメーションを使用」が無効の場合に、このオプションは Microsoft Word および Microsoft Outlook では使用できません。</li>
 </ul>
 <p>NVDA設定ダイアログを開かないでこのオプションを切り替えたい場合は、<a href="#InputGestures" title="入力ジェスチャーのダイアログ">入力ジェスチャーのダイアログ</a>でこの操作にショートカットを割り当ててください。</p>
+<h5 id="WordSegmentationStandard">単語分割方式</h5>
+<p>この設定では、単語単位で移動するときにNVDAが単語の境界を判断する方法を指定します。
+これは、スペースを使用しないスクリプト言語で、テキストを単語、文、段落に分割する方法に影響します。
+中国語点字出力では、「中国語（台湾、マンダリン）」出力テーブルを除き、別の<a href="#ChineseBrailleWordSegmentation" title="中国語の単語分割設定">中国語の単語分割設定</a>を使用します。</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オプション</td>
+<td>既定（自動）、自動、中国語、Unicode (ICU)、レガシー（Uniscribe）</td>
+</tr>
+<tr>
+<td>既定</td>
+<td>自動</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>オプション</th>
+<th>動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自動</td>
+<td>中国語テキストでは、利用可能な場合は中国語の単語分割を使用します。それ以外の場合、利用可能ならUnicode (ICU)の単語分割を優先し、従来のWindows単語分割にフォールバックします。</td>
+</tr>
+<tr>
+<td>中国語</td>
+<td>中国語の単語分割を使用します。中国語の単語分割を利用できない場合は、「自動」と同じフォールバックパスを使用します。</td>
+</tr>
+<tr>
+<td>Unicode (ICU)</td>
+<td>Windows 10 バージョン1703（Creators Update）以降で利用可能な、Windows組み込みのICUライブラリを単語分割に使用し、従来方式にフォールバックします。</td>
+</tr>
+<tr>
+<td>レガシー（Uniscribe）</td>
+<td>従来版メモ帳やその他の従来のWin32エディットコントロールで使われる、従来のWindowsの単語分割を使用します。</td>
+</tr>
+</tbody>
+</table>
 <h4 id="MathSettings">数式の設定</h4>
 <p>このカテゴリでは、NVDA が数式をどのように読み取るかを調整できます。</p>
 <h5 id="MathCATSpeechOptions">音声のオプション</h5>
@@ -6540,7 +6761,9 @@ NVDA開発者から指示された場合に、指定されたカテゴリを有�
 <p>すべての辞書のダイアログには、読み上げの過程で使用される読み方の一覧が含まれています。
 このダイアログには「追加」「編集」「削除」「すべて削除」のボタンがあります。</p>
 <p>辞書に新しい読み方を追加するには、追加ボタンを押し、出てきたダイアログのフィールドに入力し、最後にOKを押してください。
-作成した読み方が、読み方の一覧に表示されます。
+作成した読み方が、読み方の一覧に表示されます。</p>
+<p>コンテキストメニューを使用して、ルールを編集または削除できます。
+選択したルールを削除するには、<code>delete</code> キーも使用できます。
 実際に読み方を保存するために、追加や編集が終了したら、OKボタンを押して辞書ダイアログを終了してください。</p>
 <p>NVDAの読み上げ辞書の読み方は、ひとつの文字列の読み方をほかのものに変更します。
 簡単な例として、NVDAが「鳥」と読み上げるべき単語を、毎回「蛙」と読ませることができます。
@@ -6622,7 +6845,10 @@ NVDAは、初期状態では大文字小文字を区別しません。</p>
 入力ジェスチャーをコマンドに割り当てる条件を指定できる場合もあります。
 例えば、キーボードのあるキーを押したときに、キーボード配列のデスクトップまたはラップトップのうち、現在の配列だけにコマンドを割り当てることも、すべての配列で割り当てを有効にすることもできます。
 このような入力ジェスチャーについては、メニューが表示されるので、オプションから選択してください。</p>
-<p>ジェスチャーをコマンドから削除するには、そのジェスチャーを選択して、削除ボタンを押してください。</p>
+<p>各コマンドのジェスチャーは、コンテキストメニューを使用して追加、変更、削除できます。
+コマンドの入力ジェスチャーを変更するには、ジェスチャーを選択して変更ボタンを押します。
+次に、割り当てる新しい入力ジェスチャーを実行します。これにより、古いジェスチャーが置き換えられます。
+コマンドからジェスチャーを削除するには、<code>delete</code> キーまたは削除ボタンを押します。</p>
 <p>「システムキーボードのキー入力エミュレート」のカテゴリには、システムキーボードのキーをエミュレートするNVDAコマンドがあります。
 これらのエミュレートされたキーを使用して、点字ディスプレイから直接システムキーボードを制御できます。
 エミュレートされた入力ジェスチャーを追加するには、「システムキーボードのキー入力エミュレート」カテゴリを選択し、「追加」ボタンを押します。
@@ -6690,6 +6916,8 @@ NVDAの設定プロファイルを使うとこのようなことができます�
 ダイアログを開いたときには、現在編集中のプロファイルが選択されています。
 アクティブなプロファイルについては、さらに、手動アクティブ化されたか、トリガーされたか、編集が行われたか、といった情報も表示されます。</p>
 <p>プロファイルの名前の変更や削除は、「名前変更」「削除」のボタンを押してください。</p>
+<p>リスト内のプロファイルのコンテキストメニューを開いて、名前の変更や削除を行うこともできます。
+さらに、選択したプロファイルの名前を変更するには<code>f2</code>を押し、削除するには<code>delete</code>を押します。</p>
 <p>「閉じる」ボタンを押すとダイアログが閉じます。</p>
 <h4 id="ProfilesCreating">プロファイルの作成</h4>
 <p>プロファイルを作るには新規のボタンを押してください。</p>
@@ -6967,7 +7195,7 @@ NVDAのアップグレード中に特定のアドオンとの互換性がない�
 <p>アドオンは最大4つのチャンネルを通じて配布されます。</p>
 <ul>
 <li>安定版：開発者がNVDAのリリースバージョンとともにテスト済みのアドオンとしてリリースします。</li>
-<li>ベータ版：さらなるテストが必要かもしれませんが、ユーザーからフィードバックを得るためにリリースします。
+<li>ベータ: このアドオンは追加のテストが必要な場合がありますが、ユーザーからのフィードバックを得るために公開されています。
 新しいものを好むユーザーにおすすめします。</li>
 <li>開発版：このチャンネルは、未リリースのAPI変更をテストするためにアドオン開発者が使用します。
 NVDAアルファ版を利用するときにアドオンの「開発版」が必要になるかもしれません。</li>
@@ -7163,7 +7391,7 @@ NVDAが起動されるたびに新しいログファイルが作成されます�
 <h3 id="CreatePortableCopy">ポータブル版の作成</h3>
 <p>この機能を選択すると、現在実行中の NVDA からポータブル版を作成するためのダイアログが開きます。</p>
 <p>詳細については、<a href="#CreatingAPortableCopy" title="ポータブル版の作成">ポータブル版の作成</a>を参照してください。</p>
-<h3 id="RunCOMRegistrationFixingTool">システムアクセシビリティ修復ツールを実行…</h3>
+<h3 id="RunCOMRegistrationFixingTool">システムアクセシビリティ修復ツールを実行</h3>
 <p>場合によっては、Windowsレジストリで問題が発生し、NVDAの動作がおかしくなることがあります。
 これは、例えば Adobe Reader や Math Player などの特定のアプリをインストールまたはアンインストールした場合に発生することがあります。また、Windows のアップデートやその他のイベントが原因となることもあります。
 システムアクセシビリティ修復ツールは、レジストリのアクセシビリティエントリを修復することによって、これらの問題を解決しようとします。</p>
@@ -7261,7 +7489,7 @@ NVDAは既定でWindowsのOneCore音声を使用します。</p>
 このオプションは初期状態で選択されています。</p>
 <p>NVDAが自動検出できる点字ディスプレイは以下の通りです。</p>
 <ul>
-<li>Handy Tech 点字ディスプレイ</li>
+<li>Help Techディスプレイ（旧称Handy Tech）</li>
 <li>Baum/Humanware/APH/Orbit 点字ディスプレイ</li>
 <li>HumanWare Brailliant BI/Bシリーズ</li>
 <li>HumanWareブレイルノート</li>
@@ -7343,6 +7571,10 @@ NVDAの点字ディスプレイ自動検出はUSBまたはBluetooth接続の場�
 <tr>
 <td>点字セルに移動</td>
 <td>タッチカーソル</td>
+</tr>
+<tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>Shift+Tab キー</td>
@@ -7565,6 +7797,10 @@ Braille Voyager などの旧式ディスプレイを、 Optelec 社のプロト�
 <td>タッチカーソル</td>
 </tr>
 <tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>点字セルの位置のテキストの書式の報告</td>
 <td>第2タッチカーソル</td>
 </tr>
@@ -7676,16 +7912,16 @@ Braille Voyager などの旧式ディスプレイを、 Optelec 社のプロト�
 </table>
 <!-- KC:endInclude -->
 
-<h3 id="HandyTech">Handy Tech 点字ディスプレイ</h3>
-<p>USB、シリアルポート、Bluetoothで接続できる多くの<a href="https://www.handytech.de/" rel="noopener" target="_blank" title="Handy Tech">Handy Tech</a> 点字ディスプレイをサポートしています。
-古いUSB接続のディスプレイを使用する場合は、Handy Tech社からUSBドライバーを入手してインストールする必要があります。</p>
-<p>以下の機種は NVDA が直接サポートしていませんが、<a href="https://handytech.de/en/service/downloads-and-manuals/handy-tech-software/braille-display-drivers" rel="noopener" target="_blank" title="Handy Tech's universal driver">Handy Tech's universal driver</a> と NVDA アドオンを使うことで使用できます:</p>
+<h3 id="HandyTech">Help Techディスプレイ</h3>
+<p>NVDAは、USB、シリアルポート、またはBluetoothで接続した<a href="https://www.helptech.de/" rel="noopener" target="_blank" title="Help Tech">Help Tech</a>のほとんどの点字ディスプレイ（旧称Handy Tech）に対応しています。</p>
+<p>以下のディスプレイはサポート対象外です。</p>
 <ul>
 <li>Braillino</li>
 <li>Bookworm</li>
-<li>Modular ディスプレイでファームウェアのバージョンが 1.13 またはそれ以下の場合。ファームウェアはバージョンアップされる場合があります。</li>
+<li>ファームウェアバージョン1.13以下のモジュラーディスプレイ
+これらのディスプレイのファームウェアは更新できます。</li>
 </ul>
-<p>以下は Handy Tech 点字ディスプレイの NVDA用キー割り当てです。
+<p>以下は、NVDAで使用するHelp Techディスプレイのキー割り当てです。
 各キーの位置については、ディスプレイの説明書を参照してください。</p>
 <!-- KC:beginInclude -->
 
@@ -7716,6 +7952,10 @@ Braille Voyager などの旧式ディスプレイを、 Optelec 社のプロト�
 <tr>
 <td>点字セルに移動</td>
 <td>タッチカーソル</td>
+</tr>
+<tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>Shift+Tabキー</td>
@@ -7878,6 +8118,10 @@ Refreshabraille と Orbit Reader 20, Orbit Reader 40 は適切に設定すれば
 <tr>
 <td>点字セルに移動</td>
 <td><code>タッチカーソル</code></td>
+</tr>
+<tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td><code>shift+tab</code> キー</td>
@@ -8091,6 +8335,10 @@ USB接続で HumanWare プロトコルを使用する場合は、事前に製造
 <td>タッチカーソル</td>
 </tr>
 <tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>点字表示の切り替え</td>
 <td>上＋下</td>
 </tr>
@@ -8154,7 +8402,7 @@ USB接続で HumanWare プロトコルを使用する場合は、事前に製造
 </table>
 <!-- KC:endInclude -->
 
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32, BI 40 および B 80</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32、BI 40、B 80、BI 20X、BI 40Xのキー割り当て</h4>
 <!-- KC:beginInclude -->
 
 <table>
@@ -8165,6 +8413,22 @@ USB接続で HumanWare プロトコルを使用する場合は、事前に製造
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>点字ディスプレイを前の行に移動</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>点字ディスプレイをスクロールして戻る</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>点字ディスプレイを次の行に移動</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>点字表示をスクロールして進む</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>NVDAメニュー</td>
 <td>c1+c3+c4+c5 (コマンド N)</td>
@@ -8218,7 +8482,8 @@ USB接続で HumanWare プロトコルを使用する場合は、事前に製造
 
 <h3 id="Hims">HIMS Braille Sense/Braille EDGE/Smart Beetle/Sync Braille シリーズ</h3>
 <p><a href="https://www.hims-inc.com/" rel="noopener" target="_blank" title="HIMS">HIMS</a> 社の Braille Sense, Braille EDGE, Smart Beetle および Sync Braille ディスプレイを USB または Bluetooth で接続すれば NVDA で利用できます。
-USB 接続のときは <a href="http://www.himsintl.com/upload/HIMS_USB_Driver_v25.zip" rel="noopener" target="_blank" title="HIMS 社が提供する USB ドライバー">HIMS 社が提供する USB ドライバー</a>をインストールしておく必要があります。</p>
+USB 接続のときは <a href="http://www.himsintl.com/upload/HIMS_USB_Driver_v25.zip" rel="noopener" target="_blank" title="HIMS 社が提供する USB ドライバー">HIMS 社が提供する USB ドライバー</a>をインストールしておく必要があります。
+このドライバーをインストールできないWindows 11システムでは、<a href="https://hims-product.s3.ap-northeast-2.amazonaws.com/Util/HIMS_Braille_Driver_V3_1.exe" rel="noopener" target="_blank" title="HIMS WinUSBドライバーパッケージ">HIMS WinUSBドライバーパッケージ</a>を代わりにインストールすると、USB接続されたBraille SenseおよびBraille EDGEディスプレイも検出できます。</p>
 <p>NVDA で利用するときのキー割り当ては以下のとおりです。
 キーの場所の説明は点字ディスプレイのマニュアルをお読みください。</p>
 <!-- KC:beginInclude -->
@@ -8626,6 +8891,10 @@ USB 接続のときは <a href="http://www.himsintl.com/upload/HIMS_USB_Driver_v
 <tr>
 <td>点字セルに移動</td>
 <td>タッチカーソル</td>
+</tr>
+<tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>shift+上矢印キー</td>
@@ -10333,6 +10602,10 @@ BRLTTY用のコマンドが、ディスプレイのコントロールにどの�
 <td>タッチカーソル</td>
 </tr>
 <tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>home1+multiRouting</code>, <code>home2+multiRouting</code></td>
+</tr>
+<tr>
 <td>点字セル位置のテキストの書式を報告</td>
 <td><code>secondary routing</code></td>
 </tr>
@@ -10511,6 +10784,10 @@ Windows 10およびWindows 11オペレーティングシステムは、このデ
 <td><code>タッチカーソル</code></td>
 </tr>
 <tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>上矢印キー</td>
 <td><code>上矢印</code></td>
 </tr>
@@ -10560,6 +10837,10 @@ Windows 10およびWindows 11オペレーティングシステムは、このデ
 <tr>
 <td>点字セルに移動</td>
 <td>セット1のタッチカーソル</td>
+</tr>
+<tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td>セット1の複数のタッチカーソル</td>
 </tr>
 <tr>
 <td>点字表示の追従の切り替え</td>
@@ -10705,6 +10986,16 @@ NVDA の各ユーザーの設定をコピーすれば  <a href="#GeneralSettings
 <li>例えばアプリのインストールなど</li>
 </ul>
 </li>
+</ul>
+<h3 id="DownloadingNVDA">NVDAのダウンロード</h3>
+<p>NVDAのダウンロードには、NV Accessの<a href="https://www.nvaccess.org/download/" rel="noopener" target="_blank" title="ダウンロードページ">ダウンロードページ</a>を推奨します。</p>
+<p>NVDAは、Windows パッケージ マネージャー（WinGet）を使用してダウンロードおよびインストールすることもできます。
+最初の点字セルから最後の点字セルまでの範囲を選択 | セット1の複数のタッチカーソル</p>
+<p><code>winget install --id NVAccess.NVDA</code></p>
+<p>ベータ版またはRC版をインストールするには、次のコマンドを使用します。</p>
+<ul>
+<li>ベータ: <code>winget install --id NVAccess.NVDA.Beta</code></li>
+<li>RC: <code>winget install --id NVAccess.NVDA.RC</code></li>
 </ul>
 <h3 id="CommandLineOptions">コマンドラインオプション</h3>
 <p>NVDA の実行ファイルにコマンドラインオプションをつけて実行すると、NVDA の動作を変更することができます。

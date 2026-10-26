@@ -2,16 +2,16 @@
 <html lang="nl" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2 Gebruikershandleiding</title>
+<title>NVDA 2026.3 Gebruikershandleiding</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="nvda-20262-gebruikershandleiding">NVDA 2026.2 Gebruikershandleiding</h1>
+<body><h1 id="nvda-20263-gebruikershandleiding">NVDA 2026.3 Gebruikershandleiding</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262-gebruikershandleiding" title="NVDA 2026.2 Gebruikershandleiding">NVDA 2026.2 Gebruikershandleiding</a><ul>
+<li><a href="#nvda-20263-gebruikershandleiding" title="NVDA 2026.3 Gebruikershandleiding">NVDA 2026.3 Gebruikershandleiding</a><ul>
 <li><a href="#Introduction" title="Inleiding">Inleiding</a><ul>
 <li><a href="#GeneralFeatures" title="Algemene kenmerken">Algemene kenmerken</a></li>
 <li><a href="#SystemRequirements" title="Systeemvereisten">Systeemvereisten</a><ul>
@@ -89,6 +89,7 @@
 <li><a href="#Taps" title="Tikken">Tikken</a></li>
 <li><a href="#Flicks" title="Veegbewegingen">Veegbewegingen</a></li>
 <li><a href="#PinchGestures" title="Knijpgebaren">Knijpgebaren</a></li>
+<li><a href="#SequentialFlicks" title="Sequentiële Snelle Veegbewegingen">Sequentiële Snelle Veegbewegingen</a></li>
 </ul>
 </li>
 <li><a href="#TouchModes" title="Aanraakmodi">Aanraakmodi</a></li>
@@ -242,6 +243,7 @@
 <li><a href="#SpeechSettingsSymbolLevel" title="Interpunctie-/symboolniveau">Interpunctie-/symboolniveau</a></li>
 <li><a href="#SpeechSettingsTrust" title="Vertrouw taal van stem bij het verwerken van karakters en symbolen">Vertrouw taal van stem bij het verwerken van karakters en symbolen</a></li>
 <li><a href="#SpeechUnicodeNormalization" title="Unicode-normalisering">Unicode-normalisering</a></li>
+<li><a href="#SpeechSettingsSayAllReadingUnit" title="Alles voorlezen leest per">Alles voorlezen leest per</a></li>
 <li><a href="#SpeechReportNormalizedForCharacterNavigation" title="&quot;Genormaliseerd&quot; melden bij het navigeren per teken">"Genormaliseerd" melden bij het navigeren per teken</a></li>
 <li><a href="#SpeechSettingsCLDR" title="Unicode Consortium data (met inbegrip van emoji) opnemen bij het verwerken van karakters en symbolen">Unicode Consortium data (met inbegrip van emoji) opnemen bij het verwerken van karakters en symbolen</a></li>
 <li><a href="#SpeechSettingsCapPitchChange" title="Percentage toonhoogteverandering bij hoofdletters">Percentage toonhoogteverandering bij hoofdletters</a></li>
@@ -284,9 +286,10 @@
 <li><a href="#BrailleSpeakOnRouting" title="Spreek teken uit bij routing van cursor in tekst">Spreek teken uit bij routing van cursor in tekst</a></li>
 <li><a href="#BrailleSpeakOnNavigating" title="Spreken bij het navigeren per regel of per alinea">Spreken bij het navigeren per regel of per alinea</a></li>
 <li><a href="#BrailleAutoScrollRate" title="Automatische Scrollsnelheid">Automatische Scrollsnelheid</a></li>
-<li><a href="#BrailleSettingsWordWrap" title="Vermijd zo mogelijk het afbreken van woorden">Vermijd zo mogelijk het afbreken van woorden</a></li>
+<li><a href="#BrailleSettingsWordWrap" title="Tekstterugloop">Tekstterugloop</a></li>
 <li><a href="#BrailleUnicodeNormalization" title="Unicodenormalisering">Unicodenormalisering</a></li>
 <li><a href="#BrailleSettingsInterruptSpeech" title="Onderbreek spraak tijdens scrollen">Onderbreek spraak tijdens scrollen</a></li>
+<li><a href="#ChineseBrailleWordSegmentation" title="Gebruik Chinese woord-segmentering">Gebruik Chinese woord-segmentering</a></li>
 </ul>
 </li>
 <li><a href="#SelectBrailleDisplay" title="Brailleleesregel Selecteren">Brailleleesregel Selecteren</a><ul>
@@ -363,6 +366,7 @@
 <li><a href="#TouchInteraction" title="Aanraakinteractie">Aanraakinteractie</a><ul>
 <li><a href="#TouchSupportEnable" title="Ondersteuning voor Aanraakinteractie inschakelen">Ondersteuning voor Aanraakinteractie inschakelen</a></li>
 <li><a href="#TouchTypingMode" title="Direct typen met aanraken">Direct typen met aanraken</a></li>
+<li><a href="#TouchEdgeGestures" title="Randgebaren activeren">Randgebaren activeren</a></li>
 </ul>
 </li>
 <li><a href="#ReviewCursorSettings" title="Leescursor (review cursor)">Leescursor (review cursor)</a><ul>
@@ -408,6 +412,8 @@
 <li><a href="#BrowseModeSettingsAutoPassThroughOnCaretMove" title="Automatische focusmodus bij cursorbeweging">Automatische focusmodus bij cursorbeweging</a></li>
 <li><a href="#BrowseModeSettingsPassThroughAudioIndication" title="Geluidsmarkering voor focus- en bladermodus">Geluidsmarkering voor focus- en bladermodus</a></li>
 <li><a href="#BrowseModeSettingsTrapNonCommandGestures" title="Niet-commandogebonden handelingen onderscheppen voordat ze het document bereiken">Niet-commandogebonden handelingen onderscheppen voordat ze het document bereiken</a></li>
+<li><a href="#SearchHistory" title="Zoekgeschiedenis bewaren">Zoekgeschiedenis bewaren</a></li>
+<li><a href="#NativeSelectionModeSetting" title="Intrinsieke (eigen) selectiemodus">Intrinsieke (eigen) selectiemodus</a></li>
 <li><a href="#BrowseModeSettingsBrowseModeNavigationElements" title="Navigatieelementen inBladermodus via Aanraakgebaren">Navigatieelementen inBladermodus via Aanraakgebaren</a></li>
 </ul>
 </li>
@@ -417,10 +423,12 @@
 <li><a href="#DocumentFormattingDetectFormatAfterCursor" title="Opmaakwijzigingen achter de cursor melden">Opmaakwijzigingen achter de cursor melden</a></li>
 <li><a href="#ReportSpellingErrors" title="Melden van spel- en grammaticafouten">Melden van spel- en grammaticafouten</a></li>
 <li><a href="#DocumentFormattingSettingsLineIndentation" title="Regelinspringing melden">Regelinspringing melden</a></li>
+<li><a href="#IndentToneDuration" title="Toonduur inspringen">Toonduur inspringen</a></li>
 </ul>
 </li>
 <li><a href="#DocumentNavigation" title="Documentnavigatie">Documentnavigatie</a><ul>
 <li><a href="#ParagraphStyle" title="Alineastijl">Alineastijl</a></li>
+<li><a href="#WordSegmentationStandard" title="Standaard Woord-segmentering">Standaard Woord-segmentering</a></li>
 </ul>
 </li>
 <li><a href="#MathSettings" title="Math-instellingen">Math-instellingen</a><ul>
@@ -597,14 +605,14 @@
 <li><a href="#AutomaticDetection" title="Leesregels die automatische herkenning op de achtergrond ondersteunen">Leesregels die automatische herkenning op de achtergrond ondersteunen</a></li>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/PAC Mate Serie">Freedom Scientific Focus/PAC Mate Serie</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA 6 serie/protocol converter">Optelec ALVA 6 serie/protocol converter</a></li>
-<li><a href="#HandyTech" title="Handy Tech Leesregels">Handy Tech Leesregels</a></li>
+<li><a href="#HandyTech" title="Help Tech Leesregels">Help Tech Leesregels</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Brailleleesregels van Baum/HumanWare/APH/Orbit">Brailleleesregels van Baum/HumanWare/APH/Orbit</a></li>
 <li><a href="#HedoProfiLine" title="gedo ProfiLine USB">gedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="Hedo MobilLine USB">Hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/B Serie / BrailleNote Touch">HumanWare Brailliant BI/B Serie / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="Toegewezen toetsen die gelden voor Alle modellen">Toegewezen toetsen die gelden voor Alle modellen</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Toegewezen toetsen voor de Brailliant BI 32, BI 40 en B 80">Toegewezen toetsen voor de Brailliant BI 32, BI 40 en B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Toetstoewijzingen voor Brailliant BI 32, BI 40, B 80, BI 20X en BI 40X">Toetstoewijzingen voor Brailliant BI 32, BI 40, B 80, BI 20X en BI 40X</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Toegewezen toetsen voor de Brailliant BI 14">Toegewezen toetsen voor de Brailliant BI 14</a></li>
 </ul>
 </li>
@@ -638,6 +646,7 @@
 <li><a href="#AdvancedTopics" title="Geavanceerde Onderwerpen">Geavanceerde Onderwerpen</a><ul>
 <li><a href="#SecureMode" title="Veilige Modus">Veilige Modus</a></li>
 <li><a href="#SecureScreens" title="Beveiligde Schermen">Beveiligde Schermen</a></li>
+<li><a href="#DownloadingNVDA" title="Het Downloaden van NVDA">Het Downloaden van NVDA</a></li>
 <li><a href="#CommandLineOptions" title="Commandoregelopties">Commandoregelopties</a></li>
 <li><a href="#UninstallingNVDA" title="NVDA Deïnstalleren">NVDA Deïnstalleren</a></li>
 <li><a href="#SystemWideParameters" title="Systeem-brede Parameters">Systeem-brede Parameters</a></li>
@@ -648,7 +657,7 @@
 </li>
 </ul>
 </div>
-<!-- KC:title: `NVDA 2026.2 overzicht commando's -->
+<!-- KC:title: `NVDA 2026.3 overzicht commando's -->
 
 <h2 id="Introduction">Inleiding</h2>
 <p>Welkom bij NVDA!</p>
@@ -817,6 +826,7 @@ Hiermee stelt u in of NVDA automatisch moet opstarten.</li>
 </ol>
 <h3 id="RunningNVDA">Werken met  NVDA</h3>
 <p>De volledige  gebruikershandleiding van NVDA bevat een gerubriceerd Overzicht met NVDA-commando's.
+Door op 'F1' te drukken in een willekeurig dialoogvenster binnen NVDA kom je meteen bij het juiste onderwerp in de Gebruikershandleiding waarover  je op dat moment informatie nodig hebt.
 De tabellen met commando's zijn ook te vinden in het "Overzicht Commando's".
 De module "Basis training voor NVDA" gaat dieper in op afzonderlijke commando's met daarbij behorende gestructureerde activiteiten.
 "Basistraining voor NVDA" is verkrijgbaar  in de <a href="http://www.nvaccess.org/shop" rel="noopener" target="_blank" title="NV Access Shop">NV Access Shop</a>.</p>
@@ -949,6 +959,12 @@ Het eigenlijke commando wordt niet uitgevoerd wanneer u in de Invoerhulpmodus be
 <td><code>NVDA+x</code></td>
 <td><code>NVDA+x</code></td>
 <td>Hiermee wordt herhaald wat NVDA het laatst voorlas. Door tweemaal indrukken wordt de tekst getoond in een bladervenster</td>
+</tr>
+<tr>
+<td>Kopiëer de informatie die het laatst werd uitgesproken</td>
+<td><code>NVDA+control+x</code></td>
+<td><code>NVDA+control+x</code></td>
+<td>Hiermee kopieer je de informatie die het laatst werd voorgelezen door NVDA naar het klembord</td>
 </tr>
 <tr>
 <td>Textopmaak melden</td>
@@ -1179,7 +1195,8 @@ Merk op dat in dit vemster van de Add-on Store <code>escape</code> hetzelfde wer
 Druk op  <code>control+tab</code> om naar dit tabblad te gaan vanuit elke willekeurige plaats in de Add-on Store.
 De status van de add-on is voor zien van het predikaat "Update beschikbaar".
 De lijst  toont de momenteel geïnstalleerde versie en de beschikbare versie.
-Druk <code>enter</code> in op de add-on om de actie lijst te openen; kies "Bijwerken".</p>
+Druk <code>enter</code> in op de add-on om de actie lijst te openen; kies "Bijwerken".
+Als de add-on wordt uitgeschakeld, dan zal de actie in plaats daarvan het label "Update (en ingeschakeld)" krijgen, aangezien  add-ons ingeschakeld moeten zijn om geïnstalleerd te worden; door een uitgeschakelde add-on opnieuw te installeren  zal deze weer worden ingeschakeld.</p>
 <p>Standaard krijg je, nadat NVDA opgestart is, een melding of er add-on updates beschikbaar zijn.
 Om hierover meer te weten te komen, en het verloop ervan aan te passen ga je naar <a href="#AutomaticAddonUpdates" title="&quot;Update Notificaties&quot;">"Update Notificaties"</a>.</p>
 <h3 id="Community">Community</h3>
@@ -1194,6 +1211,7 @@ Dit is een online examen dat u kunt afleggen om te laten zien hoe vaardig u bent
 <p>Om naar Help te gaan van  NVDA, drukt u op <code>NVDA+n</code> om het  menu,  te openen, vervolgens op <code>h</code> voor hulp.
 Via dit submenu hebt u toegang tot de Gebruikershandleiding, een commandooverzicht, de geschiedenis van vernieuwingen / verbeteringen en meer.
 Deze drie opties worden geopend in de standaard web-browser.
+Door op 'F1' te drukken in een willekeurig dialoogvenster binnen NVDA kom je meteen bij het juiste onderwerp in de Gebruikershandleiding waarover  je op dat moment informatie nodig hebt.
 Er  is ook nog meer uitgebreid Trainingsmateriaal beschikbaar  in de <a href="https://www.nvaccess.org/shop" rel="noopener" target="_blank" title="NV Access Shop">NV Access Shop</a>.</p>
 <p>We raden aan eerst de module "Basic Training for NVDA" te doen.
 Deze module behandelt uiteenlopende onderwerpen van hoe begin ik tot surfen op het web en objectnavigatie gebruiken.
@@ -1280,8 +1298,8 @@ Dit geldt eveneens voor het uitschakelen van het gebruik van de <a href="#Addons
 </ul>
 </li>
 <li>UAC-schermen (User Account Control) kunnen niet worden voorgelezen bij het starten van toepassingen die met beheerdersrechten worden uitgevoerd.</li>
-<li>Geen ondersteuning voor invoer via het aanraakscherm.
-Als het Vergrootglas van NVDA ingeschakeld is, werkt invoer via aanraakgebaren niet goed.</li>
+<li>NVDA negeert aanraakinvoer (gebaren  worden overgeslagen).</li>
+<li>Muis- en aanraakinvoer werken niet correct met het ingeschakelde vergrootglas van NVDA (dwz  geen accurate invoer).</li>
 <li>Mogelijkheden zoals bladermodus en het uitspreken van getypte karakters bij apps uit de Windows Store zijn niet beschikbaar.</li>
 <li>Audio ducking (volume van het ene audiosignaal verlagen t.o.v. het andere) wordt niet ondersteund.</li>
 </ul>
@@ -1358,6 +1376,15 @@ Daarom komen gebaren zoals een veegbeweging links met twee vingers en een veegbe
 <h5 id="PinchGestures">Knijpgebaren</h5>
 <p>Zet twee vingers op het scherm en beweeg ze naar elkaar toe om een samenknijp-gebaar te maken.
 Beweeg ze weg van elkaar om een spreidknijp-gebaar te maken.</p>
+<h5 id="SequentialFlicks">Sequentiële Snelle Veegbewegingen</h5>
+<p>Door 2 snelle veegbewegingen kort op elkaar uit te voeren maak je  een sequentiëel veegbewegingsgebaar.
+Hiermee wordt het aantal aanraakgebaren dat je aan NVDA-commando's kunt toekennen fors uitgebreid.</p>
+<p>Beide veegbewegingen  kunnen op twee manieren worden uitgevoerd:</p>
+<ul>
+<li>Je vinger optillen na de eerste veegbeweging en dan de tweede veegbeweging  maken, voordat de tijd om het gebaar te maken verstreken is.</li>
+<li>Of als een enkele doorgaande veegbeweging die scherp van richting verandert, zonder je vinger op te tillen.</li>
+</ul>
+<p>Er worden twaalf combinaties herkend: de vier paren met de veegbewegingen in tegengestelde richtingen (zoals veeg rechts dan naar links), en de acht paren met een verticaleveegbeweging in de vorm van een  L (zoals veeg rechts dan omhoog).</p>
 <h4 id="TouchModes">Aanraakmodi</h4>
 <p>Aangezien er veel meer NVDA-commando’s zijn dan mogelijke aanraakgebaren, kan in NVDA gewisseld worden tussen verschillende aanraakmodi die ervoor zorgen dat commando’s in groepen worden onderverdeeld.
 De drie modi zijn tekstmodus, objectmodus en bladermodus.
@@ -1434,6 +1461,13 @@ Op een toetsenbord zonder <code>toepassingstoets</code>, drukt u in plaats daarv
 <td><code>NVDA+x</code></td>
 <td>Geen</td>
 <td>Herhaalt laatst door NVDA voorgelezen informatie. Tweemaal drukken toont deze in een bladervenster</td>
+</tr>
+<tr>
+<td>Kopieer laatst voorgelezen informatie</td>
+<td><code>NVDA+control+x</code></td>
+<td><code>NVDA+control+x</code></td>
+<td>Geen</td>
+<td>Hiermee kun je de door NVDA meest recent voorgelezen tekst naar het klembord kopiëren</td>
 </tr>
 <tr>
 <td>NVDA Menu</td>
@@ -1661,15 +1695,15 @@ NVDA meldt of u navigeert per teken, woord of regel. Ook wordt het selecteren en
 </tr>
 <tr>
 <td>Volgende zin</td>
-<td>alt+Pijl omlaag</td>
-<td>alt+Pijl omlaag</td>
-<td>Verplaatst cursor naar volgende zin en meldt deze (alleen ondersteund in Microsoft Word en Outlook).</td>
+<td><code>alt+pijlOmlaag</code></td>
+<td><code>alt+pijlOmlaag</code></td>
+<td>Verplaatst de caret naar de volgende zin en meldt dat. Sommige documenten worden niet ondersteund</td>
 </tr>
 <tr>
 <td>Vorige zin</td>
-<td>alt+Pijl omhoog</td>
-<td>Alt+Pijl omhoog</td>
-<td>Verplaatst cursor naar vorige zin en meldt deze (alleen ondersteund in Microsoft Word en Outlook ).</td>
+<td><code>alt+pijlOmhoog</code></td>
+<td><code>alt+pijlOmhoog</code></td>
+<td>Verplaatst de aanwijzer naar de vorige zin en meldt dat. Sommige documenten worden niet ondersteund</td>
 </tr>
 </tbody>
 </table>
@@ -2457,6 +2491,7 @@ Hier is een lijst met  beschikbare commando's:</p>
 <li>Omschakelknop</li>
 <li>Voortgangsbalk</li>
 <li>Slider</li>
+<li>Aanklikbaar element</li>
 <li>Referentie</li>
 <li>Math-formule (wisk.)</li>
 <li>Verticaaluitgelijnde alinea</li>
@@ -2503,6 +2538,7 @@ Als u uw keuze eenmaal gemaakt hebt, kunt u met de aanwezige knoppen in het dial
 In het vak  "Typ de tekst waarnaar u wilt zoeken', kunt u de desbetreffende tekst invoeren.
 Door het selectievakje voor hoofdlettergevoeligheid in te schakelen zorgt u ervoor dat er onderscheid wordt gemaakt tussen hoofdletters en kleine letters bij het zoeken.
 Als dit selectievakje is ingeschakeld, zult u bijv. wel "NV Access" vinden maar vindt u "nv access" niet.
+Wanneer de bladermodusinstelling <a href="#SearchHistory" title="Bewaar Zoekgeschiedenis">Bewaar Zoekgeschiedenis</a> ingeschakeld is, is dit veld een  vervolgkeuzemenu dat ook de zoektermen toont waarmee je recentelijk hebt gezocht (maximaal 20), datna een herstart van NVDA weer leeg is.
 Gebruik de volgende toetsen  voor zoekopdrachten:</p>
 <!-- KC:beginInclude -->
 
@@ -2564,14 +2600,16 @@ Er is een toetscombinatie beschikbaar om weer terug te gaan naar de oorspronkeli
 <h3 id="NativeSelectionMode">NVDA-intrinsieke  SelectieModus</h3>
 <p>Bij het selecteren van tekst met  de <code>shift+pijltoetsen</code> in Bladermodus is de selectie standaard alleen van toepassing op de weergave van het document  in de bladermodus van NVDA, en niet op de  applicatie zelf.
 Dit houdt in dat  de selectie niet zichtbaar is  op het scherm, en het kopiërenvan de tekst met <code>control+c</code> slechts NVDA's platte tekstweergave van de inhoud kopieert. Dat wil dus zeggen  dat geen tabelopmaak of dat iets een link is, zal worden gekopieerd.
-NVDA heeft echter  een Intrinsieke Selectiemodusdie ingeschakeld kan worden on in bepaalde documenten in Bladermodus die hiervoor ondersteuning bieden.
+NVDA heeft echter een geheel eigen Selectiemodus die aan- en uitgezet kan worden in Bladermodus-documenten die dat ondersteunen.
 Intrinsieke Selectie zorgt ervoor dat het intrinsiek geselecteerde document de Bladermodus-selectie van NVDA volgt, waardoor het mogelijk wordt details zoals opmaak, links, en tabellen te kcopiëren.
 Momenteel wordt de Intrinsieke Selectiemodus ondersteund in:</p>
 <ul>
 <li>Mozilla Firefox</li>
 <li>Mozilla Thunderbird</li>
 <li>Chrome, Edge, en elke browser die gebaseerd is op Chromium 134 of nieiwer</li>
+<li>In Microsoft Word en Outlook kun je het niet uitschakelen</li>
 </ul>
+<p>De intrinsieke (geheel eigen) Selectiemodus kan ook <a href="#NativeSelectionModeSetting" title="automatisch worden ingeschakeld">automatisch worden ingeschakeld</a> voor  ondersteunde documenten via de Bladermodusinstellingen van NVDA.</p>
 <!-- KC:beginInclude -->
 
 <table>
@@ -2655,7 +2693,8 @@ Standaard volgt de leescursor de systeemcursor, dus kun je deze gewoonlijk gebru
 <!-- KC:endInclude -->
 
 <p>Nu schakelt NVDA naar de Math-modus, waarin  je commando’s zoals de pijltjestoetsen kunt gebruiken om de stelling te verkennen.
-Je kunt bij voorbeeld horizontaal door de stelling gaan met de linker en rechter pijltoets en inzoemen op een onderdeel van de stelling zoals een breuk met behulp van pijl omlaag.</p>
+Je kunt bij voorbeeld horizontaal door de stelling gaan met de linker en rechter pijltoets en inzoemen op een onderdeel van de stelling zoals een breuk met behulp van pijl omlaag.
+Wanneer <a href="#VisionFocusHighlight" title="Visuele Uitlichting">Visuele Uitlichting</a> is ingeschakeld en the bladermoduscursor highlighter ingeschakeld wordt, wordt het huidige subonderdeel van MathML op het web ook zichtbaar gemaakt.</p>
 <p>Als je naar het document wilt teruggaan druk je op Escape.</p>
 <p>Wiskundige inhoud kan soms worden weergegeven als een knop of een ander type besturingselement waarmee bij activering ervan , een dialoogvenster  of meer informatie kan worden getoond welke betrekking heeft op de formule.
 Om  de knop of het besturingselement metdaarin  de formule te activeren, gebruik je de toetscombinatie ctrl+enter.</p>
@@ -3436,7 +3475,7 @@ Deze posities worden gemarkeerd met een gekleurde rechthoek er om.</p>
 <li>Egaal blauw markeert de plaats waar navigatorobject en systeemfocus samenkomen, (bijv. omdat <a href="#ReviewCursorFollowFocus" title="het navigatorobject de systeemfocus volgt">het navigatorobject de systeemfocus volgt</a>).</li>
 <li>Gestreept blauw markeert alleen het systeemfocus-object.</li>
 <li>Egaal rose markeert alleen het navigatorobject.</li>
-<li>Egaal geel markeert de virtuele aanwijzer die in bladermodus (waar een fysieke aanwijzer, zoals in een webbrowser, ontbreekt), wordt gebruikt.</li>
+<li>Egaal geel is de kleur voor het uitlichten van de virtuele muisaanwijzer die in de bladermodus wordt gebruikt (waar er geen fysieke aanwijzer beschikbaar is zoals in web-browsers), resteert dan de cursor in OCR-herkenning , en het huidige subdeel bij het navigeren in math (wiskunde) op het web.</li>
 </ul>
 <p>Wanneer Visuele Uitlichting ingeschakeld is in de <a href="#VisionSettings" title="categorie zicht">categorie zicht</a>  in het dialoogvenster <a href="#NVDASettings" title="NVDA-instellingen">NVDA-instellingen</a> , kunt u daar <a href="#VisionSettingsFocusHighlight" title="aanpassen of u al dan niet de focus, het navigatorobject of de bladermodusaanwijzer">aanpassen of u al dan niet de focus, het navigatorobject of de bladermodusaanwijzer</a> uitlicht.</p>
 <h3 id="VisionScreenCurtain">Scherm Dimmen (Schermgordijn)</h3>
@@ -3469,9 +3508,9 @@ In zo'n geval kent NVDA de optie 'Scherm Dimmen' die ingeschakeld kan worden om 
 </table>
 <!-- KC:endInclude -->
 
-<p>Wanneer Scherm gordijn ingeschakeld is, zal alles wat letterlijk afhankelijk is van schermweergave niet functioneren.
-Je kunt bijvoorbeeld <a href="#Win10Ocr" title="OCR niet gebruiken">OCR niet gebruiken</a>.
-Sommige screenshot utilities werken mogelijk ook niet.</p>
+<p>Wanneer het Schermgordijn ingeschakeld wordt, zijn bepaalde functies die afhankelijk zijn van wat er letterlijk te zien is op het scherm, niet beschikbaar.
+Op ondersteunde  systemen kan <a href="#Win10Ocr" title="Windows OCR">Windows OCR</a> wel gebruikt worden terwijl het Schermgordijn ingeschakeld is.
+Bepaalde schermopname-programmatjes werken mogelijk niet.</p>
 <p>Merk op dat, als de Schermvergroting van Windows actief is en er gebruik gemaakt wordt van omgekeerde schermkleuren,Screengordijn niet ingeschakeld kan worden.</p>
 <h2 id="Magnifier">Vergrootglas</h2>
 <p>NVDA beschikt over een ingebouwde vergrootglasfunctie waarmee je kunt zoemen om zo delen van het scherm te vergroten.
@@ -3566,6 +3605,11 @@ Wat geldt voor andere NVDA-instellingen, geldt ook hier, dwz de instellingen wor
 <td><code>NVDA+shift+alt+pijlOmlaag</code></td>
 <td>Verplaatst de vergrote weergave direct naar de onderrand van het scherm</td>
 </tr>
+<tr>
+<td>Breng muis in beeld</td>
+<td>Geen</td>
+<td>De muiscursor naar het centrum van het vergrote gebied verplaatsen</td>
+</tr>
 </tbody>
 </table>
 <!-- KC:endInclude -->
@@ -3628,7 +3672,9 @@ NVDA kan hiervan gebruik maken om tekst uit afbeeldingen en ontoegankelijke toep
 U kunt extra talen toevoegen door in het menu Start, (of met linker Windows-toets +i) Instellingen te kiezen, Tijd en Taal -&gt; Regio &amp; Taal te selecteren en dan Een taal toevoegen te kiezen.</p>
 <p>Als u inhoud die aan voortdurende verandering onderhevig is, wilt blijven volgen, bijvoorbeeld bij het bekijken van een video met ondertiteling,kunt u ervoor kiezen de herkende inhoud automatisch te laten verversen.
 Dit kunt u ook doen via het dialoogvenster van de categorie <a href="#Win10OcrSettings" title="Windows OCR">Windows OCR</a> van de <a href="#NVDASettings" title="NVDA-instellingen">NVDA-instellingen</a> dialog.</p>
-<p>Het kan voorkomen dat Windows OCR gedeeltelijk of in het geheel niet compatibel is met <a href="#Vision" title="zicht-gerelateerde toepassingen van NVDA">zicht-gerelateerde toepassingen van NVDA</a> of andere externe visuele hulpmiddelen. U zult deze hulpprogramma's dan ook uit moeten schakelen voordat u verder gaat met herkennen.</p>
+<p>Op ondersteunde  systemen kan <a href="#Win10Ocr" title="Windows OCR">Windows OCR</a> wel gebruikt worden terwijl het Schermgordijn ingeschakeld is of als het ingebouwde <a href="#Magnifier" title="Vergrootglas">Vergrootglas</a>  actief is.
+Externe visuele hulpmiddelen kunnen geheel of gedeeltelijk incompatibel zijn met  Windows OCR.
+Het kan zijn dat je ze moet uitschakelen voordat je met (tekst)herkenning begint.</p>
 <!-- KC:beginInclude -->
 <p>Om de tekst in het huidige navigatorobject te herkennen met behulp van Windows OCR drukt u op NVDA+r.</p>
 <!-- KC:endInclude -->
@@ -3946,6 +3992,10 @@ Bij het toevoegen van nieuwe tekst schuift de inhoud omhoog en  eerdere tekst ve
 In Windows-versies ouder dan Windows 11 22H2 is tekst die niet getoond wordt in het venster niet toegankelijk met de leescommando's van NVDA.
 Daarom moet u het consoolvenster verschuiven om eerder ingevoerde tekst te lezen.
 In latere versies van het consool en in Windows Terminal kan de gehele tekstbuffer vrijelijk worden bekeken zonder dat u het venster hoeft te scrollen.</p>
+<p>In sommige gevallen, zoals bij een verbinding via SSH, verloopt het verversen van de invoeraanwijzer mogelijk traag.
+NVDA wacht iets langer met verplaatsing van de tekstcursor in de Windows Terminal, dus is het minder waarschijnlijk dat verlopen (letter)tekens worden gemeld.
+Als de tekstcursormeldingen onnauwkeurig blijven, probeer dan  eens de waarde van de <a href="#AdvancedSettingsCaretMoveTimeout" title="Tekstcursorverplaatsingstimeout">Tekstcursorverplaatsingstimeout</a> te verhogen in Geavanceerde Instellingen.
+Door het verhogen van deze waarde kan verplaatsing van de tekstcursor trager aanvoelen, dus is het te overwegen om een configuratieprofiel aan te maken voor terminal-toepassingen.</p>
 <!-- KC:beginInclude -->
 <p>De volgende in het Windows-consool ingebouwde sneltoetscombinaties kunnen bij het <a href="#ReviewingText" title="nalezen van tekst">nalezen van tekst</a> met NVDA van pas komen in oudere versies van het Windows-consool:</p>
 <table>
@@ -4211,6 +4261,32 @@ Merk op dat een klein aantal negatieve letters tussen rechte haken met een gevoe
 <tr>
 <td>Standaard</td>
 <td>Ingeschakeld</td>
+</tr>
+</tbody>
+</table>
+<h5 id="SpeechSettingsSayAllReadingUnit">Alles voorlezen leest per</h5>
+<p>Via dit vervolgkeuzemenu kun je de hoeveelheid tekst kiezen  die alles lezen in één keer voorleest(doorlopend lezen).
+Dit beïnvloedt hoe vaak de tekstcursor en het beeld worden verplaatst tijdens alles lezen, en kan ook invloed hebben op de intonatie in geval van lange stukken tekst.
+Wanneer "Zin waar mogelijk" is gekozen, lees NVDA zin voor zin voor in controls en documenten die zins afbakening ondersteunen, en valt automatisch terug op lezen per regel als zinsafbakening niet wordt ondersteund.
+Zinsafbakening wordt ondersteund in Microsoft Word en Outlook, in verschillende besturingselementen voor bewerking, en in de meeste bladermodusdocumenten zoals webpagina's.
+Wanneer "Alineah is ingesteld", leest NVDA per alinea.
+Wanneer "Regel" is ingesteld, leest NVDA altijd regel voor regel.
+Als bijv. "Regel is ingesteld", zal Alles Lezen in Rich Edit controls zoals NVDA's log viewer regel voor regel voorlezen, terwijl de standaard in dit geval zin voor zin is.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opties</td>
+<td>Standaard (Zo mogelijk zin),Zin waar mogelijk, Alinea, Regel</td>
+</tr>
+<tr>
+<td>Standaard</td>
+<td>Zin waar mogelijk</td>
 </tr>
 </tbody>
 </table>
@@ -4633,15 +4709,27 @@ De volgende symbolen worden onderscheiden:</p>
 <p>De minimale waarde (0%) is 1 cel per seconde, en de maximale waarde (100%) is 20 cellen per seconde.
 Met de standaardwaarde van 10 cellen per seconde, zal een 40-cellige leesregel elke 4 seconden automatisch scrollen.
 Zou 't gaan om een leesregel met 20 cellen, dan wordt elke brailleregel 2 seconden getoond.</p>
-<h5 id="BrailleSettingsWordWrap">Vermijd zo mogelijk het afbreken van woorden</h5>
-<p>Als dit ingeschakeld is, zal een woord dat te lang is om op de brailleleesregel te passen, niet worden afgebroken.
+<p>Terwijl de automatische scroll-optie is ingeschakeld, kun je altijd nog het commando  terugscrollen gebruiken om het voorafgaande te lezen, en vooruitscrollen, bijv., om een lege regel over te slaan of als de regel die wordt gelezen te kort is.</p>
+<p>Automatisch scrollen wordt uitgeschakeld als er een routing-toets wordt ingedrukt, als er een melding komt in braille, als er een nieuw object wordt getoond, als je in een beveiligd  scherm komt, als de sessie vergrendeld is, of als je aan het eind van het venster bent.</p>
+<h5 id="BrailleSettingsWordWrap">Tekstterugloop</h5>
+<p>Met dit vervolllgkeuzemenu  kun je instellen hoe NVDA met tekst moet omgaan die te lang is om op de brailleleesregel te passen.
+Als er een woord over rijen heen wordt afgebroken, staat het afbreekteken (punt 7 en 8) in de laatste cel van de rij, tenzij hieronder anders vermeld.
+De volgende opties zijn beschikbaar:</p>
+<ul>
+<li>Uit: Texkst loopt terug aan de rand van de leesregel, waar woorden zonodig in het midden  worden afgebroken, zonder dat er een afbreekteken wordt getoond.
+Er wordt zoveel tekst als mogelijk op elke rij gezet.
+Door de leesregel te scrollen kun je de rest van de tekst lezen.</li>
+<li>Teken tonen als woorden worden afgebroken: Tekst loopt niet terug, maar telklens als er aan het eind van de leesregel  een woord wordt afgebroken, staat er een afbreekteken.
+Door de leesregel te scrollen kun je de rest van het woord lezen.</li>
+<li>Bij woordgrennzen: Een woord dat te lang is en niet aan het eind past op de brailleleesregel wordt niet gesplitst.
 In plaats daarvan, komt er wat witruimte aan het eind van de leesregel.
 Door de leesregel te scrollen kun je het gehele woord lezen.
-Dit wordt wel "word wrap" genoemd.
-Merk op  dat als het woord op zichzelf sowieso te lang is om op de leesregel te passen, moet het woord toch nog worden afgebroken.</p>
-<p>Als dit uitgeschakeld is, wordt zoveel als mogelijk is van het woord getoond, maar de rest wordt afgebroken.
-Door de regel te scrollen kun je de rest van het woord lezen.</p>
-<p>Door dit in te schakelen verloopt het lezen wel vloeiender, maar in het algemeen betekent dit dat je meer moet scrollen met de leesregel.</p>
+Merk opdat een woord dat al van zichzelf te groot is , dit woord toch moet worden gesplitst; het afbreekteken wordt dan getoond.
+Deze optie kan bijdragen aan een vloeiendere leeservaring, maar zorgt er in 't algemeen voor dat je meer moet scrollen.</li>
+<li>Bij woord- of lettergreepgrenzen: Zoals "Bij woordgrenzen", maar lange woorden die niet passen worden voor zover mogelijk gesplitst bij een lettergreepgrens , waarbij de taal van dat woord wordt gebruikt, indien bekend.
+Het woord <code>gedrag</code> bijvoorbeeld kan worden gesplitst in  <code>ge</code> en <code>drag</code>.
+Het afbreekteken wordt altijd getoond bij elk gesplitst woord.</li>
+</ul>
 <h5 id="BrailleUnicodeNormalization">Unicodenormalisering</h5>
 <p>Wanneer deze optie ingeschakeld is, wordt unicodenormalisering uitgevoerd op de in braille weergegeven tekstvia de braillleesregel.
 Dit heeft zijn voordeel wanneer je tekens tegenkomt in braille die onbekend zijn in een bepaalde brailletabel en die een compatibel alternatief hebben, zoals de vette en cursieve tekens die gebruikelijk zijn op social media.
@@ -4682,6 +4770,29 @@ Om deze reden staat de ptie standaard ingeschakeld, spraak onderbreken wanneer  
 <tr>
 <td>Opties</td>
 <td>Standaard (Ingeschakeld), Ingeschakeld, Uitgeschakeld</td>
+</tr>
+<tr>
+<td>Standaard</td>
+<td>Ingeschakeld</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ChineseBrailleWordSegmentation">Gebruik Chinese woord-segmentering</h5>
+<p>Met deze instelling bepaal je of NVDA Chinese woord-segmentering moet gebruiken bij het omzetten van tekst naar braille.
+Wanneer dit ingeschakeld is en een Chinese braille-uitvoertabel anders dan "Chinees (Taiwan, Mandarijn)" in gebruik is, voegt NVDA spaties in tussen Chinese woorden voordat omzetting plaats vindt.
+Wanneer dit uit staat, zal NVDA tekst rechtstreeks doorgeven aan de uitvoertabel zonder spaties tussen woorden.
+Deze instelling heeft geen invloed op  de "Chinese (Taiwan, Mandarijn)" tabel of op andere niet-Chinese uitvoertabellen.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opties</td>
+<td>Ingeschakeld, Uitgeschakeld</td>
 </tr>
 <tr>
 <td>Standaard</td>
@@ -4882,7 +4993,7 @@ Standaard treft u in deze categorie instellingen  de volgende opties aan:</p>
 <li>Uitlichting activeren: Hiermee schakelt u Visuele Uitlichting in of uit.</li>
 <li>Systeemfocus uitlichten: hiermee kunt u bepalen of de <a href="#SystemFocus" title="systeemfocus">systeemfocus</a> al dan niet wordt uitgelicht.</li>
 <li>Navigatorobject uitlichten: Hiermee kunt u bepalen of het <a href="#ObjectNavigation" title="navigatorobject">navigatorobject</a> al dan niet wordt uitgelicht.</li>
-<li>Bladermoduscursor uitlichten: Hiermee kunt u bepalen of de <a href="#BrowseMode" title="virtuele bbladermoduscursor">virtuele bbladermoduscursor</a> al dan niet wordt uitgelicht.</li>
+<li>bladermodus-cursor uitlichten: hiermee regel je of de <a href="#BrowseMode" title="virtuele bladermodus-cursor">virtuele bladermodus-cursor</a> wel of niet wordt uitgelicht, met inbegrip van de cursor in het resultaat van de OCR-herkenning  en het huidige subonderdeel bij het navigeren  in math (wiskunde) op het web.</li>
 </ul>
 <p>Merk op dat het aan- en uitvinken van het selectievakje "Uitlichting Inschakelen" dientengevolge ook de status van de drie andere selectievakjes verandert.
 Dus als "UitlichtingInschakelen" uit staat en je dit selectievakje aanvinkt, worden de andere drie selectievakjes ook automatisch aangevinkt.
@@ -5179,9 +5290,13 @@ De beschikbare opties zijn:</p>
 <li>Altijd: NVDA meldt alle getypte woorden.</li>
 </ul>
 <h5 id="KeyboardSettingsSpeechInteruptForCharacters">Spraak onderbreken bij typen van karakters</h5>
-<p>Als dit selectievakje is aangevinkt, wordt de spraak onderbroken telkens wanneer er een letterteken wordt getypt. Deze instelling staat standaard "aan".</p>
+<p>Iindien ingeschakeld, zorg je er met deze optie voor dat de spraak wordt onderbroken telkens wanneer er een (letter)teken wordt getypt.
+Deze optie staat standaard ingeschakeld.
+Deze optie is van invloed op alle spraakuitvoer van NVDA, met inbegrip van bladermodus, focusmodus, en alles lezen.</p>
 <h5 id="KeyboardSettingsSpeechInteruptForEnter">Spraak onderbreken bij drukken van Enter-toets</h5>
-<p>Als dit selectievakje is aangevinkt, wordt de spraak onderbroken telkens wanneer de Enter-toets wordt ingedrukt. Deze instelling staat standaard "aan".</p>
+<p>Indien ingeschakeld, zorgt deze optie ervoor dat de spraak wordt onderbroken telkens wanneer de Enter-toets wordt ingedrukt.
+Deze optie staat standaard ingeschakeld.
+Deze optie is van invloed op alle spraakuitvoer van NVDA, met inbegrip van bladermodus, focusmodus, en alles lezen.</p>
 <h5 id="KeyboardSettingsSkimReading">Doorlezen (skimmen) bij Alles Voorlezen toestaan</h5>
 <p>Als dit selectievakje is aangevinkt,zullen navigatieopdrachten zoals snel navigeren in bladermodus of verplaatsen per regelof alinea er niet toe leiden dat Alles Voorlezen wordt gestopt, veeleer is het zo dat Alles Voorlezen naar de nieuwe positie springt waar het lezen wordt voortgezet.</p>
 <h5 id="KeyboardSettingsBeepLowercase">Piep als kleine letters worden getypt terwijl CapsLock is ingeschakeld</h5>
@@ -5254,6 +5369,14 @@ Met NVDA+control+alt+t kunt u deze instelling ook in- of uitschakelen.</p>
 <p>Het al dan niet aanvinken van dit selectievakje bepaalt hoe u tekst invoert als u typt met het schermtoetsenbord.
 Als het selectievakje is aangevinkt dan wordt de door u gewenste letter ingevoerd zodra u uw vinger van die letter afhaalt d.w.z. (een klein stukje optilt).
 Als u geen vinkje zet, moet u dubbeltikken op de letter van uw keuze om deze in te voeren.</p>
+<h5 id="TouchEdgeGestures">Randgebaren activeren</h5>
+<p>Met dit selectievakje kun je ondersteuning voor randgebaren activeren.
+Als het selectievakje is aangevinkt, worden gebaren die binnen 15 mm van een willekeurige schermrand beginnen,onderscheiden als gebaren en kunnen ze zelfstandig opgenomen worden  in  het <a href="#InputGestures" title="dialoogvenster Invoerhandelingen">dialoogvenster Invoerhandelingen</a>.
+Een snelle veegbeweging naar rechts bijvoorbeeld die aan de linkerkant van het scherm begint, kan aan een ander commando gebonden worden  vanuit een veegbeweging naar rechts die in het midden van het scherm wordt uitgevoerd.
+Als randgebaren worden gedeactiveerd na het instellen an de bindingen, blijven die bindingen bestaan maar ze zullen nooit actief worden.
+Merk op: Windows of de taakbalk kan mogelijk gebaren onderscheppen aan bepaalde randen voordat ze NVDA bereiken.
+Als je bij voorbeeld vanaf de onderkant veegt, wordt doorgaans het Startmenu of het Actiecentrum geopend, en als de taakbalk zich aan een andere kant bevindt, zullen pushes aan die kant eveneens worden onderschept.
+Als een gebaar aan een bepaalde rand niet werkt, controleer dan of Windows dat onderschept, en overweeg dan daar maar onverrichter zake weg te gaan.</p>
 <h4 id="ReviewCursorSettings">Leescursor (review cursor)</h4>
 <p>Via de categorie Leescursor in het dialoogvenster Instellingen van NVDA kunt u configureren hoe de leescursor in NVDA reageert.
 In deze categorie treft u de volgende keuzemogelijkheden aan:</p>
@@ -5405,6 +5528,51 @@ Als u het invoerveld uitgaat, keert u weer terug in de bladermodus (ook wel surf
 <p>Met deze optie, die standaard is ingeschakeld, kun je bepalen of invoerhandelingen zoals toetsaanslagen die geen NVDA-commando opleveren en die niet worden beschouwd als commandotoets in het algemeen, moeten worden onderschept voordat ze het document dat op dat moment de focus heeft, bereiken.
 Ervan uitgaande dat de optie is ingeschakeld zal de letter "j", bij voorbeeld, wanneer u deze indrukt, onderschept worden voordat ze het document bereikt, ook al is het geen navigatiesneltoets en waarschijnlijk ook geen commandotoets binnen de toepassing zelf.
 In een dergelijk geval geeft NVDA Windows opdracht een standaard-geluid af te spelen telkens wanneer er een onderschepte toets wordt ingedrukt.</p>
+<h5 id="SearchHistory">Zoekgeschiedenis bewaren</h5>
+<p>Met deze optie, die standaard ingeschakeld is, bepaal je of het <a href="#SearchingForText" title="dialoogvenster Zoeken">dialoogvenster Zoeken</a> de zoektermen onthoudt waar je tijdens de huidige sessievan NVDA naar hebt gezocht.
+Wanneer het dialoogvenster Zoeken geactiveerd is, krijg je wel 20 recent gebruikte zoektermen te zien in een vervolgkeuzemenu; deze zoekgeschiedenis wordt alleen in het geheugen bewaard en wordt verwijderd bij de herstart van NVDA.
+Als het vervolgkeuzemenu interfereert met de door jou gebruikte  invoermethode, zoals sommige IMEs, kcan deze optie als Uitgeschakeld ingesteld worden om zo het dialoogvenster Zoeken weer als een gewoon invoerveld te kunnen gebruiken.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opties</td>
+<td>Standaard (Ingeschakeld), Uitgeschakeld, Ingeschakeld</td>
+</tr>
+<tr>
+<td>Standaard</td>
+<td>Ingeschakeld</td>
+</tr>
+</tbody>
+</table>
+<h5 id="NativeSelectionModeSetting">Intrinsieke (eigen) selectiemodus</h5>
+<p>Met deze optie, die standaard uitgeschakeld is, bepaal je of de <a href="#NativeSelectionMode" title="Intrinsieke Selectiemodus">Intrinsieke Selectiemodus</a> automatisch wordt aangezet in Bbladermodus-documenten die dat ondersteunen.
+Deze instelling is niet van invloed op Microsoft Word en Outlook, waarvan  de (eigen) Intrinsieke Selectiemodus altijd gebruikt wordt.
+Als de intrinsieke  selectiemodus uitgeschakeld is, kun je deze altijd handmatig per document inschakelen met <code>NVDA+shift+f10</code>.
+Een aanpassing aan deze optie wordt van kracht als er een nieuw document wordt geladen.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opties</td>
+<td>Standaard (Uitgeschakeld), Uitgeschakeld, Ingeschakeld</td>
+</tr>
+<tr>
+<td>Standaard</td>
+<td>Uitgeschakeld</td>
+</tr>
+</tbody>
+</table>
 <h5 id="BrowseModeSettingsBrowseModeNavigationElements">Navigatieelementen inBladermodus via Aanraakgebaren</h5>
 <p>In deze lijst kun je kiezen welke elementtypes er beschikbaar zijn in de bladermodus via aanraking.
 Gebruik het selectievakjes  om de afzonderlijke elementtypes in of uit te schakelen.
@@ -5443,6 +5611,7 @@ U kunt de vermelding laten horen van:</p>
 <li>Paginanummers</li>
 <li>Regelnummers</li>
 <li>Regel inspringen melden <a href="#DocumentFormattingSettingsLineIndentation" title="(Uit, Spraak, Tonen, Zowel Spraak als Tonen)">(Uit, Spraak, Tonen, Zowel Spraak als Tonen)</a></li>
+<li>Toonduur inspringen (ms)</li>
 <li>Blanco regels negeren bij het melden van regelinspringing</li>
 <li>Inspringen alinea (bij voorbeeld verkeerd om , eerste regel)</li>
 <li>Regelafstand ( enkel, dubbel, etc.)</li>
@@ -5515,6 +5684,10 @@ De toonhoogte stijgtvoor elke spatie, en voor een tab, gaat de toon evenveel omh
 </ul>
 <p>Als u het selectievakje "Blanco regels negeren bij melden van regelinspringing" inschakelt worden veranderingen in de inspringing mbt blanco regels niet gemeld.
 Dit kan handig zijn bij het lezen van een document waarin lege regels worden gebruikt om ingesprongen tekstblokken van elkaar te scheiden, zoals  bij het programmeren van  broncode.</p>
+<h5 id="IndentToneDuration">Toonduur inspringen</h5>
+<p>Hiermee stel je de duur van de (piep)tonen bij regelinspringing in wanneer je de optie "Tonen" of "Zowel Spraak als Tonen" selecteert in het vervolgkeuzemenu <a href="#DocumentFormattingSettingsLineIndentation" title="&quot;Meld regelinspringing met&quot;">"Meld regelinspringing met"</a>.
+De waarde kan liggen   tussen 10 ms en 2000 ms.
+De standaardwaarde is 40 ms.</p>
 <h4 id="DocumentNavigation">Documentnavigatie</h4>
 <p>In deze categorie kunt u diverse aspecten  van  documentnavigatie aanpassen.</p>
 <h5 id="ParagraphStyle">Alineastijl</h5>
@@ -5548,6 +5721,54 @@ Deze stijl werkt het best wanneer gewerkt wordt met documenten waarin blokalinea
 Merk op dat deze alineastijl niet in Microsoft Word of Microsoft Outlook, gebruikt kan worden tenzij u werkt met UIA zodat u toegang hebt tot de besturingselementen van Microsoft Word.</li>
 </ul>
 <p>U kunt door de beschikbare alineastijlen bladeren  vanuit elke willekeurige plek door in het dialoogvenster <a href="#InputGestures" title="Invoerhandelingen">Invoerhandelingen</a> hiervoor een toets toe te kennen.</p>
+<h5 id="WordSegmentationStandard">Standaard Woord-segmentering</h5>
+<p>Met deze instelling wordt geregeld hoe NVDA bepaalt waar woorden beginnen en eindigenbij het navigeren per woord.
+Dit heeft betrekking op de wijze waarop script-talen zonder spaties tekst opdelen in woorden, zinnen en alinea's
+De brailleuitvoer in het Chinees is er een aparte uitvoertabel <a href="#ChineseBrailleWordSegmentation" title="Chinese woord-segmenteringsinstelling">Chinese woord-segmenteringsinstelling</a>, met uitzondering van het "Chinees (Taiwan, Mandarijn)"  uitvoertabel.</p>
+<table>
+<thead>
+<tr>
+<th class="hideHeaderRow">.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opties</td>
+<td>Standaard (Automatisch), Automatisch, Chinees, Unicode (ICU), Legacy (Uniscribe)</td>
+</tr>
+<tr>
+<td>Standaard</td>
+<td>Automatisch</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Optie</th>
+<th>Gedrag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automatisch</td>
+<td>Chinese woor-segmentering voor Chinese tekst bebruiken wanneer beschikbaar. In andere gevallen, heeft Unicode (ICU) woord-segmentering de voorkeur voor zover beschikbaar, zo niet terugvallen op de legacy Windows woord-segmentering.</td>
+</tr>
+<tr>
+<td>Chinees</td>
+<td>Chinese woord-segmentering gebruiken. Indien  Chinese woord-segmentering niet beschikbaar is, valt NVDA terug op wat er in <code>Automatisch</code> gebeurt.</td>
+</tr>
+<tr>
+<td>Unicode (ICU)</td>
+<td>De ingebouwde  ICU bibliotheek van Windows voor woord-segmentering gebruiken die beschikbaar isin Windows 10 versie 1703 (Creators Update) en later, welke terugvalt op legacy.</td>
+</tr>
+<tr>
+<td>Legacy (Uniscribe)</td>
+<td>Gebruik legacy Windows woord-segmentering zoals gebruikt in Notepad classic en andere legacy Win32 notitieprogramma's.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="MathSettings">Math-instellingen</h4>
 <p>In deze categorie kun je instellen hoe NVDA wiskundige inhoud moet lezen.</p>
 <h5 id="MathCATSpeechOptions">Spraakopties</h5>
@@ -6544,7 +6765,9 @@ Te weten:</p>
 <p>In de dialoogvensters van de verschillende woordenboeken vindt u een lijst met regels die gebruikt worden om de uitspraak te sturen.
 Tevens zijn er de knoppen Toevoegen, Bewerken, Verwijderen en Alles verwijderen.</p>
 <p>Om een regel aan een woordenboek toe te voegen gebruikt u de knop Toevoegen. U vult de velden van het dialoogvenster in dat verschijnt en klikt op OK.
-Nu zult u de nieuwe regel zien in het regeloverzicht.
+Nu zult u de nieuwe regel zien in het regeloverzicht.</p>
+<p>Met behulp van een contextmenu kun je regels bewerken of verwijderen.
+Je kunt ook de toets <code>delete</code> gebruiken om een geselecteerde regel te verwijderen.
 Zodra u klaar bent met toevoegen of bewerken, klikt u op OK om het dialoogvenster te sluiten. Dit zorgt ervoor dat de wijzigingen worden opgeslagen.</p>
 <p>Met de regels voor de NVDA uitspraakwoordenboeken kunt u een bepaalde karakterreeks vervangen door een andere.
 Stel dat u NVDA , telkens als het woord “luid” voorkomt, het woord “hard” wilt laten zeggen.
@@ -6626,7 +6849,10 @@ Voer vervolgens de gewenste invoerhandeling uit; bij voorbeeld door het indrukke
 Vaak kan de reikwijdte van een invoerhandeling verschillen.
 Als u bij voorbeeld een toets op het toetsenbord indrukt,wilt u mogelijk dat dit specifiek voor de huidige toetsenbordindeling geldt (d.w.z. desktop of laptop) of mogelijk wilt u dat dit voor beide geldt.
 Desgewenst kunt u via een menu de relevante optie instellen.</p>
-<p>Om de aan een commando verbonden invoerhandeling ongedaan te maken, selecteert u de invoerhandeling en drukt u op de knop Ongedaan maken.</p>
+<p>Voor ieder commando kun je ook het contextmenu gebruiken om er gebaren aan toe te voegen, te bewerken of te verwijderen .
+Om een invoerhandeling van een'commando te wijzigen selecteer je de handeling en druk je de knop 'Wijzigen' in.
+Voer vervolgens de nieuwe invoerhandeling uitdie je eraan wilt verbinden; deze zal de oude vervangen.
+Om een invoerhandeling van een commando los te maken, druk je op de <code>delete</code> toets of de knop verwijderen.</p>
 <p>De categorie Geëmuleerde systeemtoetsenbordtoetsen bevat NVDA commando's welke toetsen op het systeemtoetsenbord emuleren.
 Deze geëmuleerde systeemtoetsenbordtoetsen kunnen gebruikt worden om een systeemtoetsenbord rechtstreeks vanaf uw brailleleesregel te bedienen.
 Om  een geëmuleerde invoerhandeling toe te voegen selecteert  u de categorie Geëmuleerde systeemtoetsenbortoetsen  en drukt  u op the knop Toevoegen.
@@ -6694,6 +6920,8 @@ U kunt hiervoor ook de volgende toetscombinatie gebruiken:</p>
 Bij het openen van het dialoogvenster wordt het profiel dat u aan het bewerken bent, geselecteerd.
 Verder wordt van de actieve profielen aangegeven of ze handmatig, of automatisch (via trigger), worden aangezet en / of dat ze in bewerking zijn.</p>
 <p>U kunt een profiel hernoemen of verwijderen door respectievelijk op de knop "Hernoemen" of "Verwijderen" te drukken.</p>
+<p>Je kunt profielen ook beheren door het contextmenu op een profiel in de lijst te openen en het dan te hernoemen of verwijderen.
+Daarenboven kun je op <code>f2</code> drukken om het geselecteerde profiel te hernoemen of op <code>delete</code> drukken om het te verwijderen.</p>
 <p>U sluit het dialoogvenster met de knop "Sluiten".</p>
 <h4 id="ProfilesCreating">Een Profiel aanmaken</h4>
 <p>U kunt een profiel aanmaken door op de knop "Nieuw" te drukken.</p>
@@ -7263,7 +7491,7 @@ U kunt dit zo instellen door in de dialoog <a href="#BrailleSettings" title="Bra
 Deze optie staat standaard ingeschakeld.</p>
 <p>De volgende leesregels ondersteunen deze automatische herkenningsfunctionaliteit.</p>
 <ul>
-<li>Handy Tech leesregels</li>
+<li>Help Tech leesregels (vroeger Handy Tech)</li>
 <li>Baum/Humanware/APH/Orbit braille leesregels</li>
 <li>HumanWare Brailliant BI/B serie</li>
 <li>HumanWare BrailleNote</li>
@@ -7345,6 +7573,10 @@ De automatische  brailleleesregeldetectie van NVDA herkent de leesregel ook op b
 <tr>
 <td>Naar braillecel gaan</td>
 <td>Routing</td>
+</tr>
+<tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>shift+tab toetsen</td>
@@ -7567,6 +7799,10 @@ Bij ALVA-leesregels die voorzien zijn van recente firmware, kan de HID-toetsenbo
 <td>Routing</td>
 </tr>
 <tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Tekstopmaakg onder braillecel melden</td>
 <td>secondaire routing</td>
 </tr>
@@ -7678,16 +7914,16 @@ Bij ALVA-leesregels die voorzien zijn van recente firmware, kan de HID-toetsenbo
 </table>
 <!-- KC:endInclude -->
 
-<h3 id="HandyTech">Handy Tech Leesregels</h3>
-<p>NVDA ondersteunt de meeste via usb-gekoppelde of blutooth-verbonden dan wel op de sereële poort aangesloten leesregels van <a href="https://www.handytech.de/" rel="noopener" target="_blank" title="Handy Tech">Handy Tech</a>.de/].
-Voor sommige oudere USB leesregels moeten de USB drivers van Handy Tech op uw computer worden geïnstalleerd.</p>
-<p>De volgende leesregels worden niet zonder meer ondersteund, maar ze kunnen wel gebruikt worden met behulp van het [universele stuurprogramma van <a href="https://handytech.de/en/service/downloads-and-manuals/handy-tech-software/braille-display-drivers" rel="noopener" target="_blank" title="Handy Tech dat te vinden is op">Handy Tech dat te vinden is op</a> en een NVDA add-on:</p>
+<h3 id="HandyTech">Help Tech Leesregels</h3>
+<p>NVDA ondersteunt de meeste leesregels van <a href="https://www.helptech.de/" rel="noopener" target="_blank" title="Help Tech">Help Tech</a> (voorheen Handy Tech) wanneer ze via USB, de seriële poort of Bluetooth verbonden worden.</p>
+<p>De volgende leesregels worden niet langer ondersteund:</p>
 <ul>
 <li>Braillino</li>
 <li>Bookworm</li>
-<li>Modulaire leesregels met firmware-versie 1.13 of lager. Merk op dat de firmware van deze leesregel bijgewerkt kan worden.</li>
+<li>Modulaire leesregels met firmware-versie 1.13 of lager.
+Merk op dat de firmware van deze leesregels kan worden bijgewerkt.</li>
 </ul>
-<p>Bij gebruik van de Handy Tech leesregels met NVDA zijn de volgende toetscombinaties van toepassing.
+<p>Following are the key assignments for Help Tech displays with NVDA.
 (U kunt in de documentatie bij deze leesregels nalezen waar deze toetsen zich precies bevinden.)</p>
 <!-- KC:beginInclude -->
 
@@ -7718,6 +7954,10 @@ Voor sommige oudere USB leesregels moeten de USB drivers van Handy Tech op uw co
 <tr>
 <td>Naar braillecel springen</td>
 <td>Routing</td>
+</tr>
+<tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>shift+tab toets</td>
@@ -7880,6 +8120,10 @@ Waar de toetsen zich bevinden, leest u in de documentatie bij de leesregels.</p>
 <tr>
 <td>Cursor naar braillecel verplaatsen</td>
 <td><code>routing</code></td>
+</tr>
+<tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td><code>shift+tab</code> toets</td>
@@ -8093,6 +8337,10 @@ USB drivers zijn niet nodig als u van het OpenBraille protocol gebruik maakt.</p
 <td>routing</td>
 </tr>
 <tr>
+<td>Bereik van eerste tot en metm laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Leesregel koppelen aan/uit</td>
 <td>omhoog+omlaag</td>
 </tr>
@@ -8156,7 +8404,7 @@ USB drivers zijn niet nodig als u van het OpenBraille protocol gebruik maakt.</p
 </table>
 <!-- KC:endInclude -->
 
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Toegewezen toetsen voor de Brailliant BI 32, BI 40 en B 80</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Toetstoewijzingen voor Brailliant BI 32, BI 40, B 80, BI 20X en BI 40X</h4>
 <!-- KC:beginInclude -->
 
 <table>
@@ -8167,6 +8415,22 @@ USB drivers zijn niet nodig als u van het OpenBraille protocol gebruik maakt.</p
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Verplaats brailleleesregel naar vorige regel</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>Scroll brailleleesregel terug</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>Verplaats brailleleesregel naar volgende regel</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>Scroll brailleleesregel vooruit</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>NVDA Menu</td>
 <td>c1+c3+c4+c5 (commando n)</td>
@@ -8220,7 +8484,8 @@ USB drivers zijn niet nodig als u van het OpenBraille protocol gebruik maakt.</p
 
 <h3 id="Hims">HIMS Braille Sense/Braille EDGE/Smart Beetle/Sync Braille Serie</h3>
 <p>NVDA ondersteunt de leesregelmodellen Braille Sense, Braille EDGE, Smart Beetle en Sync Braille van <a href="https://www.hims-inc.com/" rel="noopener" target="_blank" title="Hims">Hims</a> die via USB of bluetooth kunnen worden aangesloten.
-Als u voor de USB-aansluiting kiest, moet u wel eerst de <a href="http://www.himsintl.com/upload/HIMS_USB_Driver_v25.zip" rel="noopener" target="_blank" title="USB-drivers van HIMS, die je vindt op">USB-drivers van HIMS, die je vindt op</a> op je systeem installeren.</p>
+Als u voor de USB-aansluiting kiest, moet u wel eerst de <a href="http://www.himsintl.com/upload/HIMS_USB_Driver_v25.zip" rel="noopener" target="_blank" title="USB-drivers van HIMS, die je vindt op">USB-drivers van HIMS, die je vindt op</a> op je systeem installeren.
+Op systemen met Windows 11  waarop deze driver niet geïnstalleerd kan worden, kunnen de via USB verbonden leesregels Braille Sense en Braille EDGE  wel gedetecteerd worden als je in plaats ervan het <a href="https://hims-product.s3.ap-northeast-2.amazonaws.com/Util/HIMS_Braille_Driver_V3_1.exe" rel="noopener" target="_blank" title="HIMS WinUSB driver paket">HIMS WinUSB driver paket</a> installeert.</p>
 <p>Bij gebruik van deze leesregels met NVDA zijn de volgende toetscombinaties van toepassing.
 (Voor meer details kunt u de documentatie bij deze leesregels raadplegen.)</p>
 <!-- KC:beginInclude -->
@@ -8628,6 +8893,10 @@ Informatie over de plaats van de toetsen vindt u in de documentatie bij deze lee
 <tr>
 <td>Naar braillecel routeren</td>
 <td>routing</td>
+</tr>
+<tr>
+<td>Bereik van eerste tot en met laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>shift+Pijl-omhoogtoets</td>
@@ -10335,6 +10604,10 @@ U kunt in de documentatie bij deze leesregels nalezen waar deze toetsen zich pre
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Bereik van eerste tot en met laatste braillecel selecteren</td>
+<td><code>home1+multiRouting</code>, <code>home2+multiRouting</code></td>
+</tr>
+<tr>
 <td>Meld tekstopmaak onder braillecel</td>
 <td><code>secondary routing</code></td>
 </tr>
@@ -10513,6 +10786,10 @@ Raadpleeg de documentatie  bij deze leesregel waarin beschreven wordt waar deze 
 <td><code>routeren</code></td>
 </tr>
 <tr>
+<td>Bereik van eerste tot en met laatste braillecel selecteren</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Omhoog-pijltoetsy</td>
 <td><code>omhoog</code></td>
 </tr>
@@ -10562,6 +10839,10 @@ Gehoopt wordt dat alle toekomstige brailleleesregelmodellen van alle fabrikanten
 <tr>
 <td>Naar braillecel routeren</td>
 <td>routing-set 1</td>
+</tr>
+<tr>
+<td>Bereik van eerste tot en met laatste braillecel selecteren</td>
+<td>multiple routing set 1-toetsen</td>
 </tr>
 <tr>
 <td>Braille volgen aan/uit</td>
@@ -10707,6 +10988,16 @@ Voorkeuren van NVDA-gebruikers kunnen gekopieerd worden <a href="#GeneralSetting
 <li>Het installeren van programma's is hierbij inbegrepen</li>
 </ul>
 </li>
+</ul>
+<h3 id="DownloadingNVDA">Het Downloaden van NVDA</h3>
+<p>We raden aan NVDA bij voorkeur te downloaden van de NV Access download-pagina op <a href="https://www.nvaccess.org/download/" rel="noopener" target="_blank" title="https://www.nvaccess.org/download/">https://www.nvaccess.org/download/</a>.</p>
+<p>NVDA kan ook gedownload en geïnstalleerd worden met behulp van de Windows-pakketmanager (WinGet).
+Voer  het volgende commando in Command Prompt (<code>cmd</code>) of PowerShell uit om de laatste versie van NVDA te installeren:</p>
+<p><code>winget install --id NVAccess.NVDA</code></p>
+<p>Om beta of RC versies te installeren, gebruik je de volgende commando's:</p>
+<ul>
+<li>Beta: <code>winget install --id NVAccess.NVDA.Beta</code></li>
+<li>RC: <code>winget install --id NVAccess.NVDA.RC</code></li>
 </ul>
 <h3 id="CommandLineOptions">Commandoregelopties</h3>
 <p>Aan het commando'NVDA starten' kunnenextra opties worden toegevoegd die van invloed zijn op het opstartgedrag.

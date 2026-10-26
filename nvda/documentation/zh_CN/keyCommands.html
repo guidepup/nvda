@@ -2,16 +2,16 @@
 <html lang="zh_CN" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2 按键和手势快速参考</title>
+<title>NVDA 2026.3 按键和手势快速参考</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-20262">NVDA 2026.2 按键和手势快速参考</h1>
+<body><h1 id="nvda-20263">NVDA 2026.3 按键和手势快速参考</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262" title="NVDA 2026.2 按键和手势快速参考">NVDA 2026.2 按键和手势快速参考</a><ul>
+<li><a href="#nvda-20263" title="NVDA 2026.3 按键和手势快速参考">NVDA 2026.3 按键和手势快速参考</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="使用 NVDA">使用 NVDA</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA 触摸手势">NVDA 触摸手势</a><ul>
 <li><a href="#TouchModes" title="触摸模式">触摸模式</a></li>
@@ -148,14 +148,14 @@
 <li><a href="#SupportedBrailleDisplays" title="支持的点显器">支持的点显器</a><ul>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/PAC Mate 系列">Freedom Scientific Focus/PAC Mate 系列</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA 6 系列/协议转换器">Optelec ALVA 6 系列/协议转换器</a></li>
-<li><a href="#HandyTech" title="Handy Tech 点显器">Handy Tech 点显器</a></li>
+<li><a href="#HandyTech" title="Help Tech 点显器">Help Tech 点显器</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Baum/HumanWare/APH/Orbit 点显器">Baum/HumanWare/APH/Orbit 点显器</a></li>
 <li><a href="#HedoProfiLine" title="hedo ProfiLine USB">hedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="hedo MobilLine USB">hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/B 系列/ BrailleNote Touch">HumanWare Brailliant BI/B 系列/ BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="所有型号的通用按键">所有型号的通用按键</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32、BI 40 和 B 80">Brailliant BI 32、BI 40 和 B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32、BI 40、B 80、BI 20X 和 BI 40X 的按键分配">Brailliant BI 32、BI 40、B 80、BI 20X 和 BI 40X 的按键分配</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Brailliant BI 14">Brailliant BI 14</a></li>
 </ul>
 </li>
@@ -234,6 +234,13 @@
 <td><code>NVDA+X</code></td>
 <td>无</td>
 <td>重复最后朗读的内容。连按两次在浏览模式下显示该信息</td>
+</tr>
+<tr>
+<td>复制最后朗读的信息</td>
+<td><code>NVDA+Ctrl+X</code></td>
+<td><code>NVDA+Ctrl+X</code></td>
+<td>无</td>
+<td>将最后朗读的内容复制到剪贴板</td>
 </tr>
 <tr>
 <td>NVDA 菜单</td>
@@ -414,16 +421,16 @@
 <td>读出系统光标处文本或对象的位置信息。例如，可能包括光标位置在文档内的百分比、与页面边缘的距离或确切的屏幕位置。连按两次获取详细信息。</td>
 </tr>
 <tr>
-<td>下一个句子</td>
+<td>移动到下一句</td>
 <td><code>Alt+下光标</code></td>
 <td><code>Alt+下光标</code></td>
-<td>移动光标到下一个句子。（仅在 word 和 Outlook 中受到支持）</td>
+<td>将光标移动到下一句并读出。部分文档不受支持</td>
 </tr>
 <tr>
-<td>上一个句子</td>
+<td>移动到上一句</td>
 <td><code>Alt+上光标</code></td>
 <td><code>Alt+上光标</code></td>
-<td>移动光标到上一个句子。（仅在 word 和 Outlook 中受到支持）</td>
+<td>将光标移动到上一句并读出。部分文档不受支持</td>
 </tr>
 </tbody>
 </table>
@@ -1515,6 +1522,11 @@
 <td><code>NVDA+Shift+Alt+下光标</code></td>
 <td>将放大视图直接移动到屏幕下边缘</td>
 </tr>
+<tr>
+<td>移动鼠标到视图</td>
+<td>无</td>
+<td>将鼠标光标移动到放大视图的中心</td>
+</tr>
 </tbody>
 </table>
 <h2 id="ContentRecognition">图像内容识别</h2>
@@ -2329,6 +2341,10 @@
 <td>routing</td>
 </tr>
 <tr>
+<td>选中第一个到最后一个盲文单元格的文本</td>
+<td><code>多键定位</code></td>
+</tr>
+<tr>
 <td>Shift+Tab 键</td>
 <td>brailleSpaceBar+1、2 点</td>
 </tr>
@@ -2534,6 +2550,10 @@
 <td>routing</td>
 </tr>
 <tr>
+<td>选中第一个到最后一个盲文单元格的文本</td>
+<td><code>多键定位</code></td>
+</tr>
+<tr>
 <td>读出盲文单元格下文本的格式</td>
 <td>secondary routing</td>
 </tr>
@@ -2643,7 +2663,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="HandyTech">Handy Tech 点显器</h3>
+<h3 id="HandyTech">Help Tech 点显器</h3>
 <table>
 <thead>
 <tr>
@@ -2671,6 +2691,10 @@
 <tr>
 <td>定位盲文单元</td>
 <td>routing</td>
+</tr>
+<tr>
+<td>选中第一个到最后一个盲文单元格的文本</td>
+<td><code>多键定位</code></td>
 </tr>
 <tr>
 <td>Shift+Tab 键</td>
@@ -2805,6 +2829,10 @@
 <tr>
 <td>定位盲文单元</td>
 <td><code>routing</code></td>
+</tr>
+<tr>
+<td>选中第一个到最后一个盲文单元格的文本</td>
+<td><code>多键定位</code></td>
 </tr>
 <tr>
 <td><code>Shift+Tab</code> 键</td>
@@ -2984,6 +3012,10 @@
 <td>routing</td>
 </tr>
 <tr>
+<td>选中第一个到最后一个盲文单元格的文本</td>
+<td><code>多键定位</code></td>
+</tr>
+<tr>
 <td>切换盲文显示跟随到</td>
 <td>up+down</td>
 </tr>
@@ -3045,7 +3077,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32、BI 40 和 B 80</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32、BI 40、B 80、BI 20X 和 BI 40X 的按键分配</h4>
 <table>
 <thead>
 <tr>
@@ -3054,6 +3086,22 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>移动点显器到上一行</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>向后滚动盲文显示</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>移动点显器到下一行</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>向前滚动盲文显示</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>NVDA 菜单</td>
 <td>c1+c3+c4+c5 (command n)</td>
@@ -3474,6 +3522,10 @@
 <tr>
 <td>定位盲文单元</td>
 <td>routing</td>
+</tr>
+<tr>
+<td>选中第一个到最后一个盲文单元格的文本</td>
+<td><code>多键定位</code></td>
 </tr>
 <tr>
 <td>Shift+上光标键</td>
@@ -4887,6 +4939,10 @@
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>选中第一个到最后一个盲文单元格的文本</td>
+<td><code>home1+多键定位</code>、<code>home2+多键定位</code></td>
+</tr>
+<tr>
 <td>读出盲文单元格下文本的格式</td>
 <td><code>secondary routing</code></td>
 </tr>
@@ -5054,6 +5110,10 @@
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>选中第一个到最后一个盲文单元格的文本</td>
+<td><code>多键定位</code></td>
+</tr>
+<tr>
 <td>上光标键</td>
 <td><code>up</code></td>
 </tr>
@@ -5095,6 +5155,10 @@
 <tr>
 <td>定位盲文单元</td>
 <td>routing set 1</td>
+</tr>
+<tr>
+<td>选中第一个到最后一个盲文单元格的文本</td>
+<td>多键定位第 1 组按键</td>
 </tr>
 <tr>
 <td>切换盲文显示跟随到</td>

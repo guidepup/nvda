@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2 Developer Guide</title>
+<title>NVDA 2026.3 Developer Guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="nvda-20262-developer-guide">NVDA 2026.2 Developer Guide</h1>
+<body><h1 id="nvda-20263-developer-guide">NVDA 2026.3 Developer Guide</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262-developer-guide" title="NVDA 2026.2 Developer Guide">NVDA 2026.2 Developer Guide</a><ul>
+<li><a href="#nvda-20263-developer-guide" title="NVDA 2026.3 Developer Guide">NVDA 2026.3 Developer Guide</a><ul>
 <li><a href="#introduction" title="Introduction">Introduction</a><ul>
 <li><a href="#API" title="Add-on API stability">Add-on API stability</a><ul>
 <li><a href="#definition-of-the-public-api" title="Definition of the public API">Definition of the public API</a></li>
@@ -113,6 +113,7 @@
 <li><a href="#examples" title="Examples">Examples</a></li>
 </ul>
 </li>
+<li><a href="#manipulating-existing-dictionaries" title="Manipulating existing dictionaries">Manipulating existing dictionaries</a></li>
 </ul>
 </li>
 <li><a href="#AddonDoc" title="Add-on Documentation">Add-on Documentation</a></li>
@@ -140,6 +141,7 @@
 <li><a href="#brailleViewerExtPts" title="brailleViewer">brailleViewer</a></li>
 <li><a href="#configExtPts" title="config">config</a></li>
 <li><a href="#coreExtPts" title="core">core</a></li>
+<li><a href="#guiMessageExtPts" title="gui.message">gui.message</a></li>
 <li><a href="#inputCoreExtPts" title="inputCore">inputCore</a></li>
 <li><a href="#logHandlerExtPts" title="logHandler">logHandler</a></li>
 <li><a href="#nvwaveExtPts" title="nvwave">nvwave</a></li>
@@ -164,6 +166,7 @@
 <li><a href="#convenience-methods" title="Convenience methods">Convenience methods</a></li>
 </ul>
 </li>
+<li><a href="#DisplayableError" title="Displaying errors to the user: DisplayableError">Displaying errors to the user: DisplayableError</a></li>
 </ul>
 </li>
 </ul>
@@ -1195,6 +1198,13 @@ LOL	laughing out loud	0	2
 </code></pre></div>
 <p>This uses Unix shell-style wildcards to match any string ending in ".txt" and replaces it with "text file".</p>
 <p>For more information on speech dictionaries, refer to the <a href="https://download.nvaccess.org/documentation/userGuide.html#SpeechDictionaries" rel="noopener" target="_blank" title="User Guide">User Guide</a>.</p>
+<h4 id="manipulating-existing-dictionaries">Manipulating existing dictionaries</h4>
+<p>In addition to provide speech dictionaries, add-ons can manipulate existing speech dictionaries.</p>
+<div class="highlight"><pre><span></span><code><span class="n">tempDict</span> <span class="o">=</span> <span class="n">speechDictHandler</span><span class="o">.</span><span class="n">definitions</span><span class="o">.</span><span class="n">getDictionaryDefinition</span><span class="p">(</span><span class="n">DictionaryType</span><span class="o">.</span><span class="n">TEMP</span><span class="p">)</span><span class="o">.</span><span class="n">dictionary</span>
+<span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">tempDict</span><span class="p">:</span>
+	<span class="n">tempDict</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+</code></pre></div>
+<p>For more information, look at <code>speechDictHandler/types.py</code>.</p>
 <h3 id="AddonDoc">Add-on Documentation</h3>
 <p>Documentation for an add-on should be placed in the <code>doc</code> directory in the archive.
 Similar to the <code>locale</code> directory, this directory should contain directories for each language in which documentation is available.</p>
@@ -1499,6 +1509,26 @@ The section titles below represent the package or module in which the listed ext
 </tr>
 </tbody>
 </table>
+<h3 id="guiMessageExtPts">gui.message</h3>
+<p>Unlike the other modules listed in this chapter, <code>gui.message</code> does not define a shared extension point instance.
+Instead, <code>DisplayableError.OnDisplayableErrorT</code> is an <code>Action</code> type: each component that needs to route user-visible errors out of non-GUI code creates its own instance.
+See <a href="#DisplayableError" title="Displaying errors to the user">Displaying errors to the user</a> for a full description and examples.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Extension Point</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Action</code></td>
+<td><code>DisplayableError.OnDisplayableErrorT</code> (instantiated per component)</td>
+<td>Notifies a registered handler (usually a GUI component) that a <code>DisplayableError</code> has occurred, allowing the handler to decide how to present the error to the user.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="inputCoreExtPts">inputCore</h3>
 <table>
 <thead>
@@ -1784,6 +1814,11 @@ Please see the <code>EventExtensionPoints</code> class documentation for more in
 <td><code>Action</code></td>
 <td><code>post_browseModeMove</code></td>
 <td>a virtual caret has moved.</td>
+</tr>
+<tr>
+<td><code>Action</code></td>
+<td><code>post_mathNavigation</code></td>
+<td>the math navigation position has changed.</td>
 </tr>
 <tr>
 <td><code>Action</code></td>
@@ -2168,5 +2203,69 @@ The following convenience class methods are provided (keyword arguments for over
 </tr>
 </tbody>
 </table>
+<h3 id="DisplayableError">Displaying errors to the user: DisplayableError</h3>
+<p><code>gui.message.DisplayableError</code> is an exception class for failures which the user should be told about via a message box, rather than only logged.
+It carries a translated message (<code>displayMessage</code>) and an optional translated title (<code>titleMessage</code>).
+If no title is given, "Error" is used.
+The error can also present itself, using its <code>displayError</code> method.
+This method safely schedules a <code>gui.message.messageBox</code> call on the GUI thread, using <code>wx.CallAfter</code>.</p>
+<p>Use <code>DisplayableError</code> when code outside the GUI layer encounters an error the user needs to know about.
+Such code might be network or data-processing code, possibly running on a background thread.
+That code should not decide how, or even whether, the error is presented.
+This keeps user-facing error presentation out of business logic, and involves three roles:</p>
+<ul>
+<li>The code detecting the failure raises <code>DisplayableError</code> with a translated message.</li>
+<li>A component that coordinates the work owns an instance of <code>DisplayableError.OnDisplayableErrorT</code> (an <code>extensionPoints.Action</code>), catches the exception, and notifies the action.
+Where the exception may be raised on a background thread, notify via <code>core.callLater</code> (or <code>wx.CallAfter</code>) so that handlers run on the main thread.</li>
+<li>A GUI component registers a handler with that action and decides how to present the error.
+Typically the handler calls the error's <code>displayError</code> method, but it may equally decide to only log the error.
+For example, NVDA's automatic add-on update check fails silently, as the user did not initiate that work.</li>
+</ul>
+<p>For example, code performing a background task may raise a <code>DisplayableError</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">gui.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">DisplayableError</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fetchWidgetData</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">WidgetData</span><span class="p">:</span>
+	<span class="k">try</span><span class="p">:</span>
+		<span class="o">...</span>
+	<span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span><span class="p">:</span>
+		<span class="k">raise</span> <span class="n">DisplayableError</span><span class="p">(</span>
+			<span class="c1"># Translators: Message shown when widget data cannot be fetched from the server.</span>
+			<span class="n">displayMessage</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">"Unable to fetch the latest widget data."</span><span class="p">),</span>
+		<span class="p">)</span>
+</code></pre></div>
+<p>The component coordinating the work owns the extension point, and notifies it on the main thread when the exception is caught:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">core</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gui.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">DisplayableError</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">WidgetDataUpdater</span><span class="p">:</span>
+	<span class="n">onDisplayableError</span> <span class="o">=</span> <span class="n">DisplayableError</span><span class="o">.</span><span class="n">OnDisplayableErrorT</span><span class="p">()</span>
+
+	<span class="k">def</span><span class="w"> </span><span class="nf">_updateInBackground</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">try</span><span class="p">:</span>
+			<span class="n">data</span> <span class="o">=</span> <span class="n">fetchWidgetData</span><span class="p">()</span>
+		<span class="k">except</span> <span class="n">DisplayableError</span> <span class="k">as</span> <span class="n">displayableError</span><span class="p">:</span>
+			<span class="c1"># Handlers may interact with the GUI, so ensure they are called on the main thread.</span>
+			<span class="n">core</span><span class="o">.</span><span class="n">callLater</span><span class="p">(</span>
+				<span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+				<span class="nb">callable</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">onDisplayableError</span><span class="o">.</span><span class="n">notify</span><span class="p">,</span>
+				<span class="n">displayableError</span><span class="o">=</span><span class="n">displayableError</span><span class="p">,</span>
+			<span class="p">)</span>
+			<span class="k">return</span>
+		<span class="o">...</span>
+</code></pre></div>
+<p>Note that the keyword argument passed to <code>notify</code> must be named <code>displayableError</code>, as handlers receive it by that name.</p>
+<p>Finally, the GUI component responsible for presentation registers a handler:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">gui</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gui.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">DisplayableError</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">WidgetDialog</span><span class="p">(</span><span class="n">wx</span><span class="o">.</span><span class="n">Dialog</span><span class="p">):</span>
+	<span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">wx</span><span class="o">.</span><span class="n">Window</span><span class="p">,</span> <span class="n">updater</span><span class="p">:</span> <span class="n">WidgetDataUpdater</span><span class="p">):</span>
+		<span class="n">updater</span><span class="o">.</span><span class="n">onDisplayableError</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handleDisplayableError</span><span class="p">)</span>
+		<span class="o">...</span>
+
+	<span class="k">def</span><span class="w"> </span><span class="nf">handleDisplayableError</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">displayableError</span><span class="p">:</span> <span class="n">DisplayableError</span><span class="p">):</span>
+		<span class="n">displayableError</span><span class="o">.</span><span class="n">displayError</span><span class="p">(</span><span class="n">gui</span><span class="o">.</span><span class="n">mainFrame</span><span class="p">)</span>
+</code></pre></div>
+<p>For real-world usage, see the Add-on Store: <code>DisplayableError</code> is raised in <code>addonStore.install</code> and <code>addonStore.network</code>, routed through <code>gui.addonStoreGui.viewModels.store.AddonStoreVM.onDisplayableError</code>, and handled by <code>gui.addonStoreGui.controls.storeDialog.AddonStoreDialog</code>.</p>
 </body>
 </html>

@@ -2,16 +2,16 @@
 <html lang="ja" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2 コマンド一覧表</title>
+<title>NVDA 2026.3 コマンド一覧表</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-20262">NVDA 2026.2 コマンド一覧表</h1>
+<body><h1 id="nvda-20263">NVDA 2026.3 コマンド一覧表</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262" title="NVDA 2026.2 コマンド一覧表">NVDA 2026.2 コマンド一覧表</a><ul>
+<li><a href="#nvda-20263" title="NVDA 2026.3 コマンド一覧表">NVDA 2026.3 コマンド一覧表</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="NVDAの使い方">NVDAの使い方</a><ul>
 <li><a href="#NVDATouchGestures" title="NVDA タッチジェスチャー">NVDA タッチジェスチャー</a><ul>
 <li><a href="#TouchModes" title="タッチモード">タッチモード</a></li>
@@ -148,14 +148,14 @@
 <li><a href="#SupportedBrailleDisplays" title="サポートされている点字ディスプレイ">サポートされている点字ディスプレイ</a><ul>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/PAC Mateシリーズ">Freedom Scientific Focus/PAC Mateシリーズ</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA 6 シリーズ/プロトコルコンバーター">Optelec ALVA 6 シリーズ/プロトコルコンバーター</a></li>
-<li><a href="#HandyTech" title="Handy Tech 点字ディスプレイ">Handy Tech 点字ディスプレイ</a></li>
+<li><a href="#HandyTech" title="Help Techディスプレイ">Help Techディスプレイ</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Baum/Humanware/APH/Orbit 点字ディスプレイ">Baum/Humanware/APH/Orbit 点字ディスプレイ</a></li>
 <li><a href="#HedoProfiLine" title="hedo ProfiLine USB">hedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="hedo MobilLine USB">hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/Bシリーズ / BrailleNote Touch">HumanWare Brailliant BI/Bシリーズ / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="すべてのモデル">すべてのモデル</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32, BI 40 および B 80">Brailliant BI 32, BI 40 および B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32、BI 40、B 80、BI 20X、BI 40Xのキー割り当て">Brailliant BI 32、BI 40、B 80、BI 20X、BI 40Xのキー割り当て</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Brailliant BI 14">Brailliant BI 14</a></li>
 </ul>
 </li>
@@ -234,6 +234,13 @@
 <td><code>NVDA+x</code></td>
 <td>なし</td>
 <td>NVDA が読み上げた最後の情報を繰り返します。2回押すとウィンドウに情報を表示します</td>
+</tr>
+<tr>
+<td>最後に読み上げた情報をコピー</td>
+<td><code>NVDA+control+x</code></td>
+<td><code>NVDA+control+x</code></td>
+<td>なし</td>
+<td>NVDA が最後に読み上げた情報をクリップボードにコピー</td>
 </tr>
 <tr>
 <td>NVDAメニュー</td>
@@ -414,16 +421,16 @@
 <td>テキストカーソルのテキストやオブジェクトの位置を報告します。例えばドキュメント全体におけるパーセント表示、ページの端からの距離、画面の中の正確な座標などです。2回押すと詳細な情報を報告します。</td>
 </tr>
 <tr>
-<td>次の文を読み上げ</td>
-<td>Alt+下矢印</td>
-<td>Alt+下矢印</td>
-<td>テキストカーソルを次の文に移動してその文を読み上げます。(Microsoft Word および Outlook)</td>
+<td>次の文</td>
+<td><code>Alt+下矢印</code></td>
+<td><code>Alt+下矢印</code></td>
+<td>テキストカーソルを次の文に移動して読み上げます。一部の文書には対応していません。</td>
 </tr>
 <tr>
-<td>前の文を読み上げ</td>
-<td>Alt+上矢印</td>
-<td>Alt+上矢印</td>
-<td>テキストカーソルを前の文に移動してその文を読み上げます。(Microsoft Word および Outlook)</td>
+<td>前の文</td>
+<td><code>Alt+上矢印</code></td>
+<td><code>Alt+上矢印</code></td>
+<td>テキストカーソルを前の文に移動して読み上げます。一部の文書には対応していません。</td>
 </tr>
 </tbody>
 </table>
@@ -1089,9 +1096,9 @@
 </thead>
 <tbody>
 <tr>
-<td>ネイティブ選択モードの切り替え</td>
-<td><code>NVDA+shift+f10</code></td>
-<td>ネイティブ選択モードを有効または無効に切り替えます。</td>
+<td>無効にしても、ドキュメントごとに<code>NVDA+shift+f10</code>を押して、ネイティブ選択モードを手動で有効にできます。</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1344,9 +1351,9 @@
 <td>この点字セルの位置にカーソルを移動するか、対応するオブジェクトを実行します</td>
 </tr>
 <tr>
-<td>点字表示をスクロールして戻る</td>
-<td>なし</td>
-<td>点字ディスプレイをスクロールして戻します</td>
+<td>コマンドプロンプト（<code>cmd</code>）またはPowerShellで次のコマンドを実行してNVDAの最新バージョンをインストールします：</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>点字表示をスクロールして進む</td>
@@ -1514,6 +1521,11 @@
 <td>下の端へパン</td>
 <td><code>NVDA+shift+alt+下矢印</code></td>
 <td>拡大表示を画面の下の端に移動</td>
+</tr>
+<tr>
+<td>マウスを表示位置に移動</td>
+<td>なし</td>
+<td>マウスポインターを拡大表示の中央に移動</td>
 </tr>
 </tbody>
 </table>
@@ -2329,6 +2341,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <td>タッチカーソル</td>
 </tr>
 <tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>Shift+Tab キー</td>
 <td>スペース+1の点+2の点</td>
 </tr>
@@ -2534,6 +2550,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <td>タッチカーソル</td>
 </tr>
 <tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>点字セルの位置のテキストの書式の報告</td>
 <td>第2タッチカーソル</td>
 </tr>
@@ -2643,7 +2663,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 </tr>
 </tbody>
 </table>
-<h3 id="HandyTech">Handy Tech 点字ディスプレイ</h3>
+<h3 id="HandyTech">Help Techディスプレイ</h3>
 <table>
 <thead>
 <tr>
@@ -2671,6 +2691,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <tr>
 <td>点字セルに移動</td>
 <td>タッチカーソル</td>
+</tr>
+<tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>Shift+Tabキー</td>
@@ -2805,6 +2829,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <tr>
 <td>点字セルに移動</td>
 <td><code>タッチカーソル</code></td>
+</tr>
+<tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td><code>shift+tab</code> キー</td>
@@ -2984,6 +3012,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <td>タッチカーソル</td>
 </tr>
 <tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>点字表示の切り替え</td>
 <td>上＋下</td>
 </tr>
@@ -3045,7 +3077,7 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 </tr>
 </tbody>
 </table>
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32, BI 40 および B 80</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32、BI 40、B 80、BI 20X、BI 40Xのキー割り当て</h4>
 <table>
 <thead>
 <tr>
@@ -3054,6 +3086,22 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>点字ディスプレイを前の行に移動</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>点字ディスプレイをスクロールして戻る</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>点字ディスプレイを次の行に移動</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>点字表示をスクロールして進む</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>NVDAメニュー</td>
 <td>c1+c3+c4+c5 (コマンド N)</td>
@@ -3474,6 +3522,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <tr>
 <td>点字セルに移動</td>
 <td>タッチカーソル</td>
+</tr>
+<tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
 </tr>
 <tr>
 <td>shift+上矢印キー</td>
@@ -4887,6 +4939,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <td>タッチカーソル</td>
 </tr>
 <tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>home1+multiRouting</code>, <code>home2+multiRouting</code></td>
+</tr>
+<tr>
 <td>点字セル位置のテキストの書式を報告</td>
 <td><code>secondary routing</code></td>
 </tr>
@@ -5054,6 +5110,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <td><code>タッチカーソル</code></td>
 </tr>
 <tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td><code>multiRouting</code></td>
+</tr>
+<tr>
 <td>上矢印キー</td>
 <td><code>上矢印</code></td>
 </tr>
@@ -5095,6 +5155,10 @@ Microsoft Office 2016, 365 およびそれ以降のバージョンでは、Micro
 <tr>
 <td>点字セルに移動</td>
 <td>セット1のタッチカーソル</td>
+</tr>
+<tr>
+<td>最初の点字セルから最後の点字セルまでの範囲を選択</td>
+<td>セット1の複数のタッチカーソル</td>
 </tr>
 <tr>
 <td>点字表示の追従の切り替え</td>

@@ -2,16 +2,16 @@
 <html lang="fi" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.2:n komentojen pikaopas</title>
+<title>NVDA 2026.3:n komentojen pikaopas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 
 </head>
-<body><h1 id="nvda-20262n-komentojen-pikaopas">NVDA 2026.2:n komentojen pikaopas</h1>
+<body><h1 id="nvda-20263n-komentojen-pikaopas">NVDA 2026.3:n komentojen pikaopas</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20262n-komentojen-pikaopas" title="NVDA 2026.2:n komentojen pikaopas">NVDA 2026.2:n komentojen pikaopas</a><ul>
+<li><a href="#nvda-20263n-komentojen-pikaopas" title="NVDA 2026.3:n komentojen pikaopas">NVDA 2026.3:n komentojen pikaopas</a><ul>
 <li><a href="#GettingStartedWithNVDA" title="NVDA:n käyttäminen">NVDA:n käyttäminen</a><ul>
 <li><a href="#NVDATouchGestures" title="Kosketuseleet">Kosketuseleet</a><ul>
 <li><a href="#TouchModes" title="Kosketustilat">Kosketustilat</a></li>
@@ -67,8 +67,8 @@
 <li><a href="#VisionScreenCurtain" title="Näyttöverho">Näyttöverho</a></li>
 </ul>
 </li>
-<li><a href="#Magnifier" title="Suurennus">Suurennus</a><ul>
-<li><a href="#MagnifierCommands" title="Suurennuksen näppäinkomennot">Suurennuksen näppäinkomennot</a></li>
+<li><a href="#Magnifier" title="Näytön suurennus">Näytön suurennus</a><ul>
+<li><a href="#MagnifierCommands" title="Näytön suurennuksen näppäinkomennot">Näytön suurennuksen näppäinkomennot</a></li>
 </ul>
 </li>
 <li><a href="#ContentRecognition" title="Sisällöntunnistus">Sisällöntunnistus</a><ul>
@@ -116,7 +116,7 @@
 <li><a href="#SelectSoundSplitMode" title="Äänen jako">Äänen jako</a></li>
 </ul>
 </li>
-<li><a href="#MagnifierSettingsCategory" title="Suurennus">Suurennus</a></li>
+<li><a href="#MagnifierSettingsCategory" title="Näytön suurennus">Näytön suurennus</a></li>
 <li><a href="#KeyboardSettings" title="Näppäimistö">Näppäimistö</a></li>
 <li><a href="#MouseSettings" title="Hiiri">Hiiri</a></li>
 <li><a href="#ReviewCursorSettings" title="Tarkastelukohdistin">Tarkastelukohdistin</a></li>
@@ -148,14 +148,14 @@
 <li><a href="#SupportedBrailleDisplays" title="Tuetut pistenäytöt">Tuetut pistenäytöt</a><ul>
 <li><a href="#FreedomScientificFocus" title="Freedom Scientific Focus/PAC Mate">Freedom Scientific Focus/PAC Mate</a></li>
 <li><a href="#OptelecALVA" title="Optelec ALVA 6/protokollamuunnin">Optelec ALVA 6/protokollamuunnin</a></li>
-<li><a href="#HandyTech" title="Handy Tech">Handy Tech</a></li>
+<li><a href="#HandyTech" title="Help Tech">Help Tech</a></li>
 <li><a href="#MDVLilli" title="MDV Lilli">MDV Lilli</a></li>
 <li><a href="#Baum" title="Baum/Humanware/APH/Orbit">Baum/Humanware/APH/Orbit</a></li>
 <li><a href="#HedoProfiLine" title="hedo ProfiLine USB">hedo ProfiLine USB</a></li>
 <li><a href="#HedoMobilLine" title="hedo MobilLine USB">hedo MobilLine USB</a></li>
 <li><a href="#HumanWareBrailliant" title="HumanWare Brailliant BI/B / BrailleNote Touch">HumanWare Brailliant BI/B / BrailleNote Touch</a><ul>
 <li><a href="#HumanWareBrailliantKeyAssignmentForAllModels" title="Kaikki mallit">Kaikki mallit</a></li>
-<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32, BI 40 ja B 80">Brailliant BI 32, BI 40 ja B 80</a></li>
+<li><a href="#HumanWareBrailliantKeyAssignmentForBI32BI40AndB80" title="Brailliant BI 32-, BI 40-, B 80-, BI 20X- ja BI 40X -näyttöjen näppäinkomennot">Brailliant BI 32-, BI 40-, B 80-, BI 20X- ja BI 40X -näyttöjen näppäinkomennot</a></li>
 <li><a href="#HumanWareBrailliantKeyAssignmentForBI14" title="Brailliant BI 14">Brailliant BI 14</a></li>
 </ul>
 </li>
@@ -234,6 +234,13 @@
 <td><code>NVDA+X</code></td>
 <td>Ei mitään</td>
 <td>Toistaa NVDA:n viimeksi puhuman tekstin. Kahdesti painettaessa se näytetään selaustilassa.</td>
+</tr>
+<tr>
+<td>Kopioi viimeksi puhuttu teksti</td>
+<td><code>NVDA+Ctrl+X</code></td>
+<td><code>NVDA+Ctrl+X</code></td>
+<td>Ei mitään</td>
+<td>Kopioi NVDA:n viimeksi puhuman tekstin leikepöydälle.</td>
 </tr>
 <tr>
 <td>NVDA-valikko</td>
@@ -415,15 +422,15 @@
 </tr>
 <tr>
 <td>Seuraava lause</td>
-<td>Alt+Nuoli alas</td>
-<td>Alt+Nuoli alas</td>
-<td>Siirtää kohdistimen seuraavaan lauseeseen ja puhuu sen (tuetaan vain Microsoft Wordissa ja Outlookissa).</td>
+<td><code>Alt+Alanuoli</code></td>
+<td><code>Alt+Alanuoli</code></td>
+<td>Siirtää kohdistimen seuraavaan lauseeseen ja lukee sen. Kaikkia asiakirjoja ei tueta.</td>
 </tr>
 <tr>
 <td>Edellinen lause</td>
-<td>Alt+Nuoli ylös</td>
-<td>Alt+Nuoli ylös</td>
-<td>Siirtää kohdistimen edelliseen lauseeseen ja puhuu sen (tuetaan vain Microsoft Wordissa ja Outlookissa).</td>
+<td><code>Alt+Ylänuoli</code></td>
+<td><code>Alt+Ylänuoli</code></td>
+<td>Siirtää kohdistimen edelliseen lauseeseen ja lukee sen. Kaikkia asiakirjoja ei tueta.</td>
 </tr>
 </tbody>
 </table>
@@ -1434,8 +1441,8 @@ Pisteiden 7 ja 8 painaminen kääntää minkä tahansa pistekirjoitussyötteen v
 </tr>
 </tbody>
 </table>
-<h2 id="Magnifier">Suurennus</h2>
-<h3 id="MagnifierCommands">Suurennuksen näppäinkomennot</h3>
+<h2 id="Magnifier">Näytön suurennus</h2>
+<h3 id="MagnifierCommands">Näytön suurennuksen näppäinkomennot</h3>
 <table>
 <thead>
 <tr>
@@ -1446,14 +1453,14 @@ Pisteiden 7 ja 8 painaminen kääntää minkä tahansa pistekirjoitussyötteen v
 </thead>
 <tbody>
 <tr>
-<td>Ota suurennus käyttöön tai poista se käytöstä</td>
+<td>Ota näytön suurennus käyttöön tai poista se käytöstä</td>
 <td><code>NVDA+Vaihto+W</code></td>
-<td>Ottaa suurennuksen käyttöön tai poistaa sen käytöstä.</td>
+<td>Ottaa näytön suurennuksen käyttöön tai poistaa sen käytöstä.</td>
 </tr>
 <tr>
 <td>Kasvata suurennustasoa</td>
 <td><code>NVDA+Vaihto+Plus</code></td>
-<td>Kasvattaa suurennuksen tasoa tai käynnistää suurennustoiminnon, mikäli se ei ole käynnissä.</td>
+<td>Kasvattaa suurennuksen tasoa tai käynnistää näytön suurennuksen, mikäli se ei ole käynnissä.</td>
 </tr>
 <tr>
 <td>Pienennä suurennustasoa</td>
@@ -1473,47 +1480,52 @@ Pisteiden 7 ja 8 painaminen kääntää minkä tahansa pistekirjoitussyötteen v
 <tr>
 <td>Näytä koko näytön yleisnäkymä</td>
 <td><code>NVDA+Vaihto+L</code></td>
-<td>Näyttää hetkellisesti koko näytön yleisnäkymän.</td>
+<td>Näyttää tilapäisesti koko näytön yleisnäkymän.</td>
 </tr>
 <tr>
-<td>Panoroi vasemmalle</td>
+<td>Vieritä vasemmalle</td>
 <td><code>NVDA+Alt+Nuoli vasemmalle</code></td>
-<td>Panoroi suurennettua näkymää vasemmalle määritetyn panoroinnin askelkoon verran.</td>
+<td>Vierittää suurennettua näkymää vasemmalle määritetyn vierityksen askelkoon verran.</td>
 </tr>
 <tr>
-<td>Panoroi oikealle</td>
+<td>Vieritä oikealle</td>
 <td><code>NVDA+Alt+Nuoli oikealle</code></td>
-<td>Panoroi suurennettua näkymää oikealle määritetyn panoroinnin askelkoon verran.</td>
+<td>Vierittää suurennettua näkymää oikealle määritetyn vierityksen askelkoon verran.</td>
 </tr>
 <tr>
-<td>Panoroi ylös</td>
+<td>Vieritä ylös</td>
 <td><code>NVDA+Alt+Nuoli ylös</code></td>
-<td>Panoroi suurennettua näkymää ylöspäin määritetyn panoroinnin askelkoon verran.</td>
+<td>Vierittää suurennettua näkymää ylöspäin määritetyn vierityksen askelkoon verran.</td>
 </tr>
 <tr>
-<td>Panoroi alas</td>
+<td>Vieritä alas</td>
 <td><code>NVDA+Alt+Nuoli alas</code></td>
-<td>Panoroi suurennettua näkymää alaspäin määritetyn panoroinnin askelkoon verran.</td>
+<td>Vierittää suurennettua näkymää alaspäin määritetyn vierityksen askelkoon verran.</td>
 </tr>
 <tr>
-<td>Panoroi vasempaan reunaan</td>
+<td>Vieritä vasempaan reunaan</td>
 <td><code>NVDA+Vaihto+Alt+Nuoli vasemmalle</code></td>
-<td>Panoroi suurennusnäkymän suoraan näytön vasempaan reunaan.</td>
+<td>Vierittää suurennusnäkymän näytön vasempaan reunaan.</td>
 </tr>
 <tr>
-<td>Panoroi oikeaan reunaan</td>
+<td>Vieritä oikeaan reunaan</td>
 <td><code>NVDA+Vaihto+Alt+Nuoli oikealle</code></td>
-<td>Panoroi suurennusnäkymän suoraan näytön oikeaan reunaan.</td>
+<td>Vierittää suurennusnäkymän näytön oikeaan reunaan.</td>
 </tr>
 <tr>
-<td>Panoroi yläreunaan</td>
+<td>Vieritä yläreunaan</td>
 <td><code>NVDA+Vaihto+Alt+Nuoli ylös</code></td>
-<td>Panoroi suurennusnäkymän suoraan näytön yläreunaan.</td>
+<td>Vierittää suurennusnäkymän näytön yläreunaan.</td>
 </tr>
 <tr>
-<td>Panoroi alareunaan</td>
+<td>Vieritä alareunaan</td>
 <td><code>NVDA+Vaihto+Alt+Nuoli alas</code></td>
-<td>Panoroi suurennusnäkymän suoraan näytön alareunaan.</td>
+<td>Vierittää suurennusnäkymän näytön alareunaan.</td>
+</tr>
+<tr>
+<td>Siirrä hiiri suurennusnäkymään</td>
+<td>Ei mitään</td>
+<td>Siirtää hiiren osoittimen suurennusnäkymän keskikohtaan.</td>
 </tr>
 </tbody>
 </table>
@@ -1844,12 +1856,12 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 </tr>
 </tbody>
 </table>
-<h4 id="MagnifierSettingsCategory">Suurennus</h4>
+<h4 id="MagnifierSettingsCategory">Näytön suurennus</h4>
 <p>|| Toiminto | Näppäinkomento pöytäkoneissa | Näppäinkomento kannettavissa | Kuvaus |
 |---|---|---|---|
-|  Avaa suurennuksen asetukset {#OpenMagnifierSettings} | <code>NVDA+Ctrl+W</code> | <code>NVDA+Ctrl+W</code> | NVDA:n sisäänrakennetun <a href="#Magnifier" title="Suurennustoiminnon">Suurennustoiminnon</a> asetukset voidaan määrittää asetusvalintaikkunan Suurennus-kategoriassa. |
-|  Ota suurennus käyttöön {#MagnifierEnable} | <code>NVDA+Vaihto+W</code> | <code>NVDA+Vaihto+W</code> | Tämä asetus ottaa suurennuksen käyttöön tai poistaa sen käytöstä. |
-|  Värisuodatin {#MagnifierFilter} | <code>NVDA+Vaihto+I</code> | <code>NVDA+Vaihto+I</code> | Tästä valitaan suurennuksen oletusarvoinen värisuodatin. |</p>
+|  Avaa näytön suurennuksen asetukset {#OpenMagnifierSettings} | <code>NVDA+Ctrl+W</code> | <code>NVDA+Ctrl+W</code> | NVDA:n <a href="#Magnifier" title="näytön suurennuksen">näytön suurennuksen</a> asetukset voidaan määrittää asetusvalintaikkunan Näytön suurennus -kategoriassa. |
+|  Käytä näytön suurennusta {#MagnifierEnable} | <code>NVDA+Vaihto+W</code> | <code>NVDA+Vaihto+W</code> | Tämä asetus ottaa näytön suurennuksen käyttöön tai poistaa sen käytöstä. |
+|  Värisuodatin {#MagnifierFilter} | <code>NVDA+Vaihto+I</code> | <code>NVDA+Vaihto+I</code> | Tästä valitaan näytön suurennuksen oletusarvoinen värisuodatin. |</p>
 <h4 id="KeyboardSettings">Näppäimistö</h4>
 <p>|| Toiminto | Näppäinkomento pöytäkoneissa | Näppäinkomento kannettavissa | Kuvaus |
 |---|---|---|---|
@@ -1926,7 +1938,7 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <tr>
 <td>Yhdistä tai katkaise yhteys</td>
 <td><code>NVDA+Alt+R</code></td>
-<td>Aloittaa uuden etäkäyttöistunnon tai katkaisee käynnissä olevan istunnon yhteyden.</td>
+<td>Aloittaa uuden etäkäyttöistunnon tai katkaisee aktiivisen istunnon yhteyden.</td>
 </tr>
 <tr>
 <td>Vaihda hallintaa</td>
@@ -1946,7 +1958,7 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <tr>
 <td>Katkaise yhteys</td>
 <td>Ei mitään</td>
-<td>Lopettaa käynnissä olevan etäkäyttöistunnon.</td>
+<td>Lopettaa aktiivisen etäkäyttöistunnon.</td>
 </tr>
 <tr>
 <td>Mykistä etäkone</td>
@@ -2067,6 +2079,10 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td>Vaihto+Sarkain-näppäinyhdistelmä</td>
@@ -2274,6 +2290,10 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <td><code>kosketuskohdistinnäppäin</code></td>
 </tr>
 <tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
+</tr>
+<tr>
 <td>Ilmoita muotoilutiedot pistesolusta</td>
 <td><code>toissijainen kosketuskohdistinnäppäin</code></td>
 </tr>
@@ -2383,7 +2403,7 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 </tr>
 </tbody>
 </table>
-<h3 id="HandyTech">Handy Tech</h3>
+<h3 id="HandyTech">Help Tech</h3>
 <table>
 <thead>
 <tr>
@@ -2411,6 +2431,10 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td>Vaihto+Sarkain-näppäinyhdistelmä</td>
@@ -2545,6 +2569,10 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td><code>Vaihto+Sarkain</code>-näppäinyhdistelmä</td>
@@ -2724,6 +2752,10 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <td><code>kosketuskohdistinnäppäin</code></td>
 </tr>
 <tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
+</tr>
+<tr>
 <td>Vaihda Pistenäyttö seuraa -asetusta</td>
 <td><code>ylös+alas</code></td>
 </tr>
@@ -2785,7 +2817,7 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 </tr>
 </tbody>
 </table>
-<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32, BI 40 ja B 80</h4>
+<h4 id="HumanWareBrailliantKeyAssignmentForBI32BI40AndB80">Brailliant BI 32-, BI 40-, B 80-, BI 20X- ja BI 40X -näyttöjen näppäinkomennot</h4>
 <table>
 <thead>
 <tr>
@@ -2794,6 +2826,22 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Siirrä edelliselle riville</td>
+<td><code>c1</code></td>
+</tr>
+<tr>
+<td>Vieritä taaksepäin</td>
+<td><code>c2</code></td>
+</tr>
+<tr>
+<td>Siirrä seuraavalle riville</td>
+<td><code>c3</code></td>
+</tr>
+<tr>
+<td>Vieritä eteenpäin</td>
+<td><code>c5</code></td>
+</tr>
 <tr>
 <td>NVDA-valikko</td>
 <td><code>c1</code>, <code>c3</code>, <code>c4</code> ja <code>c5</code> (komento n)</td>
@@ -3214,6 +3262,10 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <tr>
 <td>Siirrä pistesoluun</td>
 <td><code>kosketuskohdistinnäppäin</code></td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
 </tr>
 <tr>
 <td>Vaihto+Nuoli ylös -näppäinyhdistelmä</td>
@@ -3699,7 +3751,7 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 </tr>
 </tbody>
 </table>
-<p>Seuraavassa on luettelo BrailleNote QT:n komennoista, jotka eivät ole käytettävissä pistekirjoituksen syöttötilassa.</p>
+<p>Alla on luettelo BrailleNote QT:n näppäinkomennoista, jotka eivät ole käytettävissä pistekirjoituksen syöttötilassa.</p>
 <table>
 <thead>
 <tr>
@@ -3782,7 +3834,7 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 </tr>
 </tbody>
 </table>
-<p>Seuraavassa on vieritysrullaan määritellyt komennot:</p>
+<p>Alla on vieritysrullaan määritellyt komennot:</p>
 <table>
 <thead>
 <tr>
@@ -4627,6 +4679,10 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <td><code>kosketuskohdistinnäppäin</code></td>
 </tr>
 <tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>home1+useita kosketuskohdistinnäppäimen painalluksia</code>, <code>home2+useita kosketuskohdistinnäppäimen painalluksia</code></td>
+</tr>
+<tr>
 <td>Ilmoita muotoilutiedot pistesolusta</td>
 <td><code>toissijainen kosketuskohdistinnäppäin</code></td>
 </tr>
@@ -4794,6 +4850,10 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <td><code>routing</code></td>
 </tr>
 <tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td><code>useita kosketuskohdistinnäppäimen painalluksia</code></td>
+</tr>
+<tr>
 <td>Nuoli ylös -näppäin</td>
 <td><code>up</code></td>
 </tr>
@@ -4835,6 +4895,10 @@ Excelin perinteiset kommentit on nimetty uudelleen "muistiinpanoiksi" Microsoft 
 <tr>
 <td>Siirrä pistesoluun</td>
 <td>kohdistimensiirtonäppäinsarja 1</td>
+</tr>
+<tr>
+<td>Valitse ensimmäisen ja viimeisen pistesolun välinen alue</td>
+<td>useita kosketuskohdistinnäppäimen painalluksia, sarja 1</td>
 </tr>
 <tr>
 <td>Vaihda Piste näyttö seuraa -asetusta</td>
