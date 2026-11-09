@@ -9,6 +9,40 @@
 
 </head>
 <body><h1 id="nvda-sta-je-novo">NVDA šta je novo</h1>
+<h2 id="202631">2026.3.1</h2>
+<p>This is a patch release to fix security issues.
+A bug fix is also included for an issue introduced in 2026.3 with the task switcher in Windows 10.</p>
+<h3 id="security-fixes">Security fixes</h3>
+<p>Please responsibly disclose security issues following NVDA's <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="security policy">security policy</a>.</p>
+<ul>
+<li>Fixed NVDA leaking the Remote Access key. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21037">#21037</a>)</li>
+<li>Updated certifi to 2026.10.23. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3j65-46c5-4grp" rel="noopener" target="_blank" title="GHSA-3j65-46c5-4grp">GHSA-3j65-46c5-4grp</a>)</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li>Fixed bug where on Windows 10, the classic <code>alt+tab</code> task switcher no longer announced changing the selected task. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21052" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21052">#21052</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Updated eSpeak NG to <a href="https://github.com/nvaccess/espeak-ng/commit/b97de3cf2ad32c1d48c6bd36dfbf57a9c587fedc" rel="noopener" target="_blank" title="commit b97de3cf2">commit <code>b97de3cf2</code></a>.
+This changes Brazilian Portuguese back to how it worked in 2026.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21059" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21059">#21059</a>)</li>
+</ul>
+<h3 id="changes-for-developers">Changes for Developers</h3>
+<ul>
+<li>Updated Python to 3.13.17. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>)</li>
+<li>Updated pip dependencies (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>):<ul>
+<li>cryptography to 50.0.2.</li>
+<li>url-normalize to 3.0.1.</li>
+<li>pycaw to 20260927.</li>
+<li>nh3 to 0.3.7.</li>
+<li>crowdin-api-client to 1.30.0.</li>
+<li>markdown to 3.11.2.</li>
+<li>lxml to 6.1.3.</li>
+<li>regex to 2026.9.29.</li>
+<li>scons to 4.11.1.</li>
+<li>uv to 0.13.5.</li>
+<li>sphinx to 9.2.0.</li>
+<li>robotframework to 7.5.</li>
+</ul>
+</li>
+</ul>
 <h2 id="20263">2026.3</h2>
 <p>Ova verzija uključuje značajna poboljšanja performansi, poboljšanja NVDA dijaloga i proširen unos na ekranu osetljivom na dodir.</p>
 <p>Izvršeno je nekoliko poboljšanja performansi kako bi se smanjila usporavanja i poboljšao odziv.
@@ -135,7 +169,7 @@ Ovi tasteri ranije nisu imali nikakvu funkciju kada se samostalno pritisnu. (<a 
 <li>Podešavanje HID simulacije unosa putem tastature za ALVA brajeve redove se sada pamti nakon ponovnog povezivanja ili pokretanja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20455" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20455">#20455</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
 <li>Brajevi redovi sada prate tekst koji se izgovara tokom neprekidnog čitanja u režimu pretraživanja kada je brajev red vezan za fokus. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3287" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3287">#3287</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 <li>HIMS Braille Sense i Braille EDGE redovi koji se povezuju putem USB-a sada rade na sistemima gde stariji HIMS USB drajver ne može da se instalira, kao što je Windows 11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20555" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20555">#20555</a>, <a class="gh-link gh-mention" href="https://github.com/KihunJang1981" rel="noopener" target="_blank" title="GitHub User: @KihunJang1981">@KihunJang1981</a>)<ul>
-<li>Na ovim sistemima, umesto toga instalirajte <a href="https://hims-product.s3.ap-northeast-2.amazonaws.com/Util/HIMS_Braille_Driver_V3_1.exe" rel="noopener" target="_blank" title="HIMS WinUSB drajver">HIMS WinUSB drajver</a> instead.</li>
+<li>Na ovim sistemima, umesto toga instalirajte <a href="https://hims-product.s3.ap-northeast-2.amazonaws.com/Util/HIMS_Braille_Driver_V3_1.exe" rel="noopener" target="_blank" title="HIMS WinUSB drajver">HIMS WinUSB drajver</a>.</li>
 </ul>
 </li>
 <li>NVDA više neće na kratko prekinuti vezu sa brajevim redom a zatim ga ponovo prepoznati tokom menjanja radne površine koje ne ulazi na bezbednu radnu površinu, kao što je menjanje između veze udaljene radne površine i lokalnog računara. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18810" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18810">#18810</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20550" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20550">#20550</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -716,7 +750,7 @@ Podešavanje je podrazumevano onemogućeno. (<a class="gh-link gh-issue" href="h
 <li>Ispravljen slučaj koji je mogao da izazove da se NVDA zamrzne kada se matematika čita na brajevom redu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20319" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20319">#20319</a>, <a class="gh-link gh-mention" href="https://github.com/AAClause" rel="noopener" target="_blank" title="GitHub User: @AAClause">@AAClause</a>)</li>
 <li>NVDA sada može da učitava sapi4 glasove koji ne podržavaju visinu, brzinu ili jačinu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20302" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20302">#20302</a>)</li>
 </ul>
-<h3 id="changes-for-developers">Changes for Developers</h3>
+<h3 id="changes-for-developers_1">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Clarified NV Access's policy on API breaking changes in the <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="Developer Guide">Developer Guide</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19599" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19599">#19599</a>)</li>
@@ -789,7 +823,7 @@ Promena koja je uvedena u verziji 2026.1 vezana za način na koji NVDA obrađuje
 <li>Daljinski pristup ponovo pokušava automatsko ponovno povezivanje nakon što prvobitno povezivanje ne uspe kao kontrolisani računar, umesto da odmah prekine povezivanje.
 Ovo znači da će kontrolisanje računara bez fizičkog pristupa koji su podešeni da se automatski povežu nakon pokretanja ponovo biti moguće nakon što mreža postane dostupna. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20122">#20122</a>)</li>
 </ul>
-<h3 id="changes-for-developers_1">Changes for Developers</h3>
+<h3 id="changes-for-developers_2">Changes for Developers</h3>
 <ul>
 <li>The <code>winBindings.cfgmgr32</code> module is now included in NVDA binary builds. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20089" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20089">#20089</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
 </ul>
@@ -928,7 +962,7 @@ Trenutno uključuje podešavanja zatamnjivanja ekrana (ranije su bila u kategori
 <li>U Chromium pretraživačima, ako dokument sadrži linkove koji imaju neispravno formiranu adresu, čitanje dokumenta je ponovo moguće. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19125" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19125">#19125</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>NVDA više ne reprodukuje zvuk za pravopisne greške dok pišete ako je režim govora na zahtev ili isključen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19323" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19323">#19323</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="changes-for-developers_2">Changes for Developers</h3>
+<h3 id="changes-for-developers_3">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -1250,7 +1284,7 @@ Imajte na umu da je ovo podrazumevano onemogućeno zbog toga što uređaj korist
 <li>Ispravljeno obeleživanje koje nije radilo sa Outlook listom automatskog dopunjavanja kontakata. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18483" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18483">#18483</a>, <a class="gh-link gh-mention" href="https://github.com/Nerlant" rel="noopener" target="_blank" title="GitHub User: @Nerlant">@Nerlant</a>)</li>
 <li>Prenosna kopija koja se pokrene odmah nakon pravljenja sada ispravno koristi svoja sopstvena podešavanja umesto podešavanja druge kopije. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18442" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18442">#18442</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="changes-for-developers_3">Changes for Developers</h3>
+<h3 id="changes-for-developers_4">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -1355,7 +1389,7 @@ eSpeak NG je ažuriran, dodajući podršku za aromunski, krimskotatarski, mongol
 <li>Kada pišete u ćeliji u Microsoft Excelu, brajev red se sada ispravno ažurira kako bi prikazao nov sadržaj. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18391" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18391">#18391</a>)</li>
 <li>Kada se koristi NVDA daljinski pristup, govor sa ekrana kontrole korisničkog naloga na udaljenom računaru sada radi pouzdano. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18101" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18101">#18101</a>, <a class="gh-link gh-mention" href="https://github.com/jcsteh" rel="noopener" target="_blank" title="GitHub User: @jcsteh">@jcsteh</a>)</li>
 </ul>
-<h3 id="changes-for-developers_4">Changes for Developers</h3>
+<h3 id="changes-for-developers_5">Changes for Developers</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -1610,7 +1644,7 @@ U bilo kom dokumentu, ako je kursor u poslednjem redu, biće pomeren na kraj kad
 <li>Kada linkovi dovode do istog objekta na kom se virtuelni kursor već nalazi, NVDA će se ispravno prebaciti na odredište linka. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17669" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17669">#17669</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>Ikona prozora NVDA obeleživača više ne ostaje fiksna na programskoj traci ako se istraživač ponovo pokrene. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17696" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17696">#17696</a>, <a class="gh-link gh-mention" href="https://github.com/hwf1324" rel="noopener" target="_blank" title="GitHub User: @hwf1324">@hwf1324</a>)</li>
 </ul>
-<h3 id="changes-for-developers_5">Changes for Developers</h3>
+<h3 id="changes-for-developers_6">Changes for Developers</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -5289,7 +5323,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Due to changes In the Windows 10 Creators Update, the "Always duck" mode is no longer available in NVDA's Audio ducking settings. It is still available on older windows 10 releases. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6684" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6684">#6684</a>)</li>
 <li>Due to changes in the  Windows 10 Creators Update, the "Duck when outputting speech and sounds" mode can no longer ensure audio has ducked fully before starting to speak, nor will it keep audio ducked long enough after speaking to stop rappid bouncing in volume. These changes do not   affect older windows 10 releases. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6684" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6684">#6684</a>)</li>
 </ul>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h3 id="bug-fixes_1">Bug Fixes</h3>
 <ul>
 <li>Fixed freeze in Microsoft Word when moving by paragraph through a large document while in browse mode. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6368" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6368">#6368</a>)</li>
 <li>Tables in Microsoft Word that have been copied from Microsoft Excel are no longer treeted as layout tables and therefore are no longer ignored. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5927" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5927">#5927</a>)</li>
@@ -5337,7 +5371,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Spin Controls are now used for numeric input fields such as the "Capital pitch change percentage" setting  in the Voice Settings dialog. You can enter the desired value or use the up and down arrow keys to adjust the value. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6099" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6099">#6099</a>)</li>
 <li>The way IFrames (documents embedded within documents) are reported has been made more consistent across web browsers. IFrames are now reported as "frame" in Firefox. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6047" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6047">#6047</a>)</li>
 </ul>
-<h3 id="bug-fixes_1">Bug Fixes</h3>
+<h3 id="bug-fixes_2">Bug Fixes</h3>
 <ul>
 <li>Fixed a rare error when exiting NVDA while the speech viewer is open. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5050" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5050">#5050</a>)</li>
 <li>Image maps now render as expected in browse mode in Mozilla Firefox. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6051" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6051">#6051</a>)</li>
@@ -5389,7 +5423,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>The existing NVDA+F9 then NVDA+F10 behavior has been modified to select text on the first press of F10. When F10 is pressed twice (in quick succession) the text is copied to the clipboard. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4636">#4636</a>)</li>
 <li>Updated eSpeak NG to version Master 11b1a7b (22 June 2016). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6037">#6037</a>)</li>
 </ul>
-<h3 id="bug-fixes_2">Bug Fixes</h3>
+<h3 id="bug-fixes_3">Bug Fixes</h3>
 <ul>
 <li>In browse mode in Microsoft Word, copying to the clipboard now preserves formatting. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5956" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5956">#5956</a>)</li>
 <li>In Microsoft Word, NVDA now reports appropriately when using Word's own table navigation commands (alt+home, alt+end, alt+pageUp and alt+pageDown) and table selection commands (shift added to the navigation commands). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5961" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5961">#5961</a>)</li>
@@ -5447,7 +5481,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>In Microsoft Excel, NVDA no longer ignores a column header for a cell when there is a blank row between the cell and the header. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5396">#5396</a>)</li>
 <li>In Microsoft Excel, coordinates are now announced before headers to eliminate ambiguity between headers and content. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5396">#5396</a>)</li>
 </ul>
-<h3 id="bug-fixes_3">Bug Fixes</h3>
+<h3 id="bug-fixes_4">Bug Fixes</h3>
 <ul>
 <li>In browse mode, when attempting to use single letter navigation to move to an element which isn't supported for the document, NVDA reports that this isn't supported rather than reporting that there is no element in that direction. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5691" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5691">#5691</a>)</li>
 <li>When listing sheets in the Elements List in Microsoft Excel, sheets containing only charts are now included. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5698" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5698">#5698</a>)</li>
@@ -5489,7 +5523,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Updated liblouis braille translator to 2.6.5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5574" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5574">#5574</a>)</li>
 <li>The word "text" is no longer reported when moving the focus or review cursor to text objects. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5452" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5452">#5452</a>)</li>
 </ul>
-<h3 id="bug-fixes_4">Bug Fixes</h3>
+<h3 id="bug-fixes_5">Bug Fixes</h3>
 <ul>
 <li>In iTunes 12, browse mode now updates correctly when a new page loads in the iTunes Store. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5191" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5191">#5191</a>)</li>
 <li>In Internet Explorer and other MSHTML controls, moving to specific heading levels with single letter navigation now behaves as expected when the level of a heading is overridden for accessibility purposes (specifically, when aria-level overrides the level of an h tag). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5434" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5434">#5434</a>)</li>
@@ -5576,7 +5610,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>If the synthesizer supports it, speech should now pause for parentheses and the en dash (–). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3799" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3799">#3799</a>)</li>
 <li>When selecting text, the text is reported before the indication of selection instead of after. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1707" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1707">#1707</a>)</li>
 </ul>
-<h3 id="bug-fixes_5">Bug Fixes</h3>
+<h3 id="bug-fixes_6">Bug Fixes</h3>
 <ul>
 <li>Major performance improvements when navigating the Outlook 2010/2013 message list. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5268" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5268">#5268</a>)</li>
 <li>In a chart in Microsoft Excel, navigating with certain keys (such as changing sheets with control+pageUp and control+pageDown) now works correctly. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5336" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5336">#5336</a>)</li>
@@ -5625,7 +5659,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Updated liblouis braille translator to 2.6.3. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5137" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5137">#5137</a>)</li>
 <li>When attempting to install an earlier version of NVDA than is currently installed, you will now be warned that this is not recommended and that NVDA should be completely uninstalled before proceeding. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5037">#5037</a>)</li>
 </ul>
-<h3 id="bug-fixes_6">Bug Fixes</h3>
+<h3 id="bug-fixes_7">Bug Fixes</h3>
 <ul>
 <li>In browse mode for Internet Explorer and other MSHTML controls, quick navigation by form field no longer incorrectly includes presentational list items. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4204" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4204">#4204</a>)</li>
 <li>In Firefox, NVDA no longer inappropriately reports the content of an ARIA tab panel when focus moves inside it. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4638" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4638">#4638</a>)</li>
@@ -5673,7 +5707,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Significantly improved reporting of color names. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4984" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4984">#4984</a>)</li>
 <li>Updated liblouis braille translator to 2.6.2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4777" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4777">#4777</a>)</li>
 </ul>
-<h3 id="bug-fixes_7">Bug Fixes</h3>
+<h3 id="bug-fixes_8">Bug Fixes</h3>
 <ul>
 <li>Character descriptions are now handled correctly for conjunct characters in certain Indian languages. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4582" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4582">#4582</a>)</li>
 <li>If the "Trust voice's language when processing characters and symbols" option is enabled, the Punctuation/Symbol pronunciation dialog now correctly uses the voice language. Also, the language for which pronunciation is being edited is shown in the dialog's title. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4930" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4930">#4930</a>)</li>
@@ -5724,7 +5758,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Downloading of NVDA updates is now more secure. (Specifically, the update information is retrieved via https and the hash of the file is verified after it is downloaded.) (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4716" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4716">#4716</a>)</li>
 <li>eSpeak has been upgraded to version 1.48.04 (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4325" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4325">#4325</a>)</li>
 </ul>
-<h3 id="bug-fixes_8">Bug Fixes</h3>
+<h3 id="bug-fixes_9">Bug Fixes</h3>
 <ul>
 <li>In Microsoft Excel, merged row and column header cells are now handled correctly. For example, if A1 and B1 are merged, then B2 will now have A1 and B1 reported as its column header rather than nothing at all. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4617" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4617">#4617</a>)</li>
 <li>When editing the content of a text box in Microsoft PowerPoint 2003, NVDA will correctly report the content of each line. Previously, in each paragraph, lines would increasingly be off by one character. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4619" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4619">#4619</a>)</li>
@@ -5775,7 +5809,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>In browse mode, pressing e and shift+e to navigate to edit fields now includes editable combo boxes. This includes the search box in the latest version of Google Search. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4436" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4436">#4436</a>)</li>
 <li>Clicking the NVDA icon in the Notification Area with the left mouse button now opens the NVDA menu instead of doing nothing. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4459" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4459">#4459</a>)</li>
 </ul>
-<h3 id="bug-fixes_9">Bug Fixes</h3>
+<h3 id="bug-fixes_10">Bug Fixes</h3>
 <ul>
 <li>When moving focus back to a browse mode document (e.g. alt+tabbing to an already opened web page), the review cursor is properly positioned at the virtual caret, rather than the focused control (e.g. a nearby link). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4369" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4369">#4369</a>)</li>
 <li>In PowerPoint slide shows, the review cursor correctly follows the virtual caret. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4370" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4370">#4370</a>)</li>
@@ -5865,7 +5899,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <ul>
 <li>Updated liblouis braille translator to 2.5.4. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4103" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4103">#4103</a>)</li>
 </ul>
-<h3 id="bug-fixes_10">Bug Fixes</h3>
+<h3 id="bug-fixes_11">Bug Fixes</h3>
 <ul>
 <li>In Google Chrome and Chrome-based browsers, certain chunks of text (such as those with emphasis) are no longer repeated when reporting the text of an alert or dialog. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4066" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4066">#4066</a>)</li>
 <li>In browse mode in Mozilla applications, pressing enter on a button, etc. no longer fails to activate it (or activates the wrong control) in certain cases such as the buttons at the top of Facebook. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4106" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4106">#4106</a>)</li>
@@ -5918,7 +5952,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <ul>
 <li>When exiting a dialog or application within a browse mode document, the browse mode document's name and type is no longer announced. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4069" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4069">#4069</a>)</li>
 </ul>
-<h3 id="bug-fixes_11">Bug Fixes</h3>
+<h3 id="bug-fixes_12">Bug Fixes</h3>
 <ul>
 <li>The standard Windows System menu is no longer accidentally silenced in Java applications. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3882" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3882">#3882</a>)</li>
 <li>When copying text from screen review, line breaks are no longer ignored. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3900" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3900">#3900</a>)</li>
@@ -5956,7 +5990,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>Punctuation level Some will now speak star (*) and plus (+) characters. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3614" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3614">#3614</a>)</li>
 <li>Upgraded eSpeak to version 1.48.04 which includes many language fixes and fixes several crashes. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3842" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3842">#3842</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3739" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3739">#3739</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3860" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3860">#3860</a>)</li>
 </ul>
-<h3 id="bug-fixes_12">Bug Fixes</h3>
+<h3 id="bug-fixes_13">Bug Fixes</h3>
 <ul>
 <li>When moving around or selecting cells in Microsoft Excel, NVDA should no longer inappropriately announce the old cell rather than the new cell when Microsoft Excel is slow to move the selection. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3558" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3558">#3558</a>)</li>
 <li>NVDA properly handles opening a dropdown list for a cell in Microsoft Excel via the context menu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3586" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3586">#3586</a>)</li>
@@ -6024,7 +6058,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 <li>In Microsoft Excel, cells that are links are now announced as links. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3042" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3042">#3042</a>)</li>
 <li>In Microsoft Excel, the existence of comments on a cell is now reported to the user. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2921" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2921">#2921</a>)</li>
 </ul>
-<h3 id="bug-fixes_13">Bug Fixes</h3>
+<h3 id="bug-fixes_14">Bug Fixes</h3>
 <ul>
 <li>Zend Studio now functions the same as Eclipse. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3420" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3420">#3420</a>)</li>
 <li>The changed state of certain checkboxes in the Microsoft Outlook 2010 message rules dialog are now reported automatically. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3063" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3063">#3063</a>)</li>
@@ -6087,7 +6121,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 </li>
 <li>Updated liblouis braille translator to 2.5.3. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3371" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3371">#3371</a>)</li>
 </ul>
-<h3 id="bug-fixes_14">Bug Fixes</h3>
+<h3 id="bug-fixes_15">Bug Fixes</h3>
 <ul>
 <li>Activating an object now announces the action before the activation, rather than the action after the activation (e.g. expand when expanding rather than collapse). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2982" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2982">#2982</a>)</li>
 <li>More accurate reading and cursor tracking in  various input fields for recent versions of Skype, such as chat and search fields. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1601" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1601">#1601</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3036">#3036</a>)</li>
@@ -6133,7 +6167,7 @@ Molimo imajte na umu da ova verzija programa  NVDA više ne podržava Windows XP
 </ul>
 <h2 id="201311">2013.1.1</h2>
 <p>This release fixes the problem where NVDA crashed when started if configured to use the Irish language, as well as including updates to translations and some other bug fixes.</p>
-<h3 id="bug-fixes_15">Bug Fixes</h3>
+<h3 id="bug-fixes_16">Bug Fixes</h3>
 <ul>
 <li>Correct characters are produced when typing in NVDA's own user interface while using a Korean or Japanese input method while it is the default method. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2909">#2909</a>)</li>
 <li>In Internet Explorer and other MSHTML controls, fields marked as containing an invalid entry are now handled correctly. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3256" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3256">#3256</a>)</li>
@@ -6198,7 +6232,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>The laptop keyboard layout has been completely redesigned in order to make it more intuitive and consistent. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/804" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #804">#804</a>)</li>
 <li>Updated eSpeak speech synthesizer to 1.47.11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2680" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2680">#2680</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3124" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3124">#3124</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3132" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3132">#3132</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3141" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3141">#3141</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3143" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3143">#3143</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3172" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3172">#3172</a>)</li>
 </ul>
-<h3 id="bug-fixes_16">Bug Fixes</h3>
+<h3 id="bug-fixes_17">Bug Fixes</h3>
 <ul>
 <li>The quick navigation keys for jumping to the next or previous separator in Browse Mode now work in Internet Explorer and other MSHTML controls. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2781" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2781">#2781</a>)</li>
 <li>If NVDA falls back to eSpeak or no speech due to the configured speech synthesizer failing when NVDA starts, the configured choice is no longer automatically set to the fallback synthesizer. This means that now, the original synthesizer will be tried again next time NVDA starts. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2589" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2589">#2589</a>)</li>
@@ -6308,7 +6342,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>Most Metro apps in Windows 8 (e.g. Mail, Calendar) no longer activate Browse Mode for the entire app.</li>
 <li>Updated Handy Tech BrailleDriver COM-Server to 1.4.2.0.</li>
 </ul>
-<h3 id="bug-fixes_17">Bug Fixes</h3>
+<h3 id="bug-fixes_18">Bug Fixes</h3>
 <ul>
 <li>In Windows Vista and later, NVDA no longer incorrectly treats the Windows key as being held down when unlocking Windows after locking it by pressing Windows+l. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1856" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1856">#1856</a>)</li>
 <li>In Adobe Reader, row headers are now correctly recognised as table cells; i.e. coordinates are reported and they can be accessed using table navigation commands. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2444" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2444">#2444</a>)</li>
@@ -6397,7 +6431,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>NVDA is now distributed in one package. Rather than separate portable and installer versions, there is now just one file that, when run, will start a temporary copy of NVDA and will allow you to install or generate a portable distribution. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1715" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1715">#1715</a>)</li>
 <li>NVDA is now always installed in to Program Files on all systems. Updating a previous install will also automatically move it if it was not previously installed there.</li>
 </ul>
-<h3 id="bug-fixes_18">Bug Fixes</h3>
+<h3 id="bug-fixes_19">Bug Fixes</h3>
 <ul>
 <li>With auto language switching enabled, Content such as alt text for graphics and labels for other certain controls in Mozilla Gecko (e.g. Firefox) are now reported in the correct language if marked up appropriately.</li>
 <li>SayAll in BibleSeeker (and other TRxRichEdit controls) no longer stops in the middle of a passage.</li>
@@ -6456,7 +6490,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>Updated to new Spanish grade 1 braille translation table.</li>
 <li>Updated liblouis braille translator to 2.4.1.</li>
 </ul>
-<h3 id="bug-fixes_19">Bug Fixes</h3>
+<h3 id="bug-fixes_20">Bug Fixes</h3>
 <ul>
 <li>In Windows 8, focus is no longer incorrectly moved away from the Windows Explorer search field, which was not allowing NVDA to interact with it.</li>
 <li>Major performance improvements when reading and navigating Microsoft Word documents while automatic reporting of formatting is enabled, thus now making it quite comfortable to proof read formatting etc. Performance may be also improved over all for some users.</li>
@@ -6535,7 +6569,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>In browse mode, pressing enter or space on a tab now activates it instead of switching to focus mode. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1760" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1760">#1760</a>)</li>
 <li>Updated eSpeak speech synthesizer to 1.45.47.</li>
 </ul>
-<h3 id="bug-fixes_20">Bug Fixes</h3>
+<h3 id="bug-fixes_21">Bug Fixes</h3>
 <ul>
 <li>NVDA  no longer shows bullets or numbering for lists in Internet Explorer and other MSHTML controls when the author has indicated that these should not be shown (i.e. the list style is "none"). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1671" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1671">#1671</a>)</li>
 <li>Restarting NVDA when it has frozen (e.g. by pressing control+alt+n) no longer exits the previous copy without starting a new one.</li>
@@ -6619,7 +6653,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>Collapsed is no longer reported for some menu items which have sub-menus.</li>
 <li>The reportCurrentFormatting script (NVDA+f) now reports the formatting at the position of the review cursor rather than the system caret / focus. As  by default the review cursor follows the caret, most people should not notice a difference. However this now enables the user to find out the formatting when moving the review cursor, such as in flat review.</li>
 </ul>
-<h3 id="bug-fixes_21">Bug Fixes</h3>
+<h3 id="bug-fixes_22">Bug Fixes</h3>
 <ul>
 <li>Collapsing combo boxes in browse mode documents when focus mode has been forced with NVDA+space no longer auto-switches back to browse mode. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1386" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1386">#1386</a>)</li>
 <li>In Gecko (e.g. Firefox) and MSHTML (e.g. Internet Explorer) documents, NVDA now correctly renders certain text on the same line which was previously rendered on separate lines. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1378" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1378">#1378</a>)</li>
@@ -6709,7 +6743,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 </ul>
 <h2 id="201111">2011.1.1</h2>
 <p>This release fixes several security and other important issues found in NVDA 2011.1.</p>
-<h3 id="bug-fixes_22">Bug Fixes</h3>
+<h3 id="bug-fixes_23">Bug Fixes</h3>
 <ul>
 <li>The Donate item in the NVDA menu is now disabled when running on the logon, lock, UAC and other secure Windows screens, as this is a security risk. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1419" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1419">#1419</a>)</li>
 <li>It is now impossible to copy or paste within NVDA's user interface while on secure desktops (lock screen, UAC screen and windows logon) as this is a security risk. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1421" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1421">#1421</a>)</li>
@@ -6754,7 +6788,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>The volume up, down and mute keys are now reported in input help. This could be helpful if the user is uncertain as to what these keys are.</li>
 <li>The hotkey for the Review Cursor item in the NVDA Preferences menu has been changed from r to c to eliminate the conflict with the Braille Settings item.</li>
 </ul>
-<h3 id="bug-fixes_23">Bug Fixes</h3>
+<h3 id="bug-fixes_24">Bug Fixes</h3>
 <ul>
 <li>When adding a new speech dictionary entry, the title of the dialog is now "Add dictionary entry" instead of "Edit dictionary entry". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/924" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #924">#924</a>)</li>
 <li>In speech dictionary dialogs, the content of the Regular expression and Case sensitive columns of the Dictionary entries list is now presented in the configured NVDA language instead of always in English.</li>
@@ -6893,7 +6927,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>Significant improvements and updates to the user documentation, including documentation of the laptop keyboard commands and synchronisation of the Keyboard Commands Quick Reference with the User Guide. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/455" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #455">#455</a>)</li>
 <li>Updated liblouis braille translator to 2.1.1. Notably, this fixes some issues related to Chinese braille as well as characters which are undefined in the translation table. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/484" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #484">#484</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/499" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #499">#499</a>)</li>
 </ul>
-<h3 id="bug-fixes_24">Bug Fixes</h3>
+<h3 id="bug-fixes_25">Bug Fixes</h3>
 <ul>
 <li>In µTorrent, the focused item in the torrents list no longer reports repeatedly or steals focus when a menu is open.</li>
 <li>In µTorrent, the names of the files in the Torrent Contents list are now reported.</li>
@@ -6960,7 +6994,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>The Control key now simply stops speech like other keys, rather than pausing speech. To pause/resume speech, use the shift key.</li>
 <li>Table row and column counts are no longer announced when reporting focus changes, as this announcement is rather verbose and usually not useful.</li>
 </ul>
-<h3 id="bug-fixes_25">Bug Fixes</h3>
+<h3 id="bug-fixes_26">Bug Fixes</h3>
 <ul>
 <li>NVDA no longer fails to start if UI Automation support appears to be available but fails to initialise for some reason. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/483" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #483">#483</a>)</li>
 <li>The entire contents of a table row is no longer sometimes reported when moving focus inside a cell  in Mozilla applications. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/482" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #482">#482</a>)</li>
@@ -7040,7 +7074,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>Improved performance (especially on netbooks) when many beeps occur in quick succession; e.g. fast mouse movement with audio coordinates enabled. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #396">#396</a>)</li>
 <li>The NVDA error sound is no longer played in release candidates and final releases. Note that errors are still logged.</li>
 </ul>
-<h3 id="bug-fixes_26">Bug Fixes</h3>
+<h3 id="bug-fixes_27">Bug Fixes</h3>
 <ul>
 <li>When NVDA is run from an 8.3 dos path, but it is installed in the related long path (e.g. progra~1 verses program files) NVDA will correctly  identify that it is an installed copy and properly load the user's settings.</li>
 <li>speaking the title of the current foreground window with nvda+t now works correctly when in menus.</li>
@@ -7110,7 +7144,7 @@ Please see the <a href="keyCommands.html" title="Commands Quick Reference">Comma
 <li>Voices are now stored in the configuration file by ID instead of by index. This makes voice settings more reliable across systems and configuration changes. The voice setting will not be preserved in old configurations and an error may be logged the first time a synthesizer is used. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19">#19</a>)</li>
 <li>The level of a tree view item is now announced first if it has changed from the previously focused item for all tree views. Previously, this was only occurring for native Windows (SysTreeView32) tree views.</li>
 </ul>
-<h3 id="bug-fixes_27">Bug Fixes</h3>
+<h3 id="bug-fixes_28">Bug Fixes</h3>
 <ul>
 <li>The last chunk of audio is no longer cut off when using NVDA with eSpeak on a remote desktop server.</li>
 <li>Fix problems with saving speech dictionaries for certain voices.</li>

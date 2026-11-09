@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>NVDA 2026.3 Developer Guide</title>
+<title>NVDA 2026.3.1 Developer Guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="styles.css">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="numberedHeadings.css">
 </head>
-<body><h1 id="nvda-20263-developer-guide">NVDA 2026.3 Developer Guide</h1>
+<body><h1 id="nvda-202631-developer-guide">NVDA 2026.3.1 Developer Guide</h1>
 <div class="toc">
 <ul>
-<li><a href="#nvda-20263-developer-guide" title="NVDA 2026.3 Developer Guide">NVDA 2026.3 Developer Guide</a><ul>
+<li><a href="#nvda-202631-developer-guide" title="NVDA 2026.3.1 Developer Guide">NVDA 2026.3.1 Developer Guide</a><ul>
 <li><a href="#introduction" title="Introduction">Introduction</a><ul>
 <li><a href="#API" title="Add-on API stability">Add-on API stability</a><ul>
 <li><a href="#definition-of-the-public-api" title="Definition of the public API">Definition of the public API</a></li>
@@ -789,8 +789,8 @@ It will have the description "Speaks the date and time", and will be bound to th
   This option defaults to False.</li>
 </ul>
 <p>Though the script decorator makes the script definition process a lot easier, there are more ways of binding gestures and setting script properties.
-For example, a special "__gestures" Python dictionary can be defined as a class variable on an App Module, Global Plugin or NVDA Object.
-This dictionary should contain gesture identifier strings pointing to the name of the requested script, without the "script_" prefix.
+For example, a special "_<em>gestures" Python dictionary can be defined as a class variable on an App Module, Global Plugin or NVDA Object.
+This dictionary should contain gesture identifier strings pointing to the name of the requested script, without the "script</em>" prefix.
 You can also specify a description of the script in the method's "doc" attribute.
 However, beware not to include an inline docstring at the start of the method if you do not set the "doc" attribute, as it would render the description not translatable.
 The script decorator does not suffer from this limitation, so you are encouraged to provide inline docstrings as needed when using it.

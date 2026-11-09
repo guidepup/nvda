@@ -9,6 +9,40 @@
 
 </head>
 <body><h1 id="nvda">مستجدات برنامج NVDA</h1>
+<h2 id="202631">2026.3.1</h2>
+<p>This is a patch release to fix security issues.
+A bug fix is also included for an issue introduced in 2026.3 with the task switcher in Windows 10.</p>
+<h3 id="security-fixes">Security fixes</h3>
+<p>Please responsibly disclose security issues following NVDA's <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="security policy">security policy</a>.</p>
+<ul>
+<li>Fixed NVDA leaking the Remote Access key. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21037">#21037</a>)</li>
+<li>Updated certifi to 2026.10.23. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3j65-46c5-4grp" rel="noopener" target="_blank" title="GHSA-3j65-46c5-4grp">GHSA-3j65-46c5-4grp</a>)</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li>Fixed bug where on Windows 10, the classic <code>alt+tab</code> task switcher no longer announced changing the selected task. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21052" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21052">#21052</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Updated eSpeak NG to <a href="https://github.com/nvaccess/espeak-ng/commit/b97de3cf2ad32c1d48c6bd36dfbf57a9c587fedc" rel="noopener" target="_blank" title="commit b97de3cf2">commit <code>b97de3cf2</code></a>.
+This changes Brazilian Portuguese back to how it worked in 2026.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21059" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21059">#21059</a>)</li>
+</ul>
+<h3 id="changes-for-developers">Changes for Developers</h3>
+<ul>
+<li>Updated Python to 3.13.17. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>)</li>
+<li>Updated pip dependencies (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>):<ul>
+<li>cryptography to 50.0.2.</li>
+<li>url-normalize to 3.0.1.</li>
+<li>pycaw to 20260927.</li>
+<li>nh3 to 0.3.7.</li>
+<li>crowdin-api-client to 1.30.0.</li>
+<li>markdown to 3.11.2.</li>
+<li>lxml to 6.1.3.</li>
+<li>regex to 2026.9.29.</li>
+<li>scons to 4.11.1.</li>
+<li>uv to 0.13.5.</li>
+<li>sphinx to 9.2.0.</li>
+<li>robotframework to 7.5.</li>
+</ul>
+</li>
+</ul>
 <h2 id="20263">2026.3</h2>
 <p>يتضمّن هذا الإصدار حسُّنا كبيرا في الأداء، وتحسيناتٍ في مربعات الحوار الخاصة بـ NVDA، وتوسيعا لإمكانيات التفاعُل عبر اللمس.</p>
 <p>أُجريت تحسيناتٌ على الأداء، بحيث أصبحت الاستجابة أسرع، وقلّت نسبةُ التأخير.
@@ -1768,14 +1802,14 @@ Use <code>gui.message.MessageDialog</code> instead. (<a class="gh-link gh-issue"
 </ul>
 <h2 id="202442">2024.4.2</h2>
 <p>This is a patch release to fix bugs with braille devices and reading math in Chromium.</p>
-<h3 id="bug-fixes">Bug fixes</h3>
+<h3 id="bug-fixes_1">Bug fixes</h3>
 <ul>
 <li>Fixed bug with with reading math in Chromium Browsers (Chrome, Edge). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17421" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17421">#17421</a>, <a class="gh-link gh-mention" href="https://github.com/NSoiffer" rel="noopener" target="_blank" title="GitHub User: @NSoiffer">@NSoiffer</a>)</li>
 <li>Humanware Brailliant BI 40X devices running firmware version 2.4 now work as expected. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17518" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17518">#17518</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
 </ul>
 <h2 id="202441">2024.4.1</h2>
 <p>This is a patch release to fix a bug when saving speech symbol dictionaries.</p>
-<h3 id="bug-fixes_1">Bug fixes</h3>
+<h3 id="bug-fixes_2">Bug fixes</h3>
 <ul>
 <li>Fixed bug where speech symbols dictionaries were not saved and the dialog would not be closed. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17344" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17344">#17344</a>)</li>
 </ul>
@@ -1897,7 +1931,7 @@ Use <code>gui.message.MessageDialog</code> instead. (<a class="gh-link gh-issue"
 </ul>
 <h2 id="202431">2024.3.1</h2>
 <p>This is a patch release to fix a bug with the automatic add-on update notification.</p>
-<h3 id="bug-fixes_2">Bug Fixes</h3>
+<h3 id="bug-fixes_3">Bug Fixes</h3>
 <ul>
 <li>When automatically checking for add-on updates, NVDA no longer freezes on poor connections. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17036">#17036</a>)</li>
 </ul>
@@ -2530,12 +2564,12 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 <h2 id="202334">2023.3.4</h2>
 <p>هذا إصدار ثانوي لإصلاح مشكلة الأمان ومشكلة التثبيت.
 يرجى الإبلاغ بحذر عن المشكلات الأمنية باتباع [سياسة الأمان] الخاصة بـ NVDA(https://github.com/nvaccess/nvda/blob/master/security.md).</p>
-<h3 id="security-fixes">Security Fixes</h3>
+<h3 id="security-fixes_1">Security Fixes</h3>
 <ul>
 <li>Prevents loading custom configuration while secure mode is forced.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-727q-h8j2-6p45" rel="noopener" target="_blank" title="GHSA-727q-h8j2-6p45">GHSA-727q-h8j2-6p45</a>)</li>
 </ul>
-<h3 id="bug-fixes_3">Bug Fixes</h3>
+<h3 id="bug-fixes_4">Bug Fixes</h3>
 <ul>
 <li>Fixed bug which caused the NVDA process to fail to exit correctly. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16123" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16123">#16123</a>)</li>
 <li>Fixed bug where if the previous NVDA process failed to exit correctly, an NVDA installation could fail to an unrecoverable state. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16122">#16122</a>)</li>
@@ -2543,7 +2577,7 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 <h2 id="202333">2023.3.3</h2>
 <p>This is a patch release to fix a security issue.
 Please responsibly disclose security issues following NVDA's <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="security policy">security policy</a>.</p>
-<h3 id="security-fixes_1">Security Fixes</h3>
+<h3 id="security-fixes_2">Security Fixes</h3>
 <ul>
 <li>Prevents possible reflected XSS attack from crafted content to cause arbitrary code execution.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8" rel="noopener" target="_blank" title="GHSA-xg6w-23rw-39r8">GHSA-xg6w-23rw-39r8</a>)</li>
@@ -7121,7 +7155,7 @@ Private changes that should not affect addon developers:</li>
 <li>Voices are now stored in the configuration file by ID instead of by index. This makes voice settings more reliable across systems and configuration changes. The voice setting will not be preserved in old configurations and an error may be logged the first time a synthesizer is used. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19">#19</a>)</li>
 <li>The level of a tree view item is now announced first if it has changed from the previously focused item for all tree views. Previously, this was only occurring for native Windows (SysTreeView32) tree views.</li>
 </ul>
-<h3 id="bug-fixes_4">Bug Fixes</h3>
+<h3 id="bug-fixes_5">Bug Fixes</h3>
 <ul>
 <li>The last chunk of audio is no longer cut off when using NVDA with eSpeak on a remote desktop server.</li>
 <li>Fix problems with saving speech dictionaries for certain voices.</li>

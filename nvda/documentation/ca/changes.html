@@ -9,6 +9,40 @@
 
 </head>
 <body><h1 id="que-hi-ha-de-nou-a-nvda">Què hi ha de nou a NVDA</h1>
+<h2 id="202631">2026.3.1</h2>
+<p>Aquesta és una versió de pegat per solucionar problemes de seguretat.
+També s'inclou una correcció d'errors per a un problema introduït a la 2026.3 amb el commutador de tasques a Windows 10.</p>
+<h3 id="correccions-de-seguretat">Correccions de seguretat</h3>
+<p>Si us plau, reveleu de manera responsable els problemes de seguretat seguint <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="la política de seguretat de NVDA">la política de seguretat de NVDA</a>.</p>
+<ul>
+<li>S'ha solucionat la fuita de la clau d'accés remot de NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21037">#21037</a>)</li>
+<li>Actualitzat certifi a 23.10.2026. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3j65-46c5-4grp" rel="noopener" target="_blank" title="GHSA-3j65-46c5-4grp">GHSA-3j65-46c5-4grp</a>)</li>
+</ul>
+<h3 id="correccions-derrors">Correccions d'errors</h3>
+<ul>
+<li>Error corregit en què a Windows 10, el clàssic commutador de tasques 'alt+tab' ja no anunciava el canvi de la tasca seleccionada. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21052" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21052">#21052</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Actualitzat eSpeak NG a <a href="https://github.com/nvaccess/espeak-ng/commit/b97de3cf2ad32c1d48c6bd36dfbf57a9c587fedc" rel="noopener" target="_blank" title="commit 'b97de3cf2'">commit 'b97de3cf2'</a>.
+Això fa que el portuguès brasiler torni a funcionar com funcionava a la 2026.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21059" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21059">#21059</a>)</li>
+</ul>
+<h3 id="canvis-per-als-desenvolupadors">Canvis per als desenvolupadors</h3>
+<ul>
+<li>Actualitzat Python a la 3.13.17. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>)</li>
+<li>Dependències actualitzades dels pips (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>):<ul>
+<li>cryptography a 50.0.2.</li>
+<li>url-normalize a 3.0.1.</li>
+<li>Pycaw a 20260927.</li>
+<li>NH3 a 0.3.7.</li>
+<li>crowdin-api-client a la 1.30.0.</li>
+<li>markdown a 3.11.2.</li>
+<li>LXML a 6.1.3.</li>
+<li>Regex a 2026.9.29.</li>
+<li>Scons a 4.11.1.</li>
+<li>uv a 0.13.5.</li>
+<li>Sphinx a 9.2.0.</li>
+<li>robotframework a 7.5.</li>
+</ul>
+</li>
+</ul>
 <h2 id="20263">2026.3</h2>
 <p>Aquesta versió inclou millores significatives en el rendiment, millores als diàlegs de NVDA i una ampliació de l'entrada a la pantalla tàctil.</p>
 <p>S'han fet diverses millores de rendiment per reduir el retard i millorar la resposta.
@@ -103,7 +137,7 @@ Els gestos des de la vora de la barra de tasques obren el menú d'inici o el Cen
 <li>S'ha reduït el nombre de crides de UI Automation interprocessos en processar esdeveniments, anunciar canvis de focus, anunciar objectes sota el ratolí i renderitzar contingut en mode navegació, emmagatzemant més propietats en memòria cau i agrupant les recuperacions de propietats de focus. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20608" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20608">#20608</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 <li>Limita la velocitat d'actualitzacions ràpides del filtre de la Lupa per reduir el risc de desencadenar convulsions. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20750" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20750">#20750</a>)</li>
 </ul>
-<h3 id="correccions-derrors">Correccions d'errors</h3>
+<h3 id="correccions-derrors_1">Correccions d'errors</h3>
 <ul>
 <li>NVDA ara anuncia la ubicació i etiqueta correctes per als elements del menú de Win32 en aplicacions de 32 bits quan l'escalat de pantalla supera el 100%. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19225" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19225">#19225</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20158" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20158">#20158</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
 <li>En PowerPoint i altres aplicacions d'Office, NVDA ara llegeix i navega correctament pels camps d'edició al diàleg d'inserció d' enllaç. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17390" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17390">#17390</a>, <a class="gh-link gh-mention" href="https://github.com/aryanchoudharypro" rel="noopener" target="_blank" title="GitHub User: @aryanchoudharypro">@aryanchoudharypro</a>)</li>
@@ -158,13 +192,13 @@ Anteriorment, aquestes tecles no tenien funció quan es premien soles. (<a class
 <h4 id="botiga-de-complements">Botiga de Complements</h4>
 <ul>
 <li>La botiga de complements ja no deixa de respondre quan es navega ràpidament per la llista de complements, com ara mantenint premuda una fletxa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17351" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17351">#17351</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
-<li>The Add-on Store no longer becomes unresponsive when searching for add-ons with a one-character query. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20886" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20886">#20886</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>La botiga de complements ja no queda sense resposta quan es busca complements amb una consulta d'un caràcter. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20886" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20886">#20886</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
 <li>NVDA ara es reinicia de manera fiable quan es demana després d'instal·lar un paquet de complement des de l'Explorador de Fitxers. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17925" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17925">#17925</a>, <a class="gh-link gh-mention" href="https://github.com/cary-rowen" rel="noopener" target="_blank" title="GitHub User: @cary-rowen">@cary-rowen</a>)</li>
 <li>El botó d'accions ara es pot utilitzar quan es seleccionen múltiples complements a la Botiga de complements per realitzar accions per lots, en lloc de només utilitzar el menú contextual de la llista de complements. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19971" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19971">#19971</a>, <a class="gh-link gh-mention" href="https://github.com/amirmahdifard" rel="noopener" target="_blank" title="GitHub User: @amirmahdifard">@amirmahdifard</a>)</li>
 <li>Actualitzar un complement ja no fa que els mòduls de la versió antiga estiguin carregats.
 Això podria causar errors en el complement actualitzat en el primer inici de NVDA després de l'actualització. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18971" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18971">#18971</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_1">Canvis per als desenvolupadors</h3>
 <p>Si us plau, consulteu <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre el procés de depreció i eliminació de l'API de NVDA.</p>
 <ul>
 <li>Dependències actualitzades:<ul>
@@ -598,7 +632,7 @@ El gest per defecte per repetir l'última informació parlada és 'NVDA+x', que 
 El gest per defecte per activar el desplaçament automàtic és 'NVDA+alt+k'.</p>
 <p>Liblouis s'ha actualitzat amb noves taules braille italianes i estonianes.</p>
 <p>Quan es restableix NVDA als valors per defecte de fàbrica, ara hi ha disponible un botó Desfer per restaurar la configuració anterior.</p>
-<h3 id="correccions-de-seguretat">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_1">Correccions de seguretat</h3>
 <p>Si us plau, reveleu de manera responsable els problemes de seguretat seguint <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="la política de seguretat de NVDA">la política de seguretat de NVDA</a>.</p>
 <ul>
 <li>Evita mostrar informació potencialment sensible a les línies braille quan l'ordinador s'apaga o es reinicia. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-qhjv-3xf4-9c66" rel="noopener" target="_blank" title="GHSA-qhjv-3xf4-9c66">GHSA-qhjv-3xf4-9c66</a>)</li>
@@ -687,7 +721,7 @@ La configuració està desactivada per defecte. (<a class="gh-link gh-issue" hre
 <li>Els botons d'opció "Tipus" al diàleg "Afegeix entrada al diccionari" ara estan disposats verticalment en lloc d'horitzontalment. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19657" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19657">#19657</a>)</li>
 <li>S'ha eliminat l'opció "Personalitzada" no funcional de la configuració del separador decimal matemàtic. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20425" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20425">#20425</a>)</li>
 </ul>
-<h3 id="correccions-derrors_1">Correccions d'errors</h3>
+<h3 id="correccions-derrors_2">Correccions d'errors</h3>
 <ul>
 <li>Botiga de complements:<ul>
 <li>NVDA ja no es bloqueja quan el directori de descàrrega de la botiga de complements no es pot netejar a causa d'errors de permisos de fitxer. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19202" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19202">#19202</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
@@ -716,7 +750,7 @@ La configuració està desactivada per defecte. (<a class="gh-link gh-issue" hre
 <li>S'ha solucionat un cas que podia fer que NVDA es congelés mentre llegia matemàtiques en braille. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20319" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20319">#20319</a>, <a class="gh-link gh-mention" href="https://github.com/AAClause" rel="noopener" target="_blank" title="GitHub User: @AAClause">@AAClause</a>)</li>
 <li>NVDA ja no falla a l'hora de carregar veus sapi4 que no admeten to, velocitat o volum. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20302" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20302">#20302</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_1">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_2">Canvis per als desenvolupadors</h3>
 <p>Si us plau, consulteu <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre el procés de depreció i eliminació de l'API de NVDA.</p>
 <ul>
 <li>S'ha aclarit la política de NV Access sobre canvis que trenquen l'API a la <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="Guia per a desenvolupadors">Guia per a desenvolupadors</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19599" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19599">#19599</a>)</li>
@@ -774,13 +808,13 @@ Utilitza l'enumeració 'speechDictHandler.types.EntryType' en canvi. (<a class="
 <p>Aquesta és una versió de pegat per solucionar problemes de seguretat.
 També s'inclou una correcció d'error per a un problema introduït a la 2026.1 amb la manera com es gestiona 'ctrl+f' a l'Explorador de fitxers.
 S'ha eliminat un canvi introduït a la 2026.1 sobre com NVDA gestiona els problemes de connexió amb l'Accés Remot.</p>
-<h3 id="correccions-de-seguretat_1">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_2">Correccions de seguretat</h3>
 <p>Si us plau, reveleu de manera responsable els problemes de seguretat seguint <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="la política de seguretat de NVDA">la política de seguretat de NVDA</a>.</p>
 <ul>
 <li>S'ha solucionat un problema que podria fer que NVDA es connectés a un servidor d'accés remot no fiable. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-m268-mc77-j2cr" rel="noopener" target="_blank" title="GHSA-m268-mc77-j2cr">GHSA-m268-mc77-j2cr</a>)</li>
 <li>Evita una situació que podria fer que els complements no seleccionats es copiïn a la configuració global del sistema. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-669f-7gpr-5vqm" rel="noopener" target="_blank" title="GHSA-669f-7gpr-5vqm">GHSA-669f-7gpr-5vqm</a>)</li>
 </ul>
-<h3 id="correccions-derrors_2">Correccions d'errors</h3>
+<h3 id="correccions-derrors_3">Correccions d'errors</h3>
 <ul>
 <li>A l'Explorador de fitxers, prémer 'ctrl+f' torna a enfocar la caixa de cerca sense anunciar posteriorment cap panell. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20021" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20021">#20021</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
 </ul>
@@ -789,7 +823,7 @@ S'ha eliminat un canvi introduït a la 2026.1 sobre com NVDA gestiona els proble
 <li>L'Accés Remot torna a intentar la reconnexió automàtica després d'una connexió inicial fallida com a ordinador controlat, en lloc de fallar immediatament.
 Això significa que les màquines sense una interfície gràfica o físicament inaccessibles configurades per connectar-se automàticament en l'inici seran accessibles un cop la xarxa estigui disponible. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20122">#20122</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_2">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_3">Canvis per als desenvolupadors</h3>
 <ul>
 <li>El mòdul 'winBindings.cfgmgr32' ara està inclòs en les compilacions binàries de NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20089" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20089">#20089</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
 </ul>
@@ -895,7 +929,7 @@ Actualment inclou la configuració de la Cortina de Pantalla (anteriorment a la 
 <li>La interfície NVDA ara està traduïda al cambodjà. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19450" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19450">#19450</a>)</li>
 <li>NVDA ja no activarà per defecte "Utilitzar NVDA durant l'inici de sessió" quan s'instal·la per primera vegada. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19631" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19631">#19631</a>)</li>
 </ul>
-<h3 id="correccions-derrors_3">Correccions d'errors</h3>
+<h3 id="correccions-derrors_4">Correccions d'errors</h3>
 <ul>
 <li>Accés remot:<ul>
 <li>Notificacions millorades a l'usuari quan es connecta i l'ordinador controlat falla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19103" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19103">#19103</a>, <a class="gh-link gh-mention" href="https://github.com/tareh7z" rel="noopener" target="_blank" title="GitHub User: @tareh7z">@tareh7z</a>)</li>
@@ -928,7 +962,7 @@ Actualment inclou la configuració de la Cortina de Pantalla (anteriorment a la 
 <li>En els navegadors Chromium, si un document conté enllaços amb una URL malformada, serà possible llegir el document de nou. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19125" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19125">#19125</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>NVDA ja no reprodueix cap so per errors ortogràfics mentre escrius si el mode de veu està posat en on-demand o desactivat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19323" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19323">#19323</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_3">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_4">Canvis per als desenvolupadors</h3>
 <p>Consulta <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre el procés d'obsolescència i eliminació de l'API de NVDA.</p>
 <ul>
 <li>Nota: es tracta d'una versió que trenca la compatibilitat de l'API de complements.
@@ -1167,26 +1201,26 @@ Utilitza 'AddonsState.fromDict' en canvi.</li>
 </ul>
 <h2 id="202533">2025.3.3</h2>
 <p>Aquest és un pegat per a corregir un problema de seguretat.</p>
-<h3 id="correccions-de-seguretat_2">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_3">Correccions de seguretat</h3>
 <p>Si us plau, reveleu de manera responsable els problemes de seguretat seguint <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="la política de seguretat de NVDA">la política de seguretat de NVDA</a>.</p>
 <ul>
 <li>Evita una situació en què NVDA pot funcionar inesperadament com a administrador. <a href="https://github.com/nvaccess/nvda/security/advisories/ghsa-cq78-fjp7-3rp5" rel="noopener" target="_blank" title="GHSA-cq78-fjp7-3rp5">GHSA-cq78-fjp7-3rp5</a></li>
 </ul>
 <h2 id="202532">2025.3.2</h2>
 <p>Aquesta és una versió de pedaç per solucionar un problema de seguretat.</p>
-<h3 id="correccions-de-seguretat_3">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_4">Correccions de seguretat</h3>
 <p>Si us plau, reveleu de manera responsable els problemes de seguretat seguint la <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="política de seguretat de NVDA">política de seguretat de NVDA</a>.</p>
 <ul>
 <li>S'ha corregit una vulnerabilitat que podia impedir l'accés a pantalles segures mitjançant accés remot. (<a href="https://github.com/nvaccess/nvda/security/advisories/ghsa-42v6-wjv6-h3jj" rel="noopener" target="_blank" title="GHSA-42v6-wjv6-h3jj">GHSA-42v6-wjv6-h3jj</a>)</li>
 </ul>
 <h2 id="202531">2025.3.1</h2>
 <p>Aquest és un pegat per a corregir un problema de seguretat i un error.</p>
-<h3 id="correccions-de-seguretat_4">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_5">Correccions de seguretat</h3>
 <p>Si us plau, reveleu de manera responsable els problemes de seguretat seguint la <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="política de seguretat de NVDA">política de seguretat de NVDA</a>.</p>
 <ul>
 <li>S'ha corregit una vulnerabilitat que podria impedir l'accés a pantalles segures a través de l'accés remot. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-vr27-g5ph-xvq2" rel="noopener" target="_blank" title="GHSA-vr27-g5ph-xvq2">GHSA-vr27-g5ph-xvq2</a>)</li>
 </ul>
-<h3 id="correccions-derrors_4">Correccions d'errors</h3>
+<h3 id="correccions-derrors_5">Correccions d'errors</h3>
 <ul>
 <li>L'accés remot ara retorna el control a l'ordinador local si es bloqueja mentre controla l'ordinador remot. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18951" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18951">#18951</a>)</li>
 </ul>
@@ -1231,7 +1265,7 @@ Tingueu en compte que això està desactivat per defecte a causa que el disposit
 <li>En els programes de terminal de Windows 10 versió 1607 i posteriors, el càlcul del text modificat ara s'executa dins de NVDA en lloc d'a través d'un procés extern, que pot millorar el rendiment i la fiabilitat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18480" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18480">#18480</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)</li>
 <li>El diàleg de connexió d'accés remot de NVDA ara recorda el mode de connexió més recent, el tipus de servidor i el port allotjat localment de les connexions manuals. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18512" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18512">#18512</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18701" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18701">#18701</a>)</li>
 </ul>
-<h3 id="correccions-derrors_5">Correccions d'errors</h3>
+<h3 id="correccions-derrors_6">Correccions d'errors</h3>
 <ul>
 <li>Síntesi de veu:<ul>
 <li>S'ha corregit un retallat excessiu del silenci inicial que retalla part del discurs quan s'utilitzen algunes veus. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18003" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18003">#18003</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
@@ -1250,7 +1284,7 @@ Tingueu en compte que això està desactivat per defecte a causa que el disposit
 <li>S'ha solucionat el problema per el qual no funcionava el ressaltat amb les llistes d'emplenament automàtic de contactes d'Outlook. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18483" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18483">#18483</a>, <a class="gh-link gh-mention" href="https://github.com/Nerlant" rel="noopener" target="_blank" title="GitHub User: @Nerlant">@Nerlant</a>)</li>
 <li>Una còpia portàtil llançada immediatament després de la creació ara utilitza correctament la seva pròpia configuració en lloc d'una altra. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18442" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18442">#18442</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_4">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_5">Canvis per als desenvolupadors</h3>
 <p>Consulta <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre el procés d'obsolescència i eliminació de l'API de NVDA.</p>
 <ul>
 <li>Actualització de components:<ul>
@@ -1336,7 +1370,7 @@ eSpeak NG s'ha actualitzat, afegint suport per a l'aromà, el tàtar de Crimea, 
 <li>A Microsoft Edge, NVDA ja no cancel·larà dir tot quan s'anunciïn notificacions com ara "càrrega completa". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17986" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17986">#17986</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li>Ara NVDA avisarà abans d'actualitzar-lo quan estigui connectat com a ordinador controlat amb l'accés remot d'NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18455" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18455">#18455</a>)</li>
 </ul>
-<h3 id="correccions-derrors_6">Correccions d'errors</h3>
+<h3 id="correccions-derrors_7">Correccions d'errors</h3>
 <ul>
 <li>A les aplicacions WinUI 3, inclòs Microsoft Copilot i parts de l'Explorador de fitxers de Windows 11, NVDA ja no deixarà d'anunciar els controls quan utilitzeu el ratolí i la interacció tàctil. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17407" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17407">#17407</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17771" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17771">#17771</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li>S'han corregit alguns casos rars en què la reproducció de sons de NVDA podia provocar errors inesperats. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17918" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17918">#17918</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -1355,7 +1389,7 @@ eSpeak NG s'ha actualitzat, afegint suport per a l'aromà, el tàtar de Crimea, 
 <li>Quan escriviu en una cel·la del Microsoft Excel, la línia braille ara s'actualitza correctament per mostrar el contingut nou. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18391" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18391">#18391</a>)</li>
 <li>Quan s'utilitza l'accés remot de NVDA, la veu des de les pantalles de control de comptes d'usuari de l'ordinador remot ara funciona de manera fiable. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18101" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18101">#18101</a>, <a class="gh-link gh-mention" href="https://github.com/jcsteh" rel="noopener" target="_blank" title="GitHub User: @jcsteh">@jcsteh</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_5">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_6">Canvis per als desenvolupadors</h3>
 <p>Consulta <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre l'obsolescència i el procés d'eliminació de l'API de NVDA.</p>
 <ul>
 <li>Actualització de components:<ul>
@@ -1384,13 +1418,13 @@ Les diverses definicions de taula integrades es mouen al mòdul '__tables' d'aqu
 </ul>
 <h2 id="202512">2025.1.2</h2>
 <p>Aquest és un pegat que es llança per corregir un error.</p>
-<h3 id="correccions-derrors_7">Correccions d'errors</h3>
+<h3 id="correccions-derrors_8">Correccions d'errors</h3>
 <ul>
 <li>Algunes versions de Microsoft Word anteriors a la versió 16.0.18226 ja no es bloquejaran en obrir-se. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18280" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18280">#18280</a>)</li>
 </ul>
 <h2 id="202511">2025.1.1</h2>
 <p>Aquest és un pegat que es llança per corregir un error.</p>
-<h3 id="correccions-derrors_8">Correccions d'errors</h3>
+<h3 id="correccions-derrors_9">Correccions d'errors</h3>
 <ul>
 <li>S'ha corregit un error en què la botiga de complements no s'obria quan s'utilitzava l'idioma coreà per a la interfície de NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18250" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18250">#18250</a>)</li>
 </ul>
@@ -1412,7 +1446,7 @@ Hi ha disponibles noves taules coptes, cuneïformes compactes i portugueses de 6
 <ul>
 <li>Aquesta versió trenca la compatibilitat amb els complements existents.</li>
 </ul>
-<h3 id="correccions-de-seguretat_5">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_6">Correccions de seguretat</h3>
 <p>Si us plau, reveleu els problemes de seguretat de manera responsable seguint la <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="política de seguretat">política de seguretat</a> de NVDA.</p>
 <ul>
 <li>Impedeix mostrar informació potencialment sensible a les línies braille quan el dispositiu està bloquejat.
@@ -1542,7 +1576,7 @@ Si això no funciona amb la vostra veu SAPI 4, podeu desactivar WASAPI per a SAP
 </li>
 <li>Les taules braille d'entrada i sortida per defecte ara es poden determinar en funció de l'idioma de NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17306" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17306">#17306</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16390" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16390">#16390</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/290" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #290">#290</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 </ul>
-<h3 id="correccions-derrors_9">Correccions d'errors</h3>
+<h3 id="correccions-derrors_10">Correccions d'errors</h3>
 <ul>
 <li>Síntesi de veu:<ul>
 <li>S'ha solucionat un problema en què la lectura contínua (dir-ho tot) s'aturava al final de la primera frase quan s'utilitzaven alguns sintetitzadors SAPI5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16691" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16691">#16691</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
@@ -1610,7 +1644,7 @@ En qualsevol document, si el cursor està a l'última línia, es mourà al final
 <li>Quan els enllaços d'ancoratge apunten al mateix objecte que es col·loca el cursor virtual, NVDA ja no deixa de desplaçar-se fins a la destinació de l'enllaç. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17669" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17669">#17669</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>La icona de la finestra NVDA Highlighter ja no es fixa a la barra de tasques després de reiniciar l'Explorador. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17696" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17696">#17696</a>, <a class="gh-link gh-mention" href="https://github.com/hwf1324" rel="noopener" target="_blank" title="GitHub User: @hwf1324">@hwf1324</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_6">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_7">Canvis per als desenvolupadors</h3>
 <p>Consulta <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre l'obsolescència i el procés d'eliminació de l'API de NVDA.</p>
 <ul>
 <li>Nota: es tracta d'una versió que trenca la compatibilitat de l'API de complements.
@@ -1765,14 +1799,14 @@ Utilitzeu 'gui.message.MessageDialog' en el seu lloc. (<a class="gh-link gh-issu
 </ul>
 <h2 id="202442">2024.4.2</h2>
 <p>Aquesta és una versió de pedaç per corregir errors amb dispositius braille i lectura de matemàtiques a Chromium.</p>
-<h3 id="correccions-derrors_10">Correccions d'errors</h3>
+<h3 id="correccions-derrors_11">Correccions d'errors</h3>
 <ul>
 <li>S'ha corregit un error amb la lectura de matemàtiques als navegadors Chromium (Chrome, Edge). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17421" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17421">#17421</a>, <a class="gh-link gh-mention" href="https://github.com/NSoiffer" rel="noopener" target="_blank" title="GitHub User: @NSoiffer">@NSoiffer</a>)</li>
 <li>Els dispositius Humanware Brailliant BI 40X amb la versió de firmware 2.4 ara funcionen com s'esperava. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17518" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17518">#17518</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
 </ul>
 <h2 id="202441">2024.4.1</h2>
 <p>Aquesta és una versió de pedaç per corregir un error en guardar diccionaris de pronunciació de símbols.</p>
-<h3 id="correccions-derrors_11">Correccions d'errors</h3>
+<h3 id="correccions-derrors_12">Correccions d'errors</h3>
 <ul>
 <li>S'ha corregit un error en què els diccionaris de símbols de veu no es guardaven i el diàleg no es tancava. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17344" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17344">#17344</a>)</li>
 </ul>
@@ -1840,7 +1874,7 @@ NVDA ja no és inestable després de reiniciar NVDA durant una exploració autom
 <li>Quan s'utilitza una pantalla braille multilínia mitjançant el controlador braille HID estàndard, s'utilitzaran totes les línies de cel·les. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16993" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16993">#16993</a>, <a class="gh-link gh-mention" href="https://github.com/alexmoon" rel="noopener" target="_blank" title="GitHub User: @alexmoon">@alexmoon</a>)</li>
 <li>L'estabilitat del suport Poedit de NVDA s'ha millorat amb l'efecte secundari que la versió mínima requerida de Poedit ara és la versió 3.5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16889" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16889">#16889</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 </ul>
-<h3 id="correccions-derrors_12">Correccions d'errors</h3>
+<h3 id="correccions-derrors_13">Correccions d'errors</h3>
 <ul>
 <li>Correccions en braille:<ul>
 <li>Ara és possible utilitzar les tecles d'encaminament de la pantalla braille per moure el cursor de text al Microsoft PowerPoint. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9101" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9101">#9101</a>)</li>
@@ -1861,7 +1895,7 @@ NVDA ja no és inestable després de reiniciar NVDA durant una exploració autom
 <li>NVDA ja no deixa de respondre després de mantenir premuda una tecla de fletxa durant molt de temps mentre està en mode de navegació, especialment a Microsoft Word i Microsoft Outlook. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16812" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16812">#16812</a>)</li>
 <li>NVDA ja no llegeix l'última línia quan el cursor es troba a la penúltima línia d'un control d'edició multilínia en aplicacions Java. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17027" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17027">#17027</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_7">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_8">Canvis per als desenvolupadors</h3>
 <p>Consulta <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre l'obsolescència i el procés d'eliminació de l'API de NVDA.</p>
 <ul>
 <li>Actualització de components:<ul>
@@ -1894,7 +1928,7 @@ NVDA ja no és inestable després de reiniciar NVDA durant una exploració autom
 </ul>
 <h2 id="202431">2024.3.1</h2>
 <p>Aquesta és una versió de pedaç per corregir un error amb la notificació d'actualització automàtica dels complements.</p>
-<h3 id="correccions-derrors_13">Correccions d'errors</h3>
+<h3 id="correccions-derrors_14">Correccions d'errors</h3>
 <ul>
 <li>Quan comprova automàticament si hi ha actualitzacions de complements, NVDA ja no es congela en connexions deficients. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17036">#17036</a>)</li>
 </ul>
@@ -1963,7 +1997,7 @@ Unicode CLDR també ha estat actualitzat.</p>
 <li>Per defecte, es crearà una carpeta nova quan es fa una còpia portable.
 Un missatge d'advertència t'informarà si proves d'escriure en un directori no buit. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16686" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16686">#16686</a>)</li>
 </ul>
-<h3 id="correccions-derrors_14">Correccions d'errors</h3>
+<h3 id="correccions-derrors_15">Correccions d'errors</h3>
 <ul>
 <li>Correccions a Windows 11:<ul>
 <li>NVDA ja no sembla quedar-se encallat quan tanquis l'historial del porta papers i el panell d'emojis. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16346" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16346">#16346</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16347" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16347">#16347</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
@@ -1995,7 +2029,7 @@ Un missatge d'advertència t'informarà si proves d'escriure en un directori no 
 <li>NVDA reportarà adreces quan es desplaça per als camps To/CC/BCC a outlook.com / Modern Outlook. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16856" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16856">#16856</a>)</li>
 <li>NVDA ara gestiona les fallades d'instal·lació de complements amb més refinament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16704" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16704">#16704</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_8">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_9">Canvis per als desenvolupadors</h3>
 <ul>
 <li>NVDA ara utilitza Ruff en lloc de flake8 per a la linting. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14817" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14817">#14817</a>)</li>
 <li>S'ha corregit el sistema de compilació de NVDA perquè funcioni correctament quan s'utilitza Visual Studio 2022 versió 17.10 i superior. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16480" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16480">#16480</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -2106,7 +2140,7 @@ LibLouis es va actualitzar, afegint noves taules detallades (amb majúscules ind
 </li>
 <li>Els punts de farciment que s'utilitzen habitualment en índex ja no s'indiquen a nivells de puntuació baixa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15845" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15845">#15845</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="correccions-derrors_15">Correccions d'errors</h3>
+<h3 id="correccions-derrors_16">Correccions d'errors</h3>
 <ul>
 <li>Corregida la lectura datributs matemàtics a Adobe Reader, que donava com a resultat una información en veu i braille pobres o incorrectes. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17980" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17980">#17980</a>)</li>
 <li>Correccions per a Windows 11:<ul>
@@ -2134,7 +2168,7 @@ LibLouis es va actualitzar, afegint noves taules detallades (amb majúscules ind
 <li>L'interruptor de línia d'ordres '-h'/'--help' torna a funcionar correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16522" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16522">#16522</a>, <a class="gh-link gh-mention" href="https://github.com/XLTechie" rel="noopener" target="_blank" title="GitHub User: @XLTechie">@XLTechie</a>)</li>
 <li>El suport de NVDA per al programari de traducció Poedit versió 3.4 o superior funciona correctament quan es tradueixen llengües amb 1 o més de 2 formes plurals (per exemple, xinès, polonès). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16318" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16318">#16318</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_9">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_10">Canvis per als desenvolupadors</h3>
 <p>Consulta <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre l'obsolescència i el procés d'eliminació de l'API de NVDA.</p>
 <ul>
 <li>Instanciar objectes 'winVersion.WinVersion' amb versions desconegudes de Windows superiors a 10.0.22000, com 10.0.25398, retorna "Windows 11 desconegut" en lloc de "Windows 10 desconegut" com a nom de la versió. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15992" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15992">#15992</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
@@ -2218,7 +2252,7 @@ S'anima als usuaris de Poedit 1 a actualitzar a Poedit 3 si volen dependre de l'
 <li>Durant la navegació d'objectes, els objectes desactivats (no disponibles) ja no seran ignorats. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15477" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15477">#15477</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 <li>S'ha afegit la taula de continguts al document de comandaments de teclat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16106" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16106">#16106</a>)</li>
 </ul>
-<h3 id="correccions-derrors_16">Correccions d'errors</h3>
+<h3 id="correccions-derrors_17">Correccions d'errors</h3>
 <ul>
 <li>Botiga de complements:<ul>
 <li>Quan l'estat d'un complement canvia mentre té el focus, per exemple un canvi de "descarregant" a "descarregat", l'element actualitzat ara s'anuncia correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15859" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15859">#15859</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -2279,7 +2313,7 @@ També s'actualitza amb la UIA activada; quan s'escriu text i el braille segueix
 <li>NVDA torna a canviar al mode de navegació quan tanca les caixes combinades amb 'escape' o 'alt+upArrow' a Firefox o Chrome. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15653" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15653">#15653</a>)</li>
 <li>Fer fletxes amunt i avall a les caixes combinades d'iTunes ja no canviarà de manera inapropiada al mode de navegació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15653" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15653">#15653</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_10">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_11">Canvis per als desenvolupadors</h3>
 <p>Consulta <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre l'obsolescència i el procés d'eliminació de l'API de NVDA.</p>
 <ul>
 <li>Nota: es tracta d'una versió que trenca la compatibilitat de l'API de complements.
@@ -2527,12 +2561,12 @@ Utilitza 'bdDetect.DeviceType.</em>' en comptes d'això. (<a class="gh-link gh-i
 <h2 id="202334">2023.3.4</h2>
 <p>Aquesta és una versió de pegat per solucionar un problema de seguretat i d'instal·lador.
 Si us plau, reveleu de manera responsable els problemes de seguretat seguint la <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="política de seguretat de NVDA">política de seguretat de NVDA</a>.</p>
-<h3 id="correccions-de-seguretat_6">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_7">Correccions de seguretat</h3>
 <ul>
 <li>Impedeix carregar configuracions personalitzades mentre el mode segur està forçat.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-727q-h8j2-6p45" rel="noopener" target="_blank" title="GHSA-727q-h8j2-6p45">GHSA-727q-h8j2-6p45</a>)</li>
 </ul>
-<h3 id="correccions-derrors_17">Correccions d'errors</h3>
+<h3 id="correccions-derrors_18">Correccions d'errors</h3>
 <ul>
 <li>S'ha corregit un error que feia que el procés NVDA no sortís correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16123" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16123">#16123</a>)</li>
 <li>Error corregit on, si el procés NVDA anterior no es tancava correctament, una instal·lació de NVDA podia fallar fins a un estat irrecuperable. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16122">#16122</a>)</li>
@@ -2540,7 +2574,7 @@ Si us plau, reveleu de manera responsable els problemes de seguretat seguint la 
 <h2 id="202333">2023.3.3</h2>
 <p>Aquesta és una versió de pedaç per solucionar un problema de seguretat.
 Si us plau, reveleu de manera responsable els problemes de seguretat seguint la <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="política de seguretat de NVDA">política de seguretat de NVDA</a>.</p>
-<h3 id="correccions-de-seguretat_7">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_8">Correccions de seguretat</h3>
 <ul>
 <li>Evita que un possible atac XSS reflectit per contingut creat provoqui una execució arbitrària de codi.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8" rel="noopener" target="_blank" title="GHSA-xg6w-23rw-39r8">GHSA-xg6w-23rw-39r8</a>)</li>
@@ -2549,7 +2583,7 @@ Si us plau, reveleu de manera responsable els problemes de seguretat seguint la 
 <p>Aquesta és una versió de pedaç per solucionar un problema de seguretat.
 El pegat de seguretat de 2023.3.1 no es va resoldre correctament.
 Si us plau, reveleu de manera responsable els problemes de seguretat seguint la <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="política de seguretat de NVDA">política de seguretat de NVDA</a>.</p>
-<h3 id="correccions-de-seguretat_8">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_9">Correccions de seguretat</h3>
 <ul>
 <li>El pegat de seguretat de 2023.3.1 no es va resoldre correctament.
 Evita possibles accessos al sistema i l'execució arbitrària de codi amb privilegis del sistema per a usuaris no autenticats.
@@ -2558,7 +2592,7 @@ Evita possibles accessos al sistema i l'execució arbitrària de codi amb privil
 <h2 id="202331">2023.3.1</h2>
 <p>Aquesta és una versió de pedaç per solucionar un problema de seguretat.
 Si us plau, reveleu de manera responsable els problemes de seguretat seguint la <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="política de seguretat de NVDA">política de seguretat de NVDA</a>.</p>
-<h3 id="correccions-de-seguretat_9">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_10">Correccions de seguretat</h3>
 <ul>
 <li>Evita possibles accessos al sistema i l'execució arbitrària de codi amb privilegis del sistema per a usuaris no autenticats.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-h7pp-6jqw-g3pj" rel="noopener" target="_blank" title="GHSA-h7pp-6jqw-g3pj">GHSA-h7pp-6jqw-g3pj</a>)</li>
@@ -2624,7 +2658,7 @@ Ara pots desactivar controladors específics per a la detecció automàtica de v
 <li>Botiga de complements: Els complements instal·lats ara es llistaran a la pestanya complements Disponibles, si estan disponibles a la botiga. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15374" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15374">#15374</a>)</li>
 <li>Algunes tecles d'accés ràpid s'han actualitzat al menú NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15364" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15364">#15364</a>)</li>
 </ul>
-<h3 id="correccions-derrors_18">Correccions d'errors</h3>
+<h3 id="correccions-derrors_19">Correccions d'errors</h3>
 <ul>
 <li>Microsoft Office:<ul>
 <li>Corregit un bloqueig a Microsoft Word quan les opcions de format de documents "informe d'encapçalaments" i "informar de comentaris i notes" no estaven activades. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15019" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15019">#15019</a>)</li>
@@ -2655,7 +2689,7 @@ Ara pots desactivar controladors específics per a la detecció automàtica de v
 <li>NVDA ja no ignora els canvis de focus quan una finestra anidada (finestra de nét) rep focus. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15432" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15432">#15432</a>)</li>
 <li>S'ha solucionat una possible causa de bloqueig durant l'inici de NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15517" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15517">#15517</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_11">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_12">Canvis per als desenvolupadors</h3>
 <p>Consulta <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="la guia per a desenvolupadors">la guia per a desenvolupadors</a> per obtenir informació sobre l'obsolescència i el procés d'eliminació de l'API de NVDA.</p>
 <ul>
 <li>'braille.handler.handlerUpdate' i 'braille.handler.handlerReviewMove' s'han canviat per no actualitzar-se instantàniament.
@@ -2785,7 +2819,7 @@ Això es pot desactivar al panell de Configuració Avançada. (<a class="gh-link
 <li>Si Windows està configurat per mostrar segons al rellotge de la safata del sistema, utilitzar 'NVDA+f12' per informar de l'hora ara respecta aquesta configuració. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14742" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14742">#14742</a>)</li>
 <li>NVDA ara informarà de grups sense etiquetar que tinguin informació útil de posició, com en versions recents dels menús de Microsoft Office 365. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14878" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14878">#14878</a>)</li>
 </ul>
-<h3 id="correccions-derrors_19">Correccions d'errors</h3>
+<h3 id="correccions-derrors_20">Correccions d'errors</h3>
 <ul>
 <li>Braille:<ul>
 <li>Diverses correccions d'estabilitat a l'entrada/sortida de línies braille, resultant en errors i bloquejos menys freqüents de NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14627" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14627">#14627</a>)</li>
@@ -2937,7 +2971,7 @@ Si prems dues vegades, es mostrarà en una finestra per a una revisió més deta
 </li>
 <li>Les aplicacions Java amb controls que utilitzen l'estat seleccionable ara anunciaran quan un element no està seleccionat en lloc de quan l'element està seleccionat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14336" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14336">#14336</a>)</li>
 </ul>
-<h3 id="correccions-derrors_20">Correccions d'errors</h3>
+<h3 id="correccions-derrors_21">Correccions d'errors</h3>
 <ul>
 <li>Correccions a Windows 11:<ul>
 <li>NVDA anunciarà els objectes destacats de cerca quan s'obri el menú Inici. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13841" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13841">#13841</a>)</li>
@@ -3150,7 +3184,7 @@ Hi ha noves taules braille xineses, sueques, luganda i kinyarwanda.</p>
 </li>
 <li>NVDA ara inclou l'arquitectura del sistema operatiu com a part del seguiment d'estadístiques d'usuari. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14019" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14019">#14019</a>)</li>
 </ul>
-<h3 id="correccions-derrors_21">Correccions d'errors</h3>
+<h3 id="correccions-derrors_22">Correccions d'errors</h3>
 <ul>
 <li>Quan s'actualitza NVDA utilitzant el Gestor de Paquets de Windows CLI (també coneguda com winget), una versió llançada de NVDA ja no es tracta sempre com a més nova que la versió alfa instal·lada. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12469" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12469">#12469</a>)</li>
 <li>NVDA ara anunciarà correctament les caixes de grup a les aplicacions Java. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13962" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13962">#13962</a>)</li>
@@ -3193,19 +3227,19 @@ Cal tenir en compte que encara es coneixen problemes amb Chrome i Edge. (<a clas
 <h2 id="202233">2022.3.3</h2>
 <p>Aquesta és una versió menor per solucionar problemes amb les versions 2022.3.2, 2022.3.1 i 2022.3.
 Això també resol una qüestió de seguretat.</p>
-<h3 id="correccions-de-seguretat_10">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_11">Correccions de seguretat</h3>
 <ul>
 <li>Impedeix l'accés possible al sistema (per exemple, la consola Python de NVDA) per a usuaris no autenticats.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-fpwc-2gxx-j9v7" rel="noopener" target="_blank" title="GHSA-fpwc-2gxx-j9v7">GHSA-fpwc-2gxx-j9v7</a>)</li>
 </ul>
-<h3 id="correccions-derrors_22">Correccions d'errors</h3>
+<h3 id="correccions-derrors_23">Correccions d'errors</h3>
 <ul>
 <li>Error corregit on, si NVDA es congela en bloquejar, ara permet accedir a l'escriptori de l'usuari mentre està a la pantalla de bloqueig de Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
 <li>Error solucionat on si NVDA es congela en bloquejar, no es comportarà correctament, com si el dispositiu encara estigués bloquejat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
 <li>S'han esmenat els problemes d'accessibilitat amb el procés de Windows "oblidí el meu PIN" i l'experiència d'actualització/instal·lació de Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14368" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14368">#14368</a>)</li>
 <li>S'ha esmenat l'error en intentar instal·lar NVDA en alguns entorns Windows, p. ex. Windows Server. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14379" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14379">#14379</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_12">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_13">Canvis per als desenvolupadors</h3>
 <h4 id="obsolescencies_11">Obsolescències</h4>
 <ul>
 <li>'utils.security.isObjectAboveLockScreen(obj)' està obsolet, utilitzeu en canvi 'obj.isBelowLockScreen'. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
@@ -3220,12 +3254,12 @@ Això també resol una qüestió de seguretat.</p>
 </ul>
 <h2 id="202232">2022.3.2</h2>
 <p>Aquesta és una versió menor per corregir regressions amb la 2022.3.1 i abordar un problema de seguretat.</p>
-<h3 id="correccions-de-seguretat_11">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_12">Correccions de seguretat</h3>
 <ul>
 <li>Impedeix un possible accés a nivell de sistema per a usuaris no autenticats.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3jj9-295f-h69w" rel="noopener" target="_blank" title="GHSA-3jj9-295f-h69w">GHSA-3jj9-295f-h69w</a>)</li>
 </ul>
-<h3 id="correccions-derrors_23">Correccions d'errors</h3>
+<h3 id="correccions-derrors_24">Correccions d'errors</h3>
 <ul>
 <li>Corregeix una regressió a partir de 2022.3.1 on s'ha desactivat certa funcionalitat en pantalles segures. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14286" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14286">#14286</a>)</li>
 <li>Corregeix una regressió a partir de 2022.3.1 on s'ha desactivat certa funcionalitat després d'iniciar la sessió, si l'NVDA ha començat a la pantalla de bloqueig. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14301" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14301">#14301</a>)</li>
@@ -3233,7 +3267,7 @@ Això també resol una qüestió de seguretat.</p>
 <h2 id="202231">2022.3.1</h2>
 <p>Aquesta és una versió menor per solucionar diversos problemes de seguretat.
 Si us plau, informeu-vos responsablement dels problemes de seguretat a <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="correccions-de-seguretat_12">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_13">Correccions de seguretat</h3>
 <ul>
 <li>Sha corregit Exploit on era possible elevar des de l'usuari a privilegis de sistema.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-q7c2-pgqm-vvw5" rel="noopener" target="_blank" title="GHSA-q7c2-pgqm-vvw5">GHSA-q7c2-pgqm-vvw5</a>)</li>
@@ -3242,7 +3276,7 @@ Si us plau, informeu-vos responsablement dels problemes de seguretat a <a href="
 <li>S'ha solucionat un problema pel qual el text del visualitzador de veu es guarda en memòria caché quan es bloqueja Windows.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-grvr-j2h8-3qm4" rel="noopener" target="_blank" title="GHSA-grvr-j2h8-3qm4">GHSA-grvr-j2h8-3qm4</a>)</li>
 </ul>
-<h3 id="correccions-derrors_24">Correccions d'errors</h3>
+<h3 id="correccions-derrors_25">Correccions d'errors</h3>
 <ul>
 <li>Evita que un usuari no autenticat actualitzi la configuració del visualitzador de veu i Braille a la pantalla de bloqueig. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-grvr-j2h8-3qm4" rel="noopener" target="_blank" title="GHSA-grvr-j2h8-3qm4">GHSA-grvr-j2h8-3qm4</a>)</li>
 </ul>
@@ -3281,7 +3315,7 @@ Es pot tornar a activar al panell de configuració avançada de NVDA. (<a class=
 <li>En lloc de reportar "té detalls", s'inclou la finalitat dels detalls quan és possible, per exemple "té comentari". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13649" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13649">#13649</a>)</li>
 <li>La mida d'instal·lació de NVDA ara es mostra a la secció de Programes i Funcionalitats de Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13909">#13909</a>)</li>
 </ul>
-<h3 id="correccions-derrors_25">Correccions d'errors</h3>
+<h3 id="correccions-derrors_26">Correccions d'errors</h3>
 <ul>
 <li>Adobe Acrobat / Reader de 64 bits ja no es bloqueja quan es llegeix un document PDF. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12920" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12920">#12920</a>)<ul>
 <li>Cal tenir en compte que també cal la versió més actualitzada d'Adobe Acrobat / Reader per evitar el bloqueig.</li>
@@ -3295,7 +3329,7 @@ Això millorarà el rendiment d'algunes aplicacions Java, incloent-hi IntelliJ I
 <li>Quan l'augment de taxa està desactivat, la velocitat de la veu ja no baixa entre el 99% and 100%. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13876" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13876">#13876</a>)</li>
 <li>Correcció d'un error que permetia obrir 2 diàlegs de Gestos d'Entrada. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13854" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13854">#13854</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_13">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_14">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Actualitzat Comtypes a la versió 1.1.11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12953" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12953">#12953</a>)</li>
 <li>En versions de Windows Console ('conhost.exe') amb un nivell d'API de NVDA de 2 ('FORMATTED') o superior, com les incloses amb la versió 22H2 de Windows 11 (Sun Valley 2), ara s'utilitza l'automatització d'interfície d'usuari per defecte. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10964" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10964">#10964</a>)<ul>
@@ -3310,33 +3344,33 @@ Això millorarà el rendiment d'algunes aplicacions Java, incloent-hi IntelliJ I
 <p>No es proposen obsolescències a 2022.3.</p>
 <h2 id="202224">2022.2.4</h2>
 <p>Aquest és un patch que es llança per corregir un error.</p>
-<h3 id="correccions-derrors_26">Correccions d'errors</h3>
+<h3 id="correccions-derrors_27">Correccions d'errors</h3>
 <ul>
 <li>S'ha corregit un exploit on era possible obrir la consola python de NVDA a través del visor de logs a la pantalla de bloqueig.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-585m-rpvv-93qg" rel="noopener" target="_blank" title="GHSA-585m-rpvv-93qg">GHSA-585m-rpvv-93qg</a>)</li>
 </ul>
 <h2 id="202223">2022.2.3</h2>
 <p>Aquesta és una versió de pegat per arreglar una fallida accidental de l'API introduïda a la 2022.2.1.</p>
-<h3 id="correccions-derrors_27">Correccions d'errors</h3>
+<h3 id="correccions-derrors_28">Correccions d'errors</h3>
 <ul>
 <li>S'ha corregit un error on NVDA no anunciava "Escriptori Segur" en entrar a un escriptori segur.
 Això feia que NVDA remote no reconegués els escriptoris segurs. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14094" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14094">#14094</a>)</li>
 </ul>
 <h2 id="202222">2022.2.2</h2>
 <p>Aquesta és una versió de pegat per corregir un error introduït a la 2022.2.1 amb els gestos d'entrada.</p>
-<h3 id="correccions-derrors_28">Correccions d'errors</h3>
+<h3 id="correccions-derrors_29">Correccions d'errors</h3>
 <ul>
 <li>S'ha corregit un error on els gestos d'entrada no sempre funcionaven. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14065" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14065">#14065</a>)</li>
 </ul>
 <h2 id="202221">2022.2.1</h2>
 <p>Aquesta és una versió menor per solucionar un problema de seguretat.
 Si us plau, informeu-vos responsablement dels problemes de seguretat a <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="correccions-de-seguretat_13">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_14">Correccions de seguretat</h3>
 <ul>
 <li>Exploit arreglat on era possible executar una consola de python des de la pantalla de bloqueig. (GHSA-rmq3-vvhq-gp32)</li>
 <li>Exploit corregit on era possible escapar de la pantalla de bloqueig mitjançant la navegació d'objectes. (GHSA-rmq3-vvhq-gp32)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_14">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_15">Canvis per als desenvolupadors</h3>
 <h4 id="obsolescencies_13">Obsolescències</h4>
 <p>Actualment, aquestes obsolescències no estan programades per a la seva retirada.
 Els àlies obsolets es mantindran fins a nou avís.
@@ -3381,7 +3415,7 @@ LibLouis ha estat actualitzat, i inclou una nova taula de braille alemanya.</p>
 </ul>
 </li>
 </ul>
-<h3 id="correccions-derrors_29">Correccions d'errors</h3>
+<h3 id="correccions-derrors_30">Correccions d'errors</h3>
 <ul>
 <li>Correccions per a aplicacions basades en Java:<ul>
 <li>NVDA anunciarà ara l'estat de només lectura. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13692" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13692">#13692</a>)</li>
@@ -3397,7 +3431,7 @@ LibLouis ha estat actualitzat, i inclou una nova taula de braille alemanya.</p>
 <li>Correccions en braille:<ul>
 <li>Corregeix la sortida en braille quan navegues per cert text en controls d'edició enriqudiits de Mozilla, com ara redactar un missatge a Thunderbird. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12542" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12542">#12542</a>)</li>
 <li>Quan el seguiment del braille està configurat en automàtic i el ratolí es mou amb el seguiment del ratolí activat,
- Ara les ordres de revisió de text actualitzen la línia braille amb el contingut parlat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11519" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11519">#11519</a>)</li>
+ ara les ordres de revisió de text actualitzen la línia braille amb el contingut parlat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11519" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11519">#11519</a>)</li>
 <li>Ara és possible desplaçar la línia braille pel contingut després d'utilitzar ordres de revisió de text. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8682" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8682">#8682</a>)</li>
 </ul>
 </li>
@@ -3423,7 +3457,7 @@ com ara la Barra de tasques i la Vista de tasques utilitzant la interacció tàc
 <li>Arreglat el canvi automàtic d'idioma d'eSpeak perquè l'anglès i el francès tornin a l'anglès britànic i el francès (França). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13727" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13727">#13727</a>)</li>
 <li>Arregla el canvi automàtic de l'idioma de OneCore quan intentis canviar a un idioma prèviament instal·lat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13732" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13732">#13732</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_15">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_16">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Ara es suporta la compilació de dependències NVDA amb Visual Studio 2022 (17.0).
 Per al desenvolupament i les versions de llançaments, encara s'utilitza Visual Studio 2019. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13033" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13033">#13033</a>)</li>
@@ -3609,7 +3643,7 @@ També hi ha diverses correccions d'errors a Windows 11, per a aplicacions com C
 <li>L'anunci del resum de detalls ara té un gest per defecte ('NVDA+d'). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13380" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13380">#13380</a>)</li>
 <li>NVDA s'ha de reiniciar després d'instal·lar MathPlayer. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13486" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13486">#13486</a>)</li>
 </ul>
-<h3 id="correccions-derrors_30">Correccions d'errors</h3>
+<h3 id="correccions-derrors_31">Correccions d'errors</h3>
 <ul>
 <li>El panell del gestor de portapapers ja no hauria de canviar el focus incorrectament quan s'obren alguns programes d'Office. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12736">#12736</a>)</li>
 <li>En un sistema on l'usuari ha triat canviar el botó principal del ratolí d'esquerra a dreta, NVDA ja no obre accidentalment un menú contextual en lloc d'activar un element, en aplicacions com navegadors web. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12642" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12642">#12642</a>)</li>
@@ -3641,7 +3675,7 @@ També hi ha diverses correccions d'errors a Windows 11, per a aplicacions com C
 <li>NVDA ja no deixarà de notificar el títol de la pàgina i començarà a llegir automàticament quan una pàgina es carregui a Google Chrome 100. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13571" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13571">#13571</a>)</li>
 <li>NVDA ja no es bloqueja quan es restableix la configuració de NVDA als estàndards de fàbrica mentre les tecles de comandament de veu estan activades. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13634" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13634">#13634</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_16">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_17">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Nota: aquesta és una versió que trenca la compatibilitat de l'API dels complements. Caldrà tornar a provar els complements i actualitzar el seu manifest.</li>
 <li>Tot i que NVDA encara requereix Visual Studio 2019, les compilacions ja no haurien de fallar si s'instal·la una versió més nova de Visual Studio (per exemple, 2022) juntament amb la 2019. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13033" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13033">#13033</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13387" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13387">#13387</a>)</li>
@@ -3733,7 +3767,7 @@ Això pot reduir dràsticament els temps de construcció en sistemes multinucli.
 <h2 id="202135">2021.3.5</h2>
 <p>Aquesta és una versió menor per solucionar un problema de seguretat.
 Si us plau, informeu-vos responsablement dels problemes de seguretat a <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="correccions-de-seguretat_14">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_15">Correccions de seguretat</h3>
 <ul>
 <li>Adreçat l'avís de seguretat 'GHSA-xc5m-v23f-pgr7'.<ul>
 <li>El diàleg de pronunciació de símbols ara està desactivat en mode segur.</li>
@@ -3743,7 +3777,7 @@ Si us plau, informeu-vos responsablement dels problemes de seguretat a <a href="
 <h2 id="202134">2021.3.4</h2>
 <p>Aquesta és una versió menor per solucionar diversos problemes de seguretat plantejats.
 Si us plau, informeu-vos responsablement dels problemes de seguretat a <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="correccions-de-seguretat_15">Correccions de seguretat</h3>
+<h3 id="correccions-de-seguretat_16">Correccions de seguretat</h3>
 <ul>
 <li>Adreçat l'avís de seguretat 'GHSA-354r-wr4v-cx28'. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13488" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13488">#13488</a>)<ul>
 <li>Elimina la possibilitat d'iniciar NVDA amb el registre de depuració activat quan NVDA s'executa en mode segur.</li>
@@ -3767,7 +3801,7 @@ Aquesta versió s'identifica correctament com a 2021.3.3.</p>
 <h2 id="202132">2021.3.2</h2>
 <p>Aquesta és una versió menor per solucionar diversos problemes de seguretat plantejats.
 Si us plau, informeu-vos responsablement dels problemes de seguretat a <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="correccions-derrors_31">Correccions d'errors</h3>
+<h3 id="correccions-derrors_32">Correccions d'errors</h3>
 <ul>
 <li>Solució de seguretat: Evitar la navegació d'objectes fora de la pantalla de bloqueig a Windows 10 i Windows 11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13328" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13328">#13328</a>)</li>
 <li>Solució de seguretat: El diàleg del gestor de complements ara està desactivat a les pantalles segures. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13059" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13059">#13059</a>)</li>
@@ -3780,7 +3814,7 @@ Si us plau, informeu-vos responsablement dels problemes de seguretat a <a href="
 <li>El nou protocol Braille HID ja no és preferit quan es pot utilitzar un altre controlador de línia braille. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13153">#13153</a>)</li>
 <li>El nou protocol Braille HID es pot desactivar mitjançant una configuració al panell de configuració avançada. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13180" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13180">#13180</a>)</li>
 </ul>
-<h3 id="correccions-derrors_32">Correccions d'errors</h3>
+<h3 id="correccions-derrors_33">Correccions d'errors</h3>
 <ul>
 <li>Les regions es tornen a abreujar en braille. <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13158" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13158">#13158</a></li>
 <li>S'ha corregit la detecció automàtica inestable de les línies braille per a Humanware Brailliant i APH Mantis Q40 quan s'utilitza Bluetooth. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13153">#13153</a>)</li>
@@ -3825,7 +3859,7 @@ Si necessites aquesta funcionalitat, assigna un gest a l'script corresponent a l
 <li>En lloc de "contingut marcat" o "mrkd", s'anunciaran "destacat" o "hlrightt" per a parla i braille respectivament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12892" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12892">#12892</a>)</li>
 <li>NVDA ja no intentarà sortir quan els diàlegs estan esperant una acció requerida (per exemple, Confirmar/Cancel·lar). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12984" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12984">#12984</a>)</li>
 </ul>
-<h3 id="correccions-derrors_33">Correccions d'errors</h3>
+<h3 id="correccions-derrors_34">Correccions d'errors</h3>
 <ul>
 <li>El seguiment dels modificadors de teclat (com Control o Insert) és més robust quan el watchdog es recupera. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12609" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12609">#12609</a>)</li>
 <li>Un cop més, és possible comprovar actualitzacions de NVDA en certs sistemes; per exemple, instal·lacions netes de Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12729" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12729">#12729</a>)</li>
@@ -3855,7 +3889,7 @@ Si necessites aquesta funcionalitat, assigna un gest a l'script corresponent a l
 <li>A Windows 11, NVDA ja no anuncia "panell" quan prems Alt+Tab per canviar entre programes. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12648" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12648">#12648</a>)</li>
 <li>El nou panell lateral de Comentaris Moderns ara és compatible amb MS Word quan no s'accedeix al document mitjançant UIA. Prem alt+f12 per moure't entre el panell lateral i el document. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12982" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12982">#12982</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_17">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_18">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Construir NVDA ara requereix Visual Studio 2019 16.10.4 o posterior.
 Per adaptar-se a l'entorn de construcció de producció, actualitza Visual Studio per mantenir-lo sincronitzat amb la <a href="https://www.appveyor.com/docs/windows-images-software/#visual-studio-2019" rel="noopener" target="_blank" title="versió actual que utilitza AppVeyor">versió actual que utilitza AppVeyor</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12728" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12728">#12728</a>)</li>
@@ -3901,7 +3935,7 @@ Per motius de seguretat, quan utilitzeu una nova versió de Windows, obteniu la 
 </li>
 <li>L'OCR de Windows 10 s'ha rebatejat com a OCR de Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12690" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12690">#12690</a>)</li>
 </ul>
-<h3 id="correccions-derrors_34">Correccions d'errors</h3>
+<h3 id="correccions-derrors_35">Correccions d'errors</h3>
 <ul>
 <li>A la calculadora de Windows 10, NVDA anunciarà expressions de la calculadora en una línia braille. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12268" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12268">#12268</a>)</li>
 <li>En programes de terminal de Windows 10 versió 1607 i posteriors, quan s'insereixen o s'eliminen caràcters al mig d'una línia, els caràcters a la dreta del caret ja no es llegeixen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3200" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3200">#3200</a>)<ul>
@@ -3920,7 +3954,7 @@ Per motius de seguretat, quan utilitzeu una nova versió de Windows, obteniu la 
 <li>Si no es mostren resultats en filtrar els gestos d'entrada, el diàleg de configuració de gestos d'entrada continua funcionant com s'esperava. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12673" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12673">#12673</a>)</li>
 <li>S'ha corregit un error on el primer element del menú d'un submenú no s'anuncia en alguns contextos. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12624" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12624">#12624</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_18">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_19">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Les constants 'characterProcessing.SYMLVL_<em>' s'haurien de substituir pel seu equivalent 'SymbolLevel.</em>' abans de 2022.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11856" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11856">#11856</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12636">#12636</a>)</li>
 <li>'controlTypes' s'ha dividit en diversos submòduls, els símbols marcats per a la deprecació han de ser substituïts abans de la 2022.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12510" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12510">#12510</a>)<ul>
@@ -3977,7 +4011,7 @@ Així com moltes correccions d'errors i millores, incloent-hi Office, Visual Stu
 <li>El visor Braille ara disposa d'un botó de tancament estàndard per facilitar la interacció amb els usuaris de dispositius apuntadors. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12328" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12328">#12328</a>)</li>
 <li>Al diàleg de la Llista d'Elements, la tecla acceleradora del botó "Activa" s'ha eliminat en algunes localitzacions per evitar la col·lisió amb una etiqueta de botó d'element d'ordre. Quan està disponible, el botó continua sent el per defecte del diàleg i, per tant, encara es pot invocar simplement prement enter des de la llista d'elements. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6167" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6167">#6167</a>)</li>
 </ul>
-<h3 id="correccions-derrors_35">Correccions d'errors</h3>
+<h3 id="correccions-derrors_36">Correccions d'errors</h3>
 <ul>
 <li>La llista de missatges a Outlook 2010 torna a ser llegible. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12241" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12241">#12241</a>)</li>
 <li>En programes de terminal de Windows 10 versió 1607 i posteriors, quan s'insereixen o s'eliminen caràcters al mig d'una línia, els caràcters a la dreta del cursor ja no es llegeixen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3200" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3200">#3200</a>)<ul>
@@ -4010,14 +4044,14 @@ Així com moltes correccions d'errors i millores, incloent-hi Office, Visual Stu
 <li>En el nou Microsoft Edge basat en Chromium, els camps de text com la barra d'adreces ara s'anuncien quan estan buits. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12474" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12474">#12474</a>)</li>
 <li>Arregla el controlador Braille de Seika. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10787" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10787">#10787</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_19">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_20">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Nota: aquesta és una versió que trenca la compatibilitat de l'API dels complements. Caldrà tornar a provar els complements i actualitzar el seu manifest.</li>
 <li>El sistema de compilació de NVDA ara recupera totes les dependències de Python amb pip i les emmagatzema en un entorn virtual de Python. Tot això es fa de manera transparent.<ul>
 <li>Per construir NVDA, els SCons haurien de continuar utilitzant-se de la manera habitual. Per exemple, executar scons.bat a l'arrel del repositori. Ja no es suporta executar 'py -m SCons', i també s'ha eliminat 'scons.py'.</li>
 <li>Per executar NVDA des del codi font, en lloc d'executar directament 'source/nvda.pyw', el desenvolupador hauria d'utilitzar ara 'runnvda.bat' a l'arrel del repositori. Si intentes executar 'source/nvda.pyw', un quadre de missatge t'avisarà que això ja no està suportat.</li>
-<li>Per realitzar proves unitàries, executeu 'rununittests.bat []'</li>
-<li>Per realitzar proves del sistema: executar 'runsystemtests.bat []'</li>
+<li>Per realitzar proves unitàries, executeu 'rununittests.bat []'&lt;/extra&amp;gt'</li>
+<li>Per realitzar proves del sistema: executar 'runsystemtests.bat []'&lt;/extra&amp;gt'</li>
 <li>Per fer linting, executa 'runlint.bat '</li>
 <li>Si us plau, consulteu readme.md per a més detalls.</li>
 </ul>
@@ -4176,7 +4210,7 @@ A més, moltes altres correccions i millores importants d'errors.</p>
 <li>Actualització de l'anotació d'emoji CLDR a la versió 38. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11817" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11817">#11817</a>)</li>
 <li>La funció integrada de "Resaltat del Focus" ha estat rebatejada com a "Resaltat Visual". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11700" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11700">#11700</a>)</li>
 </ul>
-<h3 id="correccions-derrors_36">Correccions d'errors</h3>
+<h3 id="correccions-derrors_37">Correccions d'errors</h3>
 <ul>
 <li>NVDA torna a funcionar correctament amb camps d'edició quan s'utilitza l'aplicació Fast Log Entry. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8996" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8996">#8996</a>)</li>
 <li>Informa del temps transcorregut a Foobar2000 si no hi ha temps total disponible (per exemple, quan es reprodueix una transmissió en directe). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11337" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11337">#11337</a>)</li>
@@ -4210,7 +4244,7 @@ A més, moltes altres correccions i millores importants d'errors.</p>
 <li>L'entrada QWERTY a les línies Braille Papenmeier que la suporten torna a funcionar i ja no fa que NVDA es congeli aleatòriament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11944" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11944">#11944</a>)</li>
 <li>En navegadors basats en Chromium, s'han resolt diversos casos on la navegació de taules no funcionava i NVDA no anunciava el nombre de files/columnes de la taula. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12359" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12359">#12359</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_20">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_21">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Les proves del sistema ara poden enviar tecles utilitzant spy.emulateKeyPress, que pren un identificador de tecla que s'ajusta als noms de les claus pròpies de NVDA, i per defecte també bloqueja fins que s'executa l'acció. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11581" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11581">#11581</a>)</li>
 <li>NVDA ja no requereix que el directori actual sigui el directori de l'aplicació NVDA per funcionar. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6491" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6491">#6491</a>)</li>
@@ -4250,7 +4284,7 @@ L'existència de contingut marcat (ressaltat) es pot reportar als navegadors, i 
 <li>Quan s'utilitza la comanda "moure el cursor de revisió per enfocar-se" en el mode de navegació, el cursor de revisió ara es posa a la posició del cursor virtual. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9622" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9622">#9622</a>)</li>
 <li>La informació reportada en mode de navegació, com la informació de format amb NVDA+F, ara es mostra en una finestra lleugerament més gran centrada a la pantalla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9910" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9910">#9910</a>)</li>
 </ul>
-<h3 id="correccions-derrors_37">Correccions d'errors</h3>
+<h3 id="correccions-derrors_38">Correccions d'errors</h3>
 <ul>
 <li>NVDA ara sempre parla quan navegues per paraula i cau en qualsevol símbol seguit d'espais blancs, sigui quina sigui la configuració de verbositat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5133" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5133">#5133</a>)</li>
 <li>En aplicacions que utilitzen QT 5.11 o posteriors, les descripcions dels objectes es tornen a informar. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8604" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8604">#8604</a>)</li>
@@ -4278,7 +4312,7 @@ L'existència de contingut marcat (ressaltat) es pot reportar als navegadors, i 
 <li>NVDA detectarà automàticament la línia braille del lector electrònic NLS Humanware via Bluetooth, ja que el seu nom Bluetooth ara és "NLS eReader Humanware". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11561" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11561">#11561</a>)</li>
 <li>Millores importants de rendiment a Visual Studio Code. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11533" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11533">#11533</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_21">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_22">Canvis per als desenvolupadors</h3>
 <ul>
 <li>El GUI Helper's BoxSizerHelper.addDialogDismissButtons admet un nou argument de paraula clau "separat", per afegir un separador horitzontal estàndard als diàlegs (excepte missatges i diàlegs d'entrada única). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6468" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6468">#6468</a>)</li>
 <li>S'han afegit propietats addicionals als mòduls de l'aplicació, incloent-hi el camí per a l'executable (appPath), una aplicació de la Windows Store (isWindowsStoreApp) i l'arquitectura de la màquina per a l'aplicació (appArchitecture). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7894" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7894">#7894</a>)</li>
@@ -4319,7 +4353,7 @@ L'existència de contingut marcat (ressaltat) es pot reportar als navegadors, i 
 <li>NVDA ja no informa de missatges de "superior" i "inferior" quan es mou el cursor de revisió directament a la primera o última línia del navegador d'objectes actual amb els scripts de cursor de revisió per desplaçar-se a dalt i a baix respectivament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9551" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9551">#9551</a>)</li>
 <li>NVDA ja no informa dels missatges "esquerra" i "dreta" quan es mou directament el cursor de revisió al primer o últim caràcter de la línia per al navegador d'objectes actual, amb els scripts de cursor de revisió de l'inici de línia i de final de línia respectivament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9551" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9551">#9551</a>)</li>
 </ul>
-<h3 id="correccions-derrors_38">Correccions d'errors</h3>
+<h3 id="correccions-derrors_39">Correccions d'errors</h3>
 <ul>
 <li>NVDA ara s'inicia correctament quan el fitxer de registre no es pot crear. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6330" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6330">#6330</a>)</li>
 <li>En versions recents de Microsoft Word 365, NVDA ja no anuncia "eliminar la paraula anterior" quan es prem Control+Backspace mentre edites un document. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10851" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10851">#10851</a>)</li>
@@ -4343,7 +4377,7 @@ L'existència de contingut marcat (ressaltat) es pot reportar als navegadors, i 
 <li>Un cop més, és possible comprovar actualitzacions de NVDA en certs sistemes; per exemple, instal·lacions netes de Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11253" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11253">#11253</a>)</li>
 <li>El focus no es mou en una aplicació Java quan la selecció es canvia en un arbre, taula o llista sense enfocament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5989" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5989">#5989</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_22">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_23">Canvis per als desenvolupadors</h3>
 <ul>
 <li>execElevated i hasUiAccess han passat del config module al systemUtils module. L'ús via config module queda obsolet. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10493" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10493">#10493</a>)</li>
 <li>Actualitzat configobj a 5.1.0dev commit f9a265c4. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10939" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10939">#10939</a>)</li>
@@ -4368,7 +4402,7 @@ L'existència de contingut marcat (ressaltat) es pot reportar als navegadors, i 
 <li>Suport per a out-of-process iframes a Mozilla Firefox. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10707" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10707">#10707</a>)</li>
 <li>S'ha actualitzat el transcriptor braille de Liblouis a la versió 3.12. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10161" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10161">#10161</a>)</li>
 </ul>
-<h3 id="correccions-derrors_39">Correccions d'errors</h3>
+<h3 id="correccions-derrors_40">Correccions d'errors</h3>
 <ul>
 <li>S'ha corregit que NVDA no anuncia el símbol Unicode menys (U+2212). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10633" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10633">#10633</a>)</li>
 <li>Quan s'instal·la un complement des del gestor d'complements, els noms dels fitxers i carpetes a la finestra de navegació ja no es reporten dues vegades. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10620" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10620">#10620</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2395" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2395">#2395</a>)</li>
@@ -4383,7 +4417,7 @@ L'existència de contingut marcat (ressaltat) es pot reportar als navegadors, i 
 <li>Fer fletxes cap a fora i allunyar-se de llistes i taules a dir-ho tot amb la lectura ràpida activada ja no anuncia contínuament la sortida de la llista o taula. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10706" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10706">#10706</a>)</li>
 <li>Arregla el seguiment del ratolí per a alguns elements MSHTML a Internet Explorer. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10736">#10736</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_23">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_24">Canvis per als desenvolupadors</h3>
 <ul>
 <li>La documentació dels desenvolupadors ara es compila utilitzant sphinx. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9840" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9840">#9840</a>)</li>
 <li>Diverses funcions de la veu s'han dividit en dues. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10593" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10593">#10593</a>)
@@ -4458,7 +4492,7 @@ Tot i que aquests canvis trenquen la compatibilitat amb els complements antics d
 <li>Si el Java Access Bridge no està activat per a l'usuari, NVDA l'activa automàticament en l'inici de NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7952" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7952">#7952</a>)</li>
 <li>Actualitzat eSpeak-NG a 1.51-dev, commit <a class="gh-link gh-commit" href="https://github.com/nvaccess/nvda/commit/ca65812ac6019926f2fbd7f12c92d7edd3701e0c" rel="noopener" target="_blank" title="GitHub Commit: nvaccess/nvda@ca65812ac6019926f2fbd7f12c92d7edd3701e0c">ca65812</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10581" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10581">#10581</a>)</li>
 </ul>
-<h3 id="correccions-derrors_40">Correccions d'errors</h3>
+<h3 id="correccions-derrors_41">Correccions d'errors</h3>
 <ul>
 <li>Els emojis i altres caràcters unicode de 32 bits ara ocupen menys espai en una línia braille quan es mostren com a valors hexadecimals. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6695" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6695">#6695</a>)</li>
 <li>A Windows 10, NVDA anunciarà descripcions emergents des d'aplicacions universals si està configurat per informar en el diàleg de presentació d'objectes. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8118" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8118">#8118</a>)</li>
@@ -4492,7 +4526,7 @@ Tot i que aquests canvis trenquen la compatibilitat amb els complements antics d
 <li>En canviar el dispositiu de sortida d'àudio, els tons reproduïts per NVDA ara es reproduiran a través del dispositiu recentment seleccionat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2167" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2167">#2167</a>)</li>
 <li>A Mozilla Firefox, moure el focus en mode navegació és més ràpid. Això fa que moure el cursor en mode navegació sigui més sensible en molts casos. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10584" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10584">#10584</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_24">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_25">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Actualitzat Python a la versió 3.7. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7105" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7105">#7105</a>)</li>
 <li>Actualitzat pySerial a la versió 3.4. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8815" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8815">#8815</a>)</li>
@@ -4640,7 +4674,7 @@ Tot i que aquests canvis trenquen la compatibilitat amb els complements antics d
 <li>NVDA ara dirà la paraula 'seleccionat' després de dir el text que un usuari acaba de seleccionar. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9028" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9028">#9028</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9909">#9909</a>)</li>
 <li>A Microsoft Visual Studio Code, NVDA està en mode focus per defecte. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9828" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9828">#9828</a>)</li>
 </ul>
-<h3 id="correccions-derrors_41">Correccions d'errors</h3>
+<h3 id="correccions-derrors_42">Correccions d'errors</h3>
 <ul>
 <li>NVDA ja no es bloqueja quan un directori de complements estigui buit. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7686" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7686">#7686</a>)</li>
 <li>Les marques LTR i RTL ja no s'anuncien en Braille ni en veu per caràcters quan s'accedeix a la finestra de propietats. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8361" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8361">#8361</a>)</li>
@@ -4665,7 +4699,7 @@ Tot i que aquests canvis trenquen la compatibilitat amb els complements antics d
 <li>A Mozilla Firefox, les actualitzacions d'una regió activa ja no s'anuncien  si la regió activa està en una pestanya en segon pla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1318" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1318">#1318</a>)</li>
 <li>El diàleg de Cerca en mode de navegació de NVDA ja no deixa de funcionar si el diàleg Sobre de NVDA està obert en segon pla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8566" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8566">#8566</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_25">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_26">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Ara pots configurar la propietat "disableBrowseModeByDefault" als app modules perquè deixi el mode de navegació desactivat per defecte. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8846" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8846">#8846</a>)</li>
 <li>L'estil de finestra estesa d'una finestra ara s'exposa utilitzant la propietat 'extendedWindowStyle' sobre objectes Finestra i els seus derivats. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9136" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9136">#9136</a>)</li>
@@ -4729,7 +4763,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 </ul>
 </li>
 </ul>
-<h3 id="correccions-derrors_42">Correccions d'errors</h3>
+<h3 id="correccions-derrors_43">Correccions d'errors</h3>
 <ul>
 <li>Quan s'utilitza el sintetitzador de veu OneCore a Windows 10 April 2018 Update i posteriors, ja no s'insereixen grans fragments de silenci entre les expressions de veu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8985" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8985">#8985</a>)</li>
 <li>Quan es mou per caràcter en controls de text pla (com el Bloc de notes) o en mode de navegació, els caràcters emoji de 32 bits formats per dos punts de codi UTF-16 (com 🤦 ) ara es llegeixen correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8782" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8782">#8782</a>)</li>
@@ -4758,7 +4792,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 <li>Ja no hauria de ser necessari desactivar l'edició dins de la cel·la a les opcions de Microsoft Excel per accedir al control d'edició de cel·la amb NVDA a Excel 2016/365. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8146" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8146">#8146</a>).</li>
 <li>S'ha solucionat una congelació a Firefox que de vegades es veu quan naveges ràpidament per punts de referència, si s'utilitza el complement enhanced Aria. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8980" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8980">#8980</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_26">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_27">Canvis per als desenvolupadors</h3>
 <ul>
 <li>NVDA ara es pot compilar amb totes les edicions de Microsoft Visual Studio 2017 (no només amb l'edició Community). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8939" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8939">#8939</a>)</li>
 <li>Ara pots incloure la sortida de registre de liblouis al registre de NVDA configurant la bandera booleana de louis a la secció debugLogging de la configuració de NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4554" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4554">#4554</a>)</li>
@@ -4794,7 +4828,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 <li>Transcriptor braille de Liblouis actualitzat a la versió 3.7.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8697" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8697">#8697</a>)</li>
 <li>Actualitzat eSpeak-NG a commit 919f3240cbb.</li>
 </ul>
-<h3 id="correccions-derrors_43">Correccions d'errors</h3>
+<h3 id="correccions-derrors_44">Correccions d'errors</h3>
 <ul>
 <li>A Outlook 2016/365, s'informen de la categoria i l'estat de la bandera per als missatges. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8603" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8603">#8603</a>)</li>
 <li>Quan NVDA està configurat en idiomes com kirguís, mongol o macedoni, ja no mostra cap diàleg en l'inici que avisa que el sistema operatiu no suporta l'idioma. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8064" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8064">#8064</a>)</li>
@@ -4811,7 +4845,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 <li>Els gestos realitzats en les línies braille baum Vario 40 ja no fallaran en executar-se. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8894" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8894">#8894</a>)</li>
 <li>A Google Slides amb Mozilla Firefox, NVDA ja no informa de text seleccionat a cada control amb focus. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8964" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8964">#8964</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_27">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_28">Canvis per als desenvolupadors</h3>
 <ul>
 <li>gui.nvdaControls ara conté dues classes per crear llistes accessibles amb caselles de selecció. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7325" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7325">#7325</a>)<ul>
 <li>CustomCheckListBox és una subclasse accessible de wx.CheckListBox.</li>
@@ -4861,7 +4895,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 <li>Actualitzat el camí a la taula correcta de braille rus de vuit punts. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8446" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8446">#8446</a>)</li>
 <li>Actualitzat eSpeak-ng a la 1.49.3dev commit 910f4c2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8561" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8561">#8561</a>)</li>
 </ul>
-<h3 id="correccions-derrors_44">Correccions d'errors</h3>
+<h3 id="correccions-derrors_45">Correccions d'errors</h3>
 <ul>
 <li>Les etiquetes accessibles per als controls a Google Chrome ara es reporten més fàcilment en mode navegació quan l'etiqueta no apareix com a contingut en si mateixa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4773" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4773">#4773</a>)</li>
 <li>Les notificacions ara són compatibles amb Zoom. Per exemple, això inclou l'estat de silenciar/desactivar el silenci i els missatges entrants. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7754" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7754">#7754</a>)</li>
@@ -4890,7 +4924,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 <li>A Windows 10 1803 i posteriors, ara és possible instal·lar complements si està activada la funció "Utilitzar Unicode UTF-8 per al suport d'idiomes a tot el món". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8599" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8599">#8599</a>)</li>
 <li>NVDA ja no farà que iTunes 12.9 i versions més recents siguin completament inutilitzables per interactuar amb elles. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8744" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8744">#8744</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_28">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_29">Canvis per als desenvolupadors</h3>
 <ul>
 <li>S'ha afegit scriptHandler.script, que pot funcionar com a decorador per a scripts sobre objectes scriptables. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6266" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6266">#6266</a>)</li>
 <li>S'ha introduït un framework de proves de sistema per a NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/708" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #708">#708</a>)</li>
@@ -4944,7 +4978,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 <li>Ara totes les preferències de NVDA es poden trobar en un sol diàleg de configuració sota el menú NVDA -&gt; Preferències -&gt; Configuració, en lloc d'estar disperses entre molts diàlegs. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/577" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #577">#577</a>)</li>
 <li>El sintetitzador de veu per defecte quan s'executa a Windows 10 ara és oneCore speech en lloc d'eSpeak. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8176" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8176">#8176</a>)</li>
 </ul>
-<h3 id="correccions-derrors_45">Correccions d'errors</h3>
+<h3 id="correccions-derrors_46">Correccions d'errors</h3>
 <ul>
 <li>NVDA ja no deixa de llegir els controls enfocats a la pantalla d'inici de sessió del compte Microsoft a la configuració després d'introduir una adreça de correu electrònic. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7997" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7997">#7997</a>)</li>
 <li>NVDA ja no deixa de llegir la pàgina quan torna a una pàgina anterior a Microsoft Edge. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7997" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7997">#7997</a>)</li>
@@ -4968,7 +5002,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 <li>En alguns controls de text, especialment en aplicacions Delphi, la informació proporcionada sobre edició i navegació és ara molt més fiable. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #636">#636</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8102" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8102">#8102</a>)</li>
 <li>A Windows 10 RS5, NVDA ja no informa d'informació redundant addicional quan es canvia de tasques amb alt+tab. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8258" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8258">#8258</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_29">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_30">Canvis per als desenvolupadors</h3>
 <ul>
 <li>La informació del desenvolupador per als objectes UIA ara conté una llista dels patrons UIA disponibles. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5712" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5712">#5712</a>)</li>
 <li>Els mòduls d'aplicacions ara poden forçar certes finestres a utilitzar sempre UIA implementant el mètode isGoodUIAWindow. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7961" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7961">#7961</a>)</li>
@@ -5011,7 +5045,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 </ul>
 </li>
 </ul>
-<h3 id="correccions-derrors_46">Correccions d'errors</h3>
+<h3 id="correccions-derrors_47">Correccions d'errors</h3>
 <ul>
 <li>Els missatges navegables com mostrar el format actual quan es prem NVDA+f dues vegades ràpidament ja no fallen quan NVDA està instal·lat en una via amb caràcters no ASCII. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7474" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7474">#7474</a>)</li>
 <li>El focus ara es restaura correctament quan tornes a Spotify des d'una altra aplicació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7689" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7689">#7689</a>)</li>
@@ -5030,7 +5064,7 @@ Si us plau, consulteu la llista de canvis més avall per a més detalls sobre ai
 <li>Totes les tecles de les línies Hims Braille Sense Polaris funcionen ara com s'esperava. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7865" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7865">#7865</a>)</li>
 <li>NVDA ja no deixa d'iniciar Windows 7 queixant-se d'una DLL interna d'API-MS, quan una versió concreta dels redistributables de Visual Studio 2017 ha estat instal·lada per una altra aplicació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7975" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7975">#7975</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_30">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_31">Canvis per als desenvolupadors</h3>
 <ul>
 <li>S'ha afegit una bandera booleana oculta a la secció braille de la configuració: "outputPass1Only". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7301" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7301">#7301</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7693" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7693">#7693</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7702" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7702">#7702</a>)<ul>
 <li>Aquesta bandera es posa per defecte en veritat. Si és fals, s'utilitzaran les regles de multi pass de Liblouis per a la sortida en braille.</li>
@@ -5082,7 +5116,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Les modificacions dels fitxers versionats (configuració d'usuari, diccionaris de veu) ja no es guarden quan NVDA s'executa des del llançador. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7688" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7688">#7688</a>)</li>
 <li>Les línies braille Braillino, Bookworm i Modular (amb firmware antic) de Handy Tech ja no són compatibles directament de la caixa. Instal·la el controlador universal Handy Tech i el complement de NVDA per utilitzar aquestes línies. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7590" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7590">#7590</a>)</li>
 </ul>
-<h3 id="correccions-derrors_47">Correccions d'errors</h3>
+<h3 id="correccions-derrors_48">Correccions d'errors</h3>
 <ul>
 <li>Els enllaços ara s'indiquen en braille en aplicacions com Microsoft Word. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6780" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6780">#6780</a>)</li>
 <li>NVDA ja no es torna notablement més lent quan moltes pestanyes estan obertes tant en Firefox com en Chrome. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3138" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3138">#3138</a>)</li>
@@ -5097,7 +5131,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Quan s'utilitza una ordre de reconeixement de contingut (per exemple, NVDA+r), NVDA ara informa d'un missatge d'error en lloc de no dir res si el navegador d'objectes ha desaparegut. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7567" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7567">#7567</a>)</li>
 <li>La funcionalitat de desplaçament cap enrere s'ha corregit per a les línies braille de Freedom Scientific que contenen una barra de balancí esquerra. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7713" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7713">#7713</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_31">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_32">Canvis per als desenvolupadors</h3>
 <ul>
 <li>"scons tests" ara comprova que les cadenes traduïbles tinguin comentaris del traductor. També pots fer-ho sol amb el "scons checkPot". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7492" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7492">#7492</a>)</li>
 <li>Ara hi ha un nou mòdul extensionPoints que proporciona un framework genèric per permetre l'extensibilitat del codi en punts específics del codi. Això permet que les parts interessades es registrin per ser notificades quan es produeix alguna acció (extensionPoints.Action), modificar un tipus específic de dades (extensionPoints.Filter) o participar en la decisió de si es farà alguna cosa (extensionPoints.Decider). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3393" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3393">#3393</a>)</li>
@@ -5165,7 +5199,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Quan s'utilitza Braille, el cursor es pot configurar per tenir una forma diferent quan segueix el focus o el cursor de revisió. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7122">#7122</a>)</li>
 <li>El logotip de NVDA ha estat actualitzat. El logotip actualitzat de NVDA és una barreja estilitzada de les lletres NVDA en blanc, sobre un fons lila sòlid. Això garanteix que serà visible en qualsevol fons de color i utilitza el porpra del logotip NV Access. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7446" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7446">#7446</a>)</li>
 </ul>
-<h3 id="correccions-derrors_48">Correccions d'errors</h3>
+<h3 id="correccions-derrors_49">Correccions d'errors</h3>
 <ul>
 <li>Els elements de div editables a Chrome ja no tenen la seva etiqueta reportada com a valor mentre estan en mode navegació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7153">#7153</a>)</li>
 <li>Prémer final mentre estàs en mode de navegació per a un document de Microsoft Word buit ja no causa cap error en temps d'execució. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7009" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7009">#7009</a>)</li>
@@ -5191,7 +5225,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Les ordres de navegació per a taules ja no estan disponibles per a taules de diseny en el mode de navegació a menys que s'habiliti la informació de taules de diseny. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7382" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7382">#7382</a>)</li>
 <li>A Firefox i Chrome, les ordres de navegació en mode de navegació per les taules ara salten les cel·les ocultes de les taules. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6652" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6652">#6652</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5655" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5655">#5655</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_32">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_33">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Les marques de temps ara inclouen mil·lisegons al registre. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7163" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7163">#7163</a>)</li>
 <li>NVDA ha de ser compilat ara amb Visual Studio Community 2015. Visual Studio Express ja no està suportat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7110" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7110">#7110</a>)<ul>
@@ -5218,7 +5252,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <ul>
 <li>Quan es navega amb revisió simple en aplicacions que utilitzen UI Automation, ara s'ignoren més contenidos sense contingut, facilitant la navegació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6948" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6948">#6948</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6950" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6950">#6950</a>)</li>
 </ul>
-<h3 id="correccions-derrors_49">Correccions d'errors</h3>
+<h3 id="correccions-derrors_50">Correccions d'errors</h3>
 <ul>
 <li>Els elements del menú de la pàgina web ara es poden activar mentre estas en mode de navegació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6735" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6735">#6735</a>)</li>
 <li>En prémer la tecla d'escapament mentre el diàleg del perfil de configuració «Confirmar Eliminació» està actiu, ara descarta el diàleg. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6851" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6851">#6851</a>)</li>
@@ -5241,7 +5275,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>En el mode de navegació, seleccionar tot (control+a) ja no deixa de seleccionar tot el text si el cursor no està a l'inici del text. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6909">#6909</a>)</li>
 <li>S'han solucionat altres problemes rars de selecció en el mode de navegació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7131" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7131">#7131</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_33">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_34">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Els arguments de la línia de comandes ara es processen amb el mòdul argparse de Python, en lloc d'optparse. Això permet que certes opcions com -r i -q es gestionin exclusivament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6865" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6865">#6865</a>)</li>
 <li>core.callLater ara posa la trucada de retorn a la cua principal de NVDA després del retard indicat, en lloc de despertar el nucli i executar-lo directament. Això evita possibles congelacions a causa que el nucli es posi en repòs accidentalment després de processar una trucada de retorn, a mitja crida modal, com ara la reproducció d'una caixa de missatge. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6797" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6797">#6797</a>)</li>
@@ -5289,7 +5323,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>A causa dels canvis a l'actualització de de Windows 10 Creators, el mode "Atenuar Sempre" ja no està disponible a la configuració d'atenuació d'àudio de NVDA. Encara està disponible en versions anteriors de Windows 10. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6684" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6684">#6684</a>)</li>
 <li>A causa dels canvis en l'actualització Windows 10 Creators, el mode "atenuar quan surtin veu i sons" ja no pot assegurar que l'àudio s'hagi atenuat completament abans de començar a parlar, ni mantindrà l'atenuació d'àudio prou temps després de parlar per aturar el rebot ràpid en el volum. Aquests canvis no afecten versions anteriors de Windows 10. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6684" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6684">#6684</a>)</li>
 </ul>
-<h3 id="correccions-derrors_50">Correccions d'errors</h3>
+<h3 id="correccions-derrors_51">Correccions d'errors</h3>
 <ul>
 <li>Corregida la Congelació a Microsoft Word quan es mou per un paràgraf per un document gran mentre estava en mode navegació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6368" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6368">#6368</a>)</li>
 <li>Les taules de Microsoft Word que s'han copiat de Microsoft Excel ja no estan arborades com a taules de disposició i, per tant, ja no s'ignoren. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5927" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5927">#5927</a>)</li>
@@ -5305,7 +5339,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>El seguiment del ratolí ara funciona a totes les pantalles dels ordinadors amb múltiples monitors. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6598" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6598">#6598</a>)</li>
 <li>NVDA ja no es torna inutilitzable després de sortir de Windows Media Player mentre es centra en un control lliscant. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5467" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5467">#5467</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_34">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_35">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Els perfils i els fitxers de configuració s'actualitzen automàticament per complir amb els requisits de les modificacions d'esquema. Si hi ha un error durant l'actualització, es mostra una notificació, es reinicia la configuració i el fitxer de configuració antic està disponible al registre de NVDA al nivell «Info». (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6470" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6470">#6470</a>)</li>
 </ul>
@@ -5337,7 +5371,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Els controls de gir ara s'utilitzen per a camps d'entrada numèrics com l'opció "Percentatge de canvi de to capital" al diàleg de Configuració de Veu. Pots introduir el valor desitjat o utilitzar les fletxes amunt i avall per ajustar el valor. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6099" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6099">#6099</a>)</li>
 <li>La manera com es reporten els IFrames (documents incrustats dins dels documents) s'ha fet més consistent entre navegadors web. Els IFrames ara es reporten com a "frame" a Firefox. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6047" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6047">#6047</a>)</li>
 </ul>
-<h3 id="correccions-derrors_51">Correccions d'errors</h3>
+<h3 id="correccions-derrors_52">Correccions d'errors</h3>
 <ul>
 <li>S'ha corregit un error poc habitual en sortir de NVDA mentre el visor de veu està obert. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5050" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5050">#5050</a>)</li>
 <li>Els mapes d'imatge ara es renderitzen tal com s'espera en el mode de navegació a Mozilla Firefox. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6051" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6051">#6051</a>)</li>
@@ -5361,7 +5395,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>S'han corregit bloquejos en aplicacions de Mozilla de 64 bits i Chrome. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6497" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6497">#6497</a>)</li>
 <li>A Firefox, amb multiprocés activat, el mode de navegació i els camps de text editables ara funcionen correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6380" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6380">#6380</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_35">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_36">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Ara és possible proporcionar mòduls d'aplicació per a executables que continguin un punt (.) en els seus noms. Els punts es substitueixen per guions baixos (_). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5323" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5323">#5323</a>)</li>
 <li>El nou mòdul gui.guiHelper inclou utilitats per simplificar la creació d'interfícies gràfices wxPython, incloent-hi la gestió automàtica de l'espaiat. Això facilita una millor aparença visual i coherència, així com facilita la creació de noves interfícies gràfices per a desenvolupadors cecs. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6287" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6287">#6287</a>)</li>
@@ -5389,7 +5423,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>El comportament existent de NVDA+F9 i després NVDA+F10 s'ha modificat per seleccionar text a la primera pulsació de F10. Quan es prem F10 dues vegades (en ràpida successió), el text es copia al porta-retalls. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4636">#4636</a>)</li>
 <li>Actualitzat eSpeak NG a la versió Master 11b1a7b (22 de juny de 2016). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6037">#6037</a>)</li>
 </ul>
-<h3 id="correccions-derrors_52">Correccions d'errors</h3>
+<h3 id="correccions-derrors_53">Correccions d'errors</h3>
 <ul>
 <li>En el mode de navegació de Microsoft Word, copiar al porta-retalls ara preserva el format. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5956" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5956">#5956</a>)</li>
 <li>A Microsoft Word, NVDA ara informa adequadament quan s'utilitzen les ordres de navegació de taules pròpies de Word (alt+inici, alt+fi, alt+pàginaAmunt i alt+pàginaAvall) i les ordres de selecció de taula (shift afegida a les ordres de navegació). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5961" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5961">#5961</a>)</li>
@@ -5417,7 +5451,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>A la llista de missatges d'Outlook 2016, la informació d'esborrany associada ja no s'anuncia. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6219" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6219">#6219</a>)</li>
 <li>En Google Chrome i navegadors basats en Chrome en un idioma diferent de l'anglès, el mode de navegació ja no deixa de funcionar en molts documents. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6249" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6249">#6249</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_36">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_37">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Registrar informació directament des d'una propietat ja no fa que la propietat es cridi recursivament una vegada i una altra. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6122">#6122</a>)</li>
 </ul>
@@ -5447,7 +5481,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>A Microsoft Excel, NVDA ja no ignora una capçalera de columna per a una cel·la quan hi ha una fila en blanc entre la cel·la i la capçalera. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5396">#5396</a>)</li>
 <li>A Microsoft Excel, ara s'anuncien les coordenades abans de les capçaleres per eliminar l'ambigüitat entre les capçaleres i el contingut. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5396">#5396</a>)</li>
 </ul>
-<h3 id="correccions-derrors_53">Correccions d'errors</h3>
+<h3 id="correccions-derrors_54">Correccions d'errors</h3>
 <ul>
 <li>En mode navegació, quan intentes utilitzar la navegació d'una sola lletra per passar a un element que no és compatible amb el document, NVDA informa que això no està suportat en lloc d'informar que no hi ha cap element en aquesta direcció. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5691" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5691">#5691</a>)</li>
 <li>Quan es llisten fulls a la Llista d'Elements de Microsoft Excel, ara s'inclouen també fulls que només contenen gràfics. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5698" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5698">#5698</a>)</li>
@@ -5465,7 +5499,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>A Microsoft Word, NVDA ja no informa incorrectament del text amb un nivell d'esquema (però no amb un estil d'encapçalament integrat) com a encapçalament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5186" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5186">#5186</a>)</li>
 <li>En mode navegació a Microsoft Word, les ordres Moure més enllà del final/a l'inici del contenidor (coma i shift+coma) ara funcionen per a les taules. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5883" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5883">#5883</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_37">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_38">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Els components C++ de NVDA ara es compilen amb Microsoft Visual Studio 2015. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5592" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5592">#5592</a>)</li>
 <li>Ara pots presentar un missatge de text o HTML a l'usuari en mode navegació utilitzant ui.browseableMessage. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4908" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4908">#4908</a>)</li>
@@ -5489,7 +5523,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>S'ha actualitzat el transcriptor braille de Liblouis a la versió 2.6.5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5574" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5574">#5574</a>)</li>
 <li>La paraula "text" ja no s'indica quan es mou el cursor del focus o de revisió a objectes de text. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5452" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5452">#5452</a>)</li>
 </ul>
-<h3 id="correccions-derrors_54">Correccions d'errors</h3>
+<h3 id="correccions-derrors_55">Correccions d'errors</h3>
 <ul>
 <li>A iTunes 12, el mode de navegació ara s'actualitza correctament quan es carrega una nova pàgina a l'iTunes Store. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5191" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5191">#5191</a>)</li>
 <li>En Internet Explorer i altres controls de MSHTML, passar a nivells específics d'encapçalaments amb navegació d'una sola lletra ara es comporta com s'espera quan el nivell d'un encapçalament s'ignora per motius d'accessibilitat (concretament, quan el nivell d'ària sobreescriu el nivell d'una etiqueta h). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5434" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5434">#5434</a>)</li>
@@ -5519,7 +5553,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>A Microsoft Excel, prémer shift+f11 per crear una nova fulla ara anuncia la teva nova posició en comptes de no informar de res. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5689" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5689">#5689</a>)</li>
 <li>S'han solucionat problemes amb la sortida en la línia braille en introduir caràcters coreans. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5640" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5640">#5640</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_38">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_39">Canvis per als desenvolupadors</h3>
 <ul>
 <li>La nova classe audioDucking.AudioDucker permet codi que envia àudio per indicar quan s'ha d'atenuar l'àudio de fons. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3830" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3830">#3830</a>)</li>
 <li>el constructor nvwave.WavePlayer ara té la paraula clau wantDucking com a argument que especifica si l'àudio de fons s'ha d'atenuar mentre s'està reproduint àudio. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3830" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3830">#3830</a>)<ul>
@@ -5576,7 +5610,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Si el sintetitzador ho admet, ara la veu hauria de pausar per als parèntesis i el guió en (–). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3799" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3799">#3799</a>)</li>
 <li>Quan selecciones text, el text s'anuncia abans de la indicació de selecció en lloc de després. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1707" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1707">#1707</a>)</li>
 </ul>
-<h3 id="correccions-derrors_55">Correccions d'errors</h3>
+<h3 id="correccions-derrors_56">Correccions d'errors</h3>
 <ul>
 <li>Millores importants de rendiment en navegar per la llista de missatges d'Outlook 2010/2013. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5268" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5268">#5268</a>)</li>
 <li>En un gràfic de Microsoft Excel, navegar amb certes tecles (com canviar fulls amb control+paginaCap amunt i control+paginaAvall) ara funciona correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5336" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5336">#5336</a>)</li>
@@ -5625,7 +5659,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>S'ha actualitzat el transcriptor braille de liblouis a la versió 2.6.3. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5137" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5137">#5137</a>)</li>
 <li>Quan intenteu instal·lar una versió anterior de NVDA que està actualment instal·lada, ara us avisaran que no es recomana i que NVDA s'hauria de desinstal·lar completament abans de continuar. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5037">#5037</a>)</li>
 </ul>
-<h3 id="correccions-derrors_56">Correccions d'errors</h3>
+<h3 id="correccions-derrors_57">Correccions d'errors</h3>
 <ul>
 <li>En el mode de navegació per a Internet Explorer i altres controls de MSHTML, la navegació ràpida per camp de formulari ja no inclou incorrectament elements de la llista de presentació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4204" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4204">#4204</a>)</li>
 <li>A Firefox, NVDA ja no informa de manera inapropiada el contingut d'un panell de pestanyes ARIA quan el focus es mou dins d'aquest. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4638" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4638">#4638</a>)</li>
@@ -5644,7 +5678,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>A Windows 7 i posteriors, el text ja no es distorsiona quan s'escriu en certes aplicacions com Wordpad i Skype amb una línia braille. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4291" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4291">#4291</a>)</li>
 <li>A la pantalla de bloqueig de Windows 10, ja no és possible llegir el portapapers, accedir a aplicacions en execució amb el cursor de revisió, canviar la configuració de NVDA, etc. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5269" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5269">#5269</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_39">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_40">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Ara pots injectar entrada en brut d'un teclat de sistema que Windows no gestiona nativament (per exemple, un teclat QWERTY en una línia braille) utilitzant la nova funció keyboardHandler.injectRawKeyboardInput. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4576" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4576">#4576</a>)</li>
 <li>s'ha afegit eventHandler.requestEvents per sol·licitar esdeveniments particulars que estan bloquejats per defecte; per exemple, mostrar esdeveniments des d'un control específic o certs esdeveniments fins i tot quan estan en segon pla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3831" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3831">#3831</a>)</li>
@@ -5673,7 +5707,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Millora significativa en la notificació dels noms de colors. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4984" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4984">#4984</a>)</li>
 <li>S'ha actualitzat el transcriptor braille de Liblouis a la versió 2.6.2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4777" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4777">#4777</a>)</li>
 </ul>
-<h3 id="correccions-derrors_57">Correccions d'errors</h3>
+<h3 id="correccions-derrors_58">Correccions d'errors</h3>
 <ul>
 <li>Les descripcions de caràcters ara es gestionen correctament per a caràcters conjunts en certes llengües índies. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4582" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4582">#4582</a>)</li>
 <li>Si l'opció "Confia en l'idioma de la veu quan processes caràcters i símbols" està activada, el diàleg de Puntuació/Pronúncia de Símbols ara utilitza correctament l'idioma de veu. A més, l'idioma per a la qual s'està editant la pronunciació es mostra al títol del diàleg. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4930" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4930">#4930</a>)</li>
@@ -5685,7 +5719,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Problemes solucionats en escriure certs signes de puntuació/símbols com els paréntesis al camp de filtre del diàleg de gestos d'entrada. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5060" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5060">#5060</a>)</li>
 <li>En Internet Explorer i altres controls de MSHTML, prémer g o shift+g per navegar als gràfics ara inclou elements marcats com a imatges per motius d'accessibilitat (per exemple, ARIA role img). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5062" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5062">#5062</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_40">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_41">Canvis per als desenvolupadors</h3>
 <ul>
 <li>brailleInput.handler.sendChars(mychar) ja no filtrarà un caràcter si és igual al caràcter anterior assegurant que la tecla enviada s'alliberi correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4139" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4139">#4139</a>)</li>
 <li>Els scripts per canviar els modes tàctils ara compleixen amb les noves etiquetes afegides a touchHandler.touchModeLabels. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4699" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4699">#4699</a>)</li>
@@ -5724,7 +5758,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>La descàrrega d'actualitzacions de NVDA ara és més segura. (Concretament, la informació d'actualització es recupera via https i el hash del fitxer es verifica després de descarregar-lo.) (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4716" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4716">#4716</a>)</li>
 <li>eSpeak ha estat actualitzat a la versió 1.48.04 (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4325" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4325">#4325</a>)</li>
 </ul>
-<h3 id="correccions-derrors_58">Correccions d'errors</h3>
+<h3 id="correccions-derrors_59">Correccions d'errors</h3>
 <ul>
 <li>A Microsoft Excel, les cel·les de capçalera de fila i columna fusionades ara es gestionen correctament. Per exemple, si A1 i B1 es fusionen, B2 ara tindrà A1 i B1 reportats com a capçalera de columna en lloc de res. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4617" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4617">#4617</a>)</li>
 <li>Quan s'edita el contingut d'una caixa de text a Microsoft PowerPoint 2003, NVDA anuncia correctament el contingut de cada línia. Abans, en cada paràgraf, les línies anaven cada cop més desajustades en un caràcter. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4619" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4619">#4619</a>)</li>
@@ -5751,7 +5785,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>En Internet Explorer i altres controls de MSHTML, l'atribut títol als controls de formulari ja no té preferència inapropiada sobre altres associacions d'etiquetes. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4491" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4491">#4491</a>)</li>
 <li>A Internet Explorer i altres controls de MSHTML, NVDA ja no ignora el focus dels elements a causa de l'atribut aria-activedescendant. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4667" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4667">#4667</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_41">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_42">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Actualitzat wxPython a la versió 3.0.2.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3763" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3763">#3763</a>)</li>
 <li>Actualitzat Python a la 2.7.9. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4715" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4715">#4715</a>)</li>
@@ -5775,7 +5809,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>En mode navegació, prémer e i shift+e per navegar als camps d'edició ara inclou caixes combinades editables. Això inclou la caixa de cerca a l'última versió de Google Search. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4436" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4436">#4436</a>)</li>
 <li>Fer clic a la icona NVDA a l'àrea de notificacions amb el botó esquerre del ratolí ara obre el menú NVDA en comptes de no fer res. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4459" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4459">#4459</a>)</li>
 </ul>
-<h3 id="correccions-derrors_59">Correccions d'errors</h3>
+<h3 id="correccions-derrors_60">Correccions d'errors</h3>
 <ul>
 <li>Quan es torna a enfocar un document en mode navegació (per exemple, alt+tab a una pàgina web ja oberta), el cursor de revisió es col·loca correctament al cursor virtual, en lloc de col·locar-se al control focalitzat (per exemple, un enllaç proper). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4369" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4369">#4369</a>)</li>
 <li>En les presentacions de diapositives de PowerPoint, el cursor de revisió segueix correctament el cursor virtual. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4370" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4370">#4370</a>)</li>
@@ -5795,7 +5829,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>El seguiment del ratolí i l'exploració tàctil a Internet Explorer i altres controls de MSHTML anunciaran ara l'etiqueta de més botons. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4173" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4173">#4173</a>)</li>
 <li>Quan s'utilitza una línia Braille Papenmeier BRAILLEX amb BrxCom, les tecles de la línia ara funcionen com s'espera. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4614" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4614">#4614</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_42">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_43">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Per a executables que allotgen moltes aplicacions diferents (per exemple, javaw.exe), ara es pot proporcionar codi per carregar mòduls específics d'aplicació per a cada aplicació en lloc de carregar el mateix mòdul per a totes les aplicacions allotjades. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4360" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4360">#4360</a>)<ul>
 <li>Consulta la documentació del codi d'appModuleHandler.AppModule per a més detalls.</li>
@@ -5865,7 +5899,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <ul>
 <li>S'ha actualitzat el transcriptor braille de Liblouis a la versió 2.5.4. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4103" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4103">#4103</a>)</li>
 </ul>
-<h3 id="correccions-derrors_60">Correccions d'errors</h3>
+<h3 id="correccions-derrors_61">Correccions d'errors</h3>
 <ul>
 <li>En Google Chrome i navegadors basats en Chrome, certs fragments de text (com els que tenen èmfasi) ja no es repeteixen quan s'anuncia el text d'una alerta o diàleg. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4066" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4066">#4066</a>)</li>
 <li>En el mode de navegació a les aplicacions de Mozilla, prémer enter en un botó, etc., ja no falla al activar-lo (ni activa el control incorrecte) en certs casos, com els botons a la part superior de Facebook. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4106" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4106">#4106</a>)</li>
@@ -5894,7 +5928,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Els camps de text numèrics editables a GoldWave ara es gestionen correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/670" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #670">#670</a>)</li>
 <li>Microsoft Word: quan es mou per paràgraf amb control+fletxa avall / control+fletxaAmunt, ja no cal prémer-los dues vegades si es mou per llistes amb viñetes o numerades. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3290" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3290">#3290</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_43">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_44">Canvis per als desenvolupadors</h3>
 <ul>
 <li>NVDA ara té suport unificat per a la documentació dels complements. Consulta la secció de Documentació dels complements de la Guia per a desenvolupadors per a més detalls. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2694" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2694">#2694</a>)</li>
 <li>Quan es proporcionen enllaços de gestos en un ScriptableObject mitjançant __gestures, ara és possible proporcionar la paraula clau None com a script. Això desvincula el gest en qualsevol classe base. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4240" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4240">#4240</a>)</li>
@@ -5918,7 +5952,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <ul>
 <li>Quan surts d'un diàleg o aplicació dins d'un document en mode de navegació, el nom i el tipus del document en mode de navegació ja no s'anuncien. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4069" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4069">#4069</a>)</li>
 </ul>
-<h3 id="correccions-derrors_61">Correccions d'errors</h3>
+<h3 id="correccions-derrors_62">Correccions d'errors</h3>
 <ul>
 <li>El menú estàndard del sistema de Windows ja no es silencia accidentalment en les aplicacions Java. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3882" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3882">#3882</a>)</li>
 <li>Quan copies text des de la revisió de pantalla, ja no s'ignoren els salts de línia. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3900" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3900">#3900</a>)</li>
@@ -5956,7 +5990,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Al nivell de puntuació Alguna ara es diran els caràcters asterisc (*) i més (+). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3614" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3614">#3614</a>)</li>
 <li>Actualitzat eSpeak a la versió 1.48.04, que inclou moltes correccions de llenguatge i soluciona diversos bloquejos. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3842" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3842">#3842</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3739" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3739">#3739</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3860" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3860">#3860</a>)</li>
 </ul>
-<h3 id="correccions-derrors_62">Correccions d'errors</h3>
+<h3 id="correccions-derrors_63">Correccions d'errors</h3>
 <ul>
 <li>Quan et mous o selecciones cel·les a Microsoft Excel, NVDA ja no hauria d'anunciar de manera inapropiada la cel·la antiga en lloc de la nova cel·la quan Microsoft Excel triga a moure la selecció. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3558" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3558">#3558</a>)</li>
 <li>NVDA gestiona correctament l'obertura d'una llista desplegable per a una cel·la a Microsoft Excel a través del menú contextual. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3586" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3586">#3586</a>)</li>
@@ -6004,7 +6038,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>Ara es pot utilitzar una línia Braille Papenmeier encara que mai s'hagi connectat per USB. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3712" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3712">#3712</a>)</li>
 <li>NVDA ja no es bloqueja quan la líniea braille Papenmeier BRAILLEX dels models antics es selecciona sense que hi hagi una línia connectada.</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_44">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_45">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Els AppModules ara contenen les propietats productName i productVersion. Aquesta informació també està ara inclosa a Developer Info (NVDA+f1). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1625" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1625">#1625</a>)</li>
 <li>A la consola de Python, ara pots prémer la tecla tab per completar l'identificador actual. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/433" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #433">#433</a>)<ul>
@@ -6024,7 +6058,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>A Microsoft Excel, les cel·les que són enllaços ara s'anuncien com a enllaços. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3042" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3042">#3042</a>)</li>
 <li>A Microsoft Excel, l'existència de comentaris en una cel·la ara es comunica a l'usuari. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2921" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2921">#2921</a>)</li>
 </ul>
-<h3 id="correccions-derrors_63">Correccions d'errors</h3>
+<h3 id="correccions-derrors_64">Correccions d'errors</h3>
 <ul>
 <li>Zend Studio ara funciona igual que Eclipse. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3420" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3420">#3420</a>)</li>
 <li>El canvi d'estat d'algunes caselles de selecció al diàleg de regles de missatges de Microsoft Outlook 2010 ara s'anuncia automàticament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3063" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3063">#3063</a>)</li>
@@ -6048,7 +6082,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>S'ha solucionat un problema que feia que el controlador de línia braille de Freedom Scientific fallés quan el port estava configurat a USB en algunes circumstàncies. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3509" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3509">#3509</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3662" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3662">#3662</a>)</li>
 <li>S'ha solucionat un problema on les tecles de les línies braille de Freedom Scientific no es detectaven en algunes circumstàncies. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3401" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3401">#3401</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3662" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3662">#3662</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_45">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_46">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Pots especificar la categoria que es mostrarà a l'usuari per als scripts utilitzant l'atribut scriptCategory a les classes ScriptableObject i l'atribut category als mètodes script. Consulteu la documentació de baseObject.ScriptableObject per a més detalls. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1532" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1532">#1532</a>)</li>
 <li>config.save està obsolet i pot ser eliminat en una versió futura. Fes servir config.conf.save en comptes d'això. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/667" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #667">#667</a>)</li>
@@ -6087,7 +6121,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 </li>
 <li>S'ha actualitzat el transcriptor braille de liblouis a la versió 2.5.3. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3371" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3371">#3371</a>)</li>
 </ul>
-<h3 id="correccions-derrors_64">Correccions d'errors</h3>
+<h3 id="correccions-derrors_65">Correccions d'errors</h3>
 <ul>
 <li>Activar un objecte ara anuncia l'acció abans de l'activació, en lloc de l'acció després de l'activació (per exemple, expandir-se quan s'expandeix en lloc de col·lapsar). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2982" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2982">#2982</a>)</li>
 <li>Lectura i seguiment del cursor més precisos en diversos camps d'entrada per a versions recents de Skype, com ara xat i camps de cerca. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1601" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1601">#1601</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3036">#3036</a>)</li>
@@ -6122,7 +6156,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 <li>NVDA ja no fa que Adobe Reader es bloquegi o es congeli per a certs documents PDF mal formats que contenen files fora de taules. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3399" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3399">#3399</a>)</li>
 <li>NVDA ara detecta correctament la següent diapositiva amb focus quan esborra una diapositiva a la vista de miniatures de Microsoft PowerPoint. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3415" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3415">#3415</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_46">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_47">Canvis per als desenvolupadors</h3>
 <ul>
 <li>s'ha afegit windowUtils.findDescendantWindow per cercar una finestra descendent (HWND) que coincideixi amb la visibilitat, l'ID de control i/o el nom de la classe especificats.</li>
 <li>La consola remota de Python ja no s'atura després de 10 segons mentre espera l'entrada. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3126" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3126">#3126</a>)</li>
@@ -6133,7 +6167,7 @@ Tingueu en compte que aquesta versió de NVDA ja no suporta Windows XP ni Window
 </ul>
 <h2 id="201311">2013.1.1</h2>
 <p>Aquesta versió soluciona el problema on NVDA es bloquejava en iniciar-se si estava configurat per utilitzar l'idioma irlandès, a més d'incloure actualitzacions de traduccions i altres correccions d'errors.</p>
-<h3 id="correccions-derrors_65">Correccions d'errors</h3>
+<h3 id="correccions-derrors_66">Correccions d'errors</h3>
 <ul>
 <li>Els caràcters correctes es produeixen quan s'escriu a la pròpia interfície d'usuari de NVDA mentre s'utilitza un mètode d'entrada coreà o japonès, mentre que és el mètode per defecte. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2909">#2909</a>)</li>
 <li>A Internet Explorer i altres controls de MSHTML, els camps marcats com a contenen una entrada invàlida ara es gestionen correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3256" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3256">#3256</a>)</li>
@@ -6198,7 +6232,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>La disposició del teclat del portàtil ha estat completament redissenyada per fer-la més intuïtiva i consistent. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/804" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #804">#804</a>)</li>
 <li>S'ha actualitzat el sintetitzador de veu eSpeak a la 1.47.11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2680" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2680">#2680</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3124" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3124">#3124</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3132" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3132">#3132</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3141" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3141">#3141</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3143" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3143">#3143</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3172" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3172">#3172</a>)</li>
 </ul>
-<h3 id="correccions-derrors_66">Correccions d'errors</h3>
+<h3 id="correccions-derrors_67">Correccions d'errors</h3>
 <ul>
 <li>Les tecles de navegació ràpida per saltar al següent o anterior separador en el Mode de Navegació ara funcionen a Internet Explorer i altres controls de MSHTML. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2781" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2781">#2781</a>)</li>
 <li>Si NVDA torna a eSpeak o sense veu a causa que el sintetitzador de veu configurat falla quan s'inicia NVDA, l'opció configurada ja no s'estableix automàticament com a sintetitzador de recanvi. Això vol dir que ara, el sintetitzador original es tornarà a provar la propera vegada que s'iniciï NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2589" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2589">#2589</a>)</li>
@@ -6236,7 +6270,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>NVDA ja no es congela quan s'utilitza entrada de caràcters asiàtics en algunes aplicacions .NET. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3005" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3005">#3005</a>)</li>
 <li>ara és possible utilitzar el mode de navegació per a pàgines a Internet Explorer 10 quan està en mode estàndard; per exemple, <a href="http://www.gmail.com" rel="noopener" target="_blank" title="www.gmail.com">www.gmail.com</a> pàgina d'inici de sessió. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3151" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3151">#3151</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_47">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_48">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Els controladors de línia Braille ara poden suportar la selecció manual de ports. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/426" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #426">#426</a>)<ul>
 <li>Això és especialment útil per a línies braille que admeten connexió a través d'un port sèrie antic.</li>
@@ -6308,7 +6342,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>La majoria d'aplicacions Metro a Windows 8 (per exemple, Correu, Calendari) ja no activen el Mode de Navegació per a tota l'aplicació.</li>
 <li>Actualitzat Handy Tech BrailleDriver COM-Server a la versió 1.4.2.0.</li>
 </ul>
-<h3 id="correccions-derrors_67">Correccions d'errors</h3>
+<h3 id="correccions-derrors_68">Correccions d'errors</h3>
 <ul>
 <li>A Windows Vista i posteriors, NVDA ja no tracta incorrectament la tecla de Windows com si estigués mantenida quan es desbloqueja Windows després de bloquejar-lo prement Windows+l. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1856" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1856">#1856</a>)</li>
 <li>A Adobe Reader, les capçaleres de fila ara es reconeixen correctament com a cel·les de taula; és a dir, les coordenades s'anuncien i es poden accedir mitjançant ordres de navegació de taula. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2444" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2444">#2444</a>)</li>
@@ -6361,7 +6395,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>A OpenOffice.org/LibreOffice Calc, ara llegir les cel·les del full de càlcul funciona correctament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2765" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2765">#2765</a>)</li>
 <li>NVDA ja torna a funcionar a la llista de missatges de correu de Yahoo! quan s'utilitza des d'Internet Explorer. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2780" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2780">#2780</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_48">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_49">Canvis per als desenvolupadors</h3>
 <ul>
 <li>El fitxer de registre anterior ara es copia a nvda-old.log en la inicialització de NVDA. Per tant, si NVDA es bloqueja o es reinicia, la informació de registre d'aquesta sessió encara és accessible per a la seva inspecció. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/916" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #916">#916</a>)</li>
 <li>Obtenir la propietat de rol a chooseNVDAObjectOverlayClasses ja no fa que el rol sigui incorrecte i, per tant, no s'anunciï en focus per a certs objectes com les consoles de comandes de Windows i els controls Scintilla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2569" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2569">#2569</a>)</li>
@@ -6397,7 +6431,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>NVDA ara es distribueix en un sol paquet. En lloc de versions portàtils i d'instal·lador separades, ara només hi ha un fitxer que, quan s'executa, iniciarà una còpia temporal de NVDA i et permetrà instal·lar o generar una distribució portàtil. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1715" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1715">#1715</a>)</li>
 <li>NVDA ara sempre està instal·lat a la carpeta arxius de Programa a tots els sistemes. Actualitzar una instal·lació anterior també la mourà automàticament si no estava instal·lada prèviament.</li>
 </ul>
-<h3 id="correccions-derrors_68">Correccions d'errors</h3>
+<h3 id="correccions-derrors_69">Correccions d'errors</h3>
 <ul>
 <li>Amb el canvi automàtic d'idioma activat, contingut com text alternatiu per a gràfics i etiquetes per a altres controls concrets a Mozilla Gecko (per exemple, Firefox) ara s'anuncia en l'idioma correcte si s'ha marcat adequadament.</li>
 <li>Dir-ho tot a BibleSeeker (i altres controls de TRxRichEdit) ja no s'atura al mig d'un passatge.</li>
@@ -6414,7 +6448,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>A Internet Explorer 9, NVDA ja no llegeix contingut no desitjat quan el focus es mou dins de certs punts de referència o elements enfocables (concretament, un element div que és enfocable o que té un paper de referència ARIA).</li>
 <li>La icona NVDA per a les dreceres de l'escriptori NVDA i el menú d'inici ara es mostra correctament a les edicions de 64 bits de Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/354" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #354">#354</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_49">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_50">Canvis per als desenvolupadors</h3>
 <ul>
 <li>A causa de la substitució de l'instal·lador NSIS anterior per NVDA per un instal·lador integrat en Python, ja no és necessari que els traductors mantinguin un fitxer langstrings.txt per a l'instal·lador. Totes les cadenes de localització ara es gestionen amb fitxers potos gettext.</li>
 </ul>
@@ -6456,7 +6490,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>Actualitzada a la nova taula de transcripció en braille de grau 1 en espanyol.</li>
 <li>S'ha actualitzat el transcriptor braille de liblouis a la versió 2.4.1.</li>
 </ul>
-<h3 id="correccions-derrors_69">Correccions d'errors</h3>
+<h3 id="correccions-derrors_70">Correccions d'errors</h3>
 <ul>
 <li>A Windows 8, el focus ja no es mou incorrectament fora del camp de cerca de l'Explorador de Windows, que no permetia que NVDA hi interactués.</li>
 <li>Millores importants en el rendiment en llegir i navegar per documents de Microsoft Word mentre s'activen els anuncis automàtics de format, cosa que ara fa que sigui força còmode revisar formats, etc. El rendiment també pot millorar en general per a alguns usuaris.</li>
@@ -6489,7 +6523,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>Canviar la pronunciació de la puntuació/símbols per part de l'usuari ara tindrà efecte immediatament, en lloc de requerir reiniciar NVDA o desactivar el canvi automàtic d'idioma.</li>
 <li>Quan s'utilitza eSpeak, la veu ja no es queda en silenci en alguns casos al diàleg Desa com a del visor de registre de NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2145" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2145">#2145</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_50">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_51">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Ara hi ha una consola remota de Python per a situacions on la depuració remota és útil. Consulta la Guia per a desenvolupadors per a més detalls.</li>
 <li>La ruta base del codi de NVDA ara s'ha eliminat dels tracebacks al registre per millorar la llegibilitat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1880" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1880">#1880</a>)</li>
@@ -6535,7 +6569,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>En el mode de navegació, prémer enter o espai en una pestanya ara l'activa en comptes de canviar al mode d'enfocament. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1760" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1760">#1760</a>)</li>
 <li>S'ha actualitzat el sintetitzador de veu eSpeak a la versió 1.45.47.</li>
 </ul>
-<h3 id="correccions-derrors_70">Correccions d'errors</h3>
+<h3 id="correccions-derrors_71">Correccions d'errors</h3>
 <ul>
 <li>NVDA ja no mostra punts ni numeració per a llistes a Internet Explorer i altres controls de MSHTML quan l'autor ha indicat que aquests no s'han de mostrar (és a dir, l'estil de llista és "cap"). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1671" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1671">#1671</a>)</li>
 <li>Reiniciar NVDA quan s'ha congelat (per exemple, prement control+alt+n) ja no surt de la còpia anterior sense iniciar-ne una de nova.</li>
@@ -6564,7 +6598,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>S'ha corregit la revisió per paraula als controls d'edició de Windows. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1877" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1877">#1877</a>)</li>
 <li>Sortir d'un camp de text editable amb fletxa esquerra, fletxa Amunt o página amunt mentre estàs en mode focus ara canvia correctament al mode de navegació quan el mode focus automàtic per al moviment del cursor està activat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1733" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1733">#1733</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_51">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_52">Canvis per als desenvolupadors</h3>
 <ul>
 <li>NVDA ara pot instruir els sintetitzadors de veu perquè canviïn d'idioma per a seccions particulars de la parla.<ul>
 <li>Per donar suport a això, els controladors han de gestionar la parla. LangChangeCommand en seqüències posteriors a SynthDriver.speak().</li>
@@ -6619,7 +6653,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>El col·lapsat ja no s'anuncia per a alguns elements del menú que tenen submenús.</li>
 <li>L'script dona la información del format del text sota el cursor (NVDA+f) ara informa del format a la posició del cursor de revisió en lloc del cursor o focus del sistema. Com que per defecte el cursor de revisió segueix el cursor del sistema, la majoria de gent no hauria de notar cap diferència. Tanmateix, això ara permet a l'usuari conèixer el format quan mou el cursor de revisió, com en la revisió plana.</li>
 </ul>
-<h3 id="correccions-derrors_71">Correccions d'errors</h3>
+<h3 id="correccions-derrors_72">Correccions d'errors</h3>
 <ul>
 <li>Les caixes combinades que es col·lapsen en els documents del mode de navegació quan el mode de focus s'ha forçat amb NVDA+espai ja no fan que canviï automàticament al mode de navegació. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1386" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1386">#1386</a>)</li>
 <li>En documents Gecko (per exemple, Firefox) i MSHTML (per exemple, Internet Explorer), NVDA ara renderitza correctament cert text en la mateixa línia que abans es representava en línies separades. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1378" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1378">#1378</a>)</li>
@@ -6685,7 +6719,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>En Internet Explorer i altres controls de MSHTML, alguns salts de línia innecessaris s'han eliminat en mode de navegació. específicament, els elements HTML amb un estil de visualització Cap ja no forcen un salt de línia. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1685" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1685">#1685</a>)</li>
 <li>Si NVDA no pot arrencar, no reproduir el so d'aturada crítica de Windows ja no fa esclatar el missatge d'error crític al fitxer de registre.</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_52">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_53">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Ara es pot generar la documentació per a desenvolupadors utilitzant SCons. Vegeu readme.txt a l'arrel de la distribució font per a més detalls, incloent-hi les dependències associades.</li>
 <li>Les localitzacions ara poden oferir descripcions dels caràcters. Consulta la secció de Descripcions de caràcters de la Guia per a Desenvolupadors per a més detalls. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/55" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #55">#55</a>)</li>
@@ -6709,7 +6743,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 </ul>
 <h2 id="201111">2011.1.1</h2>
 <p>Aquesta versió soluciona diversos problemes de seguretat i altres problemes importants trobats a NVDA 2011.1.</p>
-<h3 id="correccions-derrors_72">Correccions d'errors</h3>
+<h3 id="correccions-derrors_73">Correccions d'errors</h3>
 <ul>
 <li>L'element Dona al menú NVDA ara està desactivat quan s'executa a les pantalles de inici de sessió, bloqueig, UAC i altres pantalles segures de Windows, ja que això suposa un risc de seguretat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1419" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1419">#1419</a>)</li>
 <li>Ara és impossible copiar o pegar dins la interfície d'usuari de NVDA mentre es treballa en escriptoris segurs (pantalla de bloqueig, pantalla UAC i inici de sessió de Windows), ja que això suposa un risc de seguretat. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1421" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1421">#1421</a>)</li>
@@ -6754,7 +6788,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>Les tecles de volum amunt, baix i silenci ara s'anuncien a l'ajuda d'entrada. Això podria ser útil si l'usuari no està segur de quines són aquestes tecles.</li>
 <li>La tecla ràpida de l'element Cursor de Revisió al menú de Preferències de NVDA s'ha canviat de r a c per eliminar el conflicte amb l'element de Configuració Braille.</li>
 </ul>
-<h3 id="correccions-derrors_73">Correccions d'errors</h3>
+<h3 id="correccions-derrors_74">Correccions d'errors</h3>
 <ul>
 <li>Quan s'afegeix una nova entrada al diccionari de veu, el títol del diàleg és ara "Afegeix una entrada al diccionari" en lloc de "Edita l'entrada al diccionari". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/924" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #924">#924</a>)</li>
 <li>En els diàlegs del diccionari de veu, el contingut de les columnes d'expressió regular i de la llista d'entrades del diccionari ara es presenta en l'idioma de NVDA configurat en lloc de sempre en anglès.</li>
@@ -6793,7 +6827,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>S'ha solucionar el problema pel qual algunes línies braille no s'esborraven correctament quan es tancava NVDA o es canviava la pantalla.</li>
 <li>El focus inicial ja no es parla de vegades dues vegades quan s'inicia NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1359" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1359">#1359</a>)</li>
 </ul>
-<h3 id="canvis-per-als-desenvolupadors_53">Canvis per als desenvolupadors</h3>
+<h3 id="canvis-per-als-desenvolupadors_54">Canvis per als desenvolupadors</h3>
 <ul>
 <li>Actualment, SCons s'utilitza per preparar l'arbre de codi font i crear compilacions binàries, arxius portàtils, instal·ladors, etc. Vegeu readme.txt a l'arrel de la distribució de codi font per a més detalls.</li>
 <li>Els noms clau utilitzats per NVDA (incloent-hi mapes de claus) s'han fet més amigables/lògics; per exemple, cap amunt en lloc d'estendutCap amunt i numpadPageUp en lloc d'abans. Consulta el mòdul vkCodes per a una llista.</li>
@@ -6893,7 +6927,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>Millores i actualitzacions significatives a la documentació de l'usuari, inclosa la documentació de les ordres del teclat del portàtil i la sincronització de la Referència ràpida de les ordres del teclat amb la Guia de l'usuari. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/455" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #455">#455</a>)</li>
 <li>S'ha actualitzat el transcriptor braille liblouis a 2.1.1. En particular, això soluciona alguns problemes relacionats amb el braille xinès, així com els caràcters que no estan definits a la taula de transcripció. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/484" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #484">#484</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/499" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #499">#499</a>)</li>
 </ul>
-<h3 id="correccions-derrors_74">Correccions d'errors</h3>
+<h3 id="correccions-derrors_75">Correccions d'errors</h3>
 <ul>
 <li>A μTorrent, l'element enfocat a la llista de torrents ja no anuncia repetidament ni roba el focus quan s'obre un menú.</li>
 <li>A μTorrent, ara s'anuncien els noms dels fitxers a la llista de continguts del torrent.</li>
@@ -6960,7 +6994,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>La tecla Control ara simplement atura la parla com altres tecles, en lloc de pausar la veu. Per pausar o reprendre la parla, utilitza la tecla shift.</li>
 <li>Els recomptes de files i columnes a les taules ja no s'anuncien quan s'informen canvis de focus, ja que aquest anunci és força extens i normalment no és útil.</li>
 </ul>
-<h3 id="correccions-derrors_75">Correccions d'errors</h3>
+<h3 id="correccions-derrors_76">Correccions d'errors</h3>
 <ul>
 <li>NVDA ja no s'inicia si sembla que el suport d'automatització de la interfície d'usuari està disponible, però no s'inicia per algun motiu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/483" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #483">#483</a>)</li>
 <li>De vegades ja no s'informa de tot el contingut d'una fila de taula quan es mou el focus dins d'una cel·la a les aplicacions de Mozilla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/482" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #482">#482</a>)</li>
@@ -7040,7 +7074,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>Rendiment millorat (especialment en netbooks) quan es produeixen molts bips en ràpida successió; p. ex. moviment ràpid del ratolí amb les coordenades d'àudio habilitades. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #396">#396</a>)</li>
 <li>El so d'error de NVDA ja no es reprodueix en els llançaments candidats ni als llançaments finals. Cal tenir en compte que els errors encara es registren.</li>
 </ul>
-<h3 id="correccions-derrors_76">Correccions d'errors</h3>
+<h3 id="correccions-derrors_77">Correccions d'errors</h3>
 <ul>
 <li>Quan NVDA s'executa des d'una ruta DOS 8.3, però s'instal·la en la ruta llarga relacionada (per exemple, progra~1 en comptes d'arxius de programa), NVDA identificarà correctament que és una còpia instal·lada i carregarà correctament la configuració de l'usuari.</li>
 <li>dir el títol de la finestra actual de primer pla amb NVDA+T ara funciona correctament quan estàs dins dels menús.</li>
@@ -7110,7 +7144,7 @@ Si us plau, consulteu el document <a href="keyCommands.html" title="Command Quic
 <li>Ara les veus s'emmagatzemen al fitxer de configuració per ID en lloc de per índex. Això fa que la configuració de veu sigui més fiable entre els sistemes i els canvis de configuració. La configuració de veu no es conservarà en configuracions antigues i es pot registrar un error la primera vegada que s'utilitzi un sintetitzador. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19">#19</a>)</li>
 <li>El nivell d'un element de vista d'arbre ara s'anuncia primer si ha canviat respecte a l'element enfocat anteriorment per a totes les vistes d'arbre. Abans, això només passava per a les vistes natives d'arbre de Windows (SysTreeView32).</li>
 </ul>
-<h3 id="correccions-derrors_77">Correccions d'errors</h3>
+<h3 id="correccions-derrors_78">Correccions d'errors</h3>
 <ul>
 <li>L'últim fragment d'àudio ja no es talla quan s'utilitza NVDA amb eSpeak en un servidor d'escriptori remot.</li>
 <li>Solucionats els problemes de desar diccionaris de veu per a certes veus.</li>
