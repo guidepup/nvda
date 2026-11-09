@@ -9,6 +9,40 @@
 
 </head>
 <body><h1 id="mita-uutta-nvdassa">Mitä uutta NVDA:ssa</h1>
+<h2 id="202631">2026.3.1</h2>
+<p>Tämä versio korjaa tietoturvaongelmia.
+NVDA 2026.3:ssa ilmennyt Windows 10:n tehtävänvaihtajan ongelma on myös korjattu.</p>
+<h3 id="korjatut-tietoturvaongelmat">Korjatut tietoturvaongelmat</h3>
+<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
+<ul>
+<li>Korjattu ongelma, jonka vuoksi etäkäytön salausavain näkyi NVDA:n lokissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21037">#21037</a>)</li>
+<li>Päivitetty certifi-kirjasto versioon 2026.10.23. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3j65-46c5-4grp" rel="noopener" target="_blank" title="GHSA-3j65-46c5-4grp">GHSA-3j65-46c5-4grp</a>)</li>
+</ul>
+<h3 id="korjatut-virheet">Korjatut virheet</h3>
+<ul>
+<li>Korjattu virhe, jonka vuoksi NVDA ei enää ilmoittanut sovelluksen vaihtumisesta Windows 10:n perinteisessä <code>Alt+Sarkain</code>-tehtävänvaihtajassa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21052" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21052">#21052</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Päivitetty eSpeak NG <a href="https://github.com/nvaccess/espeak-ng/commit/b97de3cf2ad32c1d48c6bd36dfbf57a9c587fedc" rel="noopener" target="_blank" title="muutoksella b97de3cf2">muutoksella <code>b97de3cf2</code></a>.
+Tämä palauttaa brasilianportugalin käännöksen version 2026.1 mukaiseksi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21059" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21059">#21059</a>)</li>
+</ul>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<ul>
+<li>Updated Python to 3.13.17. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>)</li>
+<li>Updated pip dependencies (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>):<ul>
+<li>cryptography to 50.0.2.</li>
+<li>url-normalize to 3.0.1.</li>
+<li>pycaw to 20260927.</li>
+<li>nh3 to 0.3.7.</li>
+<li>crowdin-api-client to 1.30.0.</li>
+<li>markdown to 3.11.2.</li>
+<li>lxml to 6.1.3.</li>
+<li>regex to 2026.9.29.</li>
+<li>scons to 4.11.1.</li>
+<li>uv to 0.13.5.</li>
+<li>sphinx to 9.2.0.</li>
+<li>robotframework to 7.5.</li>
+</ul>
+</li>
+</ul>
 <h2 id="20263">2026.3</h2>
 <p>Tämä versio sisältää merkittäviä suorituskyvyn ja NVDA:n valintaikkunoiden parannuksia sekä laajennettuja kosketusnäyttöeleitä.</p>
 <p>Viivettä on vähennetty ja reagointinopeutta parannettu useilla suorituskyvyn parannuksilla.
@@ -103,7 +137,7 @@ Tehtäväpalkin reunasta tehtävillä eleillä avataan Käynnistä-valikko tai T
 <li>Prosessien välisten UI Automation -kutsujen määrää on vähennetty tapahtumia käsiteltäessä, kohdistuksen muutoksia ja hiiren alla olevia objekteja ilmoitettaessa sekä selaustilan sisältöä muodostettaessa. Tämä on tehty tallentamalla aiempaa enemmän ominaisuuksia välimuistiin ja hakemalla kohdistukseen liittyviä ominaisuuksia erissä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20608" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20608">#20608</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 <li>Näytön suurennuksen värisuodattimen nopeiden päivitysten määrää on rajoitettu epileptisten kohtausten riskin pienentämiseksi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20750" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20750">#20750</a>)</li>
 </ul>
-<h3 id="korjatut-virheet">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_1">Korjatut virheet</h3>
 <ul>
 <li>NVDA ilmoittaa nyt 32-bittisten sovellusten Win32-valikkokohteiden oikean sijainnin ja nimen, kun näytön skaalaus on yli 100 %. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19225" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19225">#19225</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20158" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20158">#20158</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
 <li>Hyperlinkin lisäämisen valintaikkunan muokkauskentät luetaan nyt oikein ja niissä voidaan liikkua asianmukaisesti PowerPointissa ja muissa Office-sovelluksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17390" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17390">#17390</a>, <a class="gh-link gh-mention" href="https://github.com/aryanchoudharypro" rel="noopener" target="_blank" title="GitHub User: @aryanchoudharypro">@aryanchoudharypro</a>)</li>
@@ -164,7 +198,7 @@ Aiemmin nämä näppäimet eivät tehneet mitään, ellei samalla painettu muita
 <li>Lisäosan päivittäminen ei jätä enää vanhan version moduuleja ladatuiksi.
 Tämä saattoi aiheuttaa virheitä päivitetyssä lisäosassa NVDA:n ensimmäisellä päivityksen jälkeisellä käynnistyksellä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18971" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18971">#18971</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_1">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Updated dependencies:<ul>
@@ -598,8 +632,8 @@ Oletusarvoinen näppäinkomento on <code>NVDA+X</code>, ja sitä voidaan muuttaa
 Automaattisen pistenäytön vierityksen käyttöön ottava tai käytöstä poistava oletusnäppäinkomento on <code>NVDA+Alt+K</code>.</p>
 <p>Liblouis on päivitetty uudella italialaisella ja virolaisella pistetaulukolla.</p>
 <p>NVDA:n oletusasetusten palautuksen voi nyt peruuttaa Kumoa-painikkeella, joka palauttaa aiemmat asetukset.</p>
-<h3 id="korjatut-tietoturvaongelmat">Korjatut tietoturvaongelmat</h3>
-<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
+<h3 id="korjatut-tietoturvaongelmat_1">Korjatut tietoturvaongelmat</h3>
+<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
 <ul>
 <li>Mahdollisesti arkaluonteisten tietojen näyttäminen pistenäytöllä estetään, kun tietokone sammutetaan tai käynnistetään uudelleen. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-qhjv-3xf4-9c66" rel="noopener" target="_blank" title="GHSA-qhjv-3xf4-9c66">GHSA-qhjv-3xf4-9c66</a>)</li>
 </ul>
@@ -687,7 +721,7 @@ Asetus on oletusarvoisesti poissa käytöstä. (<a class="gh-link gh-issue" href
 <li>Sanastomäärityksen lisäysvalintaikkunan Tyyppi-valintapainikkeet ovat nyt allekkain. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19657" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19657">#19657</a>)</li>
 <li>Matemaattisen sisällön desimaalierotinasetuksen toimimaton "Mukautettu"-vaihtoehto poistettu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20425" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20425">#20425</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_1">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_2">Korjatut virheet</h3>
 <ul>
 <li>Lisäosakauppa:<ul>
 <li>NVDA ei enää kaadu, kun lisäosakaupan lataushakemistoa ei voida tyhjentää tiedostojen käyttöoikeusvirheiden vuoksi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19202" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19202">#19202</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
@@ -716,7 +750,7 @@ Asetus on oletusarvoisesti poissa käytöstä. (<a class="gh-link gh-issue" href
 <li>Korjattu tilanne, joka saattoi aiheuttaa NVDA:n jumiutumisen matemaattista sisältöä pistenäytöllä luettaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20319" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20319">#20319</a>, <a class="gh-link gh-mention" href="https://github.com/AAClause" rel="noopener" target="_blank" title="GitHub User: @AAClause">@AAClause</a>)</li>
 <li>NVDA lataa nyt onnistuneesti myös sellaiset SAPI 4 -puheäänet, jotka eivät tue korkeuden, nopeuden tai voimakkuuden muuttamista. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20302" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20302">#20302</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_1">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_2">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Clarified NV Access's policy on API breaking changes in the <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="Developer Guide">Developer Guide</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19599" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19599">#19599</a>)</li>
@@ -774,13 +808,13 @@ Use the <code>speechDictHandler.types.EntryType</code> enumeration instead. (<a 
 <p>Tämä versio korjaa tietoturvaongelmia.
 Mukana on myös korjaus versiossa 2026.1 ilmenneeseen ongelmaan, joka liittyy Ctrl+F-painalluksen käsittelyyn Resurssienhallinnassa.
 Peruttu versiossa 2026.1 tehty etäkäytön yhteysongelmien käsittelyyn liittyvä muutos.</p>
-<h3 id="korjatut-tietoturvaongelmat_1">Korjatut tietoturvaongelmat</h3>
-<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
+<h3 id="korjatut-tietoturvaongelmat_2">Korjatut tietoturvaongelmat</h3>
+<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
 <ul>
 <li>Korjattu ongelma, jonka vuoksi NVDA saattoi muodostaa yhteyden epäluotettavaan etäkäyttöpalvelimeen. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-m268-mc77-j2cr" rel="noopener" target="_blank" title="GHSA-m268-mc77-j2cr">GHSA-m268-mc77-j2cr</a>)</li>
 <li>Estetty tilanne, joka saattoi aiheuttaa valitsemattomien lisäosien kopioitumisen järjestelmänlaajuisiin asetuksiin. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-669f-7gpr-5vqm" rel="noopener" target="_blank" title="GHSA-669f-7gpr-5vqm">GHSA-669f-7gpr-5vqm</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_2">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_3">Korjatut virheet</h3>
 <ul>
 <li><code>Ctrl+F</code>-näppäinyhdistelmän painaminen siirtää nyt kohdistuksen jälleen Resurssienhallinnassa hakukenttään ilmoittamatta sen jälkeen ruutua. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20021" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20021">#20021</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
 </ul>
@@ -789,7 +823,7 @@ Peruttu versiossa 2026.1 tehty etäkäytön yhteysongelmien käsittelyyn liittyv
 <li>Etäkäyttö yrittää jälleen muodostaa yhteyden automaattisesti uudelleen hallittavana koneena ensimmäisen yrityksen epäonnistuessa sen sijaan, että yhdistämisyritykset lopetettaisiin heti.
 Tämä tarkoittaa, että näytöttömiin tai muutoin fyysisesti saavuttamattomissa oleviin koneisiin, jotka on määritetty muodostamaan yhteys automaattisesti NVDA:ta käynnistettäessä, voidaan muodostaa yhteys heti kun verkko on käytettävissä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20122">#20122</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_2">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_3">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>The <code>winBindings.cfgmgr32</code> module is now included in NVDA binary builds. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20089" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20089">#20089</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
 </ul>
@@ -895,7 +929,7 @@ Se sisältää tällä hetkellä näyttöverhon (aiemmin Näkö-kategoriassa) se
 <li>NVDA:n käyttöliittymä on käännetty khmeriksi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19450" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19450">#19450</a>)</li>
 <li>Kun NVDA asennetaan ensimmäistä kertaa, "Käytä NVDA:ta kirjautumisikkunassa" -asetusta ei oteta enää oletusarvoisesti käyttöön. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19631" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19631">#19631</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_3">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_4">Korjatut virheet</h3>
 <ul>
 <li>Etäkäyttö:<ul>
 <li>Paranneltu käyttäjälle näytettäviä ilmoituksia, kun hallittavana koneena yhdistäminen ei onnistu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19103" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19103">#19103</a>, <a class="gh-link gh-mention" href="https://github.com/tareh7z" rel="noopener" target="_blank" title="GitHub User: @tareh7z">@tareh7z</a>)</li>
@@ -928,7 +962,7 @@ Se sisältää tällä hetkellä näyttöverhon (aiemmin Näkö-kategoriassa) se
 <li>Virheellisesti muotoillut linkkien URL-osoitteet eivät enää estä asiakirjan lukemista Chromium-pohjaisissa selaimissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19125" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19125">#19125</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>NVDA ei enää ilmaise kirjoitusvirheitä kirjoitettaessa merkkiäänellä, jos puhetilana on "pyydettäessä" tai "ei puhetta". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19323" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19323">#19323</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_3">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_4">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -1167,26 +1201,26 @@ Use <code>AddonsState.fromDict</code> instead.</li>
 </ul>
 <h2 id="202533">2025.3.3</h2>
 <p>Tämä versio korjaa tietoturvaongelman.</p>
-<h3 id="korjatut-tietoturvaongelmat_2">Korjatut tietoturvaongelmat</h3>
-<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
+<h3 id="korjatut-tietoturvaongelmat_3">Korjatut tietoturvaongelmat</h3>
+<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
 <ul>
 <li>Estää tilanteen, jossa NVDA saattaa yllättäen käynnistyä järjestelmänvalvojan oikeuksin. <a href="https://github.com/nvaccess/nvda/security/advisories/ghsa-cq78-fjp7-3rp5" rel="noopener" target="_blank" title="GHSA-cq78-fjp7-3rp5">GHSA-cq78-fjp7-3rp5</a></li>
 </ul>
 <h2 id="202532">2025.3.2</h2>
 <p>Tämä versio korjaa tietoturvaongelman.</p>
-<h3 id="korjatut-tietoturvaongelmat_3">Korjatut tietoturvaongelmat</h3>
-<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
+<h3 id="korjatut-tietoturvaongelmat_4">Korjatut tietoturvaongelmat</h3>
+<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
 <ul>
 <li>Korjattu haavoittuvuus, joka saattoi estää pääsyn suojattuihin ruutuihin etäkäytön kautta. (<a href="https://github.com/nvaccess/nvda/security/advisories/ghsa-42v6-wjv6-h3jj" rel="noopener" target="_blank" title="GHSA-42v6-wjv6-h3jj">GHSA-42v6-wjv6-h3jj</a>)</li>
 </ul>
 <h2 id="202531">2025.3.1</h2>
 <p>Tämä versio korjaa tietoturvaongelman ja virheen.</p>
-<h3 id="korjatut-tietoturvaongelmat_4">Korjatut tietoturvaongelmat</h3>
-<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
+<h3 id="korjatut-tietoturvaongelmat_5">Korjatut tietoturvaongelmat</h3>
+<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
 <ul>
 <li>Korjattu haavoittuvuus, joka saattoi estää pääsyn suojattuihin ruutuihin etäkäytön kautta. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-vr27-g5ph-xvq2" rel="noopener" target="_blank" title="GHSA-vr27-g5ph-xvq2">GHSA-vr27-g5ph-xvq2</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_4">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_5">Korjatut virheet</h3>
 <ul>
 <li>Etäkäyttö palauttaa nyt hallinnan paikalliselle koneelle, mikäli se lukittuu etäkonetta hallittaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18951" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18951">#18951</a>)</li>
 </ul>
@@ -1231,7 +1265,7 @@ Huom: Tämä on oletusarvoisesti poissa käytöstä laitteen käyttämien yleist
 <li>Windows 10:n versiosta 1607 alkaen pääteohjelmien muuttuneen tekstin laskenta suoritetaan nyt NVDA:n sisällä ulkoisen prosessin asemesta, mikä saattaa parantaa suorituskykyä ja luotettavuutta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18480" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18480">#18480</a>, <a class="gh-link gh-mention" href="https://github.com/codeofdusk" rel="noopener" target="_blank" title="GitHub User: @codeofdusk">@codeofdusk</a>)</li>
 <li>NVDA:n etäkäytön yhteysvalintaikkuna muistaa nyt manuaalisissa yhteyksissä viimeksi käytetyn yhteyden tilan, palvelimen tyypin ja paikallisesti isännöidyn portin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18512" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18512">#18512</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18701" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18701">#18701</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_5">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_6">Korjatut virheet</h3>
 <ul>
 <li>Puhe:<ul>
 <li>Korjattu liiallinen hiljaisuuden poisto puheen alusta, jonka vuoksi osa puheesta leikkautui pois tiettyjä ääniä käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18003" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18003">#18003</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
@@ -1250,7 +1284,7 @@ Huom: Tämä on oletusarvoisesti poissa käytöstä laitteen käyttämien yleist
 <li>Korjattu korostajan toimimattomuus Outlookin yhteystietojen automaattisen täydennyksen luettelon kanssa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18483" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18483">#18483</a>, <a class="gh-link gh-mention" href="https://github.com/Nerlant" rel="noopener" target="_blank" title="GitHub User: @Nerlant">@Nerlant</a>)</li>
 <li>Massamuistiversio, joka käynnistetään heti luonnin jälkeen, käyttää nyt oikein omia asetuksiaan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18442" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18442">#18442</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_4">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_5">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -1336,7 +1370,7 @@ eSpeak NG on päivitetty, ja siihen on lisätty tuki aromanian, krimintataarin, 
 <li>NVDA ei enää keskeytä jatkuvaa lukua Microsoft Edgessä ilmoituksia, kuten "lataus valmis", puhuttaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17986" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17986">#17986</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li>NVDA varoittaa nyt päivittämisestä ja asentamisesta, kun yhteys on muodostettu hallittavana koneena NVDA-etäkäytön kautta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18455" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18455">#18455</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_6">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_7">Korjatut virheet</h3>
 <ul>
 <li>NVDA ei enää jätä ilmoittamatta ohjausobjekteja hiirtä ja kosketuseleitä käytettäessä WinUI 3 -sovelluksissa, kuten Microsoft Copilotissa ja Windows 11:n Resurssienhallinnan tietyissä osissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17407" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17407">#17407</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17771" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17771">#17771</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
 <li>NVDA:n äänien toisto ei enää aiheuta odottamattomia virheitä harvinaisissa tilanteissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17918" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17918">#17918</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -1355,7 +1389,7 @@ eSpeak NG on päivitetty, ja siihen on lisätty tuki aromanian, krimintataarin, 
 <li>Kun Microsoft Excelissä kirjoitetaan soluun, pistenäyttö päivittyy nyt asianmukaisesti näyttämään uutta sisältöä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18391" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18391">#18391</a>)</li>
 <li>Etäkoneen käyttäjätilien valvonnan ikkunoilta tuleva puhe toimii nyt luotettavasti NVDA:n etäkäyttötoimintoa käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18101" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18101">#18101</a>, <a class="gh-link gh-mention" href="https://github.com/jcsteh" rel="noopener" target="_blank" title="GitHub User: @jcsteh">@jcsteh</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_5">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_6">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -1384,13 +1418,13 @@ The several built-in table definitions are moved to the <code>__tables</code> mo
 </ul>
 <h2 id="202512">2025.1.2</h2>
 <p>Tämä on virheenkorjauspäivitys.</p>
-<h3 id="korjatut-virheet_7">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_8">Korjatut virheet</h3>
 <ul>
 <li>Tietyt Microsoft Wordin versiot, jotka ovat vanhempia kuin 16.0.18226, eivät enää kaadu käynnistettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18280" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18280">#18280</a>)</li>
 </ul>
 <h2 id="202511">2025.1.1</h2>
 <p>Tämä on virheenkorjauspäivitys.</p>
-<h3 id="korjatut-virheet_8">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_9">Korjatut virheet</h3>
 <ul>
 <li>Korjattu virhe, jonka vuoksi lisäosakauppa ei avautunut, kun NVDA:n kieleksi oli määritetty korea. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18250" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18250">#18250</a>)</li>
 </ul>
@@ -1413,7 +1447,7 @@ Uudet koptin, tiivistetyn nuolenpääkirjoituksen ja portugalin 6 pisteen tietok
 <li>Tämä versio ei ole yhteensopiva olemassa olevien lisäosien kanssa.</li>
 </ul>
 <h3 id="tietoturvakorjaukset">Tietoturvakorjaukset</h3>
-<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
+<p>Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
 <ul>
 <li>Estää mahdollisesti arkaluontoisten tietojen näyttämisen pistenäytöllä laitteen ollessa lukittuna.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-8f8q-2jc3-6rf4" rel="noopener" target="_blank" title="GHSA-8f8q-2jc3-6rf4">GHSA-8f8q-2jc3-6rf4</a>)</li>
@@ -1542,7 +1576,7 @@ Jos tämä ei toimi käyttämäsi SAPI 4 -äänen kanssa, voit lisäasetuksista 
 </li>
 <li>Pistekirjoituksen oletusarvoiset syöttö- ja tulostustaulukot voidaan nyt määrittää NVDA:n kielen perusteella. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17306" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17306">#17306</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16390" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16390">#16390</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/290" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #290">#290</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_9">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_10">Korjatut virheet</h3>
 <ul>
 <li>Puhe:<ul>
 <li>Korjattu ongelma, jonka vuoksi jatkuva luku pysähtyi ensimmäisen lauseen lopussa joitakin SAPI 5 -syntetisaattoreita käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16691" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16691">#16691</a>, <a class="gh-link gh-mention" href="https://github.com/gexgd0419" rel="noopener" target="_blank" title="GitHub User: @gexgd0419">@gexgd0419</a>)</li>
@@ -1610,7 +1644,7 @@ Jos ollaan asiakirjan viimeisellä rivillä, tämä komento siirtää kohdistime
 <li>Kun ankkurilinkit osoittavat samaan kohteeseen, jossa virtuaalikohdistin on, NVDA vierittää nyt asianmukaisesti linkin osoittamaan kohteeseen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17669" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17669">#17669</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>NVDA:n korostusikkunan (NVDA Highlighter) kuvake ei enää jää näkyviin tehtäväpalkkiin, kun Resurssienhallinta käynnistetään uudelleen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17696" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17696">#17696</a>, <a class="gh-link gh-mention" href="https://github.com/hwf1324" rel="noopener" target="_blank" title="GitHub User: @hwf1324">@hwf1324</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_6">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_7">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -1765,14 +1799,14 @@ Use <code>gui.message.MessageDialog</code> instead. (<a class="gh-link gh-issue"
 </ul>
 <h2 id="202442">2024.4.2</h2>
 <p>Tämä versio korjaa virheitä, jotka liittyvät pistenäyttöjen käyttöön sekä matemaattisen sisällön lukemiseen Chromiumissa.</p>
-<h3 id="korjatut-virheet_10">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_11">Korjatut virheet</h3>
 <ul>
 <li>Korjattu virhe, joka ilmeni luettaessa matemaattisia kaavoja Chromium-pohjaisissa selaimissa (Chrome, Edge jne.). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17421" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17421">#17421</a>, <a class="gh-link gh-mention" href="https://github.com/NSoiffer" rel="noopener" target="_blank" title="GitHub User: @NSoiffer">@NSoiffer</a>)</li>
 <li>Humanware Brailliant BI 40X -pistenäytöt, joissa on laiteohjelmiston versio 2.4, toimivat nyt odotetusti. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17518" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17518">#17518</a>, <a class="gh-link gh-mention" href="https://github.com/bramd" rel="noopener" target="_blank" title="GitHub User: @bramd">@bramd</a>)</li>
 </ul>
 <h2 id="202441">2024.4.1</h2>
 <p>Tämä versio korjaa puhesymbolisanastojen tallennuksessa ilmenneen virheen.</p>
-<h3 id="korjatut-virheet_11">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_12">Korjatut virheet</h3>
 <ul>
 <li>Korjattu virhe, joka aiheutti sen, ettei puhesymbolisanastoja tallennettu eikä valintaikkunaa suljettu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17344" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17344">#17344</a>)</li>
 </ul>
@@ -1840,7 +1874,7 @@ NVDA ei enää muutu epävakaaksi, kun se käynnistetään uudelleen automaattis
 <li>Kaikkien rivien pistesoluja hyödynnetään käytettäessä monirivistä pistenäyttöä HID Braille -pistenäyttöajurin kautta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16993" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16993">#16993</a>, <a class="gh-link gh-mention" href="https://github.com/alexmoon" rel="noopener" target="_blank" title="GitHub User: @alexmoon">@alexmoon</a>)</li>
 <li>NVDA:n Poedit-tuen vakautta on parannettu, ja sivuvaikutuksena Poeditin vähimmäisversiovaatimus on nyt 3.5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16889" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16889">#16889</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_12">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_13">Korjatut virheet</h3>
 <ul>
 <li>Pistekirjoitus:<ul>
 <li>Pistenäytön kosketuskohdistinnäppäimiä on nyt mahdollista käyttää tekstikohdistimen siirtämiseen Microsoft PowerPointissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9101" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9101">#9101</a>)</li>
@@ -1861,7 +1895,7 @@ NVDA ei enää muutu epävakaaksi, kun se käynnistetään uudelleen automaattis
 <li>NVDA ei enää lakkaa vastaamasta erityisesti Microsoft Wordissa ja Outlookissa, kun nuolinäppäintä pidetään kauan alhaalla selaustilassa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16812" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16812">#16812</a>)</li>
 <li>NVDA ei enää lue viimeistä riviä, kun kohdistin on toiseksi viimeisellä rivillä monirivisessä muokkauskentässä Java-sovelluksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17027" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17027">#17027</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_7">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_8">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -1894,7 +1928,7 @@ NVDA ei enää muutu epävakaaksi, kun se käynnistetään uudelleen automaattis
 </ul>
 <h2 id="202431">2024.3.1</h2>
 <p>Tämä versio korjaa automaattisessa lisäosapäivitysilmoituksessa ilmenneen virheen.</p>
-<h3 id="korjatut-virheet_13">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_14">Korjatut virheet</h3>
 <ul>
 <li>Kun lisäosapäivityksiä tarkistetaan automaattisesti, NVDA ei enää jää jumiin huonoilla Internet-yhteyksillä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17036">#17036</a>)</li>
 </ul>
@@ -1963,7 +1997,7 @@ Myös Unicode CLDR on päivitetty.</p>
 <li>Massamuistiversiota luotaessa luodaan oletusarvoisesti uusi hakemisto.
 Näkyviin tulee varoitus, jos yrität kirjoittaa hakemistoon, joka ei ole tyhjä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16686" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16686">#16686</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_14">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_15">Korjatut virheet</h3>
 <ul>
 <li>Windows 11:<ul>
 <li>NVDA ei enää vaikuta jumiutuvan leikepöydän historiaa ja emojipaneelia suljettaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16346" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16346">#16346</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16347" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16347">#16347</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
@@ -1995,7 +2029,7 @@ Näkyviin tulee varoitus, jos yrität kirjoittaa hakemistoon, joka ei ole tyhjä
 <li>NVDA puhuu osoitteet siirryttäessä nuolinäppäimillä Outlook.comin/uuden Outlookin Vastaanottaja/Kopio/Piilokopio-kentissä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16856" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16856">#16856</a>)</li>
 <li>NVDA käsittelee nyt lisäosien asennusvirheet sulavammin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16704" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16704">#16704</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_8">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_9">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>NVDA now uses Ruff instead of flake8 for linting. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14817" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14817">#14817</a>)</li>
 <li>Fixed NVDA's build system to work properly when using Visual Studio 2022 version 17.10 and above. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16480" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16480">#16480</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -2106,7 +2140,7 @@ Päivitetty LibLouis, johon on lisätty uudet yksityiskohtaiset valkovenäläise
 </li>
 <li>Useita peräkkäisiä pisteitä, joita käytetään yleisesti sisällysluetteloissa, ei enää puhuta alhaisilla välimerkkitasoilla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15845" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15845">#15845</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_15">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_16">Korjatut virheet</h3>
 <ul>
 <li>Matemaattisten attribuuttien virheellinen lukeminen korjattu Adobe Readerissa. Ongelma vaikutti puheeseen ja pistekirjoitukseen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17980" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17980">#17980</a>)</li>
 <li>Windows 11:n korjaukset:<ul>
@@ -2134,7 +2168,7 @@ Päivitetty LibLouis, johon on lisätty uudet yksityiskohtaiset valkovenäläise
 <li>Komentorivivalitsin <code>-h</code>/<code>--help</code> toimii taas oikein. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16522" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16522">#16522</a>, <a class="gh-link gh-mention" href="https://github.com/XLTechie" rel="noopener" target="_blank" title="GitHub User: @XLTechie">@XLTechie</a>)</li>
 <li>Tuki Poedit-käännösohjelmiston versiolle 3.4 ja sitä uudemmille toimii oikein käännettäessä kieliä, joissa on yksi tai enemmän kuin kaksi monikkomuotoa (esim. kiina ja puola). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16318" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16318">#16318</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_9">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_10">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Instantiating <code>winVersion.WinVersion</code> objects with unknown Windows versions above 10.0.22000 such as 10.0.25398 returns "Windows 11 unknown" instead of "Windows 10 unknown" for release name. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15992" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15992">#15992</a>, <a class="gh-link gh-mention" href="https://github.com/josephsl" rel="noopener" target="_blank" title="GitHub User: @josephsl">@josephsl</a>)</li>
@@ -2218,7 +2252,7 @@ Poedit 1:n käyttäjiä kannustetaan päivittämään versioon 3, mikäli haluav
 <li>Objekteja, jotka eivät ole käytettävissä, ei enää ohiteta objektinavigointia käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15477" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15477">#15477</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 <li>Lisätty sisällysluettelo näppäinkomentojen pikaoppaaseen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16106" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16106">#16106</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_16">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_17">Korjatut virheet</h3>
 <ul>
 <li>Lisäosakauppa:<ul>
 <li>Päivitetty kohde puhutaan nyt oikein, kun lisäosan tila muuttuu sen ollessa aktiivisena, esim. tilasta "ladataan" tilaksi "ladattu". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15859" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15859">#15859</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
@@ -2279,7 +2313,7 @@ Sitä päivitetään myös tekstiä kirjoitettaessa UIA:n ollessa käytössä, k
 <li>NVDA siirtyy taas takaisin selaustilaan Firefoxissa ja Chromessa, kun yhdistelmäruudut suljetaan painamalla <code>Esc</code> tai <code>Alt+Nuoli ylös</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15653" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15653">#15653</a>)</li>
 <li>iTunesissa ei enää virheellisesti siirrytä takaisin selaustilaan liikuttaessa yhdistelmäruuduissa nuolinäppäimillä ylös ja alas. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15653" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15653">#15653</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_10">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_11">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -2526,21 +2560,21 @@ Use <code>bdDetect.DeviceType.*</code> instead. (<a class="gh-link gh-issue" hre
 </ul>
 <h2 id="202334">2023.3.4</h2>
 <p>Tämä versio korjaa tietoturvaongelman ja asennusohjelmassa ilmenneen virheen.
-Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
-<h3 id="korjatut-tietoturvaongelmat_5">Korjatut tietoturvaongelmat</h3>
+Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
+<h3 id="korjatut-tietoturvaongelmat_6">Korjatut tietoturvaongelmat</h3>
 <ul>
 <li>Estetty mukautettujen asetusten lataaminen suojatun tilan ollessa pakotettuna käyttöön.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-727q-h8j2-6p45" rel="noopener" target="_blank" title="GHSA-727q-h8j2-6p45">GHSA-727q-h8j2-6p45</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_17">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_18">Korjatut virheet</h3>
 <ul>
 <li>Korjattu ongelma, joka aiheutti sen, ettei NVDA-prosessi sulkeutunut oikein. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16123" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16123">#16123</a>)</li>
 <li>Korjattu virhe, joka aiheutti sen, että jos aiempi NVDA-prosessi ei sulkeutunut oikein, NVDA:n asennus saattoi epäonnistua ja joutua palautumattomaan tilaan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/16122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #16122">#16122</a>)</li>
 </ul>
 <h2 id="202333">2023.3.3</h2>
 <p>Tämä versio korjaa tietoturvaongelman.
-Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
-<h3 id="korjatut-tietoturvaongelmat_6">Korjatut tietoturvaongelmat</h3>
+Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
+<h3 id="korjatut-tietoturvaongelmat_7">Korjatut tietoturvaongelmat</h3>
 <ul>
 <li>Estää mahdollista muokatusta sisällöstä heijastunutta XSS-hyökkäystä aiheuttamasta mielivaltaista koodin suorittamista.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-xg6w-23rw-39r8" rel="noopener" target="_blank" title="GHSA-xg6w-23rw-39r8">GHSA-xg6w-23rw-39r8</a>)</li>
@@ -2548,8 +2582,8 @@ Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.c
 <h2 id="202332">2023.3.2</h2>
 <p>Tämä versio korjaa tietoturvaongelman.
 Version 2023.3.1 tietoturvaongelmaa ei korjattu asianmukaisesti.
-Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
-<h3 id="korjatut-tietoturvaongelmat_7">Korjatut tietoturvaongelmat</h3>
+Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
+<h3 id="korjatut-tietoturvaongelmat_8">Korjatut tietoturvaongelmat</h3>
 <ul>
 <li>Versiossa 2023.3.1 ilmennyt tietoturvaongelma ei korjaantunut oikein.
 Estää tunnistamattomia käyttäjiä  pääsemästä järjestelmään ja suorittamasta mielivaltaista koodia järjestelmätason  oikeuksin.
@@ -2557,8 +2591,8 @@ Estää tunnistamattomia käyttäjiä  pääsemästä järjestelmään ja suorit
 </ul>
 <h2 id="202331">2023.3.1</h2>
 <p>Tämä versio korjaa tietoturvaongelman.
-Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="suojauskäytännön">suojauskäytännön</a> mukaisesti.</p>
-<h3 id="korjatut-tietoturvaongelmat_8">Korjatut tietoturvaongelmat</h3>
+Ilmoitathan tietoturvaongelmista vastuullisesti NVDA:n <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="tietoturvakäytännön">tietoturvakäytännön</a> mukaisesti.</p>
+<h3 id="korjatut-tietoturvaongelmat_9">Korjatut tietoturvaongelmat</h3>
 <ul>
 <li>Estää tunnistamattomia käyttäjiä  pääsemästä järjestelmään ja suorittamasta mielivaltaista koodia järjestelmätason  oikeuksin.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-h7pp-6jqw-g3pj" rel="noopener" target="_blank" title="GHSA-h7pp-6jqw-g3pj">GHSA-h7pp-6jqw-g3pj</a>)</li>
@@ -2624,7 +2658,7 @@ Automaattinen tunnistus on nyt mahdollista poistaa käytöstä määrätyiltä p
 <li>Asennetut lisäosat näytetään nyt lisäosakaupan Saatavilla-välilehdellä, mikäli ne ovat saatavilla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15374" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15374">#15374</a>)</li>
 <li>Jotkut NVDA-valikossa olevien kohteiden pikanäppäimistä on päivitetty. Tämä koskee vain käyttäjiä, joilla NVDA:n kielenä on englanti. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15364" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15364">#15364</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_18">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_19">Korjatut virheet</h3>
 <ul>
 <li>Microsoft Office:<ul>
 <li>Korjattu kaatuminen Microsoft Wordissa, kun otsikoiden sekä kommenttien ja muistiinpanojen ilmoittaminen eivät olleet käytössä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15019" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15019">#15019</a>)</li>
@@ -2655,7 +2689,7 @@ Automaattinen tunnistus on nyt mahdollista poistaa käytöstä määrätyiltä p
 <li>NVDA ei enää ohita kohdistusmuutoksia, kun sisäkkäinen ikkuna tulee aktiiviseksi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15432" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15432">#15432</a>)</li>
 <li>Korjattu NVDA:n käynnistyksen aikanailmenevän kaatumisen mahdollinen aiheuttaja. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15517" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15517">#15517</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_11">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_12">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li><code>braille.handler.handleUpdate</code> and <code>braille.handler.handleReviewMove</code> have been changed in order not to update instantly.
@@ -2785,7 +2819,7 @@ Tämä voidaan poistaa käytöstä Lisäasetukset-paneelista. (<a class="gh-link
 <li>Jos Windows on määritetty näyttämään sekunnit tehtäväpalkin kellossa, kellonajan ilmoittava <code>NVDA+F12</code>-näppäinkomento noudattaa nyt tätä asetusta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14742" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14742">#14742</a>)</li>
 <li>NVDA ilmoittaa nyt nimeämättömät ryhmät, joissa on hyödyllistä sijaintitietoa, kuten uusimmissa Microsoft Office 365 -versioiden valikoissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14878" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14878">#14878</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_19">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_20">Korjatut virheet</h3>
 <ul>
 <li>Pistekirjoitus:<ul>
 <li>Useita korjauksia pistekirjoituksen syötön/tulostuksen vakauteen, josta on seurauksena vähemmän virheitä ja NVDA:n kaatumisia. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14627" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14627">#14627</a>)</li>
@@ -2834,7 +2868,7 @@ Sen sijaan ilmoitetaan, ettei linkillä ole kohdetta. (<a class="gh-link gh-issu
 <li>Korjattu NVDA:n asetusten tallentamiseen ja lataamiseen, syntetisaattorien vaihtaminen mukaan lukien, liittyvä virhe. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14760" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14760">#14760</a>)</li>
 <li>Korjattu virhe, joka sai tekstintarkastelun "pyyhkäise ylös" -kosketuseleen vaihtamaan sivua sen sijaan, että olisi siirtänyt edelliselle riville. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/15127" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #15127">#15127</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_12">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_13">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Suggested conventions have been added to the add-on manifest specification.
@@ -2937,7 +2971,7 @@ Sama kuin <code>NVDA+K</code>:n kahdesti painaminen, mutta hyödyllisempi pisten
 </li>
 <li>Java-sovellukset, joissa käytetään valittavissa-tilan sisältäviä ohjausobjekteja, ilmoittavat nyt, kun kohde ei ole valittavissa  sen sijaan, että ilmoittaisivat, kun se on valittuna. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14336" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14336">#14336</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_20">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_21">Korjatut virheet</h3>
 <ul>
 <li>Windows 11:<ul>
 <li>NVDA ilmoittaa hakuehdotukset Käynnistä-valikkoa avattaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13841" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13841">#13841</a>)</li>
@@ -3150,7 +3184,7 @@ Lisätty uusia kiinalaisia, ruotsalaisia, gandalaisia ja ruandalaisia pistetaulu
 </li>
 <li>NVDA sisältää nyt käyttöjärjestelmän arkkitehtuurin osana käyttäjätilastojen seurantaa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14019" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14019">#14019</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_21">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_22">Korjatut virheet</h3>
 <ul>
 <li>
 <ul>
@@ -3182,7 +3216,7 @@ Huomaa, että Chromessa ja Edgessä on edelleen tunnettuja ongelmia. (<a class="
 <li>NVDA voi nyt valita tekstiä Java-sovelluksissa <code>NVDA+F10</code>-pikanäppäintä käyttäen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14163" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14163">#14163</a>)</li>
 <li>NVDA ei enää juutu valikkoon liikuttaessa nuolilla ylös ja alas Microsoft Teamsin ketjutetuissa keskusteluissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14355" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14355">#14355</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_13">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_14">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>The <a href="https://groups.google.com/a/nvaccess.org/g/nvda-api/about" rel="noopener" target="_blank" title="NVDA API Announcement mailing list">NVDA API Announcement mailing list</a> was created. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13999" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13999">#13999</a>)</li>
@@ -3202,14 +3236,14 @@ Tämä versio korjaa myös tietoturvaongelman.</p>
 <li>Estää todentamattomien käyttäjien mahdollisen pääsyn järjestelmään (esim. NVDA:n Python-konsolin avulla).
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-fpwc-2gxx-j9v7" rel="noopener" target="_blank" title="GHSA-fpwc-2gxx-j9v7">GHSA-fpwc-2gxx-j9v7</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_22">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_23">Korjatut virheet</h3>
 <ul>
 <li>Korjattu virhe, joka aiheutti sen, että jos NVDA jää jumiin järjestelmää lukittaessa, NVDA sallii pääsyn työpöydälle Windowsin lukitusnäytöllä oltaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
 <li>Korjattu virhe, joka aiheutti sen, että jos NVDA jää jumiin järjestelmää lukittaessa, NVDA ei toimi oikein, ikään kuin laite olisi edelleen lukittu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
 <li>Korjattu Windowsin "unohdin PIN-koodini" -prosessin sekä päivitys/asennuskokemuksen saavutettavuusongelmia. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14368" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14368">#14368</a>)</li>
 <li>Korjattu virhe, joka ilmeni yritettäessä asentaa NVDA:ta joissakin Windows-ympäristöissä, esim. palvelinversiossa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14379" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14379">#14379</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_14">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_15">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <h4 id="deprecations_11">Deprecations</h4>
 <ul>
 <li><code>utils.security.isObjectAboveLockScreen(obj)</code> is deprecated, instead use <code>obj.isBelowLockScreen</code>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14416" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14416">#14416</a>)</li>
@@ -3229,7 +3263,7 @@ Tämä versio korjaa myös tietoturvaongelman.</p>
 <li>Estää todentamattomilta käyttäjiltä mahdollisen pääsyn järjestelmään.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3jj9-295f-h69w" rel="noopener" target="_blank" title="GHSA-3jj9-295f-h69w">GHSA-3jj9-295f-h69w</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_23">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_24">Korjatut virheet</h3>
 <ul>
 <li>Korjaa regression versiosta 2022.3.1, jossa tietyt toiminnot poistettiin käytöstä suojatuilla ruuduilla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14286" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14286">#14286</a>)</li>
 <li>Korjaa regression versiosta 2022.3.1, jossa tietyt toiminnot poistettiin käytöstä sisäänkirjautumisen jälkeen, jos NVDA käynnistyi lukitusnäytöltä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14301" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14301">#14301</a>)</li>
@@ -3246,7 +3280,7 @@ Ilmoitathan tietoturvaongelmista vastuullisesti osoitteeseen <a href="mailto:inf
 <li>Korjattu ongelma, jonka vuoksi puheentarkastelun teksti tallennettiin välimuistiin Windowsia lukittaessa.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-grvr-j2h8-3qm4" rel="noopener" target="_blank" title="GHSA-grvr-j2h8-3qm4">GHSA-grvr-j2h8-3qm4</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_24">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_25">Korjatut virheet</h3>
 <ul>
 <li>Estä todentamatonta käyttäjää päivittämästä puheen- ja pistekirjoituksen tarkastelun asetuksia lukitusnäytöllä. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-grvr-j2h8-3qm4" rel="noopener" target="_blank" title="GHSA-grvr-j2h8-3qm4">GHSA-grvr-j2h8-3qm4</a>)</li>
 </ul>
@@ -3285,7 +3319,7 @@ Se voidaan ottaa uudelleen käyttöön NVDA:n lisäasetusten paneelista. (<a cla
 <li>Ilmoituksen "sisältää lisätietoja" sijaan sisällytetään nyt mahdollisuuksien mukaan tietojen tarkoitus, esim. "sisältää lisätiedon kommentti". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13649" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13649">#13649</a>)</li>
 <li>NVDA:n asennuskoko näkyy nyt Windowsin Ohjelmat ja toiminnot -osiossa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13909">#13909</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_25">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_26">Korjatut virheet</h3>
 <ul>
 <li>64-bittinen Adobe Acrobat / Reader ei enää kaadu PDF-asiakirjaa luettaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12920" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12920">#12920</a>)<ul>
 <li>Huomaa, että kaatumisen välttämiseksi tarvitaan myös Adobe Acrobatin / Readerin uusin versio.</li>
@@ -3299,7 +3333,7 @@ Tämä parantaa joidenkin Java-sovellusten, mukaan lukien IntelliJ IDEA, suoritu
 <li>Kun nopeuden lisäys ei ole käytössä, eSpeakin puhenopeus ei enää putoa 99 %:n ja 100 %:n välille. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13876" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13876">#13876</a>)</li>
 <li>Korjattu virhe, joka mahdollisti kahden samanaikaisen Näppäinkomennot-valintaikkunan avautumisen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13854" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13854">#13854</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_15">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_16">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Updated Comtypes to version 1.1.11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12953" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12953">#12953</a>)</li>
 <li>In builds of Windows Console (<code>conhost.exe</code>) with an NVDA API level of 2 (<code>FORMATTED</code>) or greater, such as those included with Windows 11 version 22H2 (Sun Valley 2), UI Automation is now used by default. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10964" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10964">#10964</a>)<ul>
@@ -3314,33 +3348,33 @@ Tämä parantaa joidenkin Java-sovellusten, mukaan lukien IntelliJ IDEA, suoritu
 <p>There are no deprecations proposed in 2022.3.</p>
 <h2 id="202224">2022.2.4</h2>
 <p>Tämä versio korjaa tietoturvaongelman.</p>
-<h3 id="korjatut-virheet_26">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_27">Korjatut virheet</h3>
 <ul>
 <li>Korjattu hyökkäyskeino, jota hyväksi käyttäen lukitusnäytössä oli mahdollista avata NVDA:n Python-konsoli lokintarkastelun kautta.
 (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-585m-rpvv-93qg" rel="noopener" target="_blank" title="GHSA-585m-rpvv-93qg">GHSA-585m-rpvv-93qg</a>)</li>
 </ul>
 <h2 id="202223">2022.2.3</h2>
 <p>Tämä versio korjaa versiossa 2022.2.1 ilmenneen rajapinnan rikkoutumisen.</p>
-<h3 id="korjatut-virheet_27">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_28">Korjatut virheet</h3>
 <ul>
 <li>Korjattu virhe, jonka vuoksi NVDA ei ilmoittanut "Suojattu työpöytä" suojatulle työpöydälle siirryttäessä.
 Tämä aiheutti sen, ettei Etäkäyttö-lisäosa tunnistanut suojattuja työpöytiä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14094" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14094">#14094</a>)</li>
 </ul>
 <h2 id="202222">2022.2.2</h2>
 <p>Tämä versio korjaa versiossa 2022.2.1 ilmenneen näppäinkomentoihin liittyvän ongelman.</p>
-<h3 id="korjatut-virheet_28">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_29">Korjatut virheet</h3>
 <ul>
 <li>Korjattu virhe, joka aiheutti sen, etteivät näppäinkomennot aina toimineet. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/14065" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #14065">#14065</a>)</li>
 </ul>
 <h2 id="202221">2022.2.1</h2>
 <p>Tämä on pieni tietoturvaongelman korjaava versiopäivitys.
 Ilmoitathan tietoturvaongelmista vastuullisesti osoitteeseen <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="korjatut-tietoturvaongelmat_9">Korjatut tietoturvaongelmat</h3>
+<h3 id="korjatut-tietoturvaongelmat_10">Korjatut tietoturvaongelmat</h3>
 <ul>
 <li>Korjattu haavoittuvuus, jota hyväksikäyttäen Python-konsolia oli mahdollista ajaa lukitusnäytöltä. (GHSA-rmq3-vvhq-gp32)</li>
 <li>Korjattu haavoittuvuus, jota hyväksikäyttäen lukitusnäytöltä oli mahdollista poistua objektinavigoinnin avulla. (GHSA-rmq3-vvhq-gp32)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_16">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_17">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <h4 id="deprecations_13">Deprecations</h4>
 <p>These deprecations are currently not scheduled for removal.
 The deprecated aliases will remain until further notice.
@@ -3385,7 +3419,7 @@ LibLouis on päivitetty, joka sisältää uuden pistetaulukon.</p>
 </ul>
 </li>
 </ul>
-<h3 id="korjatut-virheet_29">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_30">Korjatut virheet</h3>
 <ul>
 <li>Korjauksia Java-pohjaisille sovelluksille:<ul>
 <li>NVDA ilmoittaa nyt vain luku -tyyppisen tilan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13692" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13692">#13692</a>)</li>
@@ -3427,7 +3461,7 @@ kuten Tehtäväpalkissa ja Tehtävänäkymässä sekä olla vuorovaikutuksessa n
 <li>Korjattu ongelma, joka aiheutti sen, että eSpeakin automaattinen kielenvaihto otti käyttöön englantia ja ranskaa käytettäessä brittienglannin ja Ranskassa puhuttavan ranskan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13727" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13727">#13727</a>)</li>
 <li>Korjattu OneCoren automaattinen kielenvaihto yritettäessä vaihtaa aiemmin asennettuun kieleen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13732" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13732">#13732</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_17">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_18">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Compiling NVDA dependencies with Visual Studio 2022 (17.0) is now supported.
 For development and release builds, Visual Studio 2019 is still used. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13033" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13033">#13033</a>)</li>
@@ -3613,7 +3647,7 @@ Lisäksi on erilaisia Windows 11:n virheenkorjauksia laskin-, konsoli-, pääte-
 <li>Lue lisätietojen yhteenveto -komennolla on nyt oletusarvoinen näppäinkomento (<code>NVDA+D</code>). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13380" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13380">#13380</a>)</li>
 <li>NVDA on käynnistettävä uudelleen MathPlayerin asennuksen jälkeen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13486" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13486">#13486</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_30">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_31">Korjatut virheet</h3>
 <ul>
 <li>Kohdistuksen ei pitäisi enää siirtyä virheellisesti leikepöydän hallinnan ruutuun joitakin Office-ohjelmia avattaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12736">#12736</a>)</li>
 <li>NVDA ei enää tietyissä sovelluksissa, kuten verkkoselaimissa, kohteen aktivoimisen asemesta avaa vahingossa pikavalikkoa Järjestelmässä, jossa käyttäjä on vaihtanut ensisijaisen hiiripainikkeen vasemmasta oikeaksi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12642" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12642">#12642</a>)</li>
@@ -3645,7 +3679,7 @@ Lisäksi on erilaisia Windows 11:n virheenkorjauksia laskin-, konsoli-, pääte-
 <li>NVDA ei jätä enää ilmoittamatta sivun otsikkoa ja käynnistämättä automaattista lukemista sivun latautuessa Google chrome 100:ssa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13571" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13571">#13571</a>)</li>
 <li>NVDA ei enää kaadu, kun sen oletusasetukset palautetaan "Puhu komentonäppäimet" -asetuksen ollessa käytössä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13634" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13634">#13634</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_18">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_19">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Note: this is a Add-on API compatibility breaking release. Add-ons will need to be re-tested and have their manifest updated.</li>
 <li>Although NVDA still requires Visual Studio 2019, Builds should no longer fail if a newer version of Visual Studio (E.g. 2022) is installed along side 2019. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13033" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13033">#13033</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13387" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13387">#13387</a>)</li>
@@ -3771,7 +3805,7 @@ Tämä julkaisu ilmoittaa oikein olevansa 2021.3.3.</p>
 <h2 id="202132">2021.3.2</h2>
 <p>Tämä on pieni julkaisu useiden esiin tulleiden tietoturvaongelmien korjaamiseksi.
 Ilmoitathan tietoturvaongelmista vastuullisesti osoitteeseen <a href="mailto:info@nvaccess.org" title="info@nvaccess.org">info@nvaccess.org</a>.</p>
-<h3 id="korjatut-virheet_31">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_32">Korjatut virheet</h3>
 <ul>
 <li>
 <ul>
@@ -3788,7 +3822,7 @@ Ilmoitathan tietoturvaongelmista vastuullisesti osoitteeseen <a href="mailto:inf
 <li>Uutta HID Braille -protokollaa ei enää aseteta etusijalle, jos muutakin pistenäyttöajuria voidaan käyttää. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13153">#13153</a>)</li>
 <li>HID Braille -protokolla voidaan poistaa käytöstä Lisäasetukset-paneelin asetuksella. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13180" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13180">#13180</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_32">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_33">Korjatut virheet</h3>
 <ul>
 <li>Kiintopiste näytetään taas pistekirjoituksella lyhennettynä. <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13158" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13158">#13158</a></li>
 <li>Korjattu Humanware Brailliant- ja APH Mantis Q40 -pistenäyttöjen epävakaa automaattinen tunnistus Bluetoothia käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/13153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #13153">#13153</a>)</li>
@@ -3833,7 +3867,7 @@ Mikäli tarvitset tätä toiminnallisuutta, määritä näppäinkomento asianmuk
 <li>"Merkitty sisältö" tai "mrkt" -ilmoitusten asemesta sanotaan "korostus" tai näytetään pistenäytöllä "krt". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12892" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12892">#12892</a>)</li>
 <li>NVDA ei enää yritä sulkeutua, kun valintaikkunat odottavat vaadittua toimenpidettä (esim. OK/Peruuta). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12984" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12984">#12984</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_33">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_34">Korjatut virheet</h3>
 <ul>
 <li>Kun NVDA palautuu virheestä, näppäimistön muokkausnäppäinten (kuten Ctrl tai Ins) seuranta on vikasietoisempaa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12609" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12609">#12609</a>)</li>
 <li>NVDA-päivitysten tarkistaminen on jälleen mahdollista tietyissä järjestelmissä, esim. puhtaissa Windows-asennuksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12729" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12729">#12729</a>)</li>
@@ -3863,7 +3897,7 @@ Mikäli tarvitset tätä toiminnallisuutta, määritä näppäinkomento asianmuk
 <li>NVDA ei enää sano "ruutu" Windows 11:ssä vaihdettaessa ohjelmien välillä Alt+Sarkain-näppäinyhdistelmällä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12648" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12648">#12648</a>)</li>
 <li>Modernien kommenttien sivupaneelia tuetaan nyt MS Wordissa, kun UIA ei ole käytössä. Siirry sivupaneelin ja asiakirjan välillä painamalla Alt+F12. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12982" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12982">#12982</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_19">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_20">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Building NVDA now requires Visual Studio 2019 16.10.4 or later.
 To match the production build environment, update Visual Studio to keep in sync with the <a href="https://www.appveyor.com/docs/windows-images-software/#visual-studio-2019" rel="noopener" target="_blank" title="current version AppVeyor is using">current version AppVeyor is using</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12728" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12728">#12728</a>)</li>
@@ -3909,7 +3943,7 @@ Turvallisuussyistä uutta Windows-versiota käytettäessä näytetäänvahvistus
 </li>
 <li>Windows 10:n tekstintunnistus nimettiin uudelleen Windowsin tekstintunnistukseksi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12690" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12690">#12690</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_34">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_35">Korjatut virheet</h3>
 <ul>
 <li>NVDA näyttää laskutoimitukset pistenäytöllä Windows 10:n Laskimessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12268" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12268">#12268</a>)</li>
 <li>Kun pääteohjelmissa lisätään tai poistetaan merkkejä rivin keskellä, kohdistimen oikealla puolella olevia merkkejä ei enää lueta Windows 10:n versiossa 1607 ja uudemmissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3200" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3200">#3200</a>)<ul>
@@ -3928,7 +3962,7 @@ Turvallisuussyistä uutta Windows-versiota käytettäessä näytetäänvahvistus
 <li>Näppäinkomentojen valintaikkuna toimii odotetusti, mikäli hakutuloksia ei näytetä näppäinkomentoja suodatettaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12673" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12673">#12673</a>)</li>
 <li>Korjattu virhe, joka aiheutti sen, että alivalikon ensimmäistä kohdetta ei puhuttu joissakin tilanteissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12624" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12624">#12624</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_20">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_21">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li><code>characterProcessing.SYMLVL_*</code> constants should be replaced using their equivalent <code>SymbolLevel.*</code> before 2022.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11856" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11856">#11856</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12636">#12636</a>)</li>
 <li><code>controlTypes</code> has been split up into various submodules, symbols marked for deprecation must be replaced before 2022.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12510" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12510">#12510</a>)<ul>
@@ -3985,7 +4019,7 @@ Lisäksi useita virheenkorjauksia ja parannuksia esim. Officeen, Visual Studioon
 <li>Pistekirjoituksen tarkastelu -ikkunassa on tavallinen Sulje-painike, joka helpottaa vuorovaikutusta osoitinlaitteiden käyttäjille. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12328" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12328">#12328</a>)</li>
 <li>Elementtilista-valintaikkunan Aktivoi-painikkeen pikanäppäin on poistettu joistakin kielistä, jotta vältetään yhteentörmäys elementtityyppivalintapainikkeen nimen kanssa. Kun painike on käytettävissä, se on edelleen valintaikkunan oletuspainike ja voidaan aktivoida painamalla Enteriä kuten ennenkin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6167" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6167">#6167</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_35">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_36">Korjatut virheet</h3>
 <ul>
 <li>Viestiluettelo on taas luettavissa Outlook 2010:ssä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12241" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12241">#12241</a>)</li>
 <li>Kun pääteohjelmissa poistetaan tai lisätään merkkejä keskellä riviä Windows 10:n versiossa 1607 ja uudemmissa, kohdistimen oikealla puolella olevia merkkejä ei enää lueta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3200" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3200">#3200</a>)<ul>
@@ -4018,7 +4052,7 @@ Lisäksi useita virheenkorjauksia ja parannuksia esim. Officeen, Visual Studioon
 <li>Tekstikentät, kuten osoitepalkki puhutaan nyt uudessa Chromium-pohjaisessa Microsoft Edgessä, kun ne ovat tyhjiä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12474" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12474">#12474</a>)</li>
 <li>Seika-pistenäyttöjen ohjain korjattu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10787" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10787">#10787</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_21">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_22">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release. Add-ons will need to be re-tested and have their manifest updated.</li>
 <li>NVDA's build system now fetches all Python dependencies with pip and stores them in a Python virtual environment. This is all done transparently.<ul>
@@ -4184,7 +4218,7 @@ Lisäksi monia muita tärkeitä virheenkorjauksia ja parannuksia.</p>
 <li>CLDR-emojiselitteet päivitetty versioksi 38. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11817" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11817">#11817</a>)</li>
 <li>Sisäänrakennettu "Kohdistuksen korostus"-ominaisuus on uudelleennimetty "Visuaaliseksi korostukseksi". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11700" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11700">#11700</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_36">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_37">Korjatut virheet</h3>
 <ul>
 <li>NVDA toimii taas oikein muokkauskentissä Fast Log Entry -sovellusta käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8996" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8996">#8996</a>)</li>
 <li>Foobar2000:ssa ilmoitetaan kulunut aika, jos kokonaisaikaa ei ole saatavilla (esim. live-suoratoistolähetystä soitettaessa). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11337" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11337">#11337</a>)</li>
@@ -4218,7 +4252,7 @@ Lisäksi monia muita tärkeitä virheenkorjauksia ja parannuksia.</p>
 <li>QWERTY-syöttö toimii taas sitä tukevissa Papenmeier-pistenäytöissä, eikä se enää aiheuta NVDA:n satunnaista jumiutumista. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11944" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11944">#11944</a>)</li>
 <li>Ratkaistu Chromium-pohjaisissa selaimissa useita tapauksia, joissa taulukossa liikkuminen ei toiminut eikä NVDA ilmoittanut taulukon rivien/sarakkeiden määrää. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/12359" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #12359">#12359</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_22">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_23">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>System tests can now send keys using spy.emulateKeyPress, which takes a key identifier that conforms to NVDA's own key names, and by default also blocks until the action is executed. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11581" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11581">#11581</a>)</li>
 <li>NVDA no longer requires the current directory to be the NVDA application directory in order to function. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6491" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6491">#6491</a>)</li>
@@ -4258,7 +4292,7 @@ Merkitty (korostettu) sisältö voidaan ilmoittaa selaimissa, ja on myös uusia 
 <li>Kun "Siirrä tarkastelukohdistin kohdistukseen" -komentoa käytetään selaustilassa, tarkastelukohdistin siirretään nyt virtuaalikohdistimen kohdalle. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9622" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9622">#9622</a>)</li>
 <li>Selaustilassa ilmoitettavat tiedot, kuten muotoilut NVDA+F:llä, näytetään nyt hieman isommassa ikkunassa ruudun keskellä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9910" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9910">#9910</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_37">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_38">Korjatut virheet</h3>
 <ul>
 <li>NVDA puhuu nyt aina välimerkkitasosta riippumatta sanoittain liikuttaessa ja tultaessa minkä tahansa yksittäisen merkin kohdalle, jota seuraa tyhjätila. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5133" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5133">#5133</a>)</li>
 <li>Objektien kuvaukset puhutaan taas QT 5.11:tä tai uudempaa käyttävissä sovelluksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8604" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8604">#8604</a>)</li>
@@ -4286,7 +4320,7 @@ Merkitty (korostettu) sisältö voidaan ilmoittaa selaimissa, ja on myös uusia 
 <li>NVDA tunnistaa automaattisesti Humanwaren NLS eReader -pistenäytön Bluetoothin kautta, koska sen Bluetooth-nimi on nyt "NLS eReader Humanware". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11561" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11561">#11561</a>)</li>
 <li>Suuria suorituskyvyn parannuksia  Visual Studio Codessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11533" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11533">#11533</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_23">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_24">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>The GUI Helper's BoxSizerHelper.addDialogDismissButtons supports a new "separated" keyword argument, for adding a standard horizontal separator to dialogs (other than messages and single input dialogs). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6468" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6468">#6468</a>)</li>
 <li>Additional properties were added to app modules, including path for the executable (appPath), is a Windows Store app (isWindowsStoreApp), and machine architecture for the app (appArchitecture). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7894" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7894">#7894</a>)</li>
@@ -4327,7 +4361,7 @@ Merkitty (korostettu) sisältö voidaan ilmoittaa selaimissa, ja on myös uusia 
 <li>NVDA ei enää sano "yläreuna" ja "alareuna", kun tarkastelukohdistin siirretään suoraan nykyisen navigointiobjektin ensimmäiselle tai viimeiselle riville Siirrä ylimmälle riville- ja Siirrä alimmalle riville -komentoja käyttäen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9551" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9551">#9551</a>)</li>
 <li>NVDA ei enää sano "vasen" ja "oikea", kun tarkastelukohdistin siirretään suoraan rivin ensimmäiseen tai viimeiseen merkkiin nykyisessä navigointiobjektissa  Siirrä rivin alkuun- ja Siirrä rivin loppuun -komentoja käyttäen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9551" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9551">#9551</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_38">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_39">Korjatut virheet</h3>
 <ul>
 <li>NVDA käynnistyy nyt oikein, kun lokitiedostoa ei voi luoda. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6330" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6330">#6330</a>)</li>
 <li>NVDA ei enää sano Microsoft Word 365:n uusimmissa versioissa asiakirjaa muokattaessa "poista edellinen sana" Ctrl+Askelpalautin-näppäinyhdistelmää painettaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10851" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10851">#10851</a>)</li>
@@ -4351,7 +4385,7 @@ Merkitty (korostettu) sisältö voidaan ilmoittaa selaimissa, ja on myös uusia 
 <li>NVDA-päivitysten tarkistaminen on taas mahdollista tietyissä järjestelmissä, esim. puhtaissa Windows-asennuksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11253" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11253">#11253</a>)</li>
 <li>Kohdistus ei siirry Java-sovelluksessa, kun valinta muuttuu ei-kohdistetussa puunäkymässä, taulukossa tai luettelossa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5989" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5989">#5989</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_24">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_25">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>execElevated and hasUiAccess have moved from config module to systemUtils module. Usage via config module is deprecated. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10493" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10493">#10493</a>)</li>
 <li>Updated configobj to 5.1.0dev commit f9a265c4. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10939" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10939">#10939</a>)</li>
@@ -4376,7 +4410,7 @@ Merkitty (korostettu) sisältö voidaan ilmoittaa selaimissa, ja on myös uusia 
 <li>Tuki prosessin ulkopuolisille tekstikehyksille Mozilla Firefoxissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10707" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10707">#10707</a>)</li>
 <li>Päivitetty liblouis-pistekääntäjä versioksi 3.12. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10161" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10161">#10161</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_39">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_40">Korjatut virheet</h3>
 <ul>
 <li>Unicode-miinusmerkkiä (U+2212) ei puhuttu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10633" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10633">#10633</a>)</li>
 <li>Kun lisäosa asennetaan lisäosien hallinnasta, tiedostojen ja kansioiden nimiä ei enää puhuta Selaa-ikkunassa kahdesti. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10620" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10620">#10620</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2395" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2395">#2395</a>)</li>
@@ -4391,7 +4425,7 @@ Merkitty (korostettu) sisältö voidaan ilmoittaa selaimissa, ja on myös uusia 
 <li>Kun Salli pikanäppäimet jatkuvassa luvussa -asetus on käytössä, luetteloista ja taulukoista poistuminen nuolinäppäimillä jatkuvassa luvussa ei enää aiheuta jatkuvaa ilmoitusta poistumisesta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10706" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10706">#10706</a>)</li>
 <li>Hiiren seuranta korjattu joissakin MSHTML-elementeissä Internet Explorerissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10736" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10736">#10736</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_25">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_26">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Developer documentation is now build using sphinx. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9840" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9840">#9840</a>)</li>
 <li>Several speech functions have been split into two. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10593" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10593">#10593</a>)
@@ -4466,7 +4500,7 @@ Vaikka nämä muutokset rikkovat yhteensopivuuden vanhempien NVDA-lisäosien kan
 <li>Mikäli Java Access Bridgeä ei ole otettu käyttöön nykyiselle käyttäjälle, se otetaan automaattisesti käyttöön NVDA:ta käynnistettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7952" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7952">#7952</a>)</li>
 <li>Päivitetty eSpeak-NG versioksi 1.51-dev, muutos <a class="gh-link gh-commit" href="https://github.com/nvaccess/nvda/commit/ca65812ac6019926f2fbd7f12c92d7edd3701e0c" rel="noopener" target="_blank" title="GitHub Commit: nvaccess/nvda@ca65812ac6019926f2fbd7f12c92d7edd3701e0c">ca65812</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10581" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10581">#10581</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_40">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_41">Korjatut virheet</h3>
 <ul>
 <li>Emojit ja muut 32-bittiset Unicode-merkit vievät nyt vähemmän tilaa pistenäytöllä, kun ne näytetään heksadesimaaliarvoina. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6695" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6695">#6695</a>)</li>
 <li>NVDA puhuu Windows 10:ssä universaalien sovellusten työkaluvihjeet, mikäli työkaluvihjeiden ilmaiseminen on otettu käyttöön asetusvalintaikkunan Objektien lukeminen -kategoriassa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8118" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8118">#8118</a>)</li>
@@ -4500,7 +4534,7 @@ Vaikka nämä muutokset rikkovat yhteensopivuuden vanhempien NVDA-lisäosien kan
 <li>Kun äänen ulostulolaitetta vaihdetaan, NVDA:n merkkiäänet toistetaaan nyt juuri valitun laitteen kautta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2167" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2167">#2167</a>)</li>
 <li>Kohdistuksen siirtäminen selaustilassa on nopeampaa Mozilla Firefoxissa. Tämä tekee kohdistimen siirtämisestä responsiivisempaa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10584" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10584">#10584</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_26">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_27">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Updated Python to 3.7. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7105" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7105">#7105</a>)</li>
 <li>Updated pySerial to version 3.4. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8815" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8815">#8815</a>)</li>
@@ -4648,7 +4682,7 @@ Vaikka nämä muutokset rikkovat yhteensopivuuden vanhempien NVDA-lisäosien kan
 <li>NVDA sanoo nyt "valittu" ilmoitettuaan ensin käyttäjän valitseman tekstin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9028" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9028">#9028</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9909">#9909</a>)</li>
 <li>Vuorovaikutustila on oletusarvoisesti käytössä Microsoft Visual Studio Codessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9828" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9828">#9828</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_41">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_42">Korjatut virheet</h3>
 <ul>
 <li>NVDA ei enää kaadu, kun lisäosan hakemisto on tyhjä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7686" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7686">#7686</a>)</li>
 <li>Vasemmalta oikealle ja oikealta vasemmalle osoittavia nuolimerkkejä ei enää näytetä pistenäytöllä tai puhuta merkeittäin liikuttaessa Ominaisuudet-ikkunassa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8361" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8361">#8361</a>)</li>
@@ -4673,7 +4707,7 @@ Vaikka nämä muutokset rikkovat yhteensopivuuden vanhempien NVDA-lisäosien kan
 <li>Taustavälilehdellä olevan Aktiivisen alueen päivityksiä ei enää puhuta Mozilla Firefoxissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1318" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1318">#1318</a>)</li>
 <li>Selaustilan Etsi-valintaikkuna ei enää lakkaa toimimasta, jos NVDA:n Tietoja-valintaikkuna on avoimena taustalla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8566" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8566">#8566</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_27">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_28">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>You can now set the "disableBrowseModeByDefault" property on app modules to leave browse mode off by default. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8846" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8846">#8846</a>)</li>
 <li>The extended window style of a window is now exposed using the <code>extendedWindowStyle</code> property on Window objects and their derivatives. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/9136" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #9136">#9136</a>)</li>
@@ -4737,7 +4771,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 </ul>
 </li>
 </ul>
-<h3 id="korjatut-virheet_42">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_43">Korjatut virheet</h3>
 <ul>
 <li>Puheen väliin ei enää lisätä suurta määrää hiljaisuutta OneCore-puhesyntetisaattoria käytettäessä Windows 10:n April 2018 Update -versiossa tai uudemmissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8985" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8985">#8985</a>)</li>
 <li>32-bittiset emoji-merkit, jotka koostuvat kahdesta UTF-16-koodipisteestä (kuten 🤦), luetaan nyt oikein liikuttaessa merkki kerrallaan pelkkä teksti -tyyppisissä ohjausobjekteissa (kuten Muistiossa) tai selaustilassa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8782" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8782">#8782</a>)</li>
@@ -4766,7 +4800,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 <li>Solunsisäisen muokkauksen käytöstä poistamisen ei pitäisi olla enää tarpeen Microsoft Excelin asetuksista solunmuokkauskentän käyttämiseksi NVDA:lla Excel 2016:ssa/365:ssä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8146" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8146">#8146</a>).</li>
 <li>Korjattu Firefoxin jumiutuminen, jota esiintyi toisinaan liikuttaessa kiintopisteiden välillä pikanavigointikomennoilla Paranneltu Aria -lisäosan ollessa käytössä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8980" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8980">#8980</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_28">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_29">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>NVDA can now  be built with all editions of Microsoft Visual Studio 2017 (not just the Community edition). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8939" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8939">#8939</a>)</li>
 <li>You can now include log output from liblouis into the NVDA log by setting the louis boolean flag in the debugLogging section of the NVDA configuration. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4554" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4554">#4554</a>)</li>
@@ -4802,7 +4836,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 <li>Päivitetty liblouis-pistekääntäjä versioksi 3.7.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8697" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8697">#8697</a>)</li>
 <li>Päivitetty eSpeak-NG muutoksella 919f3240cbb.</li>
 </ul>
-<h3 id="korjatut-virheet_43">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_44">Korjatut virheet</h3>
 <ul>
 <li>Viestien luokka ja lipun tila luetaan Outlook 2016:ssa/365:ssä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8603" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8603">#8603</a>)</li>
 <li>Kun NVDA:n kieleksi on asetettu esim. kirgiisi, mongoli tai makedonia, se ei näytä enää käynnistyessään valintaikkunaa, jossa varoitetaan, ettei käyttöjärjestelmä tue kyseistä kieltä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8064" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8064">#8064</a>)</li>
@@ -4819,7 +4853,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 <li>Baum Vario 40 -pistenäyttöjen näppäinkomentojen suorittaminen onnistuu nyt asianmukaisesti. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8894" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8894">#8894</a>)</li>
 <li>NVDA ei enää ilmoita Google Slidesissa jokaisen aktiivisen ohjausobjektin valittua tekstiä Mozilla Firefoxia käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8964" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8964">#8964</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_29">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_30">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>gui.nvdaControls now contains two classes to create accessible lists with check boxes. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7325" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7325">#7325</a>)<ul>
 <li>CustomCheckListBox is an accessible subclass of wx.CheckListBox.</li>
@@ -4869,7 +4903,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 <li>Venäläisen 8 pisteen pistetaulukon tiedostopolku korjattu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8446" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8446">#8446</a>)</li>
 <li>Päivitetty eSpeak-ng versioksi 1.49.3dev muutos 910f4c2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8561" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8561">#8561</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_44">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_45">Korjatut virheet</h3>
 <ul>
 <li>Saavutettavat selitteet  ilmoitetaan nyt herkemmin Google Chromessa selaustilassa oltaessa, kun selite ei näy sisällön osana. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4773" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4773">#4773</a>)</li>
 <li>Zoomissa tuetaan nyt ilmoituksia. Niitä ovat esim. mykistyksen/mykistyksen poiston tila sekä saapuvat viestit.(<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7754" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7754">#7754</a>)</li>
@@ -4898,7 +4932,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 <li>Lisäosien asentaminen on nyt mahdollista Windows 10:n versiossa 1803 ja uudemmissa, jos "Käytä Unicode UTF-8 -merkistöä maailmanlaajuista kielitukea varten" -ominaisuus on käytössä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8599" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8599">#8599</a>)</li>
 <li>NVDA ei enää tee iTunes 12.9:stä ja uudemmista täysin käyttökelvotonta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8744" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8744">#8744</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_30">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_31">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Added scriptHandler.script, which can function as a decorator for scripts on scriptable objects. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6266" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6266">#6266</a>)</li>
 <li>A system test framework has been introduced for NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/708" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #708">#708</a>)</li>
@@ -4952,7 +4986,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 <li>Kaikki NVDA:n asetukset löytyvät nyt  yhdestä asetusvalintaikkunasta, johon pääsee kohdasta NVDA-valikko -&gt; Asetukset -&gt; Asetukset, sen sijaan, että ne olisivat ripoteltuina useisiin eri ikkunoihin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/577" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #577">#577</a>)</li>
 <li>Oletussyntetisaattori on nyt Windows 10:tä käytettäessä eSpeakin asemesta Windows OneCore. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8176" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8176">#8176</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_45">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_46">Korjatut virheet</h3>
 <ul>
 <li>NVDA lukee nyt Asetukset-sovelluksen Microsoft-tilin kirjautumisnäytön aktiiviset ohjausobjektit sähköpostiosoitteen syöttämisen jälkeen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7997" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7997">#7997</a>)</li>
 <li>NVDA lukee nyt asianmukaisesti edellisen sivun palattaessa sille Microsoft Edgessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7997" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7997">#7997</a>)</li>
@@ -4976,7 +5010,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 <li>Muokkausta ja navigointia koskevat tiedot ovat nyt paljon luotettavampia joissakin tekstikentissä, erityisesti Delphi-sovelluksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #636">#636</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8102" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8102">#8102</a>)</li>
 <li>NVDA ei enää puhu tarpeetonta tietoa vaihdettaessa sovellusta Alt+Sarkain-näppäimillä Windows 10 RS5:ssä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8258" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8258">#8258</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_31">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_32">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>The developer info for UIA objects now contains a list of the UIA patterns available. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5712" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5712">#5712</a>)</li>
 <li>App modules can now force certain windows to always use UIA by implementing the isGoodUIAWindow method. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7961" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7961">#7961</a>)</li>
@@ -5019,7 +5053,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 </ul>
 </li>
 </ul>
-<h3 id="korjatut-virheet_46">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_47">Korjatut virheet</h3>
 <ul>
 <li>Selattavat ilmoitukset, kuten nykyisten muotoilutietojen näyttäminen painettaessa kaksi kertaa nopeasti NVDA+F, eivät enää epäonnistu, kun NVDA on asennettu hakemistopolkuun, jonka nimessä on muita kuin ASCII-merkkejä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7474" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7474">#7474</a>)</li>
 <li>Kohdistus palautetaan taas asianmukaisesti palattaessa Spotifyhin toisesta sovelluksesta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7689" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7689">#7689</a>)</li>
@@ -5038,7 +5072,7 @@ Saat lisätietoja tästä sekä lisäosien paremmasta versioinnista lukemalla al
 <li>Kaikki Hims Braille Sense Polaris -pistenäyttöjen näppäimet toimivat nyt odotetusti. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7865" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7865">#7865</a>)</li>
 <li>NVDA:n käynnistyminen ei enää epäonnistu Windows 7:ssä virheilmoitukseen puuttuvasta api-ms-DLL-tiedostosta, kun jokin toinen sovellus on asentanut tietyn version Visual Studio 2017:n edelleenjaettavista osista. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7975" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7975">#7975</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_32">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_33">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Added a hidden boolean flag to the braille section in the configuration: "outputPass1Only". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7301" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7301">#7301</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7693" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7693">#7693</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7702" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7702">#7702</a>)<ul>
 <li>This flag defaults to true. If false, liblouis multi pass rules will be used for braille output.</li>
@@ -5090,7 +5124,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Versioitujen tiedostojen (käyttäjän asetukset ja puhesanastot) muutoksia ei enää tallenneta, kun NVDA:ta ajetaan käynnistimestään. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7688" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7688">#7688</a>)</li>
 <li>Handy Techin Braillino- ja Bookworm- sekä vanhalla laiteohjelmistolla varustettuja Modular-pistenäyttöjä ei enää tueta suoraan asennuksen jälkeen. Asenna Handy Techin yleisajuri ja NVDA:n lisäosa käyttääksesi niitä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7590" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7590">#7590</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_47">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_48">Korjatut virheet</h3>
 <ul>
 <li>Linkit ilmaistaan nyt pistekirjoituksella sellaisissa sovelluksissa kuin Microsoft Word. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6780" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6780">#6780</a>)</li>
 <li>NVDA ei muutu enää huomattavasti hitaammaksi, kun Firefox- tai Chrome-verkkoselaimissa on avoinna useita välilehtiä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3138" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3138">#3138</a>)</li>
@@ -5105,7 +5139,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Mikäli navigointiobjekti on hävinnyt sisällöntunnistuskomentoa (esim. NVDA+R) käytettäessä, NVDA antaa nyt virheilmoituksen sen sijaan, että asiasta ei ilmoiteta lainkaan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7567" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7567">#7567</a>)</li>
 <li>Korjattu taaksepäin vierittämisen toiminnallisuus Freedom Scientificin pistenäytöissä, joissa on pitkä vasemmanpuoleinen vieritysnäppäin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7713" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7713">#7713</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_33">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_34">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>"scons tests" now checks that translatable strings have translator comments. You can also run this alone with "scons checkPot". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7492" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7492">#7492</a>)</li>
 <li>There is now a new extensionPoints module which provides a generic framework to enable code extensibility at specific points in the code. This allows interested parties to register to be notified when some action occurs (extensionPoints.Action), to modify a specific kind of data (extensionPoints.Filter) or to participate in deciding whether something will be done (extensionPoints.Decider). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3393" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3393">#3393</a>)</li>
@@ -5173,7 +5207,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Kohdistimen muoto voidaan määrittää pistenäyttöä käytettäessä erilaiseksi riippuen siitä, seurataanko kohdistusta vai tarkastelukohdistinta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7122">#7122</a>)</li>
 <li>NVDA-logo on päivitetty. Uusi logo on tyylitelty sekoitus valkoisista kirjaimista N, V, D ja A yhtenäisellä, violetilla taustalla. Tämä varmistaa, että se näkyy kaikenvärisillä taustoilla, ja siinä käytetään NV Accessin logon violettia väriä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7446" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7446">#7446</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_48">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_49">Korjatut virheet</h3>
 <ul>
 <li>Muokattavien div-elementtien selitteitä ei enää ilmoiteta arvoiksi selaustilassa Google Chromessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7153" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7153">#7153</a>)</li>
 <li>End-näppäimen painaminen ei enää aiheuta ajonaikaista virhettä selaustilassa oltaessa tyhjässä Microsoft Word -asiakirjassa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7009" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7009">#7009</a>)</li>
@@ -5199,7 +5233,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Taulukkonavigointikomennot eivät ole enää käytettävissä asettelutaulukoissa selaustilassa oltaessa, ellei asettelutaulukoiden ilmoittaminen ole käytössä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7382" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7382">#7382</a>)</li>
 <li>Piilotetut taulukon solut ohitetaan nyt Firefoxissa ja Chromessa selaustilan taulukkonavigointikomentoja käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6652" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6652">#6652</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5655" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5655">#5655</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_34">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_35">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Timestamps in the log now include milliseconds. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7163" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7163">#7163</a>)</li>
 <li>NVDA must now be built with Visual Studio Community 2015. Visual Studio Express is no longer supported. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7110" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7110">#7110</a>)<ul>
@@ -5226,7 +5260,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <ul>
 <li>Yksinkertaisessa tarkastelutilassa jätetään nyt huomiotta entistä enemmän ylimääräisiä objekteja UI Automation -rajapintaa käyttävissä sovelluksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6948" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6948">#6948</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6950" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6950">#6950</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_49">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_50">Korjatut virheet</h3>
 <ul>
 <li>Verkkosivun valikkokohteiden aktivoiminen on nyt mahdollista selaustilassa oltaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6735" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6735">#6735</a>)</li>
 <li>Esc-näppäimen painaminen asetusprofiilin "Vahvista poistaminen" -kehotteen ollessa aktiivisena sulkee nyt valintaikkunan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6851" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6851">#6851</a>)</li>
@@ -5249,7 +5283,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Koko tekstin valitseminen selaustilassa valitse kaikki -komennolla (Ctrl+A) ei enää epäonnistu, jos kohdistin ei ole tekstin alussa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6909">#6909</a>)</li>
 <li>Korjattu muita harvinaisia selaustilassa ilmenneitä tekstinvalitsemisongelmia. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7131" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7131">#7131</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_35">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_36">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Commandline arguments are now processed with Python's argparse module, rather than optparse. This allows certain options such as -r and -q to be handled exclusively. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6865" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6865">#6865</a>)</li>
 <li>core.callLater now queues the callback to NVDA's main queue after the given delay, rather than waking the core and executing it directly. This stops possible freezes due to the  core accidentally going to sleep after processing a callback, in the midle of  a modal call such as the desplaying of a message box. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6797" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6797">#6797</a>)</li>
@@ -5297,7 +5331,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>"Aina"-vaihtoehto ei ole enää käytettävissä NVDA:n äänenvaimennuksen asetuksissa Windows 10 Creators -päivitykseen tehtyjen muutosten vuoksi. Asetus on edelleen käytettävissä Windows 10:n vanhemmissa versioissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6684" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6684">#6684</a>)</li>
 <li>"Puhuttaessa ja ääntä toistettaessa" -asetus ei voi enää varmistaa, että ääni on vaimennettu kokonaan ennen puhumisen aloittamista, eikä myöskään pitää sen jälkeen vaimennusta käytössä tarpeeksi kauan estääkseen äänenvoimakkuuden nopean vaihtelun. Nämä muutokset eivät vaikuta Windows 10:n vanhempiin versioihin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6684" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6684">#6684</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_50">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_51">Korjatut virheet</h3>
 <ul>
 <li>Korjattu jumiutuminen Microsoft Wordissa liikuttaessa kappaleittain suuressa asiakirjassa selaustilan ollessa käytössä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6368" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6368">#6368</a>)</li>
 <li>Microsoft Wordin taulukoita, jotka on kopioitu Microsoft Excelistä, ei enää käsitellä asettelutaulukoina, jonka vuoksi niitä ei enää ohiteta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5927" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5927">#5927</a>)</li>
@@ -5313,7 +5347,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Hiiren seuranta toimii nyt kaikilla ruuduilla tietokoneissa, joissa käytetään useita näyttöjä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6598" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6598">#6598</a>)</li>
 <li>NVDA ei muutu enää käyttökelvottomaksi Windows Media Playerin sulkemisen jälkeen kohdistuksen ollessa liukusäätimessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5467" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5467">#5467</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_36">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_37">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Profiles and configuration files are now automatically upgraded to meet the requirements of schema modifications. If there is an error during upgrade, a notification is shown, the configuration is reset and the old configuration file is available in the NVDA log at 'Info' level. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6470" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6470">#6470</a>)</li>
 </ul>
@@ -5345,7 +5379,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Numeeristen arvojen syöttökentissä, kuten Puheäänen asetukset -valintaikkunan "Äänenkorkeuden muutos prosentteina isoille kirjaimille" -asetuksessa, käytetään nyt askellusohjausobjekteja. Voit kirjoittaa haluamasi arvon tai käyttää nuoli ylös- ja nuoli alas -näppäimiä sen muuttamiseen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6099" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6099">#6099</a>)</li>
 <li>Sisäiset kehykset (asiakirjoihin upotetut asiakirjat) ilmoitetaan yhdenmukaisemmin eri selaimissa. Firefoxissa ne ilmoitetaan nyt "kehyksinä". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6047" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6047">#6047</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_51">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_52">Korjatut virheet</h3>
 <ul>
 <li>Korjattu harvinainen virhe NVDA:ta suljettaessa puheentarkastelun ollessa aktiivisena. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5050" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5050">#5050</a>)</li>
 <li>Kuvakartat hahmontuvat nyt odotetusti selaustilassa Mozilla Firefoxissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6051" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6051">#6051</a>)</li>
@@ -5369,7 +5403,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Korjattu kaatumisia 64-bittisissä Mozilla- ja Chrome-pohjaisissa sovelluksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6497" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6497">#6497</a>)</li>
 <li>Selaustila ja muokattavat tekstikentät toimivat nyt oikein, kun usean prosessin ikkunat on otettu Firefoxissa käyttöön. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6380" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6380">#6380</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_37">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_38">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>It is now possible to provide app modules for executables containing a dot (.) in their names. Dots are replaced with underscores (_). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5323" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5323">#5323</a>)</li>
 <li>The new gui.guiHelper module includes utilities to simplify the creation of wxPython GUIs, including automatic management of spacing. This facilitates better visual appearance and consistency, as well as easing creation of new GUIs for blind developers. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6287" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6287">#6287</a>)</li>
@@ -5397,7 +5431,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>NVDA+F9- ja NVDA+F10-toiminnallisuus on muutettu valitsemaan tekstiä ensimmäisellä F10:n painalluksella. Kun F10:tä painetaan kahdesti (nopeasti peräkkäin), teksti kopioidaan leikepöydälle. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4636">#4636</a>)</li>
 <li>eSpeak NG päivitetty versioksi Master 11b1a7b (22. kesäkuuta 2016). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6037">#6037</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_52">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_53">Korjatut virheet</h3>
 <ul>
 <li>Leikepöydälle kopioiminen selaustilassa Microsoft Wordissa säilyttää nyt muotoilun. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5956" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5956">#5956</a>)</li>
 <li>NVDA ilmoittaa nyt asianmukaisesti Microsoft Wordissa sen omia  taulukkonavigointikomentoja (Alt+Home, Alt+End, Alt+Page up ja Alt+Page down) sekä taulukonvalitsemiskomentoja (Shift lisättynä navigointikomentoihin) käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5961" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5961">#5961</a>)</li>
@@ -5425,7 +5459,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Luonnostietoja ei enää lueta Outlook 2016:n viestiluettelossa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6219" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6219">#6219</a>)</li>
 <li>Korjattu ongelma, jossa selaustila ei toiminut useissa asiakirjoissa muun kuin englanninkielisessä Google Chromessa ja Chrome-pohjaisissa selaimissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6249" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6249">#6249</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_38">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_39">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Logging information directly from a property no longer results in the property  being called recursively over and over again. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6122">#6122</a>)</li>
 </ul>
@@ -5455,7 +5489,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>NVDA ei jätä enää Microsoft Excelissä huomiotta solun sarakeotsikkoa, kun solun ja otsikon välissä on tyhjä rivi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5396">#5396</a>)</li>
 <li>Koordinaatit puhutaan Microsoft Excelissä ennen otsikoita epäselvyyksien välttämiseksi otsikoiden ja sisällön välillä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5396">#5396</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_53">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_54">Korjatut virheet</h3>
 <ul>
 <li>Kun selaustilassa yritetään siirtyä pikanavigointinäppäimillä elementtiin, jota ei tueta nykyisessä asiakirjassa, NVDA ilmoittaa, ettei sitä tueta sen sijaan, että ilmoittaisi, ettei elementtiä ole. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5691" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5691">#5691</a>)</li>
 <li>Pelkkiä kaavioita sisältävät laskentataulukot sisällytetään nyt elementtilistaan Microsoft Excelissä, kun näytettävän elementin tyypiksi on valittu laskentataulukot. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5698" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5698">#5698</a>)</li>
@@ -5473,7 +5507,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>NVDA ei enää virheellisesti ilmoita Microsoft wordissa jäsennystasolla olevaa tekstiä (ei sisäisellä otsikkotyylillä) otsikoksi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5186" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5186">#5186</a>)</li>
 <li>Säilöelementin loppuun/alkuun siirtävät komennot (pilkku ja Shift+pilkku) toimivat nyt taulukoille selaustilassa Microsoft Wordissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5883" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5883">#5883</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_39">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_40">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>NVDA's C++ components are now built with Microsoft Visual Studio 2015. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5592" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5592">#5592</a>)</li>
 <li>You can now present a text or HTML message to the user in browse mode using ui.browseableMessage. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4908" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4908">#4908</a>)</li>
@@ -5497,7 +5531,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Liblouis-pistekääntäjä päivitetty versioksi 2.6.5. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5574" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5574">#5574</a>)</li>
 <li>Teksti-sanaa ei enää puhuta siirrettäessä kohdistusta tai tarkastelukohdistinta tekstiobjekteihin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5452" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5452">#5452</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_54">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_55">Korjatut virheet</h3>
 <ul>
 <li>Selaustila päivittyy nyt asianmukaisesti iTunes 12:ssa uuden sivun latautuessa iTunes Storessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5191" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5191">#5191</a>)</li>
 <li>Tiettyihin otsikkotasoihin siirtyminen pikanavigointinäppäimillä toimii nyt odotetusti Internet Explorerissa ja muissa MSHTML-ohjausobjekteissa, kun otsikon taso ohitetaan saavutettavuustarkoituksessa (erityisesti, kun aria-level ohittaa h-tagin tason). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5434" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5434">#5434</a>)</li>
@@ -5527,7 +5561,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Shift+F11-näppäinyhdistelmän painaminen Microsoft Excelissä uuden laskentataulukon luomiseksi ilmoittaa nyt uuden sijainnin; aiemmin ei ilmoitettu mitään. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5689" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5689">#5689</a>)</li>
 <li>Korjattu pistenäyttötulostuksen ongelmia korealaisia merkkejä kirjoitettaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5640" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5640">#5640</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_40">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_41">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>The new audioDucking.AudioDucker class allows code which outputs audio to indicate when background audio should be ducked. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3830" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3830">#3830</a>)</li>
 <li>nvwave.WavePlayer's constructor now has a wantDucking keyword argument which specifies whether background audio should be ducked while audio is playing. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3830" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3830">#3830</a>)<ul>
@@ -5584,7 +5618,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Puheessa pitäisi nyt kuulua tauko alku- ja loppusulkujen sekä lyhyen ajatusviivan (–) kohdalla, mikäli syntetisaattori tukee tätä ominaisuutta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3799" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3799">#3799</a>)</li>
 <li>Valittua tekstiä ei enää lueta valinnan ilmaisemisen jälkeen, vaan sitä ennen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1707" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1707">#1707</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_55">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_56">Korjatut virheet</h3>
 <ul>
 <li>Suorituskykyä paranneltu merkittävästi Outlook 2010:n/2013:n viestiluettelossa liikuttaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5268" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5268">#5268</a>)</li>
 <li>Tietyillä näppäimillä liikkuminen (kuten laskentataulukon vaihtaminen Ctrl+Page up- ja Ctrl+Page down -näppäimillä) toimii nyt oikein Microsoft Excel -kaavioissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5336" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5336">#5336</a>)</li>
@@ -5633,7 +5667,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Liblouis-pistekääntäjä päivitetty versioksi 2.6.3. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5137" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5137">#5137</a>)</li>
 <li>Kun nykyistä vanhempaa NVDA:n versiota yritetään asentaa, tästä varoitetaan nyt, ettei se ole suositeltavaa ja että NVDA tulisi poistaa ensin kokonaan ennen jatkamista. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5037">#5037</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_56">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_57">Korjatut virheet</h3>
 <ul>
 <li>Lomakekenttiin siirtyminen pikanavigoinnilla selaustilassa Internet Explorerissa ja muissa MSHTML-ohjausobjekteissa ei enää siirrä virheellisesti esitystarkoituksiin käytettäviin luettelokohteisiin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4204" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4204">#4204</a>)</li>
 <li>NVDA ei virheellisesti enää lue Firefoxissa ARIA-välilehtipaneelin sisältöä, kun kohdistus siirtyy sen sisään. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4638" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4638">#4638</a>)</li>
@@ -5652,7 +5686,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Teksti ei enää mene sekaisin pistenäyttöä käytettäessä Windows 7:ssä ja uudemmissa kirjoitettaessa tietyissä sovelluksissa, kuten WordPadissa ja Skypessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4291" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4291">#4291</a>)</li>
 <li>Leikepöydän sisällön lukeminen, käynnissä olevien sovellusten selvittäminen tarkastelukohdistimen avulla, NVDA:n asetusten muuttaminen jne ei enää ole mahdollista Windows 10:n lukitusnäytössä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5269" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5269">#5269</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_41">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_42">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>You can now inject raw input from a system keyboard that is not handled natively by Windows (e.g. a QWERTY keyboard on a braille display) using the new keyboardHandler.injectRawKeyboardInput function. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4576" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4576">#4576</a>)</li>
 <li>eventHandler.requestEvents has been added to request particular events that are blocked by default; e.g. show events from a specific control or certain events even when in the background. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3831" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3831">#3831</a>)</li>
@@ -5681,7 +5715,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Värien nimien lukemista paranneltu merkittävästi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4984" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4984">#4984</a>)</li>
 <li>Liblouis-pistekääntäjä päivitetty versioksi 2.6.2. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4777" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4777">#4777</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_57">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_58">Korjatut virheet</h3>
 <ul>
 <li>Merkkien kuvaukset käsitellään nyt asianmukaisesti tiettyjen intialaisten kielten yhdistelmämerkeille. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4582" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4582">#4582</a>)</li>
 <li>Jos "Käytä puheäänen kieltä merkkejä ja symboleita käsiteltäessä" -asetus on käytössä, Välimerkkien ja symbolien puhuminen -valintaikkunassa käytetään nyt asianmukaisesti puheäänen kieltä. Lisäksi valintaikkunan otsikossa näytetään kieli, jonka merkkien puhumista muokataan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4930" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4930">#4930</a>)</li>
@@ -5693,7 +5727,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Korjattu ongelmia tiettyjä välimerkkejä/symboleita (kuten  hakasulkuja) kirjoitettaessa  Syöte-eleet-valintaikkunan suodatuskenttään. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5060" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5060">#5060</a>)</li>
 <li>G:n tai Vaihto+G:n painaminen Internet Explorerissa ja muissa MSHTML-ohjausobjekteissa grafiikoihin siirtymiseksi ottaa nyt huomioon myös saavutettavuustarkoituksessa kuviksi nimetyt elementit (esim. ARIA-roolin img). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5062" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5062">#5062</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_42">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_43">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>brailleInput.handler.sendChars(mychar) will no longer filter out a character if it is equal to the previous character by ensuring that the key sent is correctly released. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4139" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4139">#4139</a>)</li>
 <li>Scripts for changing touch modes will now honor new labeles added to touchHandler.touchModeLabels. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4699" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4699">#4699</a>)</li>
@@ -5732,7 +5766,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>NVDA:n päivitysten lataaminen on nyt turvallisempaa. (päivityksen tiedot haetaan HTTPS-protokollalla ja tiedoston tarkistussumma tarkistetaan latauksen jälkeen.) (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4716" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4716">#4716</a>)</li>
 <li>eSpeak on päivitetty versioksi 1.48.04. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4325" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4325">#4325</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_58">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_59">Korjatut virheet</h3>
 <ul>
 <li>Yhdistetyt rivi- ja sarakeotsikkosolut käsitellään nyt oikein Microsoft Excelissä. Esim. jos A1 ja B1 yhdistetään, solut A1 ja B1 luetaan solun B2 sarakeotsikkona. Aiemmin tällaisissa tapauksissa ei luettu mitään. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4617" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4617">#4617</a>)</li>
 <li>Kun Microsoft PowerPoint 2003:ssa muokataan tekstikentän sisältöä, NVDA lukee nyt oikein joka rivin sisällön. Aiemmin riveiltä jäi pois yksi merkki lisää aina jokaista uutta kappaletta kohti. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4619" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4619">#4619</a>)</li>
@@ -5759,7 +5793,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Lomakeohjausobjektien title-attribuutti ei enää ole asiaankuulumattomasti etusijalla muihin seliteliitoksiin nähden Internet Explorerissa ja muissa MSHTML-ohjausobjekteissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4491" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4491">#4491</a>)</li>
 <li>NVDA ei jätä enää huomiotta kohdistuksen siirtymistä elementteihin aria-activedescendant-attribuutin vuoksi Internet Explorerissa ja muissa MSHTML-ohjausobjekteissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4667" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4667">#4667</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_43">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_44">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Updated wxPython to 3.0.2.0. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3763" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3763">#3763</a>)</li>
 <li>Updated Python to 2.7.9. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4715" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4715">#4715</a>)</li>
@@ -5783,7 +5817,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>E:n ja Shift+E:n painaminen selaustilassa muokkauskenttiin siirtymiseksi siirtää nyt myös muokattaviin yhdistelmäruutuihin. Tällaisia ovat esim. Google-haun uusimman version hakukenttä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4436" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4436">#4436</a>)</li>
 <li>NVDA-kuvakkeen napsauttaminen vasemmalla hiiren painikkeella tehtäväpalkin ilmoitusalueella avaa nyt NVDA-valikon sen sijaan, ettei tee mitään. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4459" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4459">#4459</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_59">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_60">Korjatut virheet</h3>
 <ul>
 <li>Kun kohdistus siirretään takaisin selaustila-asiakirjaan (esim. siirtymällä Alt+sarkain-näppäinyhdistelmällä jo avoimelle verkkosivulle), tarkastelukohdistin sijoitetaan oikein näennäiskohdistimen kohdalle aktiivisen ohjausobjektin (esim. lähellä olevan linkin) sijasta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4369" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4369">#4369</a>)</li>
 <li>Tarkastelukohdistin seuraa nyt asianmukaisesti näennäiskohdistinta PowerPoint-diaesityksissä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4370" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4370">#4370</a>)</li>
@@ -5803,7 +5837,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Entistä useampien painikkeiden nimet luetaan nyt Internet Explorerissa ja muissa MSHTML-ohjausobjekteissa hiiren seurantaa ja kosketuksella tutkimista käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4173" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4173">#4173</a>)</li>
 <li>Papenmeier BRAILLEX -pistenäytön näppäimet toimivat nyt odotetusti, kun sitä käytetään BrxComin kanssa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4614" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4614">#4614</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_44">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_45">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>For executables which host many different apps (e.g. javaw.exe), code can now be provided to load specific app modules for each app instead of loading the same app module for all hosted apps. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4360" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4360">#4360</a>)<ul>
 <li>See the code documentation for appModuleHandler.AppModule for details.</li>
@@ -5873,7 +5907,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <ul>
 <li>Liblouis-pistekääntäjä päivitetty versioksi 2.5.4. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4103" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4103">#4103</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_60">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_61">Korjatut virheet</h3>
 <ul>
 <li>Tiettyjä tekstiosuuksia, (kuten esim. korostusta sisältäviä) ei enää toisteta Google Chromessa tai muissa Chrome-pohjaisissa selaimissa ilmoituksen tai valintaikkunan tekstiä luettaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4066" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4066">#4066</a>)</li>
 <li>Painikkeen tms. aktivoiminen Enteriä painamalla ei enää epäonnistu (eikä väärää ohjausobjektia aktivoida) joissakin tapauksissa, kuten esim. Facebookin sivun yläosan painikkeiden kohdalla selaustilassa Mozilla-sovelluksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4106" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4106">#4106</a>)</li>
@@ -5902,7 +5936,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Numeeriset muokattavat tekstikentät käsitellään nyt oikein GoldWave-äänieditorissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/670" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #670">#670</a>)</li>
 <li>Microsoft Word: Kun liikutaan kappaleittain Ctrl+ala- tai Ctrl+ylänuolella, niitä ei tarvitse enää painaa  kahdesti luettelomerkkejä sisältävissä tai numeroiduissa luetteloissa oltaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3290" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3290">#3290</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_45">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_46">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>NVDA now has unified support for add-on documentation. See the Add-on Documentation section of the Developer Guide for details. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2694" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2694">#2694</a>)</li>
 <li>When providing gesture bindings on a ScriptableObject via __gestures, it is now possible to provide the None keyword as the script. This unbinds the gesture in any base classes. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4240" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4240">#4240</a>)</li>
@@ -5926,7 +5960,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <ul>
 <li>Kun selaustila-asiakirjassa olevasta valintaikkunasta tai sovelluksesta poistutaan, kyseisen asiakirjan nimeä ja tyyppiä ei enää lueta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/4069" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #4069">#4069</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_61">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_62">Korjatut virheet</h3>
 <ul>
 <li>Standardia Windowsin  järjestelmävalikkoa ei enää vahingossa hiljennetä Java-sovelluksissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3882" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3882">#3882</a>)</li>
 <li>Rivinvaihtoja ei enää sivuuteta kopioitaessa tekstiä ruuduntarkastelusta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3900" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3900">#3900</a>)</li>
@@ -5964,7 +5998,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Tähti (*)- ja plus (+)-merkit puhutaan nyt jotain-välimerkkitasolla, jos NVDA:ta käytetään englanninkielisenä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3614" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3614">#3614</a>)</li>
 <li>eSpeak päivitetty versioksi 1.48.04, joka sisältää korjauksia moniin kieliin sekä useisiin kaatumisiin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3842" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3842">#3842</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3739" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3739">#3739</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3860" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3860">#3860</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_62">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_63">Korjatut virheet</h3>
 <ul>
 <li>NVDA:n ei pitäisi enää lukea Microsoft Excelissä uuden solun sijasta aiempaa liikuttaessa soluissa tai valittaessa niitä, kun Excel on hidas siirtämään valintaa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3558" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3558">#3558</a>)</li>
 <li>NVDA käsittelee oikein Microsoft Excelissä solun pudotuslistan avaamisen pikavalikon kautta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3586" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3586">#3586</a>)</li>
@@ -6012,7 +6046,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Papenmeier-pistenäyttöä  voidaan nyt käyttää, vaikkei sellaista ole aiemmin kytketty koneeseen USB:n kautta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3712" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3712">#3712</a>)</li>
 <li>NVDA ei jää enää jumiin, kun Papenmeier BRAILLEX:n vanhempi malli on valittu pistenäytöksi ja jos sitä ei ole kytketty koneeseen.</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_46">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_47">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>AppModules now contain productName and productVersion properties. This info is also now included in Developer Info (NVDA+f1). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1625" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1625">#1625</a>)</li>
 <li>In the Python Console, you can now press the tab key to complete the current identifier. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/433" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #433">#433</a>)<ul>
@@ -6032,7 +6066,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Linkkkejä sisältävät solut ilmaistaan nyt linkkeinä Microsoft Excelissä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3042" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3042">#3042</a>)</li>
 <li>Solussa olevista kommenteista ilmoitetaan nyt käyttäjälle Microsoft Excelissä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2921" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2921">#2921</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_63">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_64">Korjatut virheet</h3>
 <ul>
 <li>Zend Studio toimii nyt samalla tavalla kuin Eclipse. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3420" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3420">#3420</a>)</li>
 <li>Tiettyjen valintaruutujen muuttunut tila luetaan nyt automaattisesti Microsoft Outlook 2010:n viestisääntöjen valintaikkunassa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3063" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3063">#3063</a>)</li>
@@ -6056,7 +6090,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>Korjattu ongelma, joka aiheutti joissakin tilanteissa Freedom Scientificin pistenäyttöajurin toimimattomuutta, kun portiksi oli määritetty USB. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3509" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3509">#3509</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3662" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3662">#3662</a>)</li>
 <li>Korjattu ongelma, jonka vuoksi Freedom Scientificin pistenäyttöjen näppäimiä ei tunnistettu joissakin tilanteissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3401" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3401">#3401</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3662" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3662">#3662</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_47">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_48">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>You can specify the category to be displayed to the user for scripts using the scriptCategory attribute on ScriptableObject classes and the category attribute on script methods. See the documentation for baseObject.ScriptableObject for more details. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1532" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1532">#1532</a>)</li>
 <li>config.save is deprecated and may be removed in a future release. Use config.conf.save instead. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/667" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #667">#667</a>)</li>
@@ -6095,7 +6129,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 </li>
 <li>Liblouis-pistekääntäjä päivitetty  versioksi 2.5.3. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3371" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3371">#3371</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_64">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_65">Korjatut virheet</h3>
 <ul>
 <li>Toiminto luetaan nyt objektia aktivoitaessa ennen aktivointia sen sijaan, että toiminto luettaisiin aktivoinnin jälkeen (esim. puunäkymää avattaessa ilmoitetaan "avaa" sen sijaan, että ilmoitettaisiin sulje). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2982" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2982">#2982</a>)</li>
 <li>Eri syöttökenttien, kuten chatti- ja haku, tarkempi lukeminen ja kohdistimen seuranta Skypen uusimmissa versioissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1601" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1601">#1601</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3036" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3036">#3036</a>)</li>
@@ -6130,7 +6164,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 <li>NVDA ei enää aiheuta Adobe Readerin kaatumista tai jumiutumista tietyissä väärin muotoilluissa PDF-asiakirjoissa, jotka sisältävät taulukoiden ulkopuolisia rivejä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3399" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3399">#3399</a>)</li>
 <li>NVDA tunnistaa nyt asianmukaisesti seuraavan aktiivisen dian poistettaessa niitä Microsoft PowerPointin pikkukuvanäkymässä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3415" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3415">#3415</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_48">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_49">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>windowUtils.findDescendantWindow has been added to search for a descendant window (HWND) matching the specified visibility, control ID and/or class name.</li>
 <li>The remote Python console no longer times out after 10 seconds while waiting for input. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3126" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3126">#3126</a>)</li>
@@ -6141,7 +6175,7 @@ Huomaa, että tämä versio ei enää tue Windows XP:tä tai Vistaa. Vähimmäis
 </ul>
 <h2 id="201311">2013.1.1</h2>
 <p>Tämä versio korjaa ongelman, joka aiheutti sen, että NVDA kaatui käynnistettäessä, mikäli käytettäväksi kieleksi oli määritetty iiri. Lisäksi tämä versio sisältää käännösten päivityksiä sekä joitakin muita ohjelmavirheiden korjauksia.</p>
-<h3 id="korjatut-virheet_65">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_66">Korjatut virheet</h3>
 <ul>
 <li>Nyt tuotetaan asianmukaisia merkkejä kirjoitettaessa NVDA:n omassa käyttöliittymässä käytettäessä korealaista tai japanilaista syöttömenetelmää jommankumman ollessa oletusmenetelmänä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2909" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2909">#2909</a>)</li>
 <li>Kentät, jotka on merkitty virheellistä syötettä sisältäviksi, käsitellään nyt oikein Internet Explorerissa ja muissa MSHTML-ohjausobjekteissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3256" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3256">#3256</a>)</li>
@@ -6206,7 +6240,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Kannettavien tietokoneiden näppäinasettelu on suunniteltu täysin uudelleen, jotta se olisi intuitiivisempi ja johdonmukaisempi. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/804" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #804">#804</a>)</li>
 <li>eSpeak-puhesyntetisaattori päivitetty versioksi 1.47.11. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2680" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2680">#2680</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3124" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3124">#3124</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3132" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3132">#3132</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3141" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3141">#3141</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3143" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3143">#3143</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3172" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3172">#3172</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_66">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_67">Korjatut virheet</h3>
 <ul>
 <li>Seuraavaan tai edelliseen erottimeen siirtävät Pikanavigointinäppäimet toimivat nyt selaustilassa Internet Explorerissa ja muissa MSHTML-ohjausobjekteissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2781" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2781">#2781</a>)</li>
 <li>Mikäli NVDA turvautuu käynnistyessään eSpeakiin tai Ei puhetta -syntetisaattoriin käyttöön määritetyn puhesyntetisaattorin lataamisen epäonnistumisen vuoksi, varmistussyntetisaattoria ei enää muuteta oletukseksi. Tämä tarkoittaa, että alkuperäinen syntetisaattori yritetään nyt ladata uudelleen seuraavalla NVDA:n käynnistyskerralla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2589" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2589">#2589</a>)</li>
@@ -6244,7 +6278,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>NVDA ei jää enää jumiin joissakin .NET-sovelluksissa aasialaisten kielten merkkejä syötettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3005" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3005">#3005</a>)</li>
 <li>Selaustilan käyttäminen on nyt mahdollista Internet Explorer 10:ssä (esim. <a href="http://www.gmail.com" rel="noopener" target="_blank" title="www.gmail.com">www.gmail.com</a> -kirjautumissivulla) yhteensopivuustilassa oltaessa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/3151" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #3151">#3151</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_49">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_50">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Braille display drivers can now support manual port selection. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/426" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #426">#426</a>)<ul>
 <li>This is most useful for braille displays which support connection via a legacy serial port.</li>
@@ -6316,7 +6350,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Useimmat Windows 8:n Metro-sovellukset (esim. Sähköposti tai Kalenteri) eivät enää aktivoi selaustilaa sovelluksen kaikissa osissa, vaan pelkästään niissä, joissa sitä tarvitaan.</li>
 <li>Handy Techin pistenäyttöajurin COM-palvelin päivitetty versioksi 1.4.2.0.</li>
 </ul>
-<h3 id="korjatut-virheet_67">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_68">Korjatut virheet</h3>
 <ul>
 <li>NVDA ei enää käsittele Windows-näppäintä virheellisesti alas painettuna, kun Windowsin lukitus avataan Windows+L-näppäinyhdistelmällä lukitsemisen jälkeen Windows Vistassa ja uudemmissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1856" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1856">#1856</a>)</li>
 <li>Riviotsikot tunnistetaan nyt asianmukaisesti taulukon soluiksi Adobe Readerissa, ts. koordinaatit luetaan ja niihin päästään taulukkonavigointikomennoilla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2444" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2444">#2444</a>)</li>
@@ -6369,7 +6403,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Laskentataulukon solujen lukeminen toimii nyt oikein OpenOffice.org/LibreOffice Calcissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2765" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2765">#2765</a>)</li>
 <li>NVDA toimii taas Yahoo! Mailin viestilistassa Internet Explorerista käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2780" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2780">#2780</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_50">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_51">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Previous log file is now copied to nvda-old.log on NVDA initialization. Therefore, if NVDA crashes or is restarted, logging information from that session is still accessible for inspection. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/916" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #916">#916</a>)</li>
 <li>Fetching the role property in chooseNVDAObjectOverlayClasses no longer causes the role to be incorrect and thus not reported on focus for certain objects such as Windows command consoles and Scintilla controls. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2569" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2569">#2569</a>)</li>
@@ -6405,7 +6439,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>NVDA:ta jaetaan nyt yhtenä pakettina. Erillisen massamuistiversion ja asennusohjelman sijaan on vain yksi tiedosto, joka käynnistää suoritettaessa NVDA:n väliaikaisen kopion ja mahdollistaa asentamisen tai massamuistijakelun luomisen. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1715" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1715">#1715</a>)</li>
 <li>NVDA asennetaan nyt kaikissa järjestelmissä aina Program Files -hakemistoon. Myös aiempi asennus siirretään päivitettäessä automaattisesti kyseiseen hakemistoon, mikäli se on asennettu jonnekin muualle.</li>
 </ul>
-<h3 id="korjatut-virheet_68">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_69">Korjatut virheet</h3>
 <ul>
 <li>Kun automaattinen kielen vaihtaminen on käytössä, esimerkiksi grafiikoiden alt-teksti ja tiettyjen muiden ohjausobjektien nimet luetaan nyt Mozilla Gecko -sovelluksissa, kuten Firefoxissa, asianmukaisella kielellä, mikäli se on merkitty oikein.</li>
 <li>Jatkuva luku -toiminto ei enää keskeydy kappaleen keskellä BibleSeeker-sovelluksessa eikä muissa TRxRichEdit-ohjausobjekteissa.</li>
@@ -6422,7 +6456,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>NVDA ei enää lue häiritsevää sisältöä Internet Explorer 9:ssä kohdistuksen siirtyessä tiettyjen kiintopisteiden tai kohdistettavien elementtien sisään (erityisesti kohdistettavaan tai ARIA-kiintopisteroolin sisältävään div-elementtiin).</li>
 <li>NVDA:n kuvake näytetään nyt oikein työpöydän ja Käynnistä-valikon pikakuvakkeissa 64-bittisissä Windows-versioissa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/354" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #354">#354</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_51">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_52">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Due to the replacement of the previous NSIS installer for NVDA with a built-in installer in Python, it is no longer necessary for translaters to maintain a langstrings.txt file for the installer. All localization strings are now managed by gettext po files.</li>
 </ul>
@@ -6464,7 +6498,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Päivitetty uuteen espanjalaiseen tason 1 pistetaulukkoon.</li>
 <li>Liblouis-pistekääntäjä päivitetty versioksi 2.4.1.</li>
 </ul>
-<h3 id="korjatut-virheet_69">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_70">Korjatut virheet</h3>
 <ul>
 <li>Kohdistusta ei enää siirretä Windows 8:ssa virheellisesti pois Resurssienhallinnan hakukentästä, mikä esti kyseisen kentän käytön NVDA:lla.</li>
 <li>Merkittäviä suorituskyvyn parannuksia luettaessa ja liikuttaessa Microsoft word -asiakirjoissa automaattisen muotoilutietojen lukemisen ollessa käytössä, ts. muotoilujen oikolukeminen on nyt jokseenkin vaivatonta. Joillakin käyttäjillä myös yleinen suorituskyky voi parantua.</li>
@@ -6497,7 +6531,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Käyttäjän tekemät muutokset välimerkkien ja symbolien puhumiseen otetaan heti käyttöön sen sijaan, että tarvitsisi käynnistää NVDA uudelleen tai poistaa automaattinen kielen vaihtaminen käytöstä.</li>
 <li>Puhe ei enää mykisty joissakin tapauksissa NVDA:n Lokintarkastelu-sovelluksen Tallenna nimellä -valintaikkunassa eSpeakia käytettäessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/2145" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #2145">#2145</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_52">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_53">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>There is now a remote Python console for situations where remote debugging is useful. See the Developer Guide for details.</li>
 <li>The base path of NVDA's code is now stripped from tracebacks in the log to improve readability. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1880" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1880">#1880</a>)</li>
@@ -6543,7 +6577,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Kun selaustilassa painetaan Enteriä tai välilyöntiä välilehden kohdalla, se aktivoidaan sen sijaan, että siirryttäisiin vuorovaikutustilaan. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1760" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1760">#1760</a>)</li>
 <li>eSpeak-puhesyntetisaattori päivitetty versioksi 1.45.47.</li>
 </ul>
-<h3 id="korjatut-virheet_70">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_71">Korjatut virheet</h3>
 <ul>
 <li>NVDA  ei näytä enää luettelomerkkejä tai numerointia luetteloissa Internet Explorerissa ja muissa MSHTML-ohjausobjekteissa, kun sivun tekijä on määrittänyt, ettei niitä näytetä (ts. luettelotyyli on "none"). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1671" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1671">#1671</a>)</li>
 <li>Kun NVDA jää jumiin, sen uudelleenkäynnistäminen (esim. painamalla Ctrl+Alt+n) ei enää sulje aiempaa kopiota käynnistämättä uutta.</li>
@@ -6572,7 +6606,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Korjattu sanoittain lukeminen Windowsin muokkauskentissä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1877" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1877">#1877</a>)</li>
 <li>Muokattavasta tekstikentästä pois Siirtyminen vasemmalla/oikealla nuolella tai Page up -näppäimellä vuorovaikutustilassa oltaessa vaihtaa nyt asianmukaisesti selaustilaan, kun Automaattinen vuorovaikutustila kohdistinta siirrettäessä -asetus on käytössä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1733" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1733">#1733</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_53">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_54">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>NVDA can now instruct speech synthesizers to switch languages for particular sections of speech.<ul>
 <li>To support this, drivers must handle speech.LangChangeCommand in sequences past to SynthDriver.speak().</li>
@@ -6627,7 +6661,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Joitakin alivalikon sisältäviä valikkokohteita ei enää ilmoiteta suljetuiksi.</li>
 <li>Lue muotoilut -skripti (NVDA+f) lukee nyt muotoilut järjestelmäkohdistimen tai -kohdistuksen sijainnin asemesta tarkastelukohdistimen sijainnista. Useimmat eivät huomaa eroa, koska tarkastelukohdistin seuraa oletusarvoisesti järjestelmäkohdistinta. Tämä antaa nyt kuitenkin käyttäjälle mahdollisuuden selvittää muotoilut tarkastelukohdistinta liikutettaessa, kuten esim. kokonaistarkastelussa.</li>
 </ul>
-<h3 id="korjatut-virheet_71">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_72">Korjatut virheet</h3>
 <ul>
 <li>Yhdistelmäruutujen sulkeminen selaustila-asiakirjoissa ei vaihda enää automaattisesti takaisin selaustilaan, kun vuorovaikutustila on pakotettu käyttöön näppäinyhdistelmällä NVDA+välilyönti. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1386" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1386">#1386</a>)</li>
 <li>NVDA näyttää nyt Gecko- ja MSHTML-asiakirjoissa (eli Firefoxissa ja Internet Explorerissa) oikein samalla rivillä sellaisen tekstin, joka näytettiin aiemmin eri riveillä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1378" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1378">#1378</a>)</li>
@@ -6693,7 +6727,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Jätetty huomiotta joitakin ylimääräisiä rivinvaihtoja selaustilassa internet Explorerissa ja muissa MSHTML-ohjausobjekteissa. Erityisesti HTML-elementit, joissa on None-näyttötyyli, eivät enää aiheuta pakotettua rivinvaihtoa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1685" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1685">#1685</a>)</li>
 <li>Jos NVDA ei pysty käynnistymään, Windowsin kriittisen pysähdyksen äänen toistaminen ei enää aiheuta lokitiedostoon kriittisen virheen ilmoitusta.</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_54">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_55">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>Developer documentation can now be generated using SCons. See readme.txt at the root of the source distribution for details, including associated dependencies.</li>
 <li>Locales can now provide descriptions for characters. See the Character Descriptions section of the Developer Guide for details. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/55" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #55">#55</a>)</li>
@@ -6717,7 +6751,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 </ul>
 <h2 id="201111">2011.1.1</h2>
 <p>Tämä versio korjaa muutamia versiosta 2011.1 löydettyjä tietoturva- ja muita merkittäviä ongelmia.</p>
-<h3 id="korjatut-virheet_72">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_73">Korjatut virheet</h3>
 <ul>
 <li>NVDA-valikon Lahjoita-vaihtoehto on nyt poissa käytöstä kirjautumisikkunassa ja muissa suojatuissa ruuduissa, sillä se on tietoturvariski. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1419" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1419">#1419</a>)</li>
 <li>Kopioiminen, leikkaaminen ja liittäminen on nyt estetty suojatulla työpöydällä (kirjautumisikkunassa ja muissa suojatuissa ruuduissa), sillä se on tietoturvariski. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1421" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1421">#1421</a>)</li>
@@ -6762,7 +6796,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Äänenvoimakkuuden lisäys ja vähennys- sekä mykistysnäppäimet  ilmoitetaan nyt näppäinohjeessa.</li>
 <li>NVDA:n englanninkielisessä käyttöliittymässä Review Cursor -valikkokohteen pikanäppäin on muutettu Preferences-valikossa R:stä C:ksi ristiriidan poistamiseksi Braille Settings -valikkokohten kanssa.</li>
 </ul>
-<h3 id="korjatut-virheet_73">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_74">Korjatut virheet</h3>
 <ul>
 <li>Kun puhesanastoon lisätään uusi merkintä, valintaikkunan nimi on nyt "Lisää sanastomerkintä" aiemman "Muokkaa sanastomerkintää" -nimen sijasta. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/924" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #924">#924</a>)</li>
 <li>Puhesanastovalintaikkunoiden sanastomääritysluettelon Säännöllinen lauseke- ja Sama kirjainkoko -sarakkeiden sisältö näytetään nyt NVDA:ssa englannin sijaan käytössä olevalla kielellä.</li>
@@ -6801,7 +6835,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Korjattu ongelma, joka aiheutti sen, että joitakin pistenäyttöjä ei tyhjennetty asianmukaisesti kun NVDA suljettiin tai käytettävää pistenäyttöä vaihdettiin.</li>
 <li>Alkuperäistä kohdistusta ei enää lueta ajoittain kahta kertaa NVDA:n käynnistyessä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/1359" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #1359">#1359</a>)</li>
 </ul>
-<h3 id="kehittajia-koskevat-muutokset-englanniksi_55">Kehittäjiä koskevat muutokset (englanniksi)</h3>
+<h3 id="kehittajia-koskevat-muutokset-englanniksi_56">Kehittäjiä koskevat muutokset (englanniksi)</h3>
 <ul>
 <li>SCons is now used to prepare the source tree and create binary builds, portable archives, installers, etc. See readme.txt at the root of the source distribution for details.</li>
 <li>The key names used by NVDA (including key maps) have been made more friendly/logical; e.g. upArrow instead of extendedUp and numpadPageUp instead of prior. See the vkCodes module for a list.</li>
@@ -6901,7 +6935,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Merkittäviä parannuksia ja päivityksiä käyttöohjeisiin, mukaan lukien kannettavien tietokoneiden komentojen kuvailu ja näppäinkomentojen pikaoppaan päivittäminen niin, että se sisältää samat komennot kuin käyttöohjekin. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/455" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #455">#455</a>)</li>
 <li>Liblouis-pistekääntäjä päivitetty versioksi 2.1.1. Tämä päivitys korjaa joitakin kiinalaiseen pistekirjoitukseen sekä käännöstaulukossa määrittelemättömiin merkkeihin liittyviä ongelmia. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/484" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #484">#484</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/499" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #499">#499</a>)</li>
 </ul>
-<h3 id="korjatut-virheet_74">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_75">Korjatut virheet</h3>
 <ul>
 <li>µTorrentin torrent-luettelon aktiivista kohtaa ei enää lueta toistuvasti eikä kohdistus enää siirry siihen valikon ollessa auki.</li>
 <li>Torrentin sisältölistan tiedostojen nimet luetaan nyt µTorrentissa.</li>
@@ -6968,7 +7002,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Ctrl-näppäin ei enää tauota puhetta, vaan keskeyttää sen. Puheen tauottamiseen ja jatkamiseen käytetään nyt Shift-näppäintä.</li>
 <li>Taulukon rivien ja sarakkeiden määrää ei enää lueta kohdistusmuutoksia ilmoitettaessa, koska kyseinen ilmoitus oli melko pitkä ja siitä ei useinkaan ollut hyötyä.</li>
 </ul>
-<h3 id="korjatut-virheet_75">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_76">Korjatut virheet</h3>
 <ul>
 <li>NVDA käynnistyy nyt tilanteessa, jossa UI Automation -tuki on käytettävissä, mutta sen alustus ei jostakin syystä onnistu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/483" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #483">#483</a>)</li>
 <li>Taulukon rivin koko sisältöä ei enää lueta Mozilla-sovelluksissa siirrettäessä kohdistusta taulukon solussa. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/482" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #482">#482</a>)</li>
@@ -7048,7 +7082,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Suorituskykyä paranneltu erityisesti minikannettavissa, kun useita merkkiääniä esiintyy peräkkäin, esim.  liikutettaessa hiirtä nopeasti äänikoordinaattien ilmaisemisen ollessa käytössä. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/396" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #396">#396</a>)</li>
 <li>Virheestä ilmoittavaa ääntä ei enää toisteta NVDA:n release candidate- ja lopullisissa versioissa. Virheiden tiedot kirjataan edelleen lokiin.</li>
 </ul>
-<h3 id="korjatut-virheet_76">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_77">Korjatut virheet</h3>
 <ul>
 <li>Kun NVDA käynnistetään 8+3-DOS-polusta, mutta se on asennettu saman kansion pitkään polkuun (esim. progra~1 verrattuna program files), NVDA tunnistaa oikein, että se on asennettu ja lataa käyttäjän asetukset asianmukaisesti.</li>
 <li>Nykyisen ikkunan nimen puhuttaminen NVDA+t:llä toimii nyt valikoissa oikein.</li>
@@ -7118,7 +7152,7 @@ Katso uudet näppäinkomennot <a href="keyCommands.html" title="komentojen pikao
 <li>Puheäänet tallennetaan asetustiedostoon nyt tunnuksen mukaan indeksin sijasta. Tämä tekee ääniasetuksista ja asetusten muutoksista luotettavampia eri järjestelmissä. Puheääniasetusta ei säilytetä vanhoissa asetustiedostoissa, ja lokiin kirjataan virhe ensimmäisellä puhesyntetisaattorin käyttökerralla. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19">#19</a>)</li>
 <li>Kaikkien puunäkymien kohdan taso ilmoitetaan nyt ensin, jos se on muuttunut aiemmin kohdistetusta. Tämä koski aiemmin vain Windowsin natiiveja (SysTreeView32) puunäkymiä.</li>
 </ul>
-<h3 id="korjatut-virheet_77">Korjatut virheet</h3>
+<h3 id="korjatut-virheet_78">Korjatut virheet</h3>
 <ul>
 <li>Puheen loppuosa ei enää jää pois käytettäessä NVDA:ta eSpeakin kanssa etäyhteydellä.</li>
 <li>Korjattu puhesanastojen tallennuksessa ilmenneitä ongelmia tietyillä puheäänillä.</li>

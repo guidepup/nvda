@@ -9,6 +9,40 @@
 
 </head>
 <body><h1 id="co-je-nove-v-nvda">Čo je nové v NVDA</h1>
+<h2 id="202631">2026.3.1</h2>
+<p>This is a patch release to fix security issues.
+A bug fix is also included for an issue introduced in 2026.3 with the task switcher in Windows 10.</p>
+<h3 id="security-fixes">Security fixes</h3>
+<p>Please responsibly disclose security issues following NVDA's <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="security policy">security policy</a>.</p>
+<ul>
+<li>Fixed NVDA leaking the Remote Access key. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21037">#21037</a>)</li>
+<li>Updated certifi to 2026.10.23. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3j65-46c5-4grp" rel="noopener" target="_blank" title="GHSA-3j65-46c5-4grp">GHSA-3j65-46c5-4grp</a>)</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li>Fixed bug where on Windows 10, the classic <code>alt+tab</code> task switcher no longer announced changing the selected task. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21052" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21052">#21052</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Updated eSpeak NG to <a href="https://github.com/nvaccess/espeak-ng/commit/b97de3cf2ad32c1d48c6bd36dfbf57a9c587fedc" rel="noopener" target="_blank" title="commit b97de3cf2">commit <code>b97de3cf2</code></a>.
+This changes Brazilian Portuguese back to how it worked in 2026.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21059" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21059">#21059</a>)</li>
+</ul>
+<h3 id="changes-for-developers">Changes for Developers</h3>
+<ul>
+<li>Updated Python to 3.13.17. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>)</li>
+<li>Updated pip dependencies (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>):<ul>
+<li>cryptography to 50.0.2.</li>
+<li>url-normalize to 3.0.1.</li>
+<li>pycaw to 20260927.</li>
+<li>nh3 to 0.3.7.</li>
+<li>crowdin-api-client to 1.30.0.</li>
+<li>markdown to 3.11.2.</li>
+<li>lxml to 6.1.3.</li>
+<li>regex to 2026.9.29.</li>
+<li>scons to 4.11.1.</li>
+<li>uv to 0.13.5.</li>
+<li>sphinx to 9.2.0.</li>
+<li>robotframework to 7.5.</li>
+</ul>
+</li>
+</ul>
 <h2 id="20263">2026.3</h2>
 <p>Táto verzia prináša celkové zrýchlenie odozvy, vylepšenia v dialógoch NVDA a rozšírenú podporu pre dotykové gestá.</p>
 <p>Urobili sme niekoľko vylepšení, ktoré zrýchľujú odozvu a stabilitu NVDA.
@@ -164,7 +198,7 @@ Pred tým tieto tlačidlá stlačené samostatne nemali vlastné funkcie. (<a cl
 <li>Aktualizácia doplnkov viac neponecháva aktívne pôvodné moduly.
 toto mohlo spôsobiť nesprávne fungovanie aktualizovaných doplnkov po prvom reštarte NVDA. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18971" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18971">#18971</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 </ul>
-<h3 id="changes-for-developers">Changes for Developers</h3>
+<h3 id="changes-for-developers_1">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Updated dependencies:<ul>
@@ -716,7 +750,7 @@ Predvolene je toto nastavenie vypnuté. (<a class="gh-link gh-issue" href="https
 <li>Opravené prípady mrznutia NVDA pri čítaní matematického obsahu na brailovom riadku. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20319" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20319">#20319</a>, <a class="gh-link gh-mention" href="https://github.com/AAClause" rel="noopener" target="_blank" title="GitHub User: @AAClause">@AAClause</a>)</li>
 <li>NVDA dokáže načítať aj hlasové výstupy, ktoré nepodporujú niektorý z parametrov výška, rýchlosť alebo hlasitosť. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20302" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20302">#20302</a>)</li>
 </ul>
-<h3 id="changes-for-developers_1">Changes for Developers</h3>
+<h3 id="changes-for-developers_2">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Clarified NV Access's policy on API breaking changes in the <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="Developer Guide">Developer Guide</a>. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19599" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19599">#19599</a>)</li>
@@ -789,7 +823,7 @@ Odstránili sme tiež spracovanie pripojenia k vzdialenému počítaču pridané
 <li>Vzdialené ovládanie sa opäť opätovne pokúša pripojiť po prvom neúspešnom pokuse.
 Toto znamená, že po obnovení dostupnosti siete budú systémy bez monitora alebo inak fyzicky nedostupné nastavené na automatické pripojenie po štarte opäť dosiahnuteľné. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20122" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20122">#20122</a>)</li>
 </ul>
-<h3 id="changes-for-developers_2">Changes for Developers</h3>
+<h3 id="changes-for-developers_3">Changes for Developers</h3>
 <ul>
 <li>The <code>winBindings.cfgmgr32</code> module is now included in NVDA binary builds. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20089" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20089">#20089</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
 </ul>
@@ -928,7 +962,7 @@ Obsahuje nastavenia tienenia obrazovky (pôvodne v časti zrak) a nastavenia "ú
 <li>Ak dokument obsahuje nesprávne formátované url odkazy, je možné ich zobraziť aj v prehliadačoch Chromium. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19125" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19125">#19125</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>NVDA viac neoznamuje zvukom pravopisné chyby pri písaní, ak je režim reči len na vyžiadanie alebo vypnutý. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19323" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19323">#19323</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="changes-for-developers_3">Changes for Developers</h3>
+<h3 id="changes-for-developers_4">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -1250,7 +1284,7 @@ Upozorňujeme, že táto možnosť je predvolene vypnutá, lebo ovládač použ�
 <li>Opravené nefunkčné zvýraznenie pri použití automatického dopĺňania v Outlook kontaktoch. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18483" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18483">#18483</a>, <a class="gh-link gh-mention" href="https://github.com/Nerlant" rel="noopener" target="_blank" title="GitHub User: @Nerlant">@Nerlant</a>)</li>
 <li>Ak spustíte prenosnú verziu hneď po jej vytvorení, prenosná verzia si už načíta vlastné nastavenia. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18442" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18442">#18442</a>, <a class="gh-link gh-mention" href="https://github.com/CyrilleB79" rel="noopener" target="_blank" title="GitHub User: @CyrilleB79">@CyrilleB79</a>)</li>
 </ul>
-<h3 id="changes-for-developers_4">Changes for Developers</h3>
+<h3 id="changes-for-developers_5">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Component updates:<ul>
@@ -1610,7 +1644,7 @@ Ak v akomkoľvek dokumente prejdete na poslednom riadku na nasledujúci riadok, 
 <li>Keď kotvové odkazy smerujú na ten istý objekt, na ktorom je umiestnený virtuálny kurzor, NVDA už nezlyhá pri posúvaní na cieľ odkazu. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17669" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17669">#17669</a>, <a class="gh-link gh-mention" href="https://github.com/nvdaes" rel="noopener" target="_blank" title="GitHub User: @nvdaes">@nvdaes</a>)</li>
 <li>Ikona zvýraznenia textu NVDA viac neostane na panely úloh po reštartovaní procesu Explorera. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17696" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17696">#17696</a>, <a class="gh-link gh-mention" href="https://github.com/hwf1324" rel="noopener" target="_blank" title="GitHub User: @hwf1324">@hwf1324</a>)</li>
 </ul>
-<h3 id="changes-for-developers_5">Changes for Developers</h3>
+<h3 id="changes-for-developers_6">Changes for Developers</h3>
 <p>Please refer to <a href="https://www.nvaccess.org/files/nvda/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Note: this is an Add-on API compatibility breaking release.
@@ -4968,7 +5002,7 @@ Podrobnosti nájdete popísané nižšie v zozname zmien.</p>
 <li>NVDA odteraz presnejšie oznamuje zmeny v niektorých editačných poliach (napríklad v aplikácii Delphy). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #636">#636</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8102" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8102">#8102</a>)</li>
 <li>V systéme Windows 10 RS5, NVDA viac pri prepínaní úloh klávesovou skratkou alt+tab nečíta nadbitočné informácie. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8258" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8258">#8258</a>)</li>
 </ul>
-<h3 id="changes-for-developers_6">Changes for developers</h3>
+<h3 id="changes-for-developers_7">Changes for developers</h3>
 <ul>
 <li>The developer info for UIA objects now contains a list of the UIA patterns available. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5712" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5712">#5712</a>)</li>
 <li>App modules can now force certain windows to always use UIA by implementing the isGoodUIAWindow method. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7961" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7961">#7961</a>)</li>

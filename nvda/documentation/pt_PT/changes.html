@@ -9,6 +9,40 @@
 
 </head>
 <body><h1 id="novidades-do-nvda">Novidades do  NVDA</h1>
+<h2 id="202631">2026.3.1</h2>
+<p>This is a patch release to fix security issues.
+A bug fix is also included for an issue introduced in 2026.3 with the task switcher in Windows 10.</p>
+<h3 id="security-fixes">Security fixes</h3>
+<p>Please responsibly disclose security issues following NVDA's <a href="https://github.com/nvaccess/nvda/blob/master/security.md" rel="noopener" target="_blank" title="security policy">security policy</a>.</p>
+<ul>
+<li>Fixed NVDA leaking the Remote Access key. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21037" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21037">#21037</a>)</li>
+<li>Updated certifi to 2026.10.23. (<a href="https://github.com/nvaccess/nvda/security/advisories/GHSA-3j65-46c5-4grp" rel="noopener" target="_blank" title="GHSA-3j65-46c5-4grp">GHSA-3j65-46c5-4grp</a>)</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li>Fixed bug where on Windows 10, the classic <code>alt+tab</code> task switcher no longer announced changing the selected task. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21052" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21052">#21052</a>, <a class="gh-link gh-mention" href="https://github.com/Cary-rowen" rel="noopener" target="_blank" title="GitHub User: @Cary-rowen">@Cary-rowen</a>)</li>
+<li>Updated eSpeak NG to <a href="https://github.com/nvaccess/espeak-ng/commit/b97de3cf2ad32c1d48c6bd36dfbf57a9c587fedc" rel="noopener" target="_blank" title="commit b97de3cf2">commit <code>b97de3cf2</code></a>.
+This changes Brazilian Portuguese back to how it worked in 2026.1. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21059" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21059">#21059</a>)</li>
+</ul>
+<h3 id="changes-for-developers">Changes for Developers</h3>
+<ul>
+<li>Updated Python to 3.13.17. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>)</li>
+<li>Updated pip dependencies (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/21067" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #21067">#21067</a>):<ul>
+<li>cryptography to 50.0.2.</li>
+<li>url-normalize to 3.0.1.</li>
+<li>pycaw to 20260927.</li>
+<li>nh3 to 0.3.7.</li>
+<li>crowdin-api-client to 1.30.0.</li>
+<li>markdown to 3.11.2.</li>
+<li>lxml to 6.1.3.</li>
+<li>regex to 2026.9.29.</li>
+<li>scons to 4.11.1.</li>
+<li>uv to 0.13.5.</li>
+<li>sphinx to 9.2.0.</li>
+<li>robotframework to 7.5.</li>
+</ul>
+</li>
+</ul>
 <h2 id="20263">2026.3</h2>
 <p>This release includes significant performance improvements, improvements to NVDA's dialogs, and expanded touch screen input.</p>
 <p>Several performance improvements have been made to reduce lag and improve responsiveness.
@@ -103,7 +137,7 @@ Gestures from the taskbar edge open the Start menu or Action Center, NVDA will n
 <li>Reduced the number of cross-process UI Automation calls when processing events, reporting focus changes, reporting objects under the mouse and rendering browse mode content, by caching more properties and batching focus property fetches. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20608" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20608">#20608</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 <li>Limit the speed of rapid Magnifier filter updates to reduce the risk of triggering seizures. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20750" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20750">#20750</a>)</li>
 </ul>
-<h3 id="bug-fixes">Bug Fixes</h3>
+<h3 id="bug-fixes_1">Bug Fixes</h3>
 <ul>
 <li>NVDA now reports the correct location and label for Win32 menu items of 32-bit applications when display scaling is above 100%. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/19225" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #19225">#19225</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/20158" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #20158">#20158</a>, <a class="gh-link gh-mention" href="https://github.com/christopherpross" rel="noopener" target="_blank" title="GitHub User: @christopherpross">@christopherpross</a>)</li>
 <li>In PowerPoint and other Office applications, NVDA will now correctly read and navigate the edit fields in the insert hyperlink dialog. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/17390" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #17390">#17390</a>, <a class="gh-link gh-mention" href="https://github.com/aryanchoudharypro" rel="noopener" target="_blank" title="GitHub User: @aryanchoudharypro">@aryanchoudharypro</a>)</li>
@@ -164,7 +198,7 @@ Previously these keys had no function when pressed on their own. (<a class="gh-l
 <li>Updating an add-on no longer leaves modules of the old version loaded.
 This could cause errors in the updated add-on on the first start of NVDA after the update. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/18971" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #18971">#18971</a>, <a class="gh-link gh-mention" href="https://github.com/LeonarddeR" rel="noopener" target="_blank" title="GitHub User: @LeonarddeR">@LeonarddeR</a>)</li>
 </ul>
-<h3 id="changes-for-developers">Changes for Developers</h3>
+<h3 id="changes-for-developers_1">Changes for Developers</h3>
 <p>Please refer to <a href="https://download.nvaccess.org/documentation/developerGuide.html#API" rel="noopener" target="_blank" title="the developer guide">the developer guide</a> for information on NVDA's API deprecation and removal process.</p>
 <ul>
 <li>Updated dependencies:<ul>
@@ -4278,7 +4312,7 @@ The existence of marked (highlighted) content can be reported in browsers, and t
 <li>NVDA will auto detect the NLS eReader Humanware braille display via Bluetooth as its Bluetooth name is now "NLS eReader Humanware". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11561" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11561">#11561</a>)</li>
 <li>Major performance improvements in Visual Studio Code. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11533" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11533">#11533</a>)</li>
 </ul>
-<h3 id="changes-for-developers_1">Changes For Developers</h3>
+<h3 id="changes-for-developers_2">Changes For Developers</h3>
 <ul>
 <li>The GUI Helper's BoxSizerHelper.addDialogDismissButtons supports a new "separated" keyword argument, for adding a standard horizontal separator to dialogs (other than messages and single input dialogs). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/6468" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #6468">#6468</a>)</li>
 <li>Additional properties were added to app modules, including path for the executable (appPath), is a Windows Store app (isWindowsStoreApp), and machine architecture for the app (appArchitecture). (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7894" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7894">#7894</a>)</li>
@@ -4343,7 +4377,7 @@ The existence of marked (highlighted) content can be reported in browsers, and t
 <li>It is once again possible to check for NVDA updates on certain systems; e.g. clean Windows installs. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/11253" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #11253">#11253</a>)</li>
 <li>Focus is not moved in Java application when the selection is changed in an unfocused tree, table or list. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5989" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5989">#5989</a>)</li>
 </ul>
-<h3 id="changes-for-developers_2">Changes For Developers</h3>
+<h3 id="changes-for-developers_3">Changes For Developers</h3>
 <ul>
 <li>execElevated and hasUiAccess have moved from config module to systemUtils module. Usage via config module is deprecated. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10493" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10493">#10493</a>)</li>
 <li>Updated configobj to 5.1.0dev commit f9a265c4. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/10939" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #10939">#10939</a>)</li>
@@ -4968,7 +5002,7 @@ Please refer to the list of changes further down for more details on this and ho
 <li>In some text controls, particularly in Delphi applications, the information provided about editing and navigating is now much more reliable. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/636" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #636">#636</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8102" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8102">#8102</a>)</li>
 <li>In Windows 10 RS5, NVDA no longer reports extra redundant information when switching tasks with alt+tab. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/8258" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #8258">#8258</a>)</li>
 </ul>
-<h3 id="changes-for-developers_3">Changes for developers</h3>
+<h3 id="changes-for-developers_4">Changes for developers</h3>
 <ul>
 <li>The developer info for UIA objects now contains a list of the UIA patterns available. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/5712" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #5712">#5712</a>)</li>
 <li>App modules can now force certain windows to always use UIA by implementing the isGoodUIAWindow method. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7961" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7961">#7961</a>)</li>
@@ -5030,7 +5064,7 @@ Please refer to the list of changes further down for more details on this and ho
 <li>All keys on the Hims Braille Sense Polaris displays are now working as expected. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7865" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7865">#7865</a>)</li>
 <li>NVDA no longer fails to start on Windows 7 complaining about an internal api-ms dll, when a particular version of the Visual Studio 2017 redistributables have been installed by another application. (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7975" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7975">#7975</a>)</li>
 </ul>
-<h3 id="changes-for-developers_4">Changes for developers</h3>
+<h3 id="changes-for-developers_5">Changes for developers</h3>
 <ul>
 <li>Added a hidden boolean flag to the braille section in the configuration: "outputPass1Only". (<a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7301" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7301">#7301</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7693" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7693">#7693</a>, <a class="gh-link gh-issue" href="https://github.com/nvaccess/nvda/issues/7702" rel="noopener" target="_blank" title="GitHub Issue nvaccess/nvda #7702">#7702</a>)<ul>
 <li>This flag defaults to true. If false, liblouis multi pass rules will be used for braille output.</li>
